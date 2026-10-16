@@ -1,0 +1,177 @@
+{
+  "runtime": "@mlc-ai/web-llm@0.2.86",
+  "checkedAt": "2026-10-16T17:01:58.750Z",
+  "results": [
+    {
+      "id": "Phi-3.5-vision-instruct-q4f16_1-MLC",
+      "weightBytes": 2769074176,
+      "vramMB": 4521.54,
+      "checks": [
+        {
+          "url": "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-llm-models/v0_2_86/base/Phi-3.5-vision-instruct-q4f16_1_cs4k-webgpu.wasm",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Phi-3.5-vision-instruct-q4f16_1-MLC/resolve/main/params_shard_0.bin",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Phi-3.5-vision-instruct-q4f16_1-MLC/resolve/main/tokenizer.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Phi-3.5-vision-instruct-q4f16_1-MLC/resolve/main/tokenizer_config.json",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "Phi-3.5-vision-instruct-q4f32_1-MLC",
+      "weightBytes": 2769074176,
+      "vramMB": 7050.65,
+      "checks": [
+        {
+          "url": "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-llm-models/v0_2_86/base/Phi-3.5-vision-instruct-q4f32_1_cs4k-webgpu.wasm",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Phi-3.5-vision-instruct-q4f32_1-MLC/resolve/main/params_shard_0.bin",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Phi-3.5-vision-instruct-q4f32_1-MLC/resolve/main/tokenizer.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Phi-3.5-vision-instruct-q4f32_1-MLC/resolve/main/tokenizer_config.json",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "Qwen3-0.6B-q4f16_1-MLC",
+      "weightBytes": 335372288,
+      "vramMB": 1403.34,
+      "checks": [
+        {
+          "url": "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-llm-models/v0_2_86/base/Qwen3-0.6B-q4f16_1_cs1k-webgpu.wasm",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f16_1-MLC/resolve/main/params_shard_0.bin",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f16_1-MLC/resolve/main/tokenizer.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f16_1-MLC/resolve/main/vocab.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f16_1-MLC/resolve/main/merges.txt",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f16_1-MLC/resolve/main/tokenizer_config.json",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "Qwen3-0.6B-q4f32_1-MLC",
+      "weightBytes": 335372288,
+      "vramMB": 1924.98,
+      "checks": [
+        {
+          "url": "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-llm-models/v0_2_86/base/Qwen3-0.6B-q4f32_1_cs1k-webgpu.wasm",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f32_1-MLC/resolve/main/params_shard_0.bin",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f32_1-MLC/resolve/main/tokenizer.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f32_1-MLC/resolve/main/vocab.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f32_1-MLC/resolve/main/merges.txt",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-0.6B-q4f32_1-MLC/resolve/main/tokenizer_config.json",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "Qwen3-1.7B-q4f16_1-MLC",
+      "weightBytes": 968001536,
+      "vramMB": 2036.66,
+      "checks": [
+        {
+          "url": "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-llm-models/v0_2_86/base/Qwen3-1.7B-q4f16_1_cs1k-webgpu.wasm",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f16_1-MLC/resolve/main/params_shard_0.bin",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f16_1-MLC/resolve/main/tokenizer.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f16_1-MLC/resolve/main/vocab.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f16_1-MLC/resolve/main/merges.txt",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f16_1-MLC/resolve/main/tokenizer_config.json",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "Qwen3-1.7B-q4f32_1-MLC",
+      "weightBytes": 968001536,
+      "vramMB": 2635.44,
+      "checks": [
+        {
+          "url": "https://raw.githubusercontent.com/mlc-ai/binary-mlc-llm-libs/main/web-llm-models/v0_2_86/base/Qwen3-1.7B-q4f32_1_cs1k-webgpu.wasm",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f32_1-MLC/resolve/main/params_shard_0.bin",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f32_1-MLC/resolve/main/tokenizer.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f32_1-MLC/resolve/main/vocab.json",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f32_1-MLC/resolve/main/merges.txt",
+          "status": 200
+        },
+        {
+          "url": "https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f32_1-MLC/resolve/main/tokenizer_config.json",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "note": "HTTP availability and manifest size checks only; model weights not downloaded and no GPU inference performed."
+}

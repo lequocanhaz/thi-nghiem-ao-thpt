@@ -1,6 +1,6 @@
 # Vật lí Lab · 300 bài khảo sát
 
-Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Trợ lý AI cần máy chủ và API key riêng, hiện chưa được kết nối.
+Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Trợ lý AI mặc định chạy cục bộ trong trình duyệt bằng WebLLM, không gọi API trả phí; cần WebGPU và tải mô hình trước lần dùng đầu tiên.
 
 Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
@@ -19,7 +19,7 @@ Banner dùng video NASA thực 1920 × 1080 có chuyển động, đóng gói MP
 
 Chữ nội dung trên nền sáng chuyển sang đen; chữ trên banner tối dùng trắng, màu đại lượng Vật lí vẫn có quy ước riêng. Banner dùng tiêu đề và lời dẫn trực tiếp, không có khẩu hiệu trang trí. Font sử dụng đúng bốn tệp Product Sans OTF được cung cấp. Các nút kéo 3D giữ liên kết đại lượng độc lập; điều chỉnh trực tiếp, bàn phím và ô số dùng chung trạng thái. 629 miền thông số ở 270 bài được mở rộng sau khi giữ các ràng buộc áp dụng. Bảng điều khiển và số liệu vẫn điều chỉnh kích thước được; “Khoảng thanh trượt” dùng để tập trung một khoảng trong miền hợp lệ.
 
-Hộp Trợ lý đã tích hợp giao diện và mã backend. **Chưa có endpoint AI hoạt động:** cần triển khai backend HTTPS với API key/model, rồi cấu hình URL trong `dist/ai-config.js`. Key không nằm trong frontend. Xem `server/README.md`. Không có câu trả lời AI giả khi chưa kết nối.
+Hộp Trợ lý hoạt động ngay trong web qua suy luận cục bộ: mở Trợ lý → chọn mô hình → Tải AI → nhập câu hỏi. Có Qwen3 1,7B (cân bằng), Qwen3 0,6B (nhẹ), Phi 3.5 Vision (có ảnh, cần bộ nhớ GPU cao hơn). Trả lời dạng streaming, dừng tạo, giải phóng bộ nhớ, bản nháp và hội thoại theo bài. Thông số chỉ được đưa vào ngữ cảnh khi người dùng chọn. Bản cục bộ dùng tối đa bốn dòng đo gần nhất và một ảnh; không gọi máy chủ OpenAI/Gemini. Tệp runtime WebLLM được ghim bản 0.2.86 trên jsDelivr; model/WASM tải từ Hugging Face và MLC. Không tải mô hình khi chỉ mở trang. Font giao diện chuyển sang đúng tệp Product Sans Bold đã cung cấp; SHA-256 được ghi trong `checks/local-ai-audit-v20.json`.
 
 Giữ 300 bài, phương trình, mẫu thiết lập, các nguồn OpenStax và 12 tài liệu quốc tế, chức năng đo/đồ thị/A-B/quét biến/xuất nhập phiên và âm thanh đã có. 79 bài chạy theo thời gian, các bài còn lại khảo sát bằng thông số.
 
@@ -30,7 +30,7 @@ Kiểm tra: `npm run check`, `npm run check:models`, `npm run check:framing`, `n
 - Giao diện: `dist/refinement.css` (v17), `dist/expansion.css` (v16), `dist/visual.css` (v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
 - Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, các tệp `*-scenes.js`.
 - Nội dung và mô hình: các tệp `*-catalog.js`, `dist/models.js`, `dist/physics.js`.
-- Trợ lý AI: `dist/assistant.js`, `dist/ai-config.js`, `server/ai-handler.mjs`.
+- Trợ lý AI cục bộ: `dist/assistant.js`, `dist/local-ai.js`, `dist/local-ai-worker.js`. Backend API cũ được giữ trong `server/`, frontend mặc định không gọi tới backend này.
 - Các bản thuyết minh tiếng Việt: `dist/audio/vi13/`, mục lục đoạn đọc trong `dist/voice-index.js`.
 - Dùng GitHub Desktop hoặc trình biên tập của bạn, commit và push lên `main`; workflow kiểm tra rồi cập nhật website. Có thể trao đổi yêu cầu sửa trong cuộc trò chuyện và cung cấp đúng URL repository đã cấp quyền.
 
@@ -63,3 +63,9 @@ Font Product Sans do người dùng cung cấp; giọng Hoài My (Microsoft), kh
 Chi tiết bản mới ở `checks/verification-v18.md`; các đợt kiểm tra nền ở `checks/verification-v14.md` và `checks/verification-v15.md`. Đã kiểm tra mã/DOM, số liệu và hình học; chưa kiểm tra GPU, chạm thật, trình đọc màn hình hay thẩm định phát âm bằng loa trên thiết bị. GitHub Actions đã chạy thành công bộ kiểm tra mã/DOM và triển khai lên GitHub Pages ngày 16/10/2026.
 
 Nguồn cấu hình Pages: https://github.com/actions/starter-workflows/blob/main/pages/static.yml
+
+## Kiểm chứng bản AI cục bộ v20
+
+`npm run check` có kiểm tra riêng `checks/local-ai.mjs`: mock WebGPU/worker, chọn f16/f32, luồng streaming, dừng tải/dừng trả lời, định dạng ảnh, theo dõi ảnh ở lượt hỏi tiếp, giữ bản nháp khi lỗi và xác nhận không có lệnh gọi API nhà cung cấp trong luồng cục bộ. Kiểm tra tài nguyên mạng thực được lưu ở `checks/local-ai-assets-v20.json`. Đã so sánh font đóng gói trùng byte với tệp người dùng gửi và kiểm tra các glyph tiếng Việt.
+
+Giới hạn: môi trường hiện tại không có phiên kiểm thử trình duyệt/WebGPU; chưa xác nhận được suy luận GPU và chất lượng câu trả lời thực tế. Không cam kết mọi điện thoại/trình duyệt chạy được. Qwen là mô hình nhỏ, khả năng lập luận không tương đương ChatGPT; phải đối chiếu công thức/số liệu. Mô hình ảnh là Phi 3.5 Vision, cần khoảng 4,5–7 GB VRAM theo cấu hình thư viện. Thông báo lỗi hoặc thiếu WebGPU không được thay bằng câu trả lời AI giả.

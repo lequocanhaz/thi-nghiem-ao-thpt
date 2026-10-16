@@ -1,4 +1,6 @@
-# Trợ lý Vật lí
+> Frontend v20 mặc định dùng AI cục bộ WebLLM. Không gọi backend này; không cần API key hoặc mở máy chủ công khai để dùng chat cục bộ. Phần dưới mô tả backend OpenAI được giữ để tham khảo/cấu hình riêng về sau.
+
+# Backend API tùy chọn của Trợ lý Vật lí
 
 Frontend: `dist/assistant.js`. API: `server/ai-handler.mjs` (Fetch/Worker, không có khóa trong mã nguồn).
 
