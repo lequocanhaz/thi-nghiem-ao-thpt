@@ -13,17 +13,17 @@ Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
 GitHub Free hỗ trợ Pages từ repository công khai; Pages từ repository riêng tư phụ thuộc gói tài khoản. Chọn Public đồng nghĩa người khác có thể đọc và tải mã nguồn. Tài liệu chính thức: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
 
-## Video và tương tác · v17
+## Giao diện và banner · v18
 
-Banner dùng video NASA thực 1920 × 1080 có chuyển động, đóng gói MP4/WebM để không lệ thuộc link nóng. Có phát/tạm dừng, phóng cảnh và toàn màn hình; khi autoplay bị chặn, nút Phát video cho phép khởi động thủ công. Nguồn và credit trong `dist/video/NOTICE.txt`. Đây là hình dựng mô phỏng của NASA, không phải phép đo hay bộ giải tương đối rộng chạy trực tiếp.
+Banner dùng video NASA thực 1920 × 1080 có chuyển động, đóng gói MP4/WebM để không lệ thuộc link nóng. Banner tự phát lặp lại, bỏ các nhãn nguồn/độ phân giải và nút phát/dừng; giữ nút toàn màn hình. Tự thử lại sau tương tác khi trình duyệt chặn tự phát, và khôi phục khi quay lại trang. Nguồn và credit trong `dist/video/NOTICE.txt`. Đây là hình dựng mô phỏng của NASA, không phải phép đo hay bộ giải tương đối rộng chạy trực tiếp.
 
-Font sử dụng đúng bốn tệp Product Sans OTF được cung cấp. Các nút kéo 3D giữ liên kết đại lượng độc lập; điều chỉnh trực tiếp, bàn phím và ô số dùng chung trạng thái. 629 miền thông số ở 270 bài được mở rộng sau khi giữ các ràng buộc áp dụng. Bảng điều khiển và số liệu vẫn điều chỉnh kích thước được; “Khoảng thanh trượt” dùng để tập trung một khoảng trong miền hợp lệ.
+Chữ nội dung trên nền sáng chuyển sang đen; chữ trên banner tối dùng trắng, màu đại lượng Vật lí vẫn có quy ước riêng. Banner dùng tiêu đề và lời dẫn trực tiếp, không có khẩu hiệu trang trí. Font sử dụng đúng bốn tệp Product Sans OTF được cung cấp. Các nút kéo 3D giữ liên kết đại lượng độc lập; điều chỉnh trực tiếp, bàn phím và ô số dùng chung trạng thái. 629 miền thông số ở 270 bài được mở rộng sau khi giữ các ràng buộc áp dụng. Bảng điều khiển và số liệu vẫn điều chỉnh kích thước được; “Khoảng thanh trượt” dùng để tập trung một khoảng trong miền hợp lệ.
 
 Hộp Trợ lý đã tích hợp giao diện và mã backend. **Chưa có endpoint AI hoạt động:** cần triển khai backend HTTPS với API key/model, rồi cấu hình URL trong `dist/ai-config.js`. Key không nằm trong frontend. Xem `server/README.md`. Không có câu trả lời AI giả khi chưa kết nối.
 
 Giữ 300 bài, phương trình, mẫu thiết lập, các nguồn OpenStax và 12 tài liệu quốc tế, chức năng đo/đồ thị/A-B/quét biến/xuất nhập phiên và âm thanh đã có. 79 bài chạy theo thời gian, các bài còn lại khảo sát bằng thông số.
 
-Kiểm tra: `npm run check`, `npm run check:models`, `npm run check:framing`, `npm run check:audio`. Phạm vi và giới hạn ở `checks/verification-v17.md`. Kiểm tra DOM/hình học không thay thế ảnh chụp hoặc thao tác trình duyệt thực.
+Kiểm tra: `npm run check`, `npm run check:models`, `npm run check:framing`, `npm run check:audio`. Phạm vi và giới hạn ở `checks/verification-v18.md`. Kiểm tra DOM/hình học không thay thế ảnh chụp hoặc thao tác trình duyệt thực.
 
 ## Chỉnh sửa về sau
 
@@ -60,6 +60,6 @@ Sau đó mở http://localhost:8080. Không mở `index.html` bằng `file://` v
 
 Font Product Sans do người dùng cung cấp; giọng Hoài My (Microsoft), không phải bộ giọng OpenScienceVN. Giữ các ghi nguồn và giấy phép hiện có trong `sources/`, `dist/fonts/`, `dist/vendor/`, `dist/audio/vi13/`. Gói này không tự cấp giấy phép phân phối lại cho tài nguyên bên thứ ba.
 
-Chi tiết bản mới ở `checks/verification-v16.md`; các đợt kiểm tra nền ở `checks/verification-v14.md` và `checks/verification-v15.md`. Đã kiểm tra mã/DOM, số liệu và hình học; chưa kiểm tra GPU, chạm thật, trình đọc màn hình hay thẩm định phát âm bằng loa trên thiết bị. GitHub Actions đã chạy thành công bộ kiểm tra mã/DOM và triển khai lên GitHub Pages ngày 16/10/2026.
+Chi tiết bản mới ở `checks/verification-v18.md`; các đợt kiểm tra nền ở `checks/verification-v14.md` và `checks/verification-v15.md`. Đã kiểm tra mã/DOM, số liệu và hình học; chưa kiểm tra GPU, chạm thật, trình đọc màn hình hay thẩm định phát âm bằng loa trên thiết bị. GitHub Actions đã chạy thành công bộ kiểm tra mã/DOM và triển khai lên GitHub Pages ngày 16/10/2026.
 
 Nguồn cấu hình Pages: https://github.com/actions/starter-workflows/blob/main/pages/static.yml
