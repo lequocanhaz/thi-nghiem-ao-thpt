@@ -1,6 +1,6 @@
-import {atlasById,evaluateAtlas} from './atlas-catalog.js?v=14';
-import * as P from './physics.js?v=14';
-import {evaluateDiscovery} from './discovery-models.js?v=14';
+import {atlasById,evaluateAtlas} from './atlas-catalog.js?v=17';
+import * as P from './physics.js?v=17';
+import {evaluateDiscovery} from './discovery-models.js?v=17';
 export const rad=d=>d*Math.PI/180;
 export function interferenceAt(s,x,z,t=s.t){const lambda=s.speed/s.f,r1=Math.hypot(x+s.separation/2,z),r2=Math.hypot(x-s.separation/2,z),phase=rad(s.phase);const u1=s.a*Math.cos(2*Math.PI*(s.f*t-r1/lambda)),u2=s.a*Math.cos(2*Math.PI*(s.f*t-r2/lambda)+phase);return {u1,u2,u:u1+u2,amplitude:2*s.a*Math.abs(Math.cos((2*Math.PI*(r1-r2)/lambda+phase)/2)),delta:r2-r1,lambda};}
 export function evaluate(id,s,c={}){const t=s.t||0;if(atlasById[id])return evaluateAtlas(id,s);switch(id){

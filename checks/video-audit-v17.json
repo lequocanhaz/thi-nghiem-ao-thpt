@@ -1,0 +1,26 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "decodedFrames": 165,
+  "uniqueFrames": 165,
+  "audio": false,
+  "source": "https://svs.gsfc.nasa.gov/13326/",
+  "method": "FFprobe metadata and full FFmpeg decode before packaging; no browser playback test.",
+  "assets": [
+    {
+      "file": "black-hole.mp4",
+      "bytes": 2012308,
+      "sha256": "4cb6a656dbab0ddc2703e68906aa83ddd1ec93f3db12f248c6dc5815b589f82a"
+    },
+    {
+      "file": "black-hole.webm",
+      "bytes": 698658,
+      "sha256": "73bf2f84f509d5d325528a33048705bb2693bd46ed32b55e0b452660d3fa605d"
+    },
+    {
+      "file": "black-hole.webp",
+      "bytes": 95228,
+      "sha256": "8323668e159bc95ec6df668bb5017d7a2a7bb63ad8115ade989dec35e6b03ecb"
+    }
+  ]
+}

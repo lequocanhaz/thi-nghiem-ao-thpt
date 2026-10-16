@@ -427,10 +427,10 @@ dialog .setting select { background:#f8fafd; color:var(--ink); font-size:.94rem;
   *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
 }
 /* Supplied SVN-Product Sans, packaged locally with its full Vietnamese character set. */
-@font-face{font-family:'Product Sans';src:url('fonts/ProductSans-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Product Sans';src:url('fonts/ProductSans-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Product Sans';src:url('fonts/ProductSans-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:'Product Sans';src:url('fonts/ProductSans-BoldItalic.woff2') format('woff2');font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:'Product Sans';src:url('fonts/ProductSans-Regular-v17.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Product Sans';src:url('fonts/ProductSans-Bold-v17.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Product Sans';src:url('fonts/ProductSans-Italic-v17.otf') format('opentype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Product Sans';src:url('fonts/ProductSans-BoldItalic-v17.otf') format('opentype');font-weight:700;font-style:italic;font-display:swap}
 :root{font-family:'Product Sans',Inter,'Segoe UI',sans-serif;font-synthesis:none}
 .main-banner{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(0,1.5fr);min-height:520px;margin:0 0 32px;border:1px solid #d6e0ec;border-radius:18px;overflow:hidden;background:#fff;position:relative}
 .banner-copy{padding:44px 0 40px 40px;position:relative;z-index:2;align-self:center}
@@ -634,3 +634,6 @@ dialog .dialog-head h2 { font-size:1.35rem; line-height:1.4; }
 .present-narration { display:none; }
 .lab[data-layout=present] .present-narration { display:inline-flex; color:#245acb; background:#eaf1fc; border-color:#c3d4ef; align-items:center; }
 .lab[data-layout=present] .speech-mini output { font-size:1rem; }
+
+/* Apply the provided Vietnamese font to all native form controls as well. */
+body,button,input,select,textarea{font-family:'Product Sans','Segoe UI',sans-serif;}

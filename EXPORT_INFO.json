@@ -3,12 +3,15 @@
   "experiments": 300,
   "dynamic_experiments": 79,
   "exported_for": "GitHub repository / GitHub Pages",
-  "pages_deployed": false,
+  "pages_deployed": true,
   "excluded": [
     "platform hosting metadata",
     ".git credentials/history",
     "node_modules",
     "runtime caches"
   ],
-  "date": "2026-10-16"
+  "date": "2026-10-16",
+  "pages_url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/",
+  "interface_version": 17,
+  "ai_live": false
 }

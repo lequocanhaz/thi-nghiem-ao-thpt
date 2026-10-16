@@ -1,0 +1,14 @@
+Black Hole Accretion Disk Visualization · NASA SVS 13326
+Source: https://svs.gsfc.nasa.gov/13326/
+Credit: NASA’s Goddard Space Flight Center/Jeremy Schnittman
+Policy: https://svs.gsfc.nasa.gov/help/
+
+Original MP4: https://svs.gsfc.nasa.gov/vis/a010000/a013300/a013326/BH_AccretionDisk_Sim_Stationary_1080.mp4
+Original WebM: https://svs.gsfc.nasa.gov/vis/a010000/a013300/a013326/BH_AccretionDisk_Sim_Stationary_1080.webm
+
+Native frame: 1920 × 1080, 30000/1001 fps, 5.5055 s, no audio.
+MP4: H.264, CRF22, yuv420p, faststart; no resizing or retiming.
+WebM: NASA VP8 stream retained; no audio. Poster extracted at 2 s.
+NASA SVS materials are public domain unless otherwise noted. No separate third-party restriction is noted for this visualization. Attribution is preserved; NASA does not endorse this website.
+
+This is a pre-rendered visualization of an accretion disk, not a live interactive general-relativity solver. The banner zoom changes only the displayed crop. It does not alter the physical model behind the video.

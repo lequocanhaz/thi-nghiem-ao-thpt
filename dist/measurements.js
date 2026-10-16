@@ -1,6 +1,6 @@
-import {atlasExperiments} from './atlas-catalog.js?v=14';
-import {discoveryExperiments} from './discovery-catalog.js?v=14';
-import {electricModes} from './experiments.js?v=14';
+import {atlasExperiments} from './atlas-catalog.js?v=17';
+import {discoveryExperiments} from './discovery-catalog.js?v=17';
+import {electricModes} from './experiments.js?v=17';
 const m=(label,key,unit='',scale=1,digits=2)=>({label,key,unit,scale,digits});
 export const meters={
 energy:[m('Động năng','k','J'),m('Thế năng','u','J'),m('Cơ năng','total','J')],

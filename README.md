@@ -1,6 +1,6 @@
 # Vật lí Lab · 300 bài khảo sát
 
-Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Không cần máy chủ ứng dụng hay khóa API khi chạy.
+Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Trợ lý AI cần máy chủ và API key riêng, hiện chưa được kết nối.
 
 Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
@@ -13,21 +13,24 @@ Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
 GitHub Free hỗ trợ Pages từ repository công khai; Pages từ repository riêng tư phụ thuộc gói tài khoản. Chọn Public đồng nghĩa người khác có thể đọc và tải mã nguồn. Tài liệu chính thức: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
 
-## Giao diện Cinematic · v16
+## Video và tương tác · v17
 
-Banner dùng cảnh không gian riêng với hố đen, vòng bồi tụ và viền khí quyển hành tinh, hiệu ứng ánh sáng và thị sai trực tiếp. Đã bỏ chế độ dụng cụ trong banner. Có tạm dừng, góc cảnh, bàn phím, toàn màn hình và lựa chọn khung dựng Full HD 1920 × 1080. Ảnh gốc là 1672 × 941, không phải video quay hay ảnh gốc Full HD; phần dựng Canvas nhẹ không có shader ánh sáng. Đây là minh họa nghệ thuật, không theo tỉ lệ và không dùng để đo.
+Banner dùng video NASA thực 1920 × 1080 có chuyển động, đóng gói MP4/WebM để không lệ thuộc link nóng. Có phát/tạm dừng, phóng cảnh và toàn màn hình; khi autoplay bị chặn, nút Phát video cho phép khởi động thủ công. Nguồn và credit trong `dist/video/NOTICE.txt`. Đây là hình dựng mô phỏng của NASA, không phải phép đo hay bộ giải tương đối rộng chạy trực tiếp.
 
-Cả 300 bài dùng bảng điều khiển rộng hơn, ô nhập và số đọc lớn hơn. Bảng đo có thể mở toàn chiều ngang; đồ thị, bảng đo và bảng thông số đều có tay nắm điều chỉnh kích thước bằng chuột hoặc bàn phím. “Khoảng thanh trượt” giúp chọn khoảng khảo sát bên trong miền vật lí hiện hành, được lưu trong phiên. Ô số vẫn nhận toàn miền cho phép. Không tự mở rộng miền áp dụng của công thức.
+Font sử dụng đúng bốn tệp Product Sans OTF được cung cấp. Các nút kéo 3D giữ liên kết đại lượng độc lập; điều chỉnh trực tiếp, bàn phím và ô số dùng chung trạng thái. 629 miền thông số ở 270 bài được mở rộng sau khi giữ các ràng buộc áp dụng. Bảng điều khiển và số liệu vẫn điều chỉnh kích thước được; “Khoảng thanh trượt” dùng để tập trung một khoảng trong miền hợp lệ.
 
-Nguồn học liệu bổ sung 12 tài liệu Caltech/Feynman, MIT OpenCourseWare và NIST, gắn với từng bài phù hợp. Ghi rõ nguồn lí thuyết, thực hành hay cơ sở dữ liệu. Chưa nhập bộ dữ liệu XCOM; hệ số suy giảm vẫn do người học chọn. Giữ các nguồn OpenStax và nội dung trước đây.
+Hộp Trợ lý đã tích hợp giao diện và mã backend. **Chưa có endpoint AI hoạt động:** cần triển khai backend HTTPS với API key/model, rồi cấu hình URL trong `dist/ai-config.js`. Key không nằm trong frontend. Xem `server/README.md`. Không có câu trả lời AI giả khi chưa kết nối.
 
-Kiểm tra: `npm run check`. Phạm vi và giới hạn ở `checks/verification-v16.md`.
+Giữ 300 bài, phương trình, mẫu thiết lập, các nguồn OpenStax và 12 tài liệu quốc tế, chức năng đo/đồ thị/A-B/quét biến/xuất nhập phiên và âm thanh đã có. 79 bài chạy theo thời gian, các bài còn lại khảo sát bằng thông số.
+
+Kiểm tra: `npm run check`, `npm run check:models`, `npm run check:framing`, `npm run check:audio`. Phạm vi và giới hạn ở `checks/verification-v17.md`. Kiểm tra DOM/hình học không thay thế ảnh chụp hoặc thao tác trình duyệt thực.
 
 ## Chỉnh sửa về sau
 
-- Giao diện: `dist/expansion.css` (v16), `dist/visual.css` (v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
-- Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, `dist/cinematic.js`, các tệp `*-scenes.js`.
+- Giao diện: `dist/refinement.css` (v17), `dist/expansion.css` (v16), `dist/visual.css` (v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
+- Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, các tệp `*-scenes.js`.
 - Nội dung và mô hình: các tệp `*-catalog.js`, `dist/models.js`, `dist/physics.js`.
+- Trợ lý AI: `dist/assistant.js`, `dist/ai-config.js`, `server/ai-handler.mjs`.
 - Các bản thuyết minh tiếng Việt: `dist/audio/vi13/`, mục lục đoạn đọc trong `dist/voice-index.js`.
 - Dùng GitHub Desktop hoặc trình biên tập của bạn, commit và push lên `main`; workflow kiểm tra rồi cập nhật website. Có thể trao đổi yêu cầu sửa trong cuộc trò chuyện và cung cấp đúng URL repository đã cấp quyền.
 

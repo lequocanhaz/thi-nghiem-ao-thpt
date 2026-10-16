@@ -1,4 +1,4 @@
-import {ClipPlayer} from './clip-player.js?v=14';
+import {ClipPlayer} from './clip-player.js?v=17';
 const digits=['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];
 const unitNames={'×':'lần',kg:'ki lô gam',g:'gam',m:'mét',s:'giây',A:'ampe',V:'vôn',N:'niu tơn',C:'cu lông',J:'jun',W:'oát',K:'ken vin',T:'tesla',F:'fara',H:'hen ri',Pa:'pas can',Hz:'héc',Wb:'vê be',mol:'mol',rad:'ra đi an',L:'lít',Ω:'ôm',eV:'electron vôn',AU:'đơn vị thiên văn',D:'đi ốp',dB:'đê xi ben',bar:'bar',cd:'can đê la',lm:'lumen',lx:'lux',var:'vôn ampe phản kháng',arcsec:'giây góc',u:'đơn vị khối lượng nguyên tử',c:'tốc độ ánh sáng',electron:'electron',strain:'biến dạng tương đối',vòng:'vòng',vạch:'vạch',giờ:'giờ',phút:'phút',năm:'năm','°C':'độ xê','°':'độ'};
 const unitPrefixes={µ:'mi crô',m:'mi li',c:'xăng ti',k:'ki lô',M:'mê ga',G:'gi ga',T:'tê ra',n:'na nô',p:'pi cô',f:'fem tô'};

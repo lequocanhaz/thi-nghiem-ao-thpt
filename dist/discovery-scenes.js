@@ -1,6 +1,6 @@
-import {premiumRayOptics} from './optics-studio.js?v=14';
-import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine} from './geometry-kit.js?v=14';
-import {evaluateDiscovery,fringe} from './discovery-models.js?v=14';
+import {premiumRayOptics} from './optics-studio.js?v=17';
+import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine} from './geometry-kit.js?v=17';
+import {evaluateDiscovery,fringe} from './discovery-models.js?v=17';
 const rad=x=>x*Math.PI/180,clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 const colorTemp=t=>new T.Color().setHSL(.59-clamp((t-5)/140,0,1)*.58,.65,.65);
 function vessel(g,x=0,r=.65,h=1.6){mesh(g,new T.CylinderGeometry(r,r,h,40,1,true),mat(0xc9e1f5,{transparent:true,opacity:.12,side:T.DoubleSide,depthWrite:false}),x,h/2+.12,0);cylinder(g,r,.08,0xcbdced,x,.12,0);return cylinder(g,r*.94,h*.65,0x6bc7e0,x,h*.325+.16,0);}

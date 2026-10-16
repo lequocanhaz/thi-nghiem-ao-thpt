@@ -1,4 +1,4 @@
-import {voiceIndex} from './voice-index.js?v=14';
+import {voiceIndex} from './voice-index.js?v=17';
 const clip=(id,key,gap)=>{const group=voiceIndex[id],range=group?.segments?.[key];return range?{src:group.src,start:range[0],end:range[1],gap}:null;};
 export function guideClips(id,section='intro',step=0){if(section==='intro')return ['heading','step0','step1','step2'].map(key=>clip(id,key,.14)).filter(Boolean);return [clip(id,section==='coach'?'step'+step:section,.1)].filter(Boolean);}
 const digit=['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];

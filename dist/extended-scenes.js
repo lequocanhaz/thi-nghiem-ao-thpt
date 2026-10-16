@@ -1,7 +1,7 @@
-import {labCart,cable} from './apparatus.js?v=14';
-import {buildDiscoveryModel} from './discovery-scenes.js?v=14';
-import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=14';
-import {rad,interferenceAt,evaluate} from './models.js?v=14';
+import {labCart,cable} from './apparatus.js?v=17';
+import {buildDiscoveryModel} from './discovery-scenes.js?v=17';
+import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=17';
+import {rad,interferenceAt,evaluate} from './models.js?v=17';
 const circle=(r,n=100)=>Array.from({length:n+1},(_,i)=>V(r*Math.cos(i*2*Math.PI/n),.05,r*Math.sin(i*2*Math.PI/n)));
 function trolley(g,color,x=0){return labCart(g,color,x);}
 function straight(id,g,s,d,o){platform(g,7.6,3);box(g,7,.10,.82,0xf4f7fb,0,.12,0);for(let x=-3;x<=3;x+=.5)line(g,[V(x,.18,-.45),V(x,.18,.45)],0xc0cfdd);const cart=trolley(g,C.blue);const force=arrow(g,V(0,1,0),V(1,0,0),C.orange);const velocity=arrow(g,V(0,1.4,0),V(1,0,0),C.blue);return(s,d,c)=>{const x=id==='uniform'?-3+d.x*.12:id==='acceleration'?-1.5+d.x*.06:d.x*.5;cart.position.x=x;for(const [a,value,scale] of [[force,id==='newton'?s.force:d.acc||0,.08],[velocity,d.v,.13]]){a.position.set(x,a===force?1:1.4,0);a.visible=c.switches?.vectors!==false&&Math.abs(value)>.01;a.setDirection(V(Math.sign(value)||1,0,0));a.setLength(Math.min(1.6,Math.max(.02,Math.abs(value)*scale)),.15,.07);}};}

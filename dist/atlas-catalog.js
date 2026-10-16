@@ -1,4 +1,4 @@
-import {expansionExperiments} from './expansion-catalog.js?v=14';
+import {expansionExperiments} from './expansion-catalog.js?v=17';
 // Each entry defines its own physical relationship, controls, observables and limits.
 const G=9.81,PI=Math.PI,R=8.314462618,k=8.9875517923e9,mu=4e-7*PI,eps=8.8541878128e-12,e=1.602176634e-19;
 const rad=a=>a*PI/180;

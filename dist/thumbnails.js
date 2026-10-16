@@ -1,7 +1,7 @@
-import {SoftwareScene} from './software-scene.js?v=14';
-import {LabScene} from './scene3d.js?v=14';
-import {initialState} from './experiments.js?v=14';
-import {evaluate,duration} from './models.js?v=14';
+import {SoftwareScene} from './software-scene.js?v=17';
+import {LabScene} from './scene3d.js?v=17';
+import {initialState} from './experiments.js?v=17';
+import {evaluate,duration} from './models.js?v=17';
 const cache=new Map();let renderer=null,queue=[],busy=false,token=0,observer=null,softwareOnly=false;
 export function stopThumbnails(){token++;queue=[];observer?.disconnect();}
 export function observeThumbnails(experiments){stopThumbnails();const own=token;const targets=document.querySelectorAll('[data-thumb]');for(const el of targets){const image=cache.get(el.dataset.thumb);if(image){el.innerHTML=`<img src="${image}" alt="" loading="lazy">`;el.dataset.ready='true';}}

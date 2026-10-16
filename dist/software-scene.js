@@ -1,5 +1,5 @@
-import {T,V} from './geometry-kit.js?v=14';
-import {LabScene} from './scene3d.js?v=14';
+import {T,V} from './geometry-kit.js?v=17';
+import {LabScene} from './scene3d.js?v=17';
 import {OrbitControls} from './vendor/OrbitControls.js';
 // Project the same apparatus into Canvas 2D. This path uses no WebGL context.
 export function projectScene(scene,camera,width,height,budget=26000){
