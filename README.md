@@ -13,16 +13,20 @@ Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
 GitHub Free hỗ trợ Pages từ repository công khai; Pages từ repository riêng tư phụ thuộc gói tài khoản. Chọn Public đồng nghĩa người khác có thể đọc và tải mã nguồn. Tài liệu chính thức: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
 
-## Giao diện Orbital · v15
+## Giao diện Cinematic · v16
 
-Banner không gian bằng Three.js có độ nghiêng, đổi góc bằng chuột/bàn phím, tạm dừng và chuyển sang bộ dụng cụ. Cảnh không gian là minh họa nghệ thuật, không dùng làm dữ liệu đo; Canvas là phương án nhẹ khi thiếu WebGL. Giao diện thư viện và phòng thí nghiệm giữ nền sáng, font Product Sans, công cụ và bảng đo hiện có.
+Banner dùng cảnh không gian riêng với hố đen, vòng bồi tụ và viền khí quyển hành tinh, hiệu ứng ánh sáng và thị sai trực tiếp. Đã bỏ chế độ dụng cụ trong banner. Có tạm dừng, góc cảnh, bàn phím, toàn màn hình và lựa chọn khung dựng Full HD 1920 × 1080. Ảnh gốc là 1672 × 941, không phải video quay hay ảnh gốc Full HD; phần dựng Canvas nhẹ không có shader ánh sáng. Đây là minh họa nghệ thuật, không theo tỉ lệ và không dùng để đo.
 
-Kiểm tra riêng phần visual: `npm run check:visual`. Giới hạn kiểm tra ở `checks/verification-v15.md`.
+Cả 300 bài dùng bảng điều khiển rộng hơn, ô nhập và số đọc lớn hơn. Bảng đo có thể mở toàn chiều ngang; đồ thị, bảng đo và bảng thông số đều có tay nắm điều chỉnh kích thước bằng chuột hoặc bàn phím. “Khoảng thanh trượt” giúp chọn khoảng khảo sát bên trong miền vật lí hiện hành, được lưu trong phiên. Ô số vẫn nhận toàn miền cho phép. Không tự mở rộng miền áp dụng của công thức.
+
+Nguồn học liệu bổ sung 12 tài liệu Caltech/Feynman, MIT OpenCourseWare và NIST, gắn với từng bài phù hợp. Ghi rõ nguồn lí thuyết, thực hành hay cơ sở dữ liệu. Chưa nhập bộ dữ liệu XCOM; hệ số suy giảm vẫn do người học chọn. Giữ các nguồn OpenStax và nội dung trước đây.
+
+Kiểm tra: `npm run check`. Phạm vi và giới hạn ở `checks/verification-v16.md`.
 
 ## Chỉnh sửa về sau
 
-- Giao diện: `dist/visual.css` (phong cách v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
-- Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, `dist/cosmos.js`, các tệp `*-scenes.js`.
+- Giao diện: `dist/expansion.css` (v16), `dist/visual.css` (v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
+- Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, `dist/cinematic.js`, các tệp `*-scenes.js`.
 - Nội dung và mô hình: các tệp `*-catalog.js`, `dist/models.js`, `dist/physics.js`.
 - Các bản thuyết minh tiếng Việt: `dist/audio/vi13/`, mục lục đoạn đọc trong `dist/voice-index.js`.
 - Dùng GitHub Desktop hoặc trình biên tập của bạn, commit và push lên `main`; workflow kiểm tra rồi cập nhật website. Có thể trao đổi yêu cầu sửa trong cuộc trò chuyện và cung cấp đúng URL repository đã cấp quyền.
@@ -53,6 +57,6 @@ Sau đó mở http://localhost:8080. Không mở `index.html` bằng `file://` v
 
 Font Product Sans do người dùng cung cấp; giọng Hoài My (Microsoft), không phải bộ giọng OpenScienceVN. Giữ các ghi nguồn và giấy phép hiện có trong `sources/`, `dist/fonts/`, `dist/vendor/`, `dist/audio/vi13/`. Gói này không tự cấp giấy phép phân phối lại cho tài nguyên bên thứ ba.
 
-Chi tiết bằng chứng kiểm tra ở `checks/verification-v14.md`. Đã kiểm tra mã/DOM, số liệu và hình học; chưa kiểm tra GPU, chạm thật, trình đọc màn hình hay thẩm định phát âm bằng loa trên thiết bị. GitHub Actions đã chạy thành công bộ kiểm tra mã/DOM và triển khai lên GitHub Pages ngày 16/10/2026.
+Chi tiết bản mới ở `checks/verification-v16.md`; các đợt kiểm tra nền ở `checks/verification-v14.md` và `checks/verification-v15.md`. Đã kiểm tra mã/DOM, số liệu và hình học; chưa kiểm tra GPU, chạm thật, trình đọc màn hình hay thẩm định phát âm bằng loa trên thiết bị. GitHub Actions đã chạy thành công bộ kiểm tra mã/DOM và triển khai lên GitHub Pages ngày 16/10/2026.
 
 Nguồn cấu hình Pages: https://github.com/actions/starter-workflows/blob/main/pages/static.yml

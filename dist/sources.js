@@ -42,3 +42,27 @@ sources.vapor_pressure=[{publisher:'OpenStax',title:'Phase Transitions · Clausi
 for(const id of ['otto_cycle','diesel_cycle'])sources[id].unshift({publisher:'MIT OpenCourseWare',title:'Internal Combustion Engines · The Physics of Energy',url:'https://ocw.mit.edu/courses/8-21-the-physics-of-energy-fall-2009/resources/mit8_21s09_lec11/',kind:'Chu trình lí tưởng Otto và Diesel'});
 for(const id of ['duffing','parametric_oscillation'])sources[id].unshift({publisher:'MIT OpenCourseWare',title:'Weakly Nonlinear Oscillators',url:'https://ocw.mit.edu/courses/18-385j-nonlinear-dynamics-and-chaos-fall-2004/63d3700bc08c791e6ff61537a2686f39_weaklynloscilators.pdf',kind:'Cơ sở mô hình dao động phi tuyến · Mở rộng'});
 sources.van_der_pol.unshift({publisher:'MIT OpenCourseWare',title:'Systems of Equations · Van der Pol oscillator',url:'https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/resources/systems-of-equations/',kind:'Phương trình tự dao động và tích phân số · Mở rộng'});
+
+// These are reading references, not a claim of experimental validation or imported data.
+export const internationalChecked='16/10/2026';
+const feynman='https://www.feynmanlectures.caltech.edu/';
+const mit='https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/';
+export const internationalReferences=[
+ {publisher:'Caltech · The Feynman Lectures',title:'I.9 · Newton’s Laws of Dynamics',url:feynman+'I_09.html',kind:'Giáo trình nền tảng',note:'Định luật Newton, vectơ và phương trình chuyển động; xem giả định riêng của từng bài.',experiments:['newton','freefall','projectile','vector_components','orbit']},
+ {publisher:'Caltech · The Feynman Lectures',title:'I.21 · The Harmonic Oscillator',url:feynman+'I_21.html',kind:'Quan hệ lí thuyết',note:'Dao động điều hòa tuyến tính, tần số góc và năng lượng của hệ lò xo.',experiments:['oscillation','hooke','spring_period','oscillator_energy','spring_energy']},
+ {publisher:'Caltech · The Feynman Lectures',title:'I.47 · Sound. The Wave Equation',url:feynman+'I_47.html',kind:'Giáo trình nền tảng',note:'Sóng tuyến tính và phương trình sóng; không thay thế điều kiện biên của từng mô hình.',experiments:['wave','sound','wave_packet','string_boundary','water_refraction']},
+ {publisher:'Caltech · The Feynman Lectures',title:'I.27 · Geometrical Optics',url:feynman+'I_27.html',kind:'Quan hệ lí thuyết',note:'Quang hình, thấu kính và giới hạn gần trục; mô hình quang sai có giả định riêng.',experiments:['lens','lens_power','lenses_contact','separated_lenses','magnifier','spherical_aberration']},
+ {publisher:'Caltech · The Feynman Lectures',title:'I.30 · Diffraction',url:feynman+'I_30.html',kind:'Giáo trình nền tảng',note:'Giao thoa và nhiễu xạ; các bài độ phân giải, màng mỏng cần thêm điều kiện riêng.',experiments:['diffraction','grating','grating_resolution','resolving_power','thin_film']},
+ {publisher:'Caltech · The Feynman Lectures',title:'I.39 · The Kinetic Theory of Gases',url:feynman+'I_39.html',kind:'Giáo trình nền tảng',note:'Mô hình khí lí tưởng và chuyển động nhiệt. Bậc tự do, nhiệt dung và γ theo cấu hình từng bài.',experiments:['gas','boyle','kinetic','isobaric','isochoric','adiabatic']},
+ {publisher:'Caltech · The Feynman Lectures',title:'II.4 · Electrostatics',url:feynman+'II_04.html',kind:'Giáo trình nền tảng',note:'Điện trường, điện thế và chồng chất; dùng hệ đơn vị và hằng số hiện hành của mô hình.',experiments:['electric','potential_point','potential_pair','uniform_field','charged_ring','charged_rod','charged_disk']},
+ {publisher:'Caltech · The Feynman Lectures',title:'II.17 · The Laws of Induction',url:feynman+'II_17.html',kind:'Quan hệ lí thuyết',note:'Định luật Faraday và suất điện động cảm ứng. Xem quy ước dấu, hình học và giả định lí tưởng.',experiments:['induction','sliding_rod','coil_entering_field','mutual_induction','inductor_energy','transformer']},
+ {publisher:'Caltech · The Feynman Lectures',title:'III.1 · Quantum Behavior',url:feynman+'III_01.html',kind:'Giáo trình nền tảng',note:'Lưỡng tính sóng–hạt; công thức giếng thế và nhiễu xạ electron được dẫn riêng trong từng bài.',experiments:['debroglie','electron_bragg','quantum_box']},
+ {publisher:'MIT OpenCourseWare · 8.02',title:'Experiment 6 · Ohm’s Law, RC and RL Circuits',url:mit+'experiment6/',kind:'Tài liệu thực hành',note:'Cách khảo sát định luật Ohm và quá trình quá độ RC, RL; số liệu trên web vẫn do mô hình tính.',experiments:['ohm','capacitor','rl_response','meter_loading','rc_meter_loading']},
+ {publisher:'MIT OpenCourseWare · 8.02',title:'Chapter 12 · AC Circuits',url:mit+'cha12ac_circuits/',kind:'Quan hệ lí thuyết',note:'Mạch xoay chiều, RLC, công suất và máy biến áp trong các điều kiện lí tưởng được nêu.',experiments:['ac','rlc_resonance','rlc_bandwidth','power_factor','transformer']},
+ {publisher:'NIST · XCOM',title:'Photon Cross Sections Database · Introduction',url:'https://pml.nist.gov/PhysRefData/Xcom/Text/intro.html',kind:'Cơ sở dữ liệu tham khảo',note:'Tra cứu hệ số suy giảm theo vật liệu và năng lượng. Bài hiện tại dùng μ do người học nhập, chưa nạp dữ liệu XCOM.',experiments:['gamma_attenuation']}
+];
+for(const reference of internationalReferences)for(const id of reference.experiments){
+ if(!sources[id])throw Error('Nguồn tham khảo chưa gắn đúng bài: '+id);
+ const {experiments:ids,...reading}=reference;
+ if(!sources[id].some(r=>r.url===reading.url))sources[id].push(reading);
+}

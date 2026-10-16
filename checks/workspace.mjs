@@ -14,8 +14,8 @@ const {document,window}=parseHTML('<html><body><main></main></body></html>');
 globalThis.document=document;globalThis.matchMedia=()=>({matches:false});
 window.HTMLCanvasElement.prototype.getContext=()=>({clearRect(){},fillRect(){},strokeRect(){},fillText(){},beginPath(){},roundRect(){},fill(){},stroke(){},measureText:s=>({width:s.length*18})});
 assert.equal(cleanLayout(null).dockWidth,layoutDefaults.dockWidth);
-assert.equal(cleanLayout({dockWidth:99999}).dockWidth,600);
-assert.equal(cleanLayout({dockWidth:100}).dockWidth,320);
+assert.equal(cleanLayout({dockWidth:99999}).dockWidth,900);
+assert.equal(cleanLayout({dockWidth:100}).dockWidth,360);
 assert.equal(cleanLayout({chartHeight:'invalid'}).chartHeight,layoutDefaults.chartHeight);
 assert.equal(cleanLayout({guidance:'false'}).guidance,false);
 for(const e of experiments){
@@ -47,7 +47,7 @@ stage.setInteraction(false);assert.equal(canvas.style.touchAction,'pan-y');asser
 for(const id of ['oscillation','wave']){const e=experiments.find(e=>e.id===id),s=initialState(e),m=buildLabModel(id,s,evaluate(id,s),{labels:false,config:cfg});m.group.updateMatrixWorld(true);const b=new T.Box3().setFromObject(m.group),size=b.getSize(new T.Vector3());assert.ok(Math.max(size.x,size.y,size.z)<25,id+' apparatus must fit the lab-scale drawing');m.group.traverse(o=>{o.geometry?.dispose();o.material?.dispose?.()});}
 console.log('PASS v9 pure state and geometry: 300 restoration schemas/MathML, filtered point indices, hidden hit rejection, real pointer handlers/offset/highlight cleanup, touch scroll gating and corrected cylinder bounds. No GPU rendering.');
 // CSS cascade contracts at the requested widths. This is code inspection, not pixel layout.
-const css=CSSOM.parse(['styles.css','interface.css'].map(f=>fs.readFileSync(new URL('../dist/'+f,import.meta.url),'utf8')).join('\n'));
+const css=CSSOM.parse(['styles.css','interface.css','visual.css','expansion.css'].map(f=>fs.readFileSync(new URL('../dist/'+f,import.meta.url),'utf8')).join('\n'));
 function mediaMatches(q,width,coarse=false){if(q.includes('pointer:coarse')||q.includes('pointer: coarse'))return coarse;if(q.includes('prefers-reduced-motion'))return false;let m;for(const x of q.matchAll(/(min|max)-width:\s*(\d+)px/g)){if(x[1]==='min'&&width<+x[2]||x[1]==='max'&&width>+x[2])return false;}return true;}
 function rulesAt(rules,width,coarse){return rules.flatMap(r=>r.media?mediaMatches(r.media.mediaText,width,coarse)?rulesAt([...r.cssRules],width,coarse):[]:r.cssRules?[]:[r]);}
 function specificity(s){return (s.match(/#[\w-]+/g)||[]).length*100+(s.match(/\.[\w-]+|\[[^\]]+\]|:(?!:)[\w-]+/g)||[]).length*10+(s.replace(/#[\w-]+|\.[\w-]+|\[[^\]]+\]|:[\w-]+(?:\([^)]*\))?/g,'').match(/\b[a-zA-Z][\w-]*/g)||[]).length;}
@@ -57,7 +57,7 @@ for(const width of [360,768,1440])for(const mode of ['explore','measure','presen
  document.querySelector('main').innerHTML=labMarkup(ohm,{prefs,state:s,config:cfg,controls:'<div class="control-body"></div>',panel:'data',mode,experiments},()=>'<svg></svg>');const lab=document.querySelector('.lab');Object.assign(lab.dataset,{controlsCollapsed:'false',dockCollapsed:mode==='explore'?'true':'false',mobileControls:'false'});
  const controls=document.querySelector('.controls'),dock=document.querySelector('.research-dock'),work=document.querySelector('.experiment-work');
  assert.equal(work.parentElement,document.querySelector('.workspace'));assert.equal(controls.previousElementSibling.dataset.resize,'controlsWidth');assert.equal(dock.parentElement,work);assert.equal(dock.previousElementSibling.className,'instrument-zone');
- if(width===1440&&mode!=='present'){assert.equal(property(document.querySelector('.workspace'),'grid-template-columns',width),'minmax(0,1fr) 16px var(--controls-width,292px)');assert.equal(property(work,'display',width),'flex');assert.equal(property(work,'flex-direction',width),'column');assert.equal(property(controls,'position',width),'sticky');assert.equal(property(dock,'position',width),'static');}
+ if(width===1440&&mode!=='present'){assert.equal(property(document.querySelector('.workspace'),'grid-template-columns',width),'minmax(0,1fr) 20px var(--controls-width,380px)');assert.equal(property(work,'display',width),'flex');assert.equal(property(work,'flex-direction',width),'column');assert.equal(property(controls,'position',width),'sticky');assert.equal(property(dock,'position',width),'static');}
  assert.equal(property(document.querySelector('.guide-disclosure'),'display',width),mode==='present'?'none':'');
  if(mode==='present')assert.equal(property(controls,'display',width),'none',`${width} ${mode} controls hidden`);
  else assert.equal(property(controls,'display',width),'flex');
@@ -73,7 +73,7 @@ for(const width of [360,768,1440]){
  const pageNumbers=document.createElement('div');pageNumbers.className='page-numbers';document.querySelector('#pagination').append(pageNumbers);
  const pageJump=document.createElement('label');pageJump.className='page-jump';document.querySelector('#pagination').append(pageJump);
  assert.equal(property(pageNumbers,'display',width),width<=800?'none':'flex');assert.equal(property(pageJump,'display',width),width<=800?'flex':'none');
- assert.equal(property(document.querySelector('.banner-copy>p'),'display',width),width<=640?'none':'');
+ assert.equal(property(document.querySelector('.banner-copy>p'),'display',width),'block');
  assert.ok(document.querySelector('.entry-heading [data-action="progress"]'),'progress stays accessible after reducing banner text');
  for(const selector of ['.grade-filters button','.search-clear','.banner-model-links a'])assert.ok(parseFloat(property(document.querySelector(selector),'min-height',width))>=44,selector+' target at '+width);
  document.querySelector('main').innerHTML=labMarkup(ohm,{prefs,state:s,config:cfg,controls:'<div class="control-body"></div>',panel:'data',mode:'measure',experiments},()=>'<svg/>');

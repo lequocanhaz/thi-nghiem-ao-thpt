@@ -1,0 +1,9 @@
+CINEMATIC SPACE ARTWORK · v16
+
+cinematic-space.webp is original artwork generated for this project with OpenAI ImageGen on 16 October 2026. The reference video was used to understand the visual direction; its frames, watermark and soundtrack are not embedded in the website.
+
+Source poster: 1672 × 941 pixels. WebP is a format conversion of the original poster, without resampling. File size: 295924 bytes.
+
+The optional Full HD mode renders a 1920 × 1080 frame. It does not turn the source poster into native 1920 × 1080 footage. Three.js applies live image-based light flow and parallax. The Canvas fallback draws and moves the poster without the GPU light-flow shader.
+
+This scene is artistic, not a general-relativity simulation or an experiment, and is not to scale. No physical measurements are obtained from the banner.

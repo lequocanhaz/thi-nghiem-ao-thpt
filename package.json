@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "check:dom": "node checks/dom.mjs",
-    "check": "node checks/assets.mjs && node checks/workspace.mjs && node checks/cosmos.mjs && node checks/dom.mjs",
+    "check": "node checks/assets.mjs && node checks/workspace.mjs && node checks/parameter-window.mjs && node checks/banner.mjs && node checks/cosmos.mjs && node checks/dom.mjs",
     "check:models": "node checks/full-catalog.mjs",
     "check:framing": "node checks/framing.mjs",
     "check:audio": "node checks/media.mjs && node checks/clip-player.mjs",
