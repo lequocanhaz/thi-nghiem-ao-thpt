@@ -1,4 +1,4 @@
-import {LabAssistant} from './assistant.js?v=17';
+import {LabAssistant} from './assistant.js?v=19';
 import {parameterLimits,parameterWindow,cleanParameterWindows,revealParameterWindows} from './parameter-window.js?v=17';
 import {BannerScene} from './banner.js?v=18';
 import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=17';
@@ -179,4 +179,5 @@ function animate(now){requestAnimationFrame(animate);const dt=last?Math.min(.07,
 $('#dialog').addEventListener('close',restoreDialogFocus);
 if(!Array.isArray(prefs.favorites))prefs.favorites=[];if(!Array.isArray(prefs.recent))prefs.recent=[];prefs.progress=prefs.progress||{};document.documentElement.style.setProperty('--text-scale',prefs.textSize);route();requestAnimationFrame(animate);
 
-assistant=new LabAssistant({getContext:()=>active?{id:active.id,title:active.title,formula:active.formula,conditions:active.limit,configuration:{electricMode:active.id==='electric'?electricModes[config.mode]:undefined,capacitorMode:active.id==='capacitor'?config.capMode:undefined},parameters:active.params.map(p=>({key:p.key,label:p.label,value:state[p.key],unit:p.unit})),columns:active.headers,measurements:rows.slice(-12).map(r=>r.values)}:{id:'library',title:'Thư viện thí nghiệm Vật lí THPT'}});
+const assistantContext=()=>active?{id:active.id,title:active.title,formula:active.formula,conditions:active.limit,configuration:{electricMode:active.id==='electric'?electricModes[config.mode]:undefined,capacitorMode:active.id==='capacitor'?config.capMode:undefined},parameters:active.params.map(p=>({key:p.key,label:p.label,value:state[p.key],unit:p.unit})),columns:active.headers,measurements:rows.slice(-12).map(r=>r.values)}:{id:'library',title:'Thư viện thí nghiệm Vật lí THPT'};
+assistant=new LabAssistant({getContext:assistantContext,capture:async()=>{if(!active||!viewer||viewFailed)throw Error("Chưa có mô hình để chụp.");running=false;refresh();return {image:viewer.capture(),context:assistantContext()};}});
