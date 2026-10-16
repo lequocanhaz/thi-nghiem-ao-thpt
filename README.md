@@ -13,10 +13,16 @@ Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
 GitHub Free hỗ trợ Pages từ repository công khai; Pages từ repository riêng tư phụ thuộc gói tài khoản. Chọn Public đồng nghĩa người khác có thể đọc và tải mã nguồn. Tài liệu chính thức: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
 
+## Giao diện Orbital · v15
+
+Banner không gian bằng Three.js có độ nghiêng, đổi góc bằng chuột/bàn phím, tạm dừng và chuyển sang bộ dụng cụ. Cảnh không gian là minh họa nghệ thuật, không dùng làm dữ liệu đo; Canvas là phương án nhẹ khi thiếu WebGL. Giao diện thư viện và phòng thí nghiệm giữ nền sáng, font Product Sans, công cụ và bảng đo hiện có.
+
+Kiểm tra riêng phần visual: `npm run check:visual`. Giới hạn kiểm tra ở `checks/verification-v15.md`.
+
 ## Chỉnh sửa về sau
 
-- Giao diện: `dist/interface.css`, `dist/views.js`, `dist/app.js`.
-- Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, các tệp `*-scenes.js`.
+- Giao diện: `dist/visual.css` (phong cách v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
+- Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, `dist/cosmos.js`, các tệp `*-scenes.js`.
 - Nội dung và mô hình: các tệp `*-catalog.js`, `dist/models.js`, `dist/physics.js`.
 - Các bản thuyết minh tiếng Việt: `dist/audio/vi13/`, mục lục đoạn đọc trong `dist/voice-index.js`.
 - Dùng GitHub Desktop hoặc trình biên tập của bạn, commit và push lên `main`; workflow kiểm tra rồi cập nhật website. Có thể trao đổi yêu cầu sửa trong cuộc trò chuyện và cung cấp đúng URL repository đã cấp quyền.

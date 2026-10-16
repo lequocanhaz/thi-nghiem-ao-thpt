@@ -1,0 +1,9 @@
+{
+  "modules": 40,
+  "localImports": 87,
+  "unchangedAudioFiles": 301,
+  "preservedScientificModules": 8,
+  "baselineCommit": "de83fd8936436cd448ac5056a8478d10149c70a2",
+  "cacheVersion": 15,
+  "note": "Syntax and local paths checked. Audio hashes match the 301 fully decoded files in audit v13; no new listening or device playback test."
+}
