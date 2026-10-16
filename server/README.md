@@ -1,4 +1,4 @@
-> Frontend v20 mặc định dùng AI cục bộ WebLLM. Không gọi backend này; không cần API key hoặc mở máy chủ công khai để dùng chat cục bộ. Phần dưới mô tả backend OpenAI được giữ để tham khảo/cấu hình riêng về sau.
+> Frontend v21 dùng chat máy chủ và không tải mô hình cục bộ. Endpoint hiện chưa được bật vì kiểm tra API ngày 17/10/2026 (giờ Việt Nam) vẫn trả `billing_not_active`. Không có câu trả lời AI thật khi dịch vụ chưa hoạt động.
 
 # Backend API tùy chọn của Trợ lý Vật lí
 

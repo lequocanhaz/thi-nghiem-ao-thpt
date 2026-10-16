@@ -1,0 +1,7 @@
+{
+  "profiles": 3,
+  "activeInWebsite": false,
+  "fontSHA256": "537bc891e9e4f889314cd26ba2ab0754fd6e240406aeae5f5fb18db19219f6c1",
+  "tests": "legacy runtime mock load/f16/f32/stream/abort/image protocol; live assistant verified separately with no runtime import",
+  "limits": "No browser or real GPU inference test. The current chat requires an inference server instead."
+}

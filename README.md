@@ -1,6 +1,6 @@
 # Vật lí Lab · 300 bài khảo sát
 
-Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Trợ lý AI mặc định chạy cục bộ trong trình duyệt bằng WebLLM, không gọi API trả phí; cần WebGPU và tải mô hình trước lần dùng đầu tiên.
+Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Chatbox v21 chỉ có nhập câu hỏi và Gửi/Dừng, dùng máy chủ suy luận. Không tải mô hình AI hoặc yêu cầu WebGPU. Endpoint máy chủ hiện chưa được bật; lần kiểm tra API ngày 17/10/2026 (giờ Việt Nam) vẫn trả HTTP 429 `billing_not_active`.
 
 Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
@@ -19,7 +19,7 @@ Banner dùng video NASA thực 1920 × 1080 có chuyển động, đóng gói MP
 
 Chữ nội dung trên nền sáng chuyển sang đen; chữ trên banner tối dùng trắng, màu đại lượng Vật lí vẫn có quy ước riêng. Banner dùng tiêu đề và lời dẫn trực tiếp, không có khẩu hiệu trang trí. Font sử dụng đúng bốn tệp Product Sans OTF được cung cấp. Các nút kéo 3D giữ liên kết đại lượng độc lập; điều chỉnh trực tiếp, bàn phím và ô số dùng chung trạng thái. 629 miền thông số ở 270 bài được mở rộng sau khi giữ các ràng buộc áp dụng. Bảng điều khiển và số liệu vẫn điều chỉnh kích thước được; “Khoảng thanh trượt” dùng để tập trung một khoảng trong miền hợp lệ.
 
-Hộp Trợ lý hoạt động ngay trong web qua suy luận cục bộ: mở Trợ lý → chọn mô hình → Tải AI → nhập câu hỏi. Có Qwen3 1,7B (cân bằng), Qwen3 0,6B (nhẹ), Phi 3.5 Vision (có ảnh, cần bộ nhớ GPU cao hơn). Trả lời dạng streaming, dừng tạo, giải phóng bộ nhớ, bản nháp và hội thoại theo bài. Thông số chỉ được đưa vào ngữ cảnh khi người dùng chọn. Bản cục bộ dùng tối đa bốn dòng đo gần nhất và một ảnh; không gọi máy chủ OpenAI/Gemini. Tệp runtime WebLLM được ghim bản 0.2.86 trên jsDelivr; model/WASM tải từ Hugging Face và MLC. Không tải mô hình khi chỉ mở trang. Font giao diện chuyển sang đúng tệp Product Sans Bold đã cung cấp; SHA-256 được ghi trong `checks/local-ai-audit-v20.json`.
+Hộp Trợ lý v21 bỏ chọn mô hình, Tải AI, tiến độ tải, nút giải phóng GPU, bảng ngữ cảnh và các công cụ phụ. Chỉ giữ hỏi, gửi/dừng, hội thoại và đóng. Không tải ngầm WebLLM hoặc trọng số. Các mô-đun cục bộ cũ được giữ dưới dạng mã chưa được nhập bởi giao diện đang dùng, để bảo toàn khả năng tham khảo. Đổi font về Product Sans Regular cho nội dung; các cấp tiêu đề dùng Product Sans Bold do người dùng cung cấp. Backend cần hoạt động trước khi có câu trả lời thật; giao diện không giả lập AI khi thiếu kết nối.
 
 Giữ 300 bài, phương trình, mẫu thiết lập, các nguồn OpenStax và 12 tài liệu quốc tế, chức năng đo/đồ thị/A-B/quét biến/xuất nhập phiên và âm thanh đã có. 79 bài chạy theo thời gian, các bài còn lại khảo sát bằng thông số.
 
@@ -30,7 +30,7 @@ Kiểm tra: `npm run check`, `npm run check:models`, `npm run check:framing`, `n
 - Giao diện: `dist/refinement.css` (v17), `dist/expansion.css` (v16), `dist/visual.css` (v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
 - Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, các tệp `*-scenes.js`.
 - Nội dung và mô hình: các tệp `*-catalog.js`, `dist/models.js`, `dist/physics.js`.
-- Trợ lý AI cục bộ: `dist/assistant.js`, `dist/local-ai.js`, `dist/local-ai-worker.js`. Backend API cũ được giữ trong `server/`, frontend mặc định không gọi tới backend này.
+- Chatbox: `dist/assistant.js`. Endpoint: `dist/ai-config.js`. Backend được giữ trong `server/`; chưa được bật cho frontend khi tài khoản API chưa có thanh toán hoạt động.
 - Các bản thuyết minh tiếng Việt: `dist/audio/vi13/`, mục lục đoạn đọc trong `dist/voice-index.js`.
 - Dùng GitHub Desktop hoặc trình biên tập của bạn, commit và push lên `main`; workflow kiểm tra rồi cập nhật website. Có thể trao đổi yêu cầu sửa trong cuộc trò chuyện và cung cấp đúng URL repository đã cấp quyền.
 
@@ -69,3 +69,9 @@ Nguồn cấu hình Pages: https://github.com/actions/starter-workflows/blob/mai
 `npm run check` có kiểm tra riêng `checks/local-ai.mjs`: mock WebGPU/worker, chọn f16/f32, luồng streaming, dừng tải/dừng trả lời, định dạng ảnh, theo dõi ảnh ở lượt hỏi tiếp, giữ bản nháp khi lỗi và xác nhận không có lệnh gọi API nhà cung cấp trong luồng cục bộ. Kiểm tra tài nguyên mạng thực được lưu ở `checks/local-ai-assets-v20.json`. Đã so sánh font đóng gói trùng byte với tệp người dùng gửi và kiểm tra các glyph tiếng Việt.
 
 Giới hạn: môi trường hiện tại không có phiên kiểm thử trình duyệt/WebGPU; chưa xác nhận được suy luận GPU và chất lượng câu trả lời thực tế. Không cam kết mọi điện thoại/trình duyệt chạy được. Qwen là mô hình nhỏ, khả năng lập luận không tương đương ChatGPT; phải đối chiếu công thức/số liệu. Mô hình ảnh là Phi 3.5 Vision, cần khoảng 4,5–7 GB VRAM theo cấu hình thư viện. Thông báo lỗi hoặc thiếu WebGPU không được thay bằng câu trả lời AI giả.
+
+## Bản v21 — chat đơn giản và phân cấp chữ
+
+Đã gỡ hoàn toàn lệnh nhập mô-đun AI cục bộ khỏi `dist/assistant.js`; không có tải trọng số khi mở chat hoặc gửi câu hỏi. Chỉ hai nút trong panel: Đóng và Gửi/Dừng. Hỗ trợ Enter để gửi, Shift+Enter xuống dòng, IME, câu hỏi theo từng bài, giữ bản nháp khi lỗi, không xóa nội dung mới đang gõ khi câu trả lời cũ đến.
+
+Kiểm tra DOM/transport của panel dùng phản hồi giả lập để kiểm tra giao thức; không phải bằng chứng AI thật hoạt động. Mọi câu trả lời trong sản phẩm chỉ được hiển thị sau khi backend trả về thành công. Không kết nối được backend thì thông báo và giữ câu hỏi. Việc không tải mô hình phía học sinh cần một máy chủ AI hoạt động và tài nguyên/chi phí tương ứng.
