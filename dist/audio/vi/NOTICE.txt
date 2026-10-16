@@ -1,0 +1,10 @@
+Âm thanh tiếng Việt của Vật lí Lab
+
+Các đoạn đọc được tổng hợp từ nội dung do dự án biên soạn, bằng Piper TTS 1.3.0 và giọng vi_VN-vais1000-medium (VAIS-1000, 22.050 Hz).
+Mô hình và thông tin tác giả: Michael Hansen / rhasspy / Piper voices.
+https://huggingface.co/rhasspy/piper-voices/tree/main/vi/vi_VN/vais1000/medium
+https://huggingface.co/rhasspy/piper-voices/blob/main/vi/vi_VN/vais1000/medium/MODEL_CARD
+
+Model card ghi bộ dữ liệu VAIS-1000 theo Creative Commons Attribution 4.0:
+https://creativecommons.org/licenses/by/4.0/
+Các tệp trong thư mục này là âm thanh tổng hợp, đã ghép đoạn và nén MP3; không phải bản thu của giáo viên, không hàm ý người đóng góp dữ liệu xác nhận nội dung Vật lí.

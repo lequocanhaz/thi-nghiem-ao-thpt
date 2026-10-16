@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import {Narrator,speakable,Tone,vietnameseVoices,speechChunks} from '../dist/media.js';
+assert.ok(speakable('q₁ và q₂, 2 m/s², 10 Ω').includes('điện tích q một'));
+assert.ok(speakable('2 m/s²').includes('mét trên giây bình phương'));
+assert.ok(speakable('2 cm/s²').includes('xăng ti mét trên giây bình phương'));
+const unsupported=new Narrator();assert.equal(unsupported.speak('Xin chào').ok,false);
+let said=null,cancelled=0;globalThis.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};globalThis.speechSynthesis={speaking:false,paused:false,getVoices:()=>[{name:'Test Vietnamese',lang:'vi-VN'},{name:'English',lang:'en-US'}],addEventListener(){},cancel(){cancelled++},speak(u){said=u;this.speaking=true;u.onstart?.()},pause(){this.paused=true},resume(){this.paused=false}};
+const narrator=new Narrator();assert.equal(narrator.voices.length,1);narrator.rate=.8;assert.ok(narrator.speak('Định luật Ohm.').ok);assert.equal(said.lang,'vi-VN');assert.equal(said.rate,.8);assert.equal(said.voice.name,'Test Vietnamese');narrator.togglePause();assert.equal(globalThis.speechSynthesis.paused,true);narrator.togglePause();assert.equal(globalThis.speechSynthesis.paused,false);narrator.stop();assert.ok(cancelled>=2);
+globalThis.speechSynthesis.getVoices=()=>[{name:'English',lang:'en-US'}];assert.equal(new Narrator().speak('Tiếng Việt').ok,false);
+delete globalThis.speechSynthesis;delete globalThis.SpeechSynthesisUtterance;assert.equal(await new Tone().start(440),false);
+console.log('PASS voice selection, rate, speak/pause/resume/stop, no-Vietnamese-voice handling and unsupported audio handling.');
+
+const voices=[{name:'English default',lang:'en-US',default:true},{name:'Other Vietnamese',lang:'vi',default:true},{name:'Vietnamese basic',lang:'vi-VN'},{name:'HoaiMy Natural',lang:'vi-VN'}];
+assert.equal(vietnameseVoices(voices)[0].name,'HoaiMy Natural');assert.equal(vietnameseVoices(voices).length,3);
+assert.equal(speakable('6mA'), '6 mi li ampe');assert.equal(speakable('−2,35 µm²/s'),'âm 2 phẩy ba năm mi crô mét vuông trên giây');assert.ok(speakable('1,2e-6 N·m').includes('nhân mười mũ âm 6'));
+assert.equal(speakable('2 10⁻⁶'),'2 mười mũ âm 6');assert.ok(speakable('3 W/(m·K)').includes('oát trên mét nhân ken vin'));
+const chunks=speechChunks('Hãy quan sát và ghi lại kết quả. '.repeat(50));assert.ok(chunks.length>3);assert.ok(chunks.every(x=>x.length<=230));
+const spoken=[],statuses=[];let voiceChange;
+globalThis.SpeechSynthesisUtterance=class{constructor(text){this.text=text}};
+globalThis.speechSynthesis={paused:false,getVoices:()=>voices,addEventListener(name,cb){voiceChange=cb},cancel(){},resume(){this.paused=false},pause(){this.paused=true},speak(u){spoken.push(u);u.onstart?.()}};
+const queued=new Narrator(status=>statuses.push(status));assert.equal(spoken.length,0,'never autoplay');assert.ok(queued.speak('Hãy quan sát và ghi lại kết quả. '.repeat(50)).ok);assert.equal(spoken[0].voice.name,'HoaiMy Natural');
+queued.togglePause();assert.equal(queued.status().paused,true);queued.togglePause();assert.equal(queued.status().paused,false);
+const stale=spoken[0];spoken[0].onend();assert.equal(spoken.length,2);queued.stop();const count=spoken.length;stale.onend();spoken[1].onend();assert.equal(spoken.length,count,'stopped queue cannot restart from a late callback');
+queued.voiceName='English default';queued.speak('Đọc số đo.');assert.equal(spoken.at(-1).voice.lang,'vi-VN','never fall back to English');spoken.at(-1).onerror({error:'network'});assert.equal(queued.status().speaking,false);assert.ok(statuses.at(-1).error);
+globalThis.speechSynthesis.getVoices=()=>[];voiceChange();assert.equal(queued.status().voices.length,0);assert.equal(queued.speak('Không có giọng.').ok,false);
+delete globalThis.speechSynthesis;delete globalThis.SpeechSynthesisUtterance;
+console.log('PASS exact vi-VN priority, natural voice preference, no autoplay/English fallback, scientific units/numbers, bounded chunks, pause/resume, error feedback, async voice refresh and cancellation-race recovery. Device audio is not tested.');

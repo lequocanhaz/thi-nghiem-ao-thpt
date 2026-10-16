@@ -1,0 +1,14 @@
+{
+  "source_commit": "26eae3bae1dbbf8213dfea4afc11d182710f9f2d",
+  "experiments": 300,
+  "dynamic_experiments": 79,
+  "exported_for": "GitHub repository / GitHub Pages",
+  "pages_deployed": false,
+  "excluded": [
+    "platform hosting metadata",
+    ".git credentials/history",
+    "node_modules",
+    "runtime caches"
+  ],
+  "date": "2026-10-16"
+}

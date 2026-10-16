@@ -1,0 +1,2115 @@
+{
+  "files": 301,
+  "duration": 11404.848,
+  "cues": 2591,
+  "minRms": 2775.15,
+  "results": [
+    {
+      "id": "energy",
+      "duration": 40.416,
+      "cues": 8,
+      "minRms": 3963.01,
+      "sha256": "c885db242bf5eefc83881bdad45343c7c6bb088a6bad70e1d6c5d65d36a75a23"
+    },
+    {
+      "id": "oscillation",
+      "duration": 43.056,
+      "cues": 8,
+      "minRms": 3993.79,
+      "sha256": "0111487f850a90cb719cd139d2dc06f22b488a6a270982f61899ad6f5deb2fd5"
+    },
+    {
+      "id": "wave",
+      "duration": 35.184,
+      "cues": 8,
+      "minRms": 3877.22,
+      "sha256": "3c13f0262c8af4f41737ac7d4bee3f153d086a314cd4090b4f56569acb99c4d6"
+    },
+    {
+      "id": "electric",
+      "duration": 40.92,
+      "cues": 8,
+      "minRms": 3893.96,
+      "sha256": "78ca3e3a9f7556daaa2a6f639a569a9906f4259cc13da7456def89b50334d8ef"
+    },
+    {
+      "id": "ohm",
+      "duration": 35.928,
+      "cues": 8,
+      "minRms": 3930.6,
+      "sha256": "6b67450dab9d484953bb8a80668f0c06caca6b6e3e8279365b928f857cdef6a2"
+    },
+    {
+      "id": "capacitor",
+      "duration": 43.344,
+      "cues": 8,
+      "minRms": 3675.74,
+      "sha256": "2c5626aeb230ccf7216a17fa90c2d048af3f57e6a285be11d46fa57293e5d38a"
+    },
+    {
+      "id": "boyle",
+      "duration": 33.456,
+      "cues": 8,
+      "minRms": 3913.92,
+      "sha256": "9839395d0c1e1f40f714e464bbd98a80eb84a3939d0b7cce9fbc312301e5e2a9"
+    },
+    {
+      "id": "gas",
+      "duration": 37.992,
+      "cues": 8,
+      "minRms": 3882.58,
+      "sha256": "27826dc85700e9d0d30ba3da1ac28f2308256daf2b497224b717cd462f2c9a31"
+    },
+    {
+      "id": "uniform",
+      "duration": 31.92,
+      "cues": 8,
+      "minRms": 4004.13,
+      "sha256": "1d2519adc0efe10e81e440769e00cfc5dd635a7b1c66c02ecc419cd0ddb6cffa"
+    },
+    {
+      "id": "acceleration",
+      "duration": 30.6,
+      "cues": 8,
+      "minRms": 4005.22,
+      "sha256": "a3f8cc7fd747028b393c8c5921ae71c3426ffd35a4aa2e792f4794efba2c8d50"
+    },
+    {
+      "id": "horizontal",
+      "duration": 29.256,
+      "cues": 8,
+      "minRms": 3683.8,
+      "sha256": "db2dc654528426b7c6548dcfa1ef1c03b3333f9e98fa15fae2c7d06e17b091da"
+    },
+    {
+      "id": "projectile",
+      "duration": 31.152,
+      "cues": 8,
+      "minRms": 3797.4,
+      "sha256": "2c7c3067a4ad6b7e5fb2f293ea0f17384f6fe39c77ade9c00d0fd6baf2924ef8"
+    },
+    {
+      "id": "newton",
+      "duration": 29.688,
+      "cues": 8,
+      "minRms": 3703.82,
+      "sha256": "7fb008f57b1fd3d7731b42c844d76d661c7a866c42ed663d42395ed7f9c0bf24"
+    },
+    {
+      "id": "incline",
+      "duration": 28.536,
+      "cues": 8,
+      "minRms": 3843.85,
+      "sha256": "5f74ff8bb21135276a3f6b8e2ef9d054af4b1fdfcd235ddff3bb8bf8d92cd80b"
+    },
+    {
+      "id": "collision",
+      "duration": 31.872,
+      "cues": 8,
+      "minRms": 3710.35,
+      "sha256": "fe7797255db21694216de3a1d91d34f3a46e8455ea2d08f447b8f713a7009f5f"
+    },
+    {
+      "id": "circular",
+      "duration": 29.472,
+      "cues": 8,
+      "minRms": 3964.79,
+      "sha256": "31f957ae11ba3c8f4c80922c830e2498b953b7f0a61e3e4922336f31363dc023"
+    },
+    {
+      "id": "lever",
+      "duration": 30.72,
+      "cues": 8,
+      "minRms": 3781.4,
+      "sha256": "c5dd1bafa72f110b23804c61cc5f1a6b418ea3459d47cf72decf3fc38086a381"
+    },
+    {
+      "id": "hooke",
+      "duration": 28.056,
+      "cues": 8,
+      "minRms": 3469.06,
+      "sha256": "5cdbb48a8bf7c7e8fad3606e2a1fd360c2c3889b3ea5e2554392ad6aaeacd495"
+    },
+    {
+      "id": "pendulum",
+      "duration": 29.424,
+      "cues": 8,
+      "minRms": 3917.41,
+      "sha256": "c977820c7a505976427132bfe3c95e32a681650aa026e2fa44f31133c69dc061"
+    },
+    {
+      "id": "damped",
+      "duration": 30.168,
+      "cues": 8,
+      "minRms": 3810.04,
+      "sha256": "b3f9f3683b37a4a9547264814d57eebe286d705e915aa75d31814c8ea3807456"
+    },
+    {
+      "id": "resonance",
+      "duration": 29.136,
+      "cues": 8,
+      "minRms": 3812.95,
+      "sha256": "e49cd5481cf7c6b05864d0dccaa9b3cb21a6128c95800166499e2bed3982b2b4"
+    },
+    {
+      "id": "interference",
+      "duration": 28.584,
+      "cues": 8,
+      "minRms": 3828.47,
+      "sha256": "ab559bd51c9189872cb171269979af4c0af16418f9e5e5eafa9528fa0e3db537"
+    },
+    {
+      "id": "standing",
+      "duration": 28.992,
+      "cues": 8,
+      "minRms": 3639.77,
+      "sha256": "c8454751f8da8f48a37d7a572819c449876407f0a5914c1b482e5b9a610dd20b"
+    },
+    {
+      "id": "sound",
+      "duration": 30.048,
+      "cues": 8,
+      "minRms": 4036.02,
+      "sha256": "eab80aee33b1ff3ebd324ce62eb0e17206595f4df6e3bfa9593fdf8cf9b08b53"
+    },
+    {
+      "id": "series",
+      "duration": 31.344,
+      "cues": 8,
+      "minRms": 3782.47,
+      "sha256": "6a7ef82399ac4ffbfb4696187564d98a787286ba9ee114406efcf711d74e02ae"
+    },
+    {
+      "id": "parallel",
+      "duration": 28.464,
+      "cues": 8,
+      "minRms": 3661.1,
+      "sha256": "f6700bdfd9a6f79e79361e3fc8e8768f8bc9ac8e9448fa14cb71cfd01aa860e7"
+    },
+    {
+      "id": "joule",
+      "duration": 29.16,
+      "cues": 8,
+      "minRms": 3733.56,
+      "sha256": "6623c1246130cd32fda58c6003279c6538dafdd22e74b1bfb469a5ef2fd26633"
+    },
+    {
+      "id": "magnetic",
+      "duration": 32.16,
+      "cues": 8,
+      "minRms": 3945.17,
+      "sha256": "11318b9b2ae0ff2e3012157b869f0bb638d1dde13f2cdacf2e3ff6dd3c953717"
+    },
+    {
+      "id": "induction",
+      "duration": 28.968,
+      "cues": 8,
+      "minRms": 3855.29,
+      "sha256": "d38768b9fc33a2e934281d8f0cf4193b3ae9b58a3eddd5e4072b12b7d62cc2c4"
+    },
+    {
+      "id": "decay",
+      "duration": 34.368,
+      "cues": 8,
+      "minRms": 3817.35,
+      "sha256": "7267ffeeb7a8a0e5f5b6c9fe4132679a304f60d0cc926ee83fb5e5ecfd90e13a"
+    },
+    {
+      "id": "freefall",
+      "duration": 28.272,
+      "cues": 8,
+      "minRms": 3941.81,
+      "sha256": "ae3e61517af6ddd41107504434311374475d39d3c7d5b0ce3ecb2e014aec540f"
+    },
+    {
+      "id": "friction",
+      "duration": 28.008,
+      "cues": 8,
+      "minRms": 3841.98,
+      "sha256": "5745123c3f92e7285e5d3da4026aeb892d52837b7a10ece7f96c71e5ffcaabb4"
+    },
+    {
+      "id": "work",
+      "duration": 29.184,
+      "cues": 8,
+      "minRms": 3892.74,
+      "sha256": "7a0921d2950a6119579c7677d02487f48ae03907b7ff84032e6dc61a6fd41bec"
+    },
+    {
+      "id": "impulse",
+      "duration": 30.864,
+      "cues": 8,
+      "minRms": 4057.03,
+      "sha256": "62b184ddb2df2762c231c100d839255352c52a13262df6eaabc377b49b9d5cf2"
+    },
+    {
+      "id": "buoyancy",
+      "duration": 28.56,
+      "cues": 8,
+      "minRms": 3959.39,
+      "sha256": "2087d3c965d50b79fb6147e0b28d520181703acfff5e1a4ae72ec1e51a73c936"
+    },
+    {
+      "id": "pressure",
+      "duration": 28.128,
+      "cues": 8,
+      "minRms": 3965.56,
+      "sha256": "b8bd9576ad25614922016fe4b6b660648c04d860ecb5f1322bc483688f8a3cca"
+    },
+    {
+      "id": "reflection",
+      "duration": 28.272,
+      "cues": 8,
+      "minRms": 3466.84,
+      "sha256": "e7e89ab9de3cca1762fb6102bacb5b2672f1c15e23aaf65dae421e5b2f177957"
+    },
+    {
+      "id": "refraction",
+      "duration": 28.104,
+      "cues": 8,
+      "minRms": 3528.53,
+      "sha256": "d76a25218374cdd70757bc5e342693678a4bb7de80df21b9ecac887d6bedbfe9"
+    },
+    {
+      "id": "tir",
+      "duration": 31.392,
+      "cues": 8,
+      "minRms": 3796.24,
+      "sha256": "62a8b723750ed84c4823ab7561d937df10c6fb2021b17246f5bf2b94452ed9cb"
+    },
+    {
+      "id": "lens",
+      "duration": 28.512,
+      "cues": 8,
+      "minRms": 3442.13,
+      "sha256": "1545e173cd0ee47cb5abcb0767c18aadc4064a7f4487411a5bbd5cfc87bfc4da"
+    },
+    {
+      "id": "mirror",
+      "duration": 28.104,
+      "cues": 8,
+      "minRms": 3455.1,
+      "sha256": "1a6fe47f258f5dd5cea7d2dd32202c95412f2e1dbed7944f6556b4c4e625b59d"
+    },
+    {
+      "id": "prism",
+      "duration": 29.664,
+      "cues": 8,
+      "minRms": 4036.87,
+      "sha256": "dbcf9fc4db04ac3cfc36aec4854278cde16133d9568816bc35708ca299140e98"
+    },
+    {
+      "id": "young",
+      "duration": 29.616,
+      "cues": 8,
+      "minRms": 3651.16,
+      "sha256": "bef7a7e77fd055cd740771185c7f437cc5be63bca3d6e23ee16a5a6c4253cb5a"
+    },
+    {
+      "id": "diffraction",
+      "duration": 29.352,
+      "cues": 8,
+      "minRms": 4069.73,
+      "sha256": "648546874ef4c13aac534f74dd2fae4df1a80d0f62ca3b2fb6059552a9a55cb3"
+    },
+    {
+      "id": "polarization",
+      "duration": 30.792,
+      "cues": 8,
+      "minRms": 3763.6,
+      "sha256": "f57818ef2926f209e1f38a94b194f6a334b049335882a0b2fd20f1c23b62b7fe"
+    },
+    {
+      "id": "thermalexpansion",
+      "duration": 31.104,
+      "cues": 8,
+      "minRms": 4020.81,
+      "sha256": "fc0750ff208b19c3d924d3cfcfa227e3d44876905d283a62458b29792ff66e6d"
+    },
+    {
+      "id": "calorimetry",
+      "duration": 31.56,
+      "cues": 8,
+      "minRms": 4274.66,
+      "sha256": "6d91f6a4dd29b6fa1adf92c9c9913a9ad618a8d2403391b95f2cb753902f7376"
+    },
+    {
+      "id": "phasechange",
+      "duration": 37.68,
+      "cues": 8,
+      "minRms": 3901.1,
+      "sha256": "045e072f2ac17abb7e8b4e2281f894b9ecfd2e601fce5538305434d2b1de8917"
+    },
+    {
+      "id": "heattransfer",
+      "duration": 29.712,
+      "cues": 8,
+      "minRms": 3971.73,
+      "sha256": "984562480fdfa7d0401ddc7bd287ccf4699cfe9cf220bbc48b3add6f627d545a"
+    },
+    {
+      "id": "isobaric",
+      "duration": 29.616,
+      "cues": 8,
+      "minRms": 3887.48,
+      "sha256": "8712635d11062752b5d57e23382c5ee35ad9065cb45b4ad89010580e89993167"
+    },
+    {
+      "id": "isochoric",
+      "duration": 28.392,
+      "cues": 8,
+      "minRms": 4083.15,
+      "sha256": "67c9eca2382df5277d5009ff643b9e40c72ccd6ea587f1fc1ca20a6b7def4570"
+    },
+    {
+      "id": "firstlaw",
+      "duration": 34.968,
+      "cues": 8,
+      "minRms": 4080.26,
+      "sha256": "f3e3a2932c171fd42e6df4e3c4cb90802c45a7d67ec229499c86f4958785ae69"
+    },
+    {
+      "id": "kinetic",
+      "duration": 28.104,
+      "cues": 8,
+      "minRms": 4275.35,
+      "sha256": "115a2cd0bcf0992d9c8f7e4fb43e1a2b22f56ee0e06318b5939af487265e8f0a"
+    },
+    {
+      "id": "resistivity",
+      "duration": 29.904,
+      "cues": 8,
+      "minRms": 4008.89,
+      "sha256": "d29b3107355b16873185d49d49f1f3b99afa4c073f909dd755aa31c0d9637008"
+    },
+    {
+      "id": "internalresistance",
+      "duration": 31.392,
+      "cues": 8,
+      "minRms": 3755.18,
+      "sha256": "05215a2afce8da399826e5e7e72eef69a3a426ea789280a0de2bbe13b4853a28"
+    },
+    {
+      "id": "bridge",
+      "duration": 31.296,
+      "cues": 8,
+      "minRms": 4092.62,
+      "sha256": "0a29b60d12a42c08e8db442627652892181da600b8d204c440ac7800ab5ada6f"
+    },
+    {
+      "id": "solenoid",
+      "duration": 29.256,
+      "cues": 8,
+      "minRms": 3874.1,
+      "sha256": "b9e909923596053cbbc4f854db19baa58cee0880caa227fea3c219842149f127"
+    },
+    {
+      "id": "lorentz",
+      "duration": 31.416,
+      "cues": 8,
+      "minRms": 3578.84,
+      "sha256": "9d2135ca8184551cbd01f2075ab8afc7cd15ffc9aa3455253d8378ae72d6b92a"
+    },
+    {
+      "id": "transformer",
+      "duration": 34.128,
+      "cues": 8,
+      "minRms": 3952.77,
+      "sha256": "9e3048ea6fa4e3acbc98f9853c2fc9ad8cb599bce84ee6b561945ceacca61990"
+    },
+    {
+      "id": "ac",
+      "duration": 32.616,
+      "cues": 8,
+      "minRms": 3834.57,
+      "sha256": "f0319f56b2e4bca1b1b9f9a7b8d39a93d2b3c4100086e4bcf540b6ba2e8c1419"
+    },
+    {
+      "id": "vector_sum",
+      "duration": 28.536,
+      "cues": 8,
+      "minRms": 3547.04,
+      "sha256": "69e0ad67be2022b48868f3d2a073243fc8e40b7ba636cd77f5a44b69536a09ba"
+    },
+    {
+      "id": "vector_components",
+      "duration": 28.464,
+      "cues": 8,
+      "minRms": 3976.05,
+      "sha256": "e0e3d18a70ca1a4bdfa43b87f2077199161f2d8eb443f085de2247add8d9e8ba"
+    },
+    {
+      "id": "relative_motion",
+      "duration": 32.688,
+      "cues": 8,
+      "minRms": 4017.71,
+      "sha256": "1ee0aed6cc6bd2155c704229caf0ae4d0737ce0c805c41afec687c960153f2c2"
+    },
+    {
+      "id": "average_speed",
+      "duration": 34.152,
+      "cues": 8,
+      "minRms": 3975.64,
+      "sha256": "65ccd75ccdc6b1b06cb30914f7448f205114296a8bbd5165120843cb70feab6d"
+    },
+    {
+      "id": "braking",
+      "duration": 33.144,
+      "cues": 8,
+      "minRms": 4211.42,
+      "sha256": "8d2e71539aeaeca4a993f2b8903c26c162f0695654c9156da76ad671461d990b"
+    },
+    {
+      "id": "drag_fall",
+      "duration": 31.224,
+      "cues": 8,
+      "minRms": 3547.44,
+      "sha256": "d2c4e8b85663d18e653f1ff3242067b2e33b92e07d01adf187da00cd0e634bd6"
+    },
+    {
+      "id": "atwood",
+      "duration": 29.736,
+      "cues": 8,
+      "minRms": 3734.96,
+      "sha256": "35b6711fe092aac838368f0613f19707f520696b29137328e2ea49f1214f1a3b"
+    },
+    {
+      "id": "pulley",
+      "duration": 30.84,
+      "cues": 8,
+      "minRms": 3860.69,
+      "sha256": "42248dfaee262b1741d770b59ae9320a5abfd87b7160d85436a94e58fb9fffe6"
+    },
+    {
+      "id": "elevator",
+      "duration": 32.976,
+      "cues": 8,
+      "minRms": 4296.91,
+      "sha256": "e9c14331ca270c6836225835a71810d813d3e78a4e14e9897f1ba85bf1d19fbd"
+    },
+    {
+      "id": "banked_turn",
+      "duration": 32.376,
+      "cues": 8,
+      "minRms": 3984.18,
+      "sha256": "535ff1cf9134da2406ca4ac24d995b3083e58a92a9d57b332b09566c258ae2d4"
+    },
+    {
+      "id": "vertical_circle",
+      "duration": 33.096,
+      "cues": 8,
+      "minRms": 3910.53,
+      "sha256": "b821a4d8bf5a53cedbd388451b9f78b3e52cb026628939d4e53dcf32afc740a7"
+    },
+    {
+      "id": "gravitational_force",
+      "duration": 31.872,
+      "cues": 8,
+      "minRms": 3719.86,
+      "sha256": "ea4f80774b06aa4d4030e79d695993a3dd44615b8849f6c9f0475fbdee977785"
+    },
+    {
+      "id": "orbit",
+      "duration": 33.84,
+      "cues": 8,
+      "minRms": 3954.19,
+      "sha256": "e07a5922481de24b781e866613ea6bc6b6a2704ea7e2d97d0a40207325b0b92c"
+    },
+    {
+      "id": "escape_speed",
+      "duration": 34.728,
+      "cues": 8,
+      "minRms": 3975.27,
+      "sha256": "c405626a87e3d17c94b3986c0ddbc66169ec15027071546dfef9eef38264ce45"
+    },
+    {
+      "id": "kepler",
+      "duration": 31.44,
+      "cues": 8,
+      "minRms": 4166.24,
+      "sha256": "b2d4b2314bda000142475b650e7565b551ed096fe65ada1637f220e3293603d9"
+    },
+    {
+      "id": "torque_angle",
+      "duration": 30.432,
+      "cues": 8,
+      "minRms": 4139.66,
+      "sha256": "8e944bdf5f4f53eb9a1054565b1063352e31bfb4f3cd11c58f8b2c8a75f0549d"
+    },
+    {
+      "id": "rotational_inertia",
+      "duration": 33.36,
+      "cues": 8,
+      "minRms": 4109.16,
+      "sha256": "968dc9951ab85e04aef4adbba233b149f10dcc27a00479cd96225e0f823a86bf"
+    },
+    {
+      "id": "angular_accel",
+      "duration": 32.208,
+      "cues": 8,
+      "minRms": 4214.36,
+      "sha256": "04a53b09c2938cc7d3b99ff278ec16a814b3c97b5bb3286e16951d1a0f167e4a"
+    },
+    {
+      "id": "rolling",
+      "duration": 29.328,
+      "cues": 8,
+      "minRms": 3884.38,
+      "sha256": "39ab40e90e5d9c4c1988f1dec692b583fcb6e3a9846a37847008af0194d263a8"
+    },
+    {
+      "id": "spring_energy",
+      "duration": 32.472,
+      "cues": 8,
+      "minRms": 4169.88,
+      "sha256": "5d947bb64b6cca4bee37ebfb9272d484caf6f165a2099440a37c98924c368770"
+    },
+    {
+      "id": "elastic_modulus",
+      "duration": 29.112,
+      "cues": 8,
+      "minRms": 4047.62,
+      "sha256": "0f4b01052e6fe26c52a6b2c5bbe62d244fd97de47d99ddfe09b41d5d7c6b7f0a"
+    },
+    {
+      "id": "hydraulic_press",
+      "duration": 28.776,
+      "cues": 8,
+      "minRms": 4109.01,
+      "sha256": "0b0b0328348de9b753692bc174592069d203786a3678fe13029942de6f4000e9"
+    },
+    {
+      "id": "communicating",
+      "duration": 34.632,
+      "cues": 8,
+      "minRms": 3874.84,
+      "sha256": "6861352a84b6b080bc212cef6a642c8696a74538b599f3d3165a59842287649a"
+    },
+    {
+      "id": "torricelli",
+      "duration": 34.296,
+      "cues": 8,
+      "minRms": 4042.95,
+      "sha256": "b62152d5afac8ca538f649ac07280321c1272e42df3952603d4fb5306106071a"
+    },
+    {
+      "id": "spring_period",
+      "duration": 28.464,
+      "cues": 8,
+      "minRms": 4130.17,
+      "sha256": "aceb0dd031b626cccf68df27eae70b5c09f34f8c5ac6e484357888473bcb618e"
+    },
+    {
+      "id": "oscillator_energy",
+      "duration": 30.072,
+      "cues": 8,
+      "minRms": 4118.03,
+      "sha256": "67ad344a452d41de7b7fd9b825adcc12a23bcf5a0ff4bc252093aba4cfd5d9f5"
+    },
+    {
+      "id": "phase_difference",
+      "duration": 29.904,
+      "cues": 8,
+      "minRms": 4095.59,
+      "sha256": "5af23a69a80d33540adec732aca9bb53a5b1b340c8ddebcc3c9559bd4b067c20"
+    },
+    {
+      "id": "beat",
+      "duration": 33.336,
+      "cues": 8,
+      "minRms": 4033.33,
+      "sha256": "c5b038a325e9bf9d9fc8e1c8078ce2ecd5869aca06106d4032452d3da4dbad3d"
+    },
+    {
+      "id": "doppler_source",
+      "duration": 32.616,
+      "cues": 8,
+      "minRms": 4180.25,
+      "sha256": "e44ff11097106247ab719aed581c35fb17a29a51cc862f82925ffe7a640f1fb2"
+    },
+    {
+      "id": "doppler_observer",
+      "duration": 36.096,
+      "cues": 8,
+      "minRms": 4041.87,
+      "sha256": "a4efcc637d4e7e3dd1631e1223537b360b610bb6acddf74f74b5c81b864c5cf6"
+    },
+    {
+      "id": "string_speed",
+      "duration": 31.632,
+      "cues": 8,
+      "minRms": 4095.77,
+      "sha256": "92f38e0f4967cbb04e5209ca9f49bae40745c76dc2e3d8858dfade165c435fb3"
+    },
+    {
+      "id": "string_resonance",
+      "duration": 32.808,
+      "cues": 8,
+      "minRms": 4064.84,
+      "sha256": "214b3e2a1d5e776f68f35c5f32b5f94775962f7f90687605e46676076a0a59b5"
+    },
+    {
+      "id": "open_pipe",
+      "duration": 32.712,
+      "cues": 8,
+      "minRms": 3990.15,
+      "sha256": "aab94592868b002ffbd4554de702dfc41e284e486a48c4cfd59169acec8344e0"
+    },
+    {
+      "id": "closed_pipe",
+      "duration": 34.632,
+      "cues": 8,
+      "minRms": 4095.48,
+      "sha256": "b470ac16e34594f1a39c993ed63fe63ce38db333ccca192771d7dd0cc5e19b3e"
+    },
+    {
+      "id": "sound_level",
+      "duration": 40.272,
+      "cues": 8,
+      "minRms": 4183.53,
+      "sha256": "a21bd803d55b948314a5c2d235223c7ba3e3b89939c02767b5f68518611c21f8"
+    },
+    {
+      "id": "intensity_distance",
+      "duration": 33.168,
+      "cues": 8,
+      "minRms": 4166.62,
+      "sha256": "5945da92780fd2029d693b9670509d9084f879d6b9b686cfa3d5a5b3705199a4"
+    },
+    {
+      "id": "standing_phase",
+      "duration": 32.16,
+      "cues": 8,
+      "minRms": 3969.97,
+      "sha256": "dd823e1a31ad9cf6a8af6a5ac6b58443f5e9f1a2979098870f8e7424129bdf45"
+    },
+    {
+      "id": "reflection_wave",
+      "duration": 34.8,
+      "cues": 8,
+      "minRms": 3939.24,
+      "sha256": "c726b5fec4c53dc3cb20410a8065a5f1282f39f1451c02fd9365162cf78c570b"
+    },
+    {
+      "id": "wave_packet",
+      "duration": 36.312,
+      "cues": 8,
+      "minRms": 3758.21,
+      "sha256": "c2a7aaf5af83627493a860092c9cc9afec5130c427cf02e0ee0b84cf8e8bd32f"
+    },
+    {
+      "id": "spring_parallel",
+      "duration": 31.8,
+      "cues": 8,
+      "minRms": 3859.26,
+      "sha256": "e636eb252d3424dfdde0f84dea17be8dba07fb46e45c008f5f56ef67a7c598f7"
+    },
+    {
+      "id": "spring_series",
+      "duration": 34.296,
+      "cues": 8,
+      "minRms": 4246.82,
+      "sha256": "f9b72edbca74223442b8885797ae8e60de09a5acbc58b01c42a8a669b6d19c25"
+    },
+    {
+      "id": "resonance_power",
+      "duration": 36.168,
+      "cues": 8,
+      "minRms": 4029.12,
+      "sha256": "55ddc7fe7d22eea56fe9f0c7404068e41593d17c241ae681013c9e02381f3b53"
+    },
+    {
+      "id": "ray_slab",
+      "duration": 30.456,
+      "cues": 8,
+      "minRms": 3518.51,
+      "sha256": "c4e0f03689dba4b2b3100d4d7bf477dd3087f7fa74dda69d1cb5d318ee79a207"
+    },
+    {
+      "id": "apparent_depth",
+      "duration": 33.96,
+      "cues": 8,
+      "minRms": 4157.19,
+      "sha256": "b2061e18a338fa94e611de5e9e107ad32ad0eacdbf1ad9c133d3fa8da6c6dd32"
+    },
+    {
+      "id": "lens_power",
+      "duration": 32.208,
+      "cues": 8,
+      "minRms": 4191.68,
+      "sha256": "453321de2f4d5accadec10d4add16c402158d17dccc61ea376e5e0e885e684fe"
+    },
+    {
+      "id": "lenses_contact",
+      "duration": 35.712,
+      "cues": 8,
+      "minRms": 3952.55,
+      "sha256": "d609cf2896eb9e2094f2cc3e6c1a0ae7fdb1a77c205b49029a24117c4a9a00e5"
+    },
+    {
+      "id": "magnifier",
+      "duration": 30.36,
+      "cues": 8,
+      "minRms": 3955.18,
+      "sha256": "2cfb4260cc7d9954b5f50651825c7d83839de40c71323e967b0524a076a6ddbe"
+    },
+    {
+      "id": "telescope",
+      "duration": 37.104,
+      "cues": 8,
+      "minRms": 3700.2,
+      "sha256": "3d92eecc0a2aa02876e238fe0a760f461f50a1982faa96a8f897604578b2835f"
+    },
+    {
+      "id": "microscope",
+      "duration": 33.576,
+      "cues": 8,
+      "minRms": 4124.72,
+      "sha256": "64fd5d176f73ab8b36cb61f33ac7fb5785d3ffd6905128e3065d18965caaff37"
+    },
+    {
+      "id": "grating",
+      "duration": 34.92,
+      "cues": 8,
+      "minRms": 3955.28,
+      "sha256": "15b119f749efb099064a547eb5b95843325be6bc035fb99e04ce8294f1b091ec"
+    },
+    {
+      "id": "resolving_power",
+      "duration": 34.392,
+      "cues": 8,
+      "minRms": 4175.05,
+      "sha256": "091e33cc352e850e17e3fd0d747f75a93318666c2d16f5f94168e0d3db75cbe3"
+    },
+    {
+      "id": "brewster",
+      "duration": 32.496,
+      "cues": 8,
+      "minRms": 3513.98,
+      "sha256": "bd5e960e40435ab805e380ef167c9fdd9e8eab8512f222696ce905525d0f72f1"
+    },
+    {
+      "id": "inverse_square_light",
+      "duration": 32.376,
+      "cues": 8,
+      "minRms": 3964.46,
+      "sha256": "e576f37cc697536a3c8c3439e9046bd25e61be05664632b1697b4a42ebf1c1c1"
+    },
+    {
+      "id": "mirror_rotation",
+      "duration": 35.184,
+      "cues": 8,
+      "minRms": 4047.68,
+      "sha256": "61f305d048e2e540b194e18c97bcc60a0f3dd112ec22df3427aa846492703281"
+    },
+    {
+      "id": "pinhole",
+      "duration": 31.056,
+      "cues": 8,
+      "minRms": 3883.6,
+      "sha256": "1b152f27ccf9f6f82e8fcad9dcbcbb5d5ce0f3e35e31ffd6e98fd466e4d1b9fc"
+    },
+    {
+      "id": "fiber_acceptance",
+      "duration": 33.144,
+      "cues": 8,
+      "minRms": 3885.57,
+      "sha256": "e72859a09138c7f734e246f28bcc6f216fbf5fb6d00376fe090b2138ba384eb1"
+    },
+    {
+      "id": "uniform_field",
+      "duration": 34.416,
+      "cues": 8,
+      "minRms": 4166.16,
+      "sha256": "9c0f0c218c3ea2f4b2d6efd0f1b704395f61557e493c1ef65b78021d8727d610"
+    },
+    {
+      "id": "potential_point",
+      "duration": 34.728,
+      "cues": 8,
+      "minRms": 4096.98,
+      "sha256": "784ee964f715bd466551837d6e74045d440d9eaa6eeca10e57ee91c4f69a5612"
+    },
+    {
+      "id": "potential_pair",
+      "duration": 33.984,
+      "cues": 8,
+      "minRms": 4243.27,
+      "sha256": "e69844d2583bc581d49c2131c7c7ca7de63822a437c9c952caf26aacf2c9a55a"
+    },
+    {
+      "id": "dipole_torque",
+      "duration": 32.736,
+      "cues": 8,
+      "minRms": 3553.08,
+      "sha256": "085b0290b507eff990a3ee9c90408b8647092922a3860de601dd01604b5e52ae"
+    },
+    {
+      "id": "capacitor_plate",
+      "duration": 30.072,
+      "cues": 8,
+      "minRms": 3791.6,
+      "sha256": "8c5b502eaaf5e9e57f878a9c92efeb91de676e5769a145da615102a5a533190c"
+    },
+    {
+      "id": "dielectric",
+      "duration": 34.272,
+      "cues": 8,
+      "minRms": 4219.88,
+      "sha256": "a261294f6b47857f39e89b70280469675b49ceb7eac858e0e41a9f29caaf5237"
+    },
+    {
+      "id": "capacitor_series",
+      "duration": 32.88,
+      "cues": 8,
+      "minRms": 4176.95,
+      "sha256": "d9e73b35ae09fc8b704bc78b58f06622de921101e1854136f6b9703484237272"
+    },
+    {
+      "id": "capacitor_parallel",
+      "duration": 32.904,
+      "cues": 8,
+      "minRms": 3902.56,
+      "sha256": "311ebb3900af80c62c102ec97ce60156c0315c3de577ccb26be1a64e95a9ce0d"
+    },
+    {
+      "id": "capacitor_force",
+      "duration": 31.272,
+      "cues": 8,
+      "minRms": 3887.7,
+      "sha256": "aec12d4bd63ec6504753f750c96e0cc92102008125f05e35c81293b4bcd50594"
+    },
+    {
+      "id": "charge_quantization",
+      "duration": 32.568,
+      "cues": 8,
+      "minRms": 3651.09,
+      "sha256": "8ae7c058a74b5c139e1a8c126d5254e1faaedaeb2f454c880188ae75379359d1"
+    },
+    {
+      "id": "drift",
+      "duration": 35.664,
+      "cues": 8,
+      "minRms": 4192.94,
+      "sha256": "da8914bae28bc8875431bd279647c9271aae4407f5ff71d5f63d9cae06787918"
+    },
+    {
+      "id": "wire_stretch",
+      "duration": 37.872,
+      "cues": 8,
+      "minRms": 4147.06,
+      "sha256": "dabba007f34a591aa4fa265ac32cca5bce4fc900f2b45b24c365a9e214165aad"
+    },
+    {
+      "id": "potentiometer",
+      "duration": 32.856,
+      "cues": 8,
+      "minRms": 3991.14,
+      "sha256": "677d6546c4e9dc6a3b0ae95a8860d02060d3444db0333f0a7256998d943db20a"
+    },
+    {
+      "id": "voltage_divider",
+      "duration": 34.344,
+      "cues": 8,
+      "minRms": 3766.59,
+      "sha256": "406679487fc5a10cf94269dad8fb7c879ddc124434d91e1e4e22b9dbd630a328"
+    },
+    {
+      "id": "kirchhoff_loop",
+      "duration": 35.328,
+      "cues": 8,
+      "minRms": 4209.83,
+      "sha256": "a6f44b61b58cc14b8829646a72d83db12a5c7a84e5b203e4815f1b6880190660"
+    },
+    {
+      "id": "diode_model",
+      "duration": 34.008,
+      "cues": 8,
+      "minRms": 4040.89,
+      "sha256": "0ebebb15ad20f7001646e831afae7bb0ef193e67a9a51fe14655e5d424460047"
+    },
+    {
+      "id": "meter_loading",
+      "duration": 35.568,
+      "cues": 8,
+      "minRms": 4156.09,
+      "sha256": "0b04b9ae90b9fa9a4291ca56e8fbb2a095685c0091f1ca2f72a6e2f03f5171f9"
+    },
+    {
+      "id": "max_power",
+      "duration": 35.328,
+      "cues": 8,
+      "minRms": 3859.23,
+      "sha256": "6d8217b65c26301e2e20e78e0ec98dc4fbaed085777468334d9c6ca184b97fc1"
+    },
+    {
+      "id": "battery_series",
+      "duration": 31.488,
+      "cues": 8,
+      "minRms": 3962.22,
+      "sha256": "4fb046e48aa39d094f26d9cc36e57a799e21284e6aba0ee35abc34992f46c485"
+    },
+    {
+      "id": "battery_parallel",
+      "duration": 33.36,
+      "cues": 8,
+      "minRms": 3958.55,
+      "sha256": "bca1cb9d56ce313b451b7d6d58f04e9a62e9f0082503f2fb0f38127b42470734"
+    },
+    {
+      "id": "wire_field",
+      "duration": 33.096,
+      "cues": 8,
+      "minRms": 4040.48,
+      "sha256": "0d73b5fdb3d9461023fd4182d1f56bed65b2a007bf0ad2341e8eb425d5746cdd"
+    },
+    {
+      "id": "wire_pair",
+      "duration": 35.184,
+      "cues": 8,
+      "minRms": 3845.93,
+      "sha256": "13661ee47efd94b80a78a3829a000e0f573a288fb4e75057959a9dae30d0cf1d"
+    },
+    {
+      "id": "ampere_loop",
+      "duration": 34.128,
+      "cues": 8,
+      "minRms": 4087.15,
+      "sha256": "446faf53b08630f0382e89cf0383feff5b6de736756a30ca4e88a726137da7c5"
+    },
+    {
+      "id": "flux_angle",
+      "duration": 34.44,
+      "cues": 8,
+      "minRms": 3822.18,
+      "sha256": "442766469914e6b0d40b60867457c03563f5c2868216dc19f69e749530b6cd29"
+    },
+    {
+      "id": "inductor_energy",
+      "duration": 31.584,
+      "cues": 8,
+      "minRms": 4093.47,
+      "sha256": "d7aff56bf388d963831222b0469d6e1019f9927b6e028e98a7a27d308b62f3ef"
+    },
+    {
+      "id": "rl_response",
+      "duration": 32.064,
+      "cues": 8,
+      "minRms": 3925.81,
+      "sha256": "bb5151d0985264287b9365cf5065e478b9b629013025f0a339b4f8aaa498f776"
+    },
+    {
+      "id": "lc_oscillator",
+      "duration": 32.352,
+      "cues": 8,
+      "minRms": 4020.07,
+      "sha256": "c634ac2e21e6c2c9f06f18a1c199dbb5ed090cba165eb680055b9f84febae5a8"
+    },
+    {
+      "id": "rlc_resonance",
+      "duration": 35.232,
+      "cues": 8,
+      "minRms": 3836.18,
+      "sha256": "a0969f2fcf3ff0f5860eb6c70457bc82e366148563b50c44e8ca4439c0d74c01"
+    },
+    {
+      "id": "newton_cooling",
+      "duration": 31.704,
+      "cues": 8,
+      "minRms": 4183.39,
+      "sha256": "2e65df34a85eb1142a2c20d3ffe3aef7c0359754aa1a346223f8f21ae2d4e6f0"
+    },
+    {
+      "id": "carnot",
+      "duration": 33.6,
+      "cues": 8,
+      "minRms": 4066.08,
+      "sha256": "cedd7d48cff338a85f9bd79763c7782e895275a737e449019efc1d920d06f29b"
+    },
+    {
+      "id": "adiabatic",
+      "duration": 32.64,
+      "cues": 8,
+      "minRms": 3855.35,
+      "sha256": "019baff20b2999355101e688932f702290abada1fe95d25824a1250f29875654"
+    },
+    {
+      "id": "photoelectric",
+      "duration": 33.48,
+      "cues": 8,
+      "minRms": 3987.45,
+      "sha256": "4056bcd05d20c40687e2d02339a00781833521dc129edfef8fdd59a77e554a7b"
+    },
+    {
+      "id": "debroglie",
+      "duration": 35.832,
+      "cues": 8,
+      "minRms": 3893.02,
+      "sha256": "a2d55534eeebfb1b2856f9ec63681e5be316df88832b0031549c6d9f0c711e62"
+    },
+    {
+      "id": "binding_energy",
+      "duration": 34.896,
+      "cues": 8,
+      "minRms": 4199.21,
+      "sha256": "ad9765fd41b63c00bb22c6546efaa41b2f955705fcea43b9927f0fc682fe1904"
+    },
+    {
+      "id": "table_hanging",
+      "duration": 33.744,
+      "cues": 8,
+      "minRms": 3672.36,
+      "sha256": "0652f97b0d9842ffbc5ea0472c9e10abf8f41c98d8906fa055908bbb576d0bd4"
+    },
+    {
+      "id": "contact_carts",
+      "duration": 35.736,
+      "cues": 8,
+      "minRms": 3923.68,
+      "sha256": "c0c444f2dace0e3dd17bf24100d3772ff706a146c98607f5b6f0a1d41f3d8de1"
+    },
+    {
+      "id": "accelerating_pendulum",
+      "duration": 37.632,
+      "cues": 8,
+      "minRms": 3688.03,
+      "sha256": "9c777049ea57cbbf681067807014e6a54d773c14281c2ef75fe6c0ef1aa940cd"
+    },
+    {
+      "id": "double_incline",
+      "duration": 38.016,
+      "cues": 8,
+      "minRms": 3746.16,
+      "sha256": "c32b4756ae7490cf2f392195a2fc9a1c992c17b78d3c813191985dac1f971a90"
+    },
+    {
+      "id": "free_wedge",
+      "duration": 37.512,
+      "cues": 8,
+      "minRms": 3968.09,
+      "sha256": "5239477846d02c5a4741612a75ebf6994d2b4fdd1b1ad5397fadd5b09692a42c"
+    },
+    {
+      "id": "ladder_balance",
+      "duration": 40.08,
+      "cues": 8,
+      "minRms": 3947.85,
+      "sha256": "4fba7871f9e68b45dff4eb54122a86f19f5cded7be1fc7414f1fe45f76a3ade0"
+    },
+    {
+      "id": "beam_supports",
+      "duration": 40.344,
+      "cues": 8,
+      "minRms": 3955.4,
+      "sha256": "395ad0e7bdd8d50bf577941f3ac4649bf97dd87d75e85918cfa4f5caa3c85f07"
+    },
+    {
+      "id": "three_strings",
+      "duration": 38.28,
+      "cues": 8,
+      "minRms": 3780.66,
+      "sha256": "f46c0fd1254966347ff2e21be139b40a7f78bd90549b0a5956ae747c7a9f3e07"
+    },
+    {
+      "id": "slide_tip",
+      "duration": 38.808,
+      "cues": 8,
+      "minRms": 4059.48,
+      "sha256": "4180b3c33b84317969a239f97691d086fed3357aadbc6359164e1f485c6eaa1f"
+    },
+    {
+      "id": "metacentric",
+      "duration": 48.432,
+      "cues": 8,
+      "minRms": 4053.03,
+      "sha256": "18f70690cb7d2c08898725bc505dbf9d4860acca19b47cccdd8468c51322a01e"
+    },
+    {
+      "id": "collision_2d",
+      "duration": 43.632,
+      "cues": 8,
+      "minRms": 3821.31,
+      "sha256": "b3d7893272c111183b9a31e8a3a11c36ffc1513e0809c11821932f21b51ee4cf"
+    },
+    {
+      "id": "ballistic_pendulum",
+      "duration": 41.208,
+      "cues": 8,
+      "minRms": 3744.8,
+      "sha256": "f74db685284238edc697c5e834dcb5c5b89153ccb4814b3cb89cf9bd4d5d4a93"
+    },
+    {
+      "id": "newton_cradle",
+      "duration": 40.704,
+      "cues": 8,
+      "minRms": 3841.25,
+      "sha256": "bc2e5696cbf3fa749c9ab9551ebc8881776e91aaa8de83357e9243cb277ac9c7"
+    },
+    {
+      "id": "moving_wall",
+      "duration": 38.736,
+      "cues": 8,
+      "minRms": 3835.23,
+      "sha256": "4f6b0c5e23f656e4fadc9deb2b14ada43a35c0dd76967c616cfb846da5052ce6"
+    },
+    {
+      "id": "collision_spring",
+      "duration": 43.008,
+      "cues": 8,
+      "minRms": 3910.02,
+      "sha256": "42f99ced4a84c3d17086642d4bf506ee4337d8501d2f52a97deaeec8bc12367a"
+    },
+    {
+      "id": "yoyo_drop",
+      "duration": 40.008,
+      "cues": 8,
+      "minRms": 3903.81,
+      "sha256": "7eb5f997271e65112fdacaf76a1b925e0319dcc96ef525d11e79d17cb41c7dba"
+    },
+    {
+      "id": "rolling_race",
+      "duration": 37.392,
+      "cues": 8,
+      "minRms": 3965.0,
+      "sha256": "15d9f657b9c6262854b4f52a52226f843581458b25160089f7e8383bccc677c6"
+    },
+    {
+      "id": "angular_momentum",
+      "duration": 41.088,
+      "cues": 8,
+      "minRms": 3919.22,
+      "sha256": "6630ac6c031b35b890479c6d5ee3610a4817c2d39634addf49ff8963aca5f7f9"
+    },
+    {
+      "id": "atwood_inertia",
+      "duration": 40.704,
+      "cues": 8,
+      "minRms": 3720.85,
+      "sha256": "3f2a979fb5ca07f866dbe520c9fbe6d7208bd2bb35b0282e27244255155890fd"
+    },
+    {
+      "id": "gyroscope",
+      "duration": 39.96,
+      "cues": 8,
+      "minRms": 3921.91,
+      "sha256": "6e3368f5eb8218684ccd4a1eef053f873a2b8da5e44794a9c87b9a94427906ae"
+    },
+    {
+      "id": "rotating_planet",
+      "duration": 40.896,
+      "cues": 8,
+      "minRms": 3804.3,
+      "sha256": "fb47cb14ffceca97eaa23082a47256313ac1c6f1f10cbb3c73a263dac8ad0a66"
+    },
+    {
+      "id": "elliptic_orbit",
+      "duration": 40.392,
+      "cues": 8,
+      "minRms": 4060.07,
+      "sha256": "9a1e734774df530f60d3dd9bc01a7ea509d1b3b579f864f521977a3a05969871"
+    },
+    {
+      "id": "binary_orbit",
+      "duration": 40.056,
+      "cues": 8,
+      "minRms": 3842.79,
+      "sha256": "82ce46abf7cb6e5ce6a9a0e505723a9be943affc786635676af68a6ab92c4aaa"
+    },
+    {
+      "id": "hohmann",
+      "duration": 39.0,
+      "cues": 8,
+      "minRms": 3696.29,
+      "sha256": "ab56cd496d6f251f6b8145d6cad4a7032b1a9a4a60fa00fdd0e9eaa069b937ff"
+    },
+    {
+      "id": "tidal_gradient",
+      "duration": 45.432,
+      "cues": 8,
+      "minRms": 4140.41,
+      "sha256": "33dc6e750a9851e0d2b9f265d25f7ba86d7eadc2ae07e9288ddab8fbedbc37c0"
+    },
+    {
+      "id": "venturi",
+      "duration": 40.752,
+      "cues": 8,
+      "minRms": 3761.64,
+      "sha256": "cbae9c7f873494d4ba32afd5dcf88669d0081b26a4c356d940bfd1a720565ee4"
+    },
+    {
+      "id": "siphon",
+      "duration": 42.12,
+      "cues": 8,
+      "minRms": 3934.43,
+      "sha256": "95f637c4566f6fd6dcd85c323f9d92892f3661991483814ada1499ec8091fdee"
+    },
+    {
+      "id": "poiseuille",
+      "duration": 36.768,
+      "cues": 8,
+      "minRms": 3997.94,
+      "sha256": "d3813596c9947dd1cb9b5599fd91e66df2e1ce76101e97adf4f6ada47a92d22b"
+    },
+    {
+      "id": "stokes_settling",
+      "duration": 38.592,
+      "cues": 8,
+      "minRms": 3732.26,
+      "sha256": "92ce30cac566106801e8f738769eb9919acedba233f5e2df2fcba1520fe0450f"
+    },
+    {
+      "id": "capillary_rise",
+      "duration": 40.968,
+      "cues": 8,
+      "minRms": 4138.5,
+      "sha256": "8b1164992239f95e7f3aa0296743af36340867f30d62aad13fc45a06992e5bf9"
+    },
+    {
+      "id": "coupled_pendulums",
+      "duration": 40.656,
+      "cues": 8,
+      "minRms": 4210.71,
+      "sha256": "1b9457de3984e8a5b6b8ee265ee3efcff1f2444071b7492a113a90d47ca1b257"
+    },
+    {
+      "id": "large_pendulum",
+      "duration": 37.248,
+      "cues": 8,
+      "minRms": 4081.44,
+      "sha256": "eb4ae2ff4438d236730be485c63806dba2418c83f0f127deb3abc0e46b6f2643"
+    },
+    {
+      "id": "physical_pendulum",
+      "duration": 36.048,
+      "cues": 8,
+      "minRms": 3936.48,
+      "sha256": "0281fbdaf0ba8037447155e6ba69340623e580b0331698ef158c118ec6cbb417"
+    },
+    {
+      "id": "torsion_pendulum",
+      "duration": 33.768,
+      "cues": 8,
+      "minRms": 3785.16,
+      "sha256": "4822a286dc3e624d422c382fe740559fe3d6f86f147b4210403dfd4d6d74a2af"
+    },
+    {
+      "id": "u_tube_oscillation",
+      "duration": 38.064,
+      "cues": 8,
+      "minRms": 4049.51,
+      "sha256": "1d6a0a3338f3d6b0d57ef91584fc5bea1bf5e64f6acb754d32e2d87933f6217d"
+    },
+    {
+      "id": "vibration_absorber",
+      "duration": 43.44,
+      "cues": 8,
+      "minRms": 4287.36,
+      "sha256": "5862367255f744dbfac1b7941b069bb37521d8b58c864cbe124854d57b5ac591"
+    },
+    {
+      "id": "base_isolation",
+      "duration": 45.432,
+      "cues": 8,
+      "minRms": 3958.29,
+      "sha256": "d4f8a8346b8d7e84f444ae04b43c2944958b09f062a8f261a594e46170650c6f"
+    },
+    {
+      "id": "parametric_oscillation",
+      "duration": 40.992,
+      "cues": 8,
+      "minRms": 4150.47,
+      "sha256": "6715c3715e2e7436092e917fe05a7d20d70197278833467b6213c9d08431e27c"
+    },
+    {
+      "id": "duffing",
+      "duration": 37.968,
+      "cues": 8,
+      "minRms": 3933.85,
+      "sha256": "2914d19d8bf7e8a5c65062bc3245f2098e342d23db57d4d84fedc5132235ef00"
+    },
+    {
+      "id": "van_der_pol",
+      "duration": 39.096,
+      "cues": 8,
+      "minRms": 4147.92,
+      "sha256": "c0634a270c47c077ef916cd237b8b04e415559ccb328b1e968694e0372ee0062"
+    },
+    {
+      "id": "string_boundary",
+      "duration": 43.368,
+      "cues": 8,
+      "minRms": 3804.44,
+      "sha256": "a446aa0ab40bab4603f787f1a92cacaf639c3a64f53639fd0ee51b75e6da1377"
+    },
+    {
+      "id": "bead_scattering",
+      "duration": 39.696,
+      "cues": 8,
+      "minRms": 3496.93,
+      "sha256": "b01e0da19e03f2cac8876fa2a726bfcc4502e519d3019d524828a86005d671c1"
+    },
+    {
+      "id": "water_refraction",
+      "duration": 36.072,
+      "cues": 8,
+      "minRms": 3795.32,
+      "sha256": "4b86fc2e6afc945dd60d0e697e3d13f919737a8928a2583052ade52740eedae1"
+    },
+    {
+      "id": "string_power",
+      "duration": 36.816,
+      "cues": 8,
+      "minRms": 4049.09,
+      "sha256": "421ae1ef862ab25ce6ca196f9c704647cc39b5f35ac4a207a1bc8ec1c7cc5a1c"
+    },
+    {
+      "id": "dispersive_packet",
+      "duration": 37.8,
+      "cues": 8,
+      "minRms": 3771.43,
+      "sha256": "8a6d9b8de71c4305d6ce1fabccfe31c94bb153f3727b32aee801c3c8c6fdaa65"
+    },
+    {
+      "id": "helmholtz",
+      "duration": 38.04,
+      "cues": 8,
+      "minRms": 3941.04,
+      "sha256": "dca8f4ffc978af436470936858868be39d86959a5a2cebba4fa4ed4702a97343"
+    },
+    {
+      "id": "harmonic_timbre",
+      "duration": 42.144,
+      "cues": 8,
+      "minRms": 3791.8,
+      "sha256": "cd7e74c3732758b0dd1f1bfbd5c30d065976b7e358d009b0d4cca49554834591"
+    },
+    {
+      "id": "room_reverberation",
+      "duration": 45.96,
+      "cues": 8,
+      "minRms": 3920.24,
+      "sha256": "3347c7d7f9d3387cd36831fd921058a78c5be806efe3b4ec60bc64d6a49c8098"
+    },
+    {
+      "id": "sound_tdoa",
+      "duration": 43.8,
+      "cues": 8,
+      "minRms": 3849.93,
+      "sha256": "dbeb230d9dc2d0768819a4e05b06aacd39dc16bdaae9834d5e7857d9522af453"
+    },
+    {
+      "id": "mach_cone",
+      "duration": 34.464,
+      "cues": 8,
+      "minRms": 4110.36,
+      "sha256": "39f17dc62b65440a96ac48526b7f0a12583ecf7fcc59e2ede7cb8de80f4c423a"
+    },
+    {
+      "id": "charged_ring",
+      "duration": 40.224,
+      "cues": 8,
+      "minRms": 3798.25,
+      "sha256": "0ba974b79851acb2f906b90e7128f7a439b381c841d05d144c0c041d72310ea7"
+    },
+    {
+      "id": "charged_rod",
+      "duration": 41.184,
+      "cues": 8,
+      "minRms": 4133.25,
+      "sha256": "574ed4a164c07eec528eef1eb6876c2e1ca7f64b9cff2e2906dbbc09e0c5e71f"
+    },
+    {
+      "id": "charged_disk",
+      "duration": 39.504,
+      "cues": 8,
+      "minRms": 4161.21,
+      "sha256": "c4c83508e33665dff40d85ebe5fc0c955b2f3b0ffee9a5c30c0fe7b2fd9d0a49"
+    },
+    {
+      "id": "charged_solid_sphere",
+      "duration": 43.824,
+      "cues": 8,
+      "minRms": 4039.23,
+      "sha256": "50740bf2f27c75e7d15b058a34d6fd68429602107cff21b21ad5c6444aeabc93"
+    },
+    {
+      "id": "charged_plane",
+      "duration": 42.624,
+      "cues": 8,
+      "minRms": 4169.91,
+      "sha256": "12bfbdf103a96c328ae7aa0bbefdc07ce65ede1f07193d32a21b852764aab4cc"
+    },
+    {
+      "id": "electric_turning",
+      "duration": 40.44,
+      "cues": 8,
+      "minRms": 4002.16,
+      "sha256": "47f441faaf278be297fc3ed3919ee5bef5d1c54a77c1dc49886a6ac974c50229"
+    },
+    {
+      "id": "equipotential_map",
+      "duration": 40.032,
+      "cues": 8,
+      "minRms": 4069.67,
+      "sha256": "903193b8cebc07a49f7da7613d9ab239e0e62da65eced444b4527f6320c02bcd"
+    },
+    {
+      "id": "three_charge_energy",
+      "duration": 41.088,
+      "cues": 8,
+      "minRms": 4060.12,
+      "sha256": "de22247042acf8c1a4b7ff40a10ca7b1aec7d01f70bfc4b9fb4409183c672604"
+    },
+    {
+      "id": "electric_work_paths",
+      "duration": 41.256,
+      "cues": 8,
+      "minRms": 4002.16,
+      "sha256": "4ae28ef2ea62b53af6e1afd832153cd29cf0ad7aeacb109879fafb39b307cd41"
+    },
+    {
+      "id": "connected_spheres",
+      "duration": 37.824,
+      "cues": 8,
+      "minRms": 4055.36,
+      "sha256": "67adf6a7190830030ef0fcfdb08b1d5e20fb94a0d9f43db69727cd56cfdea3d6"
+    },
+    {
+      "id": "conducting_shell",
+      "duration": 41.328,
+      "cues": 8,
+      "minRms": 3714.74,
+      "sha256": "2a9e6cd17ec049c414198686e12bccd420a1af9c30e4dc7943283533276ba87f"
+    },
+    {
+      "id": "coaxial_capacitor",
+      "duration": 37.008,
+      "cues": 8,
+      "minRms": 4059.53,
+      "sha256": "2b426620921328bf35352241bf6bc8cb8b01b35ba5dff751b027ff4b89fc6d65"
+    },
+    {
+      "id": "spherical_capacitor",
+      "duration": 37.44,
+      "cues": 8,
+      "minRms": 4091.72,
+      "sha256": "ac5796bfd7030b2d8739bc0b2bdbe0c1b63a1b5dbbfefc8c64efde632d71e46f"
+    },
+    {
+      "id": "isolated_dielectric",
+      "duration": 41.112,
+      "cues": 8,
+      "minRms": 4099.0,
+      "sha256": "85dc0414fee632e2159c2d94b4146849629cd510ac1c7425323bd5e305c0ae6f"
+    },
+    {
+      "id": "layered_dielectric",
+      "duration": 42.696,
+      "cues": 8,
+      "minRms": 4010.14,
+      "sha256": "f8bb4aa5d23e441f1c2187ecfd303f661adb1ba876bc0d183ff2041aaba716f9"
+    },
+    {
+      "id": "two_meshes",
+      "duration": 39.744,
+      "cues": 8,
+      "minRms": 3618.67,
+      "sha256": "b85d13a28cbc449ac2f37701ad9a970869c212270614f92aad8a50946092db40"
+    },
+    {
+      "id": "star_delta",
+      "duration": 40.152,
+      "cues": 8,
+      "minRms": 3830.6,
+      "sha256": "d3dacf3df3e3c6b521420a74933d951644f459fb4df9149116ef8908bf9e51f7"
+    },
+    {
+      "id": "resistor_ladder",
+      "duration": 38.4,
+      "cues": 8,
+      "minRms": 3852.22,
+      "sha256": "038a3493d35c1d4e8916baa1de1ff4111f41ad254a46597ce641c62ca3cf0b6c"
+    },
+    {
+      "id": "unbalanced_bridge",
+      "duration": 46.44,
+      "cues": 8,
+      "minRms": 3903.04,
+      "sha256": "2757bd638a11af33bc35d8522a026b492f9fa1aafd05409b2dc9958085851c32"
+    },
+    {
+      "id": "thevenin_norton",
+      "duration": 42.384,
+      "cues": 8,
+      "minRms": 3876.56,
+      "sha256": "f932797c20a9558e6685b7c6d9974decbd0febb1593ad25b83366fa76f7d7aef"
+    },
+    {
+      "id": "ammeter_shunt",
+      "duration": 41.232,
+      "cues": 8,
+      "minRms": 3907.6,
+      "sha256": "86bcd7e65054af20b4c61c8c17c288b3784fb5db41a2a54d1ff933ebc0f07699"
+    },
+    {
+      "id": "voltmeter_design",
+      "duration": 42.072,
+      "cues": 8,
+      "minRms": 3873.82,
+      "sha256": "c8b8713464df7e90c8cfb0b6cae7a8e4e903206e052e44c6ff89665652bc238e"
+    },
+    {
+      "id": "emf_compensation",
+      "duration": 42.384,
+      "cues": 8,
+      "minRms": 4015.41,
+      "sha256": "75ce8f4983b1f95ab784d700762bfd6ddbed0723d9ca22c32caf9857f2aa3eb3"
+    },
+    {
+      "id": "rc_meter_loading",
+      "duration": 40.008,
+      "cues": 8,
+      "minRms": 4055.18,
+      "sha256": "16a18c6d055851d8d00dec2c7886336120d7be342a54e77d4116cc9c21a9d72e"
+    },
+    {
+      "id": "kelvin_four_wire",
+      "duration": 42.024,
+      "cues": 8,
+      "minRms": 3866.48,
+      "sha256": "663ec0117120041caf996e65e3a41eff9a33aa2197cd84bea39de89ac285c482"
+    },
+    {
+      "id": "two_stage_rc",
+      "duration": 42.984,
+      "cues": 8,
+      "minRms": 3974.02,
+      "sha256": "1a5eb5869415f9cc2a2dd1c1023c9ab83d9aa991effc315a9c5cba51decef100"
+    },
+    {
+      "id": "charge_sharing",
+      "duration": 41.52,
+      "cues": 8,
+      "minRms": 3971.96,
+      "sha256": "7db7a5857640c22afb059d0b016c77b11258dc5f1899b0ed4f0fb7eee028b48d"
+    },
+    {
+      "id": "rlc_free",
+      "duration": 42.216,
+      "cues": 8,
+      "minRms": 3974.83,
+      "sha256": "d1166924c60e27f8982e456c7bd61dbccd36e90ead23ca371f2a0a4c97ed40e7"
+    },
+    {
+      "id": "rc_square",
+      "duration": 41.304,
+      "cues": 8,
+      "minRms": 4165.66,
+      "sha256": "62bb044e69747e9da602cebb8340ce3fda501991379d934284e89beefe09b092"
+    },
+    {
+      "id": "flyback_diode",
+      "duration": 39.672,
+      "cues": 8,
+      "minRms": 3980.72,
+      "sha256": "2b34082594401f4daf755b966233f5a3c3253ff1f4d47ce68689189c911478e6"
+    },
+    {
+      "id": "half_rectifier",
+      "duration": 36.408,
+      "cues": 8,
+      "minRms": 3931.09,
+      "sha256": "c0a67560c5a8ed14be118555da85159284a83e4c1a999ea83ea1f9bd2d0d5a01"
+    },
+    {
+      "id": "bridge_rectifier",
+      "duration": 37.776,
+      "cues": 8,
+      "minRms": 3773.27,
+      "sha256": "32934f5caa6478103b54b532e8a0293c1109a7f616c60fc248f0bf923efa608d"
+    },
+    {
+      "id": "rectifier_filter",
+      "duration": 40.368,
+      "cues": 8,
+      "minRms": 4134.47,
+      "sha256": "fb9bcb8c0c09ca877f1e180e109af9f456b4ecbe7336827a54de8521ffb08a5f"
+    },
+    {
+      "id": "zener_regulator",
+      "duration": 41.664,
+      "cues": 8,
+      "minRms": 3939.63,
+      "sha256": "80128235f74e366fd2b9522b5575d7c29ceccdcd1a978a4b22c0c10695277a8e"
+    },
+    {
+      "id": "diode_clipper",
+      "duration": 41.136,
+      "cues": 8,
+      "minRms": 3900.89,
+      "sha256": "f7d9797bc46cc8615e4f4713efdd8ffd26937b2632ec38dfc665e22774568b43"
+    },
+    {
+      "id": "rc_lowpass",
+      "duration": 45.912,
+      "cues": 8,
+      "minRms": 4012.32,
+      "sha256": "94332adc14183c6130fe5561d25710e744f975905c4cf25f927e4d981cd7df72"
+    },
+    {
+      "id": "rc_highpass",
+      "duration": 44.76,
+      "cues": 8,
+      "minRms": 4061.13,
+      "sha256": "c75efe0df5117b7844138959ad475223f52d159f296b019fa4aa922bc78f433c"
+    },
+    {
+      "id": "rlc_bandwidth",
+      "duration": 46.464,
+      "cues": 8,
+      "minRms": 3894.84,
+      "sha256": "0baa24586b15ced0515e02edb32b3f748cbad376ec53fc27480bfca87345f943"
+    },
+    {
+      "id": "ac_capacitance_bridge",
+      "duration": 44.04,
+      "cues": 8,
+      "minRms": 3905.31,
+      "sha256": "d6ffda24a78d47d36123cbb9a6eafe78ebabb0101e5c93fc7810a5294550ac36"
+    },
+    {
+      "id": "power_factor",
+      "duration": 40.104,
+      "cues": 8,
+      "minRms": 3990.28,
+      "sha256": "dfcdd6a80cd6a9feb67a84aab7a448434c80e68e248589c69e98068d69429935"
+    },
+    {
+      "id": "loop_axis",
+      "duration": 40.608,
+      "cues": 8,
+      "minRms": 4043.06,
+      "sha256": "7974767f57a03288dc57043b9c03640e3d7c879918e1e966cb52c3c00b4fae78"
+    },
+    {
+      "id": "helmholtz_coils",
+      "duration": 42.504,
+      "cues": 8,
+      "minRms": 4094.38,
+      "sha256": "739677a1a91961b9ef7f7a751c627914b33447fb6f6251b9b3c9eb45cb4f3245"
+    },
+    {
+      "id": "finite_solenoid",
+      "duration": 42.36,
+      "cues": 8,
+      "minRms": 4237.51,
+      "sha256": "e0fc20fc325a2493ec6a64c2ddd1a71042b258a6f4a4656fca654c94823e11ca"
+    },
+    {
+      "id": "toroid",
+      "duration": 43.32,
+      "cues": 8,
+      "minRms": 4050.79,
+      "sha256": "bbf16891176ba70e4deb367b0e918597ff71491f7ec3d4f921e45060383eaef1"
+    },
+    {
+      "id": "compass_coil",
+      "duration": 38.88,
+      "cues": 8,
+      "minRms": 3865.1,
+      "sha256": "252f1c80cb9885a0aa66cdcc280392c8df7170576a698b4ac4bc23bfe9698a8e"
+    },
+    {
+      "id": "velocity_selector",
+      "duration": 39.024,
+      "cues": 8,
+      "minRms": 3709.04,
+      "sha256": "f661031ffb5e5ba6bffbb3a9942059546838015b05fe4219078c6e58395617d8"
+    },
+    {
+      "id": "mass_spectrometer",
+      "duration": 42.48,
+      "cues": 8,
+      "minRms": 4067.97,
+      "sha256": "2f63f02cf77d1f1be91a558fbb76d5087691b95b9d4eb636d69ab6edb529192b"
+    },
+    {
+      "id": "cyclotron",
+      "duration": 45.072,
+      "cues": 8,
+      "minRms": 4049.43,
+      "sha256": "29d78c5969ae96abf32d42207895a968113f537e25c027873c757a2b5e77e13f"
+    },
+    {
+      "id": "magnetic_helix",
+      "duration": 38.976,
+      "cues": 8,
+      "minRms": 3719.77,
+      "sha256": "3b37fd40dd3bcfd1cd42a17062a30a83f62f3822c541d312caa5915b81f9fcdb"
+    },
+    {
+      "id": "hall_voltage",
+      "duration": 43.992,
+      "cues": 8,
+      "minRms": 4062.94,
+      "sha256": "b09919fe62fc055dfbefcb51c210f5e55f9d18710580e57ca259cc15f57538ea"
+    },
+    {
+      "id": "sliding_rod",
+      "duration": 42.768,
+      "cues": 8,
+      "minRms": 3956.0,
+      "sha256": "f877e3642c307d45818ea83e2f4ba5b658d8921ee29f5f268f7c12e5c845ca1b"
+    },
+    {
+      "id": "magnetic_braking",
+      "duration": 38.352,
+      "cues": 8,
+      "minRms": 3797.07,
+      "sha256": "8bb947ce51a5167ea667688c3441f97d4dc34d3f13828dc72d10e60d036e647d"
+    },
+    {
+      "id": "coil_entering_field",
+      "duration": 39.672,
+      "cues": 8,
+      "minRms": 3866.39,
+      "sha256": "e0533c3c2faeb29bb4b2f2a896d6c143c2d2fa8addbabd75b38f05f991232f0c"
+    },
+    {
+      "id": "mutual_induction",
+      "duration": 39.504,
+      "cues": 8,
+      "minRms": 3699.16,
+      "sha256": "e936ac338236b33d87ddd770896657ffeb16f2cba93dac3eff81bd196804f187"
+    },
+    {
+      "id": "faraday_disk",
+      "duration": 37.968,
+      "cues": 8,
+      "minRms": 3968.36,
+      "sha256": "5f2e008c6bdd7cb8cb8aa11a032814d11da2602c8d4c822f461c04a65469eedf"
+    },
+    {
+      "id": "em_plane_wave",
+      "duration": 41.352,
+      "cues": 8,
+      "minRms": 3034.33,
+      "sha256": "4060b7a4426ec4976e99c4334d424ae57ebab93fe32e66652db3781a95b708d7"
+    },
+    {
+      "id": "poynting_energy",
+      "duration": 42.192,
+      "cues": 8,
+      "minRms": 4097.86,
+      "sha256": "3566dd1250dafe07ec206daa77ddd869348c1e6637f98389b2694177fdd17f95"
+    },
+    {
+      "id": "radiation_pressure",
+      "duration": 41.088,
+      "cues": 8,
+      "minRms": 3738.3,
+      "sha256": "7c2130ad500bc27d2f2512baba6d57f2cc2a332872269a7fef7e5fa42679d871"
+    },
+    {
+      "id": "transmission_reflection",
+      "duration": 41.928,
+      "cues": 8,
+      "minRms": 3726.98,
+      "sha256": "c705ac0e1ce81a25c1521156a3fc81053874403827e742fb8e4b42d8067fdd36"
+    },
+    {
+      "id": "skin_depth",
+      "duration": 47.496,
+      "cues": 8,
+      "minRms": 3843.91,
+      "sha256": "dde5ec51722ecf2586975424da510373f472da81b685f13b2c5bf281df2a13b8"
+    },
+    {
+      "id": "separated_lenses",
+      "duration": 43.992,
+      "cues": 8,
+      "minRms": 3706.27,
+      "sha256": "ad35e6948ca29baa908dfca9182903e20ae087ffbcb59320ad451ea301de5bf4"
+    },
+    {
+      "id": "camera_defocus",
+      "duration": 42.624,
+      "cues": 8,
+      "minRms": 4071.22,
+      "sha256": "e26f466a2d15a80001f0fc59c7e75b81a457fc67cfd27a26c6d751446bb7af0f"
+    },
+    {
+      "id": "eye_correction",
+      "duration": 43.92,
+      "cues": 8,
+      "minRms": 4214.9,
+      "sha256": "2f6408453db20aa3fe6773e6fdf4a4d9851bf45053036004875825d7cef2bba1"
+    },
+    {
+      "id": "spherical_aberration",
+      "duration": 42.048,
+      "cues": 8,
+      "minRms": 3842.53,
+      "sha256": "522c2f776ccd23523ed9b90053c8b600577abb5aeef99e2a140ef8952788e212"
+    },
+    {
+      "id": "chromatic_lens",
+      "duration": 39.288,
+      "cues": 8,
+      "minRms": 3855.48,
+      "sha256": "5b495ad71b18cb3fe8b33589526b26cddda523db5d2a091d582b830e31370e1c"
+    },
+    {
+      "id": "thin_film",
+      "duration": 43.128,
+      "cues": 8,
+      "minRms": 3759.43,
+      "sha256": "61ec6c8624a311eda83e123915653db0579683132d1e16338e30e5d5cd59c800"
+    },
+    {
+      "id": "newton_rings",
+      "duration": 42.96,
+      "cues": 8,
+      "minRms": 4082.41,
+      "sha256": "8cca239edead838ed6009c34e84f708db6182a6c53490085c3065581bda9327e"
+    },
+    {
+      "id": "michelson",
+      "duration": 43.512,
+      "cues": 8,
+      "minRms": 3820.03,
+      "sha256": "5c2120d7e25b8e2938b781fca4b38370cc97a2fc61a0e29f35d834847f1364d2"
+    },
+    {
+      "id": "fabry_perot",
+      "duration": 41.568,
+      "cues": 8,
+      "minRms": 4016.34,
+      "sha256": "76900f3f6f811d04347cd26964585a9b096298b58fa9acb386375ca067161956"
+    },
+    {
+      "id": "fringe_visibility",
+      "duration": 45.48,
+      "cues": 8,
+      "minRms": 4206.07,
+      "sha256": "e83253a108f40dc5624cea3defc1fbce849c4e525685e2bb113be228526d3c02"
+    },
+    {
+      "id": "airy_pattern",
+      "duration": 40.296,
+      "cues": 8,
+      "minRms": 3969.79,
+      "sha256": "a4e66ac4ebe4a21234849a2d0dd50ac376a7fc8ae7e3caf8ee55831e6b932224"
+    },
+    {
+      "id": "finite_double_slit",
+      "duration": 43.752,
+      "cues": 8,
+      "minRms": 4019.96,
+      "sha256": "5bce67ea033cf2877a0465868dee6de8064d6cb8dd3b2cc078048e3942a3448a"
+    },
+    {
+      "id": "grating_resolution",
+      "duration": 42.696,
+      "cues": 8,
+      "minRms": 3904.54,
+      "sha256": "8150299397f85d8fc0bcd8417a7c86b65402eb9b345f5daee3ddc4249ee44965"
+    },
+    {
+      "id": "wave_plate",
+      "duration": 42.36,
+      "cues": 8,
+      "minRms": 3882.04,
+      "sha256": "6423e8e2a8a7c331a03af9a91d32d53684a06618556e29460c0645fa7b2b0a6f"
+    },
+    {
+      "id": "photoelasticity",
+      "duration": 40.992,
+      "cues": 8,
+      "minRms": 4093.99,
+      "sha256": "b01672ead33634bb17146837d76d2296558ade9dd973e1f011273c078a81019b"
+    },
+    {
+      "id": "convection_radiation",
+      "duration": 38.808,
+      "cues": 8,
+      "minRms": 4150.5,
+      "sha256": "821a95ce86e08ae5fe52c548078c0dde7b4b46fe2e2e5574dfbbd16743996a51"
+    },
+    {
+      "id": "radiative_balance",
+      "duration": 46.32,
+      "cues": 8,
+      "minRms": 3961.35,
+      "sha256": "76ceaf9ac16f1f912040a826e448117fbc01d0c1ad2e52b89db3664bc5c22e6c"
+    },
+    {
+      "id": "layered_wall",
+      "duration": 42.336,
+      "cues": 8,
+      "minRms": 4208.5,
+      "sha256": "d40cd2c4f1be51c1acfcc13ce49d32e91f88d08900c8f577bbfdf1bf0f61c900"
+    },
+    {
+      "id": "transient_heat_bar",
+      "duration": 45.6,
+      "cues": 8,
+      "minRms": 3890.43,
+      "sha256": "89341b4d18cc1d6ed2df29dda5629552636194efc426c98b7c69e6cfabc1799e"
+    },
+    {
+      "id": "seebeck",
+      "duration": 41.472,
+      "cues": 8,
+      "minRms": 3953.67,
+      "sha256": "2caab6d10f44562e6619e52fd1b7f0858c2e41932ba76ad056825ad2db86f653"
+    },
+    {
+      "id": "otto_cycle",
+      "duration": 36.0,
+      "cues": 8,
+      "minRms": 4218.11,
+      "sha256": "42be7117b807de309e59dd7864d3617538ac5e87a99bb6ff7bb0349dd857597c"
+    },
+    {
+      "id": "diesel_cycle",
+      "duration": 39.024,
+      "cues": 8,
+      "minRms": 3944.12,
+      "sha256": "a6720df2ba354178843216f3fe270d0aa2e10a59a04cfe51bdd1363f3bd2034f"
+    },
+    {
+      "id": "stirling_regenerator",
+      "duration": 43.464,
+      "cues": 8,
+      "minRms": 4192.77,
+      "sha256": "e650028f1c24630945db33f005efec9bfaf1542f27376597306cdccbf91829b3"
+    },
+    {
+      "id": "refrigerator",
+      "duration": 40.8,
+      "cues": 8,
+      "minRms": 3792.75,
+      "sha256": "6302e37c1e54d404a646bc7ee2175655860799bfdc8ae38c361c1fa2c8b170ca"
+    },
+    {
+      "id": "brayton_cycle",
+      "duration": 35.592,
+      "cues": 8,
+      "minRms": 3743.64,
+      "sha256": "47562a0bea68f725674ba88c3bface2c1a28688effbc0b936763806e999bc2af"
+    },
+    {
+      "id": "maxwell_distribution",
+      "duration": 42.144,
+      "cues": 8,
+      "minRms": 4359.34,
+      "sha256": "c53501db927ef3249b39dc0c615775598c763518abcc5faf2ba12c94e6fcc4cf"
+    },
+    {
+      "id": "two_level_boltzmann",
+      "duration": 44.496,
+      "cues": 8,
+      "minRms": 4221.4,
+      "sha256": "ad7ce140bdbe286445f4d9833791ec508758c78103cfb942d62aa3ab31376fcb"
+    },
+    {
+      "id": "brownian_motion",
+      "duration": 46.296,
+      "cues": 8,
+      "minRms": 3947.31,
+      "sha256": "bcf9decb6c777b2ca1764b129443079c629cd38d8197b6cf7d3330a9629bf92f"
+    },
+    {
+      "id": "vapor_pressure",
+      "duration": 45.144,
+      "cues": 8,
+      "minRms": 3944.01,
+      "sha256": "974e4b3a73f8f163886ae3108802596f8924a1624e30b0dd30ef4d01119e5fe9"
+    },
+    {
+      "id": "van_der_waals",
+      "duration": 41.568,
+      "cues": 8,
+      "minRms": 3929.57,
+      "sha256": "8c43cf322276c4b4e28d113bcca4215647ac06fe526d49c570099e792e00734d"
+    },
+    {
+      "id": "hydrogen_lines",
+      "duration": 39.456,
+      "cues": 8,
+      "minRms": 3916.47,
+      "sha256": "801e18f8b469115ca5fdf235f0f34ff19110b57a3ca0e139e32d09f75948aae5"
+    },
+    {
+      "id": "franck_hertz",
+      "duration": 48.672,
+      "cues": 8,
+      "minRms": 3984.47,
+      "sha256": "12be068c2f27fd4e2fd5879f3d8f3e9017f8b263166225829483d8cc03d00f33"
+    },
+    {
+      "id": "compton_scattering",
+      "duration": 40.632,
+      "cues": 8,
+      "minRms": 4004.83,
+      "sha256": "bf01d6a85e5d99842ba71f27867222f786d8779b73653d70d0ef7b9a5e179f11"
+    },
+    {
+      "id": "electron_bragg",
+      "duration": 42.192,
+      "cues": 8,
+      "minRms": 3879.09,
+      "sha256": "11dcc5485153fab64d015e28d17257c19136c751fddea3d301f1f83c84c90e63"
+    },
+    {
+      "id": "quantum_box",
+      "duration": 42.48,
+      "cues": 8,
+      "minRms": 4112.68,
+      "sha256": "7da4b881a98ed431ecd918eb1ef7768753c6b22be737e90bcca322c2275f8695"
+    },
+    {
+      "id": "decay_chain",
+      "duration": 41.112,
+      "cues": 8,
+      "minRms": 3740.77,
+      "sha256": "17a0ab490dd4eee58a53a8748127acfe7c12d365fe5191cb6d042d245e79b9e5"
+    },
+    {
+      "id": "alpha_recoil",
+      "duration": 42.528,
+      "cues": 8,
+      "minRms": 3872.03,
+      "sha256": "bd21c5d0ae588ec66cea633500eb20a1f936ce0a045a28397417858766aae4db"
+    },
+    {
+      "id": "reaction_threshold",
+      "duration": 41.256,
+      "cues": 8,
+      "minRms": 4023.54,
+      "sha256": "f2b60fe5ab49ad40fd0f38304434acae77ebd688a0797c3dedbd55dcfb2e923f"
+    },
+    {
+      "id": "gamma_attenuation",
+      "duration": 46.992,
+      "cues": 8,
+      "minRms": 4002.47,
+      "sha256": "4a43ae32fd22fbc5c9bc316dd72b92829044abd5613fcc100fe7c6485b633bf0"
+    },
+    {
+      "id": "poisson_counting",
+      "duration": 44.112,
+      "cues": 8,
+      "minRms": 3956.2,
+      "sha256": "027c02e629d6f4440ff30d790c5aa79e4a656237edbd1c2ccb1bf9ef628695c9"
+    },
+    {
+      "id": "common",
+      "duration": 380.424,
+      "cues": 191,
+      "minRms": 2775.15,
+      "sha256": "930fafa9f5ae862cd95861bfe283c477ce7b260dc1494c312d337928f4437fc6"
+    }
+  ]
+}

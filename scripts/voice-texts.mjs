@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {experiments} from '../dist/experiments.js';
+import {meters} from '../dist/measurements.js';
+import {coreParams} from '../dist/learning.js';
+import {speakable} from '../dist/media.js';
+const out=process.argv[2];if(!out)throw Error('Supply output JSON path');
+const groups=experiments.map(e=>{const p=coreParams(e)[0],learning=e.learning||{change:`Điều chỉnh ${p.label.toLowerCase()}; giữ các thông số còn lại.`,observe:`Theo dõi mô hình và ba số đọc. ${e.description}`,explain:(e.analysis||e.theory||e.formula).split(/(?<=[.!?])\s/)[0]};return {id:e.id,segments:[{key:'heading',text:speakable(e.shortTitle+'. '+e.description)},...Object.values(learning).map((text,i)=>({key:'step'+i,text:speakable(text)})),{key:'tasks',text:speakable(e.tasks.slice(0,2).join('. '))},...meters[e.id].map(m=>({key:'label-'+m.key,text:speakable(m.label)}))]};});
+const words=['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín','mười','mươi','mốt','lăm','trăm','nghìn','triệu','tỷ','lẻ','âm','phẩy','nhân','mũ','chưa xác định'];
+const units=[...new Set(experiments.flatMap(e=>[...e.params,...meters[e.id]].map(p=>p.unit)).concat(['N','N/C','V/m']))].filter(Boolean);
+groups.push({id:'common',segments:[{key:'preview',text:'Xin chào. Hãy thay đổi thông số, quan sát mô hình và dùng số liệu để giải thích hiện tượng. Điện áp sáu vôn. Dòng điện không phẩy sáu ampe.'},...words.map(word=>({key:'word-'+word,text:word})),...units.map(unit=>({key:'unit-'+unit,text:speakable('2 '+unit).replace(/^2\s*/, '')}))]});
+fs.writeFileSync(out,JSON.stringify(groups,null,2));console.log(groups.length+' audio groups prepared');

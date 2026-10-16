@@ -1,0 +1,10 @@
+ÂM THANH TIẾNG VIỆT — VẬT LÍ LAB
+
+Giọng tổng hợp: vi-VN-HoaiMyNeural (Hoài My), Microsoft.
+Nguồn xác nhận giọng: https://learn.microsoft.com/azure/ai-services/speech-service/language-support
+Công cụ tạo trước khi triển khai: edge-tts 7.3.1, https://github.com/rany2/edge-tts
+Nội dung đọc: tên bài, hướng dẫn, nhãn số đọc, từ số và đơn vị của dự án Vật lí Lab. Kí hiệu Hy Lạp/chỉ số/số mũ được chuyển thành cách đọc tiếng Việt trước khi tổng hợp.
+
+300 tệp bài học và một tệp số/từ/đơn vị dùng chung. Tệp chung được ghép từ các nhóm nhỏ để kiểm tra ranh giới từng đoạn; số đo được ghép từ nhãn, từ số và đơn vị. Âm thanh được tạo sẵn, tải từ cùng website sau khi bấm Nghe. Website không gọi dịch vụ TTS bên ngoài và không tự phát khi mở trang.
+
+Đây là âm thanh tổng hợp; không ghi nhãn OpenScienceVN khi chưa có nguồn giọng cụ thể để xác thực.

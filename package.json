@@ -1,0 +1,15 @@
+{
+  "name": "vat-li-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:dom": "node checks/dom.mjs",
+    "check": "node checks/assets.mjs && node checks/workspace.mjs && node checks/dom.mjs",
+    "check:models": "node checks/full-catalog.mjs",
+    "check:framing": "node checks/framing.mjs",
+    "check:audio": "node checks/media.mjs && node checks/clip-player.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+.openai/
+.sites-runtime/
+*.log
+.env
+.env.*
+__pycache__/
+.DS_Store

@@ -1,0 +1,1507 @@
+{
+  "experiments": [
+    {
+      "id": "energy",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "oscillation",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "wave",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "electric",
+      "states": 752,
+      "failures": []
+    },
+    {
+      "id": "ohm",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "capacitor",
+      "states": 136,
+      "failures": []
+    },
+    {
+      "id": "boyle",
+      "states": 44,
+      "failures": []
+    },
+    {
+      "id": "gas",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "uniform",
+      "states": 44,
+      "failures": []
+    },
+    {
+      "id": "acceleration",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "horizontal",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "projectile",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "newton",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "incline",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "collision",
+      "states": 92,
+      "failures": []
+    },
+    {
+      "id": "circular",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "lever",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "hooke",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "pendulum",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "damped",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "resonance",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "interference",
+      "states": 116,
+      "failures": []
+    },
+    {
+      "id": "standing",
+      "states": 92,
+      "failures": []
+    },
+    {
+      "id": "sound",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "series",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "parallel",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "joule",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "magnetic",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "induction",
+      "states": 92,
+      "failures": []
+    },
+    {
+      "id": "decay",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "freefall",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "friction",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "work",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "impulse",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "buoyancy",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "pressure",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "reflection",
+      "states": 44,
+      "failures": []
+    },
+    {
+      "id": "refraction",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "tir",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "lens",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "mirror",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "prism",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "young",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "diffraction",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "polarization",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "thermalexpansion",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "calorimetry",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "phasechange",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "heattransfer",
+      "states": 92,
+      "failures": []
+    },
+    {
+      "id": "isobaric",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "isochoric",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "firstlaw",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "kinetic",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "resistivity",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "internalresistance",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "bridge",
+      "states": 23,
+      "failures": []
+    },
+    {
+      "id": "solenoid",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "lorentz",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "transformer",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "ac",
+      "states": 80,
+      "failures": []
+    },
+    {
+      "id": "vector_sum",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "vector_components",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "relative_motion",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "average_speed",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "braking",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "drag_fall",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "atwood",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "pulley",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "elevator",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "banked_turn",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "vertical_circle",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "gravitational_force",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "orbit",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "escape_speed",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "kepler",
+      "states": 11,
+      "failures": []
+    },
+    {
+      "id": "torque_angle",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "rotational_inertia",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "angular_accel",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "rolling",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "spring_energy",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "elastic_modulus",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "hydraulic_press",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "communicating",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "torricelli",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "spring_period",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "oscillator_energy",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "phase_difference",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "beat",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "doppler_source",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "doppler_observer",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "string_speed",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "string_resonance",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "open_pipe",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "closed_pipe",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "sound_level",
+      "states": 11,
+      "failures": []
+    },
+    {
+      "id": "intensity_distance",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "standing_phase",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "reflection_wave",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "wave_packet",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "spring_parallel",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "spring_series",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "resonance_power",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "ray_slab",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "apparent_depth",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "lens_power",
+      "states": 11,
+      "failures": []
+    },
+    {
+      "id": "lenses_contact",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "magnifier",
+      "states": 11,
+      "failures": []
+    },
+    {
+      "id": "telescope",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "microscope",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "grating",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "resolving_power",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "brewster",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "inverse_square_light",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "mirror_rotation",
+      "states": 11,
+      "failures": []
+    },
+    {
+      "id": "pinhole",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "fiber_acceptance",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "uniform_field",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "potential_point",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "potential_pair",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "dipole_torque",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "capacitor_plate",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "dielectric",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "capacitor_series",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "capacitor_parallel",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "capacitor_force",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "charge_quantization",
+      "states": 11,
+      "failures": []
+    },
+    {
+      "id": "drift",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "wire_stretch",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "potentiometer",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "voltage_divider",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "kirchhoff_loop",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "diode_model",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "meter_loading",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "max_power",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "battery_series",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "battery_parallel",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "wire_field",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "wire_pair",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "ampere_loop",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "flux_angle",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "inductor_energy",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "rl_response",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "lc_oscillator",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "rlc_resonance",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "newton_cooling",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "carnot",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "adiabatic",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "photoelectric",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "debroglie",
+      "states": 11,
+      "failures": []
+    },
+    {
+      "id": "binding_energy",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "table_hanging",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "contact_carts",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "accelerating_pendulum",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "double_incline",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "free_wedge",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "ladder_balance",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "beam_supports",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "three_strings",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "slide_tip",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "metacentric",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "collision_2d",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "ballistic_pendulum",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "newton_cradle",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "moving_wall",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "collision_spring",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "yoyo_drop",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "rolling_race",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "angular_momentum",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "atwood_inertia",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "gyroscope",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "rotating_planet",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "elliptic_orbit",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "binary_orbit",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "hohmann",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "tidal_gradient",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "venturi",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "siphon",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "poiseuille",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "stokes_settling",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "capillary_rise",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "coupled_pendulums",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "large_pendulum",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "physical_pendulum",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "torsion_pendulum",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "u_tube_oscillation",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "vibration_absorber",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "base_isolation",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "parametric_oscillation",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "duffing",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "van_der_pol",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "string_boundary",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "bead_scattering",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "water_refraction",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "string_power",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "dispersive_packet",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "helmholtz",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "harmonic_timbre",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "room_reverberation",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "sound_tdoa",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "mach_cone",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "charged_ring",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "charged_rod",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "charged_disk",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "charged_solid_sphere",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "charged_plane",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "electric_turning",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "equipotential_map",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "three_charge_energy",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "electric_work_paths",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "connected_spheres",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "conducting_shell",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "coaxial_capacitor",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "spherical_capacitor",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "isolated_dielectric",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "layered_dielectric",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "two_meshes",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "star_delta",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "resistor_ladder",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "unbalanced_bridge",
+      "states": 23,
+      "failures": []
+    },
+    {
+      "id": "thevenin_norton",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "ammeter_shunt",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "voltmeter_design",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "emf_compensation",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "rc_meter_loading",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "kelvin_four_wire",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "two_stage_rc",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "charge_sharing",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "rlc_free",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "rc_square",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "flyback_diode",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "half_rectifier",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "bridge_rectifier",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "rectifier_filter",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "zener_regulator",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "diode_clipper",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "rc_lowpass",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "rc_highpass",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "rlc_bandwidth",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "ac_capacitance_bridge",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "power_factor",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "loop_axis",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "helmholtz_coils",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "finite_solenoid",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "toroid",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "compass_coil",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "velocity_selector",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "mass_spectrometer",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "cyclotron",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "magnetic_helix",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "hall_voltage",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "sliding_rod",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "magnetic_braking",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "coil_entering_field",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "mutual_induction",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "faraday_disk",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "em_plane_wave",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "poynting_energy",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "radiation_pressure",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "transmission_reflection",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "skin_depth",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "separated_lenses",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "camera_defocus",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "eye_correction",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "spherical_aberration",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "chromatic_lens",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "thin_film",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "newton_rings",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "michelson",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "fabry_perot",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "fringe_visibility",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "airy_pattern",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "finite_double_slit",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "grating_resolution",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "wave_plate",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "photoelasticity",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "convection_radiation",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "radiative_balance",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "layered_wall",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "transient_heat_bar",
+      "states": 68,
+      "failures": []
+    },
+    {
+      "id": "seebeck",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "otto_cycle",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "diesel_cycle",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "stirling_regenerator",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "refrigerator",
+      "states": 20,
+      "failures": []
+    },
+    {
+      "id": "brayton_cycle",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "maxwell_distribution",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "two_level_boltzmann",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "brownian_motion",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "vapor_pressure",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "van_der_waals",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "hydrogen_lines",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "franck_hertz",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "compton_scattering",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "electron_bragg",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "quantum_box",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "decay_chain",
+      "states": 56,
+      "failures": []
+    },
+    {
+      "id": "alpha_recoil",
+      "states": 14,
+      "failures": []
+    },
+    {
+      "id": "reaction_threshold",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "gamma_attenuation",
+      "states": 17,
+      "failures": []
+    },
+    {
+      "id": "poisson_counting",
+      "states": 17,
+      "failures": []
+    }
+  ],
+  "failures": [],
+  "states": 9776,
+  "geometry": 9776
+}

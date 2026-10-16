@@ -1,0 +1,38 @@
+import {parseHTML} from 'linkedom';
+import assert from 'node:assert/strict';
+import {experiments,initialState} from '../dist/experiments.js';
+import {atlasExperiments,atlasById} from '../dist/atlas-catalog.js';
+import {evaluate,duration,clampState} from '../dist/models.js';
+import {tableValues,meters} from '../dist/measurements.js';
+import {graphFor} from '../dist/graphs.js';
+import {buildLabModel} from '../dist/scene3d.js';
+const {document:geometryDocument,window:geometryWindow}=parseHTML('<html><body></body></html>');globalThis.document=geometryDocument;geometryWindow.HTMLCanvasElement.prototype.getContext=()=>({clearRect(){},fillRect(){},strokeRect(){},fillText(){},beginPath(){},roundRect(){},fill(){},stroke(){},measureText:s=>({width:s.length*18})});
+
+const d=(id,extra={})=>evaluate(id,{...initialState(atlasById[id]),...extra}),close=(x,y)=>assert.ok(Math.abs(x-y)<1e-8*Math.max(1,Math.abs(y)),`${x} ≠ ${y}`);
+assert.equal(experiments.length,300);assert.equal(atlasExperiments.length,240);assert.equal(new Set(experiments.map(e=>e.id)).size,300);
+close(d('vector_sum',{force:3,second:4,angle:90}).result,5);close(d('vector_components',{force:10,angle:60}).fx,5);
+close(d('relative_motion',{speed:3,frame:5}).relative,-2);close(d('average_speed',{v1:5,v2:10}).average,20/3);
+close(d('braking',{speed:20,deceleration:5}).stopDistance,40);close(d('atwood',{m1:1,m2:2}).acc,9.81/3);
+close(d('pulley',{mass:2,branches:4,lift:.5}).work,9.81);close(d('elevator',{acc:-9.81}).normal,0);
+close(d('gravitational_force',{m1:1,m2:1,distance:1}).force,6.6743e-5);close(d('orbit',{radius:7000,planet:5.972}).speed,7.545946840144431);
+close(d('escape_speed',{radius:6371,planet:5.972}).escape,11.18597789184991);close(d('kepler',{axis:4}).period,8);
+close(d('spring_energy',{stiffness:100,extension:.2}).energy,2);close(d('elastic_modulus',{force:10,length:1,area:1,young:100}).extension,.1);
+close(d('hydraulic_press',{force:10,small:2,large:20}).output,100);close(d('torricelli',{height:1,area:1}).flow,Math.sqrt(19.62)*.1);
+close(d('phase_difference',{phase:180,t:0}).sum,0);close(d('reflection_wave',{probe:0,t:.13}).signal,0);
+close(d('spring_parallel',{k1:20,k2:30}).effective,50);close(d('spring_series',{k1:20,k2:30}).effective,12);
+close(d('open_pipe',{length:1,mode:1}).frequency,171.5);close(d('closed_pipe',{length:1,mode:1}).frequency,85.75);
+close(d('sound_level',{exponent:-6}).level,60);close(d('intensity_distance',{power:.01,distance:1}).intensity,.01/(4*Math.PI)*1e6);
+close(d('lens_power',{focal:25}).power,4);assert.equal(d('lenses_contact',{power1:4,power2:-4}).focal,null);assert.equal(d('grating',{lines:1000,wavelength:750,order:3}).angle,null);
+close(d('ray_slab',{angle:0}).shift,0);close(d('apparent_depth',{depth:1,index:1.5}).apparent,2/3);close(d('mirror_rotation',{rotation:10}).deviation,20);
+close(d('uniform_field',{charge:2,field:500,mass:5}).acc,200);close(d('capacitor_plate',{area:100,gap:1,voltage:10}).capacity,88.541878128);
+close(d('dielectric',{dielectric:2,base:100,voltage:10}).energy,10);close(d('capacitor_series',{c1:20,c2:20,voltage:12}).u1,6);
+close(d('capacitor_force',{area:100,gap:1,voltage:10}).force,4.4270939064);
+close(d('wire_stretch',{factor:3,base:2}).resistance,18);close(d('max_power',{load:3,internal:3}).efficiency,50);
+close(d('battery_series',{cells:3,emf:1.5,internal:.5}).emfTotal,4.5);close(d('battery_parallel',{cells:3,internal:.6}).internalTotal,.2);
+close(d('wire_field',{current:5,distance:.1}).field,10);close(d('wire_pair',{current1:5,current2:5,distance:.1}).force,.05);
+close(d('flux_angle',{angle:90}).flux,0);close(d('inductor_energy',{inductance:100,current:2}).energy,200);
+let lc=d('lc_oscillator',{t:.013});close(lc.electric+lc.magnetic,d('lc_oscillator').electric);close(d('rl_response',{t:0}).current,0);
+close(d('newton_cooling',{t:0,initial:80}).temperature,80);close(d('carnot',{hot:600,cold:300,heat:100}).work,50);close(d('adiabatic',{ratio:1}).workOn,0);
+assert.equal(d('photoelectric',{wavelength:800,workFunction:5}).emitted,0);close(d('debroglie',{voltage:100}).wavelength,.122642597);close(d('binding_energy',{defect:.1,nucleons:10}).perNucleon,9.31494102);
+for(const e of atlasExperiments){const base=initialState(e),model=buildLabModel(e.id,base,evaluate(e.id,base),{labels:false,interactive:true,config:{switches:{handles:true}}});assert.equal(meters[e.id].length,3);assert.ok(e.learning.change&&e.learning.observe&&e.learning.explain);const states=[base,...e.params.flatMap(p=>[{...base,[p.key]:p.min},{...base,[p.key]:p.max}]),Object.fromEntries(e.params.map(p=>[p.key,p.min])),Object.fromEntries(e.params.map(p=>[p.key,p.max]))];for(const raw of states){const s=clampState(e,raw),dd=evaluate(e.id,s);assert.ok(Object.values(dd).every(v=>v===null||Number.isFinite(v)),e.id+' finite outputs');assert.equal(tableValues(e.id,s,dd).length,e.headers.length);model.update(s,dd,{switches:{handles:true}});model.group.updateMatrixWorld(true);model.group.traverse(o=>{assert.ok(o.matrixWorld.elements.every(Number.isFinite),e.id+' matrix');if(o.geometry?.attributes.position)assert.ok(Array.from(o.geometry.attributes.position.array).every(Number.isFinite),e.id+' vertices');if(o.isInstancedMesh)assert.ok(Array.from(o.instanceMatrix.array).every(Number.isFinite),e.id+' instances');});const graph=graphFor(e,s,dd);assert.ok([graph.xmin,graph.xmax,graph.ymin,graph.ymax].every(Number.isFinite),e.id+' graph');}if(!e.static){const max=duration(e,base,evaluate(e.id,base));assert.ok(max>0);if(e.id==='lc_oscillator')close(max*evaluate(e.id,base).frequency,3);}console.log('PASS ATLAS',e.id);}
+console.log('PASS 300 unique experiments, 240 atlas models, independent numerical identities, domains, all parameter ends/combinations, real geometry/instances, graphs, schemas and learning prompts. No WebGL pixel test.');

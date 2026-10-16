@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thí nghiệm ảo Định luật Ohm – Bản mẫu</title>
+<style>
+:root{font-family:Arial,'Segoe UI',sans-serif;color:#1a2b40;background:#eef3f9;font-size:16px}
+*{box-sizing:border-box}body{margin:0;line-height:1.5}.shell{max-width:1200px;margin:0 auto;padding:28px 20px 40px}
+.top{background:#102d50;color:white;border-radius:19px;padding:25px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-size:clamp(22px,3.5vw,31px);line-height:1.25;margin:7px 0 8px}.subtitle{color:#dce8f7;margin:0;font-size:14px;max-width:720px}.tag{font-size:12px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase;color:#8ee7d6}
+.badge{border:1px solid #7aa7d0;background:#1a436f;border-radius:999px;padding:7px 11px;color:#e3f4fd;font-size:12px}
+.grid{display:grid;grid-template-columns: minmax(285px,0.78fr) minmax(340px,1.22fr);gap:16px;margin-top:18px}.card{background:white;border:1px solid #dbe3ef;border-radius:16px;padding:20px;box-shadow:0 3px 12px #1f365009}.card h2{font-size:18px;margin:0 0 14px;color:#18395c}.full{grid-column:1/-1}
+label{font-size:14px;font-weight:700;color:#244566;display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:17px}label output{font-variant-numeric:tabular-nums;color:#117e81;font-size:18px}
+input[type=range]{width:100%;accent-color:#0e9294;margin:12px 0 1px;cursor:pointer}.ranges{display:flex;justify-content:space-between;color:#6b7d91;font-size:12px}
+.calculated{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#e7f8f5;border:1px solid #b7e9df;border-radius:12px;padding:12px 15px;margin:19px 0 10px}.calculated strong{font-size:27px;color:#067d72;font-variant-numeric:tabular-nums}.muted{font-size:12px;color:#58718a}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}button{cursor:pointer;border:1px solid #b9cadd;background:#fff;color:#244260;border-radius:9px;padding:10px 13px;font-size:13px;font-weight:700;transition:.15s}button:hover{background:#edf5fa}button.primary{background:#0d737d;color:white;border-color:#0d737d}button.primary:hover{background:#085f67}button:focus-visible,input:focus-visible{outline:3px solid #e39d37;outline-offset:2px}
+.formula{font-size:14px;color:#465d73;margin:10px 0 0}.formula b{color:#1c3a58}.circuit-wrap{background:linear-gradient(160deg,#f7fbfe,#eaf3fb);border:1px solid #dce8f2;border-radius:13px;padding:13px 8px 6px;margin-top:13px}.circuit{width:100%;height:auto;max-height:240px}.node{stroke:#0e6e78;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}.current-dots circle{fill:#06a1ad;opacity:.94}.circuit-text{fill:#244b65;font-family:Arial,sans-serif;font-size:13px}.section-note{font-size:12px;color:#6c7c8b;margin-top:11px}
+.chart-label{font-size:12px;color:#6c7c8b;margin:0 0 8px}.chart-wrap{border:1px solid #dce5f0;border-radius:12px;min-height:280px;padding:5px;background:#fcfeff}canvas{display:block;width:100%;height:300px}.legend{display:flex;gap:15px;align-items:center;font-size:12px;color:#6c7c8b;flex-wrap:wrap;margin-top:9px}.dot{display:inline-block;height:9px;width:9px;border-radius:50%;margin-right:5px;background:#e28a2b}.line-sample{display:inline-block;width:19px;height:4px;background:#15828d;margin-bottom:3px;border-radius:5px;margin-right:5px}
+.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;border-bottom:1px solid #e4eaf2;padding:9px 12px;font-variant-numeric:tabular-nums}th{font-weight:700;color:#3c5972;background:#f5f8fc}td:last-child,th:last-child{text-align:right}.empty{text-align:center;padding:18px;color:#78899a;font-size:13px}.tip{background:#fff7e9;border-left:3px solid #eeb44d;border-radius:7px;padding:11px 13px;color:#785724;font-size:13px;margin-top:14px}.questions{padding-left:20px;margin:8px 0 0;color:#435a72;font-size:14px}.questions li{padding:3px 0}.foot{color:#667a90;font-size:12px;margin-top:18px}.file{font-size:12px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.shell{padding:10px 10px 25px}.card{padding:15px}.top{padding:20px}.full{grid-column:auto}canvas{height:250px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+ <header class="top"><div><div class="tag">Mô phỏng tự thiết kế · Vật lí 11</div><h1>Khảo sát định luật Ohm</h1><p class="subtitle">Thay đổi hiệu điện thế và điện trở; quan sát cường độ dòng điện, ghi dữ liệu và phân tích đồ thị I theo U.</p></div><span class="badge">Bản mẫu độc lập · Chạy ngoại tuyến</span></header>
+ <main class="grid">
+  <section class="card" aria-label="Bảng điều khiển"><h2>01 · Điều khiển thí nghiệm</h2>
+   <label for="voltage">Hiệu điện thế U <output id="voltageOut">6,0 V</output></label>
+   <input type="range" id="voltage" min="0" max="12" step="0.5" value="6" aria-label="Hiệu điện thế nguồn (V)"><div class="ranges"><span>0 V</span><span>12 V</span></div>
+   <label for="resistance">Điện trở R <output id="resistanceOut">10 Ω</output></label>
+   <input type="range" id="resistance" min="2" max="30" step="1" value="10" aria-label="Điện trở (Ω)"><div class="ranges"><span>2 Ω</span><span>30 Ω</span></div>
+   <div class="calculated"><div><b>Cường độ dòng điện</b><div class="muted">Giá trị từ mô hình lí tưởng</div></div><strong id="currentOut">0,600 A</strong></div>
+   <p class="formula"><b>Mô hình:</b> I = U/R. Khi R không đổi, I tỉ lệ thuận với U.</p>
+   <div class="actions"><button class="primary" id="collect">+ Ghi số liệu</button><button id="reset">↺ Đặt lại</button></div>
+   <div class="circuit-wrap"><svg class="circuit" viewBox="0 0 380 215" role="img" aria-label="Sơ đồ mạch điện đơn gồm nguồn, điện trở và ampe kế mắc nối tiếp">
+     <path class="node" d="M67 103 V35 H136 M204 35 H294 V170 H81 V118" />
+     <rect x="136" y="20" width="68" height="30" rx="5" fill="#fff0d2" stroke="#c7891e" stroke-width="2.3"/>
+     <text x="170" y="39" text-anchor="middle" class="circuit-text" id="rDiagram">R = 10 Ω</text>
+     <circle cx="294" cy="102" r="21" stroke="#174b76" stroke-width="2.5" fill="white"/><text x="294" y="108" text-anchor="middle" class="circuit-text" font-weight="bold">A</text>
+     <line x1="54" y1="103" x2="81" y2="103" stroke="#174b76" stroke-width="4"/><line x1="59" y1="118" x2="76" y2="118" stroke="#174b76" stroke-width="4"/>
+     <path class="node" d="M67 35 V103 M67 118 V170" stroke="#0e6e78"/>
+     <text x="87" y="107" class="circuit-text" font-size="11">+</text><text x="87" y="126" class="circuit-text" font-size="11">−</text>
+     <text x="103" y="195" text-anchor="middle" class="circuit-text" id="uDiagram">U = 6,0 V</text>
+     <text x="294" y="145" text-anchor="middle" class="circuit-text" id="iDiagram">0,600 A</text>
+     <g class="current-dots" id="dots"></g>
+    </svg></div>
+   <p class="section-note">Sơ đồ mang tính minh họa. Nguồn và ampe kế lí tưởng; R không đổi; không mô phỏng nhiệt độ, điện trở trong hoặc sai số dụng cụ.</p>
+  </section>
+  <section class="card"><h2>02 · Đồ thị I theo U</h2><p class="chart-label">Giữ R không đổi khi khảo sát. Trục ngang là U (V); trục đứng là I (A).</p><div class="chart-wrap"><canvas id="chart" role="img" aria-label="Đồ thị cường độ dòng điện theo hiệu điện thế với đường lí thuyết và các điểm được ghi"></canvas></div>
+    <div class="legend"><span><span class="line-sample"></span>Quan hệ lí thuyết theo R hiện tại</span><span><span class="dot"></span>Điểm đo đã ghi (cùng R)</span></div>
+    <div class="tip" id="slope">Độ dốc k = ΔI/ΔU = 1/R = 0,100 A/V. <strong>Không nhầm k với R.</strong></div>
+    <p class="section-note">Nếu đổi R, đường thẳng thay đổi độ dốc. Đồ thị chỉ hiện các điểm đã ghi tại đúng giá trị R đang chọn; bảng bên dưới vẫn giữ tất cả các điểm.</p>
+  </section>
+  <section class="card full"><h2>03 · Bảng số liệu và câu hỏi nghiên cứu</h2><div class="actions" style="margin:0 0 12px"><button id="export">↓ Xuất dữ liệu CSV</button><button id="clear">Xóa bảng số liệu</button><span class="muted" id="counter" style="align-self:center">0 điểm đã ghi</span></div>
+  <div class="table-wrap"><table><thead><tr><th>Lần đo</th><th>U (V)</th><th>R (Ω)</th><th>I (A)</th><th>U/I (Ω)</th></tr></thead><tbody id="dataRows"></tbody></table><div id="empty" class="empty">Chưa có dữ liệu. Chọn U, R rồi nhấn “Ghi số liệu”.</div></div>
+  <div class="tip"><strong>Gợi ý cho nhiệm vụ tự học:</strong><ol class="questions"><li>Hãy giữ R = 10 Ω, tự chọn ít nhất năm giá trị U và ghi số liệu. Điều gì thay đổi, điều gì không đổi?</li><li>Từ bảng số liệu và đồ thị, giải thích mối quan hệ giữa U và I.</li><li>Đổi sang R = 20 Ω, lặp lại khảo sát. So sánh hai độ dốc và tự đánh giá dự đoán ban đầu.</li></ol></div>
+  </section>
+ </main><p class="foot">© Bản mẫu giáo dục được tạo để minh họa cách tự phát triển thí nghiệm ảo về Định luật Ohm. Kết quả được tính từ mô hình toán học, không phải dữ liệu thực nghiệm đo bằng dụng cụ thật. Có thể mở tệp .html để sửa giao diện và mã nguồn.</p>
+</div>
+<script>
+(()=>{
+ 'use strict';
+ const voltage=document.getElementById('voltage'),resistance=document.getElementById('resistance'),canvas=document.getElementById('chart');
+ const $=(id)=>document.getElementById(id),fmt=(n,d)=>Number(n).toLocaleString('vi-VN',{minimumFractionDigits:d,maximumFractionDigits:d});
+ let data=[];
+ function get(){let u=Number(voltage.value),r=Number(resistance.value);return {u,r,i:u/r};}
+ function render(){const {u,r,i}=get();$('voltageOut').textContent=`${fmt(u,1)} V`;$('resistanceOut').textContent=`${r} Ω`;
+  $('currentOut').textContent=`${fmt(i,3)} A`;$('uDiagram').textContent=`U = ${fmt(u,1)} V`;$('rDiagram').textContent=`R = ${r} Ω`;
+  $('iDiagram').textContent=`${fmt(i,3)} A`;$('slope').innerHTML=`Độ dốc k = ΔI/ΔU = 1/R = ${fmt(1/r,3)} A/V. <strong>Không nhầm k với R.</strong>`;
+  plot();
+ }
+ function plot(){const ctx=canvas.getContext('2d'),bounds=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  const w=Math.max(290,bounds.width),h=Math.max(230,bounds.height);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+  const m={l:61,r:18,t:23,b:44},pw=w-m.l-m.r,ph=h-m.t-m.b;let {u,r,i}=get();
+  const ymax=6,xx=(v)=>m.l+v/12*pw,yy=(v)=>h-m.b-v/ymax*ph;
+  ctx.font='12px Arial';ctx.lineWidth=1;
+  for(let v=0;v<=12;v+=2){const x=xx(v);ctx.strokeStyle='#e6edf5';ctx.beginPath();ctx.moveTo(x,m.t);ctx.lineTo(x,h-m.b);ctx.stroke();ctx.fillStyle='#72839b';ctx.textAlign='center';ctx.fillText(String(v),x,h-m.b+18);}
+  for(let v=0;v<=6;v+=1){const y=yy(v);ctx.strokeStyle='#e6edf5';ctx.beginPath();ctx.moveTo(m.l,y);ctx.lineTo(w-m.r,y);ctx.stroke();ctx.fillStyle='#72839b';ctx.textAlign='right';ctx.fillText(String(v),m.l-10,y+4);}
+  ctx.strokeStyle='#466179';ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(m.l,m.t);ctx.lineTo(m.l,h-m.b);ctx.lineTo(w-m.r,h-m.b);ctx.stroke();
+  ctx.fillStyle='#234969';ctx.font='bold 12px Arial';ctx.textAlign='center';ctx.fillText('U (V)',m.l+pw/2,h-5);ctx.save();ctx.translate(17,m.t+ph/2);ctx.rotate(-Math.PI/2);ctx.fillText('I (A)',0,0);ctx.restore();
+  ctx.strokeStyle='#15828d';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(xx(0),yy(0));ctx.lineTo(xx(12),yy(12/r));ctx.stroke();
+  for(const p of data){if(p.r!==r)continue;ctx.beginPath();ctx.arc(xx(p.u),yy(p.i),5,0,Math.PI*2);ctx.fillStyle='#e28a2b';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1.6;ctx.stroke();}
+  ctx.beginPath();ctx.arc(xx(u),yy(i),7,0,Math.PI*2);ctx.fillStyle='#17898f';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.stroke();
+ }
+ function rows(){const body=$('dataRows');body.innerHTML='';for(let n=0;n<data.length;n++){const p=data[n],tr=document.createElement('tr');
+  const vals=[n+1,fmt(p.u,1),fmt(p.r,0),fmt(p.i,3),p.i===0?'—':fmt(p.u/p.i,2)];for(const val of vals){const td=document.createElement('td');td.textContent=val;tr.appendChild(td);}body.appendChild(tr);}
+  $('empty').hidden=!!data.length;$('counter').textContent=`${data.length} điểm đã ghi`;
+ }
+ $('collect').addEventListener('click',()=>{data.push(get());rows();plot();});
+ $('reset').addEventListener('click',()=>{voltage.value=6;resistance.value=10;render();});
+ $('clear').addEventListener('click',()=>{data=[];rows();plot();});
+ $('export').addEventListener('click',()=>{if(!data.length){alert('Hãy ghi ít nhất một dòng dữ liệu trước khi xuất CSV.');return;}
+  const content=['Lan_do,U_V,R_ohm,I_A,U_chia_I_ohm',...data.map((p,n)=>[n+1,p.u,p.r,p.i.toFixed(5),p.i===0?'':(p.u/p.i).toFixed(3)].join(','))].join('\r\n');
+  const blob=new Blob(['\ufeff'+content],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='so_lieu_dinh_luat_ohm.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);
+ });
+ voltage.addEventListener('input',render);resistance.addEventListener('input',render);
+ if('ResizeObserver' in window)new ResizeObserver(plot).observe(canvas);else window.addEventListener('resize',plot);
+ rows();render();
+})();
+</script>
+</body>
+</html>
