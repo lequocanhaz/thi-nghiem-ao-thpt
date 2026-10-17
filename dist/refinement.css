@@ -68,3 +68,5 @@ math,math *{font-family:'Cambria Math','STIX Two Math',serif;}
 .ai-simple .ai-status{padding:10px 16px;margin:0;background:#fff8e9;border-top:1px solid #e8dcc6;font-size:15px;line-height:1.5;color:#000;}.ai-simple .ai-status[hidden]{display:none;}.ai-simple .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
 @media(max-width:620px){.ai-simple{inset:8px;width:auto;max-height:calc(100dvh - 16px);}.ai-simple .ai-compose{padding:12px;}.ai-simple .ai-messages{padding:12px;}.ai-simple .ai-head{padding:8px 12px;}}
 .button,.icon-button,.header nav button,.header nav a,.controls input,.value-entry input{font-weight:400;}
+
+.ai-simple .ai-message strong{font-weight:700;}.ai-simple .ai-message a{color:#000;text-decoration:underline;text-underline-offset:3px;}.ai-simple .ai-inline-math{font-style:italic;}
