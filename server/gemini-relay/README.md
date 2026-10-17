@@ -1,14 +1,14 @@
 # Cổng kết nối Gemini theo khu vực
 
-Trạng thái: mã đã chuẩn bị; chỉ có thể xác nhận khắc phục sau khi triển khai và thử lại từ mạng từng bị lỗi. Việc gọi thành công từ máy kiểm tra ở khu vực khác không chứng minh lỗi trên máy người dùng đã hết.
+Đã triển khai ngày 17/10/2026 tại `https://vat-li-lab-gemini-relay.vercel.app/api/gemini`. Vercel xác nhận vùng thực thi `iad1`; backend hiện có đã nối tới cổng này. Kiểm tra API Gemini thật trả HTTP 200, đọc đúng 300 thí nghiệm và tính I = 2 A với U = 6 V, R = 3 Ω. Chưa kiểm thử trực tiếp từ trình duyệt hoặc mạng Việt Nam của người báo lỗi.
 
 Google có thể từ chối vị trí của máy chủ gọi API ngay cả khi người dùng ở quốc gia được hỗ trợ. Cổng này chạy bằng Node.js tại vùng Vercel `iad1`, thay cho việc gọi Gemini trực tiếp từ các điểm biên Cloudflare khác nhau. Cấu hình vùng là lựa chọn nơi thực thi hàm, không thay đổi tài khoản hay điều kiện sử dụng Google.
 
 Luồng: trình duyệt → API hiện tại (kiểm tra nguồn, nội dung, hạn mức, giải mã khóa) → cổng có xác thực tại `iad1` → Google Gemini. Câu trả lời vẫn đi qua bộ xử lý lỗi và lọc phản hồi hiện có. Khóa Gemini không được đưa vào JavaScript phía trình duyệt.
 
-## Triển khai
+## Cập nhật hoặc tái triển khai
 
-1. Tạo dự án Vercel từ kho `lequocanhaz/thi-nghiem-ao-thpt`, đặt Root Directory là `server/gemini-relay`, Framework là Other và dùng cấu hình `vercel.json` kèm theo. Không bật gói trả phí tự động.
+1. Dùng dự án Vercel hiện có `vat-li-lab-gemini-relay`. Bản hiện tại được triển khai bằng Vercel API từ bốn file `api/gemini.js`, `relay.mjs`, `package.json` và `vercel.json` trong thư mục này. Nếu thiết lập Git integration sau này, đặt Root Directory là `server/gemini-relay` và Framework là Other. Không bật gói trả phí tự động.
 2. Tạo token ngẫu nhiên tối thiểu 32 kí tự. Lưu dưới dạng biến bí mật `RELAY_TOKEN` trên Vercel. Không dán token vào issue, source, ảnh hoặc đoạn chat.
 3. Triển khai, kiểm tra hàm thực thi tại `iad1` và kiểm tra phản hồi có xác thực. Endpoint là URL dự án Vercel thực tế cộng `/api/gemini`; không dùng URL minh họa để cấu hình production.
 4. Trên máy chủ Sites hiện có, đặt hai runtime secret: `GEMINI_RELAY_URL` là endpoint thực tế và `GEMINI_RELAY_TOKEN` giống token trên Vercel. Giữ các khóa Gemini, D1, giới hạn lượt hỏi và `GEMINI_SETUP_ENABLED=0` hiện có.
@@ -23,3 +23,5 @@ Cổng chỉ nhận yêu cầu từ máy chủ có token bí mật, chỉ gọi 
 Giới hạn 100 lượt/ngày toàn website, 40 lượt/IP/ngày và 4 lượt/IP/phút vẫn do D1 ở backend hiện tại kiểm soát. Thử lại có thể tiêu thụ thêm hạn mức Google. Không tự bật billing, không chuyển nhà cung cấp và không giả câu trả lời khi Google từ chối.
 
 Chạy `node server/gemini-relay/test.mjs` từ gốc kho để kiểm tra bằng dữ liệu giả và HTTP localhost. Kiểm tra này không chứng minh vị trí production hoặc suy luận Google thực đã hoạt động.
+
+Backend dùng chế độ redirect `manual` cho đường gọi cổng, không tự gửi tiếp khóa sang máy chủ khác khi nhận chuyển hướng. Lỗi vận chuyển chỉ ghi tên/nhóm lỗi đã lọc; không ghi thông điệp thô có thể chứa thông tin bí mật.
