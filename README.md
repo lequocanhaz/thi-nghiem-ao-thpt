@@ -82,7 +82,7 @@ Kiểm tra DOM/transport của panel dùng phản hồi giả lập để kiểm
 
 Tạo khóa trong Google AI Studio tại https://aistudio.google.com/api-keys rồi lưu bằng phần quản lý secret của môi trường chạy server. Tuyệt đối không chèn khóa vào `dist/`, `ai-config.js`, GitHub Pages, commit, ảnh chụp màn hình hoặc cuộc trò chuyện. Server cũng hỗ trợ `GEMINI_API_KEY_ENCRYPTED` với cơ chế RSA/D1 đang dùng nếu môi trường đã thiết lập cơ chế này. Chỉ cần một trong hai dạng khóa Gemini.
 
-Chạy server Node.js 24 với một tệp biến môi trường riêng, đã được gitignore, bằng `node --env-file=.env.local server/start.mjs`. Chỉ endpoint HTTPS `/api/chat` của server được đưa vào `dist/ai-config.js`. GitHub Pages không thực thi server; backend cần cho phép khách dự kiến truy cập và giữ CORS theo nguồn website. Backend Sites hiện vẫn riêng tư và endpoint frontend còn trống: **chưa có kết nối Gemini hoạt động trên website công khai**.
+Chạy server Node.js 24 với một tệp biến môi trường riêng, đã được gitignore, bằng `node --env-file=.env.local server/start.mjs`. Chỉ endpoint HTTPS `/api/chat` của server được đưa vào `dist/ai-config.js`. GitHub Pages không thực thi server; backend cần cho phép khách dự kiến truy cập và giữ CORS theo nguồn website. Backend Sites hiện vẫn riêng tư và endpoint frontend còn trống: **Gemini chưa được mở cho khách của website công khai**.
 
 Luồng Gemini gửi câu hỏi, lịch sử và ngữ cảnh của bài đang mở; API server giữ khả năng nhận ảnh đã được kiểm tra định dạng. Panel hiện tại vẫn chỉ nhập câu hỏi và gửi. Khóa chỉ đi trong header đến Google, không nằm trong URL. Câu trả lời bị chặn, rỗng, cắt dở, lỗi quyền truy cập hay hết hạn mức đều trả lỗi rõ ràng; không hiển thị câu trả lời mô phỏng thay thế.
 
@@ -93,3 +93,9 @@ Theo phạm vi chủ website xác nhận, tính năng Gemini dành cho người 
 ### Nhập khóa Gemini riêng tư
 
 Backend Sites đã có trang `/setup/gemini`, chỉ mở trong lúc Site được xác nhận owner-private và `GEMINI_SETUP_ENABLED=1`. Trang nhập kiểu password mã hóa khóa bằng RSA-OAEP trong trình duyệt, kiểm tra metadata mô hình tại Google, rồi lưu ciphertext tạm thời tối đa một giờ. Agent chuyển ciphertext qua native Sites vào runtime secret và tắt cờ thiết lập trước khi cân nhắc chia sẻ backend. Không gửi khóa trong ảnh hoặc cuộc trò chuyện. Chưa có khóa mới hoặc suy luận Gemini thật được kiểm tra. `checks/gemini-setup.mjs` chỉ dùng khóa tổng hợp.
+
+### Kết nối Gemini đã kiểm tra ngày 17/10/2026
+
+Khóa mới đã được chủ website nhập qua trang riêng tư, chuyển thành runtime secret mã hóa và xóa bản tạm. API riêng tư trả HTTP 200 và câu trả lời tiếng Việt đúng cho kiểm tra lực Coulomb khi khoảng cách tăng gấp đôi (F mới bằng F/4). `/health` xác nhận provider Gemini đã cấu hình; trang thiết lập trả 404 sau khi tắt. Đây là kiểm thử HTTP thực, chưa phải kiểm thử thao tác trình duyệt.
+
+Mã frontend trong thay đổi này trỏ đến endpoint `/api/chat`, đã đổi chuỗi phiên bản module sang v22 để tránh cấu hình cũ bị lưu đệm. Chỉ đưa thay đổi frontend lên main sau khi chủ website cho phép máy chủ API tiếp nhận khách công khai và đã xác nhận trang thiết lập vẫn tắt. Không thay đổi audience để thực hiện một lần triển khai riêng tư.

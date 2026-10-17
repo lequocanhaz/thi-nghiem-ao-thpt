@@ -1,4 +1,4 @@
-import {LabAssistant} from './assistant.js?v=21';
+import {LabAssistant} from './assistant.js?v=22';
 import {parameterLimits,parameterWindow,cleanParameterWindows,revealParameterWindows} from './parameter-window.js?v=17';
 import {BannerScene} from './banner.js?v=18';
 import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=17';

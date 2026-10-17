@@ -1,4 +1,4 @@
-import {assistantEndpoint} from './ai-config.js?v=19';
+import {assistantEndpoint} from './ai-config.js?v=22';
 // Text-only server chat. No model downloads or browser inference.
 export class LabAssistant{
  constructor({getContext,endpoint=assistantEndpoint,document=globalThis.document,fetcher=globalThis.fetch}={}){
