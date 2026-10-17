@@ -5,7 +5,7 @@ export function apparatusBounds(group){
  const bounds=new T.Box3();if(!group)return bounds;
  group.updateMatrixWorld(true);
  const visit=node=>{
-  if(!node.visible||node.userData.stageBase)return;
+  if(!node.visible||node.userData.stageBase||(node.userData.coordinateAid&&!node.userData.profile?.metric))return;
   const material=Array.isArray(node.material)?node.material:[node.material];
   if(node.geometry&&material.some(m=>m&&m.visible!==false&&(m.opacity??1)>.01)){
    let local;
@@ -27,6 +27,13 @@ export function frameApparatus(camera,controls,group,margin=.86){
  if(direction.lengthSq()<.5)direction.set(7,4.6,8).normalize();
  camera.position.copy(center).add(direction);camera.lookAt(center);camera.updateMatrixWorld(true);
  const right=new T.Vector3(1,0,0).applyQuaternion(camera.quaternion),up=new T.Vector3(0,1,0).applyQuaternion(camera.quaternion);
+ if(camera.isOrthographicCamera){
+  let halfWidth=.25,halfHeight=.25;
+  for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){const p=new T.Vector3(x,y,z).sub(center);halfWidth=Math.max(halfWidth,Math.abs(p.dot(right)));halfHeight=Math.max(halfHeight,Math.abs(p.dot(up)));}
+  const aspect=Math.max(.1,camera.aspect||1),half=Math.max(halfHeight,halfWidth/aspect)/margin,distance=Math.max(12,size.length()*2);
+  camera.top=half;camera.bottom=-half;camera.left=-half*aspect;camera.right=half*aspect;camera.zoom=1;camera.near=.01;camera.far=Math.max(100,distance+size.length()*2);
+  controls.target.copy(center);camera.position.copy(center).addScaledVector(direction,distance);camera.lookAt(center);camera.updateProjectionMatrix();controls.update();return true;
+ }
  const tanY=Math.tan(T.MathUtils.degToRad(camera.getEffectiveFOV())/2),tanX=tanY*Math.max(.1,camera.aspect);
  let distance=4;
  for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){
