@@ -1,5 +1,5 @@
-import {T,C,V,mat,mesh,box,sphere,cylinder,line,label,setText,platform,beam} from './geometry-kit.js?v=17';
-import {cable} from './apparatus.js?v=17';
+import {T,C,V,mat,mesh,box,sphere,cylinder,line,label,setText,platform,beam} from './geometry-kit.js?v=30';
+import {cable} from './apparatus.js?v=30';
 const rad=a=>a*Math.PI/180;
 export function premiumRayOptics(id,g,s,d,o){platform(g,7.8,5.0);const boundary=1.7;box(g,6.0,.08,1.65,id==='reflection'?0xc7d7e8:0xbdd9ed,0,boundary-.04,0);if(id!=='reflection'){const fluid=box(g,6,1.52,1.65,0x96ccec,0,.9,0);fluid.material=mat(0x96ccec,{transparent:true,opacity:.23,roughness:.08,metalness:.02,depthWrite:false});for(const x of [-3,3])box(g,.04,1.55,1.73,0xd6e6f4,x,.9,0);}else{const mirror=box(g,6,.025,1.4,0xe1eaf2,0,1.75,0);mirror.material.metalness=.95;mirror.material.roughness=.06;}
 const normal=line(g,[V(0,.24,.08),V(0,3.95,.08)],C.metal,true);for(let j=-8;j<=8;j++){const a=j*Math.PI/18,inner=1.82,outer=j%2===0?1.93:1.87;line(g,[V(inner*Math.sin(a),boundary+inner*Math.cos(a),.08),V(outer*Math.sin(a),boundary+outer*Math.cos(a),.08)],0x8296b0);if(j%2===0&&Math.abs(j)<8){const l=label(g,`${Math.abs(j)*10}°`,V(2.07*Math.sin(a),boundary+2.07*Math.cos(a),.1),o);l?.scale.set(.46,.14,1);}}line(g,Array.from({length:121},(_,j)=>{const a=-Math.PI/2+j/120*Math.PI;return V(1.97*Math.sin(a),boundary+1.97*Math.cos(a),.08)}),0xa5b5ce);

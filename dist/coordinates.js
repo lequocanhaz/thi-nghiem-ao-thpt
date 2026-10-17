@@ -1,3 +1,4 @@
+import {modelLabel} from './model-label.js?v=30';
 import * as T from './vendor/three.module.min.js';
 const axis=(key,unit,scale,range)=>({key,unit,scale,range});
 // World-to-physical mappings are taken from the corresponding apparatus builders.
@@ -28,9 +29,8 @@ const colors={x:0x2360ba,y:0xb74a25,h:0xb74a25,u:0xb74a25,z:0x087a65};
 const direction=key=>new T.Vector3(...(key==='x'?[1,0,0]:key==='z'?[0,0,1]:[0,1,0]));
 export function coordinatePoint(profile,key,value){const a=profile.axes.find(a=>a.key===key);return a?new T.Vector3(...profile.origin).addScaledVector(direction(key),value*a.scale):null;}
 function label(text,position){
- const canvas=document.createElement('canvas');canvas.width=384;canvas.height=88;const ctx=canvas.getContext('2d');let texture;
- if(ctx?.fillText){ctx.clearRect?.(0,0,384,88);ctx.fillStyle='rgba(255,255,255,.92)';ctx.fillRect?.(0,0,384,88);ctx.fillStyle='#101d2f';ctx.font='400 34px "Product Sans", Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(text,192,44);texture=new T.CanvasTexture(canvas);texture.colorSpace=T.SRGBColorSpace;}
- const sprite=new T.Sprite(new T.SpriteMaterial({map:texture,transparent:true,depthTest:false,depthWrite:false}));sprite.position.copy(position);sprite.scale.set(.72,.165,1);sprite.renderOrder=940;sprite.userData.coordinateLabel=text;return sprite;
+ const sprite=modelLabel(null,text,position,{width:384,height:88,fontSize:34,scale:[.72,.165]});
+ if(sprite)sprite.userData.coordinateLabel=text;return sprite||new T.Group();
 }
 function buildAid(profile){
  const group=new T.Group();group.name='coordinate-aid';group.userData.coordinateAid=true;group.userData.profile=profile;

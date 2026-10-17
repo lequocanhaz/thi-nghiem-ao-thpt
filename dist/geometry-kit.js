@@ -1,3 +1,4 @@
+import {modelLabel} from './model-label.js?v=30';
 import * as T from './vendor/three.module.min.js';
 export {T};
 export const C={blue:0x347be1,cyan:0x32a4c4,purple:0x8972df,orange:0xef9851,green:0x359c7e,metal:0x9cacbd,dark:0x35475d};
@@ -10,7 +11,7 @@ export const sphere=(g,r,color,x=0,y=0,z=0)=>mesh(g,new T.SphereGeometry(r,28,18
 export const cylinder=(g,r,h,color,x=0,y=0,z=0)=>mesh(g,new T.CylinderGeometry(r,r,h,32),mat(color),x,y,z);
 export function line(g,points,color=C.blue,dashed=false){const geom=new T.BufferGeometry().setFromPoints(points),m=dashed?new T.LineDashedMaterial({color,dashSize:.10,gapSize:.06}):new T.LineBasicMaterial({color});const l=new T.Line(geom,m);if(dashed)l.computeLineDistances();g.add(l);return l;}
 export function arrow(g,origin,direction,color,length=1){const a=new T.ArrowHelper(direction.clone().normalize(),origin,length,color,.16,.08);g.add(a);return a;}
-export function label(g,text,pos,o={}){if(o.labels===false)return null;const canvas=document.createElement('canvas');canvas.width=512;canvas.height=112;const ctx=canvas.getContext('2d');if(!ctx)return null;const texture=new T.CanvasTexture(canvas);texture.colorSpace=T.SRGBColorSpace;const sprite=new T.Sprite(new T.SpriteMaterial({map:texture,depthTest:false}));sprite.position.copy(pos);sprite.scale.set(2.1,.46,1);sprite.userData.setText=t=>{if(sprite.userData.text===t)return;sprite.userData.text=t;ctx.clearRect(0,0,512,112);ctx.fillStyle='rgba(255,255,255,.92)';ctx.beginPath();if(ctx.roundRect)ctx.roundRect(1,1,510,110,20);else ctx.rect(1,1,510,110);ctx.fill();ctx.strokeStyle='#d6e1ec';ctx.stroke();ctx.fillStyle='#28415b';ctx.textAlign='center';ctx.textBaseline='middle';ctx.font='600 35px "Product Sans", Inter, Arial';const width=ctx.measureText(t).width;if(width>480)ctx.font=`600 ${Math.floor(35*480/width)}px "Product Sans", Inter, Arial`;ctx.fillText(t,256,56);texture.needsUpdate=true;};sprite.userData.setText(text);g.add(sprite);return sprite;}
+export function label(g,text,pos,o={}){return modelLabel(g,text,pos,o);}
 export const setText=(l,t)=>l?.userData.setText(t);
 export function platform(g,w=7,d=4){
  const firstChild=g.children.length;const m=box(g,w,.22,d,0xd6dfdb,0,-.11,0);box(g,w-.12,.035,d-.12,0xf4f6ee,0,.005,0);

@@ -1,4 +1,4 @@
-import {coordinateProfile} from './coordinates.js?v=28';
+import {coordinateProfile} from './coordinates.js?v=30';
 import {timeCaption} from './workspace.js?v=17';
 import {themeFor,paths,coreParams,usableParams} from './learning.js?v=17';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

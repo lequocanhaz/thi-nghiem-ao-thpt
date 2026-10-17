@@ -16,7 +16,7 @@ function answerContent(element,text,document){
 }
 export class LabAssistant{
  // Keep the Window receiver required by WebKit instead of calling native fetch as a class method.
- constructor({getContext,endpoint=assistantEndpoint,document=globalThis.document,fetcher=(...args)=>globalThis.fetch(...args)}={}){
+ constructor({getContext,endpoint=assistantEndpoint,document=globalThis.document,fetcher=(...args)=>globalThis.fetch(...args),viewport=globalThis.visualViewport}={}){
   Object.assign(this,{getContext,endpoint,document,fetcher,threads:new Map(),drafts:new Map(),busy:false});
   this.root=document.createElement('aside');this.root.id='aiAssistant';this.root.className='ai-assistant ai-simple';this.root.hidden=true;this.root.setAttribute('aria-labelledby','aiTitle');
   this.root.innerHTML='<div class="ai-head"><h2 id="aiTitle">Trợ lý Vật lí</h2><button type="button" data-ai="close" aria-label="Đóng trò chuyện">×</button></div><div class="ai-messages" role="log" aria-label="Hội thoại" aria-live="polite"></div><p class="ai-status" role="status" aria-live="polite" hidden></p><form class="ai-compose"><label class="sr-only" for="aiQuestion">Câu hỏi của bạn</label><textarea id="aiQuestion" rows="2" maxlength="6000" placeholder="Hỏi về Vật lí hoặc điều bạn muốn biết…"></textarea><button type="submit">Gửi ↑</button></form>';
@@ -25,12 +25,15 @@ export class LabAssistant{
   this.form.addEventListener('submit',e=>{e.preventDefault();if(this.busy)this.controller?.abort();else this.send();});
   this.input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();if(!this.busy)this.send();}});
   this.root.addEventListener('keydown',e=>{if(e.key==='Escape'){e.stopPropagation();this.close();}});
+  this.viewport=viewport;
+  this.syncViewport=()=>{if(this.root.hidden)return;const height=Number(viewport?.height),top=Number(viewport?.offsetTop)||0;if(Number.isFinite(height)&&height>0){this.root.style.setProperty('--chat-top',Math.max(0,top)+8+'px');this.root.style.setProperty('--chat-height',Math.max(0,height-16)+'px');}};
+  viewport?.addEventListener?.('resize',this.syncViewport);viewport?.addEventListener?.('scroll',this.syncViewport);
   this.render();
  }
  key(){return this.getContext?.()?.id||'library';}
  thread(key=this.key()){if(!this.threads.has(key))this.threads.set(key,[]);return this.threads.get(key);}
- open(){this.root.hidden=false;this.openButton?.setAttribute('aria-expanded','true');this.render();this.input.focus();}
- close(){this.root.hidden=true;this.openButton?.setAttribute('aria-expanded','false');this.openButton?.focus();}
+ open(){this.root.hidden=false;this.openButton?.setAttribute('aria-expanded','true');this.render();this.syncViewport();this.input.focus({preventScroll:true});}
+ close(){this.input.blur?.();this.root.hidden=true;this.openButton?.setAttribute('aria-expanded','false');this.openButton?.focus({preventScroll:true});}
  refreshContext(){if(this.currentKey!==this.key())this.render();}
  notice(text=''){this.status.textContent=text;this.status.hidden=!text;}
  render(){const key=this.key();if(this.currentKey&&this.currentKey!==key){this.drafts.set(this.currentKey,this.input.value);this.input.value=this.drafts.get(key)||'';}this.currentKey=key;
