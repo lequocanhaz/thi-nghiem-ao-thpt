@@ -1,6 +1,6 @@
 # Vật lí Lab · 300 bài khảo sát
 
-Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Chatbox v21 chỉ có nhập câu hỏi và Gửi/Dừng, dùng máy chủ suy luận. Không tải mô hình AI hoặc yêu cầu WebGPU. Endpoint máy chủ hiện chưa được bật; lần kiểm tra API ngày 17/10/2026 (giờ Việt Nam) vẫn trả HTTP 429 `billing_not_active`.
+Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Chatbox dùng Gemini trên máy chủ: nhập câu hỏi rồi Gửi/Dừng, không tải mô hình AI hoặc yêu cầu WebGPU. Đã kiểm tra API công khai không cần đăng nhập ngày 17/10/2026; Gemini trả lời tiếng Việt và dùng đúng thông số bài đang mở.
 
 Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
@@ -30,7 +30,7 @@ Kiểm tra: `npm run check`, `npm run check:models`, `npm run check:framing`, `n
 - Giao diện: `dist/refinement.css` (v17), `dist/expansion.css` (v16), `dist/visual.css` (v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
 - Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, các tệp `*-scenes.js`.
 - Nội dung và mô hình: các tệp `*-catalog.js`, `dist/models.js`, `dist/physics.js`.
-- Chatbox: `dist/assistant.js`. Endpoint: `dist/ai-config.js`. Backend được giữ trong `server/`; chưa được bật cho frontend khi tài khoản API chưa có thanh toán hoạt động.
+- Chatbox: `dist/assistant.js`. Endpoint: `dist/ai-config.js`. Backend trong `server/` hỗ trợ Gemini đang sử dụng và adapter OpenAI tùy chọn. Khóa Gemini nằm trong runtime secret phía máy chủ, không có trong frontend.
 - Các bản thuyết minh tiếng Việt: `dist/audio/vi13/`, mục lục đoạn đọc trong `dist/voice-index.js`.
 - Dùng GitHub Desktop hoặc trình biên tập của bạn, commit và push lên `main`; workflow kiểm tra rồi cập nhật website. Có thể trao đổi yêu cầu sửa trong cuộc trò chuyện và cung cấp đúng URL repository đã cấp quyền.
 
@@ -92,4 +92,4 @@ Theo phạm vi chủ website xác nhận, tính năng Gemini dành cho người 
 
 `npm run check:assistant` kiểm tra panel, giao thức OpenAI/Gemini, ngữ cảnh, lịch sử, ảnh phía API, thay khóa, lỗi hạn mức/quyền truy cập/mô hình, phản hồi bị chặn/rỗng/cắt dở, timeout và quy trình nhập khóa bằng khóa tổng hợp. `npm run check` kiểm tra thêm mã, tài nguyên, DOM và trạng thái 300 bài. Không thay thuật toán Vật lí, mô hình, âm thanh hoặc font trong đợt kết nối Gemini này.
 
-Đã kiểm thử suy luận Gemini thật ngày 17/10/2026: API trả HTTP 200 và giải thích đúng lực Coulomb còn F/4 khi khoảng cách tăng gấp đôi. Việc kiểm tra HTTP và dữ liệu không thay cho kiểm thử hình ảnh, GPU hoặc thao tác trực tiếp trên trình duyệt; các phần đó chưa được kiểm tra lại trong đợt này. Chuỗi module frontend dùng cache v22 để tải cấu hình mới.
+Đã kiểm thử suy luận Gemini thật ngày 17/10/2026: API trả HTTP 200, giải thích đúng lực Coulomb còn F/4 khi khoảng cách tăng gấp đôi và tính đúng I = 2 A theo thông số U = 6 V, R = 3 Ω. Kiểm tra HTTP ẩn danh xác nhận CORS/preflight hoạt động, nguồn lạ bị từ chối, câu hỏi rỗng bị chặn và toàn bộ đường thiết lập đều trả 404. Việc kiểm tra HTTP và dữ liệu không thay cho kiểm thử hình ảnh, GPU hoặc thao tác trực tiếp trên trình duyệt; các phần đó chưa được kiểm tra lại trong đợt này. Chuỗi module frontend dùng cache v22 để tải cấu hình mới.
