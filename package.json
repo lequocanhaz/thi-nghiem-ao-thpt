@@ -4,13 +4,14 @@
   "type": "module",
   "scripts": {
     "check:dom": "node checks/dom.mjs",
-    "check": "node checks/assets.mjs && node checks/workspace.mjs && node checks/parameter-window.mjs && node checks/banner.mjs && node checks/cosmos.mjs && node checks/assistant.mjs && node checks/gemini.mjs && node checks/gemini-setup.mjs && node checks/local-ai.mjs && node checks/interaction-v17.mjs && node checks/dom.mjs",
+    "check": "node checks/assets.mjs && node checks/workspace.mjs && node checks/parameter-window.mjs && node checks/banner.mjs && node checks/cosmos.mjs && node checks/assistant.mjs && node checks/gemini.mjs && node checks/gemini-setup.mjs && node checks/local-ai.mjs && node checks/interaction-v17.mjs && node checks/dom.mjs && node server/gemini-relay/test.mjs",
     "check:models": "node checks/full-catalog.mjs",
     "check:framing": "node checks/framing.mjs",
     "check:audio": "node checks/media.mjs && node checks/clip-player.mjs",
     "check:visual": "node checks/banner.mjs && node checks/cosmos.mjs",
     "check:assistant": "node checks/assistant.mjs && node checks/gemini.mjs && node checks/gemini-setup.mjs",
-    "check:local-ai": "node checks/local-ai.mjs"
+    "check:local-ai": "node checks/local-ai.mjs",
+    "check:relay": "node server/gemini-relay/test.mjs"
   },
   "devDependencies": {
     "linkedom": "0.18.13"

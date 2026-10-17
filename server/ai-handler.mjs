@@ -18,6 +18,11 @@ function connection(env){
  const prefix=provider==='gemini'?'GEMINI':'OPENAI';
  return {provider,plain:env[prefix+'_API_KEY'],encrypted:env[prefix+'_API_KEY_ENCRYPTED']};
 }
+function geminiRelay(env){
+ const url=env.GEMINI_RELAY_URL,token=env.GEMINI_RELAY_TOKEN;
+ if(!url&&!token)return null;
+ try{const endpoint=new URL(url);if(endpoint.protocol!=='https:'||!/^[-a-z0-9]+\.vercel\.app$/.test(endpoint.hostname)||endpoint.port||endpoint.username||endpoint.password||endpoint.pathname!=='/api/gemini'||endpoint.search||endpoint.hash||typeof token!=='string'||token.length<32||token.length>256||/[\r\n]/.test(token))throw Error();return {url:endpoint.href,token};}catch{return false;}
+}
 function geminiRequest(question,images,history,context,model){
  const parts=(text,pictures=[])=>[{text:text||'Hãy giải thích ảnh này.'},...pictures.map(value=>{const [,mimeType,data]=/^data:([^;]+);base64,(.+)$/.exec(value);return {inlineData:{mimeType,data}};})];
  return {model,body:{systemInstruction:{parts:[{text:instructions}]},contents:[...history.map(m=>({role:m.role==='assistant'?'model':'user',parts:parts(m.content,m.images)})),{role:'user',parts:parts((question||'Giải thích ảnh thí nghiệm.')+(context?'\n\nNgữ cảnh thí nghiệm:\n'+JSON.stringify(context):''),images)}],generationConfig:{maxOutputTokens:2048}}};
@@ -102,6 +107,8 @@ return async function handle(request,env={}){
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
  if(request.method!=='POST')return json(405,{error:'Phương thức không được hỗ trợ.'});
  if(!supported)return json(503,{error:'Nhà cung cấp AI chưa được cấu hình đúng.'});
+ const relay=config.provider==='gemini'?geminiRelay(env):null;
+ if(relay===false)return json(503,{error:'Cổng kết nối Gemini chưa được cấu hình đầy đủ. Chủ website cần kiểm tra máy chủ.'});
  if(!configured)return json(503,{error:config.provider==='gemini'?'Trợ lý chưa có khóa Gemini trên máy chủ.':'Trợ lý đang được kết nối.'});
  if(!(request.headers.get('Content-Type')||'').startsWith('application/json'))return json(415,{error:'Định dạng không hợp lệ.'});
  let data;try{data=await read(request);}catch(e){return json(400,{error:e instanceof SyntaxError?'Dữ liệu không hợp lệ.':e.message});}
@@ -124,7 +131,7 @@ return async function handle(request,env={}){
   for(let attempt=0;attempt<3;attempt++){
    signal.throwIfAborted();
    let response;
-   try{response=await fetcher('https://generativelanguage.googleapis.com/v1beta/models/'+upstream.model+':generateContent',{method:'POST',headers:{'x-goog-api-key':apiKey,'Content-Type':'application/json'},body:JSON.stringify(upstream.body),signal});}
+   try{response=await fetcher(relay?.url||'https://generativelanguage.googleapis.com/v1beta/models/'+upstream.model+':generateContent',{method:'POST',headers:{'x-goog-api-key':apiKey,'Content-Type':'application/json',...(relay?{Authorization:'Bearer '+relay.token}:{})},body:JSON.stringify(relay?{model:upstream.model,request:upstream.body}:upstream.body),signal,redirect:'error'});}
    catch(error){
     if(signal.aborted||attempt===2)throw error;
     diagnostic({event:'gemini_transport_retry',attempt:attempt+1});
@@ -132,6 +139,10 @@ return async function handle(request,env={}){
    }
    try{payload=await response.json();}catch{payload=null;}
    if(!response.ok){
+    if(relay&&/^RELAY_/.test(payload?.error?.status||'')&&![502,504].includes(response.status)){
+     diagnostic({event:'gemini_relay_error',status:response.status});
+     return json(503,{error:'Cổng kết nối AI chưa sẵn sàng. Chủ website cần kiểm tra cấu hình máy chủ.'});
+    }
     const failure=geminiError(response.status,payload);
     diagnostic({event:'gemini_upstream_error',attempt:attempt+1,...failure});
     if([408,500,502,503,504].includes(response.status)&&attempt<2){await retryWait(1000*2**attempt+Math.floor(Math.random()*250),signal);continue;}
