@@ -34,3 +34,7 @@ Không tuyên bố đã đọc toàn bộ các tài liệu trên. Không tạo s
 - `npm run check`: kiểm tra hồi quy nguồn, dữ liệu và DOM 300 bài. Không thay thế kiểm tra trên trình duyệt, iPhone hoặc GPU.
 
 Muốn fine-tune thực sự cần bộ dữ liệu có quyền sử dụng, tập đánh giá riêng và mô hình/quy trình hỗ trợ. Không thu thập riêng tư hoặc tự thay mô hình, billing hay hạn mức trong bản nâng cấp này.
+
+## Kết quả đánh giá trực tiếp
+
+Tám câu hỏi HTTP thật đã được đọc đối chiếu: Ohm/công suất, rối lượng tử, nguyên lí I, thời gian riêng, dịch câu, thiếu dữ kiện, năng lượng photon và giới hạn tra thời tiết. Đồng hồ Việt Nam cũng được kiểm tra với thời gian máy chủ. Xem `checks/tutor-live-v27.json`. Kết quả cuối của các bài tính phù hợp; ở câu photon, một giá trị trung gian eV sai nhẹ trong khi kết quả làm tròn 2,07 eV đúng. Trợ lý chưa có công cụ tính số độc lập. Chỉ hỗ trợ hiển thị in đậm, kí hiệu Unicode đơn giản và đường dẫn HTTPS an toàn; cú pháp LaTeX khác có thể còn hiện nguyên văn. Không suy rộng những ca này thành cam kết đúng mọi bài.

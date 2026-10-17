@@ -1,0 +1,119 @@
+{
+  "endpoint": "https://vat-li-lab-assistant-api.itsqanh.chatgpt.site/api/chat",
+  "method": "Live HTTP requests from Node; not browser/device QA. Expected facts require human review, no universal accuracy claim.",
+  "results": [
+    {
+      "id": "ohm",
+      "area": "Điện học",
+      "question": "Đặt 6 V vào điện trở thuần 3 Ω. Tính cường độ dòng điện và công suất.",
+      "expected": "I = 2 A; P = 12 W; kèm đơn vị.",
+      "status": 200,
+      "durationMs": 10985,
+      "at": "2026-10-17T13:46:37.407Z",
+      "answer": "Dựa vào dữ kiện từ bài toán và ngữ cảnh ứng dụng:\n- Hiệu điện thế: U = 6 V\n- Điện trở: R = 3 Ω\n\n**1. Cường độ dòng điện (theo định luật Ohm):**\n- Công thức: I = U / R\n- Thay số: I = 6 / 3 = 2 A\n\n**2. Công suất tiêu thụ:**\n- Công thức: P = U × I (hoặc P = U² / R)\n- Thay số: P = 6 × 2 = 12 W (hoặc P = 6² / 3 = 36 / 3 = 12 W)\n\n**Kết quả:**\n- Cường độ dòng điện: **2 A**\n- Công suất: **12 W**",
+      "error": null,
+      "review": "pass"
+    },
+    {
+      "id": "quantum",
+      "area": "Lượng tử",
+      "question": "Hai hạt rối lượng tử có cho phép gửi tin nhanh hơn ánh sáng không? Vì sao?",
+      "expected": "Không; kết quả cục bộ ngẫu nhiên, cần kênh thông tin cổ điển để so sánh tương quan; không viện dẫn ý thức.",
+      "status": 200,
+      "durationMs": 2295,
+      "at": "2026-10-17T13:46:39.704Z",
+      "answer": "Hai hạt rối lượng tử **không** cho phép gửi tin nhanh hơn ánh sáng. \n\nVì sao lại như vậy?\n- **Hiện tượng đo lường:** Khi hai hạt ở trạng thái rối, trạng thái của chúng liên kết chặt chẽ với nhau dù cách xa bao nhiêu. Tuy nhiên, kết quả đo trên hạt này hoàn toàn ngẫu nhiên. Khi bạn đo hạt thứ nhất và biết được trạng thái của nó, bạn không thể điều khiển để hạt thứ nhất rơi vào trạng thái \"0\" hay \"1\" theo ý muốn chủ quan của mình.\n- **Tính nhân quả và thông tin:** Để truyền thông tin hữu ích (như một tin nhắn), bên gửi phải chủ động mã hóa dữ liệu. Do kết quả đo lượng tử là ngẫu nhiên và không thể kiểm soát trước, người nhận sẽ chỉ thấy các kết quả ngẫu nhiên không có ý nghĩa nếu chỉ dựa vào hiện tượng rối.\n- **Sự kết hợp cổ điển (Classical Channel):** Để ứng dụng hiện tượng rối truyền thông tin (ví dụ trong viễn thông lượng tử hoặc dịch chuyển lượng tử - quantum teleportation), người gửi **bắt buộc phải gửi thêm một kênh thông tin cổ điển** (như tín hiệu vô tuyến, cáp quang) để thông báo kết quả đo cho người nhận. Mà kênh cổ điển này bị giới hạn bởi tốc độ ánh sáng ($c$). \n\nDo đó, rối lượng tử không hề vi phạm thuyết tương đối hẹp và không thể dùng để liên lạc nhanh hơn ánh sáng.",
+      "error": null,
+      "review": "pass"
+    },
+    {
+      "id": "thermodynamics",
+      "area": "Nhiệt động lực học",
+      "question": "Một khối khí nhận nhiệt lượng 500 J và thực hiện công 200 J. Nội năng thay đổi bao nhiêu? Nêu quy ước dấu.",
+      "expected": "ΔU = 300 J, tăng; Q vào dương, W do khí thực hiện dương, ΔU = Q − W.",
+      "status": 200,
+      "durationMs": 12397,
+      "at": "2026-10-17T13:48:01.521Z",
+      "answer": "Độ biến thiên nội năng của khối khí là **300 J**.\n\n**Cách tính:**\nÁp dụng nguyên lý I nhiệt động lực học:\nΔE = Q − W\n\n*   $Q = +500\\text{ J}$ (khối khí nhận nhiệt lượng)\n*   $W = +200\\text{ J}$ (khối khí thực hiện công)\n\nThay số:\nΔE = 500 − 200 = 300 J\n\n**Quy ước dấu:**\n*   **Nhiệt lượng ($Q$):** $Q > 0$ khi hệ nhận nhiệt; $Q < 0$ khi hệ truyền nhiệt cho vật khác.\n*   **Công ($W$):** $W > 0$ khi hệ thực hiện công lên vật khác; $W < 0$ khi hệ nhận công từ bên ngoài.\n*   **Nội năng ($\\Delta E$):** $\\Delta E > 0$ nội năng tăng; $\\Delta E < 0$ nội năng giảm.",
+      "error": null,
+      "review": "pass"
+    },
+    {
+      "id": "relativity",
+      "area": "Tương đối",
+      "question": "Một đồng hồ chuyển động đều với v = 0,6c so với phòng thí nghiệm. Phòng thí nghiệm đo được 10 s. Đồng hồ chuyển động đo được bao nhiêu thời gian riêng?",
+      "expected": "γ = 1,25; Δτ = 8 s; không đảo hệ quy chiếu.",
+      "status": 200,
+      "durationMs": 1885,
+      "at": "2026-10-17T13:48:03.407Z",
+      "answer": "Để tính khoảng thời gian mà đồng hồ chuyển động đo được (thời gian riêng), ta áp dụng công thức giãn thời gian trong Thuyết tương đối hẹp:\n\nΔt = Δt₀ / sqrt(1 − v²/c²)\n\nTrong đó:\n- Δt = 10 s (thời gian đo bởi quan sát viên trong phòng thí nghiệm).\n- v = 0,6c (tốc độ chuyển động của đồng hồ).\n- Δt₀ là thời gian riêng cần tìm (khoảng thời gian đo bởi chính chiếc đồng hồ đang chuyển động).\n\nBiến đổi công thức để tính thời gian riêng Δt₀:\nΔt₀ = Δt × sqrt(1 − v²/c²)\n\nThay số vào:\n- Tỷ số v/c = 0,6\n- Bình phương tỷ số: (v/c)² = 0,6² = 0,36\n- Nhân tử co ngắn/giãn: sqrt(1 − 0,36) = sqrt(0,64) = 0,8\n- Thời gian riêng: Δt₀ = 10 × 0,8 = 8 s\n\nVậy đồng hồ chuyển động đo được khoảng thời gian riêng là **8 s**.",
+      "error": null,
+      "review": "pass"
+    },
+    {
+      "id": "general",
+      "area": "Ngoài Vật lí",
+      "question": "Dịch câu 'Tôi thích học vật lý' sang tiếng Anh.",
+      "expected": "I like studying physics, hoặc bản dịch tương đương; không từ chối vì ngoài phạm vi thí nghiệm.",
+      "status": 200,
+      "durationMs": 1362,
+      "at": "2026-10-17T13:48:04.769Z",
+      "answer": "Câu \"Tôi thích học vật lý\" dịch sang tiếng Anh là:\n\n\"I like studying physics\" hoặc \"I love learning physics\".",
+      "error": null,
+      "review": "pass"
+    },
+    {
+      "id": "missing-data",
+      "area": "Dữ kiện thiếu",
+      "question": "Một vật rơi xuống đất. Tính tốc độ chạm đất.",
+      "expected": "Không tự bịa độ cao; cần độ cao hoặc thời gian, điều kiện ban đầu và sức cản; có thể đưa v² = v₀² + 2gh.",
+      "status": 200,
+      "durationMs": 7906,
+      "at": "2026-10-17T13:49:34.589Z",
+      "answer": "Để tính tốc độ chạm đất của vật, đề bài hiện đang **thiếu dữ kiện**. Bạn cần cung cấp thêm ít nhất một trong các thông tin sau:\n\n1. **Độ cao** $h$ từ nơi vật bắt đầu rơi (tính bằng mét).\n2. **Thời gian rơi** $t$ (tính bằng giây).\n3. **Vận tốc ban đầu** $v_0$ (nếu có, ví dụ ném xuống thay vì rơi tự do).\n\n---\n\n### Trường hợp phổ biến (Rơi tự do từ độ cao $h$, bỏ qua sức cản không khí):\nNếu bạn biết độ cao $h$ và gia tốc trọng trường $g$ (thường lấy $g \\approx 9.8\\text{ m/s}^2$ hoặc $9.81\\text{ m/s}^2$), công thức tính tốc độ chạm đất $v$ là:\n\n$v = \\sqrt{2 \\cdot g \\cdot h}$\n\n*Ví dụ:* Nếu thả rơi từ độ cao $h = 5\\text{ m}$ với $g = 9.8\\text{ m/s}^2$:\n$v = \\sqrt{2 \\cdot 9.8 \\cdot 5} = \\sqrt{98} \\approx 9.9\\text{ m/s}$\n\nBạn hãy bổ sung số liệu để tôi tính chính xác kết quả cho bạn nhé! *(Lưu ý: Ngữ cảnh Định luật Ohm $U = 6\\text{ V}, R = 3\\text{ Ω}$ ở trên không liên quan đến bài toán cơ học này).*",
+      "error": null,
+      "review": "pass",
+      "reviewNotes": "Nêu thiếu dữ kiện, đưa ví dụ 5 m được đánh dấu là ví dụ, không gán ví dụ vào số đo của bài. Mô hình vẫn có thể xuất LaTeX; cú pháp chưa hỗ trợ được giữ nguyên chữ."
+    },
+    {
+      "id": "photoelectric",
+      "area": "Lượng tử định lượng",
+      "question": "Một photon có tần số 5 × 10¹⁴ Hz. Tính năng lượng theo J và eV bằng h và e của SI.",
+      "expected": "E = hν = 3,313035075 × 10⁻¹⁹ J; E/e = 2,067833848… eV, làm tròn khoảng 2,07 eV; không gán độ chính xác quá mức cho dữ kiện.",
+      "status": 200,
+      "durationMs": 1788,
+      "at": "2026-10-17T13:49:36.378Z",
+      "answer": "Chào bạn, tôi là Trợ lý Vật lí của Vật lí Lab. Dưới đây là cách tính năng lượng của photon theo yêu cầu:\n\n**Dữ kiện cần dùng:**\n- Tần số: ν = 5 × 10¹⁴ Hz\n- Hằng số Planck (SI): h = 6,62607015 × 10⁻³⁴ J·s\n- Điện tích nguyên tố (SI): e = 1,602176634 × 10⁻¹⁹ C\n\n**1. Tính năng lượng theo đơn vị Joule (J):**\n- Công thức: E = hν\n- Thay số: E = (6,62607015 × 10⁻³⁴) × (5 × 10¹⁴) = 3,313035075 × 10⁻¹⁹ J\n\n**2. Tính năng lượng theo đơn vị electron-volt (eV):**\n- Công thức chuyển đổi: E(eV) = E(J) / e\n- Thay số: E = (3,313035075 × 10⁻¹⁹) / (1,602176634 × 10⁻¹⁹) ≈ 2,067987 eV\n\n**Kết quả:**\n- E = 3,31 × 10⁻¹⁹ J\n- E ≈ 2,07 eV",
+      "error": null,
+      "review": "pass_with_observation",
+      "reviewNotes": "Công thức, năng lượng J và kết quả làm tròn 2,07 eV đúng. Giá trị trung gian 2,067987 eV do mô hình tính lệch so với 2,067833848… eV. Chưa có công cụ tính số kiểm chứng từng phép tính; không xem trợ lý là máy tính chính xác."
+    },
+    {
+      "id": "current-events",
+      "area": "Giới hạn dữ liệu trực tiếp",
+      "question": "Hà Nội ngay lúc này bao nhiêu độ C? Hãy tra trực tiếp cho tôi.",
+      "expected": "Nêu không có công cụ thời tiết/tìm kiếm trực tiếp; không tự bịa nhiệt độ hay nói đã tra web.",
+      "status": 200,
+      "durationMs": 1343,
+      "at": "2026-10-17T13:49:37.722Z",
+      "answer": "Tôi không có công cụ duyệt web trực tiếp nên không thể tra cứu chính xác nhiệt độ hiện tại ở Hà Nội ngay lúc này. Bạn có thể kiểm tra thông tin thời tiết mới nhất trên các ứng dụng hoặc trang web thời tiết chuyên dụng nhé.",
+      "error": null,
+      "review": "pass"
+    }
+  ],
+  "reviewedAt": "2026-10-17",
+  "reviewMethod": "Manual review against equations and expected facts; not an independent comprehensive physics benchmark.",
+  "serverClock": {
+    "status": 200,
+    "answer": "Hiện tại là 20:46:34, Thứ Bảy, ngày 17/10/2026 (Asia/Ho_Chi_Minh, GMT+07:00).",
+    "verifiedAt": "2026-10-17T13:46:34.658Z",
+    "check": "Matched live date/time in Asia/Ho_Chi_Minh; ignored user-supplied fake 1900 timestamp."
+  },
+  "limitations": [
+    "Eight selected model questions plus live clock, not all possible questions.",
+    "HTTP tests, not browser/iPhone or Vietnam network.",
+    "No fine-tuning, full textbook ingestion or live web browsing.",
+    "Simple inline formatting only; unsupported LaTeX stays visible.",
+    "One intermediate numeric rounding discrepancy observed in photon answer; final rounded result correct."
+  ]
+}
