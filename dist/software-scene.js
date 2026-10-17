@@ -1,12 +1,12 @@
-import {T,V} from './geometry-kit.js?v=17';
-import {LabScene} from './scene3d.js?v=29';
+import {T,V} from './geometry-kit.js?v=30';
+import {LabScene} from './scene3d.js?v=30';
 import {OrbitControls} from './vendor/OrbitControls.js';
 // Project the same apparatus into Canvas 2D. This path uses no WebGL context.
 export function projectScene(scene,camera,width,height,budget=26000){
  scene.updateMatrixWorld(true);camera.updateMatrixWorld(true);const view=new T.Matrix4().multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse),primitives=[],world=new T.Matrix4(),mvp=new T.Matrix4(),instance=new T.Matrix4(),p=new T.Vector3();let triangles=0;
  const project=(x,y,z,m)=>{p.set(x,y,z).applyMatrix4(m);return [(p.x+1)*width/2,(1-p.y)*height/2,p.z];};
  const valid=a=>a.every(Number.isFinite),paint=m=>{const c=m?.color||new T.Color('#58769b');return c.getStyle(T.SRGBColorSpace);};
- const walk=o=>{if(o.visible&&o.userData.coordinateLabel){const point=o.getWorldPosition(new T.Vector3()).project(camera);if(Math.abs(point.x)<1&&Math.abs(point.y)<1&&Math.abs(point.z)<1)primitives.push({kind:'text',text:o.userData.coordinateLabel,points:[[(point.x+1)*width/2,(1-point.y)*height/2,point.z]],color:'#101d2f',opacity:1,z:-2});return;}if(!o.visible||o.userData.stageBase||o.userData.instrumentDetail)return;if(o.geometry){const g=o.geometry,a=g.attributes.position,m=Array.isArray(o.material)?o.material[0]:o.material;if(!a||!m||m.visible===false||o.isSprite)return;
+ const walk=o=>{if(o.visible&&o.userData.modelLabel){const point=o.getWorldPosition(new T.Vector3()).project(camera);if(Math.abs(point.x)<1&&Math.abs(point.y)<1&&Math.abs(point.z)<1)primitives.push({kind:'text',text:o.userData.text,points:[[(point.x+1)*width/2,(1-point.y)*height/2,point.z]],color:'#000000',opacity:1,z:-2});return;}if(!o.visible||o.userData.stageBase||o.userData.instrumentDetail)return;if(o.geometry){const g=o.geometry,a=g.attributes.position,m=Array.isArray(o.material)?o.material[0]:o.material;if(!a||!m||m.visible===false||o.isSprite)return;
  const opacity=m.opacity??1;if(opacity<.025)return;
  const draw=(matrix)=>{mvp.multiplyMatrices(view,matrix);const color=paint(m);if(o.isInstancedMesh&&g.type==='SphereGeometry'){if(!g.boundingSphere)g.computeBoundingSphere();const c=project(0,0,0,mvp),q=project(g.boundingSphere.radius,0,0,mvp),radius=Math.max(1,Math.hypot(c[0]-q[0],c[1]-q[1]));if(valid(c)&&Math.abs(c[2])<1)primitives.push({kind:'dot',points:[c],radius,color,opacity,z:c[2]});return;}
  const coordinates=Array.from({length:a.count},(_,i)=>project(a.getX(i),a.getY(i),a.getZ(i),mvp));
