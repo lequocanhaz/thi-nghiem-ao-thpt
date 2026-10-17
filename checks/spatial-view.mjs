@@ -16,7 +16,7 @@ for(const e of experiments){
  assert.ok(view.camera.isOrthographicCamera,e.id+' real orthographic camera');assert.equal(view.controls.enableRotate,false);assert.equal(view.controls.mouseButtons.LEFT,T.MOUSE.PAN);view.fitView();
  const box=apparatusBounds(view.model.group);assert.ok(!box.isEmpty(),e.id);view.camera.updateMatrixWorld(true);for(const p of corners(box)){const q=p.project(view.camera);assert.ok([q.x,q.y,q.z].every(Number.isFinite),e.id+' finite frustum');assert.ok(Math.abs(q.x)<.87&&Math.abs(q.y)<.87,e.id+' orthographic fit');}
  const primitives=projectScene(view.scene,view.camera,800,480,1200);assert.ok(primitives.length>0,e.id+' nonempty 2D projection');assert.ok(primitives.every(p=>p.points.flat().every(Number.isFinite)),e.id+' finite drawing primitives');if(e.id==='electric'){labels=primitives.filter(p=>p.kind==='text').length;drawProjection(ctx,primitives,800,480);}
- const before=JSON.stringify(view.state);view.setProjection('3d');assert.ok(view.camera.isPerspectiveCamera);view.setProjection('2d',cfg.viewPlane);assert.equal(JSON.stringify(view.state),before);count++;
+ const before=JSON.stringify(view.state);view.setProjection('3d');assert.ok(view.camera.isPerspectiveCamera);view.camera.updateMatrixWorld(true);for(const p of corners(apparatusBounds(view.model.group))){const q=p.project(view.camera);assert.ok(Math.abs(q.x)<.87&&Math.abs(q.y)<.87,e.id+' 3D return frames current apparatus, not previous lab');}view.setProjection('2d',cfg.viewPlane);assert.equal(JSON.stringify(view.state),before);count++;
 }
 assert.ok(labels>0&&textDraws>0,'Axis labels must draw in the non-WebGL path too');
 // Exact world/physical mappings, including centimetres and variable string length.
