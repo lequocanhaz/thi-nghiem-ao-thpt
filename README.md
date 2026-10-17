@@ -105,3 +105,7 @@ Backend thử lại tối đa hai lần với khoảng chờ tăng dần và m�
 Ngữ cảnh trợ lý bổ sung tổng số thí nghiệm và thống kê lớp/chủ đề, được tính trực tiếp từ danh mục đang dùng. Bộ kiểm tra dùng tình huống 503 → 503 → 200, giới hạn lần thử, hủy trong lúc chờ và lỗi vĩnh viễn để xác minh hành vi; không đại diện cho kiểm tra trên iPhone thật.
 
 Ngày 17/10/2026, runtime chuyển sang Gemini 3.5 Flash-Lite để ưu tiên độ trễ thấp sau khi ghi nhận 503 từ Gemini 3.8 Flash và một lượt hỏi chờ quá hạn. Cấu hình thanh toán và nhà cung cấp được giữ nguyên.
+
+## Trợ lý Vật lí mở rộng · v27
+
+Trợ lý hỗ trợ câu hỏi Vật lí ngoài chương trình THPT và các câu hỏi phổ thông, sử dụng ngữ cảnh bài đang mở khi liên quan. Có đồng hồ máy chủ cho ngày/giờ, múi giờ theo thiết bị và dự phòng Việt Nam. Đã bổ sung hướng dẫn giải bài, nêu giả thiết/đơn vị, dữ kiện thiếu, phân biệt mô phỏng với thực nghiệm, nguồn SI BIPM và danh mục đọc thêm. Không có fine-tuning hay duyệt web trực tiếp; không nạp toàn bộ lịch sử ChatGPT hoặc bí mật vào chatbot công khai. Xem [phạm vi, nguồn và kiểm thử](server/PHYSICS_TUTOR.md).

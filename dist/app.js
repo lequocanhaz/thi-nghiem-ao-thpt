@@ -1,5 +1,5 @@
 import {libraryContext} from './assistant-context.js?v=24';
-import {LabAssistant} from './assistant.js?v=23';
+import {LabAssistant} from './assistant.js?v=27';
 import {parameterLimits,parameterWindow,cleanParameterWindows,revealParameterWindows} from './parameter-window.js?v=17';
 import {BannerScene} from './banner.js?v=18';
 import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=17';
