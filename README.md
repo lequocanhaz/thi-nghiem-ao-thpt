@@ -82,7 +82,7 @@ Mở website, chọn **Trợ lý**, nhập câu hỏi rồi bấm **Gửi**. Cha
 
 API chạy tại `https://vat-li-lab-assistant-api.itsqanh.chatgpt.site/api/chat`, cho phép nguồn `https://lequocanhaz.github.io`. Máy chủ giới hạn toàn web 100 lượt/ngày, mỗi địa chỉ IP 40 lượt/ngày và 4 lượt/phút. Nhiều người cùng mạng có thể dùng chung địa chỉ IP và hạn mức. Hạn mức của Google có thể thấp hơn giới hạn của website. Không tự đổi sang nhà cung cấp hoặc mô hình trả phí khác khi hết hạn mức.
 
-Runtime được cấu hình `AI_PROVIDER=gemini`, `GEMINI_MODEL=gemini-3.8-flash`, `GEMINI_API_KEY_ENCRYPTED` trong secret của máy chủ. Cơ chế RSA/D1 giải mã chỉ trong bộ nhớ phía máy chủ. Không có khóa trong frontend hoặc repository. Không đưa khóa vào ảnh, cuộc trò chuyện, URL hay commit. `server/ai-handler.mjs` cũng hỗ trợ `GEMINI_API_KEY` dạng runtime secret nếu môi trường khác sử dụng cách đó; chỉ cần một dạng khóa Gemini.
+Runtime được cấu hình `AI_PROVIDER=gemini`, `GEMINI_MODEL=gemini-3.5-flash-lite`, `GEMINI_API_KEY_ENCRYPTED` trong secret của máy chủ. Cơ chế RSA/D1 giải mã chỉ trong bộ nhớ phía máy chủ. Không có khóa trong frontend hoặc repository. Không đưa khóa vào ảnh, cuộc trò chuyện, URL hay commit. `server/ai-handler.mjs` cũng hỗ trợ `GEMINI_API_KEY` dạng runtime secret nếu môi trường khác sử dụng cách đó; chỉ cần một dạng khóa Gemini.
 
 Trang thiết lập và các endpoint nhận khóa tạm đã tắt, trả HTTP 404. Bản mã hóa tạm đã xóa sau khi chuyển vào runtime secret. Không bật `GEMINI_SETUP_ENABLED` trong lúc máy chủ được chia sẻ công khai. Thay khóa bằng phần quản lý runtime secret hoặc một quy trình quản trị có bảo vệ tương đương.
 
@@ -103,3 +103,5 @@ Theo phạm vi chủ website xác nhận, tính năng Gemini dành cho người 
 Backend thử lại tối đa hai lần với khoảng chờ tăng dần và một hạn chờ chung 50 giây, chỉ khi lỗi mạng hoặc Gemini trả 408/500/502/503/504. Không thử lại lỗi khóa, quyền, khu vực hoặc hết hạn mức; không chuyển nhà cung cấp hay bật thanh toán. Một câu hỏi chỉ tiêu thụ một lượt trong bộ đếm của web, nhưng mỗi lần gọi lại vẫn tính vào hạn mức phía Google. Nhật ký chỉ lưu loại lỗi, mã HTTP và số lần thử, không lưu câu hỏi, phản hồi hoặc khóa API.
 
 Ngữ cảnh trợ lý bổ sung tổng số thí nghiệm và thống kê lớp/chủ đề, được tính trực tiếp từ danh mục đang dùng. Bộ kiểm tra dùng tình huống 503 → 503 → 200, giới hạn lần thử, hủy trong lúc chờ và lỗi vĩnh viễn để xác minh hành vi; không đại diện cho kiểm tra trên iPhone thật.
+
+Ngày 17/10/2026, runtime chuyển sang Gemini 3.5 Flash-Lite để ưu tiên độ trễ thấp sau khi ghi nhận 503 từ Gemini 3.8 Flash và một lượt hỏi chờ quá hạn. Cấu hình thanh toán và nhà cung cấp được giữ nguyên.
