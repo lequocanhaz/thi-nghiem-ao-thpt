@@ -22,9 +22,60 @@ function geminiRequest(question,images,history,context,model){
  const parts=(text,pictures=[])=>[{text:text||'Hãy giải thích ảnh này.'},...pictures.map(value=>{const [,mimeType,data]=/^data:([^;]+);base64,(.+)$/.exec(value);return {inlineData:{mimeType,data}};})];
  return {model,body:{systemInstruction:{parts:[{text:instructions}]},contents:[...history.map(m=>({role:m.role==='assistant'?'model':'user',parts:parts(m.content,m.images)})),{role:'user',parts:parts((question||'Giải thích ảnh thí nghiệm.')+(context?'\n\nNgữ cảnh thí nghiệm:\n'+JSON.stringify(context):''),images)}],generationConfig:{maxOutputTokens:2048}}};
 }
+function setupPage(nonce){
+ const client=async()=>{
+  const form=document.querySelector('form'),input=document.querySelector('input'),button=document.querySelector('button'),status=document.querySelector('[role=status]');
+  form.addEventListener('submit',async event=>{event.preventDefault();button.disabled=true;status.textContent='Đang gửi khóa an toàn…';let key=input.value.trim();
+   try{if(!key)throw Error('Hãy nhập khóa Gemini mới.');
+    const publicResponse=await fetch('/setup/gemini/public-key',{cache:'no-store'});if(!publicResponse.ok)throw Error('Trang thiết lập đã đóng hoặc phiên đăng nhập hết hạn.');
+    const jwk=await publicResponse.json(),publicKey=await crypto.subtle.importKey('jwk',jwk,{name:'RSA-OAEP',hash:'SHA-256'},false,['encrypt']);
+    const encrypted=new Uint8Array(await crypto.subtle.encrypt({name:'RSA-OAEP'},publicKey,new TextEncoder().encode(key)));key='';input.value='';
+    const response=await fetch('/setup/gemini',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ciphertext:btoa(String.fromCharCode(...encrypted))})});
+    const data=await response.json();if(!response.ok)throw Error(data.error||'Chưa gửi được khóa. Hãy thử lại.');
+    status.textContent='Đã gửi khóa để cấu hình máy chủ. Quay lại cuộc trò chuyện và nhắn “đã lưu khóa”. Chatbox chưa được kích hoạt ở bước này.';
+   }catch(error){status.textContent=error.message||'Chưa gửi được khóa. Hãy thử lại.';}finally{key='';input.value='';button.disabled=false;}
+  });
+ };
+ return `<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kết nối Gemini · Vật lí Lab</title><style nonce="${nonce}">*{box-sizing:border-box}body{margin:0;background:#f2f6fb;color:#111827;font:18px/1.6 system-ui,sans-serif;min-height:100vh;display:grid;place-items:center;padding:24px}main{width:min(100%,560px);background:white;border:1px solid #d6e1ef;border-radius:24px;padding:clamp(24px,5vw,44px);box-shadow:0 14px 40px #162e5810}h1{font-size:32px;line-height:1.2;margin:8px 0 20px}p{margin:0 0 24px}label{display:block;font-weight:600;margin-bottom:8px}input,button{font:inherit;width:100%;min-height:52px;border-radius:12px}input{padding:12px;border:1px solid #97abc6;margin-bottom:16px}input:focus-visible,button:focus-visible{outline:3px solid #1b60d8;outline-offset:3px}button{border:0;background:#1557c0;color:white;font-weight:600;padding:12px;cursor:pointer}button:disabled{opacity:.65;cursor:wait}[role=status]{margin:20px 0 0;overflow-wrap:anywhere}.eyebrow{font-size:15px;font-weight:700;color:#174fa4;margin:0}</style><main><p class="eyebrow">VẬT LÍ LAB · QUẢN TRỊ</p><h1>Kết nối Gemini</h1><p>Dành cho chủ website. Nhập khóa mới sau khi đã xóa khóa xuất hiện trong ảnh. Khóa được mã hóa trước khi gửi, không đưa lên GitHub.</p><form><label for="key">Khóa API Gemini mới</label><input id="key" name="key" type="password" required maxlength="300" autocomplete="off" autocapitalize="off" spellcheck="false"><button type="submit">Gửi khóa an toàn</button></form><p role="status" aria-live="polite"></p></main><script nonce="${nonce}">(${client.toString()})();</script></html>`;
+}
+async function geminiSetup(request,env,fetcher){
+ const url=new URL(request.url),headers={'Cache-Control':'no-store','Pragma':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY'};
+ const json=(status,value)=>Response.json(value,{status,headers});
+ // Enabled only while Sites access is confirmed owner-private. Disable before sharing the service.
+ if(env.GEMINI_SETUP_ENABLED!=='1')return json(404,{error:'Trang thiết lập đã đóng.'});
+ if(!env.DB)return json(503,{error:'Kho cấu hình máy chủ chưa sẵn sàng.'});
+ const path=url.pathname.replace(/\/$/,'');
+ if(path==='/setup/gemini'&&request.method==='GET'){
+  const nonce=btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(18))));
+  return new Response(setupPage(nonce),{headers:{...headers,'Content-Type':'text/html; charset=utf-8','Content-Security-Policy':`default-src 'none'; script-src 'nonce-${nonce}'; style-src 'nonce-${nonce}'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'`}});
+ }
+ if(path==='/setup/gemini/public-key'&&request.method==='GET'){const jwk=await keyPair(env.DB);return json(200,{kty:jwk.kty,n:jwk.n,e:jwk.e});}
+ if(path==='/setup/gemini/pending'&&request.method==='GET'){
+  const row=await env.DB.prepare('SELECT ciphertext,model,expires FROM assistant_setup_pending WHERE id=?').bind('gemini').first();
+  return row&&row.expires>Date.now()?json(200,{pending:true,...row}):json(200,{pending:false});
+ }
+ if(request.headers.get('Origin')!==url.origin)return json(403,{error:'Nguồn thiết lập không hợp lệ.'});
+ if(path==='/setup/gemini/pending'&&request.method==='DELETE'){await env.DB.prepare('DELETE FROM assistant_setup_pending WHERE id=?').bind('gemini').run();return json(200,{deleted:true});}
+ if(path!=='/setup/gemini'||request.method!=='POST')return json(405,{error:'Phương thức không được hỗ trợ.'});
+ if(!(request.headers.get('Content-Type')||'').startsWith('application/json'))return json(415,{error:'Định dạng không hợp lệ.'});
+ try{
+  const reader=request.body?.getReader();if(!reader)return json(400,{error:'Thiếu dữ liệu.'});let size=0,body='';const decoder=new TextDecoder();
+  for(;;){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>4096){await reader.cancel();return json(413,{error:'Dữ liệu vượt giới hạn.'});}body+=decoder.decode(value,{stream:true});}
+  const {ciphertext}=JSON.parse(body+decoder.decode());if(typeof ciphertext!=='string'||!/^[A-Za-z0-9+/]{512}$/.test(ciphertext))return json(400,{error:'Dữ liệu mã hóa chưa hợp lệ.'});
+  const jwk=await keyPair(env.DB),privateKey=await crypto.subtle.importKey('jwk',jwk,{name:'RSA-OAEP',hash:'SHA-256'},false,['decrypt']);
+  const key=new TextDecoder().decode(await crypto.subtle.decrypt({name:'RSA-OAEP'},privateKey,bytes(ciphertext)));
+  if(key.length<16||key.length>300||!/^[A-Za-z0-9._-]+$/.test(key))return json(400,{error:'Khóa Gemini chưa đúng định dạng.'});
+  const model=env.GEMINI_MODEL||'gemini-3.8-flash';if(!/^gemini-[a-zA-Z0-9._-]+$/.test(model))return json(503,{error:'Mô hình máy chủ chưa được cấu hình đúng.'});
+  const verified=await fetcher('https://generativelanguage.googleapis.com/v1beta/models/'+model,{headers:{'x-goog-api-key':key},signal:AbortSignal.any([request.signal,AbortSignal.timeout(15000)])});
+  if(!verified.ok)return json(verified.status===429?429:400,{error:verified.status===429?'Google đang giới hạn lượt kiểm tra. Hãy thử lại sau.':'Google chưa chấp nhận khóa hoặc mô hình này. Hãy kiểm tra khóa mới và quyền truy cập Gemini.'});
+  await env.DB.prepare('INSERT INTO assistant_setup_pending(id,ciphertext,model,expires) VALUES(?,?,?,?) ON CONFLICT(id) DO UPDATE SET ciphertext=excluded.ciphertext,model=excluded.model,expires=excluded.expires').bind('gemini',ciphertext,model,Date.now()+3600000).run();
+  return json(200,{saved:true,configured:false});
+ }catch{return json(400,{error:'Chưa kiểm tra được khóa. Hãy thử lại; nội dung khóa không được lưu vào nhật ký.'});}
+}
 export function createAIHandler({fetcher=globalThis.fetch,quotaCheck}={}){
 let cachedKey;const localClients=new Map();
 return async function handle(request,env={}){
+ if(new URL(request.url).pathname.startsWith('/setup/gemini'))return geminiSetup(request,env,fetcher);
  const url=new URL(request.url),source=request.headers.get('Origin'),headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','Vary':'Origin','X-Content-Type-Options':'nosniff'};
  if(source===origin)Object.assign(headers,{'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'POST, OPTIONS','Access-Control-Allow-Headers':'Content-Type'});
  const json=(status,body)=>Response.json(body,{status,headers});
