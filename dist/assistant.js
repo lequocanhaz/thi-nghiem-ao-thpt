@@ -1,7 +1,8 @@
 import {assistantEndpoint} from './ai-config.js?v=22';
 // Text-only server chat. No model downloads or browser inference.
 export class LabAssistant{
- constructor({getContext,endpoint=assistantEndpoint,document=globalThis.document,fetcher=globalThis.fetch}={}){
+ // Keep the Window receiver required by WebKit instead of calling native fetch as a class method.
+ constructor({getContext,endpoint=assistantEndpoint,document=globalThis.document,fetcher=(...args)=>globalThis.fetch(...args)}={}){
   Object.assign(this,{getContext,endpoint,document,fetcher,threads:new Map(),drafts:new Map(),busy:false});
   this.root=document.createElement('aside');this.root.id='aiAssistant';this.root.className='ai-assistant ai-simple';this.root.hidden=true;this.root.setAttribute('aria-labelledby','aiTitle');
   this.root.innerHTML='<div class="ai-head"><h2 id="aiTitle">Hỏi về thí nghiệm</h2><button type="button" data-ai="close" aria-label="Đóng trò chuyện">×</button></div><div class="ai-messages" role="log" aria-label="Hội thoại" aria-live="polite"></div><p class="ai-status" role="status" aria-live="polite" hidden></p><form class="ai-compose"><label class="sr-only" for="aiQuestion">Câu hỏi của bạn</label><textarea id="aiQuestion" rows="2" maxlength="6000" placeholder="Nhập câu hỏi của bạn…"></textarea><button type="submit">Gửi ↑</button></form>';
@@ -28,7 +29,7 @@ export class LabAssistant{
  async send(){const question=this.input.value.trim();if(!question||this.busy)return;if(!this.endpoint){this.notice('Trợ lý chưa kết nối máy chủ. Câu hỏi vẫn được giữ.');return;}
   const key=this.key(),thread=this.thread(key),context=this.getContext?.()||null,history=thread.slice(-10).map(m=>({role:m.role,content:m.content}));this.controller=new AbortController();const controller=this.controller;this.busy=true;this.pending={key,question};this.render();let result,error='';const timeout=setTimeout(()=>controller.abort(),55000);
   try{const response=await this.fetcher(this.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question,history,context}),signal:controller.signal,credentials:'omit',referrerPolicy:'no-referrer'});let data;try{data=await response.json();}catch{throw Error('Trợ lý chưa sẵn sàng. Vui lòng thử lại sau.');}if(!response.ok)throw Error(data.error||'Chưa gửi được câu hỏi. Hãy thử lại.');if(typeof data.answer!=='string'||!data.answer.trim())throw Error('Chưa nhận được câu trả lời. Hãy thử lại.');result=data.answer.slice(0,16000);
-  }catch(e){error=e.name==='AbortError'?'Đã dừng chờ trả lời. Câu hỏi vẫn được giữ.':e.message||'Không kết nối được trợ lý. Hãy thử lại.';}
+  }catch(e){error=e?.name==='AbortError'?'Đã dừng chờ trả lời. Câu hỏi vẫn được giữ.':e?.name==='TypeError'?'Không kết nối được trợ lý. Kiểm tra mạng và thử lại.':e?.message||'Không kết nối được trợ lý. Hãy thử lại.';}
   finally{clearTimeout(timeout);this.busy=false;this.controller=null;this.pending=null;if(result){thread.push({role:'user',content:question},{role:'assistant',content:result});if(thread.length>30)thread.splice(0,thread.length-30);if(this.key()===key&&this.input.value.trim()===question)this.input.value='';else if(this.key()!==key&&this.drafts.get(key)?.trim()===question)this.drafts.delete(key);}this.render();if(error)this.notice(error);else if(this.key()!==key)this.notice('Đã lưu câu trả lời trong bài trước.');}
  }
 }

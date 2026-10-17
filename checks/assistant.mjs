@@ -7,6 +7,24 @@ app.input.value='Bản nháp';id='wave';app.refreshContext();assert.equal(app.in
 app.fetcher=async(url,{signal})=>new Promise((resolve,reject)=>signal.addEventListener('abort',()=>reject(new DOMException('Stopped','AbortError')),{once:true}));const pending=app.send();assert.equal(app.submit.textContent,'Dừng');app.controller.abort();await pending;assert.match(app.status.textContent,/Đã dừng/);assert.equal(app.input.value,'Giải thích bước sóng');assert.equal(app.submit.textContent,'Gửi ↑');
 let resolve;app.fetcher=async()=>new Promise(r=>resolve=r);app.input.value='Câu đang gửi';const waiting=app.send();app.input.value='Câu hỏi mới đang viết';resolve(Response.json({answer:'Đáp án'}));await waiting;assert.equal(app.input.value,'Câu hỏi mới đang viết');app.close();assert.equal(app.root.hidden,true);
 let externalCalls=0;const off=new LabAssistant({document:setup().document,getContext:()=>({id:'library'}),endpoint:'',fetcher:()=>{externalCalls++;}});off.input.value='Xin chào';await off.send();assert.equal(off.submit.disabled,true);assert.match(off.status.textContent,/chưa kết nối máy chủ/);assert.equal(off.thread().length,0);assert.equal(externalCalls,0);assert.equal(off.input.value,'Xin chào');
+// A native WebKit fetch rejects receivers other than Window. Exercise the default transport.
+const nativeFetch=globalThis.fetch;
+try{
+ let browserCalls=0;
+ globalThis.fetch=async function(url,options){
+  if(this!==globalThis)throw new TypeError('Can only call Window.fetch on instances of Window');
+  browserCalls++;assert.equal(url,'https://assistant.example/api/chat');assert.equal(JSON.parse(options.body).context.id,'ohm');
+  return Response.json({answer:'I = U/R = 2 A.'});
+ };
+ const browserChat=new LabAssistant({document:setup().document,endpoint:'https://assistant.example/api/chat',getContext:()=>({id:'ohm'})});
+ browserChat.input.value='Tính cường độ dòng điện';await browserChat.send();
+ assert.equal(browserCalls,1,'Default fetch must run with the browser global as its receiver');
+ assert.equal(browserChat.thread().length,2);assert.equal(browserChat.input.value,'');assert.equal(browserChat.status.hidden,true);
+ globalThis.fetch=async function(){if(this!==globalThis)throw new TypeError('Can only call Window.fetch on instances of Window');throw new TypeError('Load failed');};
+ const offlineChat=new LabAssistant({document:setup().document,endpoint:'https://assistant.example/api/chat',getContext:()=>({id:'ohm'})});
+ offlineChat.input.value='Giữ lại câu hỏi';await offlineChat.send();assert.equal(offlineChat.input.value,'Giữ lại câu hỏi');assert.equal(offlineChat.thread().length,0);
+ assert.match(offlineChat.status.textContent,/Không kết nối được trợ lý/);assert.doesNotMatch(offlineChat.status.textContent,/Load failed|Window\.fetch/);
+}finally{globalThis.fetch=nativeFetch;}
 const source=fs.readFileSync(new URL('../dist/assistant.js',import.meta.url),'utf8');assert.doesNotMatch(source,/BrowserAI|local-ai|WebLLM|new Worker|Tải AI/);const css=fs.readFileSync(new URL('../dist/refinement.css',import.meta.url),'utf8');assert.doesNotMatch(css,/body,body \*\{font-weight:700/);assert.match(css,/h1,h2,h3,h4,h5,h6\{font-weight:700!important/);assert.match(css,/font-family:'Product Sans'/);assert.match(css,/ai-simple \.ai-status\[hidden\]/);
 const png='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a7S0AAAAASUVORK5CYII=';
 let upstream;const handler=createAIHandler({fetcher:async(url,options)=>{upstream={url,...options};return Response.json({output:[{type:'message',content:[{type:'output_text',text:'I = U/R.'}]}]});}}),env={OPENAI_API_KEY:'test-key-fixture',OPENAI_MODEL:'fixture-model'},origin='https://lequocanhaz.github.io';
@@ -16,4 +34,4 @@ const result=await handler(req({question:'Giải thích',context:{id:'ohm'},imag
 for(let i=1;i<30;i++)assert.equal((await handler(req({question:'?'}),env)).status,200);assert.equal((await handler(req({question:'?'}),env)).status,429);
 for(const code of ['billing_not_active','insufficient_quota']){const bad=createAIHandler({fetcher:async()=>Response.json({error:{code}},{status:429})});const r=await bad(req({question:'?'}),env);assert.equal(r.status,429);assert.match((await r.json()).error,/thanh toán OpenAI API/);}
 const capped=createAIHandler({quotaCheck:async()=>false,fetcher:()=>{throw Error('must not call');}});assert.equal((await capped(req({question:'?'}),env)).status,429);
-console.log('PASS simplified chat: only question/send/close, no local model download, automatic lab context, safe answers, drafts/cancel/failure retention, edit preservation, honest unavailable backend. API validation/limits retained. DOM/transport fixtures; no live inference.');
+console.log('PASS simplified chat: only question/send/close, no local model download, automatic lab context, safe answers, drafts/cancel/failure retention, edit preservation, honest unavailable backend. WebKit receiver-sensitive default fetch and Vietnamese network errors verified. API validation/limits retained. DOM/transport fixtures; no live inference.');
