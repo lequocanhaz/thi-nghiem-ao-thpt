@@ -58,13 +58,13 @@ export class LabScene {
  setProjection(mode,plane='front'){
   mode=mode==='2d'?'2d':'3d';plane=plane==='top'?'top':'front';if(mode===this.projection&&(mode!=='2d'||plane===this.viewPlane))return;
   this.clearHighlight?.();this.drag=null;
-  if((this.projection||'3d')==='3d')this.saved3d={target:this.controls.target.clone(),autoFrame:this.autoFrame,minDistance:this.controls.minDistance,maxDistance:this.controls.maxDistance};
+  if((this.projection||'3d')==='3d')this.saved3d={id:this.id,target:this.controls.target.clone(),autoFrame:this.autoFrame,minDistance:this.controls.minDistance,maxDistance:this.controls.maxDistance};
   this.controls.dispose();this.perspectiveCamera??=this.camera;this.orthographicCamera??=new THREE.OrthographicCamera(-6,6,4,-4,.01,500);
   this.camera=mode==='2d'?this.orthographicCamera:this.perspectiveCamera;this.projection=mode;this.viewPlane=plane;
   this.camera.aspect=this.size?this.size.w/this.size.h:1.5;this.camera.up.set(0,mode==='2d'&&plane==='top'?0:1,mode==='2d'&&plane==='top'?-1:0);
   this.controls=new OrbitControls(this.camera,this.renderer.domElement);this.controls.enableDamping=mode!=='2d';this.controls.enableRotate=mode!=='2d';this.controls.minZoom=.25;this.controls.maxZoom=8;this.controls.maxPolarAngle=Math.PI*.82;
   if(mode==='2d'){this.controls.mouseButtons.LEFT=THREE.MOUSE.PAN;this.controls.touches.ONE=THREE.TOUCH.PAN;this.view(plane);}
-  else if(this.saved3d){this.controls.target.copy(this.saved3d.target);this.controls.minDistance=this.saved3d.minDistance;this.controls.maxDistance=this.saved3d.maxDistance;this.autoFrame=this.saved3d.autoFrame;this.controls.update();}
+  else if(this.saved3d&&this.saved3d.id===this.id){this.controls.target.copy(this.saved3d.target);this.controls.minDistance=this.saved3d.minDistance;this.controls.maxDistance=this.saved3d.maxDistance;this.autoFrame=this.saved3d.autoFrame;this.controls.update();}
   else this.view('iso');
   this.controls.addEventListener('start',()=>{this.autoFrame=false;});this.controls.enabled=this.interaction!==false;this.renderer.domElement.setAttribute('aria-label',mode==='2d'?'Hình chiếu 2D. Kéo điểm màu để chỉnh thông số; kéo nền để dịch hình. Có thể nhập số trong bảng thông số.':'Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số.');this.dirty=true;
  }
