@@ -109,3 +109,7 @@ Ngày 17/10/2026, runtime chuyển sang Gemini 3.5 Flash-Lite để ưu tiên đ
 ## Trợ lý Vật lí mở rộng · v27
 
 Trợ lý hỗ trợ câu hỏi Vật lí ngoài chương trình THPT và các câu hỏi phổ thông, sử dụng ngữ cảnh bài đang mở khi liên quan. Có đồng hồ máy chủ cho ngày/giờ, múi giờ theo thiết bị và dự phòng Việt Nam. Đã bổ sung hướng dẫn giải bài, nêu giả thiết/đơn vị, dữ kiện thiếu, phân biệt mô phỏng với thực nghiệm, nguồn SI BIPM và danh mục đọc thêm. Không có fine-tuning hay duyệt web trực tiếp; không nạp toàn bộ lịch sử ChatGPT hoặc bí mật vào chatbot công khai. Xem [phạm vi, nguồn và kiểm thử](server/PHYSICS_TUTOR.md).
+
+## Giao diện và không gian khảo sát · v28
+
+Đã thêm giao diện sáng thống nhất cho nút, thẻ ảnh, bộ lọc và bàn thí nghiệm; giữ Product Sans, chỉ in đậm/viết hoa các tiêu đề chính. Cả 300 bài có nút hình chiếu 2D/3D giữ nguyên dữ liệu. Có 13 bài dùng trục có vạch chia vật lí và 62 bài dùng trục chỉ hướng, được chú giải riêng; đồ thị thêm trục qua 0 khi miền khảo sát chứa 0. Xem [thiết kế, nguồn và cách kiểm tra](docs/INTERFACE_V28.md).

@@ -1,0 +1,57 @@
+import * as T from './vendor/three.module.min.js';
+const axis=(key,unit,scale,range)=>({key,unit,scale,range});
+// World-to-physical mappings are taken from the corresponding apparatus builders.
+// A display scale is not silently interpreted as metres.
+const orientationIds=new Set('incline pendulum lever hooke collision magnetic lorentz solenoid vector_sum vector_components relative_motion gravitational_force orbit escape_speed kepler torque_angle rotational_inertia angular_accel rolling beam_supports three_strings collision_2d angular_momentum gyroscope rotating_planet elliptic_orbit binary_orbit tidal_gradient charged_ring charged_rod charged_disk charged_solid_sphere charged_plane equipotential_map three_charge_energy electric_work_paths dipole_torque uniform_field potential_point potential_pair loop_axis helmholtz_coils finite_solenoid toroid compass_coil velocity_selector mass_spectrometer cyclotron magnetic_helix em_plane_wave poynting_energy prism lens mirror reflection refraction tir ray_slab grating young diffraction polarization'.split(' '));
+export function coordinateProfile(id,s={}){
+ const x=(unit,scale,range)=>axis('x',unit,scale,range),y=(key,unit,scale,range)=>axis(key,unit,scale,range);
+ const profiles={
+  electric:{origin:[0,0,0],axes:[x('m',8,[-.3,.3]),y('y','m',8,[-.25,.25]),axis('z','m',8,[-.25,.25])],plane:'front'},
+  energy:{origin:[-1.7,.25,0],axes:[y('h','m',.2,[0,20])],plane:'front'},
+  oscillation:{origin:[0,.62,0],axes:[x('cm',.12,[-10,10])],plane:'front'},
+  damped:{origin:[0,.6,0],axes:[x('cm',.15,[-10,10])],plane:'front'},
+  wave:{origin:[-3,1.3,0],axes:[x('m',1,[0,6]),y('u','cm',.7,[-1,1])],plane:'front'},
+  standing:{origin:[-3,1.4,0],axes:[x('m',6/Math.max(.001,s.length||4),[0,s.length||4]),y('u','cm',.9,[-Math.max(.2,2*(s.a||.2)),Math.max(.2,2*(s.a||.2))])],plane:'front'},
+  uniform:{origin:[-3,.22,0],axes:[x('m',.12,[0,50])],plane:'front'},
+  acceleration:{origin:[-1.5,.22,0],axes:[x('m',.06,[0,100])],plane:'front'},
+  newton:{origin:[0,.22,0],axes:[x('m',.5,[0,10])],plane:'front'},
+  horizontal:{origin:[-3,.35,0],axes:[x('m',.2,[0,30]),y('y','m',.2,[0,20])],plane:'front'},
+  projectile:{origin:[-3,.35,0],axes:[x('m',.48,[0,12]),y('y','m',.48,[0,8])],plane:'front'},
+  circular:{origin:[0,.3,0],axes:[x('m',1,[-(s.radius||1.5),(s.radius||1.5)]),axis('z','m',1,[-(s.radius||1.5),(s.radius||1.5)])],plane:'top'},
+  interference:{origin:[0,.65,-1.7],axes:[x('m',1,[-3,3]),axis('z','m',1,[0,4])],plane:'top'}
+ };
+ if(profiles[id])return {...profiles[id],metric:true,note:'Vạch chia theo đại lượng và đơn vị ghi trên từng trục. Tỉ lệ các trục có thể khác nhau.'};
+ if(orientationIds.has(id))return {origin:[0,0,0],axes:[x('',1,[-2,2]),y('y','',1,[0,3]),axis('z','',1,[-2,2])],plane:'front',metric:false,note:'Trục định hướng của hình minh họa; không dùng chiều dài trên hình để đọc số đo.'};
+ return null;
+}
+const colors={x:0x2360ba,y:0xb74a25,h:0xb74a25,u:0xb74a25,z:0x087a65};
+const direction=key=>new T.Vector3(...(key==='x'?[1,0,0]:key==='z'?[0,0,1]:[0,1,0]));
+export function coordinatePoint(profile,key,value){const a=profile.axes.find(a=>a.key===key);return a?new T.Vector3(...profile.origin).addScaledVector(direction(key),value*a.scale):null;}
+function label(text,position){
+ const canvas=document.createElement('canvas');canvas.width=384;canvas.height=88;const ctx=canvas.getContext('2d');let texture;
+ if(ctx?.fillText){ctx.clearRect?.(0,0,384,88);ctx.fillStyle='rgba(255,255,255,.92)';ctx.fillRect?.(0,0,384,88);ctx.fillStyle='#101d2f';ctx.font='400 34px "Product Sans", Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(text,192,44);texture=new T.CanvasTexture(canvas);texture.colorSpace=T.SRGBColorSpace;}
+ const sprite=new T.Sprite(new T.SpriteMaterial({map:texture,transparent:true,depthTest:false,depthWrite:false}));sprite.position.copy(position);sprite.scale.set(.72,.165,1);sprite.renderOrder=940;sprite.userData.coordinateLabel=text;return sprite;
+}
+function buildAid(profile){
+ const group=new T.Group();group.name='coordinate-aid';group.userData.coordinateAid=true;group.userData.profile=profile;
+ const origin=new T.Vector3(...profile.origin);group.add(label('O',origin.clone().add(new T.Vector3(-.16,-.18,0))));
+ for(const a of profile.axes){
+  const branch=new T.Group();branch.userData.axisKey=a.key;const dir=direction(a.key),color=colors[a.key];const from=origin.clone().addScaledVector(dir,a.range[0]*a.scale),to=origin.clone().addScaledVector(dir,a.range[1]*a.scale);
+  const line=new T.Line(new T.BufferGeometry().setFromPoints([from,to]),new T.LineBasicMaterial({color,transparent:true,opacity:.72}));branch.add(line);
+  const arrow=new T.ArrowHelper(dir,to.clone().addScaledVector(dir,-.14),.14,color,.14,.065);branch.add(arrow);
+  const offset=a.key==='x'?new T.Vector3(0,-.22,0):new T.Vector3(-.28,0,0);
+  branch.add(label(a.key+(a.unit?' ('+a.unit+')':''),to.clone().addScaledVector(dir,.35)));
+  if(profile.metric){for(let j=0;j<=4;j++){const value=a.range[0]+(a.range[1]-a.range[0])*j/4;if(Math.abs(value)<1e-10)continue;const p=coordinatePoint(profile,a.key,value),cross=a.key==='x'?new T.Vector3(0,.05,0):new T.Vector3(.05,0,0);const tick=new T.Line(new T.BufferGeometry().setFromPoints([p.clone().sub(cross),p.clone().add(cross)]),new T.LineBasicMaterial({color}));branch.add(tick);branch.add(label(Number(value.toPrecision(3)).toLocaleString('vi-VN'),p.clone().add(offset)));}}
+  group.add(branch);
+ }
+ return group;
+}
+function dispose(group){group.traverse(o=>{o.geometry?.dispose();const materials=Array.isArray(o.material)?o.material:[o.material];for(const m of materials){m?.map?.dispose();m?.dispose();}});}
+export function withCoordinates(model,id,state,data,options={}){
+ const update=model.update;let aid,signature;
+ const sync=(s,c={})=>{const profile=coordinateProfile(id,s),on=!!profile&&!options.thumbnail&&!options.hero&&!options.config?.thumbnail&&!options.config?.hero&&c.switches?.axes!==false;const sig=on?JSON.stringify(profile):'';
+  if(sig!==signature){if(aid){model.group.remove(aid);dispose(aid);aid=null;}if(on){aid=buildAid(profile);model.group.add(aid);}signature=sig;}
+  if(aid){for(const branch of aid.children)if(branch.userData.axisKey)branch.visible=c.viewMode!=='2d'||(c.viewPlane==='top'?['x','z']:['x','y','u','h']).includes(branch.userData.axisKey);}
+ };
+ model.update=(s,d,c={})=>{update(s,d,c);sync(s,c);};sync(state,options.config||{});return model;
+}
