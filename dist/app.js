@@ -1,3 +1,4 @@
+import {libraryContext} from './assistant-context.js?v=24';
 import {LabAssistant} from './assistant.js?v=23';
 import {parameterLimits,parameterWindow,cleanParameterWindows,revealParameterWindows} from './parameter-window.js?v=17';
 import {BannerScene} from './banner.js?v=18';
@@ -179,5 +180,6 @@ function animate(now){requestAnimationFrame(animate);const dt=last?Math.min(.07,
 $('#dialog').addEventListener('close',restoreDialogFocus);
 if(!Array.isArray(prefs.favorites))prefs.favorites=[];if(!Array.isArray(prefs.recent))prefs.recent=[];prefs.progress=prefs.progress||{};document.documentElement.style.setProperty('--text-scale',prefs.textSize);route();requestAnimationFrame(animate);
 
-const assistantContext=()=>active?{id:active.id,title:active.title,formula:active.formula,conditions:active.limit,configuration:{electricMode:active.id==='electric'?electricModes[config.mode]:undefined,capacitorMode:active.id==='capacitor'?config.capMode:undefined},parameters:active.params.map(p=>({key:p.key,label:p.label,value:state[p.key],unit:p.unit})),columns:active.headers,measurements:rows.slice(-12).map(r=>r.values)}:{id:'library',title:'Thư viện thí nghiệm Vật lí THPT'};
+const assistantLibrary=libraryContext(experiments);
+const assistantContext=()=>active?{id:active.id,title:active.title,catalog:assistantLibrary,formula:active.formula,conditions:active.limit,configuration:{electricMode:active.id==='electric'?electricModes[config.mode]:undefined,capacitorMode:active.id==='capacitor'?config.capMode:undefined},parameters:active.params.map(p=>({key:p.key,label:p.label,value:state[p.key],unit:p.unit})),columns:active.headers,measurements:rows.slice(-12).map(r=>r.values)}:assistantLibrary;
 assistant=new LabAssistant({getContext:assistantContext});

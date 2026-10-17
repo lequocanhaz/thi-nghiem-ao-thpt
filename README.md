@@ -97,3 +97,9 @@ Theo phạm vi chủ website xác nhận, tính năng Gemini dành cho người 
 ### Sửa gửi câu hỏi trên iPhone · v23
 
 Đã thay việc giữ tham chiếu fetch gốc trên đối tượng chatbox bằng hàm gọi `globalThis.fetch(...)`, giữ đúng receiver Window mà WebKit yêu cầu. Trước bản sửa, kiểm tra mô phỏng yêu cầu receiver Window tái hiện lỗi trong ảnh người dùng và không gửi được yêu cầu; sau bản sửa kiểm tra này gửi và nhận câu trả lời thành công. Lỗi mạng được trình bày bằng tiếng Việt, câu hỏi vẫn được giữ. Chuỗi boot/app/assistant đổi sang v23 để tránh mã cũ trong bộ nhớ đệm. Đây là kiểm tra hồi quy bằng DOM/transport, chưa phải kiểm thử trực tiếp trên iPhone hoặc Safari thật.
+
+### Khả năng phục hồi kết nối · v24
+
+Backend thử lại tối đa hai lần với khoảng chờ tăng dần và một hạn chờ chung 50 giây, chỉ khi lỗi mạng hoặc Gemini trả 408/500/502/503/504. Không thử lại lỗi khóa, quyền, khu vực hoặc hết hạn mức; không chuyển nhà cung cấp hay bật thanh toán. Một câu hỏi chỉ tiêu thụ một lượt trong bộ đếm của web, nhưng mỗi lần gọi lại vẫn tính vào hạn mức phía Google. Nhật ký chỉ lưu loại lỗi, mã HTTP và số lần thử, không lưu câu hỏi, phản hồi hoặc khóa API.
+
+Ngữ cảnh trợ lý bổ sung tổng số thí nghiệm và thống kê lớp/chủ đề, được tính trực tiếp từ danh mục đang dùng. Bộ kiểm tra dùng tình huống 503 → 503 → 200, giới hạn lần thử, hủy trong lúc chờ và lỗi vĩnh viễn để xác minh hành vi; không đại diện cho kiểm tra trên iPhone thật.

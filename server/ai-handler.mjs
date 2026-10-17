@@ -72,7 +72,22 @@ async function geminiSetup(request,env,fetcher){
   return json(200,{saved:true,configured:false});
  }catch{return json(400,{error:'Chưa kiểm tra được khóa. Hãy thử lại; nội dung khóa không được lưu vào nhật ký.'});}
 }
-export function createAIHandler({fetcher=globalThis.fetch,quotaCheck}={}){
+function geminiError(status,payload){
+ // Match known provider errors without logging prompts, provider messages or credentials.
+ const message=String(payload?.error?.message||'').toLowerCase();
+ const category=/location.*not supported|region.*not supported|country.*not supported/.test(message)?'REGION_UNAVAILABLE':/reported as leaked/.test(message)?'KEY_REVOKED':/api key.*(invalid|expired|not valid)/.test(message)?'KEY_INVALID':/billing|paid plan|free tier/.test(message)?'BILLING_REQUIRED':status===429?'QUOTA_EXCEEDED':status===401||status===403?'ACCESS_DENIED':status===404?'MODEL_UNAVAILABLE':status>=500?'PROVIDER_UNAVAILABLE':'INVALID_REQUEST';
+ const errorStatus=String(payload?.error?.status||'');
+ return {category,status,providerStatus:['INVALID_ARGUMENT','FAILED_PRECONDITION','PERMISSION_DENIED','UNAUTHENTICATED','NOT_FOUND','RESOURCE_EXHAUSTED','INTERNAL','UNAVAILABLE','DEADLINE_EXCEEDED'].includes(errorStatus)?errorStatus:'OTHER'};
+}
+async function retryPause(ms,signal){
+ signal.throwIfAborted();
+ await new Promise((resolve,reject)=>{
+  const stop=()=>{clearTimeout(timer);signal.removeEventListener('abort',stop);reject(signal.reason);};
+  const timer=setTimeout(()=>{signal.removeEventListener('abort',stop);resolve();},ms);
+  signal.addEventListener('abort',stop,{once:true});
+ });
+}
+export function createAIHandler({fetcher=globalThis.fetch,quotaCheck,diagnostic=event=>console.error(JSON.stringify(event)),retryWait=retryPause}={}){
 let cachedKey;const localClients=new Map();
 return async function handle(request,env={}){
  if(new URL(request.url).pathname.startsWith('/setup/gemini'))return geminiSetup(request,env,fetcher);
@@ -104,9 +119,28 @@ return async function handle(request,env={}){
   const model=env.GEMINI_MODEL||'gemini-3.8-flash';
   if(!/^gemini-[a-zA-Z0-9._-]+$/.test(model))return json(503,{error:'Tên mô hình Gemini chưa hợp lệ.'});
   const upstream=geminiRequest(question,images,history,context,model);
-  const response=await fetcher('https://generativelanguage.googleapis.com/v1beta/models/'+upstream.model+':generateContent',{method:'POST',headers:{'x-goog-api-key':apiKey,'Content-Type':'application/json'},body:JSON.stringify(upstream.body),signal});
-  let payload;try{payload=await response.json();}catch{return json(502,{error:'Gemini trả về dữ liệu chưa hợp lệ. Hãy thử lại.'});}
-  if(!response.ok){const status=response.status;return json(status===429?429:502,{error:status===429?'Gemini đã đạt hạn mức hoặc đang bận. Hãy thử lại sau.':status===401||status===403?'Khóa Gemini chưa hợp lệ hoặc chưa được cấp quyền. Chủ website cần kiểm tra cấu hình máy chủ.':status===404?'Mô hình Gemini hiện không khả dụng. Chủ website cần kiểm tra tên mô hình.':'Gemini chưa trả lời được. Vui lòng thử lại.'});}
+  let payload;
+  // One shared deadline and at most two retries, only for temporary transport/provider failures.
+  for(let attempt=0;attempt<3;attempt++){
+   signal.throwIfAborted();
+   let response;
+   try{response=await fetcher('https://generativelanguage.googleapis.com/v1beta/models/'+upstream.model+':generateContent',{method:'POST',headers:{'x-goog-api-key':apiKey,'Content-Type':'application/json'},body:JSON.stringify(upstream.body),signal});}
+   catch(error){
+    if(signal.aborted||attempt===2)throw error;
+    diagnostic({event:'gemini_transport_retry',attempt:attempt+1});
+    await retryWait(1000*2**attempt+Math.floor(Math.random()*250),signal);continue;
+   }
+   try{payload=await response.json();}catch{payload=null;}
+   if(!response.ok){
+    const failure=geminiError(response.status,payload);
+    diagnostic({event:'gemini_upstream_error',attempt:attempt+1,...failure});
+    if([408,500,502,503,504].includes(response.status)&&attempt<2){await retryWait(1000*2**attempt+Math.floor(Math.random()*250),signal);continue;}
+    const messages={REGION_UNAVAILABLE:'Gemini đang từ chối khu vực máy chủ kết nối. Chủ website cần kiểm tra nơi triển khai dịch vụ.',KEY_REVOKED:'Khóa Gemini đã bị Google thu hồi. Chủ website cần thay khóa mới.',KEY_INVALID:'Khóa Gemini không còn hợp lệ. Chủ website cần kiểm tra cấu hình máy chủ.',BILLING_REQUIRED:'Google yêu cầu kiểm tra điều kiện hạn mức của dự án Gemini.',QUOTA_EXCEEDED:'Gemini đã đạt hạn mức hoặc đang bận. Hãy thử lại sau.',ACCESS_DENIED:'Khóa Gemini chưa hợp lệ hoặc chưa được cấp quyền. Chủ website cần kiểm tra cấu hình máy chủ.',MODEL_UNAVAILABLE:'Mô hình Gemini hiện không khả dụng. Chủ website cần kiểm tra tên mô hình.'};
+    return json(response.status===429?429:502,{error:messages[failure.category]||'Gemini chưa trả lời được. Vui lòng thử lại.'});
+   }
+   if(!payload)return json(502,{error:'Gemini trả về dữ liệu chưa hợp lệ. Hãy thử lại.'});
+   break;
+  }
   const candidate=payload.candidates?.[0];
   if(payload.promptFeedback?.blockReason||['SAFETY','RECITATION','BLOCKLIST','PROHIBITED_CONTENT','SPII'].includes(candidate?.finishReason))return json(422,{error:'Gemini chưa thể trả lời nội dung này. Hãy diễn đạt lại câu hỏi về thí nghiệm.'});
   if(candidate?.finishReason==='MAX_TOKENS')return json(502,{error:'Câu trả lời Gemini vượt độ dài cho phép. Hãy chia câu hỏi thành từng ý.'});
