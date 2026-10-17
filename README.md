@@ -75,3 +75,17 @@ Giới hạn: môi trường hiện tại không có phiên kiểm thử trình 
 Đã gỡ hoàn toàn lệnh nhập mô-đun AI cục bộ khỏi `dist/assistant.js`; không có tải trọng số khi mở chat hoặc gửi câu hỏi. Chỉ hai nút trong panel: Đóng và Gửi/Dừng. Hỗ trợ Enter để gửi, Shift+Enter xuống dòng, IME, câu hỏi theo từng bài, giữ bản nháp khi lỗi, không xóa nội dung mới đang gõ khi câu trả lời cũ đến.
 
 Kiểm tra DOM/transport của panel dùng phản hồi giả lập để kiểm tra giao thức; không phải bằng chứng AI thật hoạt động. Mọi câu trả lời trong sản phẩm chỉ được hiển thị sau khi backend trả về thành công. Không kết nối được backend thì thông báo và giữ câu hỏi. Việc không tải mô hình phía học sinh cần một máy chủ AI hoạt động và tài nguyên/chi phí tương ứng.
+
+## Gemini — kết nối phía máy chủ cho người dùng từ 18 tuổi
+
+`server/ai-handler.mjs` hỗ trợ Gemini bên cạnh OpenAI. Chatbox không tải mô hình về máy người dùng. Cấu hình trên **máy chủ**: `AI_PROVIDER=gemini`, `GEMINI_MODEL=gemini-3.8-flash`, và secret `GEMINI_API_KEY`. Có thể đổi `GEMINI_MODEL` sang một mô hình Gemini được tài khoản cấp quyền. Không tự đổi nhà cung cấp hoặc gọi API trả phí khác khi hết hạn mức.
+
+Tạo khóa trong Google AI Studio tại https://aistudio.google.com/api-keys rồi lưu bằng phần quản lý secret của môi trường chạy server. Tuyệt đối không chèn khóa vào `dist/`, `ai-config.js`, GitHub Pages, commit, ảnh chụp màn hình hoặc cuộc trò chuyện. Server cũng hỗ trợ `GEMINI_API_KEY_ENCRYPTED` với cơ chế RSA/D1 đang dùng nếu môi trường đã thiết lập cơ chế này. Chỉ cần một trong hai dạng khóa Gemini.
+
+Chạy server Node.js 24 với một tệp biến môi trường riêng, đã được gitignore, bằng `node --env-file=.env.local server/start.mjs`. Chỉ endpoint HTTPS `/api/chat` của server được đưa vào `dist/ai-config.js`. GitHub Pages không thực thi server; backend cần cho phép khách dự kiến truy cập và giữ CORS theo nguồn website. Backend Sites hiện vẫn riêng tư và endpoint frontend còn trống: **chưa có kết nối Gemini hoạt động trên website công khai**.
+
+Luồng Gemini gửi câu hỏi, lịch sử và ngữ cảnh của bài đang mở; API server giữ khả năng nhận ảnh đã được kiểm tra định dạng. Panel hiện tại vẫn chỉ nhập câu hỏi và gửi. Khóa chỉ đi trong header đến Google, không nằm trong URL. Câu trả lời bị chặn, rỗng, cắt dở, lỗi quyền truy cập hay hết hạn mức đều trả lỗi rõ ràng; không hiển thị câu trả lời mô phỏng thay thế.
+
+Theo phạm vi chủ website xác nhận, tính năng Gemini dành cho người từ 18 tuổi. Nếu đổi sang phục vụ người dưới 18 tuổi, phải xem lại nhà cung cấp và điều khoản. Hạn mức miễn phí phụ thuộc mô hình và tài khoản; không đồng nghĩa dùng không giới hạn. Dữ liệu ở gói miễn phí có thể được Google dùng để cải thiện dịch vụ; tránh gửi dữ liệu cá nhân, nhạy cảm. Tài liệu chính thức: https://ai.google.dev/gemini-api/terms, https://ai.google.dev/gemini-api/docs/pricing, https://ai.google.dev/gemini-api/docs/api-key.
+
+`npm run check:assistant` kiểm tra cả panel, luồng OpenAI hiện có và adapter Gemini. Gemini đã được kiểm tra bằng fixture cho định dạng yêu cầu/phản hồi, lịch sử, ảnh, thay khóa, lỗi hạn mức, khóa sai, mô hình không khả dụng, nội dung bị chặn, phản hồi rỗng/cắt dở, dữ liệu upstream sai và timeout. Chưa có khóa Gemini trong môi trường nên chưa kiểm thử suy luận Gemini thật hay chất lượng câu trả lời. Không thay đổi 300 thí nghiệm, mô hình, dữ liệu hoặc font trong đợt này.
