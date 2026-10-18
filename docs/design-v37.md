@@ -29,7 +29,7 @@ Trắng/đen là nền chính. Chữ tiêu đề lớn và đậm; màu phụ ch
 
 1. Nút toàn màn hình banner trước đây kế thừa padding ngang 19 px: khung 44 px chỉ còn 4 px cho ký tự. Đồng thời min-height 46 px làm khung không vuông. Đã dùng SVG và khung 44×44 không padding.
 2. Hai nút cuối bài tràn khi trình duyệt hiển thị scrollbar trên khung 320 px. Đã đổi flex tự giữ kích thước nội dung thành grid 2 cột minmax(0,1fr).
-3. Chữ lớn 115% làm nút chế độ, bộ lọc lớp và thanh điều hướng chật ở 320 px. Đã dùng các cột co giãn và padding phù hợp; nhãn chế độ được xuống hàng khi cần. Bộ chọn mô hình thử nhanh cũng được phép xuống dòng.
+3. Chữ lớn 115% làm nút chế độ, bộ lọc lớp và thanh điều hướng chật ở 320 px. Đã dùng các cột co giãn và padding phù hợp; nhãn chế độ được xuống hàng khi cần. Bộ chọn mô hình thử nhanh cũng được phép xuống dòng. Thẻ lớp ở khung rất hẹp xếp nhãn và số thành hai dòng cố định, căn từ trên để mô tả dài không làm lệch hàng.
 4. Phép đo innerWidth có thể bỏ sót 15 px dành cho scrollbar. QA dùng documentElement.clientWidth và so scrollWidth theo cùng hệ tọa độ.
 
 ## Verification workflow
