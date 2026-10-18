@@ -1,0 +1,7 @@
+{
+  "charts": 300,
+  "coordinateLabelSizeCases": 120,
+  "coordinateFontPixels": 16,
+  "gridUnits": "physical mappings preserved",
+  "scope": "Numeric/SVG/CPU geometry checks; no browser pixels or real device testing."
+}

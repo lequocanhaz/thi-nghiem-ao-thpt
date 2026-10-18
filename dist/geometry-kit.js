@@ -1,4 +1,4 @@
-import {modelLabel} from './model-label.js?v=30';
+import {modelLabel} from './model-label.js?v=31';
 import * as T from './vendor/three.module.min.js';
 export {T};
 export const C={blue:0x347be1,cyan:0x32a4c4,purple:0x8972df,orange:0xef9851,green:0x359c7e,metal:0x9cacbd,dark:0x35475d};

@@ -431,7 +431,7 @@ dialog .setting select { background:#f8fafd; color:var(--ink); font-size:.94rem;
 @font-face{font-family:'Product Sans';src:url('fonts/ProductSans-Bold-v17.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Product Sans';src:url('fonts/ProductSans-Italic-v17.otf') format('opentype');font-weight:400;font-style:italic;font-display:swap}
 @font-face{font-family:'Product Sans';src:url('fonts/ProductSans-BoldItalic-v17.otf') format('opentype');font-weight:700;font-style:italic;font-display:swap}
-:root{font-family:'Product Sans',Inter,'Segoe UI',sans-serif;font-synthesis:none}
+:root{font-family:Inter,'Segoe UI',sans-serif;font-synthesis:none}
 .main-banner{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(0,1.5fr);min-height:520px;margin:0 0 32px;border:1px solid #d6e0ec;border-radius:18px;overflow:hidden;background:#fff;position:relative}
 .banner-copy{padding:44px 0 40px 40px;position:relative;z-index:2;align-self:center}
 .banner-copy .eyebrow{font-size:.72rem;letter-spacing:.09em;color:#000}
@@ -522,7 +522,7 @@ dialog .setting select { background:#f8fafd; color:var(--ink); font-size:.94rem;
 .view-menu-options button { min-width:44px; }
 .source-page summary { min-height:44px; display:flex; align-items:center; }
 .source-page details a { font-size:.95rem; }
-#graph text,.residual-plot text { font-family:'Product Sans',Inter,sans-serif; }
+#graph text,.residual-plot text { font-family:Inter,sans-serif; }
 dialog { padding:0; width:min(720px,calc(100% - 32px)); max-width:calc(100% - 32px); max-height:calc(100dvh - 48px); overscroll-behavior:contain; }
 dialog .dialog-head { position:sticky; top:0; z-index:2; background:#fff; border-bottom:1px solid var(--line); padding:16px 24px; margin:0; }
 #dialogBody { padding:24px; }
@@ -636,4 +636,4 @@ dialog .dialog-head h2 { font-size:1.35rem; line-height:1.4; }
 .lab[data-layout=present] .speech-mini output { font-size:1rem; }
 
 /* Apply the provided Vietnamese font to all native form controls as well. */
-body,button,input,select,textarea{font-family:'Product Sans','Segoe UI',sans-serif;}
+body,button,input,select,textarea{font-family:Inter,'Segoe UI',sans-serif;}

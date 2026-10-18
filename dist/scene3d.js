@@ -1,14 +1,14 @@
-import {modelLabel} from './model-label.js?v=30';
-import {withCoordinates,coordinateProfile} from './coordinates.js?v=30';
-import {frameApparatus} from './camera-fit.js?v=28';
-import {buildAtlasModel} from './atlas-scenes.js?v=30';
+import {modelLabel,sizeModelLabels} from './model-label.js?v=31';
+import {withCoordinates,coordinateProfile} from './coordinates.js?v=31';
+import {frameApparatus} from './camera-fit.js?v=31';
+import {buildAtlasModel} from './atlas-scenes.js?v=31';
 import {atlasById} from './atlas-catalog.js?v=17';
-import {premiumOhm,upgradeModel,labCart} from './apparatus.js?v=30';
-import {roundedGeometry,flexibleTube,platform as studioPlatform} from './geometry-kit.js?v=30';
-import {addInteractionRig} from './interaction-rig.js?v=30';
+import {premiumOhm,upgradeModel,labCart} from './apparatus.js?v=31';
+import {roundedGeometry,flexibleTube,platform as studioPlatform} from './geometry-kit.js?v=31';
+import {addInteractionRig} from './interaction-rig.js?v=31';
 import * as THREE from './vendor/three.module.min.js';
 import {RoomEnvironment} from './vendor/RoomEnvironment.js';
-import {buildExtendedModel} from './extended-scenes.js?v=30';
+import {buildExtendedModel} from './extended-scenes.js?v=31';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {field3d,wave,oscillation} from './physics.js?v=17';
 
@@ -71,7 +71,7 @@ export class LabScene {
  }
  fitView(){if(this.model){frameApparatus(this.camera,this.controls,this.model.group);this.autoFrame=true;this.dirty=true;}}
  zoom(direction){this.autoFrame=false;this.dirty=true;if(this.camera.isOrthographicCamera){this.camera.zoom=THREE.MathUtils.clamp(this.camera.zoom*(direction==='in'?1.22:.82),.25,8);this.camera.updateProjectionMatrix();return;}const offset=this.camera.position.clone().sub(this.controls.target).multiplyScalar(direction==='in'?.82:1.22);offset.clampLength(this.controls.minDistance,this.controls.maxDistance);this.camera.position.copy(this.controls.target).add(offset);this.controls.update();}
- loop(now=0){if(this.disposed)return;if(!document.hidden&&this.visible!==false&&this.container?.isConnected&&this.container.clientWidth>0&&this.container.clientHeight>0&&now-(this.lastPaint??-Infinity)>=(this.frameDelay||32)){const moved=this.controls.update();if(moved||this.dirty||this.hero){try{this.renderer.render(this.scene,this.camera);this.lastPaint=now;this.dirty=false;}catch(error){this.container?.dispatchEvent(new CustomEvent('lab-render-error',{bubbles:true,detail:{message:String(error)}}));this.dirty=false;}}}if(!this.disposed)this.frame=requestAnimationFrame(this.loop);}
+ loop(now=0){if(this.disposed)return;if(!document.hidden&&this.visible!==false&&this.container?.isConnected&&this.container.clientWidth>0&&this.container.clientHeight>0&&now-(this.lastPaint??-Infinity)>=(this.frameDelay||32)){const moved=this.controls.update();if(moved||this.dirty||this.hero){try{sizeModelLabels(this.model?.group,this.camera,this.size?.h||480);this.renderer.render(this.scene,this.camera);this.lastPaint=now;this.dirty=false;}catch(error){this.container?.dispatchEvent(new CustomEvent('lab-render-error',{bubbles:true,detail:{message:String(error)}}));this.dirty=false;}}}if(!this.disposed)this.frame=requestAnimationFrame(this.loop);}
  setInteraction(enabled){const on=!!enabled;this.interaction=on;this.controls.enabled=on&&!this.drag;this.renderer.domElement.style.touchAction=on?'none':'pan-y';this.renderer.domElement.style.cursor=on?'grab':'auto';if(!on){const pointerId=this.drag?.pointerId;this.drag=null;if(pointerId!==undefined&&this.renderer.domElement.hasPointerCapture?.(pointerId))this.renderer.domElement.releasePointerCapture(pointerId);this.clearHighlight();this.onHover?.(null);}}
  clearHighlight(){if(this.hoverBox){this.scene.remove(this.hoverBox);this.hoverBox.geometry.dispose();this.hoverBox.material.dispose();this.hoverBox=null;}this.hoverObject=null;this.dirty=true;}
  highlight(object){if(this.hoverObject===object){this.hoverBox?.update();return;}this.clearHighlight();if(!object)return;this.hoverObject=object;this.hoverBox=new THREE.BoxHelper(object,0x3566b9);this.hoverBox.material.depthTest=false;this.hoverBox.material.transparent=true;this.hoverBox.material.opacity=.9;this.hoverBox.renderOrder=900;this.scene.add(this.hoverBox);this.dirty=true;}
