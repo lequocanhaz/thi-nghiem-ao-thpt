@@ -1,4 +1,4 @@
-import {T,V} from './geometry-kit.js?v=32';
+import {T,V} from './geometry-kit.js?v=33';
 
 // An artistic, non-metric introduction. No output from this scene is used as lab data.
 const TAU=Math.PI*2;

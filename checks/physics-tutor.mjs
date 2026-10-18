@@ -40,10 +40,10 @@ const blocked=createAIHandler({now,quotaCheck:async()=>false,fetcher:()=>{throw 
 // Existing UI remains simple; the real device zone travels outside the lab context.
 const {document}=parseHTML('<body><button id="openAssistant"></button></body>');let sent;
 const chat=new LabAssistant({document,endpoint:'https://fixture.example/api/chat',getContext:()=>({id:'lab'}),fetcher:async(url,options)=>{sent=JSON.parse(options.body);return Response.json({answer:'Kết quả mẫu'});}});
-chat.input.value='Mấy giờ rồi?';await chat.send();assert.equal(sent.timeZone,Intl.DateTimeFormat().resolvedOptions().timeZone);assert.equal(sent.context.id,'lab');assert.equal(chat.q('#aiTitle').textContent,'Trợ lý Vật lí');assert.equal(chat.root.querySelectorAll('button').length,2);
+chat.input.value='Mấy giờ rồi?';await chat.send();assert.equal(sent.timeZone,Intl.DateTimeFormat().resolvedOptions().timeZone);assert.equal(sent.context.id,'lab');assert.equal(chat.q('#aiTitle').textContent,'Trợ lý AI');assert.equal(chat.root.querySelectorAll('button').length,3);
 
 chat.fetcher=async()=>Response.json({answer:'**Kết quả:** I = 2 A; tốc độ $c$. Nguồn: https://www.bipm.org/en/measurement-units/si-defining-constants. **<img src=x onerror=alert(1)>** <script>alert(1)</script> javascript:alert(1)'});
 chat.input.value='Nêu kết quả và nguồn';await chat.send();
-assert.equal(chat.root.querySelectorAll('img,script').length,0);assert.ok(chat.root.querySelector('strong'));assert.equal(chat.root.querySelector('.ai-inline-math').textContent,'c');
+assert.equal(chat.root.querySelectorAll('.ai-message img,.ai-message script').length,0);assert.ok(chat.root.querySelector('strong'));assert.equal(chat.root.querySelector('.ai-inline-math').textContent,'c');
 const link=chat.root.querySelector('a');assert.equal(link.getAttribute('href'),'https://www.bipm.org/en/measurement-units/si-defining-constants');assert.equal(link.rel,'noopener noreferrer');assert.equal(chat.root.querySelectorAll('a').length,1);assert.match(chat.q('.ai-messages').textContent,/<script>/);
 console.log(`PASS tutor contract: ${cases.length} topic requests preserve question/history/lab state; broad scope, reviewed constants/references, no fabricated browsing/memory; 11 timezone/date/DST/fallback cases use server clock; quota and simple UI retained. Provider mocked: this does not validate model knowledge.`);

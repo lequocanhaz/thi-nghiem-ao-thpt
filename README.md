@@ -1,8 +1,18 @@
-# Vật lí Lab · 300 thí nghiệm
+# Quanh Lab · 300 thí nghiệm
 
 Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Chatbox dùng Gemini trên máy chủ: nhập câu hỏi rồi Gửi/Dừng, không tải mô hình AI hoặc yêu cầu WebGPU. Đã kiểm tra API công khai không cần đăng nhập ngày 17/10/2026; Gemini trả lời tiếng Việt và dùng đúng thông số bài đang mở.
 
 Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
+
+## Nhận diện và Trợ lý AI · v33
+
+Đổi tên thành **Quanh Lab**, dùng logo Q/quỹ đạo dạng SVG, wordmark chuyển thành đường nét vector (không phụ thuộc font trên máy), favicon và nhận diện chung cho header/footer/chat. Giao diện nền sáng có điểm nhấn xanh chàm và xanh lá nhạt; trang chủ chia banner video và khối chọn lớp trên desktop, xếp theo chiều dọc trên mobile. Thanh điều hướng, thẻ thí nghiệm, bộ lọc, số đo và bảng điều khiển dùng cùng hệ khoảng cách và hình khối. Nội dung nền sáng giữ chữ đen.
+
+Đã gỡ nút Xuất báo cáo, So sánh A/B, Quét biến và các menu/đặt lại Góc nhìn khỏi giao diện. Giữ chạy thí nghiệm, 2D/3D, trục/lưới, ghi điểm, đồ thị và sổ tay. Phiên có so sánh A/B cũ không tự hiển thị lại lớp so sánh.
+
+**Trợ lý AI** nhận tối đa hai ảnh mỗi lượt qua chọn ảnh, dán hoặc kéo thả. Ảnh được thu nhỏ/nén tại trình duyệt, có bản xem trước, xóa và xem lớn. Có thể chỉ gửi ảnh; câu hỏi tiếp theo mang theo ảnh gần đây trong giới hạn máy chủ. Lỗi/hủy gửi giữ ảnh và bản nháp; đổi thí nghiệm giữ chúng ở đúng bài. Ảnh chỉ được gửi khi nhấn Gửi và chỉ lưu trong bộ nhớ trang hiện tại. Backend Gemini đang dùng đã hỗ trợ ảnh nên v33 không thay cấu hình máy chủ hay khóa API.
+
+Kiểm tra `npm run check:images` bao phủ chuẩn bị ảnh, giới hạn, dọn object URL, gửi/giữ ảnh, chuyển bài khi bất đồng bộ, dán/kéo/chọn ảnh và gỡ công cụ ở cả 300 bài. `checks/vision-live-v33.json` ghi lần gửi PNG thật tới máy chủ, đọc đúng Q33 trên nền xanh. Kiểm tra này không thay thế thao tác bộ chọn ảnh, canvas hay chạm trên Safari thật.
 
 ## Xuất bản bằng GitHub Pages
 
