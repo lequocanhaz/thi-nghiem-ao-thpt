@@ -113,3 +113,15 @@ Trợ lý hỗ trợ câu hỏi Vật lí ngoài chương trình THPT và các c
 ## Giao diện và không gian khảo sát · v28
 
 Đã thêm giao diện sáng thống nhất cho nút, thẻ ảnh, bộ lọc và bàn thí nghiệm; giữ Product Sans, chỉ in đậm/viết hoa các tiêu đề chính. Cả 300 bài có nút hình chiếu 2D/3D giữ nguyên dữ liệu. Có 13 bài dùng trục có vạch chia vật lí và 62 bài dùng trục chỉ hướng, được chú giải riêng; đồ thị thêm trục qua 0 khi miền khảo sát chứa 0. Xem [thiết kế, nguồn và cách kiểm tra](docs/INTERFACE_V28.md).
+
+## Giao diện, chuyển cảnh và lưới · v31
+
+Giao diện chuyển sang font Inter Variable đóng gói sẵn, có tiếng Việt và các độ đậm thực. Tiêu đề, tên thí nghiệm, nhãn và số đo có phân cấp riêng; bỏ quy tắc ép tất cả về nét thường. Thư viện, bộ lọc, thẻ bài, thanh công cụ và tab được chỉnh lại khoảng cách, trạng thái chọn, viền và nút. Mở bài, chuyển tab và hộp thoại có hiệu ứng ngắn; tắt khi cài đặt chuyển động hoặc hệ điều hành yêu cầu giảm chuyển động.
+
+Đã bỏ các dòng trang trí “Mô hình · Dữ liệu · Bằng chứng”, “Thay đổi · Quan sát · Giải thích”, mã bài trong đầu bảng và các lời nhắc lặp trên banner, bảng thông số, đồ thị. Hướng dẫn thao tác, điều kiện mô hình, đơn vị và các chức năng học tập vẫn truy cập được.
+
+Cả 300 đồ thị có lưới chính–phụ, vạch chia theo bước số dễ đọc và nút **Lưới** riêng. Số trên trục đồ thị tăng lên 18 px, tên trục 19 px. Trục trong mô hình dùng chữ 16 px theo màn hình, thích ứng khi đổi camera, thu/phóng và thay kích thước; giảm mật độ nhãn khi thiếu chỗ và giữ chữ trong khung. Mô hình có ít nhất hai trục có thể bật/tắt lưới tọa độ. Lưới theo đúng phép đổi đơn vị của từng trục; lưới định hướng vẫn được chú thích là không dùng để đọc số đo. Trạng thái lưới được lưu theo bài và đi cùng phiên xuất/nhập.
+
+Tham khảo bố cục và thành phần: [Dribbble UI/UX](https://dribbble.com/tags/ui-ux-design), [Dribbble UI elements](https://dribbble.com/tags/ui-elements), [shadcn Tabs](https://ui.shadcn.com/docs/components/tabs), [Radix Segmented Control](https://www.radix-ui.com/themes/docs/components/segmented-control). Không đưa ảnh hoặc mã nguồn của các mẫu Dribbble vào sản phẩm.
+
+Kiểm tra: `npm run check`, gồm 300 tuyến DOM, bật/tắt và lưu/khôi phục lưới, đơn vị lưới mô hình, số trên 300 đồ thị, cỡ chữ qua các camera/zoom và 1.800 cấu hình CSS trên sáu độ rộng. Có đối chiếu hình chiếu CPU của mô hình sóng ở 360 và 1.200 px; đây không phải ảnh chụp trình duyệt. Môi trường hiện tại không có công cụ browser QA được hỗ trợ, nên chưa xác nhận pixel WebGL, thao tác cảm ứng thật hoặc Safari/iPhone.

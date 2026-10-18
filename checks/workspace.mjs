@@ -73,7 +73,7 @@ for(const width of [360,768,1440]){
  const pageNumbers=document.createElement('div');pageNumbers.className='page-numbers';document.querySelector('#pagination').append(pageNumbers);
  const pageJump=document.createElement('label');pageJump.className='page-jump';document.querySelector('#pagination').append(pageJump);
  assert.equal(property(pageNumbers,'display',width),width<=800?'none':'flex');assert.equal(property(pageJump,'display',width),width<=800?'flex':'none');
- assert.equal(property(document.querySelector('.banner-copy>p'),'display',width),'block');
+ assert.equal(document.querySelector('.banner-copy>p'),null,'Redundant banner instructions removed');
  assert.ok(document.querySelector('.entry-heading [data-action="progress"]'),'progress stays accessible after reducing banner text');
  for(const selector of ['.grade-filters button','.search-clear','.banner-model-links a'])assert.ok(parseFloat(property(document.querySelector(selector),'min-height',width))>=44,selector+' target at '+width);
  document.querySelector('main').innerHTML=labMarkup(ohm,{prefs,state:s,config:cfg,controls:'<div class="control-body"></div>',panel:'data',mode:'measure',experiments},()=>'<svg/>');
@@ -89,7 +89,7 @@ console.log('PASS relative time boundaries from femtoseconds to years and 1,275 
 for(const width of [360,768,1440]){
  document.querySelector('main').innerHTML=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all',pathFilter:null},()=>'<svg/>');
  assert.equal(document.querySelector('.banner-footer'),null);assert.equal(document.querySelector('.banner-copy .eyebrow'),null);assert.ok(!/NASA|Full HD|Phát video|Tạm dừng video/.test(document.querySelector('.main-banner').textContent));
- assert.equal(property(document.querySelector('.banner-copy>p'),'color',width),'#fff');assert.equal(property(document.querySelector('.banner-resume'),'color',width),'#fff');assert.equal(property(document.querySelector('.banner-topline'),'color',width),'#fff');
+ assert.equal(property(document.querySelector('.banner-resume'),'color',width),'#fff');assert.equal(property(document.querySelector('.banner-topline'),'color',width),'#fff');
  for(const className of ['parameter-note','analysis-caption','card-purpose','source-note']){const p=document.createElement('p');p.className=className;document.querySelector('main').append(p);const value=property(p,'color',width);assert.ok(value==='#000'||value==='var(--muted)',className+' black reading text');}
  assert.ok(parseFloat(property(document.querySelector('.banner-expand'),'min-height',width))>=44);
 }

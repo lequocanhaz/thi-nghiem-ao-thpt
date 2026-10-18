@@ -1,4 +1,4 @@
-import {T,V,C,mat,mesh,box,cylinder,line,label,setText} from './geometry-kit.js?v=30';
+import {T,V,C,mat,mesh,box,cylinder,line,label,setText} from './geometry-kit.js?v=31';
 import {experiments} from './experiments.js?v=17';
 import {coreParams,rigParameters,themeFor} from './learning.js?v=17';
 import {parameterText} from './workspace.js?v=17';
