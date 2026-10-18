@@ -1,0 +1,15 @@
+{
+  "catalogExperiments": 300,
+  "cssCascadeCases": 1800,
+  "widths": [
+    360,
+    390,
+    620,
+    768,
+    1024,
+    1440
+  ],
+  "transparentBlackLabels": true,
+  "keyboardViewport": true,
+  "note": "CSS cascade, DOM and CPU projection checks only; no browser rendering, touch hardware or iOS Safari device test."
+}

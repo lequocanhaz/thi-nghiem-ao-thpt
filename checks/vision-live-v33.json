@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-18T15:30:11.715717+00:00",
+  "endpoint": "https://vat-li-lab-assistant-api.itsqanh.chatgpt.site/api/chat",
+  "method": "Real Node fetch with the website Origin and a synthetic PNG; no browser/photo-picker test",
+  "status": 200,
+  "elapsedMs": 11517,
+  "expected": {
+    "text": "Q33",
+    "background": "blue"
+  },
+  "answer": "Các ký tự trong ảnh là Q33 và nền có màu xanh dương.",
+  "reviewedMatch": true,
+  "imageSHA256": "64c5c793c7b5760f74295adac9eb1e4f89f5ee4ae55e01f1e74fd981757f559b"
+}

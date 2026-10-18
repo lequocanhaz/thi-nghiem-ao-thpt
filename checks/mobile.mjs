@@ -72,4 +72,4 @@ const chat=new LabAssistant({document,viewport,endpoint:'https://example.invalid
 chat.input.value='Bản nháp được giữ';viewport.height=360;viewport.offsetTop=120;listeners.get('resize')();assert.equal(chat.root.style.getPropertyValue('--chat-height'),'344px');assert.equal(chat.root.style.getPropertyValue('--chat-top'),'128px');
 viewport.height=780;viewport.offsetTop=0;listeners.get('scroll')();assert.equal(chat.root.style.getPropertyValue('--chat-top'),'8px');assert.equal(chat.input.value,'Bản nháp được giữ');chat.close();assert.equal(chat.root.hidden,true);
 const report={catalogExperiments:experiments.length,cssCascadeCases:layouts,widths:[360,390,620,768,1024,1440],transparentBlackLabels:true,keyboardViewport:true,note:'CSS cascade, DOM and CPU projection checks only; no browser rendering, touch hardware or iOS Safari device test.'};
-fs.writeFileSync(new URL('./mobile-audit-v32.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify(report));
+fs.writeFileSync(new URL('./mobile-audit-v33.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify(report));

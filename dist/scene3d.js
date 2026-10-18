@@ -1,14 +1,14 @@
-import {modelLabel,sizeModelLabels} from './model-label.js?v=32';
-import {withCoordinates,coordinateProfile} from './coordinates.js?v=32';
-import {frameApparatus} from './camera-fit.js?v=32';
-import {buildAtlasModel} from './atlas-scenes.js?v=32';
+import {modelLabel,sizeModelLabels} from './model-label.js?v=33';
+import {withCoordinates,coordinateProfile} from './coordinates.js?v=33';
+import {frameApparatus} from './camera-fit.js?v=33';
+import {buildAtlasModel} from './atlas-scenes.js?v=33';
 import {atlasById} from './atlas-catalog.js?v=17';
-import {premiumOhm,upgradeModel,labCart} from './apparatus.js?v=32';
-import {roundedGeometry,flexibleTube,platform as studioPlatform} from './geometry-kit.js?v=32';
-import {addInteractionRig} from './interaction-rig.js?v=32';
+import {premiumOhm,upgradeModel,labCart} from './apparatus.js?v=33';
+import {roundedGeometry,flexibleTube,platform as studioPlatform} from './geometry-kit.js?v=33';
+import {addInteractionRig} from './interaction-rig.js?v=33';
 import * as THREE from './vendor/three.module.min.js';
 import {RoomEnvironment} from './vendor/RoomEnvironment.js';
-import {buildExtendedModel} from './extended-scenes.js?v=32';
+import {buildExtendedModel} from './extended-scenes.js?v=33';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {field3d,wave,oscillation} from './physics.js?v=17';
 

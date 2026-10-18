@@ -1,0 +1,16 @@
+{
+  "brand": "Quanh Lab",
+  "simplifiedLabs": 300,
+  "maxCurrentImages": 2,
+  "maxHistoryImages": 4,
+  "tests": [
+    "local JPEG preparation, bounds, aspect ratio, URL cleanup",
+    "image-only send and image follow-up",
+    "preview/remove, two-image limit",
+    "failure/cancel preservation",
+    "route-safe attachments and asynchronous preparation",
+    "real paste/drop/picker DOM events",
+    "300 routes without removed tools"
+  ],
+  "limits": "DOM and injected decoding/transport fixtures; not OS photo picker or real Safari canvas."
+}

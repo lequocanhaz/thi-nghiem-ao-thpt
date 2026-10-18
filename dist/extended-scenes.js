@@ -1,6 +1,6 @@
-import {labCart,cable} from './apparatus.js?v=32';
-import {buildDiscoveryModel} from './discovery-scenes.js?v=32';
-import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=32';
+import {labCart,cable} from './apparatus.js?v=33';
+import {buildDiscoveryModel} from './discovery-scenes.js?v=33';
+import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=33';
 import {rad,interferenceAt,evaluate} from './models.js?v=17';
 const circle=(r,n=100)=>Array.from({length:n+1},(_,i)=>V(r*Math.cos(i*2*Math.PI/n),.05,r*Math.sin(i*2*Math.PI/n)));
 function trolley(g,color,x=0){return labCart(g,color,x);}

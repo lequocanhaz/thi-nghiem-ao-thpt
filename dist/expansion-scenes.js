@@ -1,5 +1,5 @@
-import {T,V,C,mat,mesh,box,sphere,cylinder,line,arrow,label,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=32';
-import {labCart,cable,powerSupply,digitalMeter} from './apparatus.js?v=32';
+import {T,V,C,mat,mesh,box,sphere,cylinder,line,arrow,label,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=33';
+import {labCart,cable,powerSupply,digitalMeter} from './apparatus.js?v=33';
 const clip=(x,a,b)=>Math.max(a,Math.min(b,x)),r=x=>x*Math.PI/180,num=(x,f=0)=>Number.isFinite(x)?x:f;
 function vector(g,color=C.green){return arrow(g,V(),V(1,0,0),color,.5);}
 function set(a,p,x,y=0,z=0){const v=V(num(x),num(y),num(z)),n=v.length();a.position.copy(p);a.visible=n>1e-8;if(a.visible){a.setDirection(v.normalize());a.setLength(clip(n,.04,3),.13,.065);}}
