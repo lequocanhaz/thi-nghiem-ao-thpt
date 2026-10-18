@@ -750,6 +750,7 @@ dialog::backdrop{background:#0b162a70}
 .main-banner .banner-topline>span:last-child{display:none}
 .hero-stop{color:#3155d5}
 .banner-count{display:none}
+.banner-expand:hover,.ai-head button:hover{background:#303136;color:#fff;border-color:#ffffff90}
 .banner-expand svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .banner-actions svg,.banner-model-links svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .banner-resume:hover,.banner-model-links a:hover{text-decoration:underline;text-underline-offset:4px}
