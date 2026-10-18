@@ -768,7 +768,7 @@ dialog::backdrop{background:#0b162a70}
 .transport button,.transport .button,.transport .icon-button,.transport select{height:44px;min-height:44px;line-height:1.2}
 .transport #play{min-width:100px;background:#111214;border-color:#111214;color:#fff;font-weight:650;box-shadow:none}
 .transport [data-action=record]{background:#edf3ff;border-color:#c7d5fc;color:#000;font-weight:650;box-shadow:none}
-.workspace-toolbar button{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:44px;min-height:44px;padding:0 13px;line-height:1.2}
+.workspace-toolbar button{align-items:center;justify-content:center;gap:7px;height:44px;min-height:44px;padding:0 13px;line-height:1.2}
 .workspace-toolbar [aria-expanded=true],.workspace-toolbar [aria-pressed=true]{background:#f3f5fa;border-color:#c5cad6;color:#000;font-weight:650}
 .stage-tools>button,.stage-tools .icon-button,.projection-switch button,.mode-switch button{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:44px;min-height:44px;line-height:1;padding:0 12px;border-radius:7px;font-weight:550}
 .stage-tools .icon-button{width:44px;min-width:44px;padding:0}

@@ -51,8 +51,9 @@ for(const width of [360,768,1024,1440]){
  const v={width,height:800,coarse:width<1100};
  document.querySelector('#main').innerHTML=labMarkup(experiments[0],{prefs,state:initialState(experiments[0]),config,controls:control,panel:'data',mode:'explore',staticMode:false,experiments},()=> '');
  const lab=document.querySelector('.lab'),controls=document.querySelector('.controls');
+ for(const selector of ['.exit-present','.present-narration'])assert.equal(style(document.querySelector(selector),'display',v),'none','Presentation actions stay hidden in explore mode at '+width);
  lab.setAttribute('data-controls-collapsed','true');assert.equal(style(controls,'display',v),'none');lab.removeAttribute('data-controls-collapsed');
- lab.setAttribute('data-layout','present');assert.equal(style(controls,'display',v),'none');assert.equal(style(document.querySelector('.direct-tools'),'display',v),'none');
+ lab.setAttribute('data-layout','present');for(const selector of ['.exit-present','.present-narration'])assert.equal(style(document.querySelector(selector),'display',v),'inline-flex','Presentation actions appear in presentation mode at '+width);assert.equal(style(controls,'display',v),'none');assert.equal(style(document.querySelector('.direct-tools'),'display',v),'none');
  lab.setAttribute('data-layout','measure');assert.equal(style(controls,'display',v),'flex');assert.ok(style(document.querySelector('.workspace'),'grid-template-columns',v).includes('minmax(0,1fr)'));
  if(width<=1100){assert.equal(style(controls,'position',v),'relative');assert.equal(style(document.querySelector('.controls-resizer'),'display',v),'none');}
  const visual=document.querySelector('.visual');assert.equal(style(visual,'min-width',v),'0');
