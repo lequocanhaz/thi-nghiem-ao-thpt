@@ -1,0 +1,12 @@
+{
+  "font": "Manrope",
+  "weights": [
+    200,
+    800
+  ],
+  "vietnameseGlyphsChecked": 146,
+  "fontSHA256": "7dcfe3d89842c01fec8d372ec2a84b2bce4fc4feb4725f00a754bb737ae7a100",
+  "logoSourceSHA256": "67f3076b17ccbd5ce35ebc297c5c044b2917ca0285cd11af1ab3e23a63b4011b",
+  "source": "https://github.com/google/fonts/tree/main/ofl/manrope",
+  "note": "Glyph/file verification only; uses typography comparable to the supplied MatterMore screenshot, not its proprietary FT Sterling font."
+}

@@ -4,7 +4,7 @@ import CSSOM from 'cssom';
 import {parse as parseSelector} from 'css-what';
 import {parseHTML} from 'linkedom';
 import {experiments,initialState} from '../dist/experiments.js';
-import {labMarkup,homeMarkup} from '../dist/views.js';
+import {labMarkup,homeMarkup,cardsMarkup} from '../dist/views.js';
 import {modelLabel} from '../dist/model-label.js';
 import {withCoordinates} from '../dist/coordinates.js';
 import {projectScene,drawProjection} from '../dist/software-scene.js';
@@ -31,7 +31,8 @@ for(const width of [320,360,390,620,768,1024,1440]){
  document.querySelector('#main').innerHTML=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all'},()=> '');
  assert.equal(style(document.querySelector('.header'),'height',v),'auto','Header must accommodate wrapped navigation at '+width);
  assert.equal(style(document.querySelector('.banner-copy'),'width',v),'auto','No 100%-width banner offset overflowing at '+width);
- assert.equal(style(document.body,'font-family',v),"Inter,'Segoe UI',sans-serif");assert.equal(style(document.querySelector('#bannerTitle'),'font-weight',v),'750');assert.equal(style(document.querySelector('#libraryTitle'),'font-weight',v),'750');
+ assert.equal(style(document.body,'font-family',v),"'Manrope','Segoe UI',sans-serif");assert.equal(style(document.querySelector('#bannerTitle'),'font-weight',v),'500');assert.equal(style(document.querySelector('#libraryTitle'),'font-weight',v),'500');
+ document.querySelector('#cards').innerHTML=cardsMarkup(experiments.slice(0,1),prefs,()=> '');assert.equal(style(document.querySelector('.card-image'),'background',v),'#fff','White preview at '+width);assert.equal(style(document.querySelector('.card-body h3'),'font-weight',v),'750','Experiment name stays bold');assert.equal(style(document.querySelector('.preview-button'),'min-height',v),'44px');
  const strong=document.createElement('strong');document.body.append(strong);assert.equal(style(strong,'font-weight',v),'700');strong.remove();
  if(width<=1100)assert.equal(style(document.querySelector('.header'),'position',v),'relative','Header must not obscure mobile model');
  for(const e of experiments){
@@ -72,4 +73,4 @@ const chat=new LabAssistant({document,viewport,endpoint:'https://example.invalid
 chat.input.value='Bản nháp được giữ';viewport.height=360;viewport.offsetTop=120;listeners.get('resize')();assert.equal(chat.root.style.getPropertyValue('--chat-height'),'344px');assert.equal(chat.root.style.getPropertyValue('--chat-top'),'128px');
 viewport.height=780;viewport.offsetTop=0;listeners.get('scroll')();assert.equal(chat.root.style.getPropertyValue('--chat-top'),'8px');assert.equal(chat.input.value,'Bản nháp được giữ');chat.close();assert.equal(chat.root.hidden,true);
 const report={catalogExperiments:experiments.length,cssCascadeCases:layouts,widths:[320,360,390,620,768,1024,1440],transparentBlackLabels:true,keyboardViewport:true,note:'CSS cascade, DOM and CPU projection checks only; no browser rendering, touch hardware or iOS Safari device test.'};
-fs.writeFileSync(new URL('./mobile-audit-v34.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify(report));
+fs.writeFileSync(new URL('./mobile-audit-v35.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify(report));
