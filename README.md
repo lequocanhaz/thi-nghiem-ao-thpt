@@ -1,5 +1,12 @@
 # Quanh Lab · 300 thí nghiệm
 
+## v36 — chữ đậm lớn và giao diện tươi sáng
+
+- Nhận diện QUANH LAB dùng chữ Manrope ExtraBold 800 bên cạnh biểu tượng Q người dùng đã chọn. Tiêu đề, tên thí nghiệm và số đo có trọng lượng rõ; nội dung đọc giữ cỡ và độ đậm vừa phải.
+- Màu xanh cobalt cho thao tác chính, vàng chanh cho ghi số liệu và điểm nhấn, cam san hô cho khối lớp 12. Banner video được phối lại với nền xanh, chữ lớn và huy hiệu số lượng bài.
+- Nút có màu bão hòa, viền và trạng thái hover/nhấn; thẻ thí nghiệm vẫn nền trắng với tag chủ đề rõ màu. Bố cục chọn lớp và hàng nút xuống dòng trên khung hẹp.
+- Kiểm tra tự động: cascade CSS ở 320–1440 px, chạy/ghi số liệu/đổi trang trên 300 bài và luồng ảnh Trợ lý AI. Không thay mô-đun tính toán hoặc tài nguyên âm thanh. Thử nghiệm trên thiết bị cảm ứng thật vẫn cần thực hiện riêng.
+
 ## v35 — nhận diện và thẻ thí nghiệm theo mẫu
 
 - Thay logo Q/quỹ đạo bằng đúng hình Q–sóng–máy bay giấy người dùng cung cấp, giữ nguyên byte ảnh trong SVG có khung hiển thị gọn; wordmark Manrope.

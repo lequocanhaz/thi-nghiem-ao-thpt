@@ -1,4 +1,4 @@
-import {coordinateProfile,hasCoordinateGrid} from './coordinates.js?v=35';
+import {coordinateProfile,hasCoordinateGrid} from './coordinates.js?v=36';
 import {themeFor,paths,coreParams,usableParams} from './learning.js?v=17';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function homeMarkup(experiments,prefs,{search,grade,topic,filter,pathFilter},icon){
@@ -10,6 +10,7 @@ export function homeMarkup(experiments,prefs,{search,grade,topic,filter,pathFilt
  <section class="main-banner orbital-banner cinematic-banner" aria-labelledby="bannerTitle">
   <div class="banner-art"><img class="cinematic-poster" src="video/black-hole.webp" width="1920" height="1080" alt="" aria-hidden="true" fetchpriority="high"><div id="bannerCanvas" class="banner-viewport"><span class="banner-loading" role="status">Đang mở không gian…</span></div></div>
   <div class="banner-topline"><span>PHÒNG THÍ NGHIỆM VẬT LÍ</span><span>LỚP 10 — 12</span></div>
+  <div class="banner-count" aria-label="300 thí nghiệm"><strong>300</strong><span>THÍ NGHIỆM</span></div>
   <div class="banner-copy"><h1 tabindex="-1" id="bannerTitle" class="primary-heading">Thí nghiệm<br><em>Vật lí.</em></h1><div class="banner-actions"><a class="button primary" href="#library">Chọn thí nghiệm <span aria-hidden="true">↗</span></a><a class="banner-resume" href="#lab/${resume.id}">${recent?'Tiếp tục bài gần nhất':'Bắt đầu với chuyển động'} <span aria-hidden="true">→</span></a></div></div>
   <button data-action="banner-fullscreen" class="banner-expand" aria-label="Xem banner toàn màn hình" title="Toàn màn hình">⛶</button>
  </section>
