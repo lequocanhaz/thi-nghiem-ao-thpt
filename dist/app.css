@@ -478,6 +478,7 @@ dialog::backdrop{background:#0b162a70}
 .home>.entry-grid{grid-column:2;grid-row:1}
 .home>.banner-model-links{grid-column:1/-1;grid-row:2}
 .home>#library,.home>.library-extra{grid-column:1/-1}
+.home>#library{scroll-margin-top:24px}
 .main-banner .banner-copy em{display:inline-block;font-style:normal;color:#000}
 .main-banner .button.primary{background:#111214;border:1px solid #111214;color:#fff;box-shadow:none;padding:0 18px;font-weight:650;border-radius:8px;font-size:.875rem;min-height:50px;height:50px}
 .banner-topline>span:first-child{padding:0;border:0;border-radius:0;background:transparent}
