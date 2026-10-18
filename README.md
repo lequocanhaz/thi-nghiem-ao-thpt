@@ -1,5 +1,13 @@
 # Quanh Lab · 300 thí nghiệm
 
+## v35 — nhận diện và thẻ thí nghiệm theo mẫu
+
+- Thay logo Q/quỹ đạo bằng đúng hình Q–sóng–máy bay giấy người dùng cung cấp, giữ nguyên byte ảnh trong SVG có khung hiển thị gọn; wordmark Manrope.
+- Font Manrope lưu cục bộ, kiểm tra 146 ký tự Việt hoa/thường và kèm giấy phép OFL. Nội dung 400, nút/tiêu đề trang 500, tên thí nghiệm 750, số đo/từ nhấn mạnh 700.
+- Thẻ: nền hình trắng, tag màu chủ đề, tên viết hoa, bỏ dòng phân loại cách chạy. Tách rõ Mở thí nghiệm/Xem trước; bố cục flex căn hàng nút, vùng bấm 44 px, điều hướng điện thoại dùng grid.
+- Thumbnail tăng từ 380×250 lên 640×400; nền trắng ở cả WebGL và đồ họa nhẹ. Các số liệu, công thức và luồng chạy/ghi được giữ nguyên.
+
+
 ## v34 — đồ thị trên điện thoại và ngữ cảnh Trợ lý AI
 
 - Đồ thị vẽ theo chiều rộng/cao thực tế, cập nhật khi đổi kích thước hoặc mở lại bảng; nhãn dài xuống dòng, trục tung chuyển lên phía trên ở khung hẹp. Giữ nguyên miền số liệu, công thức và thao tác chọn điểm.

@@ -15,10 +15,10 @@ export function modelLabel(group,text,position,options={}){
   const next=String(value??'');if(sprite.userData.text===next)return;
   sprite.userData.text=next;
   ctx.clearRect(0,0,width,height);ctx.fillStyle='#000000';
-  ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`${fontWeight} ${fontSize}px "Inter", Arial`;
+  ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=`${fontWeight} ${fontSize}px "Manrope", Arial`;
   const measured=ctx.measureText?.(next)?.width||0;
   sprite.userData.labelTextWidth=Math.min(measured,width-24);
-  if(measured>width-24)ctx.font=`${fontWeight} ${Math.max(14,Math.floor(fontSize*(width-24)/measured))}px "Inter", Arial`;
+  if(measured>width-24)ctx.font=`${fontWeight} ${Math.max(14,Math.floor(fontSize*(width-24)/measured))}px "Manrope", Arial`;
   ctx.fillText(next,width/2,height/2,width-16);texture.needsUpdate=true;
  };
  sprite.userData.setText(text);group?.add(sprite);return sprite;
