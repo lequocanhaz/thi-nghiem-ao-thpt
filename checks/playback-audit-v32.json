@@ -1,0 +1,1810 @@
+{
+  "total": 300,
+  "selectableControls": 631,
+  "controlledProcesses": 221,
+  "timeOrEmission": 79,
+  "changedApparatus": 300,
+  "scope": "Real model geometry/material changes, finite evaluation, replay/loop/serialization. No browser or device pixels.",
+  "results": [
+    {
+      "id": "energy",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "oscillation",
+      "kind": "time-or-emission",
+      "visibleFrames": 6,
+      "changedOutputs": true
+    },
+    {
+      "id": "wave",
+      "kind": "time-or-emission",
+      "visibleFrames": 6,
+      "changedOutputs": true
+    },
+    {
+      "id": "electric",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "ohm",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": false
+    },
+    {
+      "id": "capacitor",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "boyle",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": false
+    },
+    {
+      "id": "gas",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": false
+    },
+    {
+      "id": "uniform",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "acceleration",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "horizontal",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "projectile",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "newton",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "incline",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "collision",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "circular",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "lever",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "hooke",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "pendulum",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "damped",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "resonance",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "interference",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "standing",
+      "kind": "time-or-emission",
+      "visibleFrames": 5,
+      "changedOutputs": true
+    },
+    {
+      "id": "sound",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "series",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": false
+    },
+    {
+      "id": "parallel",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": false
+    },
+    {
+      "id": "joule",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "magnetic",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "induction",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "decay",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "freefall",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "friction",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "work",
+      "kind": "controlled-process",
+      "visibleFrames": 22,
+      "changedOutputs": true
+    },
+    {
+      "id": "impulse",
+      "kind": "time-or-emission",
+      "visibleFrames": 4,
+      "changedOutputs": true
+    },
+    {
+      "id": "buoyancy",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "pressure",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "reflection",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "refraction",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "tir",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "lens",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "mirror",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "prism",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "young",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "diffraction",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "polarization",
+      "kind": "time-or-emission",
+      "visibleFrames": 4,
+      "changedOutputs": true
+    },
+    {
+      "id": "thermalexpansion",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "calorimetry",
+      "kind": "controlled-process",
+      "visibleFrames": 29,
+      "changedOutputs": true
+    },
+    {
+      "id": "phasechange",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "heattransfer",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "isobaric",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "isochoric",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "firstlaw",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "kinetic",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "resistivity",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "internalresistance",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "bridge",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "solenoid",
+      "kind": "controlled-process",
+      "visibleFrames": 5,
+      "changedOutputs": true
+    },
+    {
+      "id": "lorentz",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "transformer",
+      "kind": "time-or-emission",
+      "visibleFrames": 6,
+      "changedOutputs": true
+    },
+    {
+      "id": "ac",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "vector_sum",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "vector_components",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "relative_motion",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "average_speed",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "braking",
+      "kind": "time-or-emission",
+      "visibleFrames": 4,
+      "changedOutputs": true
+    },
+    {
+      "id": "drag_fall",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "atwood",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "pulley",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "elevator",
+      "kind": "controlled-process",
+      "visibleFrames": 20,
+      "changedOutputs": true
+    },
+    {
+      "id": "banked_turn",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "vertical_circle",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "gravitational_force",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "orbit",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "escape_speed",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "kepler",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "torque_angle",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "rotational_inertia",
+      "kind": "controlled-process",
+      "visibleFrames": 26,
+      "changedOutputs": true
+    },
+    {
+      "id": "angular_accel",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "rolling",
+      "kind": "controlled-process",
+      "visibleFrames": 27,
+      "changedOutputs": true
+    },
+    {
+      "id": "spring_energy",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "elastic_modulus",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "hydraulic_press",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "communicating",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "torricelli",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "spring_period",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "oscillator_energy",
+      "kind": "time-or-emission",
+      "visibleFrames": 8,
+      "changedOutputs": true
+    },
+    {
+      "id": "phase_difference",
+      "kind": "time-or-emission",
+      "visibleFrames": 5,
+      "changedOutputs": true
+    },
+    {
+      "id": "beat",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "doppler_source",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "doppler_observer",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "string_speed",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "string_resonance",
+      "kind": "controlled-process",
+      "visibleFrames": 11,
+      "changedOutputs": true
+    },
+    {
+      "id": "open_pipe",
+      "kind": "controlled-process",
+      "visibleFrames": 11,
+      "changedOutputs": true
+    },
+    {
+      "id": "closed_pipe",
+      "kind": "controlled-process",
+      "visibleFrames": 14,
+      "changedOutputs": true
+    },
+    {
+      "id": "sound_level",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "intensity_distance",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "standing_phase",
+      "kind": "time-or-emission",
+      "visibleFrames": 6,
+      "changedOutputs": true
+    },
+    {
+      "id": "reflection_wave",
+      "kind": "time-or-emission",
+      "visibleFrames": 7,
+      "changedOutputs": true
+    },
+    {
+      "id": "wave_packet",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "spring_parallel",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "spring_series",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "resonance_power",
+      "kind": "controlled-process",
+      "visibleFrames": 8,
+      "changedOutputs": true
+    },
+    {
+      "id": "ray_slab",
+      "kind": "controlled-process",
+      "visibleFrames": 18,
+      "changedOutputs": true
+    },
+    {
+      "id": "apparent_depth",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "lens_power",
+      "kind": "controlled-process",
+      "visibleFrames": 23,
+      "changedOutputs": true
+    },
+    {
+      "id": "lenses_contact",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "magnifier",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "telescope",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "microscope",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "grating",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "resolving_power",
+      "kind": "controlled-process",
+      "visibleFrames": 26,
+      "changedOutputs": true
+    },
+    {
+      "id": "brewster",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "inverse_square_light",
+      "kind": "controlled-process",
+      "visibleFrames": 14,
+      "changedOutputs": true
+    },
+    {
+      "id": "mirror_rotation",
+      "kind": "controlled-process",
+      "visibleFrames": 5,
+      "changedOutputs": true
+    },
+    {
+      "id": "pinhole",
+      "kind": "controlled-process",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "fiber_acceptance",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "uniform_field",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "potential_point",
+      "kind": "controlled-process",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "potential_pair",
+      "kind": "controlled-process",
+      "visibleFrames": 31,
+      "changedOutputs": true
+    },
+    {
+      "id": "dipole_torque",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "capacitor_plate",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "dielectric",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "capacitor_series",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "capacitor_parallel",
+      "kind": "controlled-process",
+      "visibleFrames": 23,
+      "changedOutputs": true
+    },
+    {
+      "id": "capacitor_force",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "charge_quantization",
+      "kind": "controlled-process",
+      "visibleFrames": 11,
+      "changedOutputs": true
+    },
+    {
+      "id": "drift",
+      "kind": "controlled-process",
+      "visibleFrames": 17,
+      "changedOutputs": true
+    },
+    {
+      "id": "wire_stretch",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "potentiometer",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "voltage_divider",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "kirchhoff_loop",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "diode_model",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "meter_loading",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "max_power",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "battery_series",
+      "kind": "controlled-process",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "battery_parallel",
+      "kind": "controlled-process",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "wire_field",
+      "kind": "controlled-process",
+      "visibleFrames": 14,
+      "changedOutputs": true
+    },
+    {
+      "id": "wire_pair",
+      "kind": "controlled-process",
+      "visibleFrames": 14,
+      "changedOutputs": true
+    },
+    {
+      "id": "ampere_loop",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "flux_angle",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "inductor_energy",
+      "kind": "controlled-process",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "rl_response",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "lc_oscillator",
+      "kind": "time-or-emission",
+      "visibleFrames": 6,
+      "changedOutputs": true
+    },
+    {
+      "id": "rlc_resonance",
+      "kind": "controlled-process",
+      "visibleFrames": 16,
+      "changedOutputs": true
+    },
+    {
+      "id": "newton_cooling",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "carnot",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "adiabatic",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "photoelectric",
+      "kind": "controlled-process",
+      "visibleFrames": 25,
+      "changedOutputs": true
+    },
+    {
+      "id": "debroglie",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "binding_energy",
+      "kind": "controlled-process",
+      "visibleFrames": 23,
+      "changedOutputs": true
+    },
+    {
+      "id": "table_hanging",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "contact_carts",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "accelerating_pendulum",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "double_incline",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "free_wedge",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "ladder_balance",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "beam_supports",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "three_strings",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "slide_tip",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "metacentric",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "collision_2d",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "ballistic_pendulum",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "newton_cradle",
+      "kind": "controlled-process",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "moving_wall",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "collision_spring",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "yoyo_drop",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "rolling_race",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "angular_momentum",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "atwood_inertia",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "gyroscope",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "rotating_planet",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "elliptic_orbit",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "binary_orbit",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "hohmann",
+      "kind": "controlled-process",
+      "visibleFrames": 17,
+      "changedOutputs": true
+    },
+    {
+      "id": "tidal_gradient",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "venturi",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "siphon",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "poiseuille",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "stokes_settling",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "capillary_rise",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "coupled_pendulums",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "large_pendulum",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "physical_pendulum",
+      "kind": "controlled-process",
+      "visibleFrames": 23,
+      "changedOutputs": true
+    },
+    {
+      "id": "torsion_pendulum",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "u_tube_oscillation",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "vibration_absorber",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "base_isolation",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "parametric_oscillation",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "duffing",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "van_der_pol",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "string_boundary",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "bead_scattering",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "water_refraction",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "string_power",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "dispersive_packet",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "helmholtz",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "harmonic_timbre",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "room_reverberation",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "sound_tdoa",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "mach_cone",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "charged_ring",
+      "kind": "controlled-process",
+      "visibleFrames": 24,
+      "changedOutputs": true
+    },
+    {
+      "id": "charged_rod",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "charged_disk",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "charged_solid_sphere",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "charged_plane",
+      "kind": "controlled-process",
+      "visibleFrames": 21,
+      "changedOutputs": true
+    },
+    {
+      "id": "electric_turning",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "equipotential_map",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "three_charge_energy",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "electric_work_paths",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "connected_spheres",
+      "kind": "controlled-process",
+      "visibleFrames": 16,
+      "changedOutputs": true
+    },
+    {
+      "id": "conducting_shell",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "coaxial_capacitor",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "spherical_capacitor",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "isolated_dielectric",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "layered_dielectric",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "two_meshes",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "star_delta",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "resistor_ladder",
+      "kind": "controlled-process",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "unbalanced_bridge",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "thevenin_norton",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "ammeter_shunt",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "voltmeter_design",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "emf_compensation",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "rc_meter_loading",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "kelvin_four_wire",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "two_stage_rc",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "charge_sharing",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "rlc_free",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "rc_square",
+      "kind": "time-or-emission",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "flyback_diode",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "half_rectifier",
+      "kind": "time-or-emission",
+      "visibleFrames": 7,
+      "changedOutputs": true
+    },
+    {
+      "id": "bridge_rectifier",
+      "kind": "time-or-emission",
+      "visibleFrames": 7,
+      "changedOutputs": true
+    },
+    {
+      "id": "rectifier_filter",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "zener_regulator",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "diode_clipper",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "rc_lowpass",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "rc_highpass",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "rlc_bandwidth",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "ac_capacitance_bridge",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "power_factor",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "loop_axis",
+      "kind": "controlled-process",
+      "visibleFrames": 17,
+      "changedOutputs": true
+    },
+    {
+      "id": "helmholtz_coils",
+      "kind": "controlled-process",
+      "visibleFrames": 25,
+      "changedOutputs": true
+    },
+    {
+      "id": "finite_solenoid",
+      "kind": "controlled-process",
+      "visibleFrames": 13,
+      "changedOutputs": true
+    },
+    {
+      "id": "toroid",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "compass_coil",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "velocity_selector",
+      "kind": "controlled-process",
+      "visibleFrames": 8,
+      "changedOutputs": true
+    },
+    {
+      "id": "mass_spectrometer",
+      "kind": "controlled-process",
+      "visibleFrames": 19,
+      "changedOutputs": true
+    },
+    {
+      "id": "cyclotron",
+      "kind": "controlled-process",
+      "visibleFrames": 24,
+      "changedOutputs": true
+    },
+    {
+      "id": "magnetic_helix",
+      "kind": "controlled-process",
+      "visibleFrames": 18,
+      "changedOutputs": true
+    },
+    {
+      "id": "hall_voltage",
+      "kind": "controlled-process",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "sliding_rod",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "magnetic_braking",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "coil_entering_field",
+      "kind": "time-or-emission",
+      "visibleFrames": 8,
+      "changedOutputs": true
+    },
+    {
+      "id": "mutual_induction",
+      "kind": "time-or-emission",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "faraday_disk",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "em_plane_wave",
+      "kind": "controlled-process",
+      "visibleFrames": 22,
+      "changedOutputs": true
+    },
+    {
+      "id": "poynting_energy",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "radiation_pressure",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "transmission_reflection",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "skin_depth",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "separated_lenses",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "camera_defocus",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "eye_correction",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "spherical_aberration",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "chromatic_lens",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "thin_film",
+      "kind": "controlled-process",
+      "visibleFrames": 20,
+      "changedOutputs": true
+    },
+    {
+      "id": "newton_rings",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "michelson",
+      "kind": "controlled-process",
+      "visibleFrames": 32,
+      "changedOutputs": true
+    },
+    {
+      "id": "fabry_perot",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "fringe_visibility",
+      "kind": "controlled-process",
+      "visibleFrames": 19,
+      "changedOutputs": true
+    },
+    {
+      "id": "airy_pattern",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "finite_double_slit",
+      "kind": "controlled-process",
+      "visibleFrames": 17,
+      "changedOutputs": true
+    },
+    {
+      "id": "grating_resolution",
+      "kind": "controlled-process",
+      "visibleFrames": 21,
+      "changedOutputs": true
+    },
+    {
+      "id": "wave_plate",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "photoelasticity",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "convection_radiation",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "radiative_balance",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "layered_wall",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "transient_heat_bar",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "seebeck",
+      "kind": "controlled-process",
+      "visibleFrames": 18,
+      "changedOutputs": true
+    },
+    {
+      "id": "otto_cycle",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "diesel_cycle",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "stirling_regenerator",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "refrigerator",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "brayton_cycle",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "maxwell_distribution",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "two_level_boltzmann",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "brownian_motion",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "vapor_pressure",
+      "kind": "controlled-process",
+      "visibleFrames": 17,
+      "changedOutputs": true
+    },
+    {
+      "id": "van_der_waals",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "hydrogen_lines",
+      "kind": "controlled-process",
+      "visibleFrames": 2,
+      "changedOutputs": true
+    },
+    {
+      "id": "franck_hertz",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "compton_scattering",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "electron_bragg",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "quantum_box",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "decay_chain",
+      "kind": "time-or-emission",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    },
+    {
+      "id": "alpha_recoil",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "reaction_threshold",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "gamma_attenuation",
+      "kind": "controlled-process",
+      "visibleFrames": 33,
+      "changedOutputs": true
+    },
+    {
+      "id": "poisson_counting",
+      "kind": "controlled-process",
+      "visibleFrames": 9,
+      "changedOutputs": true
+    }
+  ]
+}

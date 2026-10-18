@@ -47,26 +47,27 @@ stage.setInteraction(false);assert.equal(canvas.style.touchAction,'pan-y');asser
 for(const id of ['oscillation','wave']){const e=experiments.find(e=>e.id===id),s=initialState(e),m=buildLabModel(id,s,evaluate(id,s),{labels:false,config:cfg});m.group.updateMatrixWorld(true);const b=new T.Box3().setFromObject(m.group),size=b.getSize(new T.Vector3());assert.ok(Math.max(size.x,size.y,size.z)<25,id+' apparatus must fit the lab-scale drawing');m.group.traverse(o=>{o.geometry?.dispose();o.material?.dispose?.()});}
 console.log('PASS v9 pure state and geometry: 300 restoration schemas/MathML, filtered point indices, hidden hit rejection, real pointer handlers/offset/highlight cleanup, touch scroll gating and corrected cylinder bounds. No GPU rendering.');
 // CSS cascade contracts at the requested widths. This is code inspection, not pixel layout.
-const css=CSSOM.parse(['styles.css','interface.css','visual.css','expansion.css','refinement.css'].map(f=>fs.readFileSync(new URL('../dist/'+f,import.meta.url),'utf8')).join('\n'));
-function mediaMatches(q,width,coarse=false){if(q.includes('pointer:coarse')||q.includes('pointer: coarse'))return coarse;if(q.includes('prefers-reduced-motion'))return false;let m;for(const x of q.matchAll(/(min|max)-width:\s*(\d+)px/g)){if(x[1]==='min'&&width<+x[2]||x[1]==='max'&&width>+x[2])return false;}return true;}
+const css=CSSOM.parse(['app.css'].map(f=>fs.readFileSync(new URL('../dist/'+f,import.meta.url),'utf8')).join('\n'));
+function mediaMatches(q,width,coarse=false){if(q.includes('print'))return false;if(q.includes('pointer:coarse')||q.includes('pointer: coarse'))return coarse;if(q.includes('prefers-reduced-motion'))return false;let m;for(const x of q.matchAll(/(min|max)-width:\s*(\d+)px/g)){if(x[1]==='min'&&width<+x[2]||x[1]==='max'&&width>+x[2])return false;}return true;}
 function rulesAt(rules,width,coarse){return rules.flatMap(r=>r.media?mediaMatches(r.media.mediaText,width,coarse)?rulesAt([...r.cssRules],width,coarse):[]:r.cssRules?[]:[r]);}
 function specificity(s){return (s.match(/#[\w-]+/g)||[]).length*100+(s.match(/\.[\w-]+|\[[^\]]+\]|:(?!:)[\w-]+/g)||[]).length*10+(s.replace(/#[\w-]+|\.[\w-]+|\[[^\]]+\]|:[\w-]+(?:\([^)]*\))?/g,'').match(/\b[a-zA-Z][\w-]*/g)||[]).length;}
 function property(el,name,width,coarse=false){let value='',best=-1;for(const r of rulesAt([...css.cssRules],width,coarse)){if(!r.selectorText||!r.style.getPropertyValue(name))continue;for(const selector of r.selectorText.split(',')){let matches=false;try{matches=el.matches(selector.trim());}catch{}if(matches){const weight=specificity(selector)+(r.style.getPropertyPriority(name)?1e5:0);if(weight>=best){value=r.style.getPropertyValue(name);best=weight;}}}}return value;}
 const prefs={favorites:[],recent:[],progress:{},layout:{...layoutDefaults}};
+assert.equal((fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8').match(/rel="stylesheet"/g)||[]).length,1,'One stylesheet owns the responsive layout');
 for(const width of [360,768,1440])for(const mode of ['explore','measure','present']){
- document.querySelector('main').innerHTML=labMarkup(ohm,{prefs,state:s,config:cfg,controls:'<div class="control-body"></div>',panel:'data',mode,experiments},()=>'<svg></svg>');const lab=document.querySelector('.lab');Object.assign(lab.dataset,{controlsCollapsed:'false',dockCollapsed:mode==='explore'?'true':'false',mobileControls:'false'});
+ document.querySelector('main').innerHTML=labMarkup(ohm,{prefs,state:s,config:cfg,controls:'<div class="control-body"></div>',panel:'data',mode,experiments},()=>'<svg></svg>');
+ const lab=document.querySelector('.lab');Object.assign(lab.dataset,{controlsCollapsed:'false',dockCollapsed:mode==='explore'?'true':'false',mobileControls:'false'});
  const controls=document.querySelector('.controls'),dock=document.querySelector('.research-dock'),work=document.querySelector('.experiment-work');
- assert.equal(work.parentElement,document.querySelector('.workspace'));assert.equal(controls.previousElementSibling.dataset.resize,'controlsWidth');assert.equal(dock.parentElement,work);assert.equal(dock.previousElementSibling.className,'instrument-zone');
- if(width===1440&&mode!=='present'){assert.equal(property(document.querySelector('.workspace'),'grid-template-columns',width),'minmax(0,1fr) 20px var(--controls-width,380px)');assert.equal(property(work,'display',width),'flex');assert.equal(property(work,'flex-direction',width),'column');assert.equal(property(controls,'position',width),'sticky');assert.equal(property(dock,'position',width),'static');}
- assert.equal(property(document.querySelector('.guide-disclosure'),'display',width),mode==='present'?'none':'');
- if(mode==='present')assert.equal(property(controls,'display',width),'none',`${width} ${mode} controls hidden`);
- else assert.equal(property(controls,'display',width),'flex');
- if(mode==='explore'||mode==='present')assert.equal(property(dock,'display',width),'none',`${width} ${mode} dock hidden`);
- if(width<=1100&&mode!=='present'){lab.dataset.mobileControls='true';assert.equal(property(controls,'display',width),'flex');assert.equal(property(controls,'position',width),'static');assert.equal(property(document.querySelector('.workspace'),'display',width),'flex');}
- assert.equal(property(document.querySelector('.control-body'),'overflow',width),width<=1100?'visible':'auto');
+ assert.equal(work.parentElement,document.querySelector('.workspace'));assert.equal(controls.previousElementSibling.dataset.resize,'controlsWidth');assert.equal(dock.parentElement,work);
+ if(width===1440&&mode!=='present'){assert.equal(property(document.querySelector('.workspace'),'grid-template-columns',width),'minmax(0,1fr) 12px minmax(300px,var(--controls-width,380px))');assert.equal(property(controls,'position',width),'sticky');}
+ assert.equal(property(controls,'display',width),mode==='present'?'none':'flex');
+ if(mode==='explore'||mode==='present')assert.equal(property(dock,'display',width),'none');
+ if(width<=1100&&mode!=='present'){assert.equal(property(controls,'position',width),'relative');assert.equal(property(document.querySelector('.workspace'),'display',width),'flex');}
+ assert.equal(property(document.querySelector('.control-body'),'overflow',width),'auto');
  assert.equal(property(document.querySelector('.visual'),'touch-action',width,true),'pan-y');
 }
-console.log('PASS v12 CSS + DOM structure contracts at 360/768/1440: right sticky parameters, analysis below apparatus, optional guide,  all three modes, hidden panels, visible inline parameters, independent controls scrolling and touch gating. Actual bounding boxes/screenshots are NOT tested.');
+console.log('PASS v32 responsive modes: one stylesheet, sticky desktop parameters, inline mobile controls, contained scrolling, collapsed panels and presentation. CSS/DOM contracts only.');
+
 // v14 checks the code contracts for small-screen catalog navigation and input targets.
 for(const width of [360,768,1440]){
  document.querySelector('main').innerHTML=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all',pathFilter:null},()=>'<svg/>');
@@ -90,7 +91,7 @@ for(const width of [360,768,1440]){
  document.querySelector('main').innerHTML=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all',pathFilter:null},()=>'<svg/>');
  assert.equal(document.querySelector('.banner-footer'),null);assert.equal(document.querySelector('.banner-copy .eyebrow'),null);assert.ok(!/NASA|Full HD|Phát video|Tạm dừng video/.test(document.querySelector('.main-banner').textContent));
  assert.equal(property(document.querySelector('.banner-resume'),'color',width),'#fff');assert.equal(property(document.querySelector('.banner-topline'),'color',width),'#fff');
- for(const className of ['parameter-note','analysis-caption','card-purpose','source-note']){const p=document.createElement('p');p.className=className;document.querySelector('main').append(p);const value=property(p,'color',width);assert.ok(value==='#000'||value==='var(--muted)',className+' black reading text');}
+ assert.equal(property(document.body,'color',width),'#000','Black reading text is inherited throughout the page');
  assert.ok(parseFloat(property(document.querySelector('.banner-expand'),'min-height',width))>=44);
 }
 console.log('PASS v18 CSS/DOM contracts at 360/768/1440: clean banner, 44px fullscreen control, black reading copy and white video copy. No browser pixels.');

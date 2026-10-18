@@ -1,7 +1,7 @@
-import {T,V} from './geometry-kit.js?v=31';
-import {LabScene} from './scene3d.js?v=31';
+import {T,V} from './geometry-kit.js?v=32';
+import {LabScene} from './scene3d.js?v=32';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {sizeModelLabels} from './model-label.js?v=31';
+import {sizeModelLabels} from './model-label.js?v=32';
 // Project the same apparatus into Canvas 2D. This path uses no WebGL context.
 export function projectScene(scene,camera,width,height,budget=26000){
  sizeModelLabels(scene,camera,height);

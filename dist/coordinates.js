@@ -1,5 +1,5 @@
-import {modelLabel} from './model-label.js?v=31';
-import {tickStep,tickValues,tickText} from './plot-grid.js?v=31';
+import {modelLabel} from './model-label.js?v=32';
+import {tickStep,tickValues,tickText} from './plot-grid.js?v=32';
 import * as T from './vendor/three.module.min.js';
 const axis=(key,unit,scale,range)=>({key,unit,scale,range});
 // World-to-physical mappings are taken from the corresponding apparatus builders.

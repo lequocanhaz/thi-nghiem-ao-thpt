@@ -43,6 +43,6 @@ const smallText=projectScene(model.group,smallCamera,360,330).filter(p=>p.kind==
 assert.ok(smallText.some(p=>p.text==='1')&&smallText.some(p=>p.text==='-1'));assert.ok(!smallText.some(p=>p.text==='0,5'),'reduce label density when sixteen-pixel numbers would overlap');
 model.group.traverse(o=>{const u=o.userData;if(!u.pixelSize||!o.visible)return;const p=o.getWorldPosition(new T.Vector3()).project(smallCamera),x=(p.x+1)*180,half=u.labelTextWidth*u.pixelSize/u.fontSize/2;assert.ok(x-half>=7.9&&x+half<=352.1,'axis title and glyphs remain inside the narrow viewport');});
 model.update({},null,{...cfg,switches:{axes:true,grid:false}});assert.ok(!model.group.children[0].children.some(o=>o.userData.coordinateGrid),'grid can be removed without removing axes');
-const css=readFileSync(new URL('../dist/studio.css',import.meta.url),'utf8');assert.ok(!css.includes('font-weight:400!important;}\nbody .primary-heading'),'no blanket override defeating semantic bold');
+const css=readFileSync(new URL('../dist/app.css',import.meta.url),'utf8');assert.ok(!css.includes('font-weight:400!important;}\nbody .primary-heading'),'no blanket override defeating semantic bold');
 const report={charts,coordinateLabelSizeCases:sizes,coordinateFontPixels:16,gridUnits:'physical mappings preserved',scope:'Numeric/SVG/CPU geometry checks; no browser pixels or real device testing.'};
 writeFileSync(new URL('./interface-audit-v31.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS v31 interface',JSON.stringify(report));

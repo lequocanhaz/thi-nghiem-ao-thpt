@@ -12,7 +12,7 @@ import {LabAssistant} from '../dist/assistant.js';
 import * as T from '../dist/vendor/three.module.min.js';
 
 // Resolve actual CSS rules and specificity, without claiming browser layout or pixels.
-const sheets=['styles','interface','visual','expansion','refinement','studio'].map(name=>CSSOM.parse(fs.readFileSync(new URL('../dist/'+name+'.css',import.meta.url),'utf8')));
+const sheets=['app'].map(name=>CSSOM.parse(fs.readFileSync(new URL('../dist/'+name+'.css',import.meta.url),'utf8')));
 const weight=tokens=>tokens.reduce((sum,t)=>sum+(t.type==='tag'?1:t.type==='attribute'?(t.name==='id'?100:10):t.type==='pseudo'?(Array.isArray(t.data)?Math.max(...t.data.map(weight)):10):0),0);
 const rules=[];let order=0;
 function collect(list,conditions=[]){for(const r of list){if(r.media){collect(r.cssRules,[...conditions,r.media.mediaText]);continue;}if(!r.selectorText)continue;
@@ -45,6 +45,18 @@ for(const width of [360,390,620,768,1024,1440]){
   layouts++;
  }
 }
+// Shared responsive modes must not leave fixed drawers or stale grid tracks.
+for(const width of [360,768,1024,1440]){
+ const v={width,height:800,coarse:width<1100};
+ document.querySelector('#main').innerHTML=labMarkup(experiments[0],{prefs,state:initialState(experiments[0]),config,controls:control,panel:'data',mode:'explore',staticMode:false,experiments},()=> '');
+ const lab=document.querySelector('.lab'),controls=document.querySelector('.controls');
+ lab.setAttribute('data-controls-collapsed','true');assert.equal(style(controls,'display',v),'none');lab.removeAttribute('data-controls-collapsed');
+ lab.setAttribute('data-layout','present');assert.equal(style(controls,'display',v),'none');assert.equal(style(document.querySelector('.direct-tools'),'display',v),'none');
+ lab.setAttribute('data-layout','measure');assert.equal(style(controls,'display',v),'flex');assert.ok(style(document.querySelector('.workspace'),'grid-template-columns',v).includes('minmax(0,1fr)'));
+ if(width<=1100){assert.equal(style(controls,'position',v),'relative');assert.equal(style(document.querySelector('.controls-resizer'),'display',v),'none');}
+ const visual=document.querySelector('.visual');assert.equal(style(visual,'min-width',v),'0');
+ assert.equal(style(document.querySelector('#time'),'min-width',v),'0');
+}
 // The texture stays transparent on initial paint and numeric updates.
 const paints=[];window.HTMLCanvasElement.prototype.getContext=function(){return {clearRect(){paints.push('clear')},measureText:()=>({width:100}),fillText(text){paints.push({text,color:this.fillStyle,font:this.font})},fillRect(){throw Error('Opaque label background')},fill(){throw Error('Label background fill')},stroke(){throw Error('Label border')}};};
 const group=new T.Group(),sprite=modelLabel(group,'x (m)',new T.Vector3());sprite.userData.setText('0,25');
@@ -60,4 +72,4 @@ const chat=new LabAssistant({document,viewport,endpoint:'https://example.invalid
 chat.input.value='Bản nháp được giữ';viewport.height=360;viewport.offsetTop=120;listeners.get('resize')();assert.equal(chat.root.style.getPropertyValue('--chat-height'),'344px');assert.equal(chat.root.style.getPropertyValue('--chat-top'),'128px');
 viewport.height=780;viewport.offsetTop=0;listeners.get('scroll')();assert.equal(chat.root.style.getPropertyValue('--chat-top'),'8px');assert.equal(chat.input.value,'Bản nháp được giữ');chat.close();assert.equal(chat.root.hidden,true);
 const report={catalogExperiments:experiments.length,cssCascadeCases:layouts,widths:[360,390,620,768,1024,1440],transparentBlackLabels:true,keyboardViewport:true,note:'CSS cascade, DOM and CPU projection checks only; no browser rendering, touch hardware or iOS Safari device test.'};
-fs.writeFileSync(new URL('./mobile-audit-v31.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify(report));
+fs.writeFileSync(new URL('./mobile-audit-v32.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify(report));
