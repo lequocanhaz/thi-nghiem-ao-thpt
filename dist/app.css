@@ -318,7 +318,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .fit-controls select{max-width:100%}
 #graphOptions>select{font-size:.8125rem}
 #graph{height:var(--chart-height,380px);min-height:260px;width:100%;max-width:100%;min-width:0;overflow:auto;overscroll-behavior:contain}
-#graph svg{display:block;width:100%;height:100%;min-width:520px}
+#graph svg{display:block;width:100%;height:100%;min-width:0}
 #graph text{font-family:Inter,sans-serif;font-size:18px;font-weight:500;fill:#000}
 #graph .plot-axis-title{font-size:19px;font-weight:650}
 .legend{display:flex;align-items:center;flex-wrap:wrap;gap:12px;font-size:.75rem;margin-top:10px}
@@ -449,8 +449,9 @@ dialog::backdrop{background:#0b162a70}
 .stage-shell.is-fullscreen .meter strong{font-size:1.5rem}
 .ai-assistant{position:fixed;right:24px;top:var(--chat-top,90px);width:min(460px,calc(100% - 32px));height:min(720px,var(--chat-height,calc(100dvh - 110px)));max-height:var(--chat-height,calc(100dvh - 110px));z-index:180;display:flex;flex-direction:column;min-height:0;overflow:hidden;border:1px solid #d9d5ef;border-radius:26px;box-shadow:0 24px 90px #24204b26;background:#fff}
 .ai-head{display:flex;align-items:center;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line);flex:none;background:#fcfbff}
+.ai-context{display:block;max-width:100%;font-size:.75rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px}
 .ai-head h2{font-size:1.125rem;font-weight:650;letter-spacing:-.025em}
-.ai-head button{display:grid;place-items:center;width:40px;height:40px;min-height:40px;font-size:1.5rem;border:0;background:#f0eef8;border-radius:50%;padding:4px}
+.ai-head button{display:grid;place-items:center;width:44px;height:44px;min-height:44px;flex:none;font-size:1.5rem;border:0;background:#f0eef8;border-radius:50%;padding:4px}
 .ai-status{padding:10px 18px;font-size:.875rem;background:#fff3db;flex:none;line-height:1.6;max-height:120px;overflow:auto}
 .ai-messages{display:flex;flex-direction:column;gap:16px;padding:22px;overflow:auto;min-height:0;flex:1;overscroll-behavior:contain;background:linear-gradient(180deg,#fff,#f8f8ff)}
 .ai-empty{margin:auto 0;text-align:center;padding:32px 10px}
@@ -695,7 +696,7 @@ dialog::backdrop{background:#0b162a70}
 .stage-top{padding:10px;gap:8px}
 .stage-tools{gap:5px}
 .stage-tools>button,.view-menu>summary{padding:8px;font-size:.75rem}
-.stage-tools .icon-button{min-width:40px;width:40px}
+.stage-tools .icon-button{min-width:44px;width:44px}
 .view-menu-options{width:min(248px,100%);right:0}
 .readouts .meter{padding:12px}
 .meter>span{font-size:.8125rem}
@@ -729,6 +730,8 @@ dialog::backdrop{background:#0b162a70}
 .stage-shell.is-fullscreen .meter{flex:1 1 40%;display:block}
 .stage-shell.is-fullscreen .meter strong{font-size:1.2rem}
 }
+
+@media(max-height:480px){.ai-head{padding:6px 12px}.ai-brand,.ai-avatar,.ai-attachment-hint{display:none}.ai-messages{padding:10px 14px}.ai-compose{padding:8px 12px;gap:6px;max-height:60%}.ai-compose textarea{min-height:44px;max-height:64px}.ai-status{max-height:64px}.ai-empty{padding:10px}.ai-empty-mark{display:none}}
 
 @media(pointer:coarse){.touch-interaction{display:block}
 .scene-canvas{touch-action:pan-y}
