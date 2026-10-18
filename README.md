@@ -1,5 +1,13 @@
 # Quanh Lab · 300 thí nghiệm
 
+## v34 — đồ thị trên điện thoại và ngữ cảnh Trợ lý AI
+
+- Đồ thị vẽ theo chiều rộng/cao thực tế, cập nhật khi đổi kích thước hoặc mở lại bảng; nhãn dài xuống dòng, trục tung chuyển lên phía trên ở khung hẹp. Giữ nguyên miền số liệu, công thức và thao tác chọn điểm.
+- Chat đồng bộ ngay khi chuyển từ bài về thư viện/nguồn; hiển thị tên bài hiện tại và giữ riêng bản nháp/ảnh. Lỗi đến muộn từ bài trước được ghi rõ.
+- Mở chat trên màn hình cảm ứng không tự gọi bàn phím; trên máy tính vẫn đặt con trỏ vào ô câu hỏi. Tăng vùng bấm đóng chat/chụp ảnh/toàn màn hình lên 44 px, thu gọn chat khi màn hình thấp.
+- `npm run check` bao gồm 3.600 trường hợp đồ thị của đủ 300 bài và kiểm tra luồng đổi trang/chat. Chưa kiểm tra hiển thị trình duyệt hay điện thoại thật.
+
+
 Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Chatbox dùng Gemini trên máy chủ: nhập câu hỏi rồi Gửi/Dừng, không tải mô hình AI hoặc yêu cầu WebGPU. Đã kiểm tra API công khai không cần đăng nhập ngày 17/10/2026; Gemini trả lời tiếng Việt và dùng đúng thông số bài đang mở.
 
 Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/

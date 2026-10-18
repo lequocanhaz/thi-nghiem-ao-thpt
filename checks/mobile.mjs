@@ -26,7 +26,7 @@ const {document,window}=parseHTML(index);globalThis.document=document;
 const prefs={favorites:[],recent:[],progress:{},layout:{dataExpanded:true,guidance:false}},config={viewMode:'3d',viewPlane:'front',switches:{axes:true,labels:false}};
 const control='<div class="control-heading"><h2>Thông số</h2></div><div class="control-body"><div class="parameter"><label class="value-entry"><input type="number"></label></div></div>';
 let layouts=0;
-for(const width of [360,390,620,768,1024,1440]){
+for(const width of [320,360,390,620,768,1024,1440]){
  const v={width,height:width<700?780:900,coarse:width<1100};
  document.querySelector('#main').innerHTML=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all'},()=> '');
  assert.equal(style(document.querySelector('.header'),'height',v),'auto','Header must accommodate wrapped navigation at '+width);
@@ -71,5 +71,5 @@ const listeners=new Map(),viewport={height:780,offsetTop:0,addEventListener:(nam
 const chat=new LabAssistant({document,viewport,endpoint:'https://example.invalid/chat'});chat.open();assert.equal(chat.root.style.getPropertyValue('--chat-height'),'764px');
 chat.input.value='Bản nháp được giữ';viewport.height=360;viewport.offsetTop=120;listeners.get('resize')();assert.equal(chat.root.style.getPropertyValue('--chat-height'),'344px');assert.equal(chat.root.style.getPropertyValue('--chat-top'),'128px');
 viewport.height=780;viewport.offsetTop=0;listeners.get('scroll')();assert.equal(chat.root.style.getPropertyValue('--chat-top'),'8px');assert.equal(chat.input.value,'Bản nháp được giữ');chat.close();assert.equal(chat.root.hidden,true);
-const report={catalogExperiments:experiments.length,cssCascadeCases:layouts,widths:[360,390,620,768,1024,1440],transparentBlackLabels:true,keyboardViewport:true,note:'CSS cascade, DOM and CPU projection checks only; no browser rendering, touch hardware or iOS Safari device test.'};
-fs.writeFileSync(new URL('./mobile-audit-v33.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify(report));
+const report={catalogExperiments:experiments.length,cssCascadeCases:layouts,widths:[320,360,390,620,768,1024,1440],transparentBlackLabels:true,keyboardViewport:true,note:'CSS cascade, DOM and CPU projection checks only; no browser rendering, touch hardware or iOS Safari device test.'};
+fs.writeFileSync(new URL('./mobile-audit-v34.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify(report));
