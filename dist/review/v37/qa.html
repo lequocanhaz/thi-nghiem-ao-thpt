@@ -1,11 +1,12 @@
 <!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quanh Lab · Kiểm tra giao diện</title><style>
 *{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui;color:#111;background:#e9ebef}header{display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:0;z-index:3;padding:12px 16px;background:white;border-bottom:1px solid #ccd2dc}button,select{height:38px;border:1px solid #bcc4d1;border-radius:7px;padding:0 12px;background:white;color:#111;font:inherit}button{cursor:pointer}#run{background:#111;color:white;border-color:#111}#status{margin-left:auto}#viewport{padding:16px;overflow:auto}iframe{display:block;width:390px;height:860px;border:0;background:white;margin:auto;box-shadow:0 2px 16px #0001}pre{padding:16px;background:#fff;white-space:pre-wrap;overflow-wrap:anywhere;margin:16px}h1{font-size:14px;margin:0 8px 0 0}a{color:#111}#failures{max-height:300px;overflow:auto}</style>
 <header><h1>Quanh Lab · Kiểm tra bố cục</h1><label>Rộng <select id="width"><option>320</option><option selected>390</option><option>620</option><option>768</option><option>1024</option><option>1280</option><option>1440</option></select></label><label>Phần <select id="route"><option value="">Trang chủ</option><option value="#library">Thư viện</option><option value="#lab/energy">Cơ năng</option><option value="#lab/electric">Điện trường</option><option value="#lab/ohm">Định luật Ohm</option><option value="#lab/wave">Sóng</option></select></label><button id="inspect">Đo bố cục</button><label><input type="checkbox" id="exercise" checked> Chạy & ghi điểm</label><button id="run">Kiểm tra 300 bài × 4 khung</button><button id="stop" disabled>Dừng</button><span id="status" role="status">Sẵn sàng</span></header>
-<div id="viewport"><iframe id="frame" src="../../index.html?v=37" title="Quanh Lab trong khung kiểm tra"></iframe></div><pre id="summary">Chọn khung hoặc chạy kiểm tra. Dữ liệu nằm trong phiên trình duyệt kiểm tra này.</pre><pre id="failures"></pre><details><summary>Báo cáo đầy đủ</summary><pre id="report">Chưa chạy</pre></details>
+<div id="viewport"><iframe id="frame" src="about:blank" title="Quanh Lab trong khung kiểm tra"></iframe></div><pre id="summary">Chọn khung hoặc chạy kiểm tra. Dữ liệu nằm trong phiên trình duyệt kiểm tra này.</pre><pre id="failures"></pre><details><summary>Báo cáo đầy đủ</summary><pre id="report">Chưa chạy</pre></details>
 <script type="module">
 import {experiments} from '../../experiments.js?v=17';
 const $=s=>document.querySelector(s),f=$('#frame');let stopped=false,report={started:null,completed:null,cases:[],failures:[]};
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
+const siteURL=new URL('../../index.html?v=37',location.href);siteURL.searchParams.set('qa',String(Date.now()));f.src=siteURL.href;
 function size(w){f.style.width=w+'px';$('#width').value=String(w)}
 async function ready(id){const deadline=Date.now()+20000;while(Date.now()<deadline){let d=f.contentDocument;if(d?.querySelector(id?'#lessonTitle':'.home')&&(!id||d.querySelector('#labSelect')?.value===id)){await d.fonts.ready;await new Promise(r=>f.contentWindow.requestAnimationFrame(()=>f.contentWindow.requestAnimationFrame(r)));return d;}await wait(50);}throw Error('Route not ready: '+id)}
 function audit(d,label){const w=d.documentElement.clientWidth,errors=[],rect=e=>e.getBoundingClientRect();const visible=e=>{const r=rect(e);return r.width>0&&r.height>0&&!e.closest('[hidden]')};
@@ -35,7 +36,7 @@ $('#run').onclick=async()=>{
  };
  try{
   for(const width of [320,390,768,1280]){
-   size(width);f.contentWindow.location.hash='';await ready(null);capture(f.contentDocument,'home',width,'ready');
+   size(width);f.contentWindow.location.hash='';await ready(null);report.stylesheet=f.contentDocument.querySelector('link[rel=stylesheet]')?.getAttribute('href');capture(f.contentDocument,'home',width,'ready');
    for(const e of experiments){
     if(stopped)break;
     f.contentWindow.location.hash='#lab/'+e.id;
@@ -72,4 +73,5 @@ $('#run').onclick=async()=>{
   $('#status').textContent='Lỗi kiểm tra';show({error:error.message,cases:report.cases.length,failures:report.failures.slice(0,20)});
  }finally{$('#run').disabled=false;$('#stop').disabled=true;$('#exercise').disabled=false;}
 };
+ready(null).then(d=>{$('#status').textContent='Sẵn sàng · '+d.querySelector('link[rel=stylesheet]').getAttribute('href')}).catch(error=>{$('#status').textContent=error.message});
 </script></html>
