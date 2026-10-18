@@ -1,4 +1,4 @@
-# Vật lí Lab · 300 bài khảo sát
+# Vật lí Lab · 300 thí nghiệm
 
 Website thí nghiệm Vật lí tiếng Việt cho lớp 10–12 và các bài mở rộng có nhãn. Mã nguồn độc lập HTML/CSS/JavaScript, Three.js và tài nguyên âm thanh/font đóng gói trong `dist/`. Thí nghiệm và dữ liệu chạy trực tiếp trong trình duyệt. Chatbox dùng Gemini trên máy chủ: nhập câu hỏi rồi Gửi/Dừng, không tải mô hình AI hoặc yêu cầu WebGPU. Đã kiểm tra API công khai không cần đăng nhập ngày 17/10/2026; Gemini trả lời tiếng Việt và dùng đúng thông số bài đang mở.
 
@@ -13,28 +13,29 @@ Website: https://lequocanhaz.github.io/thi-nghiem-ao-thpt/
 
 GitHub Free hỗ trợ Pages từ repository công khai; Pages từ repository riêng tư phụ thuộc gói tài khoản. Chọn Public đồng nghĩa người khác có thể đọc và tải mã nguồn. Tài liệu chính thức: https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
 
-## Giao diện và banner · v18
+## Bố cục và vận hành · v32
 
-Banner dùng video NASA thực 1920 × 1080 có chuyển động, đóng gói MP4/WebM để không lệ thuộc link nóng. Banner tự phát lặp lại, bỏ các nhãn nguồn/độ phân giải và nút phát/dừng; giữ nút toàn màn hình. Tự thử lại sau tương tác khi trình duyệt chặn tự phát, và khôi phục khi quay lại trang. Nguồn và credit trong `dist/video/NOTICE.txt`. Đây là hình dựng mô phỏng của NASA, không phải phép đo hay bộ giải tương đối rộng chạy trực tiếp.
+Giao diện chỉ tải `dist/app.css`, thay cho sáu lớp CSS chồng nhau. Bảng thông số nằm cạnh mô hình trên màn hình rộng, chuyển xuống dưới mô hình trên màn hình nhỏ và có vùng cuộn riêng. Header tự xuống dòng; đồ thị và bảng đo cuộn trong khung riêng. Font Inter đóng gói sẵn, giữ phân cấp tiêu đề/in đậm và số trục lớn, lưới bật/tắt được. Chế độ Khám phá, Phân tích, Trình chiếu, toàn màn hình và thu gọn bảng dùng chung một bố cục.
 
-Chữ nội dung trên nền sáng chuyển sang đen; chữ trên banner tối dùng trắng, màu đại lượng Vật lí vẫn có quy ước riêng. Banner dùng tiêu đề và lời dẫn trực tiếp, không có khẩu hiệu trang trí. Font sử dụng đúng bốn tệp Product Sans OTF được cung cấp. Các nút kéo 3D giữ liên kết đại lượng độc lập; điều chỉnh trực tiếp, bàn phím và ô số dùng chung trạng thái. 629 miền thông số ở 270 bài được mở rộng sau khi giữ các ràng buộc áp dụng. Bảng điều khiển và số liệu vẫn điều chỉnh kích thước được; “Khoảng thanh trượt” dùng để tập trung một khoảng trong miền hợp lệ.
+Cả 300 bài đều có **Chạy, Tạm dừng, Tiến một bước, tua, chạy lại và lặp lại**. Trong đó 79 bài dùng diễn biến thời gian hoặc phát tia đã có; 221 bài định luật tĩnh dùng quy trình tác động tự động lên dụng cụ, làm thay đổi một biến điều khiển cùng các số đo phụ thuộc và hình học của mô hình. Nhóm quy trình hiển thị **phần trăm tiến trình**, tên biến điều khiển; không coi đó là trục thời gian của chuyển động tự do. Đây không phải 221 bộ giải động lực học mới. Người học vẫn chỉnh dụng cụ, ghi điểm đo, so sánh A/B, dùng đồ thị và xuất/nhập phiên. Đang chạy mà chỉnh thông số sẽ tạm dừng để không ghi đè ô nhập.
 
-Hộp Trợ lý v21 bỏ chọn mô hình, Tải AI, tiến độ tải, nút giải phóng GPU, bảng ngữ cảnh và các công cụ phụ. Chỉ giữ hỏi, gửi/dừng, hội thoại và đóng. Không tải ngầm WebLLM hoặc trọng số. Các mô-đun cục bộ cũ được giữ dưới dạng mã chưa được nhập bởi giao diện đang dùng, để bảo toàn khả năng tham khảo. Đổi font về Product Sans Regular cho nội dung; các cấp tiêu đề dùng Product Sans Bold do người dùng cung cấp. Backend cần hoạt động trước khi có câu trả lời thật; giao diện không giả lập AI khi thiếu kết nối.
+Các mô hình lò xo, hệ thấu kính, điện trường đều, bộ tụ, xi-phông, khúc xạ sóng nước, điện thế và ngưỡng phản ứng đã bổ sung phản hồi hình học. Camera giữ góc nhìn khi quy trình chạy, tránh tự co giãn liên tục theo thông số. Sáu mô-đun công thức và 301 tệp âm thanh giữ nguyên theo bộ đối chiếu.
 
-Giữ 300 bài, phương trình, mẫu thiết lập, các nguồn OpenStax và 12 tài liệu quốc tế, chức năng đo/đồ thị/A-B/quét biến/xuất nhập phiên và âm thanh đã có. 79 bài chạy theo thời gian, các bài còn lại khảo sát bằng thông số.
+Banner dùng video NASA thực 1920 × 1080 đóng gói MP4/WebM, phát lặp lại và giữ toàn màn hình. Nguồn và credit trong `dist/video/NOTICE.txt`. Trợ lý vẫn dùng endpoint Gemini đã cấu hình; thay đổi v32 không thay backend hoặc khóa API.
 
-Kiểm tra: `npm run check`, `npm run check:models`, `npm run check:framing`, `npm run check:audio`. Phạm vi và giới hạn ở `checks/verification-v18.md`. Kiểm tra DOM/hình học không thay thế ảnh chụp hoặc thao tác trình duyệt thực.
+Kiểm tra: `npm run check`, `npm run check:models`, `npm run check:framing`, `npm run check:audio`. Kiểm tra mới `npm run check:playback` thực sự tiến trình đủ 300 bài, kiểm tra thay đổi hình học/vật liệu của dụng cụ (loại trừ trục, tay nắm và nhãn), hoàn tất, tua lại, lặp lại và dữ liệu xuất/nhập của quy trình. `checks/mobile.mjs` kiểm tra phân giải CSS/DOM ở sáu bề rộng. Đây là kiểm tra mã, DOM và hình học CPU, **chưa thay thế thao tác hay ảnh chụp trên trình duyệt/điện thoại thực**.
 
 ## Chỉnh sửa về sau
 
-- Giao diện: `dist/refinement.css` (v17), `dist/expansion.css` (v16), `dist/visual.css` (v15), `dist/interface.css`, `dist/views.js`, `dist/app.js`.
+- Giao diện: `dist/app.css`, `dist/views.js`, `dist/app.js`. Các CSS cũ giữ làm lịch sử, không còn được tải.
+- Quy trình chạy: `dist/playback.js`; không sửa công thức để tạo hiệu ứng giả.
 - Dụng cụ/3D: `dist/scene3d.js`, `dist/apparatus.js`, `dist/banner.js`, các tệp `*-scenes.js`.
 - Nội dung và mô hình: các tệp `*-catalog.js`, `dist/models.js`, `dist/physics.js`.
 - Chatbox: `dist/assistant.js`. Endpoint: `dist/ai-config.js`. Backend trong `server/` hỗ trợ Gemini đang sử dụng và adapter OpenAI tùy chọn. Khóa Gemini nằm trong runtime secret phía máy chủ, không có trong frontend.
 - Các bản thuyết minh tiếng Việt: `dist/audio/vi13/`, mục lục đoạn đọc trong `dist/voice-index.js`.
 - Dùng GitHub Desktop hoặc trình biên tập của bạn, commit và push lên `main`; workflow kiểm tra rồi cập nhật website. Có thể trao đổi yêu cầu sửa trong cuộc trò chuyện và cung cấp đúng URL repository đã cấp quyền.
 
-Có 3 chế độ Khám phá/Phân tích/Trình chiếu. 79 bài có diễn biến thời gian; các bài còn lại khảo sát bằng thông số. Bảng đo, ghi chép, yêu thích và lịch sử được lưu **trên từng trình duyệt**, không có máy chủ đồng bộ. Chuyển tên miền không tự chuyển dữ liệu cũ: hãy xuất phiên JSON ở website cũ và nhập lại ở bài tương ứng trên website mới.
+Có 3 chế độ Khám phá/Phân tích/Trình chiếu. 79 bài có diễn biến thời gian/phát tia; 221 bài có quy trình tác động tự động trên mô hình. Bảng đo, ghi chép, yêu thích và lịch sử được lưu **trên từng trình duyệt**, không có máy chủ đồng bộ. Chuyển tên miền không tự chuyển dữ liệu cũ: hãy xuất phiên JSON ở website cũ và nhập lại ở bài tương ứng trên website mới.
 
 ## Chạy và kiểm tra trên máy
 

@@ -1,5 +1,5 @@
-import {SoftwareScene} from './software-scene.js?v=31';
-import {LabScene} from './scene3d.js?v=31';
+import {SoftwareScene} from './software-scene.js?v=32';
+import {LabScene} from './scene3d.js?v=32';
 import {initialState} from './experiments.js?v=17';
 import {evaluate,duration} from './models.js?v=17';
 const cache=new Map();let renderer=null,queue=[],busy=false,token=0,observer=null,softwareOnly=false;

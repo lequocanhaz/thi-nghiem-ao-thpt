@@ -1,5 +1,5 @@
-import {premiumRayOptics} from './optics-studio.js?v=31';
-import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine} from './geometry-kit.js?v=31';
+import {premiumRayOptics} from './optics-studio.js?v=32';
+import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine} from './geometry-kit.js?v=32';
 import {evaluateDiscovery,fringe} from './discovery-models.js?v=17';
 const rad=x=>x*Math.PI/180,clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 const colorTemp=t=>new T.Color().setHSL(.59-clamp((t-5)/140,0,1)*.58,.65,.65);
