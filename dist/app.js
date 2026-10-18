@@ -1,22 +1,22 @@
-import {isDriven,processFor,advanceProcess,seekProcess,cleanProcess} from './playback.js?v=36';
-import {coordinateProfile,hasCoordinateGrid} from './coordinates.js?v=36';
+import {isDriven,processFor,advanceProcess,seekProcess,cleanProcess} from './playback.js?v=37';
+import {coordinateProfile,hasCoordinateGrid} from './coordinates.js?v=37';
 import {libraryContext} from './assistant-context.js?v=24';
-import {LabAssistant} from './assistant.js?v=36';
+import {LabAssistant} from './assistant.js?v=37';
 import {parameterLimits,parameterWindow,cleanParameterWindows,revealParameterWindows} from './parameter-window.js?v=17';
 import {BannerScene} from './banner.js?v=18';
 import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=17';
 import {fitModels,fitSummary,reportMarkup} from './research.js?v=17';
 import {themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams} from './learning.js?v=17';
-import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=36';
+import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=37';
 import {tableGraph,sweepStates,segments,graphParameter,tableColumnFor} from './analytics.js?v=17';
 import {experiments,initialState,electricModes} from './experiments.js?v=17';
 import {evaluate,duration,clampState} from './models.js?v=17';
 import {meters,tableValues} from './measurements.js?v=17';
-import {plotGrid} from './plot-grid.js?v=36';
+import {plotGrid} from './plot-grid.js?v=37';
 import {graphFor} from './graphs.js?v=17';
-import {LabScene} from './scene3d.js?v=36';
-import {SoftwareScene} from './software-scene.js?v=36';
-import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=36';
+import {LabScene} from './scene3d.js?v=37';
+import {SoftwareScene} from './software-scene.js?v=37';
+import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=37';
 import {Narrator,Tone} from './media.js?v=17';
 import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=17';
@@ -48,7 +48,7 @@ function updateSpeech(status){
 }
 const narrator=new Narrator(updateSpeech);narrator.voiceName=prefs.voice;narrator.rate=prefs.rate;
 const staticIds=new Set(['electric','lever','hooke','magnetic',...experiments.filter(e=>e.static&&!e.visualOnly).map(e=>e.id)]);
-const icon=(name)=>{const paths={play:'M9 5l12 7-12 7z',pause:'M8 5v14M16 5v14',voice:'M4 10h4l5-5v14l-5-5H4zM17 8q6 4 0 8',star:'M12 3l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z',search:'M17 17l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',reset:'M4 6v6h6M4 12a8 8 0 1 1 2 6',step:'M6 5l11 7-11 7zM19 5v14',camera:'M3 7h5l2-3h4l2 3h5v13H3zM16 13a4 4 0 1 1-8 0 4 4 0 0 1 8 0',expand:'M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5'};return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[name]||paths.play}"/></svg>`;};
+const icon=(name)=>{const paths={sliders:'M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6',table:'M3 3h18v18H3zM3 9h18M3 15h18M9 3v18',info:'M12 11v6M12 7h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0',plus:'M12 5v14M5 12h14',minus:'M5 12h14',loop:'M4 8h12l4 4-4 4M20 12H8l-4 4',axes:'M12 3v18M3 12h18M9 6l3-3 3 3M18 9l3 3-3 3',grid:'M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18','arrow-up-right':'M6 18 18 6M6 6h12v12','arrow-right':'M4 12h16M14 6l6 6-6 6',play:'M9 5l12 7-12 7z',pause:'M8 5v14M16 5v14',voice:'M4 10h4l5-5v14l-5-5H4zM17 8q6 4 0 8',star:'M12 3l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z',search:'M17 17l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',reset:'M4 6v6h6M4 12a8 8 0 1 1 2 6',step:'M6 5l11 7-11 7zM19 5v14',camera:'M3 7h5l2-3h4l2 3h5v13H3zM16 13a4 4 0 1 1-8 0 4 4 0 0 1 8 0',expand:'M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5'};return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[name]||paths.play}"/></svg>`;};
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3500);}
 function save(){if(active){saved[active.id]={state:{...state},rows,notes:$('#notes')?.dataset.notesFor===active.id?$('#notes').value:(saved[active.id]?.notes||''),prediction:$('#prediction')?.dataset.notesFor===active.id?$('#prediction').value:(saved[active.id]?.prediction||''),pinned,config:structuredClone(config)};}try{localStorage.setItem('thpt-lab-v1',JSON.stringify(saved));localStorage.setItem('thpt-ui-v3',JSON.stringify(prefs));}catch{if(!storageWarned){storageWarned=true;toast('Trình duyệt không lưu được phiên này. Bạn có thể tải phiên về.');}}}
 function setModelFullscreen(on){

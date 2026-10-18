@@ -1,5 +1,12 @@
 # Quanh Lab · 300 thí nghiệm
 
+## v37 — trắng đen, logo trong suốt và căn lại nút
+
+- Banner chia hai vùng: tiêu đề Manrope lớn màu đen trên trắng và video hố đen nguyên sắc. Màu xanh, xanh ngọc, cam của logo và tag chủ đề tạo điểm nhấn có kiểm soát.
+- Logo được chuyển từ ảnh nền trắng sang đường nét SVG trong suốt; bản đầy đủ có chữ chuyển thành outline. Không phụ thuộc font ngoài, không còn bitmap nền trắng.
+- Hệ nút 44 px, icon SVG có khung cố định, CTA chính màu đen. Cặp nút thẻ và điều hướng cuối bài dùng grid có thể co giãn; thanh chế độ hỗ trợ chữ lớn ở màn hình hẹp. Các bảng quanh mô hình dùng nền trung tính, viền mảnh, góc bo thống nhất.
+- Ghi chú tham khảo và quy trình kiểm tra tại [docs/design-v37.md](docs/design-v37.md). Trang kiểm tra trình duyệt không nằm trong điều hướng sản phẩm: `review/v37/qa.html`.
+
 ## v36 — chữ đậm lớn và giao diện tươi sáng
 
 - Nhận diện QUANH LAB dùng chữ Manrope ExtraBold 800 bên cạnh biểu tượng Q người dùng đã chọn. Tiêu đề, tên thí nghiệm và số đo có trọng lượng rõ; nội dung đọc giữ cỡ và độ đậm vừa phải.

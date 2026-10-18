@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createHash} from 'node:crypto';
 import {parseHTML} from 'linkedom';
 import {experiments,initialState} from '../dist/experiments.js';
 import {cardsMarkup,labMarkup} from '../dist/views.js';
@@ -20,10 +19,11 @@ for(const [i,card] of [...document.querySelectorAll('.experiment-card')].entries
 }
 for(const filename of ['quanh-logo.svg','quanh-mark.svg']){
  const svg=fs.readFileSync(new URL('../dist/brand/'+filename,import.meta.url),'utf8');
- const encoded=svg.match(/href="data:image\/png;base64,([^"]+)"/)?.[1];assert.ok(encoded,'Logo embeds the supplied image, without a remote dependency');
- assert.equal(createHash('sha256').update(Buffer.from(encoded,'base64')).digest('hex'),'67f3076b17ccbd5ce35ebc297c5c044b2917ca0285cd11af1ab3e23a63b4011b');
- assert.doesNotMatch(svg,/<ellipse|#D2F18A/i,'The previous orbit mark is gone');
+ assert.match(svg,/<path\b/,'Native vector logo paths exist');
+ assert.doesNotMatch(svg,/<image\b|<rect\b|<text\b|data:image/i,'Logo has no opaque bitmap, background or font dependency');
+ for(const color of ['#1b50d2','#0dcfd8','#fa7551'])assert.ok(svg.toLowerCase().includes(color),'Original logo ink '+color);
+
 }
 const font=fs.readFileSync(new URL('../dist/fonts/ManropeVariable.woff2',import.meta.url));assert.equal(font.toString('ascii',0,4),'wOF2');
 assert.match(fs.readFileSync(new URL('../dist/fonts/MANROPE-LICENSE.txt',import.meta.url),'utf8'),/SIL OPEN FONT LICENSE/);
-console.log('PASS v35: 300 uppercase titles, topic tags, open/preview/favorite routes and simplified cards; uploaded logo bytes preserved; local WOFF2 font and license. DOM/file checks only.');
+console.log('PASS v35: 300 uppercase titles, topic tags, open/preview/favorite routes and simplified cards; transparent native vector logo; local WOFF2 font and license. DOM/file checks only.');
