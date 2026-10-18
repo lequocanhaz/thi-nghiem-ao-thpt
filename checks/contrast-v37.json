@@ -1,0 +1,41 @@
+{
+  "method": "WCAG sRGB relative luminance for selected opaque color pairs. Not a whole-site conformance audit.",
+  "pairs": [
+    {
+      "role": "reading",
+      "foreground": "#000000",
+      "background": "#ffffff",
+      "contrast": 21.0
+    },
+    {
+      "role": "primary button / AI header",
+      "foreground": "#ffffff",
+      "background": "#111214",
+      "contrast": 18.74
+    },
+    {
+      "role": "primary hover",
+      "foreground": "#ffffff",
+      "background": "#303136",
+      "contrast": 12.98
+    },
+    {
+      "role": "record button",
+      "foreground": "#000000",
+      "background": "#edf3ff",
+      "contrast": 18.87
+    },
+    {
+      "role": "focus on white",
+      "foreground": "#2459d8",
+      "background": "#ffffff",
+      "contrast": 6.01
+    },
+    {
+      "role": "hero blue period",
+      "foreground": "#3155d5",
+      "background": "#ffffff",
+      "contrast": 6.19
+    }
+  ]
+}

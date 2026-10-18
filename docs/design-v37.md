@@ -36,6 +36,6 @@ Trắng/đen là nền chính. Chữ tiêu đề lớn và đậm; màu phụ ch
 
 `npm run check` bao gồm import/syntax, font/brand, 300 route/title/action contracts, CSS cascade ở 7 độ rộng, các luồng chạy/ghi/đồ thị/chat và hash của mô-đun khoa học/âm thanh.
 
-`dist/review/v37/qa.html` là công cụ kiểm tra pixel trong trình duyệt thật, mở iframe canonical index. Bốn khung 320/390/768/1280 chạy qua trang chủ và 300 bài: 1.204 trường hợp. Kiểm tra tràn ngang, container vượt khung, hàng nút thẻ, khung/căn giữa icon và chiều cao/nội dung nút. Kết quả phải đọc sau khi trang báo Hoàn tất; lượt dừng giữa chừng không tính là pass.
+`dist/review/v37/qa.html` là công cụ kiểm tra pixel trong trình duyệt thật, mở iframe canonical index. Bốn khung 320/390/768/1280 chạy qua trang chủ và 300 bài: 1.204 bố cục ban đầu. Bật Chạy & ghi điểm sẽ kiểm tra thêm lúc đang chạy và sau khi ghi: tổng 3.604 trạng thái. Dòng đo thử được hoàn tác ngay sau khi đo, kiểm tra số dòng trở lại đúng giá trị trước đó. Kiểm tra tràn ngang, container vượt khung, hàng nút thẻ, khung/căn giữa icon và chiều cao/nội dung nút. Báo cáo màu cơ bản: `checks/contrast-v37.json`; đây chỉ là các cặp màu được chọn, không phải chứng nhận toàn website. Kết quả phải đọc sau khi trang báo Hoàn tất; lượt dừng giữa chừng không tính là pass.
 
 Kiểm tra thủ công thêm: banner, thư viện, AI, chế độ khám phá/phân tích, chạy/dừng/ghi điểm, chữ lớn 115%, logo trên các nền. Môi trường cloud browser có thể chuyển sang đồ họa nhẹ. Đây không thay thế Safari hoặc thiết bị cảm ứng thật.
