@@ -90,7 +90,7 @@ console.log('PASS relative time boundaries from femtoseconds to years and 1,275 
 for(const width of [360,768,1440]){
  document.querySelector('main').innerHTML=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all',pathFilter:null},()=>'<svg/>');
  assert.equal(document.querySelector('.banner-footer'),null);assert.equal(document.querySelector('.banner-copy .eyebrow'),null);assert.ok(!/NASA|Full HD|Phát video|Tạm dừng video/.test(document.querySelector('.main-banner').textContent));
- assert.equal(property(document.querySelector('.banner-resume'),'color',width),'#fff');assert.equal(property(document.querySelector('.banner-topline'),'color',width),'#fff');
+ assert.equal(property(document.querySelector('.banner-resume'),'color',width),'#000');assert.equal(property(document.querySelector('.banner-topline'),'color',width),'#000');
  assert.equal(property(document.body,'color',width),'#000','Black reading text is inherited throughout the page');
  assert.ok(parseFloat(property(document.querySelector('.banner-expand'),'min-height',width))>=44);
 }

@@ -1,0 +1,38 @@
+[
+  {
+    "file": "dist/brand/quanh-mark.svg",
+    "bytes": 14200,
+    "size": [
+      344,
+      284
+    ],
+    "transparentPixels": 56921,
+    "totalPixels": 97696,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "paths": 3,
+    "embeddedImages": 0
+  },
+  {
+    "file": "dist/brand/quanh-logo.svg",
+    "bytes": 20121,
+    "size": [
+      222,
+      54
+    ],
+    "transparentPixels": 8966,
+    "totalPixels": 11988,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "paths": 11,
+    "embeddedImages": 0
+  }
+]
