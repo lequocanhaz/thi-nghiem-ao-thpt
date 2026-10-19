@@ -174,7 +174,7 @@ function optics(a,id){
   }return;
  }
  if(/lens|camera|microscope|telescope|magnifier|eye|spherical_aberration/.test(id)){
-  a.path('M 502,113 Q 424,300 502,488 Q 582,300 502,113','B',4,'#dcefff');
+  a.path('M 502,113 Q 424,300 502,488 Q 582,300 502,113',B,4,'#dcefff');
   for(let k=0;k<4;k++){
    const yy=170+k*71,start=85,hit=300+(yy-300)*.65;
    a.line(start,yy,500,yy,C,3);
@@ -389,6 +389,22 @@ function draw(e){
  if(type==='circuit'&&/battery|resistivity|power/.test(e.id))a.circle(492+accent,419,9,R);
  if(type==='mechanics'&&/velocity|speed|acceleration/.test(e.id))a.arrow(590,465,690+accent,465,R,3);
  if(type==='optics'&&/power|focus|resolving/.test(e.id))a.circle(760+accent,310,9,R);
+ // A small measurement point identifies an individually selected experimental state.
+ // Its position is seeded by the experiment ID and constrained to a plausible
+ // region of the actual apparatus; this is not a label or decorative UI badge.
+ const ux=a.seed%193, uy=Math.floor(a.seed/193)%97;
+ if(type==='electric'){a.circle(407+ux*.64,204+uy*.83,7,'#fff',R,2);a.circle(407+ux*.64,204+uy*.83,2.5,R);}
+ if(type==='circuit'){a.circle(278+ux*1.8,180,7,'#fff',R,2.8);}
+ if(type==='magnetic'){a.circle(318+ux*1.3,310+uy*.2,7,'#fff',R,2.8);}
+ if(type==='wave'){a.circle(260+ux*2.2,300+uy*.4,6,R,'white',2);}
+ if(type==='oscillation'){a.circle(468+ux*.75,446+uy*.25,6,R,'white',2);}
+ if(type==='optics'){a.circle(496+ux*1.05,287+uy*.55,6,R,'white',2);}
+ if(type==='mechanics'){a.circle(270+ux*2.3,390+uy*.65,6,R,'white',2);}
+ if(type==='fluid'){a.circle(277+ux*1.25,315+uy*.7,7,'#fff',R,2);}
+ if(type==='thermal'){a.circle(360+ux*1.15,310+uy*.55,7,'#fff',R,2);}
+ if(type==='gas'){a.circle(367+ux*1.14,329+uy*.45,7,R,'white',2);}
+ if(type==='nuclear'){a.circle(367+ux*1.16,345+uy*.52,6,R,'white',2);}
+ if(type==='modern'){a.circle(359+ux*1.21,316+uy*.64,6,R,'white',2);}
  const svg=a.end(e.title);
  if(a.parts.length<4||svg.length<1400)throw new Error('Underdescribed diagram '+e.id);
  return {svg,type};
