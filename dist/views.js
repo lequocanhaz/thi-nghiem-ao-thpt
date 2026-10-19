@@ -36,7 +36,7 @@ export function cardsMarkup(list,prefs,icon){return list.length?list.map(e=>{
  <a href="#lab/${e.id}" class="card-body">
   <span class="card-topic">${esc(e.topic)}</span>
   <h3>${esc(e.shortTitle.toLocaleUpperCase('vi-VN'))}</h3>
-  <p class="card-purpose">${esc(e.description.split(/(?<=[.!?])\\s/)[0])}</p>
+  <p class="card-purpose">${esc(e.description.split(/(?<=[.!?])\s/)[0])}</p>
   <span class="card-syllabus" title="Phân loại theo mạch kiến thức của Chương trình GDPT 2018; chưa phải số bài cụ thể trong SGK">${esc(meta.label)} <small>· ${esc(meta.scope)}</small></span>
   <span class="card-interactions" aria-label="Hình thức tương tác">${tags.map(t=>`<span class="interaction-tag">${esc(t)}</span>`).join('')}</span>
   ${done?'<span class="card-complete">✓ Đã khảo sát</span>':''}
