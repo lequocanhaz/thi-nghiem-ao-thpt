@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {experiments} from '../dist/experiments.js';
+const root=new URL('../dist/images/thumbnails-2d/',import.meta.url);
+const dir=path.fileURLToPath?null:null;
+const files=fs.readdirSync(root);
+assert.equal(experiments.length,300);
+assert.equal(files.filter(f=>f.endsWith('.svg')).length,300,'300 SVG source images');
+assert.equal(files.filter(f=>f.endsWith('.webp')).length,300,'300 WebP thumbnails');
+const manifest=JSON.parse(fs.readFileSync(new URL('manifest.json',root)));
+assert.equal(manifest.renderedCount,300);
+assert.deepEqual(manifest.duplicateImagePairs,[]);
+assert.deepEqual(manifest.errors,[]);
+const known=new Set(experiments.map(e=>e.id));
+assert.equal(new Set(manifest.images.map(x=>x.id)).size,300);
+for(const e of experiments){
+ assert.ok(known.has(e.id));
+ const svg=new URL(encodeURIComponent(e.id)+'.svg',root);
+ const webp=new URL(encodeURIComponent(e.id)+'.webp',root);
+ assert.ok(fs.statSync(svg).size>900,e.id+' SVG missing or incomplete');
+ const raw=fs.readFileSync(webp);
+ assert.ok(raw.length>3000,e.id+' WebP missing or incomplete');
+ assert.equal(raw.subarray(0,4).toString(),'RIFF',e.id+' RIFF header');
+ assert.equal(raw.subarray(8,12).toString(),'WEBP',e.id+' WebP signature');
+}
+const loader=fs.readFileSync(new URL('../dist/thumbnails.js',import.meta.url),'utf8');
+assert.match(loader,/images\/thumbnails-2d\//);
+assert.doesNotMatch(loader,/new LabScene|new SoftwareScene/);
+console.log('300 SVG + 300 WebP and the lazy static-image loader verified.');
