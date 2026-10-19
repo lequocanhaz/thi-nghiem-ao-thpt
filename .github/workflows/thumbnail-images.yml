@@ -4,6 +4,7 @@ on:
     branches: [feat/real-physics-thumbnails-v40]
     paths:
       - scripts/generate_thumbnails.py
+      - scripts/thumbnail_contact_sheet.py
       - dist/thumbnail-export.html
       - .github/workflows/thumbnail-images.yml
   workflow_dispatch:
