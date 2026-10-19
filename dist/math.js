@@ -11,7 +11,7 @@ const greek={
 const sup=Object.fromEntries([... '⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ'].map((v,i)=>[v,[...'0123456789+-()n'][i]]));
 const sub=Object.fromEntries([... '₀₁₂₃₄₅₆₇₈₉₊₋'].map((v,i)=>[v,[...'0123456789+-'][i]]));
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const base=String.raw`(?:\\(?:sin|cos|tan|cot|ln|log)\s*[a-zA-Z](?:\^\{[^{}]+\})?|(?:\\[a-zA-Z]+|[a-zA-Z0-9])(?:_\{[^{}]+\})?(?:\^\{[^{}]+\})?)`;
+const base=String.raw`(?:\\(?:sin|cos|tan|cot|ln|log)(?:\^\{[^{}]+\})?\s*[a-zA-Z](?:\^\{[^{}]+\})?|(?:\\[a-zA-Z]+|[a-zA-Z0-9])(?:_\{[^{}]+\})?(?:\^\{[^{}]+\})?)`;
 const frac=new RegExp('('+base+')\\s*\\/\\s*('+base+')','g');
 
 /** Convert legacy Unicode school formulas to renderable LaTeX without changing their meaning.
@@ -29,6 +29,7 @@ export function legacyFormulaToLatex(value){
     .replace(/[αβγδΔεθλμνξπρστφΦωΩ∞∈∉≠≤≥≈×·±√∑∫∂∇→⇒]/g,c=>greek[c]||c)
     .replace(/(?<!\\)\b(sin|cos|tan|cot|ln|log|exp)\b/g,'\\$1 ')
     .replace(/(?<!\\)\b(sqrt)\b/g,'\\sqrt ')
+    .replace(/\\(sin|cos|tan|cot)\s+\^/g,'\\$1^')
     .replace(frac,(all,num,den)=>'\\dfrac{' +num.trim()+'}{'+den.trim()+'}');
  return s;
 }
