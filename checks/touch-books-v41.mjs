@@ -26,6 +26,7 @@ const {document,window}=parseHTML(fs.readFileSync(new URL('../dist/books.html',i
 let reduceMotion=false,failImageSuffix=null;
 Object.assign(globalThis,{document,window,matchMedia:()=>({matches:reduceMotion}),location:{href:'https://lab.example/books.html?grade=10&page=4',search:'?grade=10&page=4'},history:{replaceState(){},pushState(){}},localStorage:{getItem:()=>null,setItem(){}},fetch:async()=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(new URL('../dist/books/catalog.json',import.meta.url),'utf8'))}),Image:class{naturalWidth=1120;naturalHeight=1600;decode=async()=>{};set src(value){this._src=value;queueMicrotask(()=>failImageSuffix&&value.endsWith(failImageSuffix)?this.onerror?.():this.onload?.());}get src(){return this._src;}}});
 Object.defineProperty(window.HTMLSelectElement.prototype,'value',{configurable:true,get(){return this._value||this.querySelector('option[selected]')?.getAttribute('value')||this.querySelector('option')?.getAttribute('value')||'';},set(value){this._value=String(value);}});
+let viewportResize;window.visualViewport={scale:1,addEventListener:(name,fn)=>viewportResize=fn};
 window.innerWidth=390;window.PointerEvent=class{};
 const stage=document.querySelector('#bookStage');Object.defineProperties(stage,{clientWidth:{value:358},clientHeight:{value:500}});
 window.HTMLElement.prototype.getBoundingClientRect=function(){return {width:parseFloat(this.style.width)||250,height:parseFloat(this.style.height)||400};};
@@ -54,6 +55,8 @@ for(const grade of [10,11,12]){
 }
 reduceMotion=true;
 send('pointerdown',240,100,0);send('pointermove',60,103,200);send('pointerup',60,103,230);await flush();assert.equal(document.querySelector('#bookPage').value,'7','reduced motion still navigates');
+send('pointerdown',240,100,0);send('pointermove',60,103,200);window.visualViewport.scale=1.5;viewportResize();await flush();assert.equal(document.querySelector('#bookPage').value,'7','native pinch cancels active turn');assert.ok(stage.style.touchAction.includes('pan-x'));
+send('pointerdown',240,100,0);send('pointermove',60,103,200);send('pointerup',60,103,230);await flush();assert.equal(document.querySelector('#bookPage').value,'7','native browser zoom pans without turning');window.visualViewport.scale=1;viewportResize();
 failImageSuffix='books/10/002.webp';const select=document.querySelector('#bookGrade');select.value='10';select.dispatchEvent(new window.Event('change'));await flush();
 send('pointerdown',240,100,0);send('pointermove',60,103,200);send('pointerup',60,103,230);await flush();assert.equal(document.querySelector('#bookPage').value,'1','failed target retains last readable page');assert.equal(document.querySelector('#bookError').hidden,false);
 failImageSuffix=null;document.querySelector('#retryBook').click();await flush();assert.equal(document.querySelector('#bookPage').value,'2','retry loads the failed swipe target');

@@ -5,6 +5,7 @@ const $=s=>document.querySelector(s);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let catalog=[],book=null,page=1,zoom=1,preferTwo=true,two=false,token=0,busy=false,failedPage=null,activeTurn=null,touchController=null;
 const cache=new Map();
+const browserZoomed=()=>Number(window.visualViewport?.scale||1)>1.01;
 function savedPage(grade,total){try{return boundedPage(localStorage.getItem('quanh.book.'+grade)||1,total);}catch{return 1;}}
 function savePage(){try{localStorage.setItem('quanh.book.'+book.grade,String(page));}catch{}}
 function imageFor(grade,number){
@@ -22,7 +23,7 @@ function updateControls(){
  $('#bookPrevious').disabled=busy||visible[0]===1;$('#bookNext').disabled=busy||visible.at(-1)===book.pages;
  $('#zoomOut').disabled=zoom<=1;$('#zoomIn').disabled=zoom>=2.5;
  $('#zoomValue').textContent=Math.round(zoom*100)+'%';$('#spreadMode').setAttribute('aria-pressed',String(two));
- $('#bookStage').setAttribute('aria-busy',String(busy));$('#bookStage').style.touchAction=zoom>1?'pan-x pan-y pinch-zoom':'pan-y pinch-zoom';
+ $('#bookStage').setAttribute('aria-busy',String(busy));$('#bookStage').style.touchAction=zoom>1||browserZoomed()?'pan-x pan-y pinch-zoom':'pan-y pinch-zoom';
  const chapter=[...book.chapters].reverse().find(c=>c.page<=page);$('#bookChapter').value=String(chapter?.page||0);
 }
 function sizePaper(){
@@ -124,7 +125,8 @@ $('#bookChapter').addEventListener('change',()=>{const target=Number($('#bookCha
 $('#bookFullscreen').addEventListener('click',fullscreen);$('#retryBook').addEventListener('click',()=>showPage(failedPage??page));
 document.addEventListener('fullscreenchange',()=>{const on=Boolean(document.fullscreenElement)||$('#reader').classList.contains('reading-focus');$('#bookFullscreen').setAttribute('aria-label',on?'Thoát toàn màn hình':'Đọc toàn màn hình');resize();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){$('#reader').classList.remove('reading-focus');if(!document.fullscreenElement)$('#bookFullscreen').setAttribute('aria-label','Đọc toàn màn hình');resize();return;}if(!book||event.ctrlKey||event.metaKey||event.altKey||event.target.closest('input,select,textarea'))return;if(event.key==='ArrowRight'){event.preventDefault();navigate(1);}else if(event.key==='ArrowLeft'){event.preventDefault();navigate(-1);}else if(event.key==='Home'){event.preventDefault();showPage(1);}else if(event.key==='End'){event.preventDefault();showPage(book.pages);}});
-touchController=bindBookTouch($('#bookStage'),{canStart:()=>Boolean(book)&&!busy&&zoom===1,begin:previewTurn,move:previewProgress,finish:finishTurn});
+touchController=bindBookTouch($('#bookStage'),{canStart:()=>Boolean(book)&&!busy&&zoom===1&&!browserZoomed(),begin:previewTurn,move:previewProgress,finish:finishTurn});
+window.visualViewport?.addEventListener('resize',()=>{if(browserZoomed()){touchController?.reset();if(activeTurn){discardTurn();busy=false;}}updateControls();});
 window.addEventListener('resize',resize);window.addEventListener('popstate',readRoute);
 if(typeof ResizeObserver!=='undefined')new ResizeObserver(sizePaper).observe($('#bookStage'));
 

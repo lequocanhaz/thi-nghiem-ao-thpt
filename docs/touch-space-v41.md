@@ -4,7 +4,7 @@ The simulation studio is 180 world units wide, up from 18; its floor is 350 inst
 
 Horizontal and angled projectile axes now cover the entire flight range and peak height, including the reported 31.55 m / 29.26 m/s state and maximum permitted inputs. Unit-to-world mappings are unchanged. Axis extents are independent of playback time, so they do not jump during a flight.
 
-All three textbook readers accept dragging with touch, pen or mouse. The page follows horizontal movement before release; a sufficient pull or flick commits the turn and a short pull snaps back. Vertical intent yields to scrolling. A second pointer, cancellation, rotation or route change abandons the turn. Zoomed pages pan without turning. Pointer Events have a Touch Events fallback. Covers and final pages stop at their boundaries. Failed target images retain the last readable page and offer retry. Reduced motion preserves navigation without 3D animation. Mobile reader buttons have 44 px width, with safe-area padding for focus mode.
+All three textbook readers accept dragging with touch, pen or mouse. The page follows horizontal movement before release; a sufficient pull or flick commits the turn and a short pull snaps back. Vertical intent yields to scrolling. A second pointer, cancellation, rotation or route change abandons the turn. Zoomed pages pan without turning, including native browser pinch zoom detected through VisualViewport. Pointer Events have a Touch Events fallback. Covers and final pages stop at their boundaries. Failed target images retain the last readable page and offer retry. Reduced motion preserves navigation without 3D animation. Mobile reader buttons have 44 px width, with safe-area padding for focus mode.
 
 ## Verification
 
@@ -17,4 +17,4 @@ All three textbook readers accept dragging with touch, pen or mouse. The page fo
 
 These are CPU, file, CSS cascade and synthetic DOM/event checks. They do not constitute browser pixel layout, real iPhone touch, WebKit or iOS Safari tests. The managed environment sets `SITES_MANAGED_LINUX_CONTAINER=1`; the Sites workflow requires `$control-browser` for browser QA, and that skill/capability is unavailable. No preview server, substitute browser automation or new browser screenshot was used. Historical v40/v37 browser evidence remains explicitly historical.
 
-Runtime cache versions are v41 for changed entrypoints and modules. Stable textbook data/images and physics modules retain their existing versions. Deployment is through the existing GitHub Pages workflow.
+Runtime cache versions are v41 for changed entrypoints and modules, with the reader entrypoint v42 for the native pinch-zoom follow-up. Stable textbook data/images and physics modules retain their existing versions. Deployment is through the existing GitHub Pages workflow.
