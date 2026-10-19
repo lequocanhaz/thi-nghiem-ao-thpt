@@ -20,6 +20,8 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci --ignore-scripts
+      - name: Install pinned KaTeX for math validation
+        run: npm install --ignore-scripts --no-save --package-lock=false katex@0.16.45
       - run: npm run check
   deploy:
     if: github.event_name != 'pull_request'
@@ -33,6 +35,18 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Bundle KaTeX locally, including mathematical fonts
+        run: |
+          npm install --no-save --ignore-scripts --package-lock=false katex@0.16.45
+          mkdir -p dist/vendor/katex/fonts
+          cp node_modules/katex/dist/katex.min.js dist/vendor/katex/katex.min.js
+          cp node_modules/katex/dist/katex.min.css dist/vendor/katex/katex.min.css
+          cp -R node_modules/katex/dist/fonts/. dist/vendor/katex/fonts/
+          test -s dist/vendor/katex/katex.min.js
+          test -s dist/vendor/katex/fonts/KaTeX_Main-Regular.woff2
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

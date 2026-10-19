@@ -1,17 +1,37 @@
 import {assistantEndpoint} from './ai-config.js?v=22';
 import {prepareImage,isImageFile,imageLimits,imageHistory} from './chat-images.js?v=35';
+import {typesetMath} from './math.js?v=48';
 function deviceTimeZone(){try{return Intl.DateTimeFormat().resolvedOptions().timeZone||'Asia/Ho_Chi_Minh';}catch{return 'Asia/Ho_Chi_Minh';}}
 // Provider output is text, never executable HTML.
 function answerContent(element,text,document){
- const pattern=/\*\*([^*\n]+)\*\*|(?<!\$)\$([^$\n\\]+)\$(?!\$)|https:\/\/[^\s<>"']+/g;let offset=0;
- for(const match of text.matchAll(pattern)){
-  element.append(document.createTextNode(text.slice(offset,match.index)));let node;
-  if(match[1]){node=document.createElement('strong');node.textContent=match[1];}
-  else if(match[2]){node=document.createElement('span');node.className='ai-inline-math';node.textContent=match[2];}
-  else{const url=match[0].replace(/[.,;:!?)]+$/,'');node=document.createElement('a');node.textContent=url;node.href=url;node.target='_blank';node.rel='noopener noreferrer';element.append(node);element.append(document.createTextNode(match[0].slice(url.length)));offset=match.index+match[0].length;continue;}
+ // Supported math: $$...$$, \[...\], \(...\), and $...$.
+ // Everything other than trusted mathematical typesetting remains plain text.
+ const pattern=/\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|(?<!\$)\$([^$\n]+)\$(?!\$)|\*\*([^*\n]+)\*\*|https:\/\/[^\s<>"']+/g;
+ let offset=0;
+ for(const match of String(text||'').matchAll(pattern)){
+  element.append(document.createTextNode(text.slice(offset,match.index)));
+  let node;
+  if(match[1]||match[2]||match[3]||match[4]){
+   const latex=match[1]||match[2]||match[3]||match[4];
+   node=document.createElement('span');
+   node.className='math-tex'+(match[1]||match[2]?' math-block':' ai-inline-math');
+   node.setAttribute('data-math-tex',latex);
+   node.setAttribute('data-math-display',match[1]||match[2]?'true':'false');
+   node.textContent=latex;
+  }else if(match[5]){
+   node=document.createElement('strong');
+   node.textContent=match[5];
+  }else{
+   const url=match[0].replace(/[.,;:!?)]+$/,'');
+   node=document.createElement('a');node.textContent=url;node.href=url;
+   node.target='_blank';node.rel='noopener noreferrer';
+   element.append(node);element.append(document.createTextNode(match[0].slice(url.length)));
+   offset=match.index+match[0].length;continue;
+  }
   element.append(node);offset=match.index+match[0].length;
  }
  element.append(document.createTextNode(text.slice(offset)));
+ typesetMath(element);
 }
 const attachIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 12 6-6a4 4 0 0 1 6 6l-8 8a6 6 0 0 1-8-8l8-8m-6 10 7-7"/></svg>';
 export class LabAssistant{
@@ -52,7 +72,7 @@ export class LabAssistant{
  render(){const key=this.key();if(this.currentKey&&this.currentKey!==key){this.drafts.set(this.currentKey,this.input.value);this.input.value=this.drafts.get(key)||'';}this.currentKey=key;const context=this.getContext?.();const contextName=context?.id&&context.id!=='library'?context.title||'Thí nghiệm hiện tại':'Thư viện thí nghiệm';this.q('.ai-context').textContent=contextName;this.q('.ai-context').title=contextName;
   const list=this.q('.ai-messages');list.replaceChildren();const messages=[...this.thread(),...(this.pending?.key===key?[{role:'user',content:this.pending.question,pictures:this.pending.pictures},{role:'assistant',content:'Đang trả lời…',pending:true}]:[])];
   if(!messages.length){const empty=this.document.createElement('div');empty.className='ai-empty';empty.innerHTML='<span class="ai-empty-mark" aria-hidden="true"><img src="brand/quanh-mark.svg?v=37" alt="" width="58" height="58"></span><h3>Bạn muốn khám phá điều gì?</h3><p>Gửi câu hỏi, ảnh bài tập hoặc đồ thị.</p>';list.append(empty);}
-  for(const message of messages){const el=this.document.createElement('div');el.className='ai-message';el.dataset.role=message.role;el.setAttribute('aria-label',message.role==='user'?'Bạn':'Trợ lý AI');if(message.role==='assistant'&&!message.pending)answerContent(el,message.content,this.document);else el.textContent=message.content;
+  for(const message of messages){const el=this.document.createElement('div');el.className='ai-message';el.dataset.role=message.role;el.setAttribute('aria-label',message.role==='user'?'Bạn':'Trợ lý AI');if(!message.pending)answerContent(el,message.content,this.document);else el.textContent=message.content;
    if(message.pictures?.length){const pictures=this.document.createElement('div');pictures.className='ai-message-images';for(const [i,p] of message.pictures.entries()){const img=this.document.createElement('img');img.src=p.thumbnail||p.url;img.alt=p.name||'Ảnh đã gửi';img.loading='lazy';const button=this.document.createElement('button');button.type='button';button.setAttribute('aria-label','Xem ảnh '+(p.name||'đã gửi'));const kept=(message.images||[]),offset=message.pictures.length-kept.length,full=p.url||(i>=offset?kept[i-offset]:p.thumbnail);button.addEventListener('click',()=>this.showImage(p,full,button));button.append(img);pictures.append(button);}el.prepend(pictures);}if(message.pending)el.classList.add('ai-pending');list.append(el);
   }list.scrollTop=list.scrollHeight;this.renderAttachments();this.syncComposer();this.input.setAttribute('aria-describedby','aiConnectionStatus');this.status.id='aiConnectionStatus';this.notice(!this.endpoint?'Trợ lý AI chưa kết nối máy chủ.':this.pending&&this.pending.key!==key?'Đang trả lời ở bài trước. Bạn có thể soạn câu hỏi mới.':'');
  }

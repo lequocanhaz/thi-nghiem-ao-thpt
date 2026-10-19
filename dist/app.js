@@ -1,10 +1,11 @@
+import {installMathObserver} from './math.js?v=48';
 import {isDriven,processFor,advanceProcess,seekProcess,cleanProcess} from './playback.js?v=37';
 import {coordinateProfile,hasCoordinateGrid} from './coordinates.js?v=43';
 import {libraryContext} from './assistant-context.js?v=24';
-import {LabAssistant} from './assistant.js?v=37';
+import {LabAssistant} from './assistant.js?v=48';
 import {parameterLimits,parameterWindow,cleanParameterWindows,revealParameterWindows} from './parameter-window.js?v=17';
 import {BannerScene} from './banner.js?v=18';
-import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=17';
+import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=48';
 import {fitModels,fitSummary,reportMarkup} from './research.js?v=17';
 import {themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams} from './learning.js?v=17';
 import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=44';
@@ -214,7 +215,7 @@ $('#main').addEventListener('lab-context-lost',()=>{recoverRenderer('Thiết b�
 window.addEventListener('hashchange',()=>{try{route();}catch(error){renderErrors.push(String(error));running=false;toast('Không mở được thí nghiệm này. Hãy thử quay về thư viện.');}});window.addEventListener('resize',()=>{applyLayout();});window.addEventListener('pageshow',()=>{if($('#bannerCanvas')&&!banner)mountBanner();});window.addEventListener('pagehide',()=>{stopBanner();save();narrator.stop();stopTone();});document.addEventListener('visibilitychange',()=>{if(document.hidden){running=false;save();stopTone();narrator.stop();}});
 function animate(now){requestAnimationFrame(animate);const dt=last?Math.min(.07,(now-last)/1000):0;last=now;if(document.hidden)return;sceneAccumulator+=dt;uiAccumulator+=dt;try{if(!active&&heroState&&$('#tryExperiment')?.open&&$('#heroCanvas')&&viewer&&prefs.motion){heroState.s.t+=dt*.3;if(sceneAccumulator>=1/30){viewer.update(heroState.id,heroState.s,evaluate(heroState.id,heroState.s),{hero:true,motion:prefs.motion,switches:defaults.switches});sceneAccumulator=0;}}if(running&&active){if(isDriven(active)){const complete=advanceProcess(active,state,config,dt*speed);if(complete&&!config.loop){running=false;save();}if(sceneAccumulator>=1/30&&viewer&&!viewFailed){viewer.update(active.id,state,getData(),{...config,motion:prefs.motion,playing:running});sceneAccumulator=0;}if(uiAccumulator>=.1||!running){syncControls();refresh();uiAccumulator=0;}}else{state.t=(state.t||0)+dt*speed*(active.playSeconds?duration(active,state,getData())/active.playSeconds:(active.timeScale||1));let d=getData();const max=duration(active,state,d);if(state.t>=max){if(config.loop||active.visualOnly){state.t=state.t%max;}else{state.t=max;running=false;save();}d=getData();}if(sceneAccumulator>=1/30){if(viewer&&!viewFailed)viewer.update(active.id,state,d,{...config,motion:prefs.motion,playing:running});sceneAccumulator=0;}if(uiAccumulator>=.10||!running){refresh();uiAccumulator=0;}}}}catch(error){renderErrors.push(String(error));recoverRenderer(error);if(active)refresh();toast('Đã chuyển sang chế độ sơ đồ.');}}
 $('#dialog').addEventListener('close',restoreDialogFocus);
-if(!Array.isArray(prefs.favorites))prefs.favorites=[];if(!Array.isArray(prefs.recent))prefs.recent=[];prefs.progress=prefs.progress||{};document.documentElement.style.setProperty('--text-scale',prefs.textSize);route();requestAnimationFrame(animate);
+if(!Array.isArray(prefs.favorites))prefs.favorites=[];if(!Array.isArray(prefs.recent))prefs.recent=[];prefs.progress=prefs.progress||{};document.documentElement.style.setProperty('--text-scale',prefs.textSize);installMathObserver(document);route();requestAnimationFrame(animate);
 
 const assistantLibrary=libraryContext(experiments);
 const assistantContext=()=>active?{id:active.id,title:active.title,catalog:assistantLibrary,formula:active.formula,conditions:active.limit,configuration:{electricMode:active.id==='electric'?electricModes[config.mode]:undefined,capacitorMode:active.id==='capacitor'?config.capMode:undefined},parameters:active.params.map(p=>({key:p.key,label:p.label,value:state[p.key],unit:p.unit})),columns:active.headers,measurements:rows.slice(-12).map(r=>r.values)}:assistantLibrary;

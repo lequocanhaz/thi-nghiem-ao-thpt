@@ -945,3 +945,23 @@ button,a.button{transition:none}
 .home .home-section-title{font-size:clamp(26px,3vw,36px);line-height:1.25;font-weight:750;letter-spacing:-.035em;margin-top:0;margin-bottom:16px}
 .home .entry-heading{align-items:center}
 .home .entry-heading .home-section-title{margin-bottom:0}
+
+
+/* v48: mathematical expressions typeset with self-hosted KaTeX. */
+.math-tex{max-width:100%;font-family:'Cambria Math','STIX Two Math',serif;color:#101215}
+.math-tex .katex{font-size:1.08em;color:inherit}
+.math-tex.math-block{display:block;width:100%;margin:.45em 0;overflow-x:auto;overflow-y:hidden;white-space:normal;line-height:1.65;padding:.2em 0}
+.math-tex.math-block>.katex-display{margin:.25em 0;max-width:max-content;min-width:100%}
+.math-formula>.math-tex{display:none}
+.math-formula.has-katex>.math-tex{display:block}
+.math-formula.has-katex>math,.math-formula.has-katex>.formula-fallback{display:none}
+.math-formula.has-katex{font-size:1.18rem;line-height:1.7}
+.ai-message .math-tex{white-space:normal;overflow-wrap:normal;word-break:normal}
+.ai-message .math-tex.math-block{padding:8px 0;max-width:100%;font-size:1.08rem}
+.ai-message .math-tex.math-block .katex-display{margin:.3em 0}
+.ai-message .ai-inline-math{display:inline-block;vertical-align:middle;margin-inline:.04em}
+@media(max-width:620px){
+ .math-formula.has-katex{font-size:1rem}
+ .ai-message .math-tex.math-block{font-size:.99rem}
+ .math-tex .katex{font-size:1em}
+}
