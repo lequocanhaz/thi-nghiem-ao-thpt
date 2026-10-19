@@ -1,4 +1,5 @@
 import * as T from './vendor/three.module.min.js';
+import {SPACE_FACTOR,MIN_SPACE_ZOOM,STUDIO_SIZE} from './simulation-space.js?v=41';
 
 // Bounds belong to the visible apparatus, not the surrounding studio or hidden parts.
 export function apparatusBounds(group){
@@ -31,7 +32,7 @@ export function frameApparatus(camera,controls,group,margin=.86){
   let halfWidth=.25,halfHeight=.25;
   for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){const p=new T.Vector3(x,y,z).sub(center);halfWidth=Math.max(halfWidth,Math.abs(p.dot(right)));halfHeight=Math.max(halfHeight,Math.abs(p.dot(up)));}
   const aspect=Math.max(.1,camera.aspect||1),half=Math.max(halfHeight,halfWidth/aspect)/margin,distance=Math.max(12,size.length()*2);
-  camera.top=half;camera.bottom=-half;camera.left=-half*aspect;camera.right=half*aspect;camera.zoom=1;camera.near=.01;camera.far=Math.max(100,distance+size.length()*2);
+  camera.top=half;camera.bottom=-half;camera.left=-half*aspect;camera.right=half*aspect;camera.zoom=1;camera.near=.01;camera.far=Math.max(STUDIO_SIZE*3,distance+size.length()*2);controls.minZoom=MIN_SPACE_ZOOM;
   controls.target.copy(center);camera.position.copy(center).addScaledVector(direction,distance);camera.lookAt(center);camera.updateProjectionMatrix();controls.update();return true;
  }
  const tanY=Math.tan(T.MathUtils.degToRad(camera.getEffectiveFOV())/2),tanX=tanY*Math.max(.1,camera.aspect);
@@ -41,7 +42,7 @@ export function frameApparatus(camera,controls,group,margin=.86){
   distance=Math.max(distance,Math.abs(p.dot(right))/(tanX*margin)+depth,Math.abs(p.dot(up))/(tanY*margin)+depth);
  }
  controls.target.copy(center);camera.position.copy(center).addScaledVector(direction,distance);
- controls.maxDistance=Math.max(22,distance*2);controls.minDistance=Math.min(4,distance*.4);
- camera.far=Math.max(100,distance+size.length()*2);camera.updateProjectionMatrix();camera.lookAt(center);controls.update();
+ controls.maxDistance=Math.max(22,distance*2)*SPACE_FACTOR;controls.minDistance=Math.min(4,distance*.4);
+ camera.far=Math.max(STUDIO_SIZE*3,controls.maxDistance+size.length()*2);camera.updateProjectionMatrix();camera.lookAt(center);controls.update();
  return true;
 }

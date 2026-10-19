@@ -1,6 +1,6 @@
 {
-  "modules": 54,
-  "localImports": 102,
+  "modules": 59,
+  "localImports": 111,
   "unchangedAudioFiles": 301,
   "preservedScientificModules": 6,
   "baselineCommit": "de83fd8936436cd448ac5056a8478d10149c70a2",

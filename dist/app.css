@@ -938,3 +938,5 @@ button,a.button{transition:none}
 .table-scroll{height:auto;overflow:visible}
 .height-resizer{display:none}
 }
+
+.space-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:8px 12px;border-top:1px solid #e5e8ee;background:#fff}.space-controls button{min-width:44px;min-height:44px;padding:0 12px;border:1px solid #dce1e8;border-radius:7px;background:#fff;font-size:.8125rem;font-weight:650}.space-controls button:first-child{background:#f1f4f8}.space-controls button:nth-last-child(2){margin-left:auto}

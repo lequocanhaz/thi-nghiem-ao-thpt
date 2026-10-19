@@ -1,12 +1,15 @@
 import {modelLabel} from './model-label.js?v=35';
 import {tickStep,tickValues,tickText} from './plot-grid.js?v=35';
 import * as T from './vendor/three.module.min.js';
+import {evaluate} from './models.js?v=17';
+import {axisExtent} from './simulation-space.js?v=41';
 const axis=(key,unit,scale,range)=>({key,unit,scale,range});
 // World-to-physical mappings are taken from the corresponding apparatus builders.
 // A display scale is not silently interpreted as metres.
 const orientationIds=new Set('incline pendulum lever hooke collision magnetic lorentz solenoid vector_sum vector_components relative_motion gravitational_force orbit escape_speed kepler torque_angle rotational_inertia angular_accel rolling beam_supports three_strings collision_2d angular_momentum gyroscope rotating_planet elliptic_orbit binary_orbit tidal_gradient charged_ring charged_rod charged_disk charged_solid_sphere charged_plane equipotential_map three_charge_energy electric_work_paths dipole_torque uniform_field potential_point potential_pair loop_axis helmholtz_coils finite_solenoid toroid compass_coil velocity_selector mass_spectrometer cyclotron magnetic_helix em_plane_wave poynting_energy prism lens mirror reflection refraction tir ray_slab grating young diffraction polarization'.split(' '));
 export function coordinateProfile(id,s={}){
  const x=(unit,scale,range)=>axis('x',unit,scale,range),y=(key,unit,scale,range)=>axis(key,unit,scale,range);
+ const flight=['horizontal','projectile'].includes(id)&&Number.isFinite(s.v0)?evaluate(id,s):null;
  const profiles={
   electric:{origin:[0,0,0],axes:[x('m',8,[-.3,.3]),y('y','m',8,[-.25,.25]),axis('z','m',8,[-.25,.25])],plane:'front'},
   energy:{origin:[-1.7,.25,0],axes:[y('h','m',.2,[0,20])],plane:'front'},
@@ -17,8 +20,8 @@ export function coordinateProfile(id,s={}){
   uniform:{origin:[-3,.22,0],axes:[x('m',.12,[0,50])],plane:'front'},
   acceleration:{origin:[-1.5,.22,0],axes:[x('m',.06,[0,100])],plane:'front'},
   newton:{origin:[0,.22,0],axes:[x('m',.5,[0,10])],plane:'front'},
-  horizontal:{origin:[-3,.35,0],axes:[x('m',.2,[0,30]),y('y','m',.2,[0,20])],plane:'front'},
-  projectile:{origin:[-3,.35,0],axes:[x('m',.48,[0,12]),y('y','m',.48,[0,8])],plane:'front'},
+  horizontal:{origin:[-3,.35,0],axes:[x('m',.2,[0,axisExtent(30,flight?.range)]),y('y','m',.2,[0,axisExtent(20,s.h0)])],plane:'front'},
+  projectile:{origin:[-3,.35,0],axes:[x('m',.48,[0,axisExtent(12,flight?.range)]),y('y','m',.48,[0,axisExtent(8,flight?.height)])],plane:'front'},
   circular:{origin:[0,.3,0],axes:[x('m',1,[-(s.radius||1.5),(s.radius||1.5)]),axis('z','m',1,[-(s.radius||1.5),(s.radius||1.5)])],plane:'top'},
   interference:{origin:[0,.65,-1.7],axes:[x('m',1,[-3,3]),axis('z','m',1,[0,4])],plane:'top'}
  };
