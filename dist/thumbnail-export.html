@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quanh Lab — Offline thumbnail renderer</title>
+<style>
+html,body{margin:0;width:100%;height:100%;background:#fff;overflow:hidden}
+#stage{width:960px;height:600px;background:#fff;position:absolute;left:0;top:0}
+#status{position:absolute;right:8px;bottom:8px;font:12px system-ui;color:#333}
+</style>
+</head>
+<body>
+<div id="stage" aria-hidden="true"></div><div id="status">Loading models…</div>
+<script type="module">
+import {experiments,initialState} from './experiments.js?v=17';
+import {evaluate,duration} from './models.js?v=17';
+import {LabScene} from './scene3d.js?v=37';
+import {SoftwareScene} from './software-scene.js?v=37';
+const stage=document.querySelector('#stage'),status=document.querySelector('#status');
+let viewer=null,rendererKind=null;
+function initialize(kind){
+  viewer?.dispose();
+  viewer=null;
+  viewer=kind==='software'?new SoftwareScene():new LabScene();
+  rendererKind=kind;
+  viewer.renderer.setPixelRatio(1);
+  viewer.renderer.shadowMap.enabled=false;
+  viewer.mount(stage);
+  viewer.renderer.setSize(960,600,false);
+  viewer.camera.aspect=960/600;
+  viewer.camera.updateProjectionMatrix();
+}
+window.listLabExperiments=()=>experiments.map(({id,title,shortTitle,topic,grade})=>({id,title,shortTitle,topic,grade}));
+window.renderLabThumbnail=async (id,kind='webgl')=>{
+  const e=experiments.find(item=>item.id===id);
+  if(!e)throw Error('Unknown experiment '+id);
+  if(!viewer||rendererKind!==kind){
+    try{initialize(kind);}catch(error){
+      if(kind==='software')throw error;
+      initialize('software');
+    }
+  }
+  const cfg={mode:3,capMode:'charge',thumbnail:true,viewMode:'3d',
+    switches:{lines:true,connections:true,components:true,resultant:true,
+      parallelogram:true,axes:false,vectors:true,trajectory:true,labels:false}};
+  const s={...initialState(e),t:0};
+  let data=evaluate(e.id,s,cfg);
+  if(e.params.some(p=>p.key==='t')){
+    const limit=duration(e,s,data);
+    if(Number.isFinite(limit)&&limit>0)s.t=Math.min(limit*.3,1.5);
+  }
+  data=evaluate(e.id,s,cfg);
+  try{
+    viewer.update(e.id,s,data,cfg);
+    viewer.view('iso');
+    const image=viewer.capture();
+    if(!image?.startsWith('data:image/png;base64,'))throw Error('Bad canvas capture for '+id);
+    status.textContent=e.title;
+    return {id,title:e.title,grade:e.grade,topic:e.topic,renderer:rendererKind,image};
+  }catch(error){
+    viewer?.dispose();viewer=null;rendererKind=null;
+    if(kind==='webgl')return window.renderLabThumbnail(id,'software');
+    throw error;
+  }
+};
+window.THUMBNAIL_EXPORT_READY=true;
+status.textContent='Physics models ready';
+</script>
+</body>
+</html>
