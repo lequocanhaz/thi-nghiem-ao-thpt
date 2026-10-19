@@ -235,8 +235,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .view-menu>summary{list-style:none;display:flex;align-items:center}
 .view-menu-options{position:absolute;z-index:25;right:0;top:calc(100% + 8px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;max-width:100%;width:248px;padding:8px;border:1px solid #ccd7e8;background:#fff;border-radius:12px;box-shadow:0 12px 30px #17253b1c}
 .view-menu-options button{font-size:.8125rem;border-radius:8px}
-.stage-viewport{position:relative;min-width:0;background:#f5f8fb}
-.visual{position:relative;min-width:0;height:clamp(400px,60svh,800px);min-height:300px;touch-action:pan-y;background:#f5f8fb;overflow:hidden}
+.stage-viewport{position:relative;min-width:0;background:#e8edf4}
+.visual{position:relative;min-width:0;height:clamp(400px,60svh,800px);min-height:300px;touch-action:pan-y;background:#e8edf4;overflow:hidden}
 .touch-interaction{display:none;position:absolute;bottom:12px;right:12px;z-index:4;background:#fff;border:1px solid #c7d5e9;border-radius:9px;padding:9px 12px;font-size:.8125rem;max-width:calc(100% - 24px)}
 .readouts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--line);background:#fcfbff}
 .meter{min-width:0;padding:16px;border-right:1px solid var(--line)}
