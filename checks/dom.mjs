@@ -88,6 +88,12 @@ console.log('PASS research DOM: fit selection/residuals, recorded timestamps, mi
 exec('catalogPage=1;levelFilter="all";catalogSort="default";filter="all";grade="all";topic="all";search="";pathFilter=null;renderHome()');
 assert.equal(document.querySelectorAll('.experiment-card').length,24);assert.ok(document.querySelector('#resultCount').textContent.includes('300'));const seen=new Set();
 for(let page=1;page<=Math.ceil(experiments.length/24);page++){await click(`[data-page="${page}"]`);for(const card of document.querySelectorAll('[data-thumb]'))seen.add(card.dataset.thumb);}assert.equal(seen.size,300,'Every experiment must be reachable by pagination');
+const selectedSection=curriculumOptions(experiments).find(item=>item.grade===11&&item.key==='11:Điện trường');
+assert.ok(selectedSection,'grade 11 electric-field curriculum section exists');
+await change('#curriculumTopicFilter',selectedSection.key);
+assert.ok([...document.querySelectorAll('[data-thumb]')].every(node=>curriculumKey(experiments.find(e=>e.id===node.dataset.thumb))===selectedSection.key),'Curriculum selector filters by grade and topic');
+await click('[data-action="clear-filters"]');
+assert.equal(exec('curriculumFilter'),'all','Clear filters resets curriculum selector');
 await change('#levelFilter','extra');assert.ok([...document.querySelectorAll('[data-thumb]')].every(n=>experiments.find(e=>e.id===n.dataset.thumb).extra));await change('#levelFilter','core');assert.ok([...document.querySelectorAll('[data-thumb]')].every(n=>!experiments.find(e=>e.id===n.dataset.thumb).extra));
 await change('#catalogSort','name');assert.equal(exec('catalogPage'),1);await change('#levelFilter','all');
 exec('search="quang dien";catalogPage=1;renderCards()');assert.ok(document.querySelector('[data-thumb="photoelectric"]'));
