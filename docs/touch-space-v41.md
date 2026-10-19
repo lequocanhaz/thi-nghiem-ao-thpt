@@ -1,6 +1,6 @@
 # Quanh Lab v41 — expanded workspace and direct page turning
 
-The simulation studio is 180 world units wide, up from 18; its floor is 350 instead of 35. Grid spacing stays unchanged. Camera travel and minimum orthographic zoom permit a tenfold wider view. Every lab has “Không gian ×10”, “Vừa mô hình” and accessible zoom buttons. The overview changes only the view; physical inputs and equations remain intact. The grid centers on the current apparatus and grows further when its bounds exceed the studio.
+The simulation studio is 180 world units wide, up from 18; its floor is 350 instead of 35. Grid spacing stays unchanged. Atmospheric fog density is reduced proportionally, so the expanded scene stays visible at long camera distances. Camera travel and minimum orthographic zoom permit a tenfold wider view. Every lab has “Không gian ×10”, “Vừa mô hình” and accessible zoom buttons. The overview changes only the view; physical inputs and equations remain intact. The grid centers on the current apparatus and grows further when its bounds exceed the studio.
 
 Horizontal and angled projectile axes now cover the entire flight range and peak height, including the reported 31.55 m / 29.26 m/s state and maximum permitted inputs. Unit-to-world mappings are unchanged. Axis extents are independent of playback time, so they do not jump during a flight.
 
@@ -17,4 +17,4 @@ All three textbook readers accept dragging with touch, pen or mouse. The page fo
 
 These are CPU, file, CSS cascade and synthetic DOM/event checks. They do not constitute browser pixel layout, real iPhone touch, WebKit or iOS Safari tests. The managed environment sets `SITES_MANAGED_LINUX_CONTAINER=1`; the Sites workflow requires `$control-browser` for browser QA, and that skill/capability is unavailable. No preview server, substitute browser automation or new browser screenshot was used. Historical v40/v37 browser evidence remains explicitly historical.
 
-Runtime cache versions are v41 for changed entrypoints and modules, with the reader entrypoint v42 for the native pinch-zoom follow-up. Stable textbook data/images and physics modules retain their existing versions. Deployment is through the existing GitHub Pages workflow.
+Runtime cache versions are v41 for changed entrypoints and modules, with v42 entrypoints for the native pinch-zoom and expanded-distance visibility follow-ups. Stable textbook data/images and physics modules retain their existing versions. Deployment is through the existing GitHub Pages workflow.
