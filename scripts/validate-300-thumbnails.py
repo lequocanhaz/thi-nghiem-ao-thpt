@@ -18,7 +18,7 @@ def main():
         webp_file=FOLDER/(e['id']+'.webp')
         try:
             raw=svg_file.read_bytes()
-            if raw.count(b'<svg')!=1 or len(raw)<1400:
+            if raw.count(b'<svg')!=1 or len(raw)<900:
                 raise ValueError('bad SVG')
             png=cairosvg.svg2png(bytestring=raw,output_width=960,output_height=600)
             with Image.open(io.BytesIO(png)) as img:
