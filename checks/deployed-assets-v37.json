@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-18T23:53:49.024794+00:00",
+  "commit": "a15569e479c7d366a5963c77f564a2137c0ea3e5",
+  "baseURL": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/",
+  "files": [
+    {
+      "path": "dist/index.html",
+      "bytes": 2593,
+      "sha256": "3bb4184f11a4e6678481009ecb46fd215106de7e3a675a49db0528e25c7369c3",
+      "matched": true
+    },
+    {
+      "path": "dist/app.css",
+      "bytes": 70254,
+      "sha256": "03c204680db1545d4c4d482a37100de967ca8f24817659a7f3ce8ec9b058a2fb",
+      "matched": true
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 99180,
+      "sha256": "c90c9ae84ee09e322158aabd29cae9a3253b67e4ff4fcd43d2b307539f8294c6",
+      "matched": true
+    },
+    {
+      "path": "dist/boot.js",
+      "bytes": 954,
+      "sha256": "43b223088d7ed8dc41d46b96091373ab99f55d79cbbf0713cca714086fa097fd",
+      "matched": true
+    },
+    {
+      "path": "dist/assistant.js",
+      "bytes": 14627,
+      "sha256": "20ed4c38717e99ea9d3a38927a3db9509130fad735f840aeff1d037048bb1018",
+      "matched": true
+    },
+    {
+      "path": "dist/views.js",
+      "bytes": 21111,
+      "sha256": "cc67efbfb729fed47dfa3651619de127a7c86bb968f7e33f78ea79faddbf506d",
+      "matched": true
+    },
+    {
+      "path": "dist/brand/quanh-mark.svg",
+      "bytes": 14200,
+      "sha256": "e471c93575b49d53b3bf22e4fbbd2c8bd7fcc7e9dc9ee02ff9501d82ba3cf6f9",
+      "matched": true
+    },
+    {
+      "path": "dist/brand/quanh-logo.svg",
+      "bytes": 20121,
+      "sha256": "96431cbd3c396b4d1e4cb07b2c94b345a116bd3ae34a9dd15967b05acca30d7b",
+      "matched": true
+    },
+    {
+      "path": "dist/review/v37/qa.html",
+      "bytes": 8618,
+      "sha256": "f69c99f9ed04493335798f2b5b64bf7734f0c301d0434ae72fd4dc6cf3a52156",
+      "matched": true
+    }
+  ]
+}

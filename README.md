@@ -1,10 +1,21 @@
 # Quanh Lab · 300 thí nghiệm
 
+## v40 — Sách giáo khoa và sách lật
+
+- [Mở thư viện sách](https://lequocanhaz.github.io/thi-nghiem-ao-thpt/books.html): Vật lí 10, 11, 12 — Kết nối tri thức với cuộc sống; đủ 388 trang, gồm bìa. Sách lớp 11–12 giữ nhãn Bản mẫu của tài liệu được cung cấp.
+- Lật trang, một/hai trang theo khung đọc, mục lục theo chương, phóng to, nhớ vị trí đọc và đọc toàn màn hình có phương án dự phòng. Tải trang theo nhu cầu.
+- Gỡ hai đoạn ghi chú về chương trình/SGK và khối Thử nhanh trên mô hình; giữ bộ lọc theo chủ đề SGK và ảnh mô hình của v39.
+- Banner hố đen chuyển động phủ kín màn hình đầu trang, tiêu đề Thí nghiệm Vật Lí nằm trên nền video.
+- Kiểm tra thực tế: 12 bố cục đọc sách và 4 bố cục thư viện ở 320/390/768/1280 px; lật trang, chọn chương, phóng to, nhớ trang, trang cuối cả ba sách và phương án toàn màn hình dự phòng đã qua. 19 tệp công khai khớp byte. Chưa thử điện thoại thật, Safari hoặc vuốt bằng cảm ứng thật.
+- [Thiết kế và phạm vi kiểm tra](docs/textbooks-v40.md) · [Báo cáo trình duyệt](checks/browser-books-v40.json) · [Tệp triển khai](checks/deployed-books-v40.json).
+
+
 ## v37 — trắng đen, logo trong suốt và căn lại nút
 
 - Banner chia hai vùng: tiêu đề Manrope lớn màu đen trên trắng và video hố đen nguyên sắc. Màu xanh, xanh ngọc, cam của logo và tag chủ đề tạo điểm nhấn có kiểm soát.
 - Logo được chuyển từ ảnh nền trắng sang đường nét SVG trong suốt; bản đầy đủ có chữ chuyển thành outline. Không phụ thuộc font ngoài, không còn bitmap nền trắng.
 - Hệ nút 44 px, icon SVG có khung cố định, CTA chính màu đen. Cặp nút thẻ và điều hướng cuối bài dùng grid có thể co giãn; thanh chế độ hỗ trợ chữ lớn ở màn hình hẹp. Các bảng quanh mô hình dùng nền trung tính, viền mảnh, góc bo thống nhất.
+- Đã kiểm tra trình duyệt: **300 bài × 4 khung × 3 trạng thái**, cộng bốn trang chủ = **3.604 trạng thái, 0 lỗi**. [Kết quả](checks/browser-layout-v37.json), [dữ liệu đầy đủ](checks/browser-layout-v37-full.json.gz), [ảnh trang chủ](docs/quanh-lab-v37.jpg). Kiểm tra cỡ chữ 115% riêng ở 320 px; chưa thử thiết bị cảm ứng thật.
 - Ghi chú tham khảo và quy trình kiểm tra tại [docs/design-v37.md](docs/design-v37.md). Trang kiểm tra trình duyệt không nằm trong điều hướng sản phẩm: `review/v37/qa.html`.
 
 ## v36 — chữ đậm lớn và giao diện tươi sáng

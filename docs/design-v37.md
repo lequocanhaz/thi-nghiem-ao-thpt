@@ -39,3 +39,26 @@ Trắng/đen là nền chính. Chữ tiêu đề lớn và đậm; màu phụ ch
 `dist/review/v37/qa.html` là công cụ kiểm tra pixel trong trình duyệt thật, mở iframe canonical index. Bốn khung 320/390/768/1280 chạy qua trang chủ và 300 bài: 1.204 bố cục ban đầu. Bật Chạy & ghi điểm sẽ kiểm tra thêm lúc đang chạy và sau khi ghi: tổng 3.604 trạng thái. Dòng đo thử được hoàn tác ngay sau khi đo, kiểm tra số dòng trở lại đúng giá trị trước đó. Kiểm tra tràn ngang, container vượt khung, hàng nút thẻ, khung/căn giữa icon và chiều cao/nội dung nút. Báo cáo màu cơ bản: `checks/contrast-v37.json`; đây chỉ là các cặp màu được chọn, không phải chứng nhận toàn website. Kết quả phải đọc sau khi trang báo Hoàn tất; lượt dừng giữa chừng không tính là pass.
 
 Kiểm tra thủ công thêm: banner, thư viện, AI, chế độ khám phá/phân tích, chạy/dừng/ghi điểm, chữ lớn 115%, logo trên các nền. Môi trường cloud browser có thể chuyển sang đồ họa nhẹ. Đây không thay thế Safari hoặc thiết bị cảm ứng thật.
+
+## Observed browser checks
+
+Chi tiết phép đo thủ công: [manual-ui-v37.json](../checks/manual-ui-v37.json). Nút toàn màn hình 44×44 px, padding 0, SVG lệch tâm 0/0; hover giữ nền #303136 và chữ trắng. Hai thao tác riêng của trình chiếu ẩn trong khám phá, hiện trong trình chiếu với chiều cao 44 px, rồi trở lại khám phá đúng.
+
+Ở khung 320 px có scrollbar (client width 305 px), chữ 115%: trang chủ và lab điện trường sau ghi điểm không tràn; cả ba nhãn lớp và số lớp cùng tọa độ đầu dòng. Dòng thử được hoàn tác sau phép đo. Màu cơ bản, logo alpha và byte triển khai có báo cáo riêng trong checks/.
+
+Trình duyệt cloud từ chối native fullscreen của banner và ứng dụng hiện thông báo thất bại. Kiểm tra hình học của nút và trạng thái hover đã hoàn tất; chưa xác nhận native fullscreen trên phần cứng thật.
+
+## Final browser audit
+
+Hoàn tất 2026-10-19T00:16:57.280Z trên CSS `app.css?v=37r3`, cỡ chữ chuẩn. **300 bài, 3.604 trạng thái, 0 lỗi**; gồm 1.204 trạng thái sẵn sàng, 1.200 lượt chạy và 1.200 lượt ghi/hoàn tác dòng thử.
+
+| Khung CSS | Trạng thái đã đo | Lỗi |
+| --- | ---: | ---: |
+| 320 px | 901 | 0 |
+| 390 px | 901 | 0 |
+| 768 px | 901 | 0 |
+| 1280 px | 901 | 0 |
+
+[Báo cáo tóm tắt](../checks/browser-layout-v37.json) · [Toàn bộ dữ liệu đo nén gzip](../checks/browser-layout-v37-full.json.gz) · [Đối chiếu 9 tệp triển khai](../checks/deployed-assets-v37.json). Mô-đun khoa học và 301 tệp âm thanh giữ nguyên theo hash audit.
+
+![Trang chủ đã xuất bản](quanh-lab-v37.jpg)

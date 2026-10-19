@@ -1,0 +1,71 @@
+{
+  "checkedAt": "2026-10-18T23:46:58.350390+00:00",
+  "stylesheet": "app.css?v=37r3",
+  "method": "DOM bounding boxes and computed styles after normal browser UI actions. Cloud Chrome, no real touch hardware.",
+  "checks": [
+    {
+      "name": "banner fullscreen control",
+      "width": 44,
+      "height": 44,
+      "padding": "0px",
+      "svgCenterOffset": [
+        0,
+        0
+      ],
+      "hoverBackground": "#303136",
+      "hoverForeground": "#ffffff"
+    },
+    {
+      "name": "presentation actions in explore mode",
+      "computedDisplays": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "name": "presentation actions in present mode",
+      "computedDisplays": [
+        "flex",
+        "flex"
+      ],
+      "heights": [
+        44,
+        44
+      ],
+      "returnedTo": "explore"
+    },
+    {
+      "name": "home at enlarged text",
+      "viewportWidth": 320,
+      "clientWidth": 305,
+      "textScale": 1.15,
+      "layoutErrors": 0,
+      "gradeLabelTops": [
+        793.59375,
+        793.59375,
+        793.59375
+      ],
+      "gradeNumberTops": [
+        816.90625,
+        816.90625,
+        816.90625
+      ]
+    },
+    {
+      "name": "electric lab after recording at enlarged text",
+      "viewportWidth": 320,
+      "clientWidth": 305,
+      "textScale": 1.15,
+      "layout": "measure",
+      "layoutErrors": 0,
+      "presentationActionDisplays": [
+        "none",
+        "none"
+      ]
+    }
+  ],
+  "limitations": [
+    "Native banner fullscreen request was refused in the cloud browser; the application displayed its failure message. Native fullscreen on a physical device was not verified.",
+    "No iOS Safari or physical touch-device run."
+  ]
+}

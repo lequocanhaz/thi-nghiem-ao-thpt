@@ -1,0 +1,361 @@
+{
+  "commit": "81fb4bc2738fa8d93ee8c336af216df096737103",
+  "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/books.html",
+  "readerTests": [
+    {
+      "case": "next",
+      "page": "2",
+      "pages": [
+        "2",
+        "3"
+      ],
+      "ready": true
+    },
+    {
+      "case": "last-10",
+      "nextDisabled": true,
+      "page": "142",
+      "pages": [
+        "142"
+      ]
+    },
+    {
+      "case": "chapter-11",
+      "page": "62",
+      "pages": [
+        "62",
+        "63"
+      ],
+      "title": "Vật lí 11",
+      "total": "/ 119"
+    },
+    {
+      "case": "zoom",
+      "overflow": false,
+      "pages": [
+        "62"
+      ],
+      "stageScroll": true,
+      "zoom": "125%"
+    },
+    {
+      "case": "restore-spread",
+      "pages": [
+        "62",
+        "63"
+      ],
+      "zoom": "100%"
+    },
+    {
+      "case": "reload-position",
+      "page": "62",
+      "title": "Vật lí 11"
+    },
+    {
+      "case": "chapter-12",
+      "page": "92",
+      "pages": [
+        "92",
+        "93"
+      ],
+      "title": "Vật lí 12",
+      "total": "/ 127"
+    },
+    {
+      "case": "keyboard-next",
+      "page": "94",
+      "pages": [
+        "94",
+        "95"
+      ]
+    },
+    {
+      "case": "fullscreen",
+      "fallback": true,
+      "native": null
+    },
+    {
+      "case": "exit-fullscreen",
+      "fallback": false,
+      "native": null
+    },
+    {
+      "case": "last-11",
+      "images": [
+        {
+          "alt": "Vật lí 11 — trang 118",
+          "ready": true
+        },
+        {
+          "alt": "Vật lí 11 — trang 119",
+          "ready": true
+        }
+      ],
+      "nextDisabled": true,
+      "page": "119"
+    },
+    {
+      "case": "last-12",
+      "images": [
+        {
+          "alt": "Vật lí 12 — trang 126",
+          "ready": true
+        },
+        {
+          "alt": "Vật lí 12 — trang 127",
+          "ready": true
+        }
+      ],
+      "nextDisabled": true,
+      "page": "127"
+    }
+  ],
+  "layouts": [
+    {
+      "errors": [],
+      "grade": "10",
+      "imagesReady": true,
+      "page": "1",
+      "pages": [
+        "1"
+      ],
+      "width": 305,
+      "requestedWidth": 320
+    },
+    {
+      "errors": [],
+      "grade": "11",
+      "imagesReady": true,
+      "page": "62",
+      "pages": [
+        "62"
+      ],
+      "width": 305,
+      "requestedWidth": 320
+    },
+    {
+      "errors": [],
+      "grade": "12",
+      "imagesReady": true,
+      "page": "92",
+      "pages": [
+        "92"
+      ],
+      "width": 305,
+      "requestedWidth": 320
+    },
+    {
+      "errors": [],
+      "grade": "10",
+      "imagesReady": true,
+      "page": "1",
+      "pages": [
+        "1"
+      ],
+      "width": 375,
+      "requestedWidth": 390
+    },
+    {
+      "errors": [],
+      "grade": "11",
+      "imagesReady": true,
+      "page": "62",
+      "pages": [
+        "62"
+      ],
+      "width": 375,
+      "requestedWidth": 390
+    },
+    {
+      "errors": [],
+      "grade": "12",
+      "imagesReady": true,
+      "page": "92",
+      "pages": [
+        "92"
+      ],
+      "width": 375,
+      "requestedWidth": 390
+    },
+    {
+      "errors": [],
+      "grade": "10",
+      "imagesReady": true,
+      "page": "1",
+      "pages": [
+        "1"
+      ],
+      "width": 753,
+      "requestedWidth": 768
+    },
+    {
+      "errors": [],
+      "grade": "11",
+      "imagesReady": true,
+      "page": "62",
+      "pages": [
+        "62"
+      ],
+      "width": 753,
+      "requestedWidth": 768
+    },
+    {
+      "errors": [],
+      "grade": "12",
+      "imagesReady": true,
+      "page": "92",
+      "pages": [
+        "92"
+      ],
+      "width": 753,
+      "requestedWidth": 768
+    },
+    {
+      "errors": [],
+      "grade": "10",
+      "imagesReady": true,
+      "page": "1",
+      "pages": [
+        "1"
+      ],
+      "width": 1265,
+      "requestedWidth": 1280
+    },
+    {
+      "errors": [],
+      "grade": "11",
+      "imagesReady": true,
+      "page": "62",
+      "pages": [
+        "62",
+        "63"
+      ],
+      "width": 1265,
+      "requestedWidth": 1280
+    },
+    {
+      "errors": [],
+      "grade": "12",
+      "imagesReady": true,
+      "page": "92",
+      "pages": [
+        "92",
+        "93"
+      ],
+      "width": 1265,
+      "requestedWidth": 1280
+    }
+  ],
+  "zoomLayouts": [
+    {
+      "pageOverflow": false,
+      "stageClientWidth": 271,
+      "stageScrollWidth": 333,
+      "width": 305,
+      "zoom": "125%"
+    },
+    {
+      "pageOverflow": false,
+      "stageClientWidth": 326,
+      "stageScrollWidth": 420,
+      "width": 375,
+      "zoom": "125%"
+    }
+  ],
+  "notesRemoved": {
+    "lead": true,
+    "summary": true,
+    "quickDemo": true
+  },
+  "limits": "Chrome desktop and responsive iframes; no physical phone, Safari or native touch-swipe test. Native fullscreen was denied by the testing browser; fallback entry/exit passed.",
+  "shelfLayouts": [
+    {
+      "cards": [
+        {
+          "left": 16,
+          "right": 289,
+          "width": 273
+        },
+        {
+          "left": 16,
+          "right": 289,
+          "width": 273
+        },
+        {
+          "left": 16,
+          "right": 289,
+          "width": 273
+        }
+      ],
+      "overflow": false,
+      "width": 305,
+      "requestedWidth": 320
+    },
+    {
+      "cards": [
+        {
+          "left": 16,
+          "right": 359,
+          "width": 343
+        },
+        {
+          "left": 16,
+          "right": 359,
+          "width": 343
+        },
+        {
+          "left": 16,
+          "right": 359,
+          "width": 343
+        }
+      ],
+      "overflow": false,
+      "width": 375,
+      "requestedWidth": 390
+    },
+    {
+      "cards": [
+        {
+          "left": 30.71875,
+          "right": 255.5625,
+          "width": 224.84375
+        },
+        {
+          "left": 271.5625,
+          "right": 496.421875,
+          "width": 224.859375
+        },
+        {
+          "left": 512.421875,
+          "right": 737.28125,
+          "width": 224.859375
+        }
+      ],
+      "overflow": false,
+      "width": 768,
+      "requestedWidth": 768
+    },
+    {
+      "cards": [
+        {
+          "left": 51.1875,
+          "right": 420.0625,
+          "width": 368.875
+        },
+        {
+          "left": 448.0625,
+          "right": 816.9375,
+          "width": 368.875
+        },
+        {
+          "left": 844.9375,
+          "right": 1213.8125,
+          "width": 368.875
+        }
+      ],
+      "overflow": false,
+      "width": 1265,
+      "requestedWidth": 1280
+    }
+  ]
+}

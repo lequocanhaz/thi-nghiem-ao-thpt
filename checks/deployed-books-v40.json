@@ -1,0 +1,119 @@
+{
+  "runtimeCommit": "81fb4bc2738fa8d93ee8c336af216df096737103",
+  "results": [
+    {
+      "path": "index.html",
+      "bytes": 2722,
+      "matches": true,
+      "sha256": "e25a21fafc36edd7465bab1ee88b6ac334ecc59e1922f0db3e301c064872289a"
+    },
+    {
+      "path": "app.css",
+      "bytes": 80427,
+      "matches": true,
+      "sha256": "0a49b5a2f8fad3e1a95d4483e0d0842999ab4a04bdab03aa0c67fa5137bf96e8"
+    },
+    {
+      "path": "app.js",
+      "bytes": 100678,
+      "matches": true,
+      "sha256": "afc65d38dbf74601071c6e789be88521383707b08202c8623bc3a776601661d3"
+    },
+    {
+      "path": "boot.js",
+      "bytes": 954,
+      "matches": true,
+      "sha256": "cfcdb34dce34e3d538c322b6ae73d57912e89da96ebf01c7547de12d15fc6935"
+    },
+    {
+      "path": "views.js",
+      "bytes": 20632,
+      "matches": true,
+      "sha256": "698ece6808c6bb3a48df8cc4cb054b3b7907ba40492230e3b979918b43285966"
+    },
+    {
+      "path": "books.html",
+      "bytes": 3361,
+      "matches": true,
+      "sha256": "7a3bceed1cf482ecb8436e49889e26663386db0ae661922aa3c40b040c97b9ae"
+    },
+    {
+      "path": "books.css",
+      "bytes": 6732,
+      "matches": true,
+      "sha256": "08ecfa3a5deaad7892abd84b6c7296f1d3378534e030a2f721ea522a4ceecece"
+    },
+    {
+      "path": "book-reader.js",
+      "bytes": 11048,
+      "matches": true,
+      "sha256": "75156f16efb075d129a15358e2a515e4d954e9cbdda31521cbbea46a51920b7a"
+    },
+    {
+      "path": "book-model.js",
+      "bytes": 591,
+      "matches": true,
+      "sha256": "6e5b1ae8a931b3437e06d8fb04afe930816de8c7d88bdf897a61edc788dff7c8"
+    },
+    {
+      "path": "books/catalog.json",
+      "bytes": 2267,
+      "matches": true,
+      "sha256": "4524cc0b21c724ef9d3faca3d33a8abb99caf14a6940a640795ab78a8332a15b"
+    },
+    {
+      "path": "books/10/cover.webp",
+      "bytes": 24128,
+      "matches": true,
+      "sha256": "55749ce76971e5e77c6d2f2b205e272ea3a8eb6999f0dd2492281145ba132c34"
+    },
+    {
+      "path": "books/11/cover.webp",
+      "bytes": 21078,
+      "matches": true,
+      "sha256": "ff7393091f8f4f5c1e4a02e4ac53a97ce91ae21e9864b2f1e31f26fe4480ae6b"
+    },
+    {
+      "path": "books/12/cover.webp",
+      "bytes": 24268,
+      "matches": true,
+      "sha256": "817fe8e6f649c15501a2a8db00cdd72e074ed900fae13a9d57d410bd45f21291"
+    },
+    {
+      "path": "books/10/001.webp",
+      "bytes": 139158,
+      "matches": true,
+      "sha256": "350c2b9ec8360489160133727842110cc6613a076f18386c7d37c5599f5210b2"
+    },
+    {
+      "path": "books/10/142.webp",
+      "bytes": 122486,
+      "matches": true,
+      "sha256": "16ba02161d477679bcc28f5d95679097a9d54d9c62f4be44b1e076c2e4691d13"
+    },
+    {
+      "path": "books/11/062.webp",
+      "bytes": 111254,
+      "matches": true,
+      "sha256": "fba04c09eaca6e5493cb8db9c262fb91eb4222ba54c8d0d319746981fc2cbba8"
+    },
+    {
+      "path": "books/11/119.webp",
+      "bytes": 136100,
+      "matches": true,
+      "sha256": "183b1b660d91ab0ca5ce6753d2c401618fbea9370e9172df62860f344f9709eb"
+    },
+    {
+      "path": "books/12/092.webp",
+      "bytes": 120702,
+      "matches": true,
+      "sha256": "c6322554783d782591e1b11f47e166845198cafc1ddea4f2e81fd25adc7c5521"
+    },
+    {
+      "path": "books/12/127.webp",
+      "bytes": 112940,
+      "matches": true,
+      "sha256": "b32a66e1319fdd085e1eec785a6ace9295ac33fa15a2d0e68abf31cc73687de9"
+    }
+  ]
+}
