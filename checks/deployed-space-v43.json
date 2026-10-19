@@ -1,0 +1,114 @@
+{
+  "commit": "2de48de923739429428a1fe12438a56de2c26a42",
+  "workflowRun": 39216768506,
+  "workflow": "success",
+  "checkedAt": "2026-10-19T07:40:01.344847+00:00",
+  "site": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/",
+  "assets": [
+    {
+      "file": "index.html",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/",
+      "status": 200,
+      "bytes": 2722,
+      "sha256": "58236c3a3342ef87d5d04bc55aec6a09230a4bf890c2a7ceb24160ab2f555672",
+      "matches": true
+    },
+    {
+      "file": "boot.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/boot.js?v=43",
+      "status": 200,
+      "bytes": 954,
+      "sha256": "fa5b9775b7e0806ae6a44a8243b7d18a25ef8243dfe849783e2aed3716780d9e",
+      "matches": true
+    },
+    {
+      "file": "app.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/app.js?v=43",
+      "status": 200,
+      "bytes": 100724,
+      "sha256": "478cf0be46a747a8c9776047b25cc4b389334c95694eed7bc89f200985c2b88d",
+      "matches": true
+    },
+    {
+      "file": "app.css",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/app.css?v=43",
+      "status": 200,
+      "bytes": 80837,
+      "sha256": "b5f789590e29f2ab0c62a10ab1cb346da6e9d3bb67ff74da3be4ce7b774954a2",
+      "matches": true
+    },
+    {
+      "file": "scene3d.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/scene3d.js?v=43",
+      "status": 200,
+      "bytes": 33394,
+      "sha256": "2b09886f270119b305faaaf08858085a8f4dea75a80b0ec936d82348780837cd",
+      "matches": true
+    },
+    {
+      "file": "software-scene.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/software-scene.js?v=43",
+      "status": 200,
+      "bytes": 8080,
+      "sha256": "bb8721ec3d1f3d1a0a4802e1e119068ab103344131ed09348566d1f2f69aafe4",
+      "matches": true
+    },
+    {
+      "file": "camera-fit.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/camera-fit.js?v=43",
+      "status": 200,
+      "bytes": 4166,
+      "sha256": "4ea8c47873a605a9982ce2768e963c65e029321591036e9a1c02be0f9f5ad9ef",
+      "matches": true
+    },
+    {
+      "file": "coordinates.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/coordinates.js?v=43",
+      "status": 200,
+      "bytes": 8478,
+      "sha256": "91c22ac4ef11eff2cf7b3e8c8d88a00806a3bf398f1d957d136b53796afea8cd",
+      "matches": true
+    },
+    {
+      "file": "simulation-space.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/simulation-space.js?v=43",
+      "status": 200,
+      "bytes": 800,
+      "sha256": "7795b88b7761d47d3720068d595bacc2dd6f5d37cb205d16a6f7e651bfa9aaaf",
+      "matches": true
+    },
+    {
+      "file": "extended-scenes.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/extended-scenes.js?v=43",
+      "status": 200,
+      "bytes": 18768,
+      "sha256": "62777563d7f4ef42eb7702e715c9db6c3516508ba9d1891fb99df004b3eb0416",
+      "matches": true
+    },
+    {
+      "file": "views.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/views.js?v=43",
+      "status": 200,
+      "bytes": 21031,
+      "sha256": "ca5d761462d57aed2c1c58190a6f6aad3491ef590feeb7b7653b38d4ab2def59",
+      "matches": true
+    },
+    {
+      "file": "model-workspace.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/model-workspace.js?v=43",
+      "status": 200,
+      "bytes": 1152,
+      "sha256": "d4197f9dddf2376c7072f533d3ac32f35342d47b3cccc2089aa88c4e506d468d",
+      "matches": true
+    },
+    {
+      "file": "track-layout.js",
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/track-layout.js?v=43",
+      "status": 200,
+      "bytes": 1880,
+      "sha256": "263c96ac27be7cf683470a9ec6714fe8f47617ac7fc89c8c592b3235fbc92ef5",
+      "matches": true
+    }
+  ],
+  "scope": "HTTP byte comparison only. The separate movement audit uses CPU geometry/synthetic playback; no actual browser pixels, iPhone hardware or Safari."
+}
