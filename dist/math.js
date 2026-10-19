@@ -20,13 +20,15 @@ const frac=new RegExp('('+base+')\\s*\\/\\s*('+base+')','g');
 export function legacyFormulaToLatex(value){
  let s=String(value??'').trim();
  if(!s)return '';
- s=s.replace(/½/g,String.raw`\frac{1}{2}`)
+ s=s.replace(/√\s*\[([^\]]+)\]/g,(_,v)=>'\\sqrt{'+v+'}')
+    .replace(/√\s*\(([^)]+)\)/g,(_,v)=>'\\sqrt{'+v+'}')
+    .replace(/½/g,String.raw`\frac{1}{2}`)
     .replace(/¼/g,String.raw`\frac{1}{4}`)
     .replace(/¾/g,String.raw`\frac{3}{4}`)
     .replace(/−/g,'-')
     .replace(/([⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ]+)/g,m=>'^{' + [...m].map(c=>sup[c]).join('') + '}')
     .replace(/([₀₁₂₃₄₅₆₇₈₉₊₋]+)/g,m=>'_{' + [...m].map(c=>sub[c]).join('') + '}')
-    .replace(/[αβγδΔεθλμνξπρστφΦωΩ∞∈∉≠≤≥≈×·±√∑∫∂∇→⇒]/g,c=>greek[c]||c)
+    .replace(/[αβγδΔεθλμνξπρστφΦωΩ∞∈∉≠≤≥≈×·±√∑∫∂∇→⇒]/g,c=>(greek[c]||c)+' ')
     .replace(/(?<!\\)\b(sin|cos|tan|cot|ln|log|exp)\b/g,'\\$1 ')
     .replace(/(?<!\\)\b(sqrt)\b/g,'\\sqrt ')
     .replace(/\\(sin|cos|tan|cot)\s+\^/g,'\\$1^')
