@@ -1,0 +1,1533 @@
+{
+  "experiments": 300,
+  "runs": 3600,
+  "playbackFrames": 61200,
+  "wholeRailFrames": 17185,
+  "calibratedCases": 518,
+  "experimentsThatNeededReframing": 50,
+  "viewports": [
+    [
+      320,
+      360
+    ],
+    [
+      390,
+      360
+    ],
+    [
+      430,
+      400
+    ],
+    [
+      844,
+      360
+    ],
+    [
+      1280,
+      500
+    ]
+  ],
+  "catalog": [
+    {
+      "id": "energy",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "oscillation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "wave",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "electric",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "ohm",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "capacitor",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "boyle",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "gas",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "uniform",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "acceleration",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "horizontal",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "projectile",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "newton",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "incline",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "collision",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "circular",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "lever",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "hooke",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "pendulum",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "damped",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "resonance",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "interference",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "standing",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "sound",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "series",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "parallel",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "joule",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "magnetic",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "induction",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "decay",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "freefall",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "friction",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "work",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "impulse",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "buoyancy",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "pressure",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "reflection",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "refraction",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "tir",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "lens",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "mirror",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "prism",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "young",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "diffraction",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "polarization",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "thermalexpansion",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "calorimetry",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "phasechange",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "heattransfer",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "isobaric",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "isochoric",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "firstlaw",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "kinetic",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "resistivity",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "internalresistance",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "bridge",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "solenoid",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "lorentz",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "transformer",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "ac",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "vector_sum",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "vector_components",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "relative_motion",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "average_speed",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "braking",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "drag_fall",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "atwood",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "pulley",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "elevator",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "banked_turn",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "vertical_circle",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "gravitational_force",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "orbit",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "escape_speed",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "kepler",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "torque_angle",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "rotational_inertia",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "angular_accel",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "rolling",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "spring_energy",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "elastic_modulus",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "hydraulic_press",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "communicating",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "torricelli",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "spring_period",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "oscillator_energy",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "phase_difference",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "beat",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "doppler_source",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "doppler_observer",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "string_speed",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "string_resonance",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "open_pipe",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "closed_pipe",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "sound_level",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "intensity_distance",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "standing_phase",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "reflection_wave",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "wave_packet",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "spring_parallel",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "spring_series",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "resonance_power",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "ray_slab",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "apparent_depth",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "lens_power",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "lenses_contact",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "magnifier",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "telescope",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "microscope",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "grating",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "resolving_power",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "brewster",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "inverse_square_light",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "mirror_rotation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "pinhole",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "fiber_acceptance",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "uniform_field",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "potential_point",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "potential_pair",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "dipole_torque",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "capacitor_plate",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "dielectric",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "capacitor_series",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "capacitor_parallel",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "capacitor_force",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "charge_quantization",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "drift",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "wire_stretch",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "potentiometer",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "voltage_divider",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "kirchhoff_loop",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "diode_model",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "meter_loading",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "max_power",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "battery_series",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "battery_parallel",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "wire_field",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "wire_pair",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "ampere_loop",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "flux_angle",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "inductor_energy",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rl_response",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "lc_oscillator",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rlc_resonance",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "newton_cooling",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "carnot",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "adiabatic",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "photoelectric",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "debroglie",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "binding_energy",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "table_hanging",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "contact_carts",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "accelerating_pendulum",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "double_incline",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "free_wedge",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "ladder_balance",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "beam_supports",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "three_strings",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "slide_tip",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "metacentric",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "collision_2d",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "ballistic_pendulum",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "newton_cradle",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "moving_wall",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "collision_spring",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "yoyo_drop",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rolling_race",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "angular_momentum",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "atwood_inertia",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "gyroscope",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rotating_planet",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "elliptic_orbit",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "binary_orbit",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "hohmann",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "tidal_gradient",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "venturi",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "siphon",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "poiseuille",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "stokes_settling",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "capillary_rise",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "coupled_pendulums",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "large_pendulum",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "physical_pendulum",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "torsion_pendulum",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "u_tube_oscillation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "vibration_absorber",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "base_isolation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "parametric_oscillation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "duffing",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "van_der_pol",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "string_boundary",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "bead_scattering",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "water_refraction",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "string_power",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "dispersive_packet",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "helmholtz",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "harmonic_timbre",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "room_reverberation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "sound_tdoa",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "mach_cone",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "charged_ring",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "charged_rod",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "charged_disk",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "charged_solid_sphere",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "charged_plane",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "electric_turning",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "equipotential_map",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "three_charge_energy",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "electric_work_paths",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "connected_spheres",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "conducting_shell",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "coaxial_capacitor",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "spherical_capacitor",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "isolated_dielectric",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "layered_dielectric",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "two_meshes",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "star_delta",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "resistor_ladder",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "unbalanced_bridge",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "thevenin_norton",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "ammeter_shunt",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "voltmeter_design",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "emf_compensation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rc_meter_loading",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "kelvin_four_wire",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "two_stage_rc",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "charge_sharing",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rlc_free",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rc_square",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "flyback_diode",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "half_rectifier",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "bridge_rectifier",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rectifier_filter",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "zener_regulator",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "diode_clipper",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rc_lowpass",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rc_highpass",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "rlc_bandwidth",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "ac_capacitance_bridge",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "power_factor",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "loop_axis",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "helmholtz_coils",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "finite_solenoid",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "toroid",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "compass_coil",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "velocity_selector",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "mass_spectrometer",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "cyclotron",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "magnetic_helix",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "hall_voltage",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "sliding_rod",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "magnetic_braking",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "coil_entering_field",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "mutual_induction",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "faraday_disk",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "em_plane_wave",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "poynting_energy",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "radiation_pressure",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "transmission_reflection",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "skin_depth",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "separated_lenses",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "camera_defocus",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "eye_correction",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "spherical_aberration",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "chromatic_lens",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "thin_film",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "newton_rings",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "michelson",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "fabry_perot",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "fringe_visibility",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "airy_pattern",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "finite_double_slit",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "grating_resolution",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "wave_plate",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "photoelasticity",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "convection_radiation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "radiative_balance",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "layered_wall",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "transient_heat_bar",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "seebeck",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "otto_cycle",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "diesel_cycle",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "stirling_regenerator",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "refrigerator",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "brayton_cycle",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "maxwell_distribution",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "two_level_boltzmann",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "brownian_motion",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "vapor_pressure",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "van_der_waals",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "hydrogen_lines",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "franck_hertz",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "compton_scattering",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "electron_bragg",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "quantum_box",
+      "frames": 204,
+      "expandedDuringRun": true
+    },
+    {
+      "id": "decay_chain",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "alpha_recoil",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "reaction_threshold",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "gamma_attenuation",
+      "frames": 204,
+      "expandedDuringRun": false
+    },
+    {
+      "id": "poisson_counting",
+      "frames": 204,
+      "expandedDuringRun": true
+    }
+  ],
+  "scope": "Live scene/model/camera methods, real mesh bounds, 2D/3D and synthetic playback. CPU geometry only; no browser pixels, iPhone hardware or Safari."
+}

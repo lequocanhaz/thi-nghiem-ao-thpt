@@ -1,7 +1,7 @@
 {
   "experiments": 300,
   "cases": 13500,
-  "previouslyCropped": 322,
+  "previouslyCropped": 332,
   "issues": 0,
   "method": "Projection of all 8 visible apparatus bounds corners, 3 aspect ratios × 3 views; defaults, presets and 45% model time. No browser/GPU pixels."
 }

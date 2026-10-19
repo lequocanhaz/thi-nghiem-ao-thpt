@@ -1,4 +1,4 @@
-import {coordinateProfile,hasCoordinateGrid} from './coordinates.js?v=41';
+import {coordinateProfile,hasCoordinateGrid} from './coordinates.js?v=43';
 import {themeFor,paths,coreParams,usableParams} from './learning.js?v=17';
 import {curriculumMeta,interactionTags} from './curriculum.js?v=39';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

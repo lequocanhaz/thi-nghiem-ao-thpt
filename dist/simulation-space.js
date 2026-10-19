@@ -11,3 +11,5 @@ export function axisExtent(baseline,needed){
  const step=10**Math.floor(Math.log10(target))/2;
  return Math.ceil(target/step)*step;
 }
+
+export function interferenceWindow(s={}){return {x:axisExtent(3,Math.max(Math.abs(s.probeX||0),Math.abs(s.separation||0)/2)),z:axisExtent(4,s.probeZ)};}

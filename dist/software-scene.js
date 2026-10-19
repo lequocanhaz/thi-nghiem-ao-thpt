@@ -1,6 +1,6 @@
-import {STUDIO_SIZE,STUDIO_DIVISIONS} from './simulation-space.js?v=41';
+import {STUDIO_SIZE,STUDIO_DIVISIONS} from './simulation-space.js?v=43';
 import {T,V} from './geometry-kit.js?v=35';
-import {LabScene} from './scene3d.js?v=42';
+import {LabScene} from './scene3d.js?v=43';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {sizeModelLabels} from './model-label.js?v=35';
 // Project the same apparatus into Canvas 2D. This path uses no WebGL context.

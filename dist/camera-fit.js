@@ -1,5 +1,6 @@
 import * as T from './vendor/three.module.min.js';
-import {SPACE_FACTOR,MIN_SPACE_ZOOM,STUDIO_SIZE} from './simulation-space.js?v=41';
+import {SPACE_FACTOR,MIN_SPACE_ZOOM,STUDIO_SIZE} from './simulation-space.js?v=43';
+const geometryVersions=new WeakMap();
 
 // Bounds belong to the visible apparatus, not the surrounding studio or hidden parts.
 export function apparatusBounds(group){
@@ -7,11 +8,12 @@ export function apparatusBounds(group){
  group.updateMatrixWorld(true);
  const visit=node=>{
   if(!node.visible||node.userData.stageBase||(node.userData.coordinateAid&&!node.userData.profile?.metric))return;
+  if(node.userData.motionBounds)bounds.union(node.userData.motionBounds.clone().applyMatrix4(node.matrixWorld));
   const material=Array.isArray(node.material)?node.material:[node.material];
   if(node.geometry&&material.some(m=>m&&m.visible!==false&&(m.opacity??1)>.01)){
    let local;
    if(node.isInstancedMesh){node.computeBoundingBox();local=node.boundingBox;}
-   else{node.geometry.computeBoundingBox();local=node.geometry.boundingBox;}
+   else{const version=node.geometry.attributes.position?.version;if(!node.geometry.boundingBox||geometryVersions.get(node.geometry)!==version){node.geometry.computeBoundingBox();geometryVersions.set(node.geometry,version);}local=node.geometry.boundingBox;}
    if(local&&!local.isEmpty()){
     const world=local.clone().applyMatrix4(node.matrixWorld);
     if([...world.min.toArray(),...world.max.toArray()].every(Number.isFinite))bounds.union(world);
@@ -21,8 +23,15 @@ export function apparatusBounds(group){
  };visit(group);return bounds;
 }
 
-export function frameApparatus(camera,controls,group,margin=.86){
- const bounds=apparatusBounds(group);if(bounds.isEmpty())return false;
+export function boundsInView(camera,bounds,margin=.94){
+ if(bounds.isEmpty())return true;camera.updateMatrixWorld(true);
+ for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){
+  const p=new T.Vector3(x,y,z).project(camera);
+  if(![p.x,p.y,p.z].every(Number.isFinite)||Math.abs(p.x)>margin||Math.abs(p.y)>margin||Math.abs(p.z)>1)return false;
+ }return true;
+}
+export function frameApparatus(camera,controls,group,margin=.86,plannedBounds){
+ const bounds=plannedBounds||apparatusBounds(group);if(bounds.isEmpty())return false;
  const center=bounds.getCenter(new T.Vector3()),size=bounds.getSize(new T.Vector3());
  const direction=camera.position.clone().sub(controls.target).normalize();
  if(direction.lengthSq()<.5)direction.set(7,4.6,8).normalize();
