@@ -1,0 +1,133 @@
+{
+  "commit": "1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7",
+  "workflowRun": 39213448619,
+  "workflow": "success",
+  "checkedAt": "2026-10-19T07:07:27.605140+00:00",
+  "site": {
+    "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/",
+    "status": 200
+  },
+  "assets": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 2722,
+      "sha256": "b3dcf70a2d36aeed2c612fbd1d8a1c456ed1cffb867a96f431f0645d6e3769d6",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/index.html?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "boot.js",
+      "status": 200,
+      "bytes": 954,
+      "sha256": "cba95036f75285914c6bbb52c23f4636e6cb29b1a1d69f5f8e77005b9d82b1b8",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/boot.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "app.js",
+      "status": 200,
+      "bytes": 100724,
+      "sha256": "8b9b5a045d2bec4859a3c026566e3896116e8b3e29a61e1bb7193f88af473d1f",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/app.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "app.css",
+      "status": 200,
+      "bytes": 80837,
+      "sha256": "a6482d1dcf2b09a88350fa73aa50d356743bbac7cf33999e918bcbbf84bd0bcd",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/app.css?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "scene3d.js",
+      "status": 200,
+      "bytes": 31918,
+      "sha256": "9cec3ec72f4fdc0c2b113df6ac26278027c8a82a45e038f61de25a8a01eed968",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/scene3d.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "software-scene.js",
+      "status": 200,
+      "bytes": 8080,
+      "sha256": "e6e90e099db9d246af9008e70535ed788b5099f5917ead0d7fde95befebfaa59",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/software-scene.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "camera-fit.js",
+      "status": 200,
+      "bytes": 3370,
+      "sha256": "aad74a0821b2417c0d5afd93615766c0c6cb8e270d5f55774e811abe652b5de2",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/camera-fit.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "coordinates.js",
+      "status": 200,
+      "bytes": 7915,
+      "sha256": "e70d09afdeef920d5c436a234f257090898f23929207ff138297dcaa73caa5ee",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/coordinates.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "simulation-space.js",
+      "status": 200,
+      "bytes": 646,
+      "sha256": "12d055b111ea04e1134bc68769a3fbec728308f721dc08c5a754cd9570265446",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/simulation-space.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "views.js",
+      "status": 200,
+      "bytes": 21031,
+      "sha256": "67aebd3027ee7e22a1420b29598c89334def014d958bd7c7b5aead7d3fc267c5",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/views.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "books.html",
+      "status": 200,
+      "bytes": 3361,
+      "sha256": "de9b5fa65bf78757cddffb543f9867c402ea29e464c4580d7cd7496b2eaefbef",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/books.html?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "book-reader.js",
+      "status": 200,
+      "bytes": 14262,
+      "sha256": "de71d4ec69f0d596103ca49e432f8814c0c27a0963cf5231634340f18130824f",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/book-reader.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "book-touch.js",
+      "status": 200,
+      "bytes": 2747,
+      "sha256": "bc21570a511f3e1ae6b2585dbd1b79c8812d2fe214edc74cbaa3782350fc3e03",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/book-touch.js?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "books.css",
+      "status": 200,
+      "bytes": 7659,
+      "sha256": "63dee2d90d7626031d4c5766df1bc757a124ba79dc840f21ec6c742105a703c5",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/books.css?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    },
+    {
+      "file": "review/books.html",
+      "status": 200,
+      "bytes": 1841,
+      "sha256": "87ff75b06d547e858af266e678da0ee8695caa95bda94e34d1cb5bdf568b0d5c",
+      "matches": true,
+      "url": "https://lequocanhaz.github.io/thi-nghiem-ao-thpt/review/books.html?verify=1d89f82d8ac0e254d0eaa1a4997f98e6225d13d7"
+    }
+  ],
+  "scope": "HTTP byte comparison only; no browser rendering, physical iPhone touch or iOS Safari test."
+}
