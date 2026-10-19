@@ -987,3 +987,19 @@ button,a.button{transition:none}
 @media(max-width:620px){.teaching-tools{justify-content:flex-start}.teaching-tools>button{font-size:.75rem;flex:1}.teaching-guide>summary{font-size:.75rem}.teaching-guide-content{max-height:45svh}.catalog-options>label{flex:1 1 145px}.catalog-options select{max-width:100%;width:100%}}
 @media(prefers-reduced-motion:reduce){.teaching-tools *{scroll-behavior:auto}}
 @media(max-width:620px){.teaching-tools>[data-action=reset-camera]{flex:0 0 44px;padding:10px;justify-content:center}.teaching-tools>[data-action=reset-camera]>span{display:none}.teaching-tools>[data-action=teacher-mode]{flex:1 1 auto}.teaching-guide{flex:0 1 auto}}
+
+/* Authored lessons use existing type, native disclosures and the retained research panels. */
+.lesson-content{line-height:1.7;overflow-wrap:anywhere;min-width:0}
+.lesson-content h2{margin:24px 0 8px;font-size:1.1rem}.lesson-content>h2:first-child{margin-top:0}
+.lesson-content p{margin:8px 0 14px}.lesson-content li{margin:9px 0}.lesson-content ol,.lesson-content ul{padding-left:24px}
+.lesson-content details{margin:12px 0;border:1px solid #d9dfe6;border-radius:7px;padding:10px 12px}
+.lesson-content summary{min-height:24px;cursor:pointer;font-weight:650}
+.lesson-content .lesson-solution summary{min-height:44px;display:flex;align-items:center}
+.lesson-variables{display:grid;grid-template-columns:minmax(110px,.45fr) minmax(0,1fr);gap:8px 14px}
+.lesson-variables dt{font-weight:650}.lesson-variables dd{margin:0}
+.lesson-scope,.lesson-evidence,.lesson-audio-note{font-size:.8125rem;color:#515965}
+.lesson-question{font-weight:650}.lesson-summary{border-bottom:1px solid #d9dfe6;padding-bottom:16px;margin-bottom:18px}
+.lesson-summary h3{font-size:1rem}.lesson-summary p{line-height:1.65}
+.lesson-panel{max-width:900px}.lesson-content a{overflow-wrap:anywhere}
+.lesson-content :focus-visible{outline:3px solid #245acb;outline-offset:3px}
+@media(max-width:620px){.lesson-variables{grid-template-columns:1fr;gap:3px}.lesson-variables dd{margin-bottom:10px}}

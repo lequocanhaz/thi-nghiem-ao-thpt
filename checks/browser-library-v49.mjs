@@ -15,7 +15,7 @@ await page.locator('#subjectFilter').selectOption('physics');await page.locator(
 await page.goBack();await page.waitForTimeout(50);assert.equal(await page.locator('#search').inputValue(),'');
 await page.locator('#search').fill('định luật Ohm');await page.locator('#cards .card-open').first().click();await page.waitForSelector('#visual canvas',{timeout:20000});
 console.log('LAB',await page.locator('#rendererNotice').innerText(),errors);
-await page.locator('[data-action=reset-camera]').click();await page.locator('.teaching-guide summary').click();assert.match(await page.locator('.teaching-guide-content').innerText(),/Mục tiêu thí nghiệm/);await page.keyboard.press('Escape');assert.equal(await page.locator('.teaching-guide').getAttribute('open'),null);
+await page.locator('[data-action=reset-camera]').click();await page.locator('.teaching-guide>summary').click();assert.match(await page.locator('.teaching-guide-content').innerText(),/Mục tiêu thí nghiệm/);await page.keyboard.press('Escape');assert.equal(await page.locator('.teaching-guide').getAttribute('open'),null);
 await page.locator('[data-action=teacher-mode]').click();assert.equal(await page.locator('.header').isVisible(),false);assert.equal(await page.locator('[data-action=teacher-mode]').getAttribute('aria-pressed'),'true');
 await page.screenshot({path:'/tmp/quanh-teacher-desktop.png'});
 await page.keyboard.press('Escape');assert.equal(await page.locator('.header').isVisible(),true);

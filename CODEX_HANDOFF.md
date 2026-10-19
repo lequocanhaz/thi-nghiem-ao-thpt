@@ -101,3 +101,12 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 ## Prompt mở đầu để người dùng dán vào Codex
 
 > Tiếp tục dự án Quanh Lab trong repository lequocanhaz/thi-nghiem-ao-thpt. Đọc AGENTS.md, CODEX_HANDOFF.md và trạng thái main mới nhất trước khi làm. Đây là website đang hoạt động; giữ toàn bộ 300 thí nghiệm, sách và các thay đổi hiện có. Trước tiên tóm tắt trạng thái và các giới hạn kiểm tra, xác nhận chạy được các kiểm tra phù hợp. Nếu tôi chưa giao lỗi mới, đừng tự thiết kế lại hoặc triển khai thay đổi giao diện. Khi tôi giao việc, sửa trực tiếp trong kho, kiểm tra phần liên quan và gửi link toàn bộ mã cuối.
+
+## Bài soạn v50 (19/10/2026)
+
+- Có lớp nội dung riêng cho toàn bộ 300 bài trong `dist/lessons/`, không ghi đè phương trình của các scientific catalog. Xem bảng 300 ID ở `docs/lessons-v50.md` và quy tắc mở rộng ở `docs/lesson-authoring.md`.
+- Mỗi bài có mục tiêu, giải thích, quy trình, lỗi dễ nhầm, câu hỏi/lời giải riêng, biến thật và nguồn đối chiếu. Bài học chỉ tải khi mở lab; `lesson-loader.js` và `lesson-view.js` giữ nội dung độc lập với phiên đo.
+- `references.js` lưu 144 nguồn OpenStax/MIT, ngày truy cập và hash bản đã tải. Nguồn nguyên lý nền không có nghĩa mọi biến thể nâng cao đã được phản biện. Chưa có giáo viên/chuyên gia độc lập ký duyệt toàn bộ hoặc thí điểm lớp học.
+- `formulas.js` có LaTeX tường minh cho chín biểu thức cũ lỗi chuyển đổi và sửa ký hiệu hiển thị dãy bi Newton. Không sửa phép tính mô hình để chữa typography.
+- `npm run check:lessons` kiểm tra đủ 300 bài, nguồn/biến, KaTeX thật, escape văn bản, lời giải đóng và ví dụ tính độc lập; đã được đưa vào `npm run check`. Bộ Playwright tùy chọn `checks/browser-lessons-v50.mjs` kiểm tra UI thật, ghi chép, lỗi tải và điều hướng.
+- Giữ 301 tệp âm thanh cũ; đây là thuyết minh mô hình, chưa phải bản thu mới của toàn bộ bài soạn. Không xóa sách, banner, thương hiệu, LaTeX, accessibility hoặc dữ liệu người dùng khi biên tập tiếp.
