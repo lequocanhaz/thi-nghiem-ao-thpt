@@ -1,0 +1,3011 @@
+{
+  "version": 42,
+  "total": 300,
+  "authoring": "deterministic scientific SVG geometry",
+  "scienceReview": "pending per-experiment physics review (not a certification)",
+  "images": [
+    {
+      "id": "energy",
+      "title": "Cơ năng & sự chuyển hóa",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/energy.svg",
+      "webp": "images/thumbnails-2d/energy.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "oscillation",
+      "title": "Dao động điều hòa",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/oscillation.svg",
+      "webp": "images/thumbnails-2d/oscillation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "wave",
+      "title": "Sóng cơ & bước sóng",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/wave.svg",
+      "webp": "images/thumbnails-2d/wave.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "electric",
+      "title": "Điện tích & điện trường",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/electric.svg",
+      "webp": "images/thumbnails-2d/electric.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "ohm",
+      "title": "Khảo sát định luật Ohm",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/ohm.svg",
+      "webp": "images/thumbnails-2d/ohm.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "capacitor",
+      "title": "Tụ điện: tích & phóng điện",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/capacitor.svg",
+      "webp": "images/thumbnails-2d/capacitor.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "boyle",
+      "title": "Định luật Boyle",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/boyle.svg",
+      "webp": "images/thumbnails-2d/boyle.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "gas",
+      "title": "Khí lí tưởng & chuyển động phân tử",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/gas.svg",
+      "webp": "images/thumbnails-2d/gas.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "uniform",
+      "title": "Chuyển động thẳng đều",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/uniform.svg",
+      "webp": "images/thumbnails-2d/uniform.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "acceleration",
+      "title": "Chuyển động biến đổi đều",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/acceleration.svg",
+      "webp": "images/thumbnails-2d/acceleration.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "horizontal",
+      "title": "Ném ngang",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/horizontal.svg",
+      "webp": "images/thumbnails-2d/horizontal.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "projectile",
+      "title": "Ném xiên",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/projectile.svg",
+      "webp": "images/thumbnails-2d/projectile.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "newton",
+      "title": "Định luật II Newton",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/newton.svg",
+      "webp": "images/thumbnails-2d/newton.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "incline",
+      "title": "Mặt phẳng nghiêng",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/incline.svg",
+      "webp": "images/thumbnails-2d/incline.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "collision",
+      "title": "Va chạm & động lượng",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/collision.svg",
+      "webp": "images/thumbnails-2d/collision.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "circular",
+      "title": "Chuyển động tròn",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/circular.svg",
+      "webp": "images/thumbnails-2d/circular.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "lever",
+      "title": "Cân bằng đòn bẩy",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/lever.svg",
+      "webp": "images/thumbnails-2d/lever.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "hooke",
+      "title": "Định luật Hooke",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/hooke.svg",
+      "webp": "images/thumbnails-2d/hooke.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "pendulum",
+      "title": "Con lắc đơn",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/pendulum.svg",
+      "webp": "images/thumbnails-2d/pendulum.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "damped",
+      "title": "Dao động tắt dần",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/damped.svg",
+      "webp": "images/thumbnails-2d/damped.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "resonance",
+      "title": "Cộng hưởng",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/resonance.svg",
+      "webp": "images/thumbnails-2d/resonance.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "interference",
+      "title": "Giao thoa sóng",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/interference.svg",
+      "webp": "images/thumbnails-2d/interference.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "standing",
+      "title": "Sóng dừng",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/standing.svg",
+      "webp": "images/thumbnails-2d/standing.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "sound",
+      "title": "Độ cao & biên độ âm",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/sound.svg",
+      "webp": "images/thumbnails-2d/sound.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "series",
+      "title": "Điện trở nối tiếp",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/series.svg",
+      "webp": "images/thumbnails-2d/series.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "parallel",
+      "title": "Điện trở song song",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/parallel.svg",
+      "webp": "images/thumbnails-2d/parallel.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "joule",
+      "title": "Tác dụng nhiệt của dòng điện",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/joule.svg",
+      "webp": "images/thumbnails-2d/joule.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "magnetic",
+      "title": "Lực từ lên dây dẫn",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/magnetic.svg",
+      "webp": "images/thumbnails-2d/magnetic.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "induction",
+      "title": "Cảm ứng điện từ",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/induction.svg",
+      "webp": "images/thumbnails-2d/induction.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "decay",
+      "title": "Phân rã phóng xạ",
+      "grade": 12,
+      "topic": "Hạt nhân",
+      "template": "nuclear",
+      "svg": "images/thumbnails-2d/decay.svg",
+      "webp": "images/thumbnails-2d/decay.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "freefall",
+      "title": "Rơi tự do",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/freefall.svg",
+      "webp": "images/thumbnails-2d/freefall.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "friction",
+      "title": "Ma sát trên mặt ngang",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/friction.svg",
+      "webp": "images/thumbnails-2d/friction.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "work",
+      "title": "Công & công suất",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/work.svg",
+      "webp": "images/thumbnails-2d/work.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "impulse",
+      "title": "Xung lượng của lực",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/impulse.svg",
+      "webp": "images/thumbnails-2d/impulse.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "buoyancy",
+      "title": "Lực đẩy Archimedes",
+      "grade": 10,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/buoyancy.svg",
+      "webp": "images/thumbnails-2d/buoyancy.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "pressure",
+      "title": "Áp suất theo độ sâu",
+      "grade": 10,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/pressure.svg",
+      "webp": "images/thumbnails-2d/pressure.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "reflection",
+      "title": "Phản xạ ánh sáng",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/reflection.svg",
+      "webp": "images/thumbnails-2d/reflection.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "refraction",
+      "title": "Khúc xạ ánh sáng",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/refraction.svg",
+      "webp": "images/thumbnails-2d/refraction.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "tir",
+      "title": "Phản xạ toàn phần",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/tir.svg",
+      "webp": "images/thumbnails-2d/tir.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "lens",
+      "title": "Thấu kính mỏng",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/lens.svg",
+      "webp": "images/thumbnails-2d/lens.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "mirror",
+      "title": "Gương cầu",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/mirror.svg",
+      "webp": "images/thumbnails-2d/mirror.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "prism",
+      "title": "Tán sắc qua lăng kính",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/prism.svg",
+      "webp": "images/thumbnails-2d/prism.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "young",
+      "title": "Giao thoa khe Young",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/young.svg",
+      "webp": "images/thumbnails-2d/young.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "diffraction",
+      "title": "Nhiễu xạ một khe",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/diffraction.svg",
+      "webp": "images/thumbnails-2d/diffraction.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "polarization",
+      "title": "Phân cực ánh sáng",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/polarization.svg",
+      "webp": "images/thumbnails-2d/polarization.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "thermalexpansion",
+      "title": "Sự nở dài vì nhiệt",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/thermalexpansion.svg",
+      "webp": "images/thumbnails-2d/thermalexpansion.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "calorimetry",
+      "title": "Cân bằng nhiệt",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/calorimetry.svg",
+      "webp": "images/thumbnails-2d/calorimetry.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "phasechange",
+      "title": "Nóng chảy của nước đá",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/phasechange.svg",
+      "webp": "images/thumbnails-2d/phasechange.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "heattransfer",
+      "title": "Dẫn nhiệt qua thanh",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/heattransfer.svg",
+      "webp": "images/thumbnails-2d/heattransfer.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "isobaric",
+      "title": "Quá trình đẳng áp",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/isobaric.svg",
+      "webp": "images/thumbnails-2d/isobaric.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "isochoric",
+      "title": "Quá trình đẳng tích",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/isochoric.svg",
+      "webp": "images/thumbnails-2d/isochoric.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "firstlaw",
+      "title": "Nguyên lí I nhiệt động lực học",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/firstlaw.svg",
+      "webp": "images/thumbnails-2d/firstlaw.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "kinetic",
+      "title": "Động năng phân tử",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/kinetic.svg",
+      "webp": "images/thumbnails-2d/kinetic.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "resistivity",
+      "title": "Điện trở của dây dẫn",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/resistivity.svg",
+      "webp": "images/thumbnails-2d/resistivity.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "internalresistance",
+      "title": "Nguồn điện thực",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/internalresistance.svg",
+      "webp": "images/thumbnails-2d/internalresistance.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "bridge",
+      "title": "Cầu Wheatstone",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/bridge.svg",
+      "webp": "images/thumbnails-2d/bridge.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "solenoid",
+      "title": "Từ trường trong ống dây",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/solenoid.svg",
+      "webp": "images/thumbnails-2d/solenoid.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "lorentz",
+      "title": "Hạt tích điện trong từ trường",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/lorentz.svg",
+      "webp": "images/thumbnails-2d/lorentz.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "transformer",
+      "title": "Máy biến áp lí tưởng",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/transformer.svg",
+      "webp": "images/thumbnails-2d/transformer.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "ac",
+      "title": "Dòng điện xoay chiều",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/ac.svg",
+      "webp": "images/thumbnails-2d/ac.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "vector_sum",
+      "title": "Tổng hợp hai lực",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/vector_sum.svg",
+      "webp": "images/thumbnails-2d/vector_sum.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "vector_components",
+      "title": "Phân tích lực theo hai trục",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/vector_components.svg",
+      "webp": "images/thumbnails-2d/vector_components.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "relative_motion",
+      "title": "Chuyển động trong hai hệ quy chiếu",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/relative_motion.svg",
+      "webp": "images/thumbnails-2d/relative_motion.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "average_speed",
+      "title": "Tốc độ trung bình trên hai chặng",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/average_speed.svg",
+      "webp": "images/thumbnails-2d/average_speed.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "braking",
+      "title": "Phanh xe và quãng đường dừng",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/braking.svg",
+      "webp": "images/thumbnails-2d/braking.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "drag_fall",
+      "title": "Rơi có lực cản tuyến tính",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/drag_fall.svg",
+      "webp": "images/thumbnails-2d/drag_fall.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "atwood",
+      "title": "Máy Atwood",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/atwood.svg",
+      "webp": "images/thumbnails-2d/atwood.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "pulley",
+      "title": "Ròng rọc động và lợi về lực",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/pulley.svg",
+      "webp": "images/thumbnails-2d/pulley.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "elevator",
+      "title": "Cân trong thang máy",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/elevator.svg",
+      "webp": "images/thumbnails-2d/elevator.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "banked_turn",
+      "title": "Đường vòng nghiêng lí tưởng",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/banked_turn.svg",
+      "webp": "images/thumbnails-2d/banked_turn.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "vertical_circle",
+      "title": "Vật ở đỉnh vòng tròn thẳng đứng",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/vertical_circle.svg",
+      "webp": "images/thumbnails-2d/vertical_circle.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "gravitational_force",
+      "title": "Hấp dẫn giữa hai quả cầu",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/gravitational_force.svg",
+      "webp": "images/thumbnails-2d/gravitational_force.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "orbit",
+      "title": "Vệ tinh trên quỹ đạo tròn",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/orbit.svg",
+      "webp": "images/thumbnails-2d/orbit.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "escape_speed",
+      "title": "Tốc độ thoát khỏi hành tinh",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/escape_speed.svg",
+      "webp": "images/thumbnails-2d/escape_speed.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "kepler",
+      "title": "Quy luật Kepler III",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/kepler.svg",
+      "webp": "images/thumbnails-2d/kepler.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "torque_angle",
+      "title": "Mômen lực theo góc đặt lực",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/torque_angle.svg",
+      "webp": "images/thumbnails-2d/torque_angle.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rotational_inertia",
+      "title": "Mômen quán tính của đĩa",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/rotational_inertia.svg",
+      "webp": "images/thumbnails-2d/rotational_inertia.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "angular_accel",
+      "title": "Gia tốc góc dưới mômen không đổi",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/angular_accel.svg",
+      "webp": "images/thumbnails-2d/angular_accel.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rolling",
+      "title": "Lăn không trượt",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/rolling.svg",
+      "webp": "images/thumbnails-2d/rolling.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "spring_energy",
+      "title": "Công biến dạng lò xo",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/spring_energy.svg",
+      "webp": "images/thumbnails-2d/spring_energy.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "elastic_modulus",
+      "title": "Kéo dãn một sợi dây",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/elastic_modulus.svg",
+      "webp": "images/thumbnails-2d/elastic_modulus.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "hydraulic_press",
+      "title": "Máy ép thủy lực",
+      "grade": 10,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/hydraulic_press.svg",
+      "webp": "images/thumbnails-2d/hydraulic_press.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "communicating",
+      "title": "Bình thông nhau với hai chất lỏng",
+      "grade": 10,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/communicating.svg",
+      "webp": "images/thumbnails-2d/communicating.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "torricelli",
+      "title": "Tia nước từ lỗ nhỏ",
+      "grade": 10,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/torricelli.svg",
+      "webp": "images/thumbnails-2d/torricelli.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "spring_period",
+      "title": "Chu kì con lắc theo khối lượng",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/spring_period.svg",
+      "webp": "images/thumbnails-2d/spring_period.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "oscillator_energy",
+      "title": "Năng lượng theo pha dao động",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/oscillator_energy.svg",
+      "webp": "images/thumbnails-2d/oscillator_energy.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "phase_difference",
+      "title": "Hai dao động lệch pha",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/phase_difference.svg",
+      "webp": "images/thumbnails-2d/phase_difference.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "beat",
+      "title": "Phách của hai tần số gần nhau",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/beat.svg",
+      "webp": "images/thumbnails-2d/beat.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "doppler_source",
+      "title": "Doppler khi nguồn tiến lại",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/doppler_source.svg",
+      "webp": "images/thumbnails-2d/doppler_source.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "doppler_observer",
+      "title": "Doppler khi người nghe chuyển động",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/doppler_observer.svg",
+      "webp": "images/thumbnails-2d/doppler_observer.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "string_speed",
+      "title": "Tốc độ sóng trên dây căng",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/string_speed.svg",
+      "webp": "images/thumbnails-2d/string_speed.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "string_resonance",
+      "title": "Các họa âm của dây đàn",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/string_resonance.svg",
+      "webp": "images/thumbnails-2d/string_resonance.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "open_pipe",
+      "title": "Cộng hưởng ống sáo hai đầu hở",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/open_pipe.svg",
+      "webp": "images/thumbnails-2d/open_pipe.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "closed_pipe",
+      "title": "Ống khí một đầu kín",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/closed_pipe.svg",
+      "webp": "images/thumbnails-2d/closed_pipe.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "sound_level",
+      "title": "Mức cường độ âm và thang decibel",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/sound_level.svg",
+      "webp": "images/thumbnails-2d/sound_level.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "intensity_distance",
+      "title": "Âm từ nguồn điểm theo khoảng cách",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/intensity_distance.svg",
+      "webp": "images/thumbnails-2d/intensity_distance.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "standing_phase",
+      "title": "Tổng hai sóng ngược chiều",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/standing_phase.svg",
+      "webp": "images/thumbnails-2d/standing_phase.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "reflection_wave",
+      "title": "Phản xạ tại đầu dây cố định",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/reflection_wave.svg",
+      "webp": "images/thumbnails-2d/reflection_wave.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "wave_packet",
+      "title": "Chồng chất và bó sóng",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/wave_packet.svg",
+      "webp": "images/thumbnails-2d/wave_packet.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "spring_parallel",
+      "title": "Hai lò xo ghép song song",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/spring_parallel.svg",
+      "webp": "images/thumbnails-2d/spring_parallel.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "spring_series",
+      "title": "Hai lò xo ghép nối tiếp",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/spring_series.svg",
+      "webp": "images/thumbnails-2d/spring_series.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "resonance_power",
+      "title": "Công suất hấp thụ gần cộng hưởng",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/resonance_power.svg",
+      "webp": "images/thumbnails-2d/resonance_power.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "ray_slab",
+      "title": "Tia sáng qua bản mặt song song",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/ray_slab.svg",
+      "webp": "images/thumbnails-2d/ray_slab.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "apparent_depth",
+      "title": "Độ sâu biểu kiến của vật dưới nước",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/apparent_depth.svg",
+      "webp": "images/thumbnails-2d/apparent_depth.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "lens_power",
+      "title": "Độ tụ của thấu kính",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/lens_power.svg",
+      "webp": "images/thumbnails-2d/lens_power.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "lenses_contact",
+      "title": "Hệ hai thấu kính sát nhau",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/lenses_contact.svg",
+      "webp": "images/thumbnails-2d/lenses_contact.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "magnifier",
+      "title": "Kính lúp khi ngắm chừng ở vô cực",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/magnifier.svg",
+      "webp": "images/thumbnails-2d/magnifier.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "telescope",
+      "title": "Kính thiên văn khúc xạ",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/telescope.svg",
+      "webp": "images/thumbnails-2d/telescope.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "microscope",
+      "title": "Kính hiển vi quang học",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/microscope.svg",
+      "webp": "images/thumbnails-2d/microscope.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "grating",
+      "title": "Cách tử nhiễu xạ",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/grating.svg",
+      "webp": "images/thumbnails-2d/grating.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "resolving_power",
+      "title": "Giới hạn phân giải của khẩu độ tròn",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/resolving_power.svg",
+      "webp": "images/thumbnails-2d/resolving_power.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "brewster",
+      "title": "Góc Brewster",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/brewster.svg",
+      "webp": "images/thumbnails-2d/brewster.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "inverse_square_light",
+      "title": "Độ rọi từ nguồn sáng điểm",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/inverse_square_light.svg",
+      "webp": "images/thumbnails-2d/inverse_square_light.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "mirror_rotation",
+      "title": "Xoay gương và độ lệch tia phản xạ",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/mirror_rotation.svg",
+      "webp": "images/thumbnails-2d/mirror_rotation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "pinhole",
+      "title": "Ảnh qua lỗ nhỏ",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/pinhole.svg",
+      "webp": "images/thumbnails-2d/pinhole.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "fiber_acceptance",
+      "title": "Khẩu độ số của sợi quang",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/fiber_acceptance.svg",
+      "webp": "images/thumbnails-2d/fiber_acceptance.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "uniform_field",
+      "title": "Hạt trong điện trường đều",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/uniform_field.svg",
+      "webp": "images/thumbnails-2d/uniform_field.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "potential_point",
+      "title": "Điện thế của điện tích điểm",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/potential_point.svg",
+      "webp": "images/thumbnails-2d/potential_point.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "potential_pair",
+      "title": "Điện thế trên trục của lưỡng cực",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/potential_pair.svg",
+      "webp": "images/thumbnails-2d/potential_pair.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "dipole_torque",
+      "title": "Lưỡng cực trong điện trường đều",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/dipole_torque.svg",
+      "webp": "images/thumbnails-2d/dipole_torque.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "capacitor_plate",
+      "title": "Tụ điện phẳng theo hình học",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/capacitor_plate.svg",
+      "webp": "images/thumbnails-2d/capacitor_plate.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "dielectric",
+      "title": "Điện môi khi tụ nối nguồn",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/dielectric.svg",
+      "webp": "images/thumbnails-2d/dielectric.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "capacitor_series",
+      "title": "Tụ điện ghép nối tiếp",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/capacitor_series.svg",
+      "webp": "images/thumbnails-2d/capacitor_series.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "capacitor_parallel",
+      "title": "Tụ điện ghép song song",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/capacitor_parallel.svg",
+      "webp": "images/thumbnails-2d/capacitor_parallel.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "capacitor_force",
+      "title": "Lực hút giữa hai bản tụ",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/capacitor_force.svg",
+      "webp": "images/thumbnails-2d/capacitor_force.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "charge_quantization",
+      "title": "Lượng tử hóa điện tích",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/charge_quantization.svg",
+      "webp": "images/thumbnails-2d/charge_quantization.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "drift",
+      "title": "Vận tốc trôi của electron",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/drift.svg",
+      "webp": "images/thumbnails-2d/drift.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "wire_stretch",
+      "title": "Kéo dây dẫn khi thể tích không đổi",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/wire_stretch.svg",
+      "webp": "images/thumbnails-2d/wire_stretch.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "potentiometer",
+      "title": "Biến trở con chạy",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/potentiometer.svg",
+      "webp": "images/thumbnails-2d/potentiometer.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "voltage_divider",
+      "title": "Mạch chia áp có tải",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/voltage_divider.svg",
+      "webp": "images/thumbnails-2d/voltage_divider.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "kirchhoff_loop",
+      "title": "Hai nguồn ngược chiều trong một vòng",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/kirchhoff_loop.svg",
+      "webp": "images/thumbnails-2d/kirchhoff_loop.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "diode_model",
+      "title": "Diode theo mô hình ngưỡng",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/diode_model.svg",
+      "webp": "images/thumbnails-2d/diode_model.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "meter_loading",
+      "title": "Vôn kế làm thay đổi mạch đo",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/meter_loading.svg",
+      "webp": "images/thumbnails-2d/meter_loading.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "max_power",
+      "title": "Công suất tải và điện trở trong",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/max_power.svg",
+      "webp": "images/thumbnails-2d/max_power.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "battery_series",
+      "title": "Bộ pin ghép nối tiếp",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/battery_series.svg",
+      "webp": "images/thumbnails-2d/battery_series.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "battery_parallel",
+      "title": "Bộ pin giống nhau ghép song song",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/battery_parallel.svg",
+      "webp": "images/thumbnails-2d/battery_parallel.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "wire_field",
+      "title": "Từ trường quanh dây thẳng dài",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/wire_field.svg",
+      "webp": "images/thumbnails-2d/wire_field.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "wire_pair",
+      "title": "Lực giữa hai dòng điện song song",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/wire_pair.svg",
+      "webp": "images/thumbnails-2d/wire_pair.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "ampere_loop",
+      "title": "Tuần hoàn từ trường quanh dây",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/ampere_loop.svg",
+      "webp": "images/thumbnails-2d/ampere_loop.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "flux_angle",
+      "title": "Từ thông theo góc pháp tuyến",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/flux_angle.svg",
+      "webp": "images/thumbnails-2d/flux_angle.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "inductor_energy",
+      "title": "Năng lượng của cuộn cảm",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/inductor_energy.svg",
+      "webp": "images/thumbnails-2d/inductor_energy.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rl_response",
+      "title": "Đóng mạch RL",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/rl_response.svg",
+      "webp": "images/thumbnails-2d/rl_response.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "lc_oscillator",
+      "title": "Dao động điện từ LC",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/lc_oscillator.svg",
+      "webp": "images/thumbnails-2d/lc_oscillator.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rlc_resonance",
+      "title": "Cộng hưởng mạch RLC nối tiếp",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/rlc_resonance.svg",
+      "webp": "images/thumbnails-2d/rlc_resonance.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "newton_cooling",
+      "title": "Làm nguội theo định luật Newton",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/newton_cooling.svg",
+      "webp": "images/thumbnails-2d/newton_cooling.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "carnot",
+      "title": "Giới hạn hiệu suất động cơ nhiệt",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/carnot.svg",
+      "webp": "images/thumbnails-2d/carnot.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "adiabatic",
+      "title": "Nén khí đoạn nhiệt thuận nghịch",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/adiabatic.svg",
+      "webp": "images/thumbnails-2d/adiabatic.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "photoelectric",
+      "title": "Hiệu ứng quang điện ngoài",
+      "grade": 12,
+      "topic": "Vật lí hiện đại",
+      "template": "modern",
+      "svg": "images/thumbnails-2d/photoelectric.svg",
+      "webp": "images/thumbnails-2d/photoelectric.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "debroglie",
+      "title": "Bước sóng de Broglie của electron",
+      "grade": 12,
+      "topic": "Vật lí hiện đại",
+      "template": "modern",
+      "svg": "images/thumbnails-2d/debroglie.svg",
+      "webp": "images/thumbnails-2d/debroglie.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "binding_energy",
+      "title": "Độ hụt khối và năng lượng liên kết",
+      "grade": 12,
+      "topic": "Hạt nhân",
+      "template": "nuclear",
+      "svg": "images/thumbnails-2d/binding_energy.svg",
+      "webp": "images/thumbnails-2d/binding_energy.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "table_hanging",
+      "title": "Xe trên bàn nối vật treo",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/table_hanging.svg",
+      "webp": "images/thumbnails-2d/table_hanging.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "contact_carts",
+      "title": "Lực tiếp xúc giữa hai xe",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/contact_carts.svg",
+      "webp": "images/thumbnails-2d/contact_carts.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "accelerating_pendulum",
+      "title": "Dây treo cân bằng trên xe gia tốc",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/accelerating_pendulum.svg",
+      "webp": "images/thumbnails-2d/accelerating_pendulum.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "double_incline",
+      "title": "Hai vật trên hai mặt nghiêng nối dây",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/double_incline.svg",
+      "webp": "images/thumbnails-2d/double_incline.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "free_wedge",
+      "title": "Nêm giật lùi khi vật trượt",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/free_wedge.svg",
+      "webp": "images/thumbnails-2d/free_wedge.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "ladder_balance",
+      "title": "Thang tựa tường và ngưỡng trượt",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/ladder_balance.svg",
+      "webp": "images/thumbnails-2d/ladder_balance.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "beam_supports",
+      "title": "Dầm hai gối chịu tải lệch tâm",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/beam_supports.svg",
+      "webp": "images/thumbnails-2d/beam_supports.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "three_strings",
+      "title": "Nút ba dây và hai lực căng",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/three_strings.svg",
+      "webp": "images/thumbnails-2d/three_strings.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "slide_tip",
+      "title": "Khối hộp: trượt trước hay lật trước?",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/slide_tip.svg",
+      "webp": "images/thumbnails-2d/slide_tip.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "metacentric",
+      "title": "Ổn định nghiêng của khối nổi",
+      "grade": 11,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/metacentric.svg",
+      "webp": "images/thumbnails-2d/metacentric.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "collision_2d",
+      "title": "Va chạm đàn hồi xiên hai quả cầu",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/collision_2d.svg",
+      "webp": "images/thumbnails-2d/collision_2d.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "ballistic_pendulum",
+      "title": "Con lắc đạn và năng lượng mất đi",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/ballistic_pendulum.svg",
+      "webp": "images/thumbnails-2d/ballistic_pendulum.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "newton_cradle",
+      "title": "Dãy bi Newton và truyền động lượng",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/newton_cradle.svg",
+      "webp": "images/thumbnails-2d/newton_cradle.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "moving_wall",
+      "title": "Phản xạ từ vách đang chuyển động",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/moving_wall.svg",
+      "webp": "images/thumbnails-2d/moving_wall.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "collision_spring",
+      "title": "Va chạm mềm rồi nén lò xo",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/collision_spring.svg",
+      "webp": "images/thumbnails-2d/collision_spring.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "yoyo_drop",
+      "title": "Yo-yo tháo dây khi rơi",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/yoyo_drop.svg",
+      "webp": "images/thumbnails-2d/yoyo_drop.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rolling_race",
+      "title": "Đĩa, vành và cầu lăn trên dốc",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/rolling_race.svg",
+      "webp": "images/thumbnails-2d/rolling_race.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "angular_momentum",
+      "title": "Thu tay trên đĩa quay",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/angular_momentum.svg",
+      "webp": "images/thumbnails-2d/angular_momentum.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "atwood_inertia",
+      "title": "Máy Atwood với ròng rọc có quán tính",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/atwood_inertia.svg",
+      "webp": "images/thumbnails-2d/atwood_inertia.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "gyroscope",
+      "title": "Tiến động chậm của con quay",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/gyroscope.svg",
+      "webp": "images/thumbnails-2d/gyroscope.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rotating_planet",
+      "title": "Trọng trường trên hành tinh quay",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/rotating_planet.svg",
+      "webp": "images/thumbnails-2d/rotating_planet.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "elliptic_orbit",
+      "title": "Vệ tinh trên quỹ đạo elip",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/elliptic_orbit.svg",
+      "webp": "images/thumbnails-2d/elliptic_orbit.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "binary_orbit",
+      "title": "Hai thiên thể quanh khối tâm",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/binary_orbit.svg",
+      "webp": "images/thumbnails-2d/binary_orbit.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "hohmann",
+      "title": "Chuyển quỹ đạo Hohmann",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/hohmann.svg",
+      "webp": "images/thumbnails-2d/hohmann.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "tidal_gradient",
+      "title": "Chênh lệch hấp dẫn và thủy triều",
+      "grade": 10,
+      "topic": "Cơ học",
+      "template": "mechanics",
+      "svg": "images/thumbnails-2d/tidal_gradient.svg",
+      "webp": "images/thumbnails-2d/tidal_gradient.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "venturi",
+      "title": "Ống Venturi và áp kế vi sai",
+      "grade": 10,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/venturi.svg",
+      "webp": "images/thumbnails-2d/venturi.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "siphon",
+      "title": "Xi-phông và áp suất tại đỉnh",
+      "grade": 10,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/siphon.svg",
+      "webp": "images/thumbnails-2d/siphon.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "poiseuille",
+      "title": "Dòng tầng trong ống mao quản",
+      "grade": 11,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/poiseuille.svg",
+      "webp": "images/thumbnails-2d/poiseuille.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "stokes_settling",
+      "title": "Bi nhỏ lắng trong chất lỏng nhớt",
+      "grade": 11,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/stokes_settling.svg",
+      "webp": "images/thumbnails-2d/stokes_settling.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "capillary_rise",
+      "title": "Dâng mao dẫn và góc tiếp xúc",
+      "grade": 10,
+      "topic": "Chất lưu",
+      "template": "fluid",
+      "svg": "images/thumbnails-2d/capillary_rise.svg",
+      "webp": "images/thumbnails-2d/capillary_rise.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "coupled_pendulums",
+      "title": "Hai dao động ghép và trao đổi năng lượng",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/coupled_pendulums.svg",
+      "webp": "images/thumbnails-2d/coupled_pendulums.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "large_pendulum",
+      "title": "Con lắc đơn biên độ lớn",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/large_pendulum.svg",
+      "webp": "images/thumbnails-2d/large_pendulum.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "physical_pendulum",
+      "title": "Con lắc vật lí: chọn điểm treo",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/physical_pendulum.svg",
+      "webp": "images/thumbnails-2d/physical_pendulum.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "torsion_pendulum",
+      "title": "Con lắc xoắn",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/torsion_pendulum.svg",
+      "webp": "images/thumbnails-2d/torsion_pendulum.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "u_tube_oscillation",
+      "title": "Dao động cột lỏng trong ống chữ U",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/u_tube_oscillation.svg",
+      "webp": "images/thumbnails-2d/u_tube_oscillation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "vibration_absorber",
+      "title": "Bộ hấp thụ rung hai bậc tự do",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/vibration_absorber.svg",
+      "webp": "images/thumbnails-2d/vibration_absorber.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "base_isolation",
+      "title": "Cách rung khi đế dao động",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/base_isolation.svg",
+      "webp": "images/thumbnails-2d/base_isolation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "parametric_oscillation",
+      "title": "Kích thích tham số bằng độ cứng biến thiên",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/parametric_oscillation.svg",
+      "webp": "images/thumbnails-2d/parametric_oscillation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "duffing",
+      "title": "Lò xo phi tuyến Duffing",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/duffing.svg",
+      "webp": "images/thumbnails-2d/duffing.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "van_der_pol",
+      "title": "Tự dao động Van der Pol",
+      "grade": 11,
+      "topic": "Dao động",
+      "template": "oscillation",
+      "svg": "images/thumbnails-2d/van_der_pol.svg",
+      "webp": "images/thumbnails-2d/van_der_pol.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "string_boundary",
+      "title": "Phản xạ và truyền sóng qua mối nối dây",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/string_boundary.svg",
+      "webp": "images/thumbnails-2d/string_boundary.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "bead_scattering",
+      "title": "Sóng tán xạ tại hạt nặng trên dây",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/bead_scattering.svg",
+      "webp": "images/thumbnails-2d/bead_scattering.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "water_refraction",
+      "title": "Khúc xạ sóng nước nông",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/water_refraction.svg",
+      "webp": "images/thumbnails-2d/water_refraction.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "string_power",
+      "title": "Công suất sóng trên dây theo biên độ",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/string_power.svg",
+      "webp": "images/thumbnails-2d/string_power.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "dispersive_packet",
+      "title": "Vận tốc nhóm của sóng nước",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/dispersive_packet.svg",
+      "webp": "images/thumbnails-2d/dispersive_packet.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "helmholtz",
+      "title": "Cộng hưởng Helmholtz của bình có cổ",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/helmholtz.svg",
+      "webp": "images/thumbnails-2d/helmholtz.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "harmonic_timbre",
+      "title": "Tổng hợp họa âm tạo âm sắc",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/harmonic_timbre.svg",
+      "webp": "images/thumbnails-2d/harmonic_timbre.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "room_reverberation",
+      "title": "Thời gian vang và hấp thụ âm",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/room_reverberation.svg",
+      "webp": "images/thumbnails-2d/room_reverberation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "sound_tdoa",
+      "title": "Định vị âm bằng chênh lệch thời gian tới",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/sound_tdoa.svg",
+      "webp": "images/thumbnails-2d/sound_tdoa.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "mach_cone",
+      "title": "Nón Mach của nguồn siêu thanh",
+      "grade": 11,
+      "topic": "Sóng",
+      "template": "wave",
+      "svg": "images/thumbnails-2d/mach_cone.svg",
+      "webp": "images/thumbnails-2d/mach_cone.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "charged_ring",
+      "title": "Điện trường trên trục vòng tích điện",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/charged_ring.svg",
+      "webp": "images/thumbnails-2d/charged_ring.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "charged_rod",
+      "title": "Trường trên đường trung trực thanh tích điện",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/charged_rod.svg",
+      "webp": "images/thumbnails-2d/charged_rod.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "charged_disk",
+      "title": "Điện trường trên trục đĩa tích điện",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/charged_disk.svg",
+      "webp": "images/thumbnails-2d/charged_disk.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "charged_solid_sphere",
+      "title": "Bên trong quả cầu cách điện tích điện đều",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/charged_solid_sphere.svg",
+      "webp": "images/thumbnails-2d/charged_solid_sphere.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "charged_plane",
+      "title": "Bước nhảy điện trường qua mặt phẳng điện",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/charged_plane.svg",
+      "webp": "images/thumbnails-2d/charged_plane.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "electric_turning",
+      "title": "Điểm quay đầu trong lực đẩy điện",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/electric_turning.svg",
+      "webp": "images/thumbnails-2d/electric_turning.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "equipotential_map",
+      "title": "Bản đồ điện thế và hướng điện trường",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/equipotential_map.svg",
+      "webp": "images/thumbnails-2d/equipotential_map.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "three_charge_energy",
+      "title": "Năng lượng lắp ráp ba điện tích",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/three_charge_energy.svg",
+      "webp": "images/thumbnails-2d/three_charge_energy.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "electric_work_paths",
+      "title": "Công điện trường trên hai đường đi",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/electric_work_paths.svg",
+      "webp": "images/thumbnails-2d/electric_work_paths.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "connected_spheres",
+      "title": "Hai cầu dẫn nối dây và chia điện tích",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/connected_spheres.svg",
+      "webp": "images/thumbnails-2d/connected_spheres.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "conducting_shell",
+      "title": "Vỏ cầu dẫn có điện tích trong khoang",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/conducting_shell.svg",
+      "webp": "images/thumbnails-2d/conducting_shell.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "coaxial_capacitor",
+      "title": "Tụ điện đồng trục",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/coaxial_capacitor.svg",
+      "webp": "images/thumbnails-2d/coaxial_capacitor.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "spherical_capacitor",
+      "title": "Tụ điện hai mặt cầu đồng tâm",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/spherical_capacitor.svg",
+      "webp": "images/thumbnails-2d/spherical_capacitor.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "isolated_dielectric",
+      "title": "Chèn điện môi khi tụ đã ngắt nguồn",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/isolated_dielectric.svg",
+      "webp": "images/thumbnails-2d/isolated_dielectric.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "layered_dielectric",
+      "title": "Hai lớp điện môi trong khe tụ",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/layered_dielectric.svg",
+      "webp": "images/thumbnails-2d/layered_dielectric.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "two_meshes",
+      "title": "Hai vòng mạch có nhánh chung",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/two_meshes.svg",
+      "webp": "images/thumbnails-2d/two_meshes.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "star_delta",
+      "title": "Biến đổi điện trở sao–tam giác",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/star_delta.svg",
+      "webp": "images/thumbnails-2d/star_delta.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "resistor_ladder",
+      "title": "Mạng thang điện trở hữu hạn",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/resistor_ladder.svg",
+      "webp": "images/thumbnails-2d/resistor_ladder.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "unbalanced_bridge",
+      "title": "Cầu điện lệch cân bằng có điện kế",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/unbalanced_bridge.svg",
+      "webp": "images/thumbnails-2d/unbalanced_bridge.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "thevenin_norton",
+      "title": "Nguồn tương đương Thévenin–Norton",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/thevenin_norton.svg",
+      "webp": "images/thumbnails-2d/thevenin_norton.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "ammeter_shunt",
+      "title": "Mở rộng thang ampe kế bằng shunt",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/ammeter_shunt.svg",
+      "webp": "images/thumbnails-2d/ammeter_shunt.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "voltmeter_design",
+      "title": "Tạo vôn kế từ điện kế",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/voltmeter_design.svg",
+      "webp": "images/thumbnails-2d/voltmeter_design.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "emf_compensation",
+      "title": "Đo suất điện động bằng phương pháp bù",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/emf_compensation.svg",
+      "webp": "images/thumbnails-2d/emf_compensation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rc_meter_loading",
+      "title": "Vôn kế hữu hạn khi đo tụ đang nạp",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/rc_meter_loading.svg",
+      "webp": "images/thumbnails-2d/rc_meter_loading.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "kelvin_four_wire",
+      "title": "Đo điện trở bằng bốn dây Kelvin",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/kelvin_four_wire.svg",
+      "webp": "images/thumbnails-2d/kelvin_four_wire.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "two_stage_rc",
+      "title": "Hai tầng RC được cách li bằng bộ đệm",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/two_stage_rc.svg",
+      "webp": "images/thumbnails-2d/two_stage_rc.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "charge_sharing",
+      "title": "Nối hai tụ đã tích điện khác nhau",
+      "grade": 11,
+      "topic": "Điện trường",
+      "template": "electric",
+      "svg": "images/thumbnails-2d/charge_sharing.svg",
+      "webp": "images/thumbnails-2d/charge_sharing.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rlc_free",
+      "title": "RLC tự do: ba chế độ tắt dần",
+      "grade": 11,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/rlc_free.svg",
+      "webp": "images/thumbnails-2d/rlc_free.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rc_square",
+      "title": "Tụ RC nhận chuỗi xung vuông",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/rc_square.svg",
+      "webp": "images/thumbnails-2d/rc_square.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "flyback_diode",
+      "title": "Ngắt cuộn cảm qua diode hồi tiếp",
+      "grade": 11,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/flyback_diode.svg",
+      "webp": "images/thumbnails-2d/flyback_diode.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "half_rectifier",
+      "title": "Chỉnh lưu nửa chu kì",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/half_rectifier.svg",
+      "webp": "images/thumbnails-2d/half_rectifier.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "bridge_rectifier",
+      "title": "Cầu chỉnh lưu toàn chu kì",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/bridge_rectifier.svg",
+      "webp": "images/thumbnails-2d/bridge_rectifier.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rectifier_filter",
+      "title": "Tụ lọc và độ gợn sau chỉnh lưu",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/rectifier_filter.svg",
+      "webp": "images/thumbnails-2d/rectifier_filter.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "zener_regulator",
+      "title": "Ổn áp Zener và giới hạn dòng",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/zener_regulator.svg",
+      "webp": "images/thumbnails-2d/zener_regulator.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "diode_clipper",
+      "title": "Xén tín hiệu bằng hai diode đối song",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/diode_clipper.svg",
+      "webp": "images/thumbnails-2d/diode_clipper.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rc_lowpass",
+      "title": "Bộ lọc RC thông thấp",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/rc_lowpass.svg",
+      "webp": "images/thumbnails-2d/rc_lowpass.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rc_highpass",
+      "title": "Bộ lọc RC thông cao",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/rc_highpass.svg",
+      "webp": "images/thumbnails-2d/rc_highpass.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "rlc_bandwidth",
+      "title": "Bộ lọc RLC thông dải và băng thông",
+      "grade": 11,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/rlc_bandwidth.svg",
+      "webp": "images/thumbnails-2d/rlc_bandwidth.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "ac_capacitance_bridge",
+      "title": "Cầu xoay chiều đo điện dung",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "template": "circuit",
+      "svg": "images/thumbnails-2d/ac_capacitance_bridge.svg",
+      "webp": "images/thumbnails-2d/ac_capacitance_bridge.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "power_factor",
+      "title": "Bù hệ số công suất cho tải cảm",
+      "grade": 11,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/power_factor.svg",
+      "webp": "images/thumbnails-2d/power_factor.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "loop_axis",
+      "title": "Từ trường trên trục vòng dây tròn",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/loop_axis.svg",
+      "webp": "images/thumbnails-2d/loop_axis.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "helmholtz_coils",
+      "title": "Cuộn Helmholtz và vùng trường gần đều",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/helmholtz_coils.svg",
+      "webp": "images/thumbnails-2d/helmholtz_coils.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "finite_solenoid",
+      "title": "Ống dây hữu hạn: trường gần hai đầu",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/finite_solenoid.svg",
+      "webp": "images/thumbnails-2d/finite_solenoid.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "toroid",
+      "title": "Từ trường và tự cảm của cuộn xuyến",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/toroid.svg",
+      "webp": "images/thumbnails-2d/toroid.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "compass_coil",
+      "title": "La bàn trong trường Trái Đất và cuộn dây",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/compass_coil.svg",
+      "webp": "images/thumbnails-2d/compass_coil.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "velocity_selector",
+      "title": "Bộ lọc vận tốc điện–từ",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/velocity_selector.svg",
+      "webp": "images/thumbnails-2d/velocity_selector.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "mass_spectrometer",
+      "title": "Khối phổ từ tách hai đồng vị",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/mass_spectrometer.svg",
+      "webp": "images/thumbnails-2d/mass_spectrometer.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "cyclotron",
+      "title": "Cyclotron phi tương đối tính",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/cyclotron.svg",
+      "webp": "images/thumbnails-2d/cyclotron.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "magnetic_helix",
+      "title": "Quỹ đạo xoắn ốc trong từ trường",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/magnetic_helix.svg",
+      "webp": "images/thumbnails-2d/magnetic_helix.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "hall_voltage",
+      "title": "Hiệu ứng Hall và dấu hạt tải",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/hall_voltage.svg",
+      "webp": "images/thumbnails-2d/hall_voltage.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "sliding_rod",
+      "title": "Thanh trượt trên ray và lực hãm",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/sliding_rod.svg",
+      "webp": "images/thumbnails-2d/sliding_rod.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "magnetic_braking",
+      "title": "Hãm từ và cơ năng chuyển thành nhiệt",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/magnetic_braking.svg",
+      "webp": "images/thumbnails-2d/magnetic_braking.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "coil_entering_field",
+      "title": "Khung dây đi qua vùng từ trường hữu hạn",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/coil_entering_field.svg",
+      "webp": "images/thumbnails-2d/coil_entering_field.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "mutual_induction",
+      "title": "Hai cuộn dây và hỗ cảm",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/mutual_induction.svg",
+      "webp": "images/thumbnails-2d/mutual_induction.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "faraday_disk",
+      "title": "Máy phát đĩa Faraday",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/faraday_disk.svg",
+      "webp": "images/thumbnails-2d/faraday_disk.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "em_plane_wave",
+      "title": "Điện trường và từ trường trong sóng phẳng",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/em_plane_wave.svg",
+      "webp": "images/thumbnails-2d/em_plane_wave.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "poynting_energy",
+      "title": "Vectơ Poynting và năng lượng sóng",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/poynting_energy.svg",
+      "webp": "images/thumbnails-2d/poynting_energy.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "radiation_pressure",
+      "title": "Áp suất ánh sáng trên mặt hấp thụ và phản xạ",
+      "grade": 12,
+      "topic": "Vật lí hiện đại",
+      "template": "modern",
+      "svg": "images/thumbnails-2d/radiation_pressure.svg",
+      "webp": "images/thumbnails-2d/radiation_pressure.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "transmission_reflection",
+      "title": "Phản xạ điện áp trên đường truyền có tải",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/transmission_reflection.svg",
+      "webp": "images/thumbnails-2d/transmission_reflection.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "skin_depth",
+      "title": "Độ sâu thấm điện từ trong vật dẫn",
+      "grade": 12,
+      "topic": "Điện từ",
+      "template": "magnetic",
+      "svg": "images/thumbnails-2d/skin_depth.svg",
+      "webp": "images/thumbnails-2d/skin_depth.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "separated_lenses",
+      "title": "Hai thấu kính cách nhau và ảnh trung gian",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/separated_lenses.svg",
+      "webp": "images/thumbnails-2d/separated_lenses.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "camera_defocus",
+      "title": "Máy ảnh: khẩu độ và vòng nhòe",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/camera_defocus.svg",
+      "webp": "images/thumbnails-2d/camera_defocus.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "eye_correction",
+      "title": "Mắt mô hình và kính sửa cận thị",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/eye_correction.svg",
+      "webp": "images/thumbnails-2d/eye_correction.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "spherical_aberration",
+      "title": "Cầu sai qua một mặt khúc xạ cầu",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/spherical_aberration.svg",
+      "webp": "images/thumbnails-2d/spherical_aberration.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "chromatic_lens",
+      "title": "Sắc sai: tiêu cự phụ thuộc bước sóng",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/chromatic_lens.svg",
+      "webp": "images/thumbnails-2d/chromatic_lens.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "thin_film",
+      "title": "Màng mỏng và đảo pha phản xạ",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/thin_film.svg",
+      "webp": "images/thumbnails-2d/thin_film.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "newton_rings",
+      "title": "Vân Newton trong phản xạ",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/newton_rings.svg",
+      "webp": "images/thumbnails-2d/newton_rings.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "michelson",
+      "title": "Giao thoa kế Michelson: dịch gương đếm vân",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/michelson.svg",
+      "webp": "images/thumbnails-2d/michelson.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "fabry_perot",
+      "title": "Khoang Fabry–Pérot và nhiều chùm truyền",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/fabry_perot.svg",
+      "webp": "images/thumbnails-2d/fabry_perot.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "fringe_visibility",
+      "title": "Độ tương phản vân và độ kết hợp",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/fringe_visibility.svg",
+      "webp": "images/thumbnails-2d/fringe_visibility.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "airy_pattern",
+      "title": "Toàn bộ vân Airy qua khẩu độ tròn",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/airy_pattern.svg",
+      "webp": "images/thumbnails-2d/airy_pattern.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "finite_double_slit",
+      "title": "Hai khe hữu hạn và đường bao nhiễu xạ",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/finite_double_slit.svg",
+      "webp": "images/thumbnails-2d/finite_double_slit.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "grating_resolution",
+      "title": "Phân giải hai vạch quang phổ bằng cách tử",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/grating_resolution.svg",
+      "webp": "images/thumbnails-2d/grating_resolution.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "wave_plate",
+      "title": "Bản trễ pha và phân cực elip",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/wave_plate.svg",
+      "webp": "images/thumbnails-2d/wave_plate.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "photoelasticity",
+      "title": "Quang đàn hồi giữa hai kính phân cực chéo",
+      "grade": 11,
+      "topic": "Quang học",
+      "template": "optics",
+      "svg": "images/thumbnails-2d/photoelasticity.svg",
+      "webp": "images/thumbnails-2d/photoelasticity.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "convection_radiation",
+      "title": "Làm nguội do đối lưu và bức xạ",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/convection_radiation.svg",
+      "webp": "images/thumbnails-2d/convection_radiation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "radiative_balance",
+      "title": "Cân bằng hấp thụ và phát xạ nhiệt",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/radiative_balance.svg",
+      "webp": "images/thumbnails-2d/radiative_balance.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "layered_wall",
+      "title": "Dẫn nhiệt qua tường hai lớp",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/layered_wall.svg",
+      "webp": "images/thumbnails-2d/layered_wall.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "transient_heat_bar",
+      "title": "Thanh dẫn nhiệt: suy giảm phân bố ban đầu",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/transient_heat_bar.svg",
+      "webp": "images/thumbnails-2d/transient_heat_bar.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "seebeck",
+      "title": "Suất nhiệt điện Seebeck",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/seebeck.svg",
+      "webp": "images/thumbnails-2d/seebeck.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "otto_cycle",
+      "title": "Chu trình Otto lí tưởng",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/otto_cycle.svg",
+      "webp": "images/thumbnails-2d/otto_cycle.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "diesel_cycle",
+      "title": "Chu trình Diesel và tỉ số cắt",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/diesel_cycle.svg",
+      "webp": "images/thumbnails-2d/diesel_cycle.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "stirling_regenerator",
+      "title": "Chu trình Stirling và bộ hồi nhiệt",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/stirling_regenerator.svg",
+      "webp": "images/thumbnails-2d/stirling_regenerator.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "refrigerator",
+      "title": "Tủ lạnh: hệ số COP và công tiêu thụ",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/refrigerator.svg",
+      "webp": "images/thumbnails-2d/refrigerator.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "brayton_cycle",
+      "title": "Chu trình Brayton và công nén",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/brayton_cycle.svg",
+      "webp": "images/thumbnails-2d/brayton_cycle.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "maxwell_distribution",
+      "title": "Phân bố tốc độ Maxwell–Boltzmann",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/maxwell_distribution.svg",
+      "webp": "images/thumbnails-2d/maxwell_distribution.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "two_level_boltzmann",
+      "title": "Hai mức năng lượng và phân bố Boltzmann",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/two_level_boltzmann.svg",
+      "webp": "images/thumbnails-2d/two_level_boltzmann.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "brownian_motion",
+      "title": "Chuyển động Brown và độ dời bình phương",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/brownian_motion.svg",
+      "webp": "images/thumbnails-2d/brownian_motion.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "vapor_pressure",
+      "title": "Áp suất hơi và Clausius–Clapeyron",
+      "grade": 12,
+      "topic": "Vật lí nhiệt",
+      "template": "thermal",
+      "svg": "images/thumbnails-2d/vapor_pressure.svg",
+      "webp": "images/thumbnails-2d/vapor_pressure.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "van_der_waals",
+      "title": "Đẳng nhiệt khí Van der Waals",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "template": "gas",
+      "svg": "images/thumbnails-2d/van_der_waals.svg",
+      "webp": "images/thumbnails-2d/van_der_waals.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "hydrogen_lines",
+      "title": "Chuyển mức hydrogen và phổ vạch",
+      "grade": 12,
+      "topic": "Vật lí hiện đại",
+      "template": "modern",
+      "svg": "images/thumbnails-2d/hydrogen_lines.svg",
+      "webp": "images/thumbnails-2d/hydrogen_lines.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "franck_hertz",
+      "title": "Franck–Hertz: mất năng lượng theo lượng",
+      "grade": 12,
+      "topic": "Vật lí hiện đại",
+      "template": "modern",
+      "svg": "images/thumbnails-2d/franck_hertz.svg",
+      "webp": "images/thumbnails-2d/franck_hertz.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "compton_scattering",
+      "title": "Tán xạ Compton và năng lượng giật lùi",
+      "grade": 12,
+      "topic": "Vật lí hiện đại",
+      "template": "modern",
+      "svg": "images/thumbnails-2d/compton_scattering.svg",
+      "webp": "images/thumbnails-2d/compton_scattering.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "electron_bragg",
+      "title": "Electron nhiễu xạ trên mặt tinh thể",
+      "grade": 12,
+      "topic": "Vật lí hiện đại",
+      "template": "modern",
+      "svg": "images/thumbnails-2d/electron_bragg.svg",
+      "webp": "images/thumbnails-2d/electron_bragg.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "quantum_box",
+      "title": "Giếng thế: năng lượng và mật độ xác suất",
+      "grade": 12,
+      "topic": "Vật lí hiện đại",
+      "template": "modern",
+      "svg": "images/thumbnails-2d/quantum_box.svg",
+      "webp": "images/thumbnails-2d/quantum_box.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "decay_chain",
+      "title": "Chuỗi phân rã mẹ–con",
+      "grade": 12,
+      "topic": "Hạt nhân",
+      "template": "nuclear",
+      "svg": "images/thumbnails-2d/decay_chain.svg",
+      "webp": "images/thumbnails-2d/decay_chain.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "alpha_recoil",
+      "title": "Phân rã alpha và giật lùi hạt nhân con",
+      "grade": 12,
+      "topic": "Hạt nhân",
+      "template": "nuclear",
+      "svg": "images/thumbnails-2d/alpha_recoil.svg",
+      "webp": "images/thumbnails-2d/alpha_recoil.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "reaction_threshold",
+      "title": "Năng lượng Q và ngưỡng phản ứng",
+      "grade": 12,
+      "topic": "Hạt nhân",
+      "template": "nuclear",
+      "svg": "images/thumbnails-2d/reaction_threshold.svg",
+      "webp": "images/thumbnails-2d/reaction_threshold.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "gamma_attenuation",
+      "title": "Suy giảm gamma chùm hẹp qua vật liệu",
+      "grade": 12,
+      "topic": "Hạt nhân",
+      "template": "nuclear",
+      "svg": "images/thumbnails-2d/gamma_attenuation.svg",
+      "webp": "images/thumbnails-2d/gamma_attenuation.webp",
+      "status": "generated-needs-physics-review"
+    },
+    {
+      "id": "poisson_counting",
+      "title": "Số đếm phóng xạ và dao động Poisson",
+      "grade": 12,
+      "topic": "Hạt nhân",
+      "template": "nuclear",
+      "svg": "images/thumbnails-2d/poisson_counting.svg",
+      "webp": "images/thumbnails-2d/poisson_counting.webp",
+      "status": "generated-needs-physics-review"
+    }
+  ],
+  "renderedCount": 300,
+  "duplicateImagePairs": [],
+  "errors": []
+}
