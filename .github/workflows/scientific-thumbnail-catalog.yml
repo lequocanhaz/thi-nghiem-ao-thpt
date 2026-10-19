@@ -1,0 +1,31 @@
+name: Quanh Lab · Danh mục 300 ảnh khoa học
+on:
+  push:
+    branches: [feat/scientific-illustrations-v41]
+    paths:
+      - scripts/export_thumbnail_catalog.mjs
+      - .github/workflows/scientific-thumbnail-catalog.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Export manifest for all 300 original experiments
+        run: node scripts/export_thumbnail_catalog.mjs
+      - name: Verify uniqueness and count
+        run: |
+          node --input-type=module -e "import fs from 'node:fs';const m=JSON.parse(fs.readFileSync('thumbnail-manifest.json'));const ids=m.experiments.map(x=>x.id);if(ids.length!==300||new Set(ids).size!==300)process.exit(1);console.log('300/300 original experiment IDs verified')"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: QuanhLab-300-thumbnail-manifest
+          path: |
+            thumbnail-manifest.json
+            thumbnail-catalog.csv
+          retention-days: 30
