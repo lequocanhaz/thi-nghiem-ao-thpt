@@ -19,7 +19,7 @@ from pathlib import Path
 import shutil
 import sys
 import threading
-from PIL import Image, ImageStat
+from PIL import Image, ImageStat, ImageEnhance
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,7 +53,7 @@ def validate_and_save(image_uri, output):
         if occupied < 35 or variance < 5:
             raise ValueError(f"Blank/low-information image ({occupied} pixels; contrast {variance:.1f})")
         output.parent.mkdir(parents=True, exist_ok=True)
-        rgb.save(output, "WEBP", quality=86, method=5)
+        # Improve legibility of pale 3D apparatus on a white background without changing the simulated geometry.\n        rgb = ImageEnhance.Contrast(rgb).enhance(1.7)\n        rgb = ImageEnhance.Color(rgb).enhance(1.16)\n        rgb = ImageEnhance.Sharpness(rgb).enhance(1.12)\n        rgb.save(output, "WEBP", quality=87, method=5)
         return {"nonWhitePixels": occupied, "contrast": round(variance, 1),
                 "bytes": output.stat().st_size}
 
