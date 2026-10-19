@@ -1,0 +1,110 @@
+[
+  {
+    "grade": 10,
+    "title": "Vật lí 10",
+    "series": "Kết nối tri thức với cuộc sống",
+    "pages": 142,
+    "ratio": 0.7066508313539193,
+    "sample": false,
+    "printedOffset": 1,
+    "chapters": [
+      {
+        "title": "Mở đầu",
+        "page": 7,
+        "printedPage": 6
+      },
+      {
+        "title": "Động học",
+        "page": 21,
+        "printedPage": 20
+      },
+      {
+        "title": "Động lực học",
+        "page": 56,
+        "printedPage": 55
+      },
+      {
+        "title": "Năng lượng, công, công suất",
+        "page": 91,
+        "printedPage": 90
+      },
+      {
+        "title": "Động lượng",
+        "page": 110,
+        "printedPage": 109
+      },
+      {
+        "title": "Chuyển động tròn",
+        "page": 120,
+        "printedPage": 119
+      },
+      {
+        "title": "Biến dạng của vật rắn. Áp suất chất lỏng",
+        "page": 128,
+        "printedPage": 127
+      }
+    ]
+  },
+  {
+    "grade": 11,
+    "title": "Vật lí 11",
+    "series": "Kết nối tri thức với cuộc sống",
+    "pages": 119,
+    "ratio": 0.7066508313539193,
+    "sample": true,
+    "printedOffset": 2,
+    "chapters": [
+      {
+        "title": "Dao động",
+        "page": 7,
+        "printedPage": 5
+      },
+      {
+        "title": "Sóng",
+        "page": 33,
+        "printedPage": 31
+      },
+      {
+        "title": "Điện trường",
+        "page": 62,
+        "printedPage": 60
+      },
+      {
+        "title": "Dòng điện. Mạch điện",
+        "page": 92,
+        "printedPage": 90
+      }
+    ]
+  },
+  {
+    "grade": 12,
+    "title": "Vật lí 12",
+    "series": "Kết nối tri thức với cuộc sống",
+    "pages": 127,
+    "ratio": 0.7070709838804088,
+    "sample": true,
+    "printedOffset": 2,
+    "chapters": [
+      {
+        "title": "Vật lí nhiệt",
+        "page": 7,
+        "printedPage": 5
+      },
+      {
+        "title": "Khí lí tưởng",
+        "page": 35,
+        "printedPage": 33
+      },
+      {
+        "title": "Từ trường",
+        "page": 57,
+        "printedPage": 55
+      },
+      {
+        "title": "Vật lí hạt nhân",
+        "page": 92,
+        "printedPage": 90
+      }
+    ]
+  }
+]

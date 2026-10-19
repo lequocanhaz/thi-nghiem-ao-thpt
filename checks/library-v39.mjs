@@ -33,7 +33,7 @@ for(const card of catalog.querySelectorAll('.experiment-card'))assert.ok(card.qu
 const home=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all',pathFilter:null},icon);
 const {document}=parseHTML(home);
 assert.ok(document.querySelector('#curriculumTopicFilter'));
-assert.ok(document.querySelector('#curriculumSummary'));
+assert.equal(document.querySelector('#curriculumSummary'),null);assert.equal(document.querySelector('.library-lead'),null);
 assert.ok(document.querySelector('#bannerTitle em'));
 const css=fs.readFileSync(new URL('../dist/app.css',import.meta.url),'utf8');
 assert.match(css,/banner-copy h1 em\{display:inline-block;margin-top:/);

@@ -1,0 +1,29 @@
+[
+  {
+    "grade": 10,
+    "filename": "SGK VL 10.pdf",
+    "sha256": "0d1e2f966f9f831cfc965c4002a1c6298c46e7ab454f45fb6dab80f95905d066",
+    "pages": 142,
+    "sourceBytes": 24077080,
+    "sample": false,
+    "rendering": "Every supplied page retained in order, full page at 1600 px height; WebP quality 80. No OCR or removal of watermarks."
+  },
+  {
+    "grade": 11,
+    "filename": "SGK VL 11.pdf",
+    "sha256": "e48a7ee474b97cc451845d92a5b8ba021479b632317df27c0e762bbf2599ab74",
+    "pages": 119,
+    "sourceBytes": 17608617,
+    "sample": true,
+    "rendering": "Every supplied page retained in order, full page at 1600 px height; WebP quality 80. No OCR or removal of watermarks."
+  },
+  {
+    "grade": 12,
+    "filename": "sach-giao-khoa-vat-li-12-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+    "sha256": "a7006401a94545f7eb58e6092af9f640c8642331ae75b819500a32d82fe30ed9",
+    "pages": 127,
+    "sourceBytes": 22225480,
+    "sample": true,
+    "rendering": "Every supplied page retained in order, full page at 1600 px height; WebP quality 80. No OCR or removal of watermarks."
+  }
+]
