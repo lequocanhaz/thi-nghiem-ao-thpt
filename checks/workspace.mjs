@@ -86,12 +86,14 @@ console.log('PASS v14 CSS contracts: native mobile page jump, compact mobile ban
 for(const max of [1e-15,1e-9,.02,10,1e8]){assert.equal(atEnd(0,max),false);assert.equal(atEnd(max/2,max),false);assert.equal(atEnd(max,max),true);}assert.equal(atEnd(NaN,1),false);assert.equal(atEnd(1,Infinity),false);for(let total=1;total<=50;total++)for(let page=1;page<=total;page++){const entries=pageWindow(page,total);assert.ok(entries.includes(page));assert.ok(entries.filter(Boolean).length<=7);assert.equal(new Set(entries.filter(Boolean)).size,entries.filter(Boolean).length);}
 console.log('PASS relative time boundaries from femtoseconds to years and 1,275 pagination windows.');
 
-// Black hero copy is separated from the video on a white surface.
+// White hero copy overlays the full-viewport video; reading surfaces retain black text.
 for(const width of [360,768,1440]){
  document.querySelector('main').innerHTML=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all',pathFilter:null},()=>'<svg/>');
  assert.equal(document.querySelector('.banner-footer'),null);assert.equal(document.querySelector('.banner-copy .eyebrow'),null);assert.ok(!/NASA|Full HD|Phát video|Tạm dừng video/.test(document.querySelector('.main-banner').textContent));
- assert.equal(property(document.querySelector('.banner-resume'),'color',width),'#000');assert.equal(property(document.querySelector('.banner-topline'),'color',width),'#000');
+ assert.equal(property(document.querySelector('.banner-resume'),'color',width),'#fff');assert.equal(property(document.querySelector('#bannerTitle'),'color',width),'#fff');
+ assert.equal(property(document.querySelector('.main-banner'),'min-height',width),'100svh');
+ assert.equal(property(document.querySelector('.banner-art'),'position',width),'absolute');
  assert.equal(property(document.body,'color',width),'#000','Black reading text is inherited throughout the page');
  assert.ok(parseFloat(property(document.querySelector('.banner-expand'),'min-height',width))>=44);
 }
-console.log('PASS v18 CSS/DOM contracts at 360/768/1440: clean banner, 44px fullscreen control, black reading and hero copy on white. No browser pixels.');
+console.log('PASS v18 CSS/DOM contracts at 360/768/1440: clean banner, 44px fullscreen control, white copy over a full-viewport video and black reading text. No browser pixels.');

@@ -793,6 +793,39 @@ footer{border-top:1px solid #e3e5e9;background:#fff}
 @media(max-width:620px){.header{padding:14px 16px;gap:14px;min-height:0}.brand>img{width:44px;height:38px}.brand-wordmark{font-size:27px}.brand{gap:9px}.header nav{width:100%;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr) 44px minmax(0,1.45fr) 44px;gap:3px;padding:0}.header nav>a,.header nav>button{height:44px;min-height:44px;padding:0 3px;font-size:.75rem;font-weight:600;white-space:nowrap}.header #openAssistant{font-size:.75rem;padding:0 8px}.header #openAssistant svg{display:none}.home{padding:24px 16px 48px}.main-banner{border-radius:0}.main-banner .banner-copy{padding:38px 0 2px}.main-banner .banner-copy h1{font-size:clamp(44px,12vw,68px);line-height:1.09;letter-spacing:-.055em;margin-bottom:22px}.main-banner>.banner-art{height:240px;border-radius:10px}.banner-topline>span:first-child{font-size:.5625rem;padding:0;border:0;background:transparent}.banner-actions{max-width:100%;gap:12px}.main-banner .button.primary{font-size:.8125rem;padding:0 14px}.banner-resume{font-size:.75rem;gap:6px}.banner-model-links{padding:12px 0 16px;gap:20px;font-size:.75rem}.banner-model-links>span{display:none}.banner-model-links a{gap:6px}.home>.entry-grid{display:block;padding:22px 0 24px;margin:0 0 32px;border-radius:0}.entry-grid h2{font-size:.8125rem}.class-entry{gap:8px}.entry-grid .class-entry button{align-items:flex-start;justify-content:flex-start;min-height:124px;padding:12px 10px}.class-entry button>span{font-size:.875rem}.class-entry button strong{font-size:1.625rem;margin-left:3px}.class-entry small{font-size:.6875rem;line-height:1.5;margin-top:9px;padding:0}.continue-entry{margin-top:24px}.recent-entry{min-height:76px;padding:14px}.recent-entry b{font-size:.875rem}.recent-entry small{font-size:.75rem}.cards{grid-template-columns:1fr;gap:18px}.card-image{height:auto;aspect-ratio:1.55}.card-body{padding:18px}.card-body h3{font-size:1.25rem}.card-purpose{font-size:.875rem}.card-actions{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:0 18px 18px;gap:8px}.card-open,.preview-button{font-size:.8125rem;padding:0 8px;gap:5px;line-height:1.2;height:44px;min-height:44px;white-space:nowrap}.card-open>svg{width:15px;height:15px}.library-heading h2{font-size:28px;gap:10px}.library-heading h2 span{min-width:40px;min-height:28px;font-size:.75rem}.topic-chips button{height:44px;min-height:44px;padding:0 12px;font-size:.75rem}.catalog-toolbar{padding:12px 0}.grade-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;min-width:0}.grade-filters button{min-width:0;border-radius:6px;height:44px;min-height:44px;padding:0 6px;white-space:nowrap}.catalog-options select{font-size:16px;height:44px}.mode-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.mode-switch button{min-width:0;padding-inline:5px;white-space:normal;line-height:1.2}.lab-heading h1{font-size:1.75rem}.lab-header-actions .button{height:44px;min-height:44px;padding:0 10px}.workspace-toolbar button{font-size:.75rem;padding:0 10px}.stage-tools{gap:5px}.stage-tools>button{font-size:.75rem;padding:0 10px}.stage-tools .icon-button{padding:0}.transport .button{font-size:.8125rem;padding:0 12px}.transport .icon-button{padding:0}.control-heading h2{font-size:1.0625rem}.ai-head{padding:12px 14px}.ai-head h2{font-size:1.1875rem}.ai-compose [data-ai=attach]{padding:0}.ai-compose button[type=submit]{height:44px;min-height:44px}.ai-empty h3{font-size:1.375rem}}
 @media(max-width:380px){.class-entry button>span{display:flex;flex-direction:column;gap:4px;line-height:1.2}.class-entry button strong{margin-left:0;line-height:1.05}.banner-actions{display:grid;grid-template-columns:1fr;gap:4px}.banner-resume{justify-content:center;width:100%}.main-banner .button.primary{width:100%}.main-banner>.banner-art{height:210px}.card-actions{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}.card-open,.preview-button{padding:0 7px;font-size:.75rem}.card-open>svg{width:14px;height:14px}}
 
+/* Full-viewport opening: video, title and navigation share one continuous surface. */
+body:has(.home-screen) .header{position:absolute;inset:0 0 auto;z-index:20;background:linear-gradient(#000b,#0000);border-bottom:0;color:#fff}
+body:has(.home-screen) .header .brand-wordmark,body:has(.home-screen) .header .brand-wordmark b{color:#fff}
+body:has(.home-screen) .header nav>a,body:has(.home-screen) .header nav>button{color:#fff;background:transparent;border-color:transparent}
+body:has(.home-screen) .header nav>a:hover,body:has(.home-screen) .header nav>button:hover{background:#ffffff20}
+body:has(.home-screen) .header #openAssistant{background:#ffffff18;border-color:#ffffff50;color:#fff}
+.home-screen{width:100%;min-width:0}
+.home-screen>.main-banner{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:0;width:100%;height:auto;min-height:100vh;min-height:100svh;margin:0;padding:clamp(156px,24svh,240px) clamp(24px,6vw,104px) clamp(76px,12svh,130px);overflow:hidden;border:0;border-radius:0;background:#030303;color:#fff}
+.home-screen>.main-banner>.banner-art{position:absolute;inset:0;width:100%;height:100%;min-height:0;order:0;border:0;border-radius:0;background:#030303;pointer-events:none}
+.home-screen .cinematic-poster,.home-screen .banner-video{inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 50%}
+.home-screen .banner-art:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0008,transparent 75%),linear-gradient(0deg,#000c,transparent 70%);pointer-events:none}
+.home-screen>.main-banner .banner-copy{position:relative;z-index:2;width:auto;max-width:100%;padding:0}
+.home-screen>.main-banner .banner-copy h1{margin:0 0 32px;color:#fff;font-size:clamp(60px,8.5vw,136px);font-weight:750;line-height:1.06;letter-spacing:-.055em;text-shadow:0 2px 32px #0008}
+.home-screen>.main-banner .banner-copy em{color:#fff}
+.home-screen>.main-banner .banner-actions{display:flex;flex-direction:row;align-items:center;max-width:100%;gap:12px 24px}
+.home-screen>.main-banner .button.primary{width:auto;background:#fff;border-color:#fff;color:#111214;padding:0 22px;min-height:50px;height:50px}
+.home-screen>.main-banner .button.primary:hover{background:#e9e9ec;border-color:#e9e9ec}
+.home-screen>.main-banner .banner-resume{width:auto;height:50px;min-height:50px;color:#fff;font-size:.875rem;font-weight:600}
+.home-screen>.main-banner .banner-expand{right:clamp(16px,3vw,48px);bottom:24px}
+.home-screen>.main-banner:fullscreen{height:100%;min-height:100%;overflow:auto}
+@media(max-width:620px){
+ .home-screen>.main-banner{padding:176px 24px max(76px,env(safe-area-inset-bottom));min-height:100svh}
+ .home-screen>.main-banner .banner-copy h1{font-size:clamp(48px,12.5vw,76px);margin-bottom:28px}
+ .home-screen .banner-art:after{background:linear-gradient(0deg,#000e,transparent 85%),linear-gradient(90deg,#0005,transparent)}
+ .home-screen>.main-banner .banner-actions{align-items:flex-start;flex-direction:column;gap:8px}
+ .home-screen>.main-banner .button.primary{font-size:.875rem}
+ .home-screen>.main-banner .banner-resume{font-size:.8125rem}
+}
+@media(max-height:500px) and (min-width:621px){
+ .home-screen>.main-banner{padding-top:110px;padding-bottom:40px}
+ .home-screen>.main-banner .banner-copy h1{font-size:56px;margin-bottom:20px}
+}
+
 @media(max-height:480px){.ai-head{padding:6px 12px}.ai-brand,.ai-avatar,.ai-attachment-hint{display:none}.ai-messages{padding:10px 14px}.ai-compose{padding:8px 12px;gap:6px;max-height:60%}.ai-compose textarea{min-height:44px;max-height:64px}.ai-status{max-height:64px}.ai-empty{padding:10px}.ai-empty-mark{display:none}}
 
 @media(pointer:coarse){.touch-interaction{display:block}

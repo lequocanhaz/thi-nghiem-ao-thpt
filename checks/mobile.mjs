@@ -34,10 +34,11 @@ for(const width of [320,360,390,620,768,1024,1440]){
  assert.equal(style(document.body,'font-family',v),"'Manrope','Segoe UI',sans-serif");assert.equal(style(document.querySelector('#bannerTitle'),'font-weight',v),'750');assert.equal(style(document.querySelector('#libraryTitle'),'font-weight',v),'750');
  document.querySelector('#cards').innerHTML=cardsMarkup(experiments.slice(0,1),prefs,()=> '');assert.equal(style(document.querySelector('.card-image'),'background',v),'#fff','White preview at '+width);assert.equal(style(document.querySelector('.card-body h3'),'font-weight',v),'800','Experiment name stays bold');assert.equal(style(document.querySelector('.preview-button'),'min-height',v),'44px');
  const strong=document.createElement('strong');document.body.append(strong);assert.equal(style(strong,'font-weight',v),'700');strong.remove();
- if(width<=1100)assert.equal(style(document.querySelector('.header'),'position',v),'relative','Header must not obscure mobile model');
+ assert.equal(style(document.querySelector('.header'),'position',v),'absolute','Home navigation overlays the full viewport video');
  for(const e of experiments){
   document.querySelector('#main').innerHTML=labMarkup(e,{prefs,state:initialState(e),config,controls:control,panel:'data',mode:'explore',staticMode:e.static,experiments},()=> '');
   const workspace=document.querySelector('.workspace');
+  assert.equal(style(document.querySelector('.header'),'position',v),'relative','Lab navigation stays in the normal document flow');
   assert.equal(style(workspace,'display',v),width<=1100?'flex':'grid',e.id+' workspace '+width);
   assert.equal(style(document.querySelector('.instrument-zone'),'min-width',v),'0',e.id+' shrinkable model column');
   if(width<=1100){const body=document.querySelector('.control-body');assert.equal(style(body,'overflow',v),'auto');assert.ok(style(body,'max-height',v).includes('56svh'));}
