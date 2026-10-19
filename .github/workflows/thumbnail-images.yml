@@ -1,0 +1,73 @@
+name: Tạo ảnh mô hình Vật lí Quanh Lab
+on:
+  push:
+    branches: [feat/real-physics-thumbnails-v40]
+    paths:
+      - scripts/generate_thumbnails.py
+      - dist/thumbnail-export.html
+      - .github/workflows/thumbnail-images.yml
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "sample: 10 hình; all: 300 hình; batch: một dải"
+        required: true
+        type: choice
+        default: sample
+        options: [sample, all, batch]
+      start:
+        description: "Chỉ dùng khi mode=batch: vị trí bắt đầu (0–299)"
+        default: "0"
+        type: string
+      count:
+        description: "Chỉ dùng khi mode=batch: số ảnh"
+        default: "10"
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: thumbnails-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  render:
+    if: github.ref_name == 'feat/real-physics-thumbnails-v40'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install local-browser tools
+        run: python -m pip install --disable-pip-version-check Pillow playwright==1.56.0
+      - name: Locate Chrome
+        run: |
+          which google-chrome || which google-chrome-stable || which chromium
+      - name: Render model thumbnails
+        env:
+          THUMB_MODE: ${{ inputs.mode || 'sample' }}
+          THUMB_START: ${{ inputs.start || '0' }}
+          THUMB_COUNT: ${{ inputs.count || '10' }}
+        run: |
+          case "$THUMB_MODE" in
+            all) python scripts/generate_thumbnails.py --all ;;
+            batch) python scripts/generate_thumbnails.py --start "$THUMB_START" --count "$THUMB_COUNT" ;;
+            *) python scripts/generate_thumbnails.py --sample ;;
+          esac
+      - name: Upload review contact sheet
+        run: python scripts/thumbnail_contact_sheet.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quanh-lab-thumbnail-previews
+          path: |
+            dist/images/thumbnails/
+            thumbnail-contact-sheet.jpg
+          retention-days: 30
+      - name: Commit and save generated WebP files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/images/thumbnails
+          if ! git diff --cached --quiet; then
+            git commit -m "assets(thumbnails): generate verified real-model previews [thumbs generated]"
+            git push origin HEAD:"${GITHUB_REF_NAME}"
+          fi
