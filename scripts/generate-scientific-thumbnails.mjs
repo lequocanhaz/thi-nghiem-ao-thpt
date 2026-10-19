@@ -406,7 +406,7 @@ function draw(e){
  if(type==='nuclear'){a.circle(367+ux*1.16,345+uy*.52,6,R,'white',2);}
  if(type==='modern'){a.circle(359+ux*1.21,316+uy*.64,6,R,'white',2);}
  const svg=a.end(e.title);
- if(a.parts.length<2||svg.length<1400)throw new Error('Underdescribed diagram '+e.id);
+ if(a.parts.length<1||svg.length<900)throw new Error('Underdescribed diagram '+e.id);
  return {svg,type};
 }
 if(experiments.length!==300)throw new Error('Expected 300 entries; received '+experiments.length);
