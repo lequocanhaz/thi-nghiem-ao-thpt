@@ -1,5 +1,12 @@
-// Session data contains plain objects, arrays, strings and numbers.
+// Keep the static library readable while modules load; fonts never block startup.
 if(typeof globalThis.structuredClone!=='function')globalThis.structuredClone=value=>JSON.parse(JSON.stringify(value));
 if(typeof Object.hasOwn!=='function')Object.hasOwn=(object,key)=>Object.prototype.hasOwnProperty.call(object,key);
-const main=document.querySelector('#main');
-(document.fonts?.load?Promise.all([document.fonts.load('400 16px Manrope'),document.fonts.load('800 16px Manrope')]).catch(()=>{}):Promise.resolve()).then(()=>import('./app.js?v=48')).catch(error=>{console.error('Lab startup failed',error);main.innerHTML='<section class="startup-state"><span class="startup-symbol">↻</span><h1>Thí nghiệm chưa tải được</h1><p>Thử tải lại trang hoặc mở bằng trình duyệt khác.</p><button id="reloadLab" class="button primary">Tải lại</button></section>';document.querySelector('#reloadLab').addEventListener('click',()=>location.reload());});
+let finished=false;
+function fallback(){
+ if(finished)return;
+ const status=document.querySelector('#startupStatus');
+ if(status){status.textContent='Công cụ chưa tải được. Kiểm tra kết nối và thử lại.';
+ const button=document.createElement('button');button.className='button secondary';button.textContent='Thử lại';button.addEventListener('click',()=>location.reload());status.append(' ',button);}
+}
+const timer=setTimeout(fallback,15000);
+import('./app.js?v=49').then(()=>{finished=true;clearTimeout(timer);}).catch(error=>{clearTimeout(timer);console.error('Lab startup failed',error);fallback();});

@@ -1,5 +1,4 @@
-import {SoftwareScene} from './software-scene.js?v=35';
-import {LabScene} from './scene3d.js?v=35';
+import {peekRenderers} from './lab-loader.js?v=49';
 import {initialState} from './experiments.js?v=17';
 import {evaluate,duration} from './models.js?v=17';
 
@@ -44,6 +43,7 @@ export function observeThumbnails(experiments){
 }
 async function renderThumbnail(e){
  if(!renderer){
+  const {LabScene,SoftwareScene}=peekRenderers();
   if(!softwareOnly){try{renderer=new LabScene();}catch{softwareOnly=true;}}
   if(!renderer)renderer=new SoftwareScene();
  }
@@ -71,6 +71,7 @@ async function pump(experiments){
    let url=cache.get(id)||await stored(id);
    if(job.own!==token||!el.isConnected)continue;
    if(!url){
+    if(!peekRenderers())continue; // Keep named lightweight cards until the first experiment is opened.
     const e=experiments.find(item=>item.id===id);
     if(!e)throw Error('Unknown simulation: '+id);
     // Yield before each capture to keep mobile scrolling responsive.

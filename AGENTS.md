@@ -11,3 +11,5 @@
 - Fetch nhánh chính trước khi xuất bản, giữ thay đổi đồng thời; không force-push hoặc reset cứng để ghi đè.
 - Giữ backend/khóa AI ở máy chủ. Không cần khóa để chạy frontend và kiểm tra bằng fixtures.
 - Đọc các quy tắc môi trường hiện hành trước khi dùng công cụ xem trước hoặc trình duyệt; không sao chép giới hạn của một môi trường cũ sang môi trường khác.
+
+- Theo yêu cầu của chủ dự án: sau khi hoàn tất thay đổi và kiểm tra đạt, tự commit và đẩy lên GitHub nhánh `main`, không hỏi xác nhận lặp lại. Fetch trước khi đẩy, giữ thay đổi đồng thời và chỉ đưa các tệp thuộc công việc vào commit; không đưa khóa hoặc tài nguyên KaTeX sinh cục bộ vào git. Theo dõi GitHub Actions/Pages và chỉ báo đã cập nhật web khi triển khai thành công.
