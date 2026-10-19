@@ -7,7 +7,7 @@ from PIL import Image,ImageDraw,ImageFont
 ROOT=Path(__file__).resolve().parents[1]
 directory=ROOT/'dist'/'images'/'thumbnails'
 manifest=json.loads((directory/'manifest.json').read_text(encoding='utf8'))
-rows=list(manifest['images'].values())
+rows=list(manifest['images'].values())[:12]  # compact preview, even when the job renders 300
 if not rows:
     raise RuntimeError('No thumbnails have been exported')
 columns=3
