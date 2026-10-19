@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "source": "Quanh Lab model renderer",
+  "dimensions": [
+    960,
+    600
+  ],
+  "catalogCount": 300,
+  "images": {
+    "electric": {
+      "id": "electric",
+      "title": "Điện tích & điện trường",
+      "grade": 11,
+      "topic": "Điện trường",
+      "path": "images/thumbnails/electric.webp",
+      "renderer": "software",
+      "nonWhitePixels": 130,
+      "contrast": 5.6,
+      "bytes": 12822
+    },
+    "ohm": {
+      "id": "ohm",
+      "title": "Khảo sát định luật Ohm",
+      "grade": 11,
+      "topic": "Dòng điện",
+      "path": "images/thumbnails/ohm.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 286,
+      "contrast": 17.8,
+      "bytes": 19000
+    },
+    "capacitor": {
+      "id": "capacitor",
+      "title": "Tụ điện: tích & phóng điện",
+      "grade": 11,
+      "topic": "Điện trường",
+      "path": "images/thumbnails/capacitor.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 304,
+      "contrast": 23.1,
+      "bytes": 15028
+    },
+    "oscillation": {
+      "id": "oscillation",
+      "title": "Dao động điều hòa",
+      "grade": 11,
+      "topic": "Dao động",
+      "path": "images/thumbnails/oscillation.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 250,
+      "contrast": 10.9,
+      "bytes": 14824
+    },
+    "wave": {
+      "id": "wave",
+      "title": "Sóng cơ & bước sóng",
+      "grade": 11,
+      "topic": "Sóng",
+      "path": "images/thumbnails/wave.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 138,
+      "contrast": 11.6,
+      "bytes": 15692
+    },
+    "interference": {
+      "id": "interference",
+      "title": "Giao thoa sóng",
+      "grade": 11,
+      "topic": "Sóng",
+      "path": "images/thumbnails/interference.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 764,
+      "contrast": 10.9,
+      "bytes": 12388
+    },
+    "prism": {
+      "id": "prism",
+      "title": "Tán sắc qua lăng kính",
+      "grade": 11,
+      "topic": "Quang học",
+      "path": "images/thumbnails/prism.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 121,
+      "contrast": 6.4,
+      "bytes": 15768
+    },
+    "pendulum": {
+      "id": "pendulum",
+      "title": "Con lắc đơn",
+      "grade": 11,
+      "topic": "Dao động",
+      "path": "images/thumbnails/pendulum.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 171,
+      "contrast": 10.3,
+      "bytes": 13066
+    },
+    "energy": {
+      "id": "energy",
+      "title": "Cơ năng & sự chuyển hóa",
+      "grade": 10,
+      "topic": "Cơ học",
+      "path": "images/thumbnails/energy.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 393,
+      "contrast": 27.8,
+      "bytes": 13182
+    },
+    "boyle": {
+      "id": "boyle",
+      "title": "Định luật Boyle",
+      "grade": 12,
+      "topic": "Khí lí tưởng",
+      "path": "images/thumbnails/boyle.webp",
+      "renderer": "webgl",
+      "nonWhitePixels": 446,
+      "contrast": 32.0,
+      "bytes": 18422
+    }
+  },
+  "failed": []
+}
