@@ -44,6 +44,8 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     records, provenance, jobs = [], [], []
+    lesson_source = json.loads((root / 'sources' / 'textbook-lessons-v44.json').read_text())
+    lessons_by_grade = {b['grade']: b for b in lesson_source['books']}
     for grade, name, offset, sample, chapters in BOOKS:
         source = Path(args.input) / name
         destination = root / 'dist' / 'books' / str(grade)
@@ -52,6 +54,9 @@ def main():
             count = len(doc)
             ratio = doc[0].rect.width / doc[0].rect.height
         records.append(dict(grade=grade, title=f'Vật lí {grade}', series='Kết nối tri thức với cuộc sống', pages=count, ratio=ratio, sample=sample, printedOffset=offset, chapters=[dict(title=t, page=p + offset, printedPage=p) for t, p in chapters]))
+        record = records[-1]
+        record['contentsPage'] = lessons_by_grade[grade]['contentsPage']
+        record['lessons'] = [dict(**lesson, page=lesson['printedPage'] + offset) for lesson in lessons_by_grade[grade]['lessons']]
         provenance.append(dict(grade=grade, filename=name, sha256=hashlib.sha256(source.read_bytes()).hexdigest(), pages=count, sourceBytes=source.stat().st_size, sample=sample, rendering='Every supplied page retained in order, full page at 1600 px height; WebP quality 80. No OCR or removal of watermarks.'))
         jobs.extend((str(source), str(destination), n) for n in range(count))
     with ProcessPoolExecutor(max_workers=6) as pool:

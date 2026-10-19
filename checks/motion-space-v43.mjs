@@ -54,6 +54,7 @@ for(const e of experiments){
    view.update(e.id,s,evaluate(e.id,s,c),{...c,playing:i<16});
    const b=apparatusBounds(view.model.group);assert.ok(boundsInView(view.camera,b,.945),`${e.id} ${preset.name} ${mode} ${w} frame ${i}`);
    const deck=worldBox(view.model.group.getObjectByName('expanded-workspace'));
+   assert.ok(deck.max.y<b.min.y-.1,e.id+' expanded support never overlaps apparatus');
    assert.ok(deck.min.x<=b.min.x+1e-5&&deck.max.x>=b.max.x-1e-5&&deck.min.z<=b.min.z+1e-5&&deck.max.z>=b.max.z-1e-5,e.id+' work surface covers apparatus');
    adjusted ||= !boundsInView(beginning,b,.945);frames++;count++;
   }runs++;
@@ -78,8 +79,23 @@ for(const e of experiments){
  }
 }
 const waterExperiment=experiments.find(e=>e.id==='interference'),waterState={...initialState(waterExperiment),probeX:12.5,probeZ:12.5,separation:15};view.update('interference',waterState,evaluate('interference',waterState),base);let surface,probe;view.model.group.traverse(q=>{if(q.geometry?.attributes.position?.count===3721)surface=q;if(q.userData.drag==='interference-probe')probe=q;});const waterBounds=worldBox(surface),probePosition=probe.getWorldPosition(new T.Vector3());assert.ok(probePosition.x>=waterBounds.min.x&&probePosition.x<=waterBounds.max.x&&probePosition.z>=waterBounds.min.z&&probePosition.z<=waterBounds.max.z,'probe remains over expanded water surface');
-// A run re-enables fitting after a prior manual zoom; paused manual views remain available.
-const e=experiments.find(e=>e.id==='uniform'),s={...initialState(e),v:20};view.update(e.id,s,evaluate(e.id,s),base);view.zoom('in');assert.equal(view.autoFrame,false);view.update(e.id,s,evaluate(e.id,s),{...base,playing:true});assert.equal(view.autoFrame,true);view.zoom('in');assert.equal(view.autoFrame,false);view.update(e.id,s,evaluate(e.id,s),{...base,playing:true});assert.ok(boundsInView(view.camera,apparatusBounds(view.model.group),.945),'running camera guard survives manual zoom');view.update(e.id,s,evaluate(e.id,s),{...base,playing:false});view.zoom('in');const paused=view.camera.position.clone();view.update(e.id,s,evaluate(e.id,s),{...base,playing:false});assert.ok(view.camera.position.equals(paused),'paused detail view remains available');
+// Manual zoom must survive start, playback, pause and parameter refresh in both projections.
+for(const mode of ['3d','2d']){
+ const e=experiments.find(e=>e.id==='uniform'),s={...initialState(e),v:20},cfg={...base,viewMode:mode};
+ view.update(e.id,s,evaluate(e.id,s),cfg);view.fitView();
+ const before=view.camera.isOrthographicCamera?view.camera.zoom:view.camera.position.distanceTo(view.controls.target);
+ view.zoom('in');const position=view.camera.position.clone(),zoom=view.camera.zoom,target=view.controls.target.clone();
+ const after=view.camera.isOrthographicCamera?zoom:position.distanceTo(target);assert.ok(mode==='2d'?after>before:after<before);
+ for(const playing of [true,true,false,true]){s.t+=.1;view.update(e.id,s,evaluate(e.id,s),{...cfg,playing});assert.equal(view.autoFrame,false);assert.ok(view.camera.position.equals(position),'manual perspective zoom persists');assert.equal(view.camera.zoom,zoom,'manual orthographic zoom persists');assert.ok(view.controls.target.equals(target));}
+ view.zoom('out');assert.ok(mode==='2d'?view.camera.zoom<zoom:view.camera.position.distanceTo(target)>after);
+ view.spaceView();const expanded=view.camera.position.clone(),spaceZoom=view.camera.zoom;view.update(e.id,s,evaluate(e.id,s),{...cfg,playing:true});assert.ok(view.camera.position.equals(expanded));assert.equal(view.camera.zoom,spaceZoom);
+ view.fitView();assert.equal(view.autoFrame,true);assert.ok(boundsInView(view.camera,apparatusBounds(view.model.group),.945));
+}
+// Reproduce the supplied high-amplitude wave: no old bench or global floor may cut through it.
+for(const id of ['wave','standing','interference']){
+ const e=experiments.find(e=>e.id===id),s={...initialState(e),a:e.params.find(p=>p.key==='a').max};
+ for(let i=0;i<=24;i++){s.t=i/12;view.update(id,s,evaluate(id,s),base);const b=apparatusBounds(view.model.group),deck=worldBox(view.model.group.getObjectByName('expanded-workspace'));assert.ok(deck.max.y<b.min.y-.1,id+' support below full displacement');assert.ok(view.grid.position.y<deck.max.y&&view.shadowFloor.position.y<deck.max.y);view.model.group.traverse(q=>{if(q.userData.stageBase&&q.name!=='expanded-workspace')assert.equal(q.visible,false,'old bench removed');});}
+}
 view.dispose();
 const report={experiments:catalog.length,runs,playbackFrames:frames,wholeRailFrames:railFrames,calibratedCases,experimentsThatNeededReframing:guardedRuns,viewports:[[320,360],[390,360],[430,400],[844,360],[1280,500]],catalog,scope:'Live scene/model/camera methods, real mesh bounds, 2D/3D and synthetic playback. CPU geometry only; no browser pixels, iPhone hardware or Safari.'};
 fs.writeFileSync(new URL('./motion-space-audit-v43.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('PASS',JSON.stringify({...report,catalog:undefined}));

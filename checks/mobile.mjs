@@ -29,6 +29,7 @@ let layouts=0;
 for(const width of [320,360,375,390,393,402,414,430,440,620,667,736,768,812,844,852,874,896,932,956,1024,1440]){
  const v={width,height:width<700?780:900,coarse:width<1100};
  document.querySelector('#main').innerHTML=homeMarkup(experiments,prefs,{search:'',grade:'all',topic:'all',filter:'all'},()=> '');
+ const headingSizes=Array.from(document.querySelectorAll('.home-section-title')).map(h=>style(h,'font-size',v));assert.ok(headingSizes.length>=3);assert.equal(new Set(headingSizes).size,1,'Main headings share same responsive font at '+width);
  assert.equal(style(document.querySelector('.header'),'height',v),'auto','Header must accommodate wrapped navigation at '+width);
  assert.equal(style(document.querySelector('.banner-copy'),'width',v),'auto','No 100%-width banner offset overflowing at '+width);
  assert.equal(style(document.body,'font-family',v),"'Manrope','Segoe UI',sans-serif");assert.equal(style(document.querySelector('#bannerTitle'),'font-weight',v),'750');assert.equal(style(document.querySelector('#libraryTitle'),'font-weight',v),'750');

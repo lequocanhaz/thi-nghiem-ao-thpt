@@ -11,6 +11,8 @@ assert.deepEqual(catalog.map(b=>b.pages),[142,119,127]);
 let pages=0,transitions=0;
 for(const book of catalog){
  assert.ok(book.ratio>.65&&book.ratio<.8);
+ assert.equal(book.lessons.length,({10:34,11:26,12:25})[book.grade]);
+ for(const [i,l]of book.lessons.entries()){assert.equal(l.number,i+1);assert.ok(l.title.length>4);assert.equal(l.page,l.printedPage+book.printedOffset);assert.ok(l.page>book.chapters[0].page&&l.page<=book.pages);if(i)assert.ok(l.page>book.lessons[i-1].page);}
  let previousChapter=0;
  for(const c of book.chapters){assert.ok(c.page>previousChapter&&c.page<=book.pages);assert.equal(c.page,c.printedPage+book.printedOffset);previousChapter=c.page;}
  assert.equal(boundedPage(-5,book.pages),1);assert.equal(boundedPage(Infinity,book.pages),1);assert.equal(boundedPage(99999,book.pages),book.pages);

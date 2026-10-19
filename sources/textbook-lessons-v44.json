@@ -1,0 +1,448 @@
+{
+  "source": "Transcribed from the contents page of each supplied PDF; printed page numbers retain the source pagination.",
+  "books": [
+    {
+      "grade": 10,
+      "contentsPage": 5,
+      "lessons": [
+        {
+          "number": 1,
+          "title": "Làm quen với Vật lí",
+          "printedPage": 7
+        },
+        {
+          "number": 2,
+          "title": "Các quy tắc an toàn trong phòng thực hành Vật lí",
+          "printedPage": 12
+        },
+        {
+          "number": 3,
+          "title": "Thực hành tính sai số trong phép đo. Ghi kết quả đo",
+          "printedPage": 17
+        },
+        {
+          "number": 4,
+          "title": "Độ dịch chuyển và quãng đường đi được",
+          "printedPage": 21
+        },
+        {
+          "number": 5,
+          "title": "Tốc độ và vận tốc",
+          "printedPage": 26
+        },
+        {
+          "number": 6,
+          "title": "Thực hành: Đo tốc độ của vật chuyển động",
+          "printedPage": 30
+        },
+        {
+          "number": 7,
+          "title": "Đồ thị độ dịch chuyển – thời gian",
+          "printedPage": 34
+        },
+        {
+          "number": 8,
+          "title": "Chuyển động biến đổi. Gia tốc",
+          "printedPage": 37
+        },
+        {
+          "number": 9,
+          "title": "Chuyển động thẳng biến đổi đều",
+          "printedPage": 40
+        },
+        {
+          "number": 10,
+          "title": "Sự rơi tự do",
+          "printedPage": 44
+        },
+        {
+          "number": 11,
+          "title": "Thực hành: Đo gia tốc rơi tự do",
+          "printedPage": 47
+        },
+        {
+          "number": 12,
+          "title": "Chuyển động ném",
+          "printedPage": 49
+        },
+        {
+          "number": 13,
+          "title": "Tổng hợp và phân tích lực. Cân bằng lực",
+          "printedPage": 56
+        },
+        {
+          "number": 14,
+          "title": "Định luật 1 Newton",
+          "printedPage": 60
+        },
+        {
+          "number": 15,
+          "title": "Định luật 2 Newton",
+          "printedPage": 63
+        },
+        {
+          "number": 16,
+          "title": "Định luật 3 Newton",
+          "printedPage": 67
+        },
+        {
+          "number": 17,
+          "title": "Trọng lực và lực căng",
+          "printedPage": 69
+        },
+        {
+          "number": 18,
+          "title": "Lực ma sát",
+          "printedPage": 72
+        },
+        {
+          "number": 19,
+          "title": "Lực cản và lực nâng",
+          "printedPage": 77
+        },
+        {
+          "number": 20,
+          "title": "Một số ví dụ về cách giải các bài toán thuộc phần động lực học",
+          "printedPage": 80
+        },
+        {
+          "number": 21,
+          "title": "Moment lực. Cân bằng của vật rắn",
+          "printedPage": 83
+        },
+        {
+          "number": 22,
+          "title": "Thực hành: Tổng hợp lực",
+          "printedPage": 86
+        },
+        {
+          "number": 23,
+          "title": "Năng lượng. Công cơ học",
+          "printedPage": 91
+        },
+        {
+          "number": 24,
+          "title": "Công suất",
+          "printedPage": 96
+        },
+        {
+          "number": 25,
+          "title": "Động năng, thế năng",
+          "printedPage": 99
+        },
+        {
+          "number": 26,
+          "title": "Cơ năng và định luật bảo toàn cơ năng",
+          "printedPage": 102
+        },
+        {
+          "number": 27,
+          "title": "Hiệu suất",
+          "printedPage": 106
+        },
+        {
+          "number": 28,
+          "title": "Động lượng",
+          "printedPage": 110
+        },
+        {
+          "number": 29,
+          "title": "Định luật bảo toàn động lượng",
+          "printedPage": 113
+        },
+        {
+          "number": 30,
+          "title": "Thực hành: Xác định động lượng của vật trước và sau va chạm",
+          "printedPage": 116
+        },
+        {
+          "number": 31,
+          "title": "Động học của chuyển động tròn đều",
+          "printedPage": 120
+        },
+        {
+          "number": 32,
+          "title": "Lực hướng tâm và gia tốc hướng tâm",
+          "printedPage": 123
+        },
+        {
+          "number": 33,
+          "title": "Biến dạng của vật rắn",
+          "printedPage": 128
+        },
+        {
+          "number": 34,
+          "title": "Khối lượng riêng. Áp suất chất lỏng",
+          "printedPage": 131
+        }
+      ]
+    },
+    {
+      "grade": 11,
+      "contentsPage": 6,
+      "lessons": [
+        {
+          "number": 1,
+          "title": "Dao động điều hoà",
+          "printedPage": 6
+        },
+        {
+          "number": 2,
+          "title": "Mô tả dao động điều hoà",
+          "printedPage": 10
+        },
+        {
+          "number": 3,
+          "title": "Vận tốc, gia tốc trong dao động điều hoà",
+          "printedPage": 14
+        },
+        {
+          "number": 4,
+          "title": "Bài tập về dao động điều hoà",
+          "printedPage": 17
+        },
+        {
+          "number": 5,
+          "title": "Động năng. Thế năng. Sự chuyển hoá năng lượng trong dao động điều hoà",
+          "printedPage": 20
+        },
+        {
+          "number": 6,
+          "title": "Dao động tắt dần. Dao động cưỡng bức. Hiện tượng cộng hưởng",
+          "printedPage": 24
+        },
+        {
+          "number": 7,
+          "title": "Bài tập về sự chuyển hoá năng lượng trong dao động điều hoà",
+          "printedPage": 28
+        },
+        {
+          "number": 8,
+          "title": "Mô tả sóng",
+          "printedPage": 32
+        },
+        {
+          "number": 9,
+          "title": "Sóng ngang, sóng dọc, sự truyền năng lượng của sóng cơ",
+          "printedPage": 37
+        },
+        {
+          "number": 10,
+          "title": "Thực hành: Đo tần số của sóng âm",
+          "printedPage": 41
+        },
+        {
+          "number": 11,
+          "title": "Sóng điện từ",
+          "printedPage": 44
+        },
+        {
+          "number": 12,
+          "title": "Giao thoa sóng",
+          "printedPage": 48
+        },
+        {
+          "number": 13,
+          "title": "Sóng dừng",
+          "printedPage": 52
+        },
+        {
+          "number": 14,
+          "title": "Bài tập về sóng",
+          "printedPage": 55
+        },
+        {
+          "number": 15,
+          "title": "Thực hành: Đo tốc độ truyền âm",
+          "printedPage": 58
+        },
+        {
+          "number": 16,
+          "title": "Lực tương tác giữa hai điện tích",
+          "printedPage": 61
+        },
+        {
+          "number": 17,
+          "title": "Khái niệm điện trường",
+          "printedPage": 65
+        },
+        {
+          "number": 18,
+          "title": "Điện trường đều",
+          "printedPage": 71
+        },
+        {
+          "number": 19,
+          "title": "Thế năng điện",
+          "printedPage": 76
+        },
+        {
+          "number": 20,
+          "title": "Điện thế",
+          "printedPage": 79
+        },
+        {
+          "number": 21,
+          "title": "Tụ điện",
+          "printedPage": 83
+        },
+        {
+          "number": 22,
+          "title": "Cường độ dòng điện",
+          "printedPage": 91
+        },
+        {
+          "number": 23,
+          "title": "Điện trở. Định luật Ohm",
+          "printedPage": 95
+        },
+        {
+          "number": 24,
+          "title": "Nguồn điện",
+          "printedPage": 102
+        },
+        {
+          "number": 25,
+          "title": "Năng lượng điện và công suất điện",
+          "printedPage": 106
+        },
+        {
+          "number": 26,
+          "title": "Thực hành: Đo suất điện động và điện trở trong của pin điện hoá",
+          "printedPage": 111
+        }
+      ]
+    },
+    {
+      "grade": 12,
+      "contentsPage": 6,
+      "lessons": [
+        {
+          "number": 1,
+          "title": "Cấu trúc của chất. Sự chuyển thể",
+          "printedPage": 6
+        },
+        {
+          "number": 2,
+          "title": "Nội năng. Định luật I của nhiệt động lực học",
+          "printedPage": 10
+        },
+        {
+          "number": 3,
+          "title": "Nhiệt độ. Thang nhiệt độ – nhiệt kế",
+          "printedPage": 15
+        },
+        {
+          "number": 4,
+          "title": "Nhiệt dung riêng",
+          "printedPage": 20
+        },
+        {
+          "number": 5,
+          "title": "Nhiệt nóng chảy riêng",
+          "printedPage": 24
+        },
+        {
+          "number": 6,
+          "title": "Nhiệt hoá hơi riêng",
+          "printedPage": 27
+        },
+        {
+          "number": 7,
+          "title": "Bài tập về vật lí nhiệt",
+          "printedPage": 30
+        },
+        {
+          "number": 8,
+          "title": "Mô hình động học phân tử chất khí",
+          "printedPage": 34
+        },
+        {
+          "number": 9,
+          "title": "Định luật Boyle",
+          "printedPage": 37
+        },
+        {
+          "number": 10,
+          "title": "Định luật Charles",
+          "printedPage": 41
+        },
+        {
+          "number": 11,
+          "title": "Phương trình trạng thái của khí lí tưởng",
+          "printedPage": 45
+        },
+        {
+          "number": 12,
+          "title": "Áp suất khí theo mô hình động học phân tử. Quan hệ giữa động năng phân tử và nhiệt độ",
+          "printedPage": 48
+        },
+        {
+          "number": 13,
+          "title": "Bài tập về khí lí tưởng",
+          "printedPage": 52
+        },
+        {
+          "number": 14,
+          "title": "Từ trường",
+          "printedPage": 56
+        },
+        {
+          "number": 15,
+          "title": "Lực từ tác dụng lên dây dẫn mang dòng điện. Cảm ứng từ",
+          "printedPage": 61
+        },
+        {
+          "number": 16,
+          "title": "Từ thông. Hiện tượng cảm ứng điện từ",
+          "printedPage": 66
+        },
+        {
+          "number": 17,
+          "title": "Máy phát điện xoay chiều",
+          "printedPage": 72
+        },
+        {
+          "number": 18,
+          "title": "Ứng dụng hiện tượng cảm ứng điện từ",
+          "printedPage": 78
+        },
+        {
+          "number": 19,
+          "title": "Điện từ trường. Mô hình sóng điện từ",
+          "printedPage": 82
+        },
+        {
+          "number": 20,
+          "title": "Bài tập về từ trường",
+          "printedPage": 86
+        },
+        {
+          "number": 21,
+          "title": "Cấu trúc hạt nhân",
+          "printedPage": 91
+        },
+        {
+          "number": 22,
+          "title": "Phản ứng hạt nhân và năng lượng liên kết",
+          "printedPage": 96
+        },
+        {
+          "number": 23,
+          "title": "Hiện tượng phóng xạ",
+          "printedPage": 104
+        },
+        {
+          "number": 24,
+          "title": "Công nghiệp hạt nhân",
+          "printedPage": 114
+        },
+        {
+          "number": 25,
+          "title": "Bài tập về vật lí hạt nhân",
+          "printedPage": 119
+        }
+      ]
+    }
+  ]
+}

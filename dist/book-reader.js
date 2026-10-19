@@ -24,7 +24,7 @@ function updateControls(){
  $('#zoomOut').disabled=zoom<=1;$('#zoomIn').disabled=zoom>=2.5;
  $('#zoomValue').textContent=Math.round(zoom*100)+'%';$('#spreadMode').setAttribute('aria-pressed',String(two));
  $('#bookStage').setAttribute('aria-busy',String(busy));$('#bookStage').style.touchAction=zoom>1||browserZoomed()?'pan-x pan-y pinch-zoom':'pan-y pinch-zoom';
- const chapter=[...book.chapters].reverse().find(c=>c.page<=page);$('#bookChapter').value=String(chapter?.page||0);
+ const chapter=[...book.chapters,...book.lessons].sort((a,b)=>b.page-a.page).find(c=>c.page<=page);$('#bookChapter').value=String(page===1?1:page===book.contentsPage?book.contentsPage:chapter?.page||0);
 }
 function sizePaper(){
  if(!book)return;
@@ -106,7 +106,7 @@ async function openBook(grade,value,{push=false}={}){
  $('#bookShelf').hidden=true;$('#reader').hidden=false;$('#paperStack').replaceChildren();
  $('#readingTitle').textContent=book.title;document.title=book.title+' · Quanh Lab';
  $('#bookGrade').innerHTML=catalog.map(b=>`<option value="${b.grade}" ${b===book?'selected':''}>Lớp ${b.grade}</option>`).join('');
- $('#bookChapter').innerHTML='<option value="0">Mục lục</option><option value="1">Bìa sách</option>'+book.chapters.map(c=>`<option value="${c.page}">${escape(c.title)}</option>`).join('');
+ $('#bookChapter').innerHTML='<option value="0">Chọn bài học</option><option value="1">Bìa sách</option>'+`<option value="${book.contentsPage}">Mục lục sách</option>`+book.chapters.map((c,i)=>`<optgroup label="${escape(c.title)}"><option value="${c.page}">Mở đầu chương · tr. ${c.printedPage}</option>${book.lessons.filter(l=>l.page>=c.page&&l.page<(book.chapters[i+1]?.page||Infinity)).map(l=>`<option value="${l.page}">Bài ${l.number}. ${escape(l.title)} · tr. ${l.printedPage}</option>`).join('')}</optgroup>`).join('');
  await showPage(page,{push});
 }
 function showShelf(){touchController?.reset();discardTurn();++token;book=null;busy=false;$('#reader').hidden=true;$('#bookShelf').hidden=false;document.title='Sách giáo khoa · Quanh Lab';$('#paperStack').replaceChildren();cache.clear();}
@@ -131,7 +131,7 @@ window.addEventListener('resize',resize);window.addEventListener('popstate',read
 if(typeof ResizeObserver!=='undefined')new ResizeObserver(sizePaper).observe($('#bookStage'));
 
 try{
- const response=await fetch('books/catalog.json?v=40');if(!response.ok)throw Error('catalog-load');catalog=await response.json();
+ const response=await fetch('books/catalog.json?v=44');if(!response.ok)throw Error('catalog-load');catalog=await response.json();
  $('#bookCards').innerHTML=catalog.map(b=>`<a class="textbook-card" href="books.html?grade=${b.grade}" aria-label="Đọc ${escape(b.title)}"><div class="textbook-cover"><img src="books/${b.grade}/cover.webp" width="340" height="480" alt="Bìa ${escape(b.title)}" decoding="async"></div><div><div class="textbook-meta"><h2>${escape(b.title)}</h2><span>${b.pages} trang</span></div>${b.sample?'<div class="textbook-edition">Bản mẫu</div>':''}</div><span class="textbook-open">Đọc sách <span aria-hidden="true">↗</span></span></a>`).join('');
  $('#bookCards').addEventListener('click',event=>{const link=event.target.closest('a');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();openBook(new URL(link.href).searchParams.get('grade'),undefined,{push:true});});
  await readRoute();

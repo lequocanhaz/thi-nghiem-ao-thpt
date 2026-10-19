@@ -43,6 +43,10 @@ document.querySelector('#zoomOut').click();
 for(const grade of [10,11,12]){
  const select=document.querySelector('#bookGrade');select.value=grade;select.dispatchEvent(new window.Event('change'));await flush();
  assert.equal(document.querySelector('#bookPage').value,'1');
+ const catalog=JSON.parse(fs.readFileSync(new URL('../dist/books/catalog.json',import.meta.url),'utf8')),book=catalog.find(b=>b.grade===grade),toc=document.querySelector('#bookChapter');
+ assert.equal(toc.querySelectorAll('optgroup').length,book.chapters.length);
+ for(const lesson of book.lessons){const option=Array.from(toc.querySelectorAll('option')).find(o=>o.value===String(lesson.page));assert.ok(option?.textContent.includes(`Bài ${lesson.number}. ${lesson.title}`));toc.value=lesson.page;toc.dispatchEvent(new window.Event('change'));await flush();assert.equal(document.querySelector('#bookPage').value,String(lesson.page),'lesson opens exact first page');assert.equal(toc.value,String(lesson.page),'TOC retains current lesson');}
+ toc.value='1';toc.dispatchEvent(new window.Event('change'));await flush();
  send('pointerdown',240,100,0);send('pointermove',60,103,200);send('pointerup',60,103,230);await flush();assert.equal(document.querySelector('#bookPage').value,'2','each grade flips');
  send('pointerdown',80,100,0);send('pointermove',260,103,200);send('pointerup',260,103,230);await flush();assert.equal(document.querySelector('#bookPage').value,'1');
  send('pointerdown',80,100,0);send('pointermove',260,103,200);send('pointerup',260,103,230);await flush();assert.equal(document.querySelector('#bookPage').value,'1','cover cannot turn backward');

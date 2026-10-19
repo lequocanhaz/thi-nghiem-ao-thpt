@@ -940,3 +940,8 @@ button,a.button{transition:none}
 }
 
 .space-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:8px 12px;border-top:1px solid #e5e8ee;background:#fff}.space-controls button{min-width:44px;min-height:44px;padding:0 12px;border:1px solid #dce1e8;border-radius:7px;background:#fff;font-size:.8125rem;font-weight:650}.space-controls button:first-child{background:#f1f4f8}.space-controls button:nth-last-child(2){margin-left:auto}
+
+/* Main home sections share one responsive type scale. */
+.home .home-section-title{font-size:clamp(26px,3vw,36px);line-height:1.25;font-weight:750;letter-spacing:-.035em;margin-top:0;margin-bottom:16px}
+.home .entry-heading{align-items:center}
+.home .entry-heading .home-section-title{margin-bottom:0}

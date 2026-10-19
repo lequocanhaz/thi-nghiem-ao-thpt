@@ -1,0 +1,13 @@
+# Quanh Lab v44
+
+The previous playback guard overrode manual zoom whenever the full apparatus no longer fit the camera. Manual zoom, pan, rotation and the ×10 overview now retain their camera during playback and pause. Automatic containment still operates in the default fitted mode; “Vừa mô hình” explicitly restores it. This supersedes the manual-camera behavior documented in v43.
+
+The narrow original decorative benches remained inside negative wave displacements even after the workspace was expanded. Full lab views now replace those benches with the shared expanded support. Its top remains below the accumulated apparatus bounds, including the full calibrated displacement axes. The global studio grid and shadow floor also stay below the support. This wrapper applies to all 300 labs; thumbnail and hero compositions retain their existing benches. Physical coordinates, measurement scales and scientific modules are unchanged.
+
+Main home section headings share a single responsive font size, weight, tracking and line height, including grade choice, recent lesson, textbooks and the experiment library.
+
+All 85 textbook lessons are available by number and title under chapter groups: 34 in grade 10, 26 in grade 11 and 25 in grade 12. Choosing a lesson opens its first file page. Printed page numbers are shown in the options and translated using the supplied PDFs' existing offsets. The source is each supplied book's printed contents page (file page 5 for grade 10, file page 6 for grades 11 and 12). `sources/textbook-lessons-v44.json` retains the transcription; the book renderer merges it when regenerating the catalog. All 388 original page images and touch turning remain intact.
+
+Verification uses real scene/model/camera methods and actual reader code with synthetic DOM and pointer events. The updated regression checks retain zoom in both projections through playback/start/pause, keep the ×10 overview, restore fitted mode, and reproduce maximum-amplitude travelling/standing/interference waves. Each of 61,200 playback frames across 300 labs must have the support below the apparatus and cover its footprint. Whole-rail checks add 17,185 frames. Reader checks navigate all 85 lesson options and exercise existing touch turning and error recovery. CSS cascade checks compare main heading font sizes at 22 viewport widths.
+
+Browser QA and physical iPhone/Safari testing were unavailable. The managed Sites environment has no supported control-browser skill and its workflow prohibits an improvised browser fallback. Geometry, DOM and CSS checks do not establish browser pixel rendering.
