@@ -30,6 +30,7 @@ export function legacyFormulaToLatex(value){
     .replace(/(?<!\\)\b(sin|cos|tan|cot|ln|log|exp)\b/g,'\\$1 ')
     .replace(/(?<!\\)\b(sqrt)\b/g,'\\sqrt ')
     .replace(/\\(sin|cos|tan|cot)\s+\^/g,'\\$1^')
+    .replace(/\\(sin|cos|tan|cot|ln|log|exp)\s{2,}/g,'\\$1 ')
     .replace(frac,(all,num,den)=>'\\dfrac{' +num.trim()+'}{'+den.trim()+'}');
  return s;
 }
