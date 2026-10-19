@@ -53,7 +53,9 @@ function rulesAt(rules,width,coarse){return rules.flatMap(r=>r.media?mediaMatche
 function specificity(s){return (s.match(/#[\w-]+/g)||[]).length*100+(s.match(/\.[\w-]+|\[[^\]]+\]|:(?!:)[\w-]+/g)||[]).length*10+(s.replace(/#[\w-]+|\.[\w-]+|\[[^\]]+\]|:[\w-]+(?:\([^)]*\))?/g,'').match(/\b[a-zA-Z][\w-]*/g)||[]).length;}
 function property(el,name,width,coarse=false){let value='',best=-1;for(const r of rulesAt([...css.cssRules],width,coarse)){if(!r.selectorText||!r.style.getPropertyValue(name))continue;for(const selector of r.selectorText.split(',')){let matches=false;try{matches=el.matches(selector.trim());}catch{}if(matches){const weight=specificity(selector)+(r.style.getPropertyPriority(name)?1e5:0);if(weight>=best){value=r.style.getPropertyValue(name);best=weight;}}}}return value;}
 const prefs={favorites:[],recent:[],progress:{},layout:{...layoutDefaults}};
-assert.equal((fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8').match(/rel="stylesheet"/g)||[]).length,1,'One stylesheet owns the responsive layout');
+const stylesheetLinks=[...fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8').matchAll(/<link[^>]+rel="stylesheet"[^>]*href="([^"]+)"/g)].map(m=>m[1]);
+assert.equal(stylesheetLinks.filter(x=>x.startsWith('app.css')).length,1,'One local stylesheet owns the responsive layout');
+assert.equal(stylesheetLinks.filter(x=>x.startsWith('vendor/katex/')).length,1,'The second stylesheet is only the self-hosted math font renderer');
 for(const width of [360,768,1440])for(const mode of ['explore','measure','present']){
  document.querySelector('main').innerHTML=labMarkup(ohm,{prefs,state:s,config:cfg,controls:'<div class="control-body"></div>',panel:'data',mode,experiments},()=>'<svg></svg>');
  const lab=document.querySelector('.lab');Object.assign(lab.dataset,{controlsCollapsed:'false',dockCollapsed:mode==='explore'?'true':'false',mobileControls:'false'});
