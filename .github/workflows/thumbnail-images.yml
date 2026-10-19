@@ -45,12 +45,12 @@ jobs:
           which google-chrome || which google-chrome-stable || which chromium
       - name: Render model thumbnails
         env:
-          THUMB_MODE: ${{ inputs.mode || 'sample' }}
+          THUMB_MODE: ${{ inputs.mode || 'all' }}
           THUMB_START: ${{ inputs.start || '0' }}
           THUMB_COUNT: ${{ inputs.count || '10' }}
         run: |
           case "$THUMB_MODE" in
-            all) python scripts/generate_thumbnails.py --all ;;
+            all) python scripts/generate_thumbnails.py --all --force ;;
             batch) python scripts/generate_thumbnails.py --start "$THUMB_START" --count "$THUMB_COUNT" ;;
             *) python scripts/generate_thumbnails.py --sample ;;
           esac
