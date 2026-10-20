@@ -1,0 +1,41 @@
+{
+  "scope": "Node CPU graphFor electric mode 1, no saved rows; not browser rendering, FPS, LCP, CLS or mobile performance",
+  "node": "v24.22.0",
+  "platform": "linux",
+  "architecture": "x64",
+  "baseline": "5ebc82bf014fbf0b90249d2557ddafcc6e2ef78a",
+  "iterationsPerRound": 3000,
+  "rounds": 9,
+  "warmupIterations": 1000,
+  "alternatingOrder": true,
+  "unit": "ms per graphFor call",
+  "median": {
+    "before": 0.031365641,
+    "after": 0.033015042333333286
+  },
+  "samples": {
+    "before": [
+      0.031365641,
+      0.04341131133333333,
+      0.02995914933333332,
+      0.03279611299999995,
+      0.029700922333333362,
+      0.030759081333333296,
+      0.04507483099999998,
+      0.034860627666666685,
+      0.02085663366666669
+    ],
+    "after": [
+      0.029880070666666654,
+      0.04167884300000001,
+      0.03219358033333333,
+      0.03932729766666667,
+      0.029167771666666644,
+      0.033015042333333286,
+      0.04777862266666671,
+      0.04528681099999994,
+      0.022204930666666692
+    ]
+  },
+  "interpretation": "Small CPU microbenchmark only; timings vary by shared-host scheduling. No performance target or speedup claimed."
+}

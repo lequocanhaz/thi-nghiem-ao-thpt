@@ -1,0 +1,47 @@
+{
+  "baselineCommit": "5ebc82bf014fbf0b90249d2557ddafcc6e2ef78a",
+  "publishedBase": "9f0c4a4c4172e58cccc5a79185b5e954e0e70eb2",
+  "files": {
+    "dist/banner.js": "f2a4cfe0f67c479d3bae64319a192651e130e64fa2ee75c6ceca532e4655bf1e",
+    "dist/app.css": "5f4d49e4fd0f51a5a537829036d3656418664022552969327f2fc361cefd558d",
+    "dist/index.html": "57a104d5966ac0f06545ec41a7cecdc1fea7f1550bef7c66e86e8287947eb035",
+    "dist/boot.js": "43acbc7d0b035adc31b25abaf4ac2ed880e2aa77c04f72f5dfde4fc48b74caf7",
+    "dist/views.js": "fe58e063f817bf30ab706f2ade43556a1083ae9708d417f903be642272900a39",
+    "dist/app.js": "cafb33546f6ba03b47dcfa96e1b4632e135c27fa4ac34a540e204082ec48ca46",
+    "dist/video/black-hole.mp4": "4cb6a656dbab0ddc2703e68906aa83ddd1ec93f3db12f248c6dc5815b589f82a",
+    "dist/video/black-hole.webm": "73bf2f84f509d5d325528a33048705bb2693bd46ed32b55e0b452660d3fa605d",
+    "dist/video/black-hole.webp": "8323668e159bc95ec6df668bb5017d7a2a7bb63ad8115ade989dec35e6b03ecb"
+  },
+  "bannerMarkupSHA256": "46908b1168de4237f17b86528f05e1f761d7e48534a87395a0eff9eeee25d769",
+  "normalizedSharedFiles": {
+    "dist/boot.js": "7a67aa7636ddb08c2ec0223910a6dc243731d30c0727f1bc423b0159592a19ca",
+    "dist/index.html": "84ed6a4b84a7a4dd5ba857198d4dc193cc85c5bad5b45d549268b8d0e5cbfb6d"
+  },
+  "appBannerLinesSHA256": "14586dd3ec142c925e901a40f1fc6e35e5487e725704128e32cdcfae8a3c5d1b",
+  "experimentIDs": {
+    "count": 300,
+    "sha256": "f3c3f140799c7451b8743de71fceed708cdedcc422d49cfb5d34f0c1edb561f2"
+  },
+  "protectedTrees": {
+    "dist/books": {
+      "files": 392,
+      "sha256": "13dac44792f9b8e79964f8dbf64b767c91f5f0b3bed59cdb1a9efce720f27b15"
+    },
+    "dist/audio": {
+      "files": 303,
+      "sha256": "d7499f065411d0cc4c966db600d901ca6a477e6dafe1c588c322d133d515fa5d"
+    },
+    "dist/lessons": {
+      "files": 13,
+      "sha256": "031b85cdce8051f08e58db012f2193a8d9031e87a4924e48ea294754ee5cae31"
+    },
+    "dist/brand": {
+      "files": 2,
+      "sha256": "292813fbea9afaec097e74f388dd7c3309837a17a0f78bee3fe5c935f7e147a9"
+    },
+    "dist/fonts": {
+      "files": 12,
+      "sha256": "bdb6ee1f77946b1f768636eddf66ec5bd797961130e82a0a62a7c7a55f54b864"
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import {rowInGraphMode,graphColumnLabel} from '../dist/electric-analysis.js';
 import {loadTeaching} from '../dist/lesson-loader.js';
 import {lessonGuideMarkup,lessonSummaryMarkup} from '../dist/lesson-view.js';
 import * as catalogFilters from '../dist/catalog-filters.js';
@@ -37,7 +38,7 @@ document.querySelector('#dialog').showModal=function(){this.open=true};document.
 const frames=[],events=new Map(),storage={},failures=[];document.addEventListener=(name,fn)=>events.set(name,fn);
 class Stage{constructor(){this.canvas=document.createElement('canvas');this.model=null;}quality(){}mount(el){assert.ok(el,'3D mount target must exist');if(!el.contains(this.canvas))el.replaceChildren(this.canvas);}update(id,s,d,c){if(!this.model||this.id!==id){this.model?.group.traverse(o=>{o.geometry?.dispose();o.material?.dispose?.()});this.model=buildLabModel(id,s,d,{labels:true,interactive:true,config:c});}else this.model.update(s,d,c);this.id=id;this.s={...s};this.c=c;}view(){}zoom(){}capture(){return ''}dispose(){}}
 class BannerScene {constructor(container,{motion=true,resolution='adaptive'}={}){this.container=container;this.motion=motion;this.resolution=resolution;}notify(){const b=document.querySelector('[data-action="banner-motion"]');if(b)b.setAttribute("aria-pressed",String(this.motion));}setResolution(v){this.resolution=v;}setMotion(v){this.motion=v;}setSpread(v){this.spread=v;}setScroll(v){this.scroll=v;}setQuality(v){this.quality=v;}dispose(){this.disposed=true;}}
-const sandbox={isDriven,processFor,advanceProcess,seekProcess,cleanProcess,coordinateProfile,hasCoordinateGrid,plotGrid,LabAssistant:class{constructor({getContext}){this.getContext=getContext;}refreshContext(){this.currentKey=this.getContext()?.id||'library';}},BannerScene,guideClips,readoutClips,previewClips,SoftwareScene:class extends Stage{constructor(...args){super(...args);this.isSoftware=true;}},fitModels,fitSummary,reportMarkup,document,window:{scrollTo(){},addEventListener(){}},location:{hash:'',search:'',href:'https://lab.example/'},navigator:{clipboard:{writeText:async()=>{}}},localStorage:{getItem:k=>storage[k]||null,setItem:(k,v)=>storage[k]=v},requestAnimationFrame:fn=>{frames.push(fn);return frames.length},cancelAnimationFrame(){},setTimeout:fn=>0,clearTimeout(){},matchMedia:()=>({matches:false}),console,Number,Math,JSON,Object,Array,String,Map,Set,Blob,URL,URLSearchParams,structuredClone,experiments,initialState,electricModes,evaluate,duration,clampState,meters,tableValues,graphFor,themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams,homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup,curriculumOptions,curriculumMeta,curriculumKey,tableGraph,sweepStates,segments,graphParameter,tableColumnFor,sources,sourceChecked,Narrator,Tone,LabScene:Stage,observeThumbnails(){},stopThumbnails(){},installMathObserver(){}};
+const sandbox={isDriven,processFor,advanceProcess,seekProcess,cleanProcess,coordinateProfile,hasCoordinateGrid,plotGrid,LabAssistant:class{constructor({getContext}){this.getContext=getContext;}refreshContext(){this.currentKey=this.getContext()?.id||'library';}},BannerScene,guideClips,readoutClips,previewClips,SoftwareScene:class extends Stage{constructor(...args){super(...args);this.isSoftware=true;}},fitModels,fitSummary,reportMarkup,rowInGraphMode,graphColumnLabel,document,window:{scrollTo(){},addEventListener(){}},location:{hash:'',search:'',href:'https://lab.example/'},navigator:{clipboard:{writeText:async()=>{}}},localStorage:{getItem:k=>storage[k]||null,setItem:(k,v)=>storage[k]=v},requestAnimationFrame:fn=>{frames.push(fn);return frames.length},cancelAnimationFrame(){},setTimeout:fn=>0,clearTimeout(){},matchMedia:()=>({matches:false}),console,Number,Math,JSON,Object,Array,String,Map,Set,Blob,URL,URLSearchParams,structuredClone,experiments,initialState,electricModes,evaluate,duration,clampState,meters,tableValues,graphFor,themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams,homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup,curriculumOptions,curriculumMeta,curriculumKey,tableGraph,sweepStates,segments,graphParameter,tableColumnFor,sources,sourceChecked,Narrator,Tone,LabScene:Stage,observeThumbnails(){},stopThumbnails(){},installMathObserver(){}};
 sandbox.TestLabScene=sandbox.LabScene;sandbox.TestSoftwareScene=sandbox.SoftwareScene;sandbox.loadRenderers=async()=>({LabScene:sandbox.TestLabScene,SoftwareScene:sandbox.TestSoftwareScene});sandbox.history={pushState(_state,_title,url){sandbox.location.href=String(url);sandbox.location.search=new URL(url).search;}};
 Object.assign(sandbox,{loadTeaching,lessonGuideMarkup,lessonSummaryMarkup},catalogFilters,workspace,parameterWindows,{internationalReferences,internationalChecked,libraryContext});vm.createContext(sandbox);vm.runInContext(fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8').replace(/^import[^\n]+\n/gm,''),sandbox);
 vm.runInContext('LabScene=TestLabScene;SoftwareScene=TestSoftwareScene;',sandbox);
@@ -259,6 +260,32 @@ const guide=document.querySelector('.teaching-guide');assert.ok(guide.textConten
 events.get('keydown')({key:'Escape',target:document.querySelector('[data-action="teacher-mode"]'),preventDefault(){}});assert.equal(document.documentElement.classList.contains('teacher-mode'),false);assert.equal(exec('JSON.stringify({state,rows,config})'),classroomState);
 Object.defineProperty(document,'hidden',{configurable:true,value:true});exec('running=true');events.get('visibilitychange')();assert.equal(exec('running'),false);assert.ok(document.querySelector('#toast').textContent.includes('tạm dừng'));Object.defineProperty(document,'hidden',{configurable:true,value:false});
 console.log('PASS v49 combined subject/grade/book filters, Vietnamese IME, classroom tools/guide/Escape and hidden-tab pause preserve numerical state and recorded rows.');
+
+// v51: real electric controls keep force/field datasets separate without deleting rows.
+exec('mode="measure";renderLab(experiments.find(e=>e.id==="electric"));rows=[]');
+for(let mode=0;mode<4;mode++){await click(`[data-electric-mode="${mode}"]`);await click('[data-action="record"]');}
+await click('[data-electric-mode="1"]');
+await change('#graphMode','measured');await change('#graphX','4');await change('#graphY','6');
+assert.ok(document.querySelector('#graph svg').getAttribute('aria-label').includes('E (N/C)'));
+assert.deepEqual([...document.querySelectorAll('[data-graph-row]')].map(n=>n.dataset.graphRow),['1']);
+assert.ok(document.querySelector('#legend').textContent.includes('3 dòng'));
+assert.ok(document.querySelector('#graphY option[value="6"]').textContent.includes('E (N/C)'));
+await click('[data-electric-mode="0"]');
+assert.ok(document.querySelector('#graph svg').getAttribute('aria-label').includes('F (N)'));
+assert.ok(document.querySelector('#graphY option[value="6"]').textContent.includes('F (N)'));
+assert.deepEqual([...document.querySelectorAll('[data-graph-row]')].map(n=>n.dataset.graphRow),['0']);
+assert.equal(exec('rows.length'),4);assert.equal(document.querySelectorAll('#rows tr').length,4);
+await click('[data-action="csv"]');assert.equal(sandbox.exported.text.split('\r\n').length,5);
+await click('[data-electric-mode="1"]');
+exec('state.x1=0;state.y1=0;state.z1=0;state.py=0;state.pz=0;state.q1=4;for(const r of [.05,.1,.2,.4]){state.px=r;record();}');
+await change('#fitLine',undefined,true);await change('#fitModel','inverseSquare');
+assert.ok(document.querySelector('.fit-equation').textContent.includes('1/x²'));
+assert.equal(exec('tableGraph(active,rows,4,6,"inverseSquare",config).regression.n'),5);
+assert.equal(exec('rows.length'),8);
+const electricSaved=exec('JSON.stringify(rows)');
+exec('save();renderLab(experiments.find(e=>e.id==="ohm"));renderLab(experiments.find(e=>e.id==="electric"))');
+assert.equal(exec('JSON.stringify(rows)'),electricSaved);assert.equal(exec('config.fitModel'),'inverseSquare');
+console.log('PASS v51 DOM: 4 electric modes, live F/E axis/options, mixed-row filtering with full table/CSV retained, inverse-square UI and persisted rows/fit on navigation. Synthetic DOM only.');
 
 // Current-version layout choices must survive startup, including the full-width dock preference.
 exec('location.hash=""');storage['thpt-ui-v3']=JSON.stringify({interfaceVersion:16,favorites:[],recent:[],progress:{},layout:{controlsWidth:480,dockWidth:740,chartHeight:620,tableHeight:560,dataExpanded:false}});const validReload={...sandbox};vm.createContext(validReload);vm.runInContext(fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8').replace(/^import[^\n]+\n/gm,''),validReload);assert.equal(vm.runInContext('prefs.layout.controlsWidth',validReload),480);assert.equal(vm.runInContext('prefs.layout.dockWidth',validReload),740);assert.equal(vm.runInContext('prefs.layout.dataExpanded',validReload),false);

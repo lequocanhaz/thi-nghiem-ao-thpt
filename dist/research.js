@@ -1,5 +1,5 @@
-const transforms={linear:x=>x,square:x=>x*x,inverse:x=>x===0?NaN:1/x,log:x=>x>0?Math.log(x):NaN};
-export const fitModels=[{key:'linear',label:'Tuyến tính',symbol:'x'},{key:'square',label:'Bậc hai',symbol:'x²'},{key:'inverse',label:'Nghịch đảo',symbol:'1/x'},{key:'log',label:'Logarit',symbol:'ln(x/x₀)'}];
+const transforms={linear:x=>x,square:x=>x*x,inverse:x=>x===0?NaN:1/x,inverseSquare:x=>x===0?NaN:1/(x*x),log:x=>x>0?Math.log(x):NaN};
+export const fitModels=[{key:'linear',label:'Tuyến tính',symbol:'x'},{key:'square',label:'Bậc hai',symbol:'x²'},{key:'inverse',label:'Nghịch đảo',symbol:'1/x'},{key:'inverseSquare',label:'Nghịch đảo bình phương',symbol:'1/x²'},{key:'log',label:'Logarit',symbol:'ln(x/x₀)'}];
 
 // Ordinary least squares in z=f(x). Residuals and goodness of fit remain in y units.
 // These estimates describe the fit to simulated states, not instrument uncertainty.
@@ -18,8 +18,8 @@ export function fitModel(input,kind='linear'){
   const slopeSE=Math.sqrt(variance/szz),interceptSE=Math.sqrt(variance*(1/n+mz*mz/szz));
   const xmin=Math.min(...points.map(p=>p[0])),xmax=Math.max(...points.map(p=>p[0]));
   const curve=Array.from({length:161},(_,i)=>{const x=xmin+(xmax-xmin)*i/160;return [x,predict(x)];});
-  // Split the inverse branch at zero instead of drawing across its singularity.
-  if(kind==='inverse')for(let i=1;i<curve.length;i++)if(curve[i-1][0]<0&&curve[i][0]>=0)curve[i]=[curve[i][0],NaN];
+  // Split reciprocal branches at zero instead of drawing across a singularity.
+  if(kind==='inverse'||kind==='inverseSquare')for(let i=1;i<curve.length;i++)if(curve[i-1][0]<0&&curve[i][0]>=0)curve[i]=[curve[i][0],NaN];
   return {kind,slope,intercept,r2,rmse,slopeSE,interceptSE,n,excluded:input.length-n,points,residuals,curve};
 }
 
@@ -36,7 +36,7 @@ export function residualSvg(fit){
 export function fitSummary(fit){
   if(!fit)return '<p class="analysis-empty">Thu ít nhất 3 điểm với x thay đổi để khớp mô hình.</p>';
   const f=fitModels.find(m=>m.key===fit.kind);
-  return `<div class="fit-equation">y = ${num(fit.slope)}·${f.symbol} ${fit.intercept<0?'−':'+'} ${num(Math.abs(fit.intercept))}</div><div class="fit-metrics"><span><small>R²</small><b>${num(fit.r2)}</b></span><span><small>RMSE</small><b>${num(fit.rmse)}</b></span><span><small>Điểm khớp</small><b>${fit.n}</b></span></div><details class="fit-details"><summary>Hệ số & phần dư</summary><div class="coefficient-table"><span>a ± SE</span><b>${num(fit.slope)} ± ${num(fit.slopeSE)}</b><span>b ± SE</span><b>${num(fit.intercept)} ± ${num(fit.interceptSE)}</b></div><div class="residual-heading">Phần dư · y − ŷ</div><div class="residual-plot">${residualSvg(fit)}</div><p>Bình phương tối thiểu thường; chưa xét bất định trục x. SE là sai số chuẩn của phép khớp, không phải sai số dụng cụ. R² không xác định khi y không đổi. ${fit.kind==='log'?'x₀ = 1 theo đơn vị trục x. ' :''} ${fit.excluded?`${fit.excluded} điểm bị loại: ${fit.kind==='inverse'?'x = 0':fit.kind==='log'?'x ≤ 0':'số liệu không hữu hạn'}.`:''} <a href="https://www.itl.nist.gov/div898/handbook/pmd/section4/pmd441.htm" target="_blank" rel="noopener noreferrer">Phương pháp phần dư · NIST ↗</a></p></details>`;
+  return `<div class="fit-equation">y = ${num(fit.slope)}·${f.symbol} ${fit.intercept<0?'−':'+'} ${num(Math.abs(fit.intercept))}</div><div class="fit-metrics"><span><small>R²</small><b>${num(fit.r2)}</b></span><span><small>RMSE</small><b>${num(fit.rmse)}</b></span><span><small>Điểm khớp</small><b>${fit.n}</b></span></div><details class="fit-details"><summary>Hệ số & phần dư</summary><div class="coefficient-table"><span>a ± SE</span><b>${num(fit.slope)} ± ${num(fit.slopeSE)}</b><span>b ± SE</span><b>${num(fit.intercept)} ± ${num(fit.interceptSE)}</b></div><div class="residual-heading">Phần dư · y − ŷ</div><div class="residual-plot">${residualSvg(fit)}</div><p>Bình phương tối thiểu thường; chưa xét bất định trục x. SE là sai số chuẩn của phép khớp, không phải sai số dụng cụ. R² không xác định khi y không đổi. ${fit.kind==='log'?'x₀ = 1 theo đơn vị trục x. ' :''}${fit.kind==='inverseSquare'?'Khớp tuyến tính theo 1/x²: y = a/x² + b. Khi x là khoảng cách, chỉ dùng x > 0. Với một điện tích nguồn điểm cố định, giữ điện tích nguồn không đổi; với lực Coulomb, giữ cả điện tích chịu lực. Không mặc định áp dụng cho trường tổng hợp nhiều nguồn. Phép khớp không thay thế kiểm chứng thực nghiệm. ':''} ${fit.excluded?`${fit.excluded} điểm bị loại: ${['inverse','inverseSquare'].includes(fit.kind)?'x = 0 hoặc số liệu không hữu hạn':fit.kind==='log'?'x ≤ 0':'số liệu không hữu hạn'}.`:''} <a href="https://www.itl.nist.gov/div898/handbook/pmd/section4/pmd441.htm" target="_blank" rel="noopener noreferrer">Phương pháp phần dư · NIST ↗</a></p></details>`;
 }
 export function reportMarkup({experiment,state,rows,config,fit,audit='',notes,graph,sources,date}){
   const headers=experiment.headers,params=experiment.params.filter(p=>p.key!=='t');
