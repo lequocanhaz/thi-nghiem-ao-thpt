@@ -58,11 +58,11 @@ if(realKatex){
  for(const [input] of examples){const latex=legacyFormulaToLatex(input);const html=realKatex.renderToString(latex,{throwOnError:true,displayMode:true,trust:false});assert.match(html,/class="katex"/);}
  const valid=[],invalid=[];
  for(const e of experiments){
-  try{realKatex.renderToString(legacyFormulaToLatex(e.formula),{throwOnError:true,trust:false,strict:'ignore'});valid.push(e.id);}catch(error){invalid.push([e.id,String(error.message).slice(0,100)]);}
+  try{realKatex.renderToString(parseHTML(formulaMarkup(e)).document.querySelector('[data-math-tex]').dataset.mathTex,{throwOnError:true,trust:false,strict:'ignore'});valid.push(e.id);}catch(error){invalid.push([e.id,String(error.message).slice(0,100)]);}
  }
- console.log('Actual KaTeX engine: '+valid.length+'/300 legacy formulas rendered; '+invalid.length+' retain fallback.');
- if(invalid.length)console.log('Legacy formulas needing explicit LaTeX:',JSON.stringify(invalid.slice(0,30)));
- // Some legacy expressions contain prose; native MathML is intentionally retained as fallback.
- assert.ok(valid.length>=200,'Most existing formulas should be typeset rather than fallback');
+ console.log('Actual KaTeX engine: '+valid.length+'/300 catalog formulas rendered; '+invalid.length+' errors.');
+ if(invalid.length)console.log('Catalog formulas with invalid LaTeX:',JSON.stringify(invalid.slice(0,30)));
+ // The authored typesetting catalog must parse; native/plain fallbacks remain available during loading.
+ assert.equal(valid.length,300,'Every catalog formula must typeset with the real engine');
 }
 console.log('PASS mathematical fraction and AI LaTeX rendering, safe provider HTML handling, catalog coverage.');

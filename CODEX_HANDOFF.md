@@ -110,3 +110,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - `formulas.js` có LaTeX tường minh cho chín biểu thức cũ lỗi chuyển đổi và sửa ký hiệu hiển thị dãy bi Newton. Không sửa phép tính mô hình để chữa typography.
 - `npm run check:lessons` kiểm tra đủ 300 bài, nguồn/biến, KaTeX thật, escape văn bản, lời giải đóng và ví dụ tính độc lập; đã được đưa vào `npm run check`. Bộ Playwright tùy chọn `checks/browser-lessons-v50.mjs` kiểm tra UI thật, ghi chép, lỗi tải và điều hướng.
 - Giữ 301 tệp âm thanh cũ; đây là thuyết minh mô hình, chưa phải bản thu mới của toàn bộ bài soạn. Không xóa sách, banner, thương hiệu, LaTeX, accessibility hoặc dữ liệu người dùng khi biên tập tiếp.
+
+## Độ mượt và phân số v52 (20/10/2026)
+
+- Xem `docs/smooth-math-v52.md` và hai JSON benchmark trước/sau. Điện giữ model/buffer, đường sức chỉ tính lại khi nguồn đổi; giữ camera thủ công, thuật toán vật lí và Canvas fallback. Scene không cập nhật trùng mỗi refresh; giữ dư thời gian, mục tiêu high60/low30; high DPR giới hạn1.5.
+- Readout/play cập nhật tại chỗ; SVG giữ nguyên khi chỉ điểm hiện tại đổi, vẫn invalidate khi dữ liệu/miền/layout/chế độ đổi. Giữ các nhãn và thao tác bàn phím cũ.
+- `dist/formula-catalog.js` có TeX tường minh đủ300ID; công thức dùng phân số xếp tầng thay suy đoán từ slash. Giữ KaTeX tự phục vụ, `trust:false`, MathML và fallback; cache HTML tối đa128biểu thức.
+- Thêm `checks/rendering-v52.mjs`, `checks/math-cache-v52.mjs` vào `npm run check`; mở rộng DOM và browser lesson test. Benchmark browser là phép đo SwiftShader trên máy chủ, chưa phải FPS thực tế trên điện thoại và chưa chứng minh60FPS cho cả300bài. Bản sau xử lý nhiều khung hơn nhưng CPU4 vẫn có longtask.

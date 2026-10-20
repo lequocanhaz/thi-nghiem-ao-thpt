@@ -10,6 +10,8 @@ try{
   console.log('LESSON',id);await page.goto(base+'#lab/'+id);await page.waitForSelector(`.teaching-guide-content [data-lesson="${id}"]`,{state:'attached'});await page.waitForSelector('#visual canvas');
   if(!await page.locator('.teaching-guide').evaluate(e=>e.open))await page.locator('.teaching-guide>summary').click();
   await page.waitForFunction(()=>[...document.querySelectorAll('.teaching-guide-content .math-tex')].every(e=>e.dataset.mathRendered==='true'));
+  const display=page.locator('.teaching-guide-content .math-tex').first();assert.ok(await display.locator('.katex math').count(),id+' retains MathML');if((await display.getAttribute('data-math-tex')).includes('\\dfrac'))assert.ok(await display.locator('mfrac').count(),id+' displays stacked fractions');
+  for(const svg of await display.locator('.katex svg').all()){assert.equal(await svg.evaluate(e=>getComputedStyle(e).maxWidth),'none','KaTeX stretchy SVG must not inherit global max-width');assert.notEqual(await svg.evaluate(e=>getComputedStyle(e).fill),'none','Radical/vector SVG must not inherit toolbar icon fill:none');}
   const lesson=page.locator('.teaching-guide-content .lesson-content');assert.ok((await lesson.locator('.lesson-question').innerText()).length>20);assert.equal(await lesson.locator('.lesson-solution').evaluate(e=>e.open),false);
   await lesson.locator('.lesson-solution>summary').focus();await page.keyboard.press('Enter');assert.equal(await lesson.locator('.lesson-solution').evaluate(e=>e.open),true);await page.keyboard.press('Enter');
   assert.ok(await lesson.locator('.lesson-references a').count());

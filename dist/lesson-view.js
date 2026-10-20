@@ -1,4 +1,4 @@
-import {formulaMarkup} from './workspace.js?v=50';
+import {formulaMarkup} from './workspace.js?v=52';
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function lessonGuideMarkup(e){
  const lesson=e.lesson;

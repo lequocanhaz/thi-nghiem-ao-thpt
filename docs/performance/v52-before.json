@@ -1,0 +1,108 @@
+{
+  "scope": "Chromium headless SwiftShader, 390×844 viewport; optional CPU4 slowdown is synthetic. Shared-host timings vary; not real-device FPS.",
+  "results": [
+    {
+      "name": "electric-source",
+      "id": "electric",
+      "cpu": 1,
+      "elapsedMs": 2925,
+      "updates": 6,
+      "rebuilds": 4,
+      "updateMedianMs": 11.199999988079071,
+      "updateP95Ms": 13.200000002980232,
+      "renders": 4,
+      "pixelRatio": 1,
+      "domReplacements": {
+        "meters": 2,
+        "graph": 2,
+        "play": 2
+      },
+      "rafMedianMs": 766.6000000000004,
+      "rafP95Ms": 833.2999999999993,
+      "longTasks": 5
+    },
+    {
+      "name": "electric-probe",
+      "id": "electric",
+      "cpu": 1,
+      "mode": 3,
+      "key": "px",
+      "elapsedMs": 3227,
+      "updates": 6,
+      "rebuilds": 4,
+      "updateMedianMs": 10.099999994039536,
+      "updateP95Ms": 16,
+      "renders": 4,
+      "pixelRatio": 1,
+      "domReplacements": {
+        "meters": 2,
+        "graph": 2,
+        "play": 2
+      },
+      "rafMedianMs": 866.6000000000004,
+      "rafP95Ms": 866.6999999999998,
+      "longTasks": 4
+    },
+    {
+      "name": "wave",
+      "id": "wave",
+      "cpu": 1,
+      "elapsedMs": 2525.699999988079,
+      "updates": 55,
+      "rebuilds": 0,
+      "updateMedianMs": 1.5,
+      "updateP95Ms": 2,
+      "renders": 37,
+      "pixelRatio": 1,
+      "domReplacements": {
+        "meters": 18,
+        "graph": 18,
+        "play": 18
+      },
+      "rafMedianMs": 66.69999999999982,
+      "rafP95Ms": 99.89999999999964,
+      "longTasks": 0
+    },
+    {
+      "name": "wave-dpr2",
+      "id": "wave",
+      "cpu": 1,
+      "dpr": 2,
+      "elapsedMs": 2512.0999999940395,
+      "updates": 33,
+      "rebuilds": 0,
+      "updateMedianMs": 1.5,
+      "updateP95Ms": 3.7000000029802322,
+      "renders": 22,
+      "pixelRatio": 2,
+      "domReplacements": {
+        "meters": 12,
+        "graph": 12,
+        "play": 12
+      },
+      "rafMedianMs": 100,
+      "rafP95Ms": 149.89999999999964,
+      "longTasks": 0
+    },
+    {
+      "name": "electric-source-cpu4",
+      "id": "electric",
+      "cpu": 4,
+      "elapsedMs": 3057.5,
+      "updates": 6,
+      "rebuilds": 4,
+      "updateMedianMs": 53.29999999701977,
+      "updateP95Ms": 54.900000005960464,
+      "renders": 4,
+      "pixelRatio": 1,
+      "domReplacements": {
+        "meters": 2,
+        "graph": 2,
+        "play": 2
+      },
+      "rafMedianMs": 816.6000000000004,
+      "rafP95Ms": 866.7000000000007,
+      "longTasks": 4
+    }
+  ]
+}

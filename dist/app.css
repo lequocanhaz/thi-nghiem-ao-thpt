@@ -950,6 +950,8 @@ button,a.button{transition:none}
 /* v48: mathematical expressions typeset with self-hosted KaTeX. */
 .math-tex{max-width:100%;font-family:'Cambria Math','STIX Two Math',serif;color:#101215}
 .math-tex .katex{font-size:1.08em;color:inherit}
+/* Stretchy radicals/arrows use wide SVG paths clipped by KaTeX, not icon sizing. */
+.math-tex .katex svg{max-width:none}
 .math-tex.math-block{display:block;width:100%;margin:.45em 0;overflow-x:auto;overflow-y:hidden;white-space:normal;line-height:1.65;padding:.2em 0}
 .math-tex.math-block>.katex-display{margin:.25em 0;max-width:max-content;min-width:100%}
 .math-formula>.math-tex{display:none}
@@ -976,7 +978,7 @@ button,a.button{transition:none}
 .teaching-tools{position:absolute;top:10px;left:10px;right:10px;z-index:4;display:flex;justify-content:flex-end;flex-wrap:wrap;gap:6px;pointer-events:none}
 .teaching-tools>button,.teaching-guide{pointer-events:auto}
 .teaching-tools>button,.teaching-guide>summary{display:flex;align-items:center;gap:6px;min-height:44px;padding:8px 10px;border:1px solid #cbd2da;background:#fff;color:#202936;border-radius:7px;font:inherit;font-size:.8125rem;cursor:pointer;box-shadow:0 2px 8px #17243512}
-.teaching-tools svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;flex:none}
+.teaching-tools>button>svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;flex:none}
 .teaching-guide-content{position:absolute;top:100%;right:0;max-height:min(55svh,480px);width:min(480px,100%);overflow:auto;overscroll-behavior:contain;background:white;border:1px solid #cbd2da;box-shadow:0 8px 24px #17243526;border-radius:8px;padding:18px;line-height:1.65;overflow-wrap:anywhere}
 .teaching-guide-content h2{font-size:1rem;margin:10px 0}.teaching-guide-content li{margin:8px 0}.teaching-guide-content ol{padding-left:24px}
 .teacher-mode .header,.teacher-mode body>footer{display:none}

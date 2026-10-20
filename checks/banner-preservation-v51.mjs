@@ -9,7 +9,13 @@ const baseline=JSON.parse(fs.readFileSync(new URL('./banner-preservation-v51.jso
 const read=name=>fs.readFileSync(new URL(name,root));
 const hash=value=>createHash('sha256').update(value).digest('hex');
 for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','dist/video/black-hole.webm','dist/video/black-hole.webp']){
- assert.equal(hash(read(name)),baseline.files[name],name+' must remain byte-identical');
+ let contents=read(name);
+ if(name==='dist/app.css'){
+  // v52 permits exactly the math SVG fix while preserving every other CSS byte.
+  const css=contents.toString();assert.ok(css.includes('.teaching-tools>button>svg{'));assert.ok(css.includes('.math-tex .katex svg{max-width:none}'));
+  contents=css.replace('.teaching-tools>button>svg{','.teaching-tools svg{').replace('/* Stretchy radicals/arrows use wide SVG paths clipped by KaTeX, not icon sizing. */\n.math-tex .katex svg{max-width:none}\n','');
+ }
+ assert.equal(hash(contents),baseline.files[name],name+' must remain byte-identical except the explicitly allowed math SVG fix');
 }
 // Shared entrypoints only change cache versions, never startup/banner behavior.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
@@ -30,4 +36,4 @@ for(const [dir,expected]of Object.entries(baseline.protectedTrees)){
  const names=walk(dir).sort();assert.equal(names.length,expected.files,dir+' file count');
  assert.equal(hash(names.map(name=>name+':'+hash(read(name))).join('\n')),expected.sha256,dir+' contents');
 }
-console.log('PASS v51 SHA-256: banner media/poster/playback/CSS/markup unchanged; exact 300 IDs, books, audio, lessons, brand and fonts preserved. Source/asset checks only; desktop/mobile browser playback remains unverified.');
+console.log('PASS v51 SHA-256: banner media/poster/playback/markup and CSS (except scoped math SVG fix) unchanged; exact 300 IDs, books, audio, lessons, brand and fonts preserved. Source/asset checks only; desktop/mobile browser playback remains unverified.');

@@ -1,6 +1,6 @@
 import {assistantEndpoint} from './ai-config.js?v=22';
 import {prepareImage,isImageFile,imageLimits,imageHistory} from './chat-images.js?v=35';
-import {typesetMath} from './math.js?v=48';
+import {typesetMath} from './math.js?v=52';
 function deviceTimeZone(){try{return Intl.DateTimeFormat().resolvedOptions().timeZone||'Asia/Ho_Chi_Minh';}catch{return 'Asia/Ho_Chi_Minh';}}
 // Provider output is text, never executable HTML.
 function answerContent(element,text,document){

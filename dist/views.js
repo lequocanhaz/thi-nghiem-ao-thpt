@@ -1,5 +1,5 @@
-import {lessonGuideMarkup,lessonSummaryMarkup} from './lesson-view.js?v=50';
-import {formulaMarkup} from './workspace.js?v=50';
+import {lessonGuideMarkup,lessonSummaryMarkup} from './lesson-view.js?v=52';
+import {formulaMarkup} from './workspace.js?v=52';
 import {subjects,subjectOf,availableCatalogFilters} from './catalog-filters.js?v=51';
 import {coordinateProfile,hasCoordinateGrid} from './coordinate-profile.js?v=49';
 import {themeFor,paths,coreParams,usableParams} from './learning.js?v=17';

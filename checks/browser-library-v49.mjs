@@ -10,8 +10,8 @@ await page.goto(base,{waitUntil:'networkidle'});
 console.log('HOME',await page.title(),await page.locator('.experiment-card').count(),errors);
 assert.equal(await page.locator('.experiment-card').count(),24);
 assert.equal(requests.some(u=>/scene3d|three.module|software-scene/.test(u)),false,'Home must not fetch WebGL modules');
-await page.locator('#subjectFilter').selectOption('chemistry');assert.match(await page.locator('#resultCount').innerText(),/^0/);
-await page.locator('#subjectFilter').selectOption('physics');await page.locator('#search').fill('định luật Ohm');assert.match(await page.locator('#cards').innerText(),/OHM/);
+assert.equal(await page.locator('#subjectFilter').count(),0,'Only data-backed filters are offered');assert.equal(await page.locator('#bookSeriesFilter').count(),0);
+await page.locator('#search').fill('định luật Ohm');assert.match(await page.locator('#cards').innerText(),/OHM/);
 await page.goBack();await page.waitForTimeout(50);assert.equal(await page.locator('#search').inputValue(),'');
 await page.locator('#search').fill('định luật Ohm');await page.locator('#cards .card-open').first().click();await page.waitForSelector('#visual canvas',{timeout:20000});
 console.log('LAB',await page.locator('#rendererNotice').innerText(),errors);
@@ -20,7 +20,7 @@ await page.locator('[data-action=teacher-mode]').click();assert.equal(await page
 await page.screenshot({path:'/tmp/quanh-teacher-desktop.png'});
 await page.keyboard.press('Escape');assert.equal(await page.locator('.header').isVisible(),true);
 await page.setViewportSize({width:390,height:844});await page.waitForTimeout(200);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Mobile page must not overflow horizontally');await page.screenshot({path:'/tmp/quanh-lab-mobile.png'});
-await page.locator('.lab-breadcrumb a').click();await page.waitForSelector('#subjectFilter');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:'/tmp/quanh-library-mobile.png'});
+await page.locator('.lab-breadcrumb a').click();await page.waitForSelector('#search');assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:'/tmp/quanh-library-mobile.png'});
 assert.deepEqual(errors,[]);console.log('PASS Chromium library, lazy load, filters/history, real canvas, camera, teacher, guide, mobile width');
 
 
