@@ -245,10 +245,11 @@ console.log('PASS v33 AI image dialogs keep focus over fullscreen apparatus.');
 
 // v49: combined catalog filters, Vietnamese composition and classroom controls.
 exec('grade="all";topic="all";search="";filter="all";pathFilter=null;levelFilter="all";subjectFilter="all";bookSeriesFilter="all";renderHome()');
-await change('#subjectFilter','chemistry');assert.equal(document.querySelectorAll('.experiment-card').length,0);
-await change('#subjectFilter','physics');await click('.grade-filters [data-grade="11"]');
+assert.equal(document.querySelector('#subjectFilter'),null);assert.equal(document.querySelector('#bookSeriesFilter'),null);
+exec('subjectFilter="chemistry";renderCards()');assert.equal(document.querySelectorAll('.experiment-card').length,0);assert.ok(document.querySelector('[data-remove-filter=subject]').textContent.includes('Hóa học'));await click('[data-remove-filter=subject]');assert.equal(document.querySelectorAll('.experiment-card').length,24);
+exec('subjectFilter="physics";renderCards()');await click('.grade-filters [data-grade="11"]');
 assert.ok([...document.querySelectorAll('.grade-tag')].every(n=>n.textContent.includes('11')));
-await change('#bookSeriesFilter','ket-noi');assert.equal(document.querySelectorAll('.experiment-card').length,0);
+exec('bookSeriesFilter="ket-noi";renderCards()');assert.equal(document.querySelectorAll('.experiment-card').length,0);
 await click('[data-action="clear-filters"]');assert.equal(document.querySelectorAll('.experiment-card').length,24);
 const searchNode=document.querySelector('#search');events.get('compositionstart')({target:searchNode});searchNode.value='điện';events.get('input')({target:searchNode,isComposing:true});assert.equal(exec('search'),'');events.get('compositionend')({target:searchNode});assert.equal(exec('search'),'điện');
 exec('renderLab(experiments.find(e=>e.id==="ohm"));rows=[]');await click('[data-action="record"]');

@@ -1,6 +1,6 @@
 import {loadTeaching} from './lesson-loader.js?v=50';
 import {lessonGuideMarkup,lessonSummaryMarkup} from './lesson-view.js?v=50';
-import {subjects,bookSeries,matchesCatalog,readCatalogURL} from './catalog-filters.js?v=49';
+import {subjects,bookSeries,matchesCatalog,readCatalogURL} from './catalog-filters.js?v=51';
 import {installMathObserver} from './math.js?v=48';
 import {isDriven,processFor,advanceProcess,seekProcess,cleanProcess} from './playback.js?v=37';
 import {coordinateProfile,hasCoordinateGrid} from './coordinate-profile.js?v=49';
@@ -11,7 +11,7 @@ import {BannerScene} from './banner.js?v=18';
 import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=50';
 import {fitModels,fitSummary,reportMarkup} from './research.js?v=17';
 import {themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams} from './learning.js?v=17';
-import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=50';
+import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=51';
 import {curriculumOptions,curriculumMeta,curriculumKey} from './curriculum.js?v=39';
 import {tableGraph,sweepStates,segments,graphParameter,tableColumnFor} from './analytics.js?v=17';
 import {experiments,initialState,electricModes} from './experiments.js?v=17';

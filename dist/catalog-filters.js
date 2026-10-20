@@ -3,6 +3,10 @@ export const bookSeries=[['ket-noi','Kết nối tri thức'],['chan-troi','Châ
 // The current catalog is physics. Book-series membership requires an explicit mapping.
 export const subjectOf=e=>e.subject||'physics';
 export const seriesOf=e=>Array.isArray(e.bookSeries)?e.bookSeries:[];
+// Keep the URL vocabulary stable, but only offer choices backed by catalog records.
+export function availableCatalogFilters(experiments){
+ return {subjects:subjects.filter(([value])=>experiments.some(e=>subjectOf(e)===value)),bookSeries:bookSeries.filter(([value])=>experiments.some(e=>seriesOf(e).includes(value)))};
+}
 export function matchesCatalog(e,subject,series){return (subject==='all'||subjectOf(e)===subject)&&(series==='all'||seriesOf(e).includes(series));}
 export function readCatalogURL(search){
  const q=new URLSearchParams(search);
