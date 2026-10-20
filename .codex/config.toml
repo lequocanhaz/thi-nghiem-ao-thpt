@@ -1,0 +1,22 @@
+[features]
+multi_agent = true
+
+[agents.physics]
+description = "Chuyên gia kiểm tra mô hình Vật lí, công thức, đơn vị và nội dung khoa học của 300 thí nghiệm Quanh Lab."
+config_file = "agents/physics.toml"
+
+[agents.ui]
+description = "Chuyên gia giao diện Quanh Lab, không gian thí nghiệm 2D/3D, zoom, responsive và cảm ứng."
+config_file = "agents/ui.toml"
+
+[agents.textbook]
+description = "Chuyên gia hệ thống sách giáo khoa lật ảo Vật lí 10, 11, 12, mục lục theo bài học và thao tác cảm ứng."
+config_file = "agents/textbook.toml"
+
+[agents.ai]
+description = "Chuyên gia trợ lý AI Quanh Lab, tích hợp backend, hiển thị LaTeX/KaTeX và bảo mật API."
+config_file = "agents/ai.toml"
+
+[agents.qa]
+description = "Chuyên gia kiểm thử Quanh Lab, kiểm tra hồi quy, 300 thí nghiệm, sách lật ảo, AI và chất lượng trước phát hành."
+config_file = "agents/qa.toml"
