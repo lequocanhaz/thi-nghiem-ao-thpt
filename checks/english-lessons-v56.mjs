@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {experiments,initialState} from '../dist/experiments.js';
-import {setLocale,getLocale} from '../dist/i18n.js';
+import {setLocale,getLocale} from '../dist/i18n.js?v=54';
 import {englishStudy,englishIntro,englishParameter,englishTopic} from '../dist/english-study.js';
 import {lessonGuideMarkup,lessonSummaryMarkup} from '../dist/lesson-view.js';
 import {loadTeaching} from '../dist/lesson-loader.js';
