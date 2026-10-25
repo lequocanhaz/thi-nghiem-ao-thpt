@@ -1,0 +1,28 @@
+name: Temporary Google TXT DNS diagnostic
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Query verification TXT without exposing full token
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import socket,subprocess
+          for method,args in [('google',['https://dns.google/resolve?name=physicslab.tech&type=TXT']),('cloudflare',['https://cloudflare-dns.com/dns-query?name=physicslab.tech&type=TXT'])]:
+              try:
+                  headers=['-H','accept: application/dns-json'] if method=='cloudflare' else []
+                  data=subprocess.check_output(['curl','-fsSL','--max-time','12',*headers,*args],text=True)
+                  import json
+                  result=json.loads(data)
+                  print('DNS',method,'rcode',result.get('Status'),'answers',len(result.get('Answer',[])))
+                  for item in result.get('Answer',[]):
+                      d=item.get('data','')
+                      print('TXT_SUMMARY',method,repr(d[:30]),'value_start_double_quote',d.startswith(chr(34)),'value_start_escaped_quote',d.startswith(chr(92)+chr(34)),'google_token_seen',('google-site-verification=' in d),'length',len(d))
+              except Exception as e:print('DNS_ERROR',method,type(e).__name__,str(e)[:150])
+          PY
