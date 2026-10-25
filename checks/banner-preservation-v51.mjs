@@ -23,7 +23,14 @@ for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','
 }
 // Entry changes are cache versions plus the explicitly scoped visual-settings stylesheet; startup/banner bytes stay frozen.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
- assert.equal(hash(read(name).toString().replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
+ let content=read(name).toString();
+ if(name==='dist/index.html'){
+  assert.match(content,/<link rel="canonical" href="https:\/\/physicslab\.tech\/">/,'Canonical URL must use the custom domain');
+  assert.match(content,/<meta property="og:url" content="https:\/\/physicslab\.tech\/">/,'Social URL must use the custom domain');
+  // Normalise only the approved custom-domain migration while preserving the frozen banner baseline.
+  content=content.replaceAll('https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/');
+ }
+ assert.equal(hash(content.replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
 }
 assert.doesNotMatch(read('dist/visual-settings.css').toString(),/banner|cinematic|orbital|@font-face|:root|\.brand\b|@import/i,'Visual settings CSS cannot override protected identity');
 const view=read('dist/views.js').toString();
