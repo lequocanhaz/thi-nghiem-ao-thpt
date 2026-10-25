@@ -37,7 +37,7 @@ assert.doesNotMatch(read('dist/visual-settings.css').toString(),/banner|cinemati
 const view=read('dist/views.js').toString();
 const markup=view.slice(view.indexOf(' <section class="main-banner'),view.indexOf(' </section>')+' </section>'.length);
 // The owner-approved title is the sole change allowed inside the previously protected banner markup.
-const currentTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading"><span class="banner-title-row banner-title-row--main">HỆ THỐNG THÍ NGHIỆM</span><span class="banner-title-row banner-title-row--sub">VẬT LÍ ẢO</span></h1>';
+const currentTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading"><span class="banner-title-row banner-title-row--main">HỆ THỐNG THÍ NGHIỆM</span><em class="banner-title-row banner-title-row--sub">VẬT LÍ ẢO</em></h1>';
 const originalTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading">Thí nghiệm<br><em>Vật Lí</em></h1>';
 assert.equal(markup.split(currentTitle).length,2,'The banner heading must exactly match the requested Vietnamese title');
 assert.equal(hash(markup.replace(currentTitle,originalTitle)),baseline.bannerMarkupSHA256,'Everything beyond the new heading preserves the original banner markup');
