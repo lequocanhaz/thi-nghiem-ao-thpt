@@ -1,3 +1,5 @@
+> **Cập nhật26/10/2026:** phần bên dưới là báo cáo lịch sử v54. HEADv58 đã có VI/EN; các thay đổi và nghiệm thu mới nhất nằm trong [báo cáo v59](REDESIGN_V59_REPORT.md). Không dùng trạng thái “chưa có selector/EN” bên dưới làm kết luận cho bản hiện tại. Các20mục khoa học PARTIAL và giới hạn thiết bị thật vẫn được giữ.
+
 # Những phần chưa hoàn tất hoặc chưa xác minh — V5.0/v54
 
 Ngày: 25/10/2026. Báo cáo này ngăn việc hiểu một đợt sửa ưu tiên thành nghiệm thu toàn bộ yêu cầu V5.0. PASS chỉ có ý nghĩa trong phạm vi phép thử tương ứng.

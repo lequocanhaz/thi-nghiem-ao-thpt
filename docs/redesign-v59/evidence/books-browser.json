@@ -1,0 +1,479 @@
+{
+  "scope": "Headless Chromium, simulated mobile/desktop; native fullscreen unavailable path forced for focus test",
+  "tests": [
+    {
+      "name": "reader fits nine widths with visible labels and 44px controls",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 320,
+          "scroll": 320,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3"
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3"
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3"
+        },
+        {
+          "width": 414,
+          "scroll": 414,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3"
+        },
+        {
+          "width": 430,
+          "scroll": 430,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3"
+        },
+        {
+          "width": 768,
+          "scroll": 768,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3"
+        },
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "spreadMode",
+              "w": 87.203125,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3 và 4"
+        },
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "spreadMode",
+              "w": 87.203125,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3 và 4"
+        },
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "selects": [
+            "Lớp họcLớp 10Lớp 11Lớp 12",
+            "Mục lục theo bàiChọn bài họcBìa sáchMục lục sáchMở đầu chương · tr. 6Bài 1. Làm quen với Vật lí · tr. 7Bài 2. Các quy tắc an toàn trong phòng thực hành Vật lí · tr. 12Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo · tr. 17Mở đầu chương · tr. 20Bài 4. Độ dịch chuyển và quãng đường đi được · tr. 21Bài 5. Tốc độ và vận tốc · tr. 26Bài 6. Thực hành: Đo tốc độ của vật chuyển động · tr. 30Bài 7. Đồ thị độ dịch chuyển – thời gian · tr. 34Bài 8. Chuyển động biến đổi. Gia tốc · tr. 37Bài 9. Chuyển động thẳng biến đổi đều · tr. 40Bài 10. Sự rơi tự do · tr. 44Bài 11. Thực hành: Đo gia tốc rơi tự do · tr. 47Bài 12. Chuyển động ném · tr. 49Mở đầu chương · tr. 55Bài 13. Tổng hợp và phân tích lực. Cân bằng lực · tr. 56Bài 14. Định luật 1 Newton · tr. 60Bài 15. Định luật 2 Newton · tr. 63Bài 16. Định luật 3 Newton · tr. 67Bài 17. Trọng lực và lực căng · tr. 69Bài 18. Lực ma sát · tr. 72Bài 19. Lực cản và lực nâng · tr. 77Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học · tr. 80Bài 21. Moment lực. Cân bằng của vật rắn · tr. 83Bài 22. Thực hành: Tổng hợp lực · tr. 86Mở đầu chương · tr. 90Bài 23. Năng lượng. Công cơ học · tr. 91Bài 24. Công suất · tr. 96Bài 25. Động năng, thế năng · tr. 99Bài 26. Cơ năng và định luật bảo toàn cơ năng · tr. 102Bài 27. Hiệu suất · tr. 106Mở đầu chương · tr. 109Bài 28. Động lượng · tr. 110Bài 29. Định luật bảo toàn động lượng · tr. 113Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm · tr. 116Mở đầu chương · tr. 119Bài 31. Động học của chuyển động tròn đều · tr. 120Bài 32. Lực hướng tâm và gia tốc hướng tâm · tr. 123Mở đầu chương · tr. 127Bài 33. Biến dạng của vật rắn · tr. 128Bài 34. Khối lượng riêng. Áp suất chất lỏng · tr. 131"
+          ],
+          "tools": [
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "",
+              "w": 46.71875,
+              "h": 44
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44
+            },
+            {
+              "id": "spreadMode",
+              "w": 87.203125,
+              "h": 44
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44
+            }
+          ],
+          "note": "Trang in trong sách: 3 và 4"
+        }
+      ]
+    },
+    {
+      "name": "VI/EN preserves page and zoom and translates new labels",
+      "status": "PASS",
+      "evidence": {
+        "page": 9,
+        "zoom": "125%",
+        "sameImage": true,
+        "printedPageLabel": true
+      }
+    },
+    {
+      "name": "keyboard page shortcuts stay in page region and preserve zoomed pan",
+      "status": "PASS",
+      "evidence": {
+        "pageRegionArrow": true,
+        "buttonEndDoesNotTurn": true,
+        "zoomedArrowDoesNotTurn": true
+      }
+    },
+    {
+      "name": "fullscreen fallback contains keyboard focus and restores it on exit",
+      "status": "PASS",
+      "evidence": {
+        "trappedTabSteps": 20,
+        "escapeRestoresFocus": true,
+        "exitButton": true
+      }
+    },
+    {
+      "name": "visible loading, retained page after image error, explicit retry",
+      "status": "PASS",
+      "evidence": {
+        "visibleLoading": true,
+        "preservedPageOnError": true,
+        "retryTarget": 6
+      }
+    },
+    {
+      "name": "opening a book moves focus to its heading",
+      "status": "PASS",
+      "evidence": {
+        "headingFocused": true
+      }
+    },
+    {
+      "name": "landscape fullscreen keeps a usable reading area",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 844,
+          "height": 390,
+          "stage": {
+            "x": 12,
+            "y": 95.75,
+            "width": 820,
+            "height": 282.25
+          }
+        },
+        {
+          "width": 1024,
+          "height": 768,
+          "stage": {
+            "x": 12,
+            "y": 185.34375,
+            "width": 1000,
+            "height": 524.65625
+          }
+        }
+      ]
+    },
+    {
+      "name": "browser touch drag turns pages and zoom suppresses turning",
+      "status": "PASS",
+      "evidence": {
+        "synthesizedBrowserTouch": "forward from4to5",
+        "zoomPreventsTurn": true
+      }
+    }
+  ],
+  "errors": []
+}

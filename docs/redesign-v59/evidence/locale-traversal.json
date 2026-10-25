@@ -1,0 +1,25 @@
+{
+  "scope": "Chromium headless, native MutationObserver; only locale-engine source differs; no hardware FPS claim",
+  "runs": {
+    "before": {
+      "updates": 30,
+      "translated": 30,
+      "treeWalks": 150,
+      "nodeVisits": 45000,
+      "rootWalks": 150,
+      "inputPreserved": true,
+      "canvasPreserved": true,
+      "pageErrors": []
+    },
+    "after": {
+      "updates": 30,
+      "translated": 30,
+      "treeWalks": 0,
+      "nodeVisits": 0,
+      "rootWalks": 0,
+      "inputPreserved": true,
+      "canvasPreserved": true,
+      "pageErrors": []
+    }
+  }
+}

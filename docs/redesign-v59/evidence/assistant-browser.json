@@ -1,0 +1,27 @@
+{
+  "browser": "Chromium headless, emulated viewports; API transport mocked",
+  "tests": [
+    {
+      "name": "Mobile Enter adds newline; explicit Send uses EN; LaTeX typesets",
+      "status": "PASS"
+    },
+    {
+      "name": "Failed request uses inline EN error and retains retryable draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Retained draft sends successfully on retry",
+      "status": "PASS"
+    },
+    {
+      "name": "Close restores focus and expanded state",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Not real iPhone/Safari or Android hardware.",
+    "No live API request or inference.",
+    "Virtual keyboard layout covered by viewport fixtures, not OS keyboard."
+  ]
+}

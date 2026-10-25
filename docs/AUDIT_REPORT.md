@@ -1,3 +1,5 @@
+> **Cập nhật26/10/2026:** phần bên dưới là báo cáo lịch sử v54. HEADv58 đã có VI/EN; các thay đổi và nghiệm thu mới nhất nằm trong [báo cáo v59](REDESIGN_V59_REPORT.md). Không dùng trạng thái “chưa có selector/EN” bên dưới làm kết luận cho bản hiện tại. Các20mục khoa học PARTIAL và giới hạn thiết bị thật vẫn được giữ.
+
 # Kiểm toán Quanh Lab V5.0 — mốc ưu tiên v54
 
 Ngày kiểm tra: 25/10/2026. Mã được kiểm tra là working tree sau bản v53; mã nền `4863af019a4cde215fd2f02b8b51f56922fe1f51`. Hash của các tệp khoa học và danh sách đầy đủ từng ID nằm trong [audit-v54-inventory.json](./audit-v54-inventory.json). Đây là kiểm toán có phạm vi, chưa phải nghiệm thu toàn bộ yêu cầu V5.0.
