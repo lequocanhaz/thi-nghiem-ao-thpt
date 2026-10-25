@@ -35,7 +35,22 @@ function answerContent(element,text,document){
  typesetMath(element);
 }
 const attachIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 12 6-6a4 4 0 0 1 6 6l-8 8a6 6 0 0 1-8-8l8-8m-6 10 7-7"/></svg>';
-function contextPrompts(context){
+function contextPrompts(context,locale='vi-VN'){
+ if(locale==='en-US'){
+  if(!context?.id||context.id==='library')return [
+   {label:'Find an experiment',question:'Help me find a suitable physics experiment. First ask about my grade and the phenomenon I want to investigate.'},
+   {label:'Plan a fair test',question:'Suggest one simulation and help me choose an independent variable, controlled conditions, data table and graph.'},
+   {label:'Interpret graphs',question:'Help me read the axes, units, slope and physical meaning of a physics graph.'}
+  ];
+  const title=String(context.title||'the current experiment');
+  const variable=context.parameters?.find(p=>p.key!=='t'&&p.label)?.label;
+  return [
+   {label:'Explain the principle',question:'Explain the physical principle and validity conditions for '+title+'. What should I observe?'},
+   {label:'Plan an investigation',question:'For '+title+', help me vary '+(variable||'one parameter')+' while keeping other conditions fixed, and record comparable measurements.'},
+   {label:'Analyze the graph',question:'For '+title+', explain the graph axes, units, trends and slope. Distinguish predictions from simulated data.'}
+  ];
+ }
+
  if(!context?.id||context.id==='library')return [
   {label:'Tìm bài phù hợp',question:'Hãy giúp tôi tìm một bài thí nghiệm phù hợp trong thư viện. Trước tiên, hỏi tôi đang học lớp nào và muốn tìm hiểu chủ đề gì.'},
   {label:'Lập kế hoạch khảo sát',question:'Hãy gợi ý một bài trong thư viện để luyện khảo sát: chọn một biến để thay đổi, giữ các biến khác cố định và lập bảng số liệu.'},
@@ -87,12 +102,12 @@ export class LabAssistant{
  }
  renderPrompts(empty,context,key){
   const prompts=this.document.createElement('div');prompts.className='ai-prompts';prompts.setAttribute('role','group');prompts.setAttribute('aria-label','Gợi ý câu hỏi');
-  for(const [index,prompt] of contextPrompts(context).entries()){
+  for(const [index,prompt] of contextPrompts(context,selectedLocale(this.document)).entries()){
    const button=this.document.createElement('button');button.type='button';button.className='ai-prompt';button.textContent=prompt.label;button.setAttribute('aria-label','Soạn câu hỏi: '+prompt.label);
    button.addEventListener('click',()=>{
     if(this.key()!==key){this.refreshContext();return;}
     // A suggestion edits only this draft. Existing text and pictures stay intact.
-    const previous=this.input.value,question=contextPrompts(this.getContext?.())[index].question,next=previous+(previous&&!previous.endsWith('\n')?'\n':'')+question;
+    const previous=this.input.value,question=contextPrompts(this.getContext?.(),selectedLocale(this.document))[index].question,next=previous+(previous&&!previous.endsWith('\n')?'\n':'')+question;
     if(next.length>6000){this.notice('Bản nháp đã gần giới hạn 6000 ký tự. Hãy rút gọn trước khi thêm gợi ý.');return;}
     this.input.value=next;
     this.drafts.set(key,this.input.value);this.syncComposer();this.input.focus({preventScroll:true});this.input.setSelectionRange?.(this.input.value.length,this.input.value.length);
