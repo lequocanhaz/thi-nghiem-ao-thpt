@@ -5,7 +5,7 @@ import {Narrator,englishVoices,englishChunks} from '../dist/media.js';
 
 assert.equal(getLocale(),'vi-VN');
 assert.equal(translateShort('Thư viện'),'Library');
-assert.equal(['Hệ thống','Thí nghiệm','Vật Lí Ảo'].map(translateBannerHeading).join(' '),'Virtual Physics Experiment System','English headline preserves the meaning of the new Vietnamese banner title');
+assert.equal(['HỆ THỐNG THÍ NGHIỆM','VẬT LÍ ẢO'].map(translateBannerHeading).join(' '),'VIRTUAL PHYSICS EXPERIMENT SYSTEM','English headline preserves the meaning of the new Vietnamese banner title');
 assert.equal(translateShort('Thí nghiệm'),'Experiments','The generic navigation translation must remain unchanged');
 assert.equal(translateShort('Lớp 11'),'Grade 11');
 assert.equal(translateShort('Điện trường'),'Electric field');
