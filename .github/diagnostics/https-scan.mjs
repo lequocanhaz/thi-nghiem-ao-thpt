@@ -9,14 +9,15 @@ for(const site of ['http://physicslab.tech/','https://physicslab.tech/','http://
 }
 const binary=['google-chrome','chromium','chromium-browser'].find(x=>{try{execFileSync('which',[x]);return true}catch{return false}});
 console.log('CHROME_BINARY',binary||'NONE');
+if(binary){try{console.log('CHROME_VERSION',execFileSync(binary,['--version'],{timeout:4000}).toString().trim());}catch(e){console.log('CHROME_VERSION_ERROR',e.message)}}
 if(!binary)process.exit(0);
 const port=19223, dir=mkdtempSync(join(tmpdir(),'quanh-security-'));
 const chrome=spawn(binary,['--headless=new','--no-sandbox','--disable-gpu','--disable-dev-shm-usage','--remote-debugging-port='+port,'--user-data-dir='+dir,'about:blank'],{stdio:['ignore','ignore','pipe']});
-let stderr='';chrome.stderr.on('data',d=>{stderr+=d.toString().slice(0,3000);});
+let stderr='';let exitSignal=null;chrome.stderr.on('data',d=>{stderr+=d.toString().slice(0,3000);});chrome.on('error',e=>{console.log('CHROME_SPAWN_ERROR',e.message)});chrome.on('exit',(code,signal)=>{exitSignal={code,signal};console.log('CHROME_EXIT',JSON.stringify(exitSignal))});
 try{
   let connected=false;
   for(let i=0;i<40;i++){try{const r=await fetch('http://127.0.0.1:'+port+'/json/version');if(r.ok){connected=true;break;}}catch{}await new Promise(r=>setTimeout(r,250));}
-  if(!connected)throw Error('Chrome debugging endpoint not ready '+stderr.slice(0,500));
+  if(!connected)throw Error('Chrome debugging endpoint not ready pid='+chrome.pid+' exit='+JSON.stringify(exitSignal)+' stderr='+stderr.slice(0,2000));
   for(const site of ['https://physicslab.tech/','https://www.physicslab.tech/']){
     const target=await (await fetch('http://127.0.0.1:'+port+'/json/new?'+encodeURIComponent('about:blank'),{method:'PUT'})).json();
     const ws=new WebSocket(target.webSocketDebuggerUrl);
