@@ -151,7 +151,7 @@ function eligible(element){
  return !!element&&!element.closest(blocked);
 }
 // Only the homepage headline uses this reordered English phrase.
-const bannerSegments=new Map([['Hệ thống','Virtual Physics'],['Thí nghiệm','Experiment'],['Vật Lí Ảo','System']]);
+const bannerSegments=new Map([['HỆ THỐNG THÍ NGHIỆM','VIRTUAL PHYSICS'],['VẬT LÍ ẢO','EXPERIMENT SYSTEM']]);
 export function translateBannerHeading(source){
  const value=String(source).trim();
  return bannerSegments.has(value)?String(source).replace(value,bannerSegments.get(value)):translateShort(source);
