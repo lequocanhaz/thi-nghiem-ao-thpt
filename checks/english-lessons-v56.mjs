@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import {experiments,initialState} from '../dist/experiments.js';
+import {setLocale,getLocale} from '../dist/i18n.js';
+import {englishStudy,englishIntro,englishParameter,englishTopic} from '../dist/english-study.js';
+import {lessonGuideMarkup,lessonSummaryMarkup} from '../dist/lesson-view.js';
+import {loadTeaching} from '../dist/lesson-loader.js';
+
+assert.equal(experiments.length,300);
+const scientificSnapshot=experiments.map(e=>JSON.stringify({id:e.id,params:e.params,formula:e.formula,headers:e.headers}));
+assert.equal(getLocale(),'vi-VN');
+setLocale('en-US');
+assert.equal(getLocale(),'en-US');
+const ids=new Set();
+for(const e of experiments){
+ ids.add(e.id);
+ const copy=englishStudy(e);
+ assert.ok(copy.title.length>4,e.id+' title');
+ assert.ok(copy.explanation.length>40,e.id+' explanation');
+ assert.ok(copy.investigation.length>25,e.id+' investigation');
+ assert.ok(copy.question.length>40,e.id+' question');
+ assert.ok(copy.answer.length>20,e.id+' answer');
+ assert.ok(englishTopic(e.topic)!=='Physics',e.id+' known physics topic');
+ assert.ok(englishIntro(e).startsWith('Welcome to '),e.id+' narrator');
+ assert.ok(copy.goal.includes(copy.title.toLowerCase()),e.id+' unique goal');
+ const param=(e.params||[])[0];assert.ok(param&&englishParameter(param).trim(),e.id+' param');
+ const before=JSON.stringify(initialState(e));
+ const markup=lessonGuideMarkup(e);
+ assert.match(markup,/lang="en-US"/,e.id+' English lesson');
+ assert.match(markup,/Plan an investigation/,e.id+' English procedure');
+ assert.ok(!markup.includes('Hãy tự trả lời'),e.id+' no Vietnamese procedure');
+ assert.equal(JSON.stringify(initialState(e)),before,e.id+' scientific state unchanged');
+}
+assert.equal(ids.size,300);
+assert.deepEqual(experiments.map(e=>JSON.stringify({id:e.id,params:e.params,formula:e.formula,headers:e.headers})),scientificSnapshot);
+const probe=experiments.find(e=>e.id==='electric');
+await loadTeaching(probe);
+const guide=lessonGuideMarkup(probe),summary=lessonSummaryMarkup(probe);
+assert.match(guide,/Sources and scope/);
+assert.match(guide,/openstax\.org|mit\.edu|ocw\.mit\.edu/i,'keep bibliographic links');
+assert.match(summary,/Learning objective/);
+setLocale('vi-VN');
+assert.equal(getLocale(),'vi-VN');
+assert.match(lessonGuideMarkup(probe),/Mục tiêu thí nghiệm/);
+assert.match(lessonSummaryMarkup(probe),/Mục tiêu bài học/);
+console.log('PASS 300 English authored study guides, scientific metadata unchanged, sources retained and VI roundtrip.');
