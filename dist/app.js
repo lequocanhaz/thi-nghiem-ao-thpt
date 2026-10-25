@@ -26,7 +26,7 @@ let LabScene,SoftwareScene,sceneLoading=false,sceneError='',sceneProgress=0;
 import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=54';
 import {Narrator,Tone} from './media.js?v=55';
 import {getLocale,englishTitle,translateShort,installLanguageUI} from './language-ui.js?v=56';
-import {englishIntro,englishTopic} from './english-study.js?v=56';
+import {englishIntro,englishTopic,englishStudy} from './english-study.js?v=56';
 import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=54';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -60,7 +60,7 @@ function updateSpeech(status){
  updateVoiceChoices(status);if(status.error)toast(status.error);
 }
 const narrator=new Narrator(updateSpeech);narrator.setLocale(getLocale());narrator.voiceName=prefs.voice;narrator.rate=prefs.rate;
-document.addEventListener('quanh-locale-change',event=>{narrator.setLocale(event.detail.locale);prefs.voice='';updateSpeech(narrator.status());if(active){const guide=$('.teaching-guide-content');if(guide)guide.innerHTML=lessonGuideMarkup(active);const summary=$('.lesson-summary-host');if(summary)summary.innerHTML=lessonSummaryMarkup(active);if(panel==='theory')renderPanel();}});
+document.addEventListener('quanh-locale-change',event=>{narrator.setLocale(event.detail.locale);prefs.voice='';updateSpeech(narrator.status());if(active){const guide=$('.teaching-guide-content');if(guide)guide.innerHTML=lessonGuideMarkup(active);const summary=$('.lesson-summary-host');if(summary)summary.innerHTML=lessonSummaryMarkup(active);renderCoach();if(panel==='theory')renderPanel();if(panel==='discover'){const en=event.detail.locale==='en-US',study=englishStudy(active),q=$('.discovery-prompt h2');if(q)q.textContent=en?study.question:active.tasks[0];const lines=document.querySelectorAll('.investigation-steps small');const english=['Write a testable prediction.',study.investigation,study.misconception];lines.forEach((line,i)=>line.textContent=en?english[i]:(i===0?'Nêu điều bạn nghĩ sẽ xảy ra':active.tasks[i]));}}assistant?.render?.();});
 const staticIds=new Set(['electric','lever','hooke','magnetic',...experiments.filter(e=>e.static&&!e.visualOnly).map(e=>e.id)]);
 const icon=(name)=>{const paths={more:'M5 12h.01M12 12h.01M19 12h.01',sliders:'M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6',table:'M3 3h18v18H3zM3 9h18M3 15h18M9 3v18',info:'M12 11v6M12 7h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0',plus:'M12 5v14M5 12h14',minus:'M5 12h14',loop:'M4 8h12l4 4-4 4M20 12H8l-4 4',axes:'M12 3v18M3 12h18M9 6l3-3 3 3M18 9l3 3-3 3',grid:'M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18','arrow-up-right':'M6 18 18 6M6 6h12v12','arrow-right':'M4 12h16M14 6l6 6-6 6',play:'M9 5l12 7-12 7z',pause:'M8 5v14M16 5v14',voice:'M4 10h4l5-5v14l-5-5H4zM17 8q6 4 0 8',star:'M12 3l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z',search:'M17 17l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',reset:'M4 6v6h6M4 12a8 8 0 1 1 2 6',step:'M6 5l11 7-11 7zM19 5v14',camera:'M3 7h5l2-3h4l2 3h5v13H3zM16 13a4 4 0 1 1-8 0 4 4 0 0 1 8 0',expand:'M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5'};return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[name]||paths.play}"/></svg>`;};
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3500);}
