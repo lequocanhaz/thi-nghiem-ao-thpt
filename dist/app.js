@@ -13,7 +13,7 @@ import {BannerScene} from './banner.js?v=18';
 import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=54';
 import {fitModels,fitSummary,reportMarkup} from './research.js?v=51';
 import {themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams} from './learning.js?v=17';
-import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=54';
+import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=56';
 import {curriculumOptions,curriculumMeta,curriculumKey} from './curriculum.js?v=39';
 import {tableGraph,sweepStates,segments,graphParameter,tableColumnFor} from './analytics.js?v=54';
 import {experiments,initialState,electricModes} from './experiments.js?v=54';
@@ -26,7 +26,7 @@ let LabScene,SoftwareScene,sceneLoading=false,sceneError='',sceneProgress=0;
 import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=54';
 import {Narrator,Tone} from './media.js?v=55';
 import {getLocale,englishTitle,translateShort,installLanguageUI} from './language-ui.js?v=56';
-import {englishIntro} from './english-study.js?v=56';
+import {englishIntro,englishTopic} from './english-study.js?v=56';
 import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=54';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -136,11 +136,11 @@ function updateHeroDemo(){if(!heroState||heroState.id!=='ohm')return;const s=her
 function renderCards(){
  if(!$('#cards'))return;
  const terms=normalize(search).trim().split(/\s+/).filter(Boolean);
- let list=experiments.filter(e=>matchesCatalog(e,subjectFilter,bookSeriesFilter)&&(grade==='all'||e.grade===+grade)&&(topic==='all'||e.topic===topic)&&(curriculumFilter==='all'||curriculumKey(e)===curriculumFilter)&&terms.every(term=>normalize(e.title+' '+e.topic+' '+e.description).includes(term))&&(filter!=='favorites'||prefs.favorites.includes(e.id))&&(filter!=='recent'||prefs.recent.includes(e.id))&&(pathFilter===null||paths[pathFilter].ids.includes(e.id))&&(levelFilter==='all'||(levelFilter==='extra'?e.extra:!e.extra)));
+ let list=experiments.filter(e=>matchesCatalog(e,subjectFilter,bookSeriesFilter)&&(grade==='all'||e.grade===+grade)&&(topic==='all'||e.topic===topic)&&(curriculumFilter==='all'||curriculumKey(e)===curriculumFilter)&&terms.every(term=>normalize(e.title+' '+e.topic+' '+e.description+' '+englishTitle(e.id)+' '+englishTopic(e.topic)).includes(term))&&(filter!=='favorites'||prefs.favorites.includes(e.id))&&(filter!=='recent'||prefs.recent.includes(e.id))&&(pathFilter===null||paths[pathFilter].ids.includes(e.id))&&(levelFilter==='all'||(levelFilter==='extra'?e.extra:!e.extra)));
  if(filter==='recent')list.sort((a,b)=>prefs.recent.indexOf(a.id)-prefs.recent.indexOf(b.id));
  if(pathFilter!==null)list.sort((a,b)=>paths[pathFilter].ids.indexOf(a.id)-paths[pathFilter].ids.indexOf(b.id));
- if(terms.length&&catalogSort==='default'){const phrase=terms.join(' '),rank=e=>{const heading=normalize(e.title+' '+e.topic);return heading.includes(phrase)?3:terms.every(t=>heading.includes(t))?2:normalize(e.description).includes(phrase)?1:0;};list.sort((a,b)=>rank(b)-rank(a));}
- if(catalogSort==='name')list.sort((a,b)=>a.shortTitle.localeCompare(b.shortTitle,'vi'));
+ if(terms.length&&catalogSort==='default'){const phrase=terms.join(' '),rank=e=>{const heading=normalize(e.title+' '+e.topic+' '+englishTitle(e.id)+' '+englishTopic(e.topic));return heading.includes(phrase)?3:terms.every(t=>heading.includes(t))?2:normalize(e.description).includes(phrase)?1:0;};list.sort((a,b)=>rank(b)-rank(a));}
+ if(catalogSort==='name')list.sort((a,b)=>(getLocale()==='en-US'?englishTitle(a.id):a.shortTitle).localeCompare(getLocale()==='en-US'?englishTitle(b.id):b.shortTitle,getLocale()));
  if(catalogSort==='grade')list.sort((a,b)=>a.grade-b.grade);
  const size=24,pages=Math.max(1,Math.ceil(list.length/size));catalogPage=Math.max(1,Math.min(pages,catalogPage));const start=(catalogPage-1)*size;
  $('#resultCount').textContent=`${list.length} thí nghiệm${list.length>size?' · '+(start+1)+'–'+Math.min(start+size,list.length):''}`;
