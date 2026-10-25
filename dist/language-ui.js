@@ -1,8 +1,9 @@
-import {createI18n,dictionaries} from './i18n.js?v=54';
+import {i18n,dictionaries} from './i18n.js?v=54';
+import {experiments} from './experiments.js?v=54';
+import {englishStudy,englishParameter,englishTopic} from './english-study.js?v=56';
 import {messagePairs} from './locales/messages.js?v=54';
 import {physicsGlossary} from './locales/glossary.js?v=54';
 
-const i18n=createI18n();
 const translations=new Map();
 function pair(vi,en){if(vi&&en&&vi!==en)translations.set(vi,en);}
 for(const group of Object.values(messagePairs))for(const [vi,en] of Object.values(group))pair(vi,en);
@@ -12,6 +13,7 @@ for(const id of Object.keys(dictionaries['vi-VN'].experiments)){
  const en=dictionaries['en-US'].experiments[id];
  pair(vi.title,en.title);pair(vi.shortTitle,en.shortTitle);
 }
+for(const e of experiments){const guide=englishStudy(e);pair(e.topic,englishTopic(e.topic));pair(e.description,guide.explanation);pair(e.description.split(/(?<=[.!?])\s/)[0],guide.explanation);if(e.subtitle)pair(e.subtitle,guide.investigation);(e.params||[]).forEach((p,i)=>pair(p.label,englishParameter(p,i)));}
 for(const [vi,en] of [
  ['Thí nghiệm','Experiments'],['Vật Lí','Physics'],['Vật lí','Physics'],['Thư viện thí nghiệm','Experiment library'],
  ['Thư viện thí nghiệm ','Experiment library '],['Chọn thí nghiệm','Choose experiment'],
@@ -114,7 +116,7 @@ function visit(container,english){
 function localizeAll(){
  const english=getLocale()==='en-US';
  document.documentElement.lang=english?'en-US':'vi';
- document.title=translateShort(document.title);
+ const labId=(location.hash.match(/^#lab\/([^?]+)/)||[])[1];const current=experiments.find(e=>e.id===labId);document.title=english?(current?englishStudy(current).title+' · Quanh Lab':'Quanh Lab · Experiment library'):(current?current.shortTitle+' · Quanh Lab':'Quanh Lab · Thư viện thí nghiệm');
  for(const selector of rootSelectors)visit(document.querySelector(selector),english);
  const lab=document.querySelector('.lab');
  let guidance=lab?.querySelector('.language-guidance');
@@ -123,7 +125,7 @@ function localizeAll(){
   guidance=document.createElement('p');
   guidance.className='language-guidance';
   guidance.setAttribute('lang','en-US');
-  guidance.textContent='English interface and narration are available. Detailed lesson explanations remain in Vietnamese while their scientific translations are being reviewed.';
+  guidance.textContent='English study guides are provided for all 300 models. These are original model-based explanations, not certified line-by-line translations of the Vietnamese lesson texts.';
   const heading=lab.querySelector('.lab-heading');
   heading?.insertAdjacentElement('afterend',guidance);
  }
