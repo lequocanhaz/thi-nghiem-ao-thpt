@@ -47,7 +47,10 @@ const oneSeries=experiments.map(e=>({...e,bookSeries:['ket-noi']}));
 assert.equal(home(oneSeries).querySelector('#bookSeriesFilter'),null,'One real series does not need a selector');
 const viewSource=fs.readFileSync(new URL('views.js',root),'utf8');
 const banner=viewSource.match(/ <section class="main-banner[\s\S]*? <\/section>/)?.[0];assert.ok(banner);
-assert.equal(createHash('sha256').update(banner).digest('hex'),'46908b1168de4237f17b86528f05e1f761d7e48534a87395a0eff9eeee25d769','Frozen banner template remains byte-for-byte identical');
+const approvedTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading">Hệ thống<br>Thí nghiệm<br><em>Vật Lí Ảo</em></h1>';
+const previousTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading">Thí nghiệm<br><em>Vật Lí</em></h1>';
+assert.equal(banner.split(approvedTitle).length,2,'The homepage must display the approved virtual physics system title');
+assert.equal(createHash('sha256').update(banner.replace(approvedTitle,previousTitle)).digest('hex'),'46908b1168de4237f17b86528f05e1f761d7e48534a87395a0eff9eeee25d769','Original banner must be preserved aside from the approved heading');
 // Exercise the actual asynchronous loader with controlled network completion/failure.
 const {loadRenderers}=await import('../dist/lab-loader.js?failure-test');
 await assert.rejects(loadRenderers({timeout:15,importModule:()=>new Promise(()=>{})}),/quá 15 giây/);
