@@ -9,4 +9,4 @@ function fallback(){
  const button=document.createElement('button');button.className='button secondary';button.textContent='Thử lại';button.addEventListener('click',()=>location.reload());status.append(' ',button);}
 }
 const timer=setTimeout(fallback,15000);
-import('./app.js?v=54').then(()=>{finished=true;clearTimeout(timer);}).catch(error=>{clearTimeout(timer);console.error('Lab startup failed',error);fallback();});
+import('./app.js?v=55').then(async()=>{finished=true;clearTimeout(timer);try{const {installLanguageUI}=await import('./language-ui.js?v=55');installLanguageUI();}catch(error){console.warn('Language selector unavailable',error);}}).catch(error=>{clearTimeout(timer);console.error('Lab startup failed',error);fallback();});
