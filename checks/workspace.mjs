@@ -60,7 +60,7 @@ for(const width of [360,768,1440])for(const mode of ['explore','measure','presen
  document.querySelector('main').innerHTML=labMarkup(ohm,{prefs,state:s,config:cfg,controls:'<div class="control-body"></div>',panel:'data',mode,experiments},()=>'<svg></svg>');
  const lab=document.querySelector('.lab');Object.assign(lab.dataset,{controlsCollapsed:'false',dockCollapsed:mode==='explore'?'true':'false',mobileControls:'false'});
  const controls=document.querySelector('.controls'),dock=document.querySelector('.research-dock'),work=document.querySelector('.experiment-work');
- assert.equal(work.parentElement,document.querySelector('.workspace'));assert.equal(controls.previousElementSibling.dataset.resize,'controlsWidth');assert.equal(dock.parentElement,work);
+ assert.equal(work.parentElement,document.querySelector('.workspace'));assert.equal(controls.parentElement.previousElementSibling.dataset.resize,'controlsWidth');assert.equal(dock.parentElement,work);
  if(width===1440&&mode!=='present'){assert.equal(property(document.querySelector('.workspace'),'grid-template-columns',width),'minmax(0,1fr) 12px minmax(300px,var(--controls-width,380px))');assert.equal(property(controls,'position',width),'sticky');}
  assert.equal(property(controls,'display',width),mode==='present'?'none':'flex');
  if(mode==='explore'||mode==='present')assert.equal(property(dock,'display',width),'none');

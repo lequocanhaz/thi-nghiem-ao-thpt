@@ -117,3 +117,9 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Readout/play cập nhật tại chỗ; SVG giữ nguyên khi chỉ điểm hiện tại đổi, vẫn invalidate khi dữ liệu/miền/layout/chế độ đổi. Giữ các nhãn và thao tác bàn phím cũ.
 - `dist/formula-catalog.js` có TeX tường minh đủ300ID; công thức dùng phân số xếp tầng thay suy đoán từ slash. Giữ KaTeX tự phục vụ, `trust:false`, MathML và fallback; cache HTML tối đa128biểu thức.
 - Thêm `checks/rendering-v52.mjs`, `checks/math-cache-v52.mjs` vào `npm run check`; mở rộng DOM và browser lesson test. Benchmark browser là phép đo SwiftShader trên máy chủ, chưa phải FPS thực tế trên điện thoại và chưa chứng minh60FPS cho cả300bài. Bản sau xử lý nhiều khung hơn nhưng CPU4 vẫn có longtask.
+
+## Giao diện v53
+
+- Xem `docs/interface-v53.md`: giữ nhận diện/banner, gọn thẻ bằng công thức thật khi chưa có ảnh mô hình, tên bài không ép hoa, menu công cụ/phiên và gợi ý trợ lý chỉ soạn nháp.
+- `.controls-rail` chặn sticky che panel dữ liệu ở hàng sau; `placeControls` chuyển cùng node qua breakpoint. Không bỏ wrapper hoặc clone điều khiển để sửa responsive.
+- Có hai bộ Chromium tùy chọn `checks/browser-interface-v53.py` và `checks/browser-catalog-math-v53.py`; ảnh/JSON ra `/tmp`, không ghi báo cáo audit cũ. Chưa xác minh Safari/thiết bị thật/FPS phần cứng. Không coi thay đổi giao diện là sửa các lỗi khoa học audit-300.

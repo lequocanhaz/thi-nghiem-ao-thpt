@@ -34,6 +34,21 @@ function answerContent(element,text,document){
  typesetMath(element);
 }
 const attachIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 12 6-6a4 4 0 0 1 6 6l-8 8a6 6 0 0 1-8-8l8-8m-6 10 7-7"/></svg>';
+function contextPrompts(context){
+ if(!context?.id||context.id==='library')return [
+  {label:'Tìm bài phù hợp',question:'Hãy giúp tôi tìm một bài thí nghiệm phù hợp trong thư viện. Trước tiên, hỏi tôi đang học lớp nào và muốn tìm hiểu chủ đề gì.'},
+  {label:'Lập kế hoạch khảo sát',question:'Hãy gợi ý một bài trong thư viện để luyện khảo sát: chọn một biến để thay đổi, giữ các biến khác cố định và lập bảng số liệu.'},
+  {label:'Đọc đồ thị',question:'Hãy gợi ý một bài trong thư viện để luyện đọc đồ thị, rồi hướng dẫn tôi nhận biết hai trục, đơn vị, xu hướng và ý nghĩa của độ dốc.'}
+ ];
+ const title=String(context.title||'thí nghiệm hiện tại'),parameter=context.parameters?.find(p=>p.key!=='t'&&p.label);
+ const columns=(context.columns||[]).filter(c=>typeof c==='string').slice(0,3);
+ const setting=parameter&&Number.isFinite(parameter.value)?` (hiện tại ${parameter.value}${parameter.unit?' '+parameter.unit:''})`:'';
+ return [
+  {label:'Hiểu nguyên lí',question:`Giải thích nguyên lí và điều kiện áp dụng của bài «${title}». Tôi nên chú ý điều gì khi quan sát mô hình?`},
+  {label:parameter?'Khảo sát '+parameter.label:'Lập kế hoạch khảo sát',question:parameter?`Trong bài «${title}», hãy hướng dẫn tôi khảo sát ảnh hưởng của «${parameter.label}»${setting}: mỗi lần chỉ đổi một biến, ghi số liệu và kiểm tra dự đoán.`:`Hãy hướng dẫn tôi chọn một biến để khảo sát trong bài «${title}», giữ các biến khác cố định và ghi số liệu để kiểm tra dự đoán.`},
+  {label:'Đọc đồ thị',question:`Hướng dẫn tôi đọc đồ thị của bài «${title}»: nhận biết hai trục, đơn vị, xu hướng và ý nghĩa của độ dốc.${columns.length?' Đối chiếu với các cột số liệu '+columns.map(c=>'«'+c+'»').join(', ')+'.':''}`}
+ ];
+}
 export class LabAssistant{
  constructor({getContext,endpoint=assistantEndpoint,document=globalThis.document,fetcher=(...args)=>globalThis.fetch(...args),viewport=globalThis.visualViewport,imagePreparer=prepareImage,coarsePointer=()=>globalThis.matchMedia?.('(pointer: coarse)')?.matches||false}={}){
   Object.assign(this,{getContext,endpoint,document,fetcher,imagePreparer,coarsePointer,threads:new Map(),drafts:new Map(),attachments:new Map(),busy:false,preparing:false});
@@ -69,9 +84,24 @@ export class LabAssistant{
   try{for(const file of files.slice(0,slots)){try{const picture=await this.imagePreparer(file,{document:this.document});this.pictures(key).push(picture);}catch(error){errors.push(error.message||'Chưa đọc được ảnh.');}}if(files.length>slots)errors.push('Chỉ thêm tối đa 2 ảnh mỗi lượt.');}
   finally{this.preparing=false;this.renderAttachments();this.syncComposer();this.notice(this.key()!==key?'Đã xử lí ảnh trong bài trước.':errors.join(' '));}
  }
+ renderPrompts(empty,context,key){
+  const prompts=this.document.createElement('div');prompts.className='ai-prompts';prompts.setAttribute('role','group');prompts.setAttribute('aria-label','Gợi ý câu hỏi');
+  for(const [index,prompt] of contextPrompts(context).entries()){
+   const button=this.document.createElement('button');button.type='button';button.className='ai-prompt';button.textContent=prompt.label;button.setAttribute('aria-label','Soạn câu hỏi: '+prompt.label);
+   button.addEventListener('click',()=>{
+    if(this.key()!==key){this.refreshContext();return;}
+    // A suggestion edits only this draft. Existing text and pictures stay intact.
+    const previous=this.input.value,question=contextPrompts(this.getContext?.())[index].question,next=previous+(previous&&!previous.endsWith('\n')?'\n':'')+question;
+    if(next.length>6000){this.notice('Bản nháp đã gần giới hạn 6000 ký tự. Hãy rút gọn trước khi thêm gợi ý.');return;}
+    this.input.value=next;
+    this.drafts.set(key,this.input.value);this.syncComposer();this.input.focus({preventScroll:true});this.input.setSelectionRange?.(this.input.value.length,this.input.value.length);
+   });prompts.append(button);
+  }
+  const hint=this.document.createElement('p');hint.className='ai-prompt-hint';hint.textContent='Chọn một gợi ý để soạn câu hỏi, rồi nhấn Gửi khi bạn sẵn sàng.';empty.append(prompts,hint);
+ }
  render(){const key=this.key();if(this.currentKey&&this.currentKey!==key){this.drafts.set(this.currentKey,this.input.value);this.input.value=this.drafts.get(key)||'';}this.currentKey=key;const context=this.getContext?.();const contextName=context?.id&&context.id!=='library'?context.title||'Thí nghiệm hiện tại':'Thư viện thí nghiệm';this.q('.ai-context').textContent=contextName;this.q('.ai-context').title=contextName;
   const list=this.q('.ai-messages');list.replaceChildren();const messages=[...this.thread(),...(this.pending?.key===key?[{role:'user',content:this.pending.question,pictures:this.pending.pictures},{role:'assistant',content:'Đang trả lời…',pending:true}]:[])];
-  if(!messages.length){const empty=this.document.createElement('div');empty.className='ai-empty';empty.innerHTML='<span class="ai-empty-mark" aria-hidden="true"><img src="brand/quanh-mark.svg?v=37" alt="" width="58" height="58"></span><h3>Bạn muốn khám phá điều gì?</h3><p>Gửi câu hỏi, ảnh bài tập hoặc đồ thị.</p>';list.append(empty);}
+  if(!messages.length){const empty=this.document.createElement('div');empty.className='ai-empty';empty.innerHTML='<span class="ai-empty-mark" aria-hidden="true"><img src="brand/quanh-mark.svg?v=37" alt="" width="58" height="58"></span><h3>Bạn muốn khám phá điều gì?</h3><p>Gửi câu hỏi, ảnh bài tập hoặc đồ thị.</p>';this.renderPrompts(empty,context,key);list.append(empty);}
   for(const message of messages){const el=this.document.createElement('div');el.className='ai-message';el.dataset.role=message.role;el.setAttribute('aria-label',message.role==='user'?'Bạn':'Trợ lý AI');if(!message.pending)answerContent(el,message.content,this.document);else el.textContent=message.content;
    if(message.pictures?.length){const pictures=this.document.createElement('div');pictures.className='ai-message-images';for(const [i,p] of message.pictures.entries()){const img=this.document.createElement('img');img.src=p.thumbnail||p.url;img.alt=p.name||'Ảnh đã gửi';img.loading='lazy';const button=this.document.createElement('button');button.type='button';button.setAttribute('aria-label','Xem ảnh '+(p.name||'đã gửi'));const kept=(message.images||[]),offset=message.pictures.length-kept.length,full=p.url||(i>=offset?kept[i-offset]:p.thumbnail);button.addEventListener('click',()=>this.showImage(p,full,button));button.append(img);pictures.append(button);}el.prepend(pictures);}if(message.pending)el.classList.add('ai-pending');list.append(el);
   }list.scrollTop=list.scrollHeight;this.renderAttachments();this.syncComposer();this.input.setAttribute('aria-describedby','aiConnectionStatus');this.status.id='aiConnectionStatus';this.notice(!this.endpoint?'Trợ lý AI chưa kết nối máy chủ.':this.pending&&this.pending.key!==key?'Đang trả lời ở bài trước. Bạn có thể soạn câu hỏi mới.':'');

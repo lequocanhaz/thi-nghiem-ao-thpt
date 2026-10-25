@@ -33,7 +33,7 @@ for(const width of [320,360,375,390,393,402,414,430,440,620,667,736,768,812,844,
  assert.equal(style(document.querySelector('.header'),'height',v),'auto','Header must accommodate wrapped navigation at '+width);
  assert.equal(style(document.querySelector('.banner-copy'),'width',v),'auto','No 100%-width banner offset overflowing at '+width);
  assert.equal(style(document.body,'font-family',v),"'Manrope','Segoe UI',sans-serif");assert.equal(style(document.querySelector('#bannerTitle'),'font-weight',v),'750');assert.equal(style(document.querySelector('#libraryTitle'),'font-weight',v),'750');
- document.querySelector('#cards').innerHTML=cardsMarkup(experiments.slice(0,1),prefs,()=> '');assert.equal(style(document.querySelector('.card-image'),'background',v),'#fff','White preview at '+width);assert.equal(style(document.querySelector('.card-body h3'),'font-weight',v),'800','Experiment name stays bold');assert.equal(style(document.querySelector('.preview-button'),'min-height',v),'44px');
+ document.querySelector('#cards').innerHTML=cardsMarkup(experiments.slice(0,1),prefs,()=> '');assert.equal(style(document.querySelector('.card-image'),'background',v),'#fff','White preview at '+width);assert.equal(style(document.querySelector('.card-body h3'),'font-weight',v),'700','Experiment name stays readable without extra-bold capitals');assert.equal(style(document.querySelector('.preview-button'),'min-height',v),'44px');
  const strong=document.createElement('strong');document.body.append(strong);assert.equal(style(strong,'font-weight',v),'700');strong.remove();
  assert.equal(style(document.querySelector('.header'),'position',v),'absolute','Home navigation overlays the full viewport video');
  for(const e of experiments){
