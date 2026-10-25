@@ -1,0 +1,2741 @@
+{
+  "productionURL": "https://physicslab.tech/",
+  "sourceCommit": "decfbb8555c4e43c7fe817a899297010696d23d6",
+  "scope": "HTTPS byte comparisons of static entry, all root ES modules and 301 discovery HTML pages; not interactive browser or hardware validation",
+  "tlsVerification": true,
+  "requestedFiles": 388,
+  "matchedFiles": 388,
+  "seconds": 16.05,
+  "results": [
+    {
+      "path": "about-en.html",
+      "status": 200,
+      "bytes": 4167,
+      "sha256": "82bb6c82c122b224ed616760dd5f3038e35830ae8b0ffd4e451f0e599015c663",
+      "matchesSource": true
+    },
+    {
+      "path": "about.html",
+      "status": 200,
+      "bytes": 4653,
+      "sha256": "541b1c8546b3ac5541f2424bcf8e0fa15ee2ccfae931573f2d1fdec87e7952e6",
+      "matchesSource": true
+    },
+    {
+      "path": "ai-config.js",
+      "status": 200,
+      "bytes": 166,
+      "sha256": "d75e52399f1f9f819ef12afeda98c00e20b79e81b29ac95e73ca5f18f5517813",
+      "matchesSource": true
+    },
+    {
+      "path": "analytics.js",
+      "status": 200,
+      "bytes": 4174,
+      "sha256": "730ee39275cfd450d0b3f96544e08864313c05ef69f75e4880ff21f6bb9b9a17",
+      "matchesSource": true
+    },
+    {
+      "path": "app.css",
+      "status": 200,
+      "bytes": 102416,
+      "sha256": "76427addf68d90c8a39e385e33d68447f252dc41c762f890f295138cc7348a78",
+      "matchesSource": true
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 119787,
+      "sha256": "a951665e3c9fc86afde9c1871dd8629bf06da11ea844a71d90c793e40c67528c",
+      "matchesSource": true
+    },
+    {
+      "path": "apparatus.js",
+      "matchesSource": true,
+      "status": 200,
+      "bytes": 7230,
+      "sha256": "b810b84060502ca6833c9f29c2c76ed4aab4255bbc5033aa82528949a3fbe59d",
+      "previousAttempts": [
+        {
+          "error": "HTTP Error 503: Service Unavailable",
+          "matchesSource": false
+        }
+      ]
+    },
+    {
+      "path": "assistant-context.js",
+      "status": 200,
+      "bytes": 427,
+      "sha256": "9727b614f675b479d2c446a4cd3173ca7c4c86d6941d72aa2f89a5137b1314a5",
+      "matchesSource": true
+    },
+    {
+      "path": "assistant.js",
+      "status": 200,
+      "bytes": 25252,
+      "sha256": "e6ec2d146ffa1a98044973e37902d44196a390cbf00e9e3368f03c3a243c019a",
+      "matchesSource": true
+    },
+    {
+      "path": "atlas-catalog.js",
+      "status": 200,
+      "bytes": 60235,
+      "sha256": "c0fee3ba32c0a3136a8ba6772ec039973c7d96975e4f3fd33779bf97df533b02",
+      "matchesSource": true
+    },
+    {
+      "path": "atlas-scenes.js",
+      "status": 200,
+      "bytes": 24614,
+      "sha256": "4510721cb63cbc999b2f140c4828f238b669307628022b0f9b79071aaf166af6",
+      "matchesSource": true
+    },
+    {
+      "path": "banner-title.css",
+      "status": 200,
+      "bytes": 1272,
+      "sha256": "759aeb97a1f21ad1f716ad4780fbc69ba1eae6a9938f36beb2a7b354cabeb802",
+      "matchesSource": true
+    },
+    {
+      "path": "banner.js",
+      "status": 200,
+      "bytes": 3437,
+      "sha256": "f2a4cfe0f67c479d3bae64319a192651e130e64fa2ee75c6ceca532e4655bf1e",
+      "matchesSource": true
+    },
+    {
+      "path": "book-copy.js",
+      "status": 200,
+      "bytes": 6935,
+      "sha256": "819d9d0b1388692c66e712c7be42ae4836433b8f89172ff1f89c1713c7f43563",
+      "matchesSource": true
+    },
+    {
+      "path": "book-language.js",
+      "status": 200,
+      "bytes": 6586,
+      "sha256": "dc46c030882f657145e641960543dd6709785e5ce0b884008648533a5a739324",
+      "matchesSource": true
+    },
+    {
+      "path": "book-model.js",
+      "status": 200,
+      "bytes": 591,
+      "sha256": "6e5b1ae8a931b3437e06d8fb04afe930816de8c7d88bdf897a61edc788dff7c8",
+      "matchesSource": true
+    },
+    {
+      "path": "book-reader.js",
+      "status": 200,
+      "bytes": 17450,
+      "sha256": "246a80ce664075340b3351102c35dec305707092963b887d6ba97ea2665c70f9",
+      "matchesSource": true
+    },
+    {
+      "path": "book-touch.js",
+      "status": 200,
+      "bytes": 2937,
+      "sha256": "74a64d9d1fc666b656642c86c9832a29290db75f4623568cf8a4748551f470c3",
+      "matchesSource": true
+    },
+    {
+      "path": "books.css",
+      "status": 200,
+      "bytes": 10618,
+      "sha256": "0e4afc958ece88ac348d5ffd0f20948dc3c7fd0b984b45d586685d60180fa3e7",
+      "matchesSource": true
+    },
+    {
+      "path": "books.html",
+      "status": 200,
+      "bytes": 4260,
+      "sha256": "05e29513f68fb8bd8d317631a2e7512cbda687f102ce51ee0da2b0f28cb09682",
+      "matchesSource": true
+    },
+    {
+      "path": "boot.js",
+      "status": 200,
+      "bytes": 945,
+      "sha256": "e7236d4cf14480317f34d6cb80b0eb13155ec62dc1b2465cfea2b5ebffb636f1",
+      "matchesSource": true
+    },
+    {
+      "path": "camera-fit.js",
+      "status": 200,
+      "bytes": 4166,
+      "sha256": "4ea8c47873a605a9982ce2768e963c65e029321591036e9a1c02be0f9f5ad9ef",
+      "matchesSource": true
+    },
+    {
+      "path": "catalog-filters.js",
+      "status": 200,
+      "bytes": 1254,
+      "sha256": "81df7619fa7026d65d83613d99dd66ecc17cd29bbf8770c1627f7e87694c5d6e",
+      "matchesSource": true
+    },
+    {
+      "path": "catalog-search.js",
+      "status": 200,
+      "bytes": 2631,
+      "sha256": "e1e66f7c78914abd86aef92bcf1d996f0ad25777780dcb424ab1e91b40162b55",
+      "matchesSource": true
+    },
+    {
+      "path": "chat-images.js",
+      "status": 200,
+      "bytes": 3360,
+      "sha256": "7c29a777bcb26e892c8c1dd76a101a6c5238f7a298a1143c8550a555f1338fd5",
+      "matchesSource": true
+    },
+    {
+      "path": "cinematic.js",
+      "status": 200,
+      "bytes": 2784,
+      "sha256": "eac5177a9c25d7794f2d01a5642f78d37221f98aa1a7b20313b45f4e57dd1ab3",
+      "matchesSource": true
+    },
+    {
+      "path": "clip-player.js",
+      "status": 200,
+      "bytes": 5058,
+      "sha256": "293bde582edfa888df961201fa7a1cd7ee6253b341e693ddd3c2e49b4dc0f1f8",
+      "matchesSource": true
+    },
+    {
+      "path": "collision-layout.js",
+      "status": 200,
+      "bytes": 653,
+      "sha256": "5d39074752c5af3a0b3df313fd1c9bc1c5a19df722300b4770aed6e4dad72d36",
+      "matchesSource": true
+    },
+    {
+      "path": "coordinate-profile.js",
+      "status": 200,
+      "bytes": 3825,
+      "sha256": "fb57e904a1bc66ed6eec75d37a6fc29f3a39492bf62115dbb95fd3fbd6bcdf82",
+      "matchesSource": true
+    },
+    {
+      "path": "coordinates.js",
+      "status": 200,
+      "bytes": 4781,
+      "sha256": "f0b06f9f4213c161d75e1075b932121e70db12693086cc092fd26a1453a76f46",
+      "matchesSource": true
+    },
+    {
+      "path": "cosmos.js",
+      "status": 200,
+      "bytes": 6766,
+      "sha256": "6406deae1ea4bebe09f3074d125fdeaf0a9abce5751ca8fde3e815e6225ff050",
+      "matchesSource": true
+    },
+    {
+      "path": "curriculum.js",
+      "status": 200,
+      "bytes": 1804,
+      "sha256": "a03a5901c529283de8e3fad2e83210a453ea9fd1f779c91efb733e3332978f63",
+      "matchesSource": true
+    },
+    {
+      "path": "discovery-catalog.js",
+      "status": 200,
+      "bytes": 28686,
+      "sha256": "f16b9bb49cfb5ef7ef9d33144ee493610e427f5f604c9930b20c0893f1aeffa2",
+      "matchesSource": true
+    },
+    {
+      "path": "discovery-models.js",
+      "status": 200,
+      "bytes": 5049,
+      "sha256": "231ba1d9a1bbbba19e46c4b04f0f5ef1946940732c818f4324d588869cfe16d1",
+      "matchesSource": true
+    },
+    {
+      "path": "discovery-scenes.js",
+      "status": 200,
+      "bytes": 20993,
+      "sha256": "27d0a0de4ff6caa5fb93fefb0c5febefa9c6ef3c6d65e39227144e3b671c0dbf",
+      "matchesSource": true
+    },
+    {
+      "path": "electric-analysis.js",
+      "matchesSource": true,
+      "status": 200,
+      "bytes": 679,
+      "sha256": "a4f49d873ba23b81e91434483559b0c6d85a5394e534943e3b48a48a7e07e1f8",
+      "previousAttempts": [
+        {
+          "error": "HTTP Error 503: Service Unavailable",
+          "matchesSource": false
+        }
+      ]
+    },
+    {
+      "path": "english-study.js",
+      "status": 200,
+      "bytes": 13182,
+      "sha256": "21b397843868e8afdc3ccf925862e11f87f8312c0366c8eba2af92f633235189",
+      "matchesSource": true
+    },
+    {
+      "path": "expansion-catalog.js",
+      "status": 200,
+      "bytes": 142881,
+      "sha256": "848c5fc9d722c83d667100ee4544225cf0ebcb7f3920c8df9d2d628fac5ceb9c",
+      "matchesSource": true
+    },
+    {
+      "path": "expansion-scenes.js",
+      "status": 200,
+      "bytes": 39289,
+      "sha256": "89e3c40b21b4e5e3f89b64bf35b67ceb12c2aca9850877e55f15e557dc2ab342",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments.js",
+      "status": 200,
+      "bytes": 14738,
+      "sha256": "e0959b5185c34fce73170e7e63f51a914961d6eb85a72d0717a3be2fe357a66f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/ac.html",
+      "status": 200,
+      "bytes": 9698,
+      "sha256": "98338fdc7a5107923030bcc8e9272ab7fa79b1ec1619bcf165e980495c4bdda7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/ac_capacitance_bridge.html",
+      "status": 200,
+      "bytes": 10015,
+      "sha256": "80127a954b7a67bb8e340e4e0eadf8b3e6ac12078a17bf1ef6c61f4958b19c38",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/accelerating_pendulum.html",
+      "status": 200,
+      "bytes": 8698,
+      "sha256": "5d7f03949f4a3ce713de49e37e2a02c942a5ac1984a040612db571a8b84a2ded",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/acceleration.html",
+      "status": 200,
+      "bytes": 8084,
+      "sha256": "83b3d25fbc1fb257371b0a5a12d2dd883624623063999632e0d3ba0582cb85b0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/adiabatic.html",
+      "status": 200,
+      "bytes": 7333,
+      "sha256": "8d19878b63ccad6731c3e92dce6d8e65399a51fbc29943cc28c490bd88b0e8a1",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/airy_pattern.html",
+      "status": 200,
+      "bytes": 10507,
+      "sha256": "88bcd9a0fe5ceb83cedfea206f6be364b709597345140abaea535f7bcb5ddf22",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/alpha_recoil.html",
+      "status": 200,
+      "bytes": 9027,
+      "sha256": "c48b28adac77d05ac6cfbc93cc74d9af696e12d11c2bb791a43857e967ee89c8",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/ammeter_shunt.html",
+      "status": 200,
+      "bytes": 9050,
+      "sha256": "5c66c05223ea44c70559de8e4bd905ee38e7a0787969949c895145a9970b6a97",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/ampere_loop.html",
+      "status": 200,
+      "bytes": 5950,
+      "sha256": "55f1c5d9d49ba8b5c4930368bf350deda6d48c7d5efd9844142bdcae9ee7d9d5",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/angular_accel.html",
+      "status": 200,
+      "bytes": 6433,
+      "sha256": "a4915cfc6cdeb62ca307b965bb41a1da38e2dfa06de8637912d93e1aa1a4d13f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/angular_momentum.html",
+      "status": 200,
+      "bytes": 10868,
+      "sha256": "b7768d8bbd16645bb9f00b755999a9f5e9026c86f9979ef92bc65711bef6a1f6",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/apparent_depth.html",
+      "status": 200,
+      "bytes": 6248,
+      "sha256": "aded93244da1f51b13b28a6ef5a9482467b2d7d6fa3b4e771e653b18b2953226",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/atwood.html",
+      "status": 200,
+      "bytes": 8206,
+      "sha256": "b5fb4565dfe05318b1e2d041ecc5c1afbbe68ed7ba48adaef1d803a2c4a62b0c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/atwood_inertia.html",
+      "status": 200,
+      "bytes": 10046,
+      "sha256": "309f1dcab2658a9e95e8ed135fed58847a83215885dbd8e95fbf1a40cf5e9f88",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/average_speed.html",
+      "status": 200,
+      "bytes": 9405,
+      "sha256": "cd2484b5da39052578841c20d2d54986f57fe9ea23bce8e32068915442fa72c7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/ballistic_pendulum.html",
+      "status": 200,
+      "bytes": 8007,
+      "sha256": "1f892a60d0359f418b9698ae4af360c1a76107cd51b4c0473ec3233d75e773f9",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/banked_turn.html",
+      "status": 200,
+      "bytes": 6374,
+      "sha256": "31eda8bfc80b9d3497e2b49908be8be8eabf3b82dfc7508a5cf339c8d2d2acb4",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/base_isolation.html",
+      "status": 200,
+      "bytes": 12316,
+      "sha256": "f549b99a2bc7a15ced98af87040049bbfd2b116e750595a16b2491ec6078487a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/battery_parallel.html",
+      "status": 200,
+      "bytes": 7809,
+      "sha256": "ac7934b785eda41415c46b677486018f4404bdb6b491104ea0497116d8f8d50e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/battery_series.html",
+      "status": 200,
+      "bytes": 6773,
+      "sha256": "386dc3dc98068182b1a768c9f5f63a2303b10dfecd96873ef59b241ec36f95e8",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/bead_scattering.html",
+      "status": 200,
+      "bytes": 8386,
+      "sha256": "a192f5eaabf8c8ebdf2505e798af12e43eebdaf3fe42c30cbbd25675c6f7a0f7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/beam_supports.html",
+      "status": 200,
+      "bytes": 13228,
+      "sha256": "57f7e7d598c3346c1555751cea2fa634e65133dd6b372e9ecd64c1753a7b15c8",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/beat.html",
+      "status": 200,
+      "bytes": 7585,
+      "sha256": "37af35e67edb28188d1cece50aed8daea2fb7ab40849fd4c4585c0d42bbf3b2e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/binary_orbit.html",
+      "status": 200,
+      "bytes": 10803,
+      "sha256": "115dae0b080baafa2a9a3370fff5ef44ebb6fd6e76c2d4cc8bd6103a44c4f971",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/binding_energy.html",
+      "status": 200,
+      "bytes": 7732,
+      "sha256": "81b11b8dca72d53c43d04e2e6db4f4033306f260de0993c831640f34144f20f0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/boyle.html",
+      "status": 200,
+      "bytes": 9462,
+      "sha256": "717d4047cd0e704a2dd52559d0de78ba2e238cef63330f6e01a61c831eb2ac20",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/braking.html",
+      "status": 200,
+      "bytes": 9896,
+      "sha256": "4138ecb86c531b6d3ab96c08b2e843ec7a5b48d54be60e5aeef51fce01038ee7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/brayton_cycle.html",
+      "status": 200,
+      "bytes": 7139,
+      "sha256": "7dcc783d6dd163dbe150352048f197cd75706a8e9d387627396dbc8d92182e95",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/brewster.html",
+      "status": 200,
+      "bytes": 7235,
+      "sha256": "86c5f56f41552005ede095134d851caffc21ef64fe0f5fc801cb476f53413cb7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/bridge.html",
+      "status": 200,
+      "bytes": 10071,
+      "sha256": "668cab8eceb3dd13fc67df1db7a7dc512a577dc8d4f34efbf0a248b10f789663",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/bridge_rectifier.html",
+      "status": 200,
+      "bytes": 7248,
+      "sha256": "b6fb789dbab88e067e0d170040b671fff60fe5265da81ae576c7c18dda30cd28",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/brownian_motion.html",
+      "status": 200,
+      "bytes": 6854,
+      "sha256": "002bff678cefa2ef106e33390913afccc0f6d7930704b83dc32157f4e68f84ff",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/buoyancy.html",
+      "status": 200,
+      "bytes": 6346,
+      "sha256": "4ab82d68766d389725848cfbe13f527a60e9c414a5e2b7201dcb382e7f200d2a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/calorimetry.html",
+      "status": 200,
+      "bytes": 7724,
+      "sha256": "52b5cf06c15af0ccaccbea82bf0f1ed739df06f2c873a4b0b479631c44b7ce51",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/camera_defocus.html",
+      "status": 200,
+      "bytes": 9618,
+      "sha256": "2b16657e3b0fe765f392b6cb3c25564299e11fba4659aa15fcb1d5663cb02dd2",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/capacitor.html",
+      "status": 200,
+      "bytes": 8576,
+      "sha256": "8490ae9de9e931f510e38c9284c65dadd3dd4c9b11cdf608b1acd83b121f2344",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/capacitor_force.html",
+      "status": 200,
+      "bytes": 8092,
+      "sha256": "c703ceb049d9e0484cd631a76b6bd02c785bfafd3e6f8bb3b7610166ad6938f7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/capacitor_parallel.html",
+      "status": 200,
+      "bytes": 6305,
+      "sha256": "36cd21f658a493d26fe2a37c3e082999ea2275ce7a5b01c0a643d84b29d59196",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/capacitor_plate.html",
+      "status": 200,
+      "bytes": 6237,
+      "sha256": "3e336ca64bee994fcbbb47dda8ca0c6cc3a03fafb92bc5b0ebbeb065409af504",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/capacitor_series.html",
+      "status": 200,
+      "bytes": 8896,
+      "sha256": "32895c96535c70ad5239cbb6cb59f6c4a2cb821dea97325743eb827ad4f13ea2",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/capillary_rise.html",
+      "status": 200,
+      "bytes": 6162,
+      "sha256": "4b9d5ee36dae65230b9a3dd9aad771312f966343099fe7c589f9bf169659bba6",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/carnot.html",
+      "status": 200,
+      "bytes": 8029,
+      "sha256": "3ac3619f2a148701a102da32c3f0241cd6754676511968db2297339b24e23d8f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/charge_quantization.html",
+      "status": 200,
+      "bytes": 5010,
+      "sha256": "ecd1ff8e9e04afb6e4c3000fcff504009c0bb1851f2b7972d8a83ef3d5805d0e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/charge_sharing.html",
+      "status": 200,
+      "bytes": 10328,
+      "sha256": "badf86c38b503f617fe4bb769f3350f15f39e72cdbc74e6e8f83721e1c550480",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/charged_disk.html",
+      "status": 200,
+      "bytes": 10245,
+      "sha256": "3d5d9cf458074947860b80df883d54ff8e63e531acf2d58d51cd89e9edf57dc3",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/charged_plane.html",
+      "status": 200,
+      "bytes": 8796,
+      "sha256": "fcaf2658a6ae7d8440dfd13b1472521ec51a542f1a9aa6f51a7512a8a8e52c67",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/charged_ring.html",
+      "status": 200,
+      "bytes": 9136,
+      "sha256": "cba54ed4b4424f3dfd709d071dc381a87ef7e9747b3a9ecf655220041b63fa5e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/charged_rod.html",
+      "status": 200,
+      "bytes": 9403,
+      "sha256": "bc8a3603aaf4db6ad5dbb244b26eedb41209145a328c856f5b2c26241a047737",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/charged_solid_sphere.html",
+      "status": 200,
+      "bytes": 11769,
+      "sha256": "efb1d78ddaf740dbf9c802b05f2d52df28596771e251d76fa3b607e02dcaa946",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/chromatic_lens.html",
+      "status": 200,
+      "bytes": 9150,
+      "sha256": "a868b3057b5f349f0a93681d05b1fb14a2c606b7319421d3b0bd4816aee57c29",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/circular.html",
+      "status": 200,
+      "bytes": 8781,
+      "sha256": "1c0073a793c6d123695a6a8f5a44ee9ef17f5d8679f41ef6184d0730a4d1a9ea",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/closed_pipe.html",
+      "status": 200,
+      "bytes": 6786,
+      "sha256": "1318901c8550b1ab90419a42db6f84dfdbae66594506a28e73c34c9716d2c587",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/coaxial_capacitor.html",
+      "status": 200,
+      "bytes": 10807,
+      "sha256": "cb6ae0cad3d04393edf70c78a326886d96087119011fcc8e466a052031fa4979",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/coil_entering_field.html",
+      "status": 200,
+      "bytes": 6877,
+      "sha256": "b9f0101d04ec12c84ad20b08dc074f45a36b8ec6f0852f00569a78e99e946f63",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/collision.html",
+      "status": 200,
+      "bytes": 8835,
+      "sha256": "8b63477baa73d92cc208e2d38a6027f8ad1d256d2d5f85fd1ac7e2caf523b520",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/collision_2d.html",
+      "status": 200,
+      "bytes": 9433,
+      "sha256": "d37f8cf20d5cf8251658e53c244dd7d97dbe7ec1a9c4acd746aba25cd0ddf6b7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/collision_spring.html",
+      "status": 200,
+      "bytes": 8144,
+      "sha256": "f4cdac29108614262a5ec151956e2acb1cadde024e179aa2f1d05ddbe62e0fe3",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/communicating.html",
+      "status": 200,
+      "bytes": 7250,
+      "sha256": "533e4d60979bbbd04c02168f11337b0758f480a1e994e90bfb5c99fdc333d757",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/compass_coil.html",
+      "status": 200,
+      "bytes": 8749,
+      "sha256": "ad442e4219de215176c7365435cf61a1388682b8ee3a7257e3a07b9d63a3debe",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/compton_scattering.html",
+      "status": 200,
+      "bytes": 6881,
+      "sha256": "21f4232b082277e93a52d742ab2242133537cb732a790c622c2a90381e390e08",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/conducting_shell.html",
+      "status": 200,
+      "bytes": 8607,
+      "sha256": "1ec059be23f22246ea45add8fc73752b1d8e56bbb999e68a49bbc4b0dbd8e2e8",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/connected_spheres.html",
+      "status": 200,
+      "bytes": 10909,
+      "sha256": "1ea85c7a4167324513cdcc2a314ecb6a03023c6f35913949a2c0679a358bf2ff",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/contact_carts.html",
+      "status": 200,
+      "bytes": 7907,
+      "sha256": "6418f69a374ce07b1805eb87f627576a1b2560a65d93b3d29ed4a4d209e4b68e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/convection_radiation.html",
+      "status": 200,
+      "bytes": 9575,
+      "sha256": "667800bace13a1cbb598cf26c25c76a37b1e9c8b6ca2e6db49e287ebd8c40dad",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/coupled_pendulums.html",
+      "status": 200,
+      "bytes": 9744,
+      "sha256": "f099912b98501eb16f5fc23af7d2e98764566195572f400f953619811c834ca2",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/cyclotron.html",
+      "status": 200,
+      "bytes": 9136,
+      "sha256": "ceb72a6af865d05ce5d061b0a42694af4db0389340011ab8e8f1e1143c0e84de",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/damped.html",
+      "status": 200,
+      "bytes": 6669,
+      "sha256": "f342f1d2678ef608b8ca53e44231ffcff1c074c5d296a4233e828e653b1a5e9c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/debroglie.html",
+      "status": 200,
+      "bytes": 7213,
+      "sha256": "1a4d245598a0f3c1b53134738ddd46fa2e53d79f360f2a213279115f7bee7967",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/decay.html",
+      "status": 200,
+      "bytes": 7286,
+      "sha256": "03184defc6f838467ae0362891a4470f75ac6ded2fcb73cf57c924931ba1f455",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/decay_chain.html",
+      "status": 200,
+      "bytes": 11401,
+      "sha256": "da0325fbb7131d7ab2bdf36eee4f6ea84f165746904eaff3f3a746717dda4f97",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/dielectric.html",
+      "status": 200,
+      "bytes": 8855,
+      "sha256": "ab4ad17960ca539a71a04b586f261afc80b95eed1ca9fee8e42999f4d6d8f8b7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/diesel_cycle.html",
+      "status": 200,
+      "bytes": 7888,
+      "sha256": "3dc2c3069a6e704b285ac9f5188cb4fe142b72bd7e4a5afd66193ef7322ef4f3",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/diffraction.html",
+      "status": 200,
+      "bytes": 9430,
+      "sha256": "037ac23f9f50807cf1c4a20d77d2ad8399ef0f96c1bf8904db9175718ebcd6df",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/diode_clipper.html",
+      "status": 200,
+      "bytes": 7463,
+      "sha256": "677258130ac67cf208c395556d02f190a38fdd9edd4ea902802df51747da7910",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/diode_model.html",
+      "status": 200,
+      "bytes": 7092,
+      "sha256": "29a5e3ee57ead5b3cc4356da7926827518bc9f2575cfc8b5e8618c88d6837416",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/dipole_torque.html",
+      "status": 200,
+      "bytes": 6229,
+      "sha256": "169119b69167a804ea94ed1ed9a1e6709fb5be8ea09ac7fb7ae9415ef00344b4",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/dispersive_packet.html",
+      "status": 200,
+      "bytes": 10203,
+      "sha256": "1dbf7ada161eecf1ca04953efd7787e9f3be7221474f2dbd1442e7b85f5a38a4",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/doppler_observer.html",
+      "status": 200,
+      "bytes": 7426,
+      "sha256": "6281a4f5a0648cc785581c9860c192674836db14440a736e445a1b574a4e88fb",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/doppler_source.html",
+      "status": 200,
+      "bytes": 7073,
+      "sha256": "0409dc1b1889048c612cfcde5cba1faf93e47ce635ffbdea4532ad00f15d7696",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/double_incline.html",
+      "status": 200,
+      "bytes": 8844,
+      "sha256": "34b63e3b0f7cb37475d6465f550a9ee0a3cd3f2f59e4060a3ba521bef908249e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/drag_fall.html",
+      "status": 200,
+      "bytes": 7714,
+      "sha256": "438a3c87049b6cad3aa1685d1f98d5ce76972a25a533dffb54a34c65b78610f1",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/drift.html",
+      "status": 200,
+      "bytes": 5591,
+      "sha256": "e493fa8713e5804bd4e19ca7d5618dd6b7120432ec12f541e55e2e47a87ae4af",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/duffing.html",
+      "status": 200,
+      "bytes": 7654,
+      "sha256": "14858583a8bd04f5bd0054565b700a399589a3a2f664bc37a72625eaccf19bbf",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/elastic_modulus.html",
+      "status": 200,
+      "bytes": 5839,
+      "sha256": "d54efd964b99bc0ea7b8050c3955c38ca969f15dd3e38938a181fd6aff960e6c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/electric.html",
+      "status": 200,
+      "bytes": 16531,
+      "sha256": "c579a130652496935577f5e496addb5f8b2106786d871b68a60fd523152ed5e0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/electric_turning.html",
+      "status": 200,
+      "bytes": 10435,
+      "sha256": "5c45de871c4bf99eb1200b003f98510dbbde0df6c8489c95c626ddfdc5409336",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/electric_work_paths.html",
+      "status": 200,
+      "bytes": 7703,
+      "sha256": "16dd2d8e4aa9b23a89b48aef57c4f43f4199a89ade24e1661c7b87f72777508c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/electron_bragg.html",
+      "status": 200,
+      "bytes": 9373,
+      "sha256": "0d94dcf89ce1956e9d851becb9dc9fb3386f3afef7497cbcebd1748de26ad34a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/elevator.html",
+      "status": 200,
+      "bytes": 5300,
+      "sha256": "458731c17bd2d8fed524a7273bdd9573c261be05320185375cc42460302c9032",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/elliptic_orbit.html",
+      "status": 200,
+      "bytes": 10458,
+      "sha256": "09a3894feb7262e66f1b2c2ba9318a209c33dd1b9385aae58ec12584de4263f3",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/em_plane_wave.html",
+      "status": 200,
+      "bytes": 8960,
+      "sha256": "3bdfc0e48db767ffdf3c1560b12d6c2e4385d96856852c4d0f0526392132f6cc",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/emf_compensation.html",
+      "status": 200,
+      "bytes": 9244,
+      "sha256": "470ab2822315274db354f920be1376b0871d3a5b35915b93296afcdf4b3015b7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/energy.html",
+      "status": 200,
+      "bytes": 8454,
+      "sha256": "3d3f0579ca6f775e7994a393c060360af7441cffdece2d56e8505e51ae75fe07",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/equipotential_map.html",
+      "status": 200,
+      "bytes": 9595,
+      "sha256": "7464c930043f2d13a8ccb3f39922dce756be1fa655eca4875250e22b0679b2c3",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/escape_speed.html",
+      "status": 200,
+      "bytes": 8250,
+      "sha256": "b30290aa1725357e2d61dc85b8a98bf44b7d745e6716d8f69262efb7008c75b2",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/eye_correction.html",
+      "status": 200,
+      "bytes": 13529,
+      "sha256": "63072b76f9db0636890d963a0d3d42bf8705b425e6a18c6d0ac050463d466ed4",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/fabry_perot.html",
+      "status": 200,
+      "bytes": 11184,
+      "sha256": "009eb13f1d727bb029f8c71eccafa76473a1d99b5e5a935ebd28c9b9daba4027",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/faraday_disk.html",
+      "status": 200,
+      "bytes": 8072,
+      "sha256": "4a1baf8e86d1e34a90ef7b102c513ed1469af04648b17595a1acf3f5e8ee0809",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/fiber_acceptance.html",
+      "status": 200,
+      "bytes": 8569,
+      "sha256": "d2fa25d13c5e580a350c1d627f33e0b528d50125e0e218ac93960e38f7b8e05a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/finite_double_slit.html",
+      "status": 200,
+      "bytes": 7486,
+      "sha256": "f553a0a344009f263827910d4f959138f29cd809da657a59c4e2a733aa839a98",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/finite_solenoid.html",
+      "status": 200,
+      "bytes": 13294,
+      "sha256": "6f86e79f2aa96ccef1ed06d89873965ce81ae44fbf7c7b05d8f92cb0f16e3a4f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/firstlaw.html",
+      "status": 200,
+      "bytes": 6831,
+      "sha256": "77458f29ab873ddc789eb411afd5c605908ada28cff924d2b42bdf3b68e3c1e5",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/flux_angle.html",
+      "status": 200,
+      "bytes": 5167,
+      "sha256": "34924ed0101c5c64ffb4e6fb9f2efb81a180f753ea40700163ed7520279ea41b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/flyback_diode.html",
+      "status": 200,
+      "bytes": 7921,
+      "sha256": "15962c92db93aca414abf6bacb3cf0c9154bd1e67d0cdcfd819b42a3e45e38f0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/franck_hertz.html",
+      "status": 200,
+      "bytes": 8952,
+      "sha256": "b205518f0f6fc41e7754487281d02f78d6b76412eadaa5e74afa89bb76f59b00",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/free_wedge.html",
+      "status": 200,
+      "bytes": 7103,
+      "sha256": "65069e9e0cf22999307e26642dfdd9ae3163a714cec34beea408ab8267682c9b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/freefall.html",
+      "status": 200,
+      "bytes": 7035,
+      "sha256": "c5886ef347c23d74b1891b18adc8ed976c0309d83d4e4d79e479b1c88d4119c1",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/friction.html",
+      "status": 200,
+      "bytes": 7572,
+      "sha256": "d7b9d27e6ef5b6bc44bd7f0af6fe205ab16731b3af4c69db9b6c83d715902c42",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/fringe_visibility.html",
+      "status": 200,
+      "bytes": 13217,
+      "sha256": "82670838cc15a5ed1685b85c33cecff283ef10cf1b0c66407f2740c80a57d91b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/gamma_attenuation.html",
+      "status": 200,
+      "bytes": 7776,
+      "sha256": "d328ccb459fdcdb7bc4cdce253e9019a81edfdd037a0371f52f5e3dd6bb1b9e0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/gas.html",
+      "status": 200,
+      "bytes": 8695,
+      "sha256": "3e1122be8769247951f1a0ccab62a1186202dbcf48d0409e244ece464e51e4d7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/grating.html",
+      "status": 200,
+      "bytes": 5010,
+      "sha256": "b58418f2f296bdf139aa54b22f0702cca3d122c7aca86f203e08a788dade7f82",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/grating_resolution.html",
+      "status": 200,
+      "bytes": 6260,
+      "sha256": "470e48fed8d15e7b134101fa4fea3866dc162b189765731ec9413868a38d7855",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/gravitational_force.html",
+      "status": 200,
+      "bytes": 6137,
+      "sha256": "18d08a452e1c813a6414767d0f7e1397b76e67e6226d7406db6c7f3751fd9000",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/gyroscope.html",
+      "status": 200,
+      "bytes": 7874,
+      "sha256": "525b6721892e87ed854c4feb4d5d9988877f5872f281b6e184f1d6039d2256b9",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/half_rectifier.html",
+      "status": 200,
+      "bytes": 7058,
+      "sha256": "c4772eb55d68c6a5e869019ca69d39912eb76461a190b45169c2e918ee1c5784",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/hall_voltage.html",
+      "status": 200,
+      "bytes": 6766,
+      "sha256": "b58aad22e805a50cab85389eb36236c31f0e2776f74c20d374c40a9a7e66eca4",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/harmonic_timbre.html",
+      "status": 200,
+      "bytes": 7452,
+      "sha256": "1c71306feb8f6407ca7b4c79dcdbfedb2548beab8a2c32d2d7a25ad975a5c878",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/heattransfer.html",
+      "status": 200,
+      "bytes": 7954,
+      "sha256": "39f336032ad8c5d45abbac605e95594442831f4810c427bd7605924311615dea",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/helmholtz.html",
+      "status": 200,
+      "bytes": 10544,
+      "sha256": "5c856c7104bbeb5e48657905c1cafaec49af39555c37eb5cb7184917693699bb",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/helmholtz_coils.html",
+      "status": 200,
+      "bytes": 10942,
+      "sha256": "7ff3495c609b5254173af6b29cc7c2e15b0d593add5a83ee81952a1c40c788bc",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/hohmann.html",
+      "status": 200,
+      "bytes": 12820,
+      "sha256": "117a8b84965ade0ba8e571c176b346792cc1189851fd3ab682f0a6f8567e0452",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/hooke.html",
+      "status": 200,
+      "bytes": 4342,
+      "sha256": "f74ebb4219f77fa66abe2d239f7c7e2ed94359fe2202e80ea7c798c0cdf3a126",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/horizontal.html",
+      "status": 200,
+      "bytes": 7557,
+      "sha256": "585f88a952fc36a0526275de23b895e011a2938544682dcffcb7223c53d15649",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/hydraulic_press.html",
+      "status": 200,
+      "bytes": 8700,
+      "sha256": "ea36dcafad315375593f11f2313720d1ec2a7fb3673b00c0b2fced2d065fb7d6",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/hydrogen_lines.html",
+      "status": 200,
+      "bytes": 7028,
+      "sha256": "babf0a07fd8ec25a8d95baebdcace63c7488efa588bc2439940fd051a08b12da",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/impulse.html",
+      "status": 200,
+      "bytes": 4556,
+      "sha256": "430cd68ee8a18529d1d815ad62e0e5568b89eec149df9c831335e7b489a1d978",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/incline.html",
+      "status": 200,
+      "bytes": 5227,
+      "sha256": "e08f83cdd3b6ed58fca6465f946beed6eab426eda2cf6b6cacc94219008fc6e9",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/index.html",
+      "status": 200,
+      "bytes": 47308,
+      "sha256": "8d4800135d98ed802c627ac4940d0964a5a40f7308c60b8c2edb11de871de1bb",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/induction.html",
+      "status": 200,
+      "bytes": 6611,
+      "sha256": "00064370ac4b7aa919474fe46b7913a9b64d68b1ff9159976cd29427c5723221",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/inductor_energy.html",
+      "status": 200,
+      "bytes": 6062,
+      "sha256": "a445f1679d915d50900be0efe84a399bbbc6fb74bc1d78c2c41ce812ca78e9ac",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/intensity_distance.html",
+      "status": 200,
+      "bytes": 6397,
+      "sha256": "a9279b2e62c9a11172c4372182e00b832e213a1a032b7f02e43ff9b5fbbdedd4",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/interference.html",
+      "status": 200,
+      "bytes": 5700,
+      "sha256": "37a4d69777df4c81b4e37e9cbad37a2235fa98cca45ee174741917f66dcd16c5",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/internalresistance.html",
+      "status": 200,
+      "bytes": 6640,
+      "sha256": "59923db9b30074ac68c6d6ba27262aa88a392a571fa433b1fdbb909e1f9ec332",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/inverse_square_light.html",
+      "status": 200,
+      "bytes": 6180,
+      "sha256": "b8f1671676f2d22b80377df9e26d2192e50e636858aa9416be937cc984ea36ea",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/isobaric.html",
+      "status": 200,
+      "bytes": 6957,
+      "sha256": "b268f6708bd57593054363eaddd9bdb85ff933124d6c9cd92b56362abc6908bf",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/isochoric.html",
+      "status": 200,
+      "bytes": 6921,
+      "sha256": "b8785bf7c5adbd59f7d8da9210100c6d70697f28e011b1e875adc20903bc9384",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/isolated_dielectric.html",
+      "status": 200,
+      "bytes": 10508,
+      "sha256": "f28275c103b1a3d99577dd67537a100c711863814e0f5645c39ff4d5cff1a877",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/joule.html",
+      "status": 200,
+      "bytes": 6614,
+      "sha256": "a93918e12c61004b09a8b6d81d4041956ea51283f7d2cafb78842dbe0d9790be",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/kelvin_four_wire.html",
+      "status": 200,
+      "bytes": 12746,
+      "sha256": "cba652e2f1a5ed301479a726ae5ecf6f79cc135502022182b0ceaf145f287bfd",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/kepler.html",
+      "status": 200,
+      "bytes": 8303,
+      "sha256": "523b63120f9f98177d74e63a77b52d29e16a917239764d79438661d93f4960fa",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/kinetic.html",
+      "status": 200,
+      "bytes": 10487,
+      "sha256": "1426d1d220f7c1676018128386c34613a49bcfdbed568854b6d7a107ab3404b0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/kirchhoff_loop.html",
+      "status": 200,
+      "bytes": 7331,
+      "sha256": "3fa460d97f67364ef6c5912836dd7a27733855a4c9f99376c29e94f90ce7568f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/ladder_balance.html",
+      "status": 200,
+      "bytes": 11004,
+      "sha256": "6bb5853818aa6d5bc966d66de0e2de430ab2026ebdb13b67ced74bdfff5e002a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/large_pendulum.html",
+      "status": 200,
+      "bytes": 9722,
+      "sha256": "ead3a0d524f5d14b9eacab81f172122ea4fa4f1e2617502f7dc8b1b44129963d",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/layered_dielectric.html",
+      "status": 200,
+      "bytes": 9343,
+      "sha256": "c9d78e95f915239f57ed4737e60ab8067efa497b8a25dd1771b6c97f6ade3a71",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/layered_wall.html",
+      "status": 200,
+      "bytes": 12056,
+      "sha256": "73355f6e519ddcc3de57b7a451048c6b8081e0229c421399cd5be57366de5021",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/lc_oscillator.html",
+      "status": 200,
+      "bytes": 11189,
+      "sha256": "940c5927c7b3148b77ffa037ff02cf44b861679f1629448e5654defc773b4822",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/lens.html",
+      "status": 200,
+      "bytes": 9946,
+      "sha256": "f43a5da6be4f00ca99f759aade374380d6220567256d1adf6f07ddee5f5610e0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/lens_power.html",
+      "status": 200,
+      "bytes": 7898,
+      "sha256": "2f06b5c10f99aa8a484d9d247cf3b4510e98b1c6b9ab13e469d0159ced028b95",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/lenses_contact.html",
+      "status": 200,
+      "bytes": 6882,
+      "sha256": "04ca952fbc331f578a12befe5795a8d3c6d3991d966fe67d41a25e18e717cfff",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/lever.html",
+      "status": 200,
+      "bytes": 7121,
+      "sha256": "732ed139577576c7494dd94b75732fdafe0af80c9310d7d392f06666f86aa9d2",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/loop_axis.html",
+      "status": 200,
+      "bytes": 10096,
+      "sha256": "7681649301a0d94bd397e60a21679a0681e0a79a917edf16f56434e4202bd4ed",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/lorentz.html",
+      "status": 200,
+      "bytes": 6633,
+      "sha256": "1e53f4ff31a96e7f2aca475c500e20a8e5fc75e65545bdd7a7edc63a8e20d147",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/mach_cone.html",
+      "status": 200,
+      "bytes": 8780,
+      "sha256": "0799b52b799efac43ab419888837414809f7ff5b4d4610d14a89297fca707d5b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/magnetic.html",
+      "status": 200,
+      "bytes": 4876,
+      "sha256": "342668692aa6e4483dbe013324f382fabef432c33c8d3cca86c7ee225670d180",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/magnetic_braking.html",
+      "status": 200,
+      "bytes": 9494,
+      "sha256": "b095b210cc24bc0f36930cca7495fda90bbbc052e487e4af6369e2a255827bdf",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/magnetic_helix.html",
+      "status": 200,
+      "bytes": 8692,
+      "sha256": "94a879af6453de4014aa176c93791e65068c6d3f81f09e4c4b74d88c44a88ad8",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/magnifier.html",
+      "status": 200,
+      "bytes": 6275,
+      "sha256": "9c8254743b891504ce2f7632f716fa371440a7af7f2e8954900922acc002d297",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/mass_spectrometer.html",
+      "status": 200,
+      "bytes": 9956,
+      "sha256": "71078774572e47d12f38156a0f1cfd96ae5a96706cb8cc7e8d9d369e29642097",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/max_power.html",
+      "status": 200,
+      "bytes": 7636,
+      "sha256": "d4d426bbe6b63aac8a92705c0e5d9314ed19eab3b669ad7ba79103d9445d8504",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/maxwell_distribution.html",
+      "status": 200,
+      "bytes": 10756,
+      "sha256": "6d22a9067aa04e0aa2e3d59955b2dcceb835a3bdbef4984b6c1ed4780ceb1e6e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/metacentric.html",
+      "status": 200,
+      "bytes": 7961,
+      "sha256": "94ce3de07ce1565d0251678a12be2157175cb6b1909c61e96e7bf4ae779fd12e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/meter_loading.html",
+      "status": 200,
+      "bytes": 6383,
+      "sha256": "1cd4eca507531b8bb4b8baa6c11012266fb9de2b2db98656c1d4d705d9d2bca1",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/michelson.html",
+      "status": 200,
+      "bytes": 8813,
+      "sha256": "b28e160ba7853c79fb6e28d20d73e317d4f8f3783d7578c646a61cc2387dea6e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/microscope.html",
+      "status": 200,
+      "bytes": 7194,
+      "sha256": "681815efb3642703415fda3f4c5a015ba724a003c9cdee720caa756918a37156",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/mirror.html",
+      "status": 200,
+      "bytes": 7957,
+      "sha256": "0f085294823d3e0101d9a72b1e2954dfe08fdd17c66f5d7da8a0e5180927d1b0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/mirror_rotation.html",
+      "status": 200,
+      "bytes": 5718,
+      "sha256": "e7ad5eaff5dca072097fc577ebd42fb6ad4838a5fd28ae982eac811cf998fbf0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/moving_wall.html",
+      "status": 200,
+      "bytes": 7809,
+      "sha256": "4ce2092abd8ccd6b64c40ca912fe48ef0bd642ea94bb5a67491813d147111ca0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/mutual_induction.html",
+      "status": 200,
+      "bytes": 10277,
+      "sha256": "f565d8f7752cb14cf1829474abcb5f95dea024a87b02b1d1470eb2673bf853da",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/newton.html",
+      "status": 200,
+      "bytes": 5059,
+      "sha256": "261cf2fac21a307fbd9868291e3c5aeba28fbf5168dfe7081f458a11f4aaa613",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/newton_cooling.html",
+      "status": 200,
+      "bytes": 8096,
+      "sha256": "01ea3d4424eda7ae379ffeee824dd2bbceb34dbc0eab9aa816e470d1c2fe0e8b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/newton_cradle.html",
+      "status": 200,
+      "bytes": 9974,
+      "sha256": "5ae874ecd645500d202cf436fd2834283090064ac7330e4ee4d8885cf9383b5a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/newton_rings.html",
+      "status": 200,
+      "bytes": 8822,
+      "sha256": "aaa9718e8dbe153a77717fac3adbb1c0e7840c6ca74bdf103ae29187227b65e9",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/ohm.html",
+      "status": 200,
+      "bytes": 8545,
+      "sha256": "e78d1d37de26430914e875c23edb843a6c8d9d68e80ecb12c6ddd1d109e99990",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/open_pipe.html",
+      "status": 200,
+      "bytes": 6414,
+      "sha256": "8a3cade7a5cc32c3728bdab8051bf638e83cccc89510eb3077ab96793ced49f1",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/orbit.html",
+      "status": 200,
+      "bytes": 10326,
+      "sha256": "55ab854140d46e643cc2380f5e0e6e9bf7e03a09246a83985b7262a6660aa857",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/oscillation.html",
+      "status": 200,
+      "bytes": 7238,
+      "sha256": "645fc3217873bc42a9813064bcc46900080ed3ba0e75d12a9a734858780719f0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/oscillator_energy.html",
+      "status": 200,
+      "bytes": 7054,
+      "sha256": "bb8ea8892cacdadaf83aae8dd6673b798b162955da941336df17bf826e3cc938",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/otto_cycle.html",
+      "status": 200,
+      "bytes": 8931,
+      "sha256": "bcea28fc33a1b0043667d50a63a2d6e311eb64481a02c089496b07f115517589",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/parallel.html",
+      "status": 200,
+      "bytes": 10953,
+      "sha256": "1f736a325d594381afa0fc7f651af5203d8907dde02c32e9bef4cd1b1ba531cc",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/parametric_oscillation.html",
+      "status": 200,
+      "bytes": 8882,
+      "sha256": "e4216163b206b8c1fdcfd38aebe81a3fa031611e72e1ad9015d5eaf4132b6024",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/pendulum.html",
+      "status": 200,
+      "bytes": 6469,
+      "sha256": "63a0699f7be3c1d902919b027b34e2a5a74b3ed6c3ba0eb82bc9b827f57134b0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/phase_difference.html",
+      "status": 200,
+      "bytes": 5927,
+      "sha256": "a3554211b3ff99b13e8bdbac30df350d5ef695005ccb39bd34fb0c013be1482b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/phasechange.html",
+      "status": 200,
+      "bytes": 6465,
+      "sha256": "c3d2a37f72d5ddec7bb6032938e0d91bf45ffeda0fef102bae5cf6422084150a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/photoelasticity.html",
+      "status": 200,
+      "bytes": 10820,
+      "sha256": "130e83f9575760ec1d5e8c7f87e4515ae39a8d143f5af82ab61d1412f2be3850",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/photoelectric.html",
+      "status": 200,
+      "bytes": 6831,
+      "sha256": "d96450d896bac2e6f5c6f657680c74390d31c45f51485a3e094069e051f46aef",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/physical_pendulum.html",
+      "status": 200,
+      "bytes": 8812,
+      "sha256": "f22a2efa97102068213a0fd228d6ac44c2a4c7c4d168be5a09340f2818df3cde",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/pinhole.html",
+      "status": 200,
+      "bytes": 7315,
+      "sha256": "3bb0483cfc454b547be512f5e13203e74b9a5a1d7e755702f8c9e9776734992e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/poiseuille.html",
+      "status": 200,
+      "bytes": 9518,
+      "sha256": "dcb1f99741e72b518a64290135f4dc88466e6bf2e73a09f1f610274a9d9d9abc",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/poisson_counting.html",
+      "status": 200,
+      "bytes": 8297,
+      "sha256": "31f3b146ac1b930fb73a2ac4857c3e08f7e8a695a2a63f13fdda0fff837b283c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/polarization.html",
+      "status": 200,
+      "bytes": 5760,
+      "sha256": "fa3208e8ae21624013c4aec5651fce5a53790044ead2121644b0afdad9a356b0",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/potential_pair.html",
+      "status": 200,
+      "bytes": 8004,
+      "sha256": "270f6f07b4de4623422a778c38d840661f335ca37f4273f818de597b1c306f63",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/potential_point.html",
+      "status": 200,
+      "bytes": 8638,
+      "sha256": "fd1362e741bfbbfc5ebd7f57f6d1350ebdfaad6d53d6f2f3ab758dc9727eec80",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/potentiometer.html",
+      "status": 200,
+      "bytes": 6583,
+      "sha256": "6fec0e388a2e4099193c90992433035fc0b8b37203f42708108a337b422db033",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/power_factor.html",
+      "status": 200,
+      "bytes": 9461,
+      "sha256": "5fc2c0c3542737faba3d11dfa9fbd719c2a4ff2c116d35814891d7467add63b9",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/poynting_energy.html",
+      "status": 200,
+      "bytes": 10007,
+      "sha256": "c5253bfb917efa01d349985cdcedf3a7d1ac6fd42950ddf5ace1227a49206fc6",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/pressure.html",
+      "status": 200,
+      "bytes": 5270,
+      "sha256": "d2f42c87b08115a18519627a2e1d568208da003ebccc047983f01735f5d9fcd1",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/prism.html",
+      "status": 200,
+      "bytes": 7494,
+      "sha256": "d3ace5196ec20534572d12134c537ea72d5950b26a9ca28ff6df514173c8f813",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/projectile.html",
+      "status": 200,
+      "bytes": 6208,
+      "sha256": "99c7c961facd0ebfd04bd57cb46d4cf9d58a3f49c7b32dae13ffd01fba26495f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/pulley.html",
+      "status": 200,
+      "bytes": 7538,
+      "sha256": "0488c81d3fbf1b06029051951bbbb63a0e86b82cd27656f8bb59ad0b49e9929c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/quantum_box.html",
+      "status": 200,
+      "bytes": 11783,
+      "sha256": "9301d70ce9a30fc36564437ae4f53624ee253d65a12e755de0d9be4e366a042f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/radiation_pressure.html",
+      "status": 200,
+      "bytes": 7027,
+      "sha256": "89184b10646946cae19feb1f6d98e2e97a9c9d21577241a8b639cc2f043bf2ef",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/radiative_balance.html",
+      "status": 200,
+      "bytes": 7125,
+      "sha256": "3ecefbabafe1e801e628193b2951bf06beb331c6399476807b7d3776f352244b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/ray_slab.html",
+      "status": 200,
+      "bytes": 6183,
+      "sha256": "801816c3953a8679d8be5c2af195d29bdc423d820d173042e7cb4a7455d50fde",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rc_highpass.html",
+      "status": 200,
+      "bytes": 6669,
+      "sha256": "cbb0388d908d73b9b5dbca930589f3d0c8d5279e32f49edd08d759a1cbbbd805",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rc_lowpass.html",
+      "status": 200,
+      "bytes": 6179,
+      "sha256": "d576aca89f0359f9c27dcbe8dac6bef412a9d45bd5dcfd34ef2b8b6e7622adfb",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rc_meter_loading.html",
+      "status": 200,
+      "bytes": 9626,
+      "sha256": "cbe525a882797b93be5ee646ede1580a0a540e029a62e5e211d08383f7c6847c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rc_square.html",
+      "status": 200,
+      "bytes": 11339,
+      "sha256": "1e736ee79ac98465d6462c95168cc69d0176e00e93efb1fb1e6dd00f0808f5bb",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/reaction_threshold.html",
+      "status": 200,
+      "bytes": 9927,
+      "sha256": "40954ab33c7277a15f1a2e5d9e0d09a38324f1b6b724e75ce6073c4a1215c5df",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rectifier_filter.html",
+      "status": 200,
+      "bytes": 9423,
+      "sha256": "ff083bd4e74998cf73b6acb975436ab53883ca452f314f22210b655beef6d1c2",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/reflection.html",
+      "status": 200,
+      "bytes": 4432,
+      "sha256": "3ea37395087c91a934dd63e86a147d54f0ed6c17bd73dc487bf49b56b9dcf883",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/reflection_wave.html",
+      "status": 200,
+      "bytes": 6285,
+      "sha256": "95bf4f3bcdb2828e97f627a46664115da67475ffc4865984e78fbbe5f467010a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/refraction.html",
+      "status": 200,
+      "bytes": 6054,
+      "sha256": "73d0b5b8c83a47fbef1cd7a3677043d77433fcf054b513e3a83c205de7709a9c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/refrigerator.html",
+      "status": 200,
+      "bytes": 10800,
+      "sha256": "4e03c6bca6337e72eadbc1b57a1443385350f0a5e5450dc8cffefee2e565436c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/relative_motion.html",
+      "status": 200,
+      "bytes": 8370,
+      "sha256": "34f9eade2b36fc1c54b4ee830b3a96871621e76cf32d5b3230da3bf609417dcd",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/resistivity.html",
+      "status": 200,
+      "bytes": 5485,
+      "sha256": "dc660361670b84dd7236af151840724bbc154858cac4fab376ce04dd9071e19f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/resistor_ladder.html",
+      "status": 200,
+      "bytes": 9130,
+      "sha256": "ea580cd2831b501bc75cbe0866054affaf9b109c4fec920d58cb4748f83f9834",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/resolving_power.html",
+      "status": 200,
+      "bytes": 6097,
+      "sha256": "108024c87eaecf2cd1598f8cd29aab3ce07cc42367a1e206c0c27636067444e8",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/resonance.html",
+      "status": 200,
+      "bytes": 10020,
+      "sha256": "6b5a19917343492099b6e1d090ecf09f2f874d80e34cfa594ae02ba60db22dd4",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/resonance_power.html",
+      "status": 200,
+      "bytes": 13003,
+      "sha256": "91d238d59598a26424cabaae5bf73deaa76fe071cd5b018e759813c44c7eef63",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rl_response.html",
+      "status": 200,
+      "bytes": 7674,
+      "sha256": "577ea5f5ab01c7321fe0c22c5bc16a5c5ee41b507f46f59a54e894b2399ce146",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rlc_bandwidth.html",
+      "status": 200,
+      "bytes": 8137,
+      "sha256": "06d453d64d228547d852c661547c0ff664279a8f9124c723f88868b70aadc15a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rlc_free.html",
+      "status": 200,
+      "bytes": 12737,
+      "sha256": "b65d2d6d24e8995092f61a8f652e3cadddbba4c3db785289c5b9d86a4eedcbef",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rlc_resonance.html",
+      "status": 200,
+      "bytes": 8632,
+      "sha256": "a4e75433fc5f1871ebeb23c199705d880e006e348db9dda0e4127dcc4bc6796a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rolling.html",
+      "status": 200,
+      "bytes": 8353,
+      "sha256": "3bee34373c8ac93dac8e5e56c61fdc187f3d213301e4b6abe3f5f9f3501edfef",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rolling_race.html",
+      "status": 200,
+      "bytes": 7697,
+      "sha256": "274291a7252db00694bad1d3e1d6a863a280d542ae46dc78c781fc65a6f6b76c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/room_reverberation.html",
+      "status": 200,
+      "bytes": 6841,
+      "sha256": "f38bb133a4a77b2757d7bb053b8b261f2a6485ffb17b27b5e5d65ea84944a9ba",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rotating_planet.html",
+      "status": 200,
+      "bytes": 8248,
+      "sha256": "f328a1cb59313dac769b3edd1f8cbbc130f3bffad3c73719b8e2bdafdad14954",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/rotational_inertia.html",
+      "status": 200,
+      "bytes": 8174,
+      "sha256": "0708499c0f26b65fe4e03de1889d931530f582f4dbad5a63331af66159f77e1f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/seebeck.html",
+      "status": 200,
+      "bytes": 5719,
+      "sha256": "f833d012adfa2fecbe686c661f5c600aa05c6834457ed46281ad84786e7c38ae",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/separated_lenses.html",
+      "status": 200,
+      "bytes": 10572,
+      "sha256": "16b455d5724af4d8b7602633284ffc8d3b48d66f77466bb1f3d494f796504977",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/series.html",
+      "status": 200,
+      "bytes": 8363,
+      "sha256": "e4265dee41a55910cb102146e9ee039452077a26fa84766b2c3e53541d44e0ab",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/siphon.html",
+      "status": 200,
+      "bytes": 9808,
+      "sha256": "893ce0c0525b6f6bf56823e7e9a70ca6280caed794d43a5b0ed94b35a3e34818",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/skin_depth.html",
+      "status": 200,
+      "bytes": 12668,
+      "sha256": "db0deb77fef8572356ce425f1615c5e7e614b96cb61c18b2dbf115af64513d06",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/slide_tip.html",
+      "status": 200,
+      "bytes": 7992,
+      "sha256": "1e31c6369bd063c4ae36ecf84ae595a4bdf089475498a67588bbe1d0fa766052",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/sliding_rod.html",
+      "status": 200,
+      "bytes": 7339,
+      "sha256": "3fc56d20b3c3eabfb97fe7670f3731081fc07262213f7028a6d58b74a6594779",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/solenoid.html",
+      "status": 200,
+      "bytes": 6029,
+      "sha256": "a9ced3b066d8f75a36e75234425f025b348db69e4eb38bab6f667d9b320c3c46",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/sound.html",
+      "status": 200,
+      "bytes": 5252,
+      "sha256": "9d1c829a6d7074750920411957b9f5813fe4c06c55cf0cd9daa7e67b459657a7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/sound_level.html",
+      "status": 200,
+      "bytes": 7490,
+      "sha256": "482d267d3765063e9eebb9758b9424962bffa9ba61fbc14d37300c3b9a026f91",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/sound_tdoa.html",
+      "status": 200,
+      "bytes": 8018,
+      "sha256": "38a3efc95b17bf0e64dd07e0546c433d6c088d364fefff65a840e7794c880257",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/spherical_aberration.html",
+      "status": 200,
+      "bytes": 12515,
+      "sha256": "4ef82a1fc4488def3c2dd014669f68158b16b2f83eb3821b6642d7f5e1340b38",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/spherical_capacitor.html",
+      "status": 200,
+      "bytes": 6574,
+      "sha256": "52480bc46ea1723c4480a36037c0279c290e7b593cacc681baab643c82218c4f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/spring_energy.html",
+      "status": 200,
+      "bytes": 6175,
+      "sha256": "ed5b93176f8c7a8e3a370bc4d518d81e903b1013770788186c51225a93c18740",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/spring_parallel.html",
+      "status": 200,
+      "bytes": 6050,
+      "sha256": "8ab23529d5ccbd6704fb656a0f5d1aaae01fcdb849ef57a06bd5c3fa9a1484cc",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/spring_period.html",
+      "status": 200,
+      "bytes": 6893,
+      "sha256": "315374cb3646be42694d6bfba80aa4dc78b35f1210b58abb810f94539e214083",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/spring_series.html",
+      "status": 200,
+      "bytes": 8821,
+      "sha256": "1d42849aa1a36d7fdfc89e2af04a14c08217c91939e313a01da0b732c76e9132",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/standing.html",
+      "status": 200,
+      "bytes": 5838,
+      "sha256": "240f5fddd5c5e744a64c34437337edf3b98a40ccf021432d0411d5785e6faa42",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/standing_phase.html",
+      "status": 200,
+      "bytes": 6633,
+      "sha256": "f9a718ebf1bdb97a54c1bc43bf0996243673c40a01119f77ca643f252e469155",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/star_delta.html",
+      "status": 200,
+      "bytes": 10009,
+      "sha256": "0da1286a3b3223af7be78f80d62e48fde7347ac175d0e1d93cbdbce540bbe074",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/stirling_regenerator.html",
+      "status": 200,
+      "bytes": 12325,
+      "sha256": "7bfd2ea54a02516fb987c81e6b32844319a2ed45f114aac85f889179c43b99af",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/stokes_settling.html",
+      "status": 200,
+      "bytes": 8837,
+      "sha256": "3fb8fa88eda55f3c641fd0bf0baaa5ea64a9fe0f988d8c20b40c5c1ce1efbb82",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/string_boundary.html",
+      "status": 200,
+      "bytes": 14108,
+      "sha256": "31ff37276cb7f7591ce330063bbab9cfd7e4eb08cddb11ba10b726c63bcfc771",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/string_power.html",
+      "status": 200,
+      "bytes": 9829,
+      "sha256": "74329c7a8daf044cef3540c4921ba3ad6ddd9598086566a285b6d5f9ac247d2e",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/string_resonance.html",
+      "status": 200,
+      "bytes": 6478,
+      "sha256": "c564a90a8d2dc0d43efd7260af2412137103354a078237f8568f077c6a081eb5",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/string_speed.html",
+      "status": 200,
+      "bytes": 6808,
+      "sha256": "a11ea6d05b99a802aa7a784ac5d521d1e91d16e94055a2636e2e3447a9f6bff9",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/table_hanging.html",
+      "status": 200,
+      "bytes": 10584,
+      "sha256": "29f6790132866aa30aee5980b084faf43994cbbcff157354d5c8f2232909c6ab",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/telescope.html",
+      "status": 200,
+      "bytes": 8878,
+      "sha256": "8695ed3904d57ab98d3abbfb6e589e81f7a9993a351805914016e743848b0089",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/thermalexpansion.html",
+      "status": 200,
+      "bytes": 5279,
+      "sha256": "a7891f911ef21d302ce071a88ca4c323a2b4fbf2feaae3e7b1e30cf1f7307a39",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/thevenin_norton.html",
+      "status": 200,
+      "bytes": 13738,
+      "sha256": "82b73b2c0e511cfd7cc52a1aa72756f6d85cb79bd1afb658dffd0e3fee4f1363",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/thin_film.html",
+      "status": 200,
+      "bytes": 8308,
+      "sha256": "d90a1535daa7c726f7566903bf76157b51f222c5d762a116e9bfa64c79ac973c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/three_charge_energy.html",
+      "status": 200,
+      "bytes": 9970,
+      "sha256": "7e109cda8447ddb0685c1015906b58581854ec0179ae1996fb8e6223f0023a59",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/three_strings.html",
+      "status": 200,
+      "bytes": 9847,
+      "sha256": "f6ec11f50601acb562519ea3579c7c56b92c5ea3bd4d1f1f2613392bbd3d30d1",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/tidal_gradient.html",
+      "status": 200,
+      "bytes": 8274,
+      "sha256": "7e4a7a59f859ad0d0ac05407e7f3f6365205cd4e8c6a00f28b32854a978de68a",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/tir.html",
+      "status": 200,
+      "bytes": 8951,
+      "sha256": "c43b0e0c3b2978cb7d9bfe6cac18a686aa797a1d27b66115248c2038b4e3edc1",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/toroid.html",
+      "status": 200,
+      "bytes": 8394,
+      "sha256": "30425fa892ebd4812aeb1e2fd1b88c676cdb9ced4f64c1be7acdc24754a2569b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/torque_angle.html",
+      "status": 200,
+      "bytes": 5110,
+      "sha256": "0aad2e9d471ca083bb2c31fc246acf7813d219a52df4a36b225a2eece91e16fc",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/torricelli.html",
+      "status": 200,
+      "bytes": 6852,
+      "sha256": "4d0701d6734cf5d8fcafafc29b136024cbe9b03217fa3880215f28c1744adaee",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/torsion_pendulum.html",
+      "status": 200,
+      "bytes": 8353,
+      "sha256": "eda9ad5d2fb938a4bfe5f3a59ae78cf198565e8eb56ee880b6e744044619f8eb",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/transformer.html",
+      "status": 200,
+      "bytes": 11518,
+      "sha256": "6d5499f872ea105199ff0f4edbcb1294aa59a3f8a6f90a943c1c11aef7a0d340",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/transient_heat_bar.html",
+      "status": 200,
+      "bytes": 9703,
+      "sha256": "68cc4b04d5be2da341883f63799d482a7bcf62d7db2c2a2b9422b92f0600f490",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/transmission_reflection.html",
+      "status": 200,
+      "bytes": 10797,
+      "sha256": "dd0c40d78a01393b418c2c64c83793919fd8285142e6c62339cca845fa781ded",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/two_level_boltzmann.html",
+      "status": 200,
+      "bytes": 10812,
+      "sha256": "eb969d0b950487bf4a9155e3454ae320da8ca91364dba83f83b186534993b0cc",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/two_meshes.html",
+      "status": 200,
+      "bytes": 13906,
+      "sha256": "04a757c4d2aa39ea320f6204cf0c2e0b41c93e1bb8cacd9b0c99b3b280907a96",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/two_stage_rc.html",
+      "status": 200,
+      "bytes": 14083,
+      "sha256": "5dc3e20a7d2b5147fdb91182c22faa5732584a1b59aa393a4133c82cc5aedfdb",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/u_tube_oscillation.html",
+      "status": 200,
+      "bytes": 9152,
+      "sha256": "03ec84728b7ab642e3d7a11292ea81ec954a0c6baa48fc7bddeaaa576e469bd8",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/unbalanced_bridge.html",
+      "status": 200,
+      "bytes": 7496,
+      "sha256": "ff77234230f1b2b80d0b014972a7c0711c7a3a5700cdf7af2413ba31f2cb86f8",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/uniform.html",
+      "status": 200,
+      "bytes": 4281,
+      "sha256": "451424ca4378ac27c0e66afdeab559fb29c4afa38a85dc20c31b9c3fb00664f7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/uniform_field.html",
+      "status": 200,
+      "bytes": 6739,
+      "sha256": "6d0170c24ab15c518f5861ad72d234ab7b246ce42ba7b7b3ab468f5756894970",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/van_der_pol.html",
+      "status": 200,
+      "bytes": 7313,
+      "sha256": "3ccd0825e364e6768f6d6dc187671bbe1851f464c39f5be0ddcba8a996a66d0f",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/van_der_waals.html",
+      "status": 200,
+      "bytes": 8635,
+      "sha256": "de291500158d59a2599bb070cfd4fe83501e4c138b907abd6923248d5a31b2ae",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/vapor_pressure.html",
+      "status": 200,
+      "bytes": 10559,
+      "sha256": "c8deca7ac19dc8bbd6e837f12728bacdae02ec2f076b26d06627b0ffc9eeebb7",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/vector_components.html",
+      "status": 200,
+      "bytes": 7039,
+      "sha256": "c474b22c24180a9fa7db8faa38b3c0b526afd3a85a62560b0c312fba823db512",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/vector_sum.html",
+      "status": 200,
+      "bytes": 8680,
+      "sha256": "9ef35ac3184554e95cdb12a82ec27353182ac207d2314d05bd9b6c21631ec432",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/velocity_selector.html",
+      "status": 200,
+      "bytes": 7570,
+      "sha256": "2ce099287375f438415888a766648efac2e8e736962fd3e1914d84dd3b38f81b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/venturi.html",
+      "status": 200,
+      "bytes": 11763,
+      "sha256": "3db66e42936c713d40ad060a8bc79577a3276faf220d93e19ea35bcd1b69e04c",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/vertical_circle.html",
+      "status": 200,
+      "bytes": 9284,
+      "sha256": "97b0284150badfd4c7b79a3109449adae55d376045c3dde874e895d965a416f3",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/vibration_absorber.html",
+      "status": 200,
+      "bytes": 13077,
+      "sha256": "383951765f65957a86f0031389fd2ceec941d73cec101bbb0c737d61bdd649cc",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/voltage_divider.html",
+      "status": 200,
+      "bytes": 10188,
+      "sha256": "53bf8a97d6589698754fad69a2a056ef9e724b1ad8b4cd21c558380a097f630b",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/voltmeter_design.html",
+      "status": 200,
+      "bytes": 8594,
+      "sha256": "915d3aac6fe2fd86eb34e57edef5c670f185cd3ca545e5eb5879bb6e300d65ad",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/water_refraction.html",
+      "status": 200,
+      "bytes": 10893,
+      "sha256": "982f93ae4d37a5a27bedcf33e56bbf7eedfdd6256a506fe8778e87f1181d2680",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/wave.html",
+      "status": 200,
+      "bytes": 9831,
+      "sha256": "8a7374b4f7f6a0518cea789f8635a1e730c06fbbde7edc086f60b5425d943c12",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/wave_packet.html",
+      "status": 200,
+      "bytes": 7730,
+      "sha256": "78180475887e34bdf777f1f33611212bc82aff156321a488de99dd4ef2b8b7f4",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/wave_plate.html",
+      "status": 200,
+      "bytes": 7430,
+      "sha256": "afe5d2ab1fa21306dfb0fcdcf126701e474ff9fe4555d6b13128dac02cd131d9",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/wire_field.html",
+      "status": 200,
+      "bytes": 6535,
+      "sha256": "a00699dfad1e011c60f22550ba00ca3a60d71d381a6e933fb10af30bc9bc92dd",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/wire_pair.html",
+      "status": 200,
+      "bytes": 8440,
+      "sha256": "6e7fb369e5a0ecf0c495bfa24b5027b2a3164442ab5f39e7204f7df422317735",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/wire_stretch.html",
+      "status": 200,
+      "bytes": 7733,
+      "sha256": "4f61c225791a173de3e1c90b05aa0fc32c4eae8723eed94fea612efe96d8cae2",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/work.html",
+      "status": 200,
+      "bytes": 6171,
+      "sha256": "95baa058635a4c053612bb2617edd707c88f7d7ff864b3254b41a109d0113ae2",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/young.html",
+      "status": 200,
+      "bytes": 9286,
+      "sha256": "de5622d2a2ff279a6e3183d2237a1653df16d04cb32934606ec50ccbf653df71",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/yoyo_drop.html",
+      "status": 200,
+      "bytes": 7561,
+      "sha256": "f5d5c1259de2ab66da3cbfc440e11d827bb59af0224cf5a2814efba7bff7c689",
+      "matchesSource": true
+    },
+    {
+      "path": "experiments/zener_regulator.html",
+      "status": 200,
+      "bytes": 13585,
+      "sha256": "edcaf95bea14579ce9b5bb2a9132cce76e4d06c98a606f45f8e24407fbd28487",
+      "matchesSource": true
+    },
+    {
+      "path": "extended-catalog.js",
+      "status": 200,
+      "bytes": 14307,
+      "sha256": "2f92834ab40b80522216e656fe76cf1ef0c84c09c7a6ed6e1d4303d5cc22d9e8",
+      "matchesSource": true
+    },
+    {
+      "path": "extended-scenes.js",
+      "status": 200,
+      "bytes": 19676,
+      "sha256": "d3475c1eb1c0052faaaa0c225cf935cfdd098a3af00fd761a4e633ebc5e5033d",
+      "matchesSource": true
+    },
+    {
+      "path": "formula-catalog.js",
+      "status": 200,
+      "bytes": 23840,
+      "sha256": "1b3b4046a847ea2dbc4a0dd9ac9b3c61cac21429240a206bcf4147b07b64f254",
+      "matchesSource": true
+    },
+    {
+      "path": "geometry-kit.js",
+      "status": 200,
+      "bytes": 5842,
+      "sha256": "81048565949079b8a65b8251c94eb8d152e80bf78c3279b2c496a5280b7a1f49",
+      "matchesSource": true
+    },
+    {
+      "path": "graphs.js",
+      "status": 200,
+      "bytes": 6344,
+      "sha256": "707bacacbe93352783f3a49e90684000cf2bc38204ff03696792df233f5f29ae",
+      "matchesSource": true
+    },
+    {
+      "path": "i18n.js",
+      "status": 200,
+      "bytes": 4238,
+      "sha256": "bb8243037f54929188399474d8d47f1bb91d47637eff96cec99059a01c151cdf",
+      "matchesSource": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 5744,
+      "sha256": "fcf174c101e64b0c0510ad503a3e7985230a62eec708991e63e784b87e8fa28f",
+      "matchesSource": true
+    },
+    {
+      "path": "interaction-rig.js",
+      "status": 200,
+      "bytes": 1595,
+      "sha256": "86f755951073e9940b51753ebf2e24419067b26a22eaddaf25fc55ffb8484a44",
+      "matchesSource": true
+    },
+    {
+      "path": "lab-loader.js",
+      "status": 200,
+      "bytes": 1014,
+      "sha256": "efbae1811a639055649b2a4fdad57f1b1104f28b1bcf3da801f53f4e35dff471",
+      "matchesSource": true
+    },
+    {
+      "path": "language-pill.js",
+      "status": 200,
+      "bytes": 6207,
+      "sha256": "4f279c581e6e84e99fd0a42b183c98ae9921e9894e18f6b5aaa3c8e60ab08555",
+      "matchesSource": true
+    },
+    {
+      "path": "language-ui.js",
+      "status": 200,
+      "bytes": 19210,
+      "sha256": "727850a5ad2583e8fe3d9cbf7fb25e8933d5fa6e932d5dda420a14d208f239b1",
+      "matchesSource": true
+    },
+    {
+      "path": "learning.js",
+      "status": 200,
+      "bytes": 3734,
+      "sha256": "bbedadb6dfd75d16f1800ab993c41188093ebb453f7b538e994c61390eb72a06",
+      "matchesSource": true
+    },
+    {
+      "path": "lesson-loader.js",
+      "status": 200,
+      "bytes": 582,
+      "sha256": "bce157a6ae03025526e5e4875f4c4119f23e11926a6fce8332dea410e89cee85",
+      "matchesSource": true
+    },
+    {
+      "path": "lesson-view.js",
+      "status": 200,
+      "bytes": 5981,
+      "sha256": "06e7e0a3d13d5d5d58bdaf16bae45e050d85acb30118e6fba1f78d5946eb50dc",
+      "matchesSource": true
+    },
+    {
+      "path": "lever-geometry.js",
+      "status": 200,
+      "bytes": 1049,
+      "sha256": "29b26efe3b565a349fbf5fae31fef0fb3188cc80b17e291660a3775c69d54e28",
+      "matchesSource": true
+    },
+    {
+      "path": "local-ai-worker.js",
+      "status": 200,
+      "bytes": 164,
+      "sha256": "e4440e34ae410022b63ed21d682161473ec2d7cc5d2cdd11124cbc3f33106536",
+      "matchesSource": true
+    },
+    {
+      "path": "local-ai.js",
+      "status": 200,
+      "bytes": 8189,
+      "sha256": "ac66e63031bbca2ede3139283bab8b440095b6b2270d088b16192c5ffad5922b",
+      "matchesSource": true
+    },
+    {
+      "path": "math.js",
+      "status": 200,
+      "bytes": 4702,
+      "sha256": "0b0dae365d5ae4f8a2eff70994a5cfdecc77f047b82ecd523fb46754d2e27ac7",
+      "matchesSource": true
+    },
+    {
+      "path": "measurements.js",
+      "status": 200,
+      "bytes": 5769,
+      "sha256": "ebb613483c5831036a00f6664692b803fb820cffdd8f37777dfafbbcf7ff8dd1",
+      "matchesSource": true
+    },
+    {
+      "path": "media.js",
+      "status": 200,
+      "bytes": 10168,
+      "sha256": "a8f9e4d6cdd73910d959d5a024896c32372313f7cf3ab922f9574ebec006c33f",
+      "matchesSource": true
+    },
+    {
+      "path": "model-label.js",
+      "status": 200,
+      "bytes": 3907,
+      "sha256": "c3b9add141cad5c5b0105eb77d44e39bbb9de7bf133491d23d36d6a1b2a4d019",
+      "matchesSource": true
+    },
+    {
+      "path": "model-workspace.js",
+      "status": 200,
+      "bytes": 1378,
+      "sha256": "92b104e6fbcf86a86846cd8de021d6874206e0e585da1954af5a9e3a3de9d1a6",
+      "matchesSource": true
+    },
+    {
+      "path": "models.js",
+      "status": 200,
+      "bytes": 7008,
+      "sha256": "7c5a4dbbb999024b97004d42e1711de25b7f278ea9ee948d4c7d7105755f685a",
+      "matchesSource": true
+    },
+    {
+      "path": "optics-studio.js",
+      "status": 200,
+      "bytes": 3570,
+      "sha256": "a9cd3bdfd7b3e43df517fbda761b6c112d7961dd92aa2a91b8ca0e501e01a4ec",
+      "matchesSource": true
+    },
+    {
+      "path": "parameter-domains.js",
+      "status": 200,
+      "bytes": 6438,
+      "sha256": "ca6df734b873053ea7ff0a9746ac7c9cf1b3d75e799239dd67b81acb64109f11",
+      "matchesSource": true
+    },
+    {
+      "path": "parameter-window.js",
+      "status": 200,
+      "bytes": 1498,
+      "sha256": "524c015568bb663db4a3c2916e5d95a40a33f18e27462d4188d717010e559de4",
+      "matchesSource": true
+    },
+    {
+      "path": "particle-layout.js",
+      "status": 200,
+      "bytes": 894,
+      "sha256": "f213d3a84ff1370378726a5c8c1df5804f700229578fff25e277e8b8e97648cc",
+      "matchesSource": true
+    },
+    {
+      "path": "physics.js",
+      "status": 200,
+      "bytes": 2163,
+      "sha256": "04a06a1bccb80356af287c476f33160cc343739d1d9fbc70ac59dd57abe5fcae",
+      "matchesSource": true
+    },
+    {
+      "path": "playback.js",
+      "status": 200,
+      "bytes": 4571,
+      "sha256": "96fa8594ba568b2b75bf32583c25dc5a9c86ff5664c22057f2191f89b0a286d9",
+      "matchesSource": true
+    },
+    {
+      "path": "plot-grid.js",
+      "status": 200,
+      "bytes": 3575,
+      "sha256": "9d423260f6c6cdc948073110930ef19c0728e2b7d3d3e5d6ea39d9056b0b7d17",
+      "matchesSource": true
+    },
+    {
+      "path": "product.css",
+      "status": 200,
+      "bytes": 3401,
+      "sha256": "37e62df7ecd11cc60851629cf4484a37d9e22e563351fbe1bed8dec7e803cf23",
+      "matchesSource": true
+    },
+    {
+      "path": "research.js",
+      "status": 200,
+      "bytes": 9023,
+      "sha256": "77812611f49bca87303bb5f6732001032a5fa35f4aafe934c7e802f3e3c9ac86",
+      "matchesSource": true
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "bytes": 69,
+      "sha256": "638271fd751fd5a5f883f7497f220dbae2e629503bde7db6319e2579b3c13879",
+      "matchesSource": true
+    },
+    {
+      "path": "scene3d.js",
+      "status": 200,
+      "bytes": 37743,
+      "sha256": "68cae4e75b032f8025e2763bd7654a230f691b230c26fb645fa18bbd02a4e63a",
+      "matchesSource": true
+    },
+    {
+      "path": "simulation-space.js",
+      "status": 200,
+      "bytes": 800,
+      "sha256": "7795b88b7761d47d3720068d595bacc2dd6f5d37cb205d16a6f7e651bfa9aaaf",
+      "matchesSource": true
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "bytes": 23879,
+      "sha256": "3af0624282095ebf4c970dd7bccd89f7cab1c8429c8060016c5b6ccc9d3f31db",
+      "matchesSource": true
+    },
+    {
+      "path": "software-scene.js",
+      "status": 200,
+      "bytes": 8319,
+      "sha256": "e5ad12382719544bf79e46659501caa9c1be3b8825baf502f1401f71962b94f9",
+      "matchesSource": true
+    },
+    {
+      "path": "sources.js",
+      "status": 200,
+      "bytes": 20841,
+      "sha256": "21bfc6d8b7383f0bbbf5c072eb4c9a24e434b4a92753abdc10852771e0c52512",
+      "matchesSource": true
+    },
+    {
+      "path": "thumbnails.js",
+      "status": 200,
+      "bytes": 4661,
+      "sha256": "cf403c33ef1e17027316eff1739f1ec41a617fce202d55fe50e4afc0207a9ac4",
+      "matchesSource": true
+    },
+    {
+      "path": "track-layout.js",
+      "status": 200,
+      "bytes": 1985,
+      "sha256": "3f51c352537aa9f2a65fdc6b752e19a10115994cfc9a821c8f38559b1af4f6cd",
+      "matchesSource": true
+    },
+    {
+      "path": "vendor/katex/katex.min.css",
+      "status": 200,
+      "bytes": 23804,
+      "sha256": "23aefa0850248a16478b9f55d6b67028f74cc0b46b82b24dc22af068acaa4170",
+      "matchesSource": true
+    },
+    {
+      "path": "vendor/katex/katex.min.js",
+      "status": 200,
+      "bytes": 270325,
+      "sha256": "e1c5d9e1b5b906881c40faf67950585a3f5d5adb4636d10e9678b9ba74b57dcc",
+      "matchesSource": true
+    },
+    {
+      "path": "views.js",
+      "status": 200,
+      "bytes": 26961,
+      "sha256": "b27a8ceccdf396ffa89a88d9660dba340a86103112009de8594851e6a4eeecbb",
+      "matchesSource": true
+    },
+    {
+      "path": "visual-settings.js",
+      "status": 200,
+      "bytes": 5185,
+      "sha256": "636af4e10add6e9254afa10c1843ef43e8c4bfdb4edbf40f7d0f6d9e2ca44253",
+      "matchesSource": true
+    },
+    {
+      "path": "voice-index.js",
+      "status": 200,
+      "bytes": 104628,
+      "sha256": "5c2efba4eb7f6eb45f9d19809c4296f347206a959c8950ad1a0e86642625cefe",
+      "matchesSource": true
+    },
+    {
+      "path": "voice-recordings.js",
+      "status": 200,
+      "bytes": 2199,
+      "sha256": "32ea5ea72407fc610c3d011cb8db0aff7f9ee6f1769876a27505766c80313e1b",
+      "matchesSource": true
+    },
+    {
+      "path": "workspace.js",
+      "status": 200,
+      "bytes": 7779,
+      "sha256": "1436ca93f61deea82b360171f367227c9c9e671bad524b93f00497c986a04994",
+      "matchesSource": true
+    }
+  ],
+  "firstPassMatchedFiles": 386,
+  "networkRetries": 2
+}

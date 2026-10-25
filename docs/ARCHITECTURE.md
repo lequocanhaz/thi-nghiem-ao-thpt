@@ -46,7 +46,7 @@ Backend AI có hạ tầng/triển khai riêng; đọc `server/README.md`. Xuấ
 
 300 URL `experiments/<id>.html` có tiêu đề, mô tả, công thức MathML, điều kiện và link vào route lab tương ứng. `sitemap.xml` chứa 305 URL, được liên kết từ trang chủ. Search engine quyết định crawl/index; có sitemap không bảo đảm thứ hạng. Trên URL GitHub Pages chạy dưới project subpath, `robots.txt` tại subpath không điều khiển host. Main đồng thời đã thêm tệp này cho custom-domain root; bản hợp nhất giữ nó, nhưng chỉ xem là cấu hình có hiệu lực khi domain/DNS/HTTPS đã hoạt động.
 
-Bản hợp nhất kế thừa canonical physicslab.tech từ các commit đồng thời trên main; generator đọc canonical đó từ index.html. Trạng thái DNS/HTTPS vẫn chưa nghiệm thu, việc kế thừa không chứng nhận tên miền đã sẵn sàng. Mọi thay đổi domain tiếp theo cần xác minh bản ghi DNS, chứng chỉ HTTPS, Pages và redirect thực tế; không coi cấu hình được kế thừa là bằng chứng này. Không đổi domain chỉ vì trường `cname` đã được thiết lập trong GitHub.
+Bản hợp nhất kế thừa canonical physicslab.tech từ các commit đồng thời trên main; generator đọc canonical đó từ index.html. DNS/HTTPS đã được kiểm lại thành công khi kết thúc phát hành; xem báo cáo v59. Việc kế thừa metadata riêng nó vẫn không chứng nhận tên miền sẵn sàng. Mọi thay đổi domain tiếp theo cần xác minh bản ghi DNS, chứng chỉ HTTPS, Pages và redirect thực tế; không coi cấu hình được kế thừa là bằng chứng này. Không đổi domain chỉ vì trường `cname` đã được thiết lập trong GitHub.
 
 ## Ranh giới kiểm chứng
 

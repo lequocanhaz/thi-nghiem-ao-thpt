@@ -1,8 +1,10 @@
 # Trạng thái DNS và phát hành
 
+> **Đã nghiệm thu DNS/HTTPS khi kiểm lại cuối:** Google và Cloudflare trả đủ185.199.108.153/109.153/110.153/111.153; Pages`https_enforced=true`; HTTPS200. Bản mới đã triển khai qua [workflow40246562448](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/actions/runs/40246562448),388/388tệp công khai khớp commit`decfbb8555c4e43c7fe817a899297010696d23d6`. Chromium live smoke đạt, không gọiAI. Các quan sát lỗi và phương án tạm thời bên dưới là lịch sử, không còn chờ thực hiện. Agent không sửaDNS hoặc gỡcustomdomain. Xem [báo cáo cuối](REDESIGN_V59_REPORT.md).
+
 Ngày kiểm: 26/10/2026. Tên miền do người dùng đăng ký: `physicslab.tech`.
 
-## Bằng chứng quan sát được
+## Bằng chứng ban đầu
 
 - GitHub Pages: `cname=physicslab.tech`, `https_enforced=false`; trường URL trả `http://physicslab.tech/`.
 - GET mới tới URL GitHub Pages với query kiểm tra trả301và `Location: https://physicslab.tech/...`; phản hồi cũ được cache từng trả200, nên không dùng cache làm bằng chứng website đang truy cập được.
@@ -12,7 +14,7 @@ Ngày kiểm: 26/10/2026. Tên miền do người dùng đăng ký: `physicslab.
 
 Một workflow Pages thành công chỉ chứng minh artifact đã được xuất bản; không tự chứng minh DNS, chứng chỉ hoặc website công khai hoạt động.
 
-## Việc cần thực hiện ở nhà cung cấp DNS
+## Cấu hình DNS dùng để đối chiếu
 
 Nếu tiếp tục dùng custom domain, cấu hình apex `@` tới GitHub Pages bằng bốn bản ghi A theo [tài liệu GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site):
 
@@ -27,7 +29,7 @@ Rà các bản ghi xung đột của apex trước khi thay. Không ghi đườn
 
 Sau khi DNS công khai trả đúng, chờ GitHub cấp chứng chỉ trong Settings → Pages, bật Enforce HTTPS khi khả dụng, rồi kiểm lại TLS/HTTP, redirect và asset thật. Chỉ đánh dấu domain nghiệm thu khi HTTPS200, các module/CSS/KaTeX/trang sách tải đúng và nội dung khớp commit phát hành.
 
-## Phương án tạm thời cần lựa chọn của chủ dự án
+## Phương án tạm thời đã hết cần thiết
 
 Agent đã hỏi có cho phép tạm gỡ custom domain trong Pages để khôi phục URL GitHub Pages, hay giữ cấu hình để chủ tên miền sửa DNS. Chưa tự thay thiết lập chuyển hướng vì prompt yêu cầu xác minh DNS/HTTPS trước thay đổi. Cũng chưa tự sửa tài khoản DNS bên ngoài vì không có kết nối được cấp quyền.
 

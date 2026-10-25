@@ -53,9 +53,29 @@
     "No GPU/FPS or long-term RAM benchmark",
     "No real AI provider inference",
     "No exhaustive visual review of all 300 models",
-    "Domain currently redirects to physicslab.tech with no public A/AAAA/CNAME answers; Pages https_enforced=false",
     "No commercial copyright clearance or expert pedagogical acceptance"
   ],
   "mergedMain": "7d7b2be5e2493ef2d861472340835305eb9b6380",
-  "postMergeVerification": true
+  "postMergeVerification": true,
+  "release": {
+    "codeCommit": "decfbb8555c4e43c7fe817a899297010696d23d6",
+    "pullRequest": "https://github.com/lequocanhaz/thi-nghiem-ao-thpt/pull/28",
+    "ciAndPages": "https://github.com/lequocanhaz/thi-nghiem-ao-thpt/actions/runs/40246562448",
+    "check": "success",
+    "deploy": "success",
+    "website": "https://physicslab.tech/",
+    "httpsEnforced": true,
+    "publicARecords": [
+      "185.199.108.153",
+      "185.199.109.153",
+      "185.199.110.153",
+      "185.199.111.153"
+    ],
+    "artifactFilesMatched": 388,
+    "artifactFilesRequested": 388,
+    "transient503Retried": 2,
+    "liveBrowser": "PASS",
+    "noRealHardwareClaim": true,
+    "verifiedAtUTC": "2026-10-25T23:58:26.829384+00:00"
+  }
 }

@@ -1,16 +1,18 @@
 # Quanh Lab — audit và nâng cấp v59
 
+> **Kết quả phát hành cuối — 26/10/2026:** [PR #28](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/pull/28) đã merge, [commit mã phát hành](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/commit/decfbb8555c4e43c7fe817a899297010696d23d6) vượt kiểm tra và [GitHub Pages](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/actions/runs/40246562448) triển khai thành công. [physicslab.tech](https://physicslab.tech/) trả HTTPS 200, DNS Google/Cloudflare đã trả đủ bốn A-record của GitHub Pages và Enforce HTTPS đã bật. Đối chiếu byte: 388/388 tệp phát hành khớp source (gồm 300 trang thí nghiệm và một trang danh mục); hai HTTP 503 ở lượt tải hàng loạt đầu đã được thử lại thành công. Chromium trên website thật đã tìm Ohm, mở canvas, ghi một dòng và đổi EN, 0 pageerror; vẫn là trình duyệt giả lập 390 px, không phải thiết bị thật. Xem [bằng chứng HTTP](redesign-v59/evidence/live-verification.json) và [browser live](redesign-v59/evidence/live-browser.json). Các ghi nhận DNSchưa sẵn sàng bên dưới là lịch sử tại thời điểm audit, **không còn là việc đang chờ**. Agent không thay DNS hoặc gỡ custom domain.
+
 Ngày: 26/10/2026. Mã nền đã fetch: `7e491e0c641dca33ed222b47942b085e728ab590`. Đây là đợt cải tiến trực tiếp website hiện hữu, không phải demo hoặc bản viết lại framework. Nhánh: `feat/quanh-lab-redesign-v59`. Trước phát hành đã fetch và hợp nhất các commit mới đến `7d7b2be` trên main: giữ tiêu đề banner in hoa hai dòng, `banner-title.css`, chuyển domain/robots/SEO và các kiểm tương ứng; không ghi đè thay đổi đồng thời.
 
 ## 1. Kết quả audit
 
 HEAD thực tế đã có VI/EN, lớp học tập tiếng Anh cho 300 mô hình và mục lục sách tiếng Anh; các mô tả “chưa gắn i18n” trong bàn giao v54 đã cũ. Audit bắt đầu từ mã hiện tại, đọc `AGENTS.md`, `CODEX_HANDOFF.md`, package/workflow và kiểm số/hình học/trình duyệt. Đã gọi thực tế5 agent: `physics`, `ui`, `textbook`, `ai`, `qa`. Agent chính tích hợp, kiểm lại, bổ sung tìm kiếm/SEO/bảo vệ dữ liệu và chịu trách nhiệm phát hành. Một lượt bổ sung của agent UI bị dừng do hạn mức; agent chính tiếp quản các kiểm tra desktop và bàn phím còn lại.
 
-Không phát hiện P0 trong runtime được kiểm. Có P0 hạ tầng: URL GitHub Pages hiện chuyển hướng 301 sang tên miền chưa có DNS/HTTPS; cấu hình chuyển hướng chưa sửa vì cần ngoại lệ được người dùng cho phép theo ràng buộc domain. Điều này không chứng nhận toàn bộ sản phẩm không còn lỗi.
+Không phát hiện P0 trong runtime được kiểm. Có P0 hạ tầng: URL GitHub Pages hiện chuyển hướng 301 sang tên miền chưa có DNS/HTTPS; đã khắc phục ở cấu hình ngoài patch khi kiểm lại DNS/HTTPS cuối; xem cập nhật phát hành ở đầu báo cáo. Điều này không chứng nhận toàn bộ sản phẩm không còn lỗi.
 
 | Mức | Lỗi thực tế | Xử lý |
 |---|---|---|
-| P0 | URL GitHub Pages chuyển 301 sang tên miền chưa có DNS/HTTPS | Phát hiện bằng GET không cache và DNS công khai; đã nêu lựa chọn khôi phục URL cũ hoặc sửa DNS; chưa tự đổi cấu hình |
+| P0 | URL GitHub Pages chuyển 301 sang tên miền chưa có DNS/HTTPS | Phát hiện bằng GET không cache và DNS công khai; đã nêu lựa chọn khôi phục URL cũ hoặc sửa DNS; đã kiểm lại DNS/HTTPS và website hoạt động; không cần gỡ custom domain |
 | P1 | Xóa bảng đo ngay khi bấm; nhập phiên ghi đè thông số/bảng/ghi chép không xác nhận | Dialog nêu số dòng và hậu quả, mặc định giữ dữ liệu, có tải bản sao; chỉ thay sau xác nhận |
 | P1 | Hai xe khối lượng lớn xuyên nhau tại va chạm dù dữ liệu số đúng | Mặt cản cùng cao, chassis cùng kích thước, tải riêng theo m; ánh xạ hình học và ray đồng nhất |
 | P1 | Vuốt sách bị hủy khi ảnh chuyển implicit pointer capture sang vùng đọc | Chỉ xử lý lostpointercapture của chính stage; kiểm sự kiện độc lập và CDP touch |
@@ -92,9 +94,9 @@ Viewport bắt buộc:320,375,390,414,430,768,1024,1440,1920 px. Browser là Chr
 
 ## 8. Domain và triển khai
 
-Kiểm đọc GitHub Pages cho biết `cname=physicslab.tech`, `https_enforced=false`, `html_url=http://physicslab.tech/`. Truy vấn DNSGoogle A/CNAME ngày 26/10/2026 trả Status 0 và SOA, không có Answer A/CNAME/AAAA. GET có query mới tới GitHub Pages trả 301 với Location https://physicslab.tech/. Truy cập HTTPS chưa thành công từ executor; endpoint kiểm health Pages trả 403 “Resource not accessible by integration”. Không coi đây là quyền sửa DNS. Trước hợp nhất, nhánh làm việc giữ URL GitHub Pages. Main đồng thời đã đổi canonical/OG sang physicslab.tech ở commit `3cba448`; bản hợp nhất bảo toàn thay đổi đó, các trang mới theo cùng canonical để tránh hai domain mâu thuẫn. Việc kế thừa cấu hình không được coi là DNS/HTTPS đã được xác minh. Không tự tạo redirect mới; việc tạm gỡ custom domain đang chờ lựa chọn của người dùng.
+Kiểm đọc GitHub Pages cho biết `cname=physicslab.tech`, `https_enforced=false`, `html_url=http://physicslab.tech/`. Truy vấn DNSGoogle A/CNAME ngày 26/10/2026 trả Status 0 và SOA, không có Answer A/CNAME/AAAA. GET có query mới tới GitHub Pages trả 301 với Location https://physicslab.tech/. Truy cập HTTPS chưa thành công từ executor; endpoint kiểm health Pages trả 403 “Resource not accessible by integration”. Không coi đây là quyền sửa DNS. Trước hợp nhất, nhánh làm việc giữ URL GitHub Pages. Main đồng thời đã đổi canonical/OG sang physicslab.tech ở commit `3cba448`; bản hợp nhất bảo toàn thay đổi đó, các trang mới theo cùng canonical để tránh hai domain mâu thuẫn. Việc kế thừa cấu hình không được coi là DNS/HTTPS đã được xác minh. Không tự tạo redirect mới; tại thời điểm audit từng cần lựa chọn về việc tạm gỡ custom domain. Khi kiểm lại cuối, DNS/HTTPS đã hoạt động nên lựa chọn đó không còn cần thiết.
 
-Mã nguồn: [repository](https://github.com/lequocanhaz/thi-nghiem-ao-thpt). Lịch sử phát hành: [commits](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/commits/main/). CI/Pages: [workflow](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/actions/workflows/pages.yml). PR và commit phát hành cụ thể được cung cấp trong lời bàn giao sau khi cổng kiểm đạt; chỉ xác nhận website đã cập nhật sau khi deploy thành công và đối chiếu tài nguyên live.
+Mã nguồn: [repository](https://github.com/lequocanhaz/thi-nghiem-ao-thpt). Lịch sử phát hành: [commits](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/commits/main/). CI/Pages: [workflow](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/actions/workflows/pages.yml). PR, commit và CI/Pages cụ thể ở cập nhật đầu báo cáo. Đã đối chiếu tài nguyên live và chạy smoke trực tiếp website, phân biệt với kiểm thiết bị thật.
 
 ## 9. Tệp thay đổi và phát triển tiếp
 
