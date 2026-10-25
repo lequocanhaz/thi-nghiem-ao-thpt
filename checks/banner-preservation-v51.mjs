@@ -21,23 +21,24 @@ for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','
  }
  assert.equal(hash(contents),baseline.files[name],name+' must remain byte-identical except the explicitly allowed math SVG fix');
 }
-// Entry changes are cache versions plus the explicitly scoped visual-settings stylesheet; startup/banner bytes stay frozen.
+// Entry changes are cache versions, scoped visual settings, and explicit v59
+// discovery links/metadata. Static startup and banner bytes stay frozen.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
- assert.equal(hash(read(name).toString().replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
+ assert.equal(hash(read(name).toString().replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace('<a href="experiments/">Danh mục đầy đủ</a><a href="about.html">Giới thiệu</a>','').replace(/<link rel="sitemap"[^>]+>/,'').replace(/<script id="quanhSiteData" type="application\/ld\+json">[^<]+<\/script>/,'').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
 }
 assert.doesNotMatch(read('dist/visual-settings.css').toString(),/banner|cinematic|orbital|@font-face|:root|\.brand\b|@import/i,'Visual settings CSS cannot override protected identity');
 const view=read('dist/views.js').toString();
 const markup=view.slice(view.indexOf(' <section class="main-banner'),view.indexOf(' </section>')+' </section>'.length);
 assert.equal(hash(markup),baseline.bannerMarkupSHA256,'Banner markup, text and layout');
-// v53 fixes cold anchor navigation: static startup markup is not a hydrated home.
-// Normalize those guards and the two explicit lab-only presentation additions; banner lifecycle/routing bytes stay frozen.
-const bannerApp=read('dist/app.js').toString()
- .replace('labMarkup(e,{prefs:{...prefs,visual:visualSettings},state,config,controls:','labMarkup(e,{prefs,state,config,controls:')
- .replace("if(visualSettings.mode==='classroom'&&mode!=='present')setLayout('present');updateSpeech(narrator.status());","updateSpeech(narrator.status());")
- .replace("location.hash==='#library'&&!active&&$('#cards')","location.hash==='#library'&&!active&&$('#library')")
- .replace("location.hash==='#main'&&document.querySelector('.home-screen,.lab,.source-page')","location.hash==='#main'&&document.querySelector('.home,.lab,.source-page')");
-const bannerLines=bannerApp.split('\n').filter(line=>/banner|Banner/.test(line)).join('\n');
-assert.equal(hash(bannerLines),baseline.appBannerLinesSHA256,'Banner import, mount, playback lifecycle, routing and fullscreen handlers');
+// The old whole-line hash froze every unrelated action in the one-line click
+// handler. Preserve actual banner responsibilities against the pre-redesign
+// source instead, without changing or overwriting the historic v51 baseline.
+const lifecycle=JSON.parse(fs.readFileSync(new URL('./banner-lifecycle-v59.json',import.meta.url),'utf8'));
+const currentApp=read('dist/app.js').toString();
+for(const [key,pattern] of Object.entries(lifecycle.patterns)){
+ const fragment=currentApp.match(new RegExp(pattern))?.[0];assert.ok(fragment,'Missing protected banner responsibility: '+key);
+ assert.equal(hash(fragment.replace('pendingClearId=null;pendingSession=null;','')),lifecycle.sha256[key],'Unchanged banner '+key);
+}
 const ids=experiments.map(e=>e.id).sort();
 assert.equal(ids.length,300);assert.equal(new Set(ids).size,300);
 assert.equal(hash(JSON.stringify(ids)),baseline.experimentIDs.sha256,'Preserve exact experiment IDs');

@@ -1,5 +1,5 @@
 import {T,V,C,mat,mesh,box,cylinder,line,label,setText} from './geometry-kit.js?v=35';
-import {experiments} from './experiments.js?v=54';
+import {experiments} from './experiments.js?v=59';
 import {coreParams,rigParameters,themeFor} from './learning.js?v=17';
 import {parameterText} from './workspace.js?v=54';
 export function addInteractionRig(model,id,s,d,config,o={}){const e=experiments.find(e=>e.id===id);if(!e)return model;const rig=new T.Group(),color=new T.Color(themeFor(e).color),params=coreParams(e),handles=[],labels=[];rig.userData.isRig=true;model.group.add(rig);

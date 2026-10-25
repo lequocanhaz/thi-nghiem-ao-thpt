@@ -1119,3 +1119,111 @@ button,a.button{transition:none}
 
 /* v54: explain invalid physical domains without depicting a false valid state. */
 .domain-notice{position:absolute;inset:0;z-index:5;display:grid;place-content:center;max-width:100%;padding:clamp(16px,4vw,48px);background:#fff8eb;color:#523409;font-size:1rem;line-height:1.7;overflow:auto;overflow-wrap:anywhere}
+
+/* Quanh Lab v59: shared interface tokens, legible controls and progressive filtering. */
+body{
+ --ql-ink:#101318;--ql-secondary:#4b5563;--ql-border:#dce1e8;
+ --ql-surface:#fff;--ql-subtle:#f5f7fa;--ql-action:#111214;--ql-focus:#2459d8;
+ --ql-radius-control:8px;--ql-radius-card:16px;--ql-radius-dialog:20px;
+ --ql-space-1:4px;--ql-space-2:8px;--ql-space-3:12px;--ql-space-4:16px;
+ --ql-space-6:24px;--ql-space-8:32px;--ql-space-12:48px;
+ --ql-caption:.8125rem;--ql-body:1rem;--ql-section:clamp(26px,3vw,36px);
+}
+button,.button,.icon-button,input,select,textarea{border-radius:var(--ql-radius-control)}
+dialog{border-radius:var(--ql-radius-dialog)}
+.home-book,.class-entry button,.recent-entry{border-radius:var(--ql-radius-card)}
+button:not(:disabled),a,input,select,textarea,summary{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease}
+button:active:not(:disabled),.button:active{background-color:#e8edf4}
+.button.primary:active,#play:active:not(:disabled),.card-open:active{background-color:#3b424d;color:#fff}
+:where(button,a,input,select,textarea,summary,[tabindex]):focus-visible{outline-color:var(--ql-focus)}
+.header nav>a[aria-current],.header nav>a.is-active{background:var(--ql-subtle);border-color:var(--ql-border);color:var(--ql-ink)}
+body:has(.home-screen) .header nav>a[aria-current],body:has(.home-screen) .header nav>a.is-active{background:#ffffff24;border-color:#ffffff50;color:#fff}
+.home-purpose{display:flex;justify-content:space-between;align-items:baseline;gap:var(--ql-space-6);padding:var(--ql-space-8) 0 var(--ql-space-4)}
+.home-purpose p{font-size:clamp(1.125rem,1.65vw,1.5rem);font-weight:650;letter-spacing:-.025em;line-height:1.45}
+.home-purpose>span{font-size:var(--ql-caption);color:var(--ql-secondary);line-height:1.6}
+.home .home-section-title{font-size:var(--ql-section)}
+.search:focus-within{border-color:var(--ql-focus);box-shadow:0 0 0 3px #2459d81a}
+#library .search{border-radius:var(--ql-radius-control)}
+#library .search input{font-size:var(--ql-body)}
+#library .search-clear{min-width:44px;min-height:44px;padding:0;border:0;background:transparent;font-size:1.5rem}
+#library .catalog-toolbar{border-radius:0;align-items:flex-start;gap:var(--ql-space-3);padding-block:var(--ql-space-4)}
+#library .filters{flex:1 1 auto;width:auto;align-items:center}
+#library .grade-filters{width:auto}
+#library .catalog-refine{min-width:0;max-width:100%;flex:0 0 auto}
+#library .catalog-refine>summary{display:flex;align-items:center;gap:var(--ql-space-2);width:max-content;min-height:44px;padding:var(--ql-space-2) var(--ql-space-3);border:1px solid var(--ql-border);border-radius:var(--ql-radius-control);font-size:.875rem;font-weight:600;list-style:none;background:var(--ql-surface)}
+#library .catalog-refine>summary::-webkit-details-marker{display:none}
+#library .catalog-refine>summary:after{content:'+';margin-left:var(--ql-space-2);font-size:1rem;font-weight:450}
+#library .catalog-refine[open]>summary:after{content:'−'}
+#library .catalog-refine>summary svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7}
+#library .catalog-refine[open]{flex:1 1 100%}
+#library .catalog-refine[open]>summary{background:var(--ql-subtle)}
+#library .catalog-refine .catalog-options{display:flex;align-items:flex-end;gap:var(--ql-space-3);width:100%;padding:var(--ql-space-4) 0 0}
+#library .catalog-options label{align-items:stretch;gap:var(--ql-space-1);min-width:min(100%,180px);flex:1 1 180px}
+#library .catalog-options label>span{font-size:var(--ql-caption);font-weight:600;color:var(--ql-secondary)}
+#library .catalog-options select{width:100%;max-width:none;min-width:0;font-size:.875rem;font-weight:500;border-radius:var(--ql-radius-control)}
+#library .catalog-scope{padding-top:var(--ql-space-3);font-size:var(--ql-caption)}
+#library .experiment-card{border-radius:var(--ql-radius-card);border-color:var(--ql-border);box-shadow:none}
+#library .experiment-card:focus-within{border-color:var(--ql-focus);box-shadow:0 0 0 2px #2459d812}
+#library .card-open,#library .preview-button{border-radius:var(--ql-radius-control)}
+#library .card-purpose{color:#303b48}
+.stage-shell,.controls,.research-dock{border-color:var(--ql-border);border-radius:var(--ql-radius-card)}
+.meter strong,.value-entry input,.data-table,.time-slider output{font-variant-numeric:tabular-nums lining-nums}
+/* Model actions sit outside the drawing area; opening help is an explicit action. */
+.teaching-tools{position:relative;inset:auto;justify-content:flex-end;padding:var(--ql-space-2);background:var(--ql-surface);border-top:1px solid var(--ql-border)}
+.teaching-tools>button,.teaching-guide>summary{box-shadow:none;border-radius:var(--ql-radius-control)}
+.teaching-guide-content{top:auto;bottom:calc(100% + 2px);right:var(--ql-space-2);z-index:8;border-radius:var(--ql-radius-control)}
+.stage-viewport>.touch-interaction{bottom:72px}
+.stage-shell.is-fullscreen .stage-viewport{flex-direction:column}
+.stage-shell.is-fullscreen .teaching-tools{flex:none}
+@media(max-width:980px){
+ .home-purpose{flex-direction:column;gap:var(--ql-space-2)}
+ #library .filters{flex-basis:100%}
+}
+@media(max-width:620px){
+ .home-purpose{padding:var(--ql-space-4) 0 var(--ql-space-2)}
+ #library .filters{gap:var(--ql-space-2)}
+ #library .grade-filters{width:100%}
+ #library .catalog-refine{width:100%}
+ #library .catalog-refine>summary{width:100%;justify-content:flex-start}
+ #library .catalog-refine>summary:after{margin-left:auto}
+ #library .catalog-options label{flex:1 1 100%;min-width:0}
+ #library .catalog-options select{font-size:16px}
+ .teaching-tools{justify-content:flex-start}
+ .teaching-guide-content{max-width:calc(100vw - 50px)}
+ /* Observation precedes the longer playback and timing controls on a phone. */
+ .stage-shell:not(.is-fullscreen){display:flex;flex-direction:column}
+ .stage-shell:not(.is-fullscreen)>*{order:4}
+ .stage-shell:not(.is-fullscreen)>.stage-top,.stage-shell:not(.is-fullscreen)>.renderer-notice{order:0}
+ .stage-shell:not(.is-fullscreen)>.stage-viewport{order:1}
+ .stage-shell:not(.is-fullscreen)>.space-controls{order:2}
+ .stage-shell:not(.is-fullscreen)>.transport{order:3;border-top:1px solid var(--ql-border)}
+ .stage-top .live-tag{white-space:nowrap}
+ .transport>[data-action=reset]{margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){button,a,input,select,textarea,summary{transition:none}}
+@media(forced-colors:active){#library .experiment-card:focus-within{outline:2px solid Highlight}.search:focus-within{outline:2px solid Highlight}}
+/* Wide studios keep playback in one row and its process note below. */
+@media(min-width:1280px){
+ .lab-breadcrumb{margin-bottom:12px}
+ .lab-heading h1{margin-block:4px}
+ .lab-intro{margin:8px 0 12px}
+ .workspace-toolbar{margin-bottom:10px}
+ .stage-top{padding:8px 12px}
+ .transport{gap:6px;padding:8px 12px}
+ .transport .time-slider{order:0;flex:1 1 140px;min-width:140px}
+ .transport .activity-caption{order:1;flex:1 1 100%;font-size:.75rem;line-height:1.5}
+ .lab:not([data-controls-collapsed=true]):not(.focus):not([data-layout=present]) .transport>.parameters-shortcut{display:none}
+ .transport>[data-action=toggle-guidance]{display:none}
+}
+/* Each formula preview is a focusable region, separate from the card opening links. */
+#library .card-image{overflow-x:auto;overflow-y:hidden;background:#fff;scrollbar-width:thin}
+#library .catalog-formula .math-formula{overflow:visible}
+#library .catalog-formula .math-tex.math-block{overflow:visible;max-width:none}
+/* Native fullscreen and the fallback presentation share the same usable layout. */
+.stage-shell:fullscreen{display:flex;flex-direction:column;width:100%;height:100dvh;border:0;border-radius:0;overflow:auto;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.stage-shell:fullscreen>.stage-top,.stage-shell:fullscreen>.transport,.stage-shell:fullscreen>.space-controls,.stage-shell:fullscreen>.readouts{flex:none}
+.stage-shell:fullscreen .stage-viewport{display:flex;flex-direction:column;flex:1;min-height:240px}
+.stage-shell:fullscreen .visual{flex:1;height:auto;min-height:240px}
+.stage-shell:fullscreen .teaching-tools{flex:none}
+.stage-shell:fullscreen .direct-tools,.stage-shell:fullscreen .coordinate-legend{display:none}
+@media(max-width:620px){.stage-shell:fullscreen>.stage-viewport{flex:1 0 auto}}

@@ -1,6 +1,6 @@
 import {i18n,dictionaries} from './i18n.js?v=54';
-import {mountLanguagePill} from './language-pill.js?v=57';
-import {experiments} from './experiments.js?v=54';
+import {mountLanguagePill} from './language-pill.js?v=59';
+import {experiments} from './experiments.js?v=59';
 import {englishStudy,englishParameter,englishTopic} from './english-study.js?v=56';
 import {messagePairs} from './locales/messages.js?v=54';
 import {physicsGlossary} from './locales/glossary.js?v=54';
@@ -16,6 +16,11 @@ for(const id of Object.keys(dictionaries['vi-VN'].experiments)){
 }
 for(const e of experiments){const guide=englishStudy(e);if(!translations.has(e.topic))pair(e.topic,englishTopic(e.topic));pair(e.description,guide.explanation);pair(e.description.split(/(?<=[.!?])\s/)[0],guide.explanation);if(e.subtitle)pair(e.subtitle,guide.investigation);(e.params||[]).forEach((p,i)=>pair(p.label,englishParameter(p,i)));}
 for(const [vi,en] of [
+ ['Quan sát hiện tượng. Đo đạc và giải thích.','Observe phenomena. Measure and explain.'],
+ ['300 thí nghiệm tương tác · Vật lí lớp 10–12','300 interactive experiments · Physics grades 10–12'],
+ ['Thêm bộ lọc','More filters'],['Mức độ','Level'],
+ ['Tìm định luật Ohm, điện trường, con lắc…','Find Ohm’s law, electric fields, pendulums…'],
+ ['Giới thiệu','About'],['Danh mục đầy đủ','Full catalog'],
  ['Thí nghiệm','Experiments'],['Vật Lí','Physics'],['Vật lí','Physics'],['Thư viện thí nghiệm','Experiment library'],
  ['Vật lí 10','Physics 10'],['Vật lí 11','Physics 11'],['Vật lí 12','Physics 12'],
  ['Bìa Vật lí 10','Physics 10 book cover'],['Bìa Vật lí 11','Physics 11 book cover'],['Bìa Vật lí 12','Physics 12 book cover'],
@@ -145,7 +150,7 @@ export function translateShort(source){
 const originals=new WeakMap();
 let observer;
 let scheduled=false;
-const rootSelectors=['.header','#main','#dialog','#aiAssistant','#toast'];
+const rootSelectors=['.header','#main','#dialog','#aiAssistant','#toast','footer'];
 const blocked='script,style,noscript,textarea,code,pre,svg,canvas,.math-tex,.ai-messages,.ai-compose,.lesson-content p,.lesson-content li,.lesson-content dd,.lesson-content .lesson-scope,.notes-area,.source-cards p';
 function eligible(element){
  return !!element&&!element.closest(blocked);
@@ -185,11 +190,11 @@ function visit(container,english){
   else translateElement(node,english);
  }
 }
-function localizeAll(){
+function syncLocalePage(){
  const english=getLocale()==='en-US';
  document.documentElement.lang=english?'en-US':'vi';
  const labId=(location.hash.match(/^#lab\/([^?]+)/)||[])[1];const current=experiments.find(e=>e.id===labId);document.title=english?(current?englishStudy(current).title+' · Quanh Lab':'Quanh Lab · Experiment library'):(current?current.shortTitle+' · Quanh Lab':'Quanh Lab · Thư viện thí nghiệm');
- for(const selector of rootSelectors)visit(document.querySelector(selector),english);
+ const description=document.querySelector('meta[name="description"]');if(description)description.content=current?(english?englishStudy(current).explanation:current.description):(english?'Explore 300 interactive high-school physics experiments. Adjust parameters, record measurements, analyze graphs and read Vietnamese textbooks.':'300 thí nghiệm Vật lí THPT tương tác. Điều chỉnh tham số, ghi số liệu, phân tích đồ thị và đọc sách Vật lí lớp 10–12.');
  const lab=document.querySelector('.lab');
  let guidance=lab?.querySelector('.language-guidance');
  if(!english){guidance?.remove();return;}
@@ -202,14 +207,40 @@ function localizeAll(){
   heading?.insertAdjacentElement('afterend',guidance);
  }
 }
+function localizeAll(){
+ syncLocalePage();
+ const english=getLocale()==='en-US';
+ for(const selector of rootSelectors)visit(document.querySelector(selector),english);
+}
+// Simulation readouts change often. Translate only changed subtrees rather than
+// walking every control, card, lesson and chat panel on each animation update.
+const pendingTranslations=new Set();
 function observeUpdates(){
- observer?.disconnect();
+ observer?.disconnect();pendingTranslations.clear();
  if(getLocale()!=='en-US')return;
  observer=new MutationObserver(mutations=>{
-  if(mutations.every(m=>m.type==='characterData'&&originals.has(m.target)&&m.target.nodeValue===originals.get(m.target).output))return;
-  if(scheduled)return;
+  for(const mutation of mutations){
+   if(mutation.type==='characterData'){
+    const saved=originals.get(mutation.target);
+    if(saved&&mutation.target.nodeValue===saved.output)continue;
+    if(eligible(mutation.target.parentElement))pendingTranslations.add(mutation.target);
+   }else{
+    for(const node of mutation.addedNodes)if(node.nodeType===1?eligible(node):eligible(node.parentElement))pendingTranslations.add(node);
+   }
+  }
+  if(scheduled||!pendingTranslations.size)return;
   scheduled=true;
-  requestAnimationFrame(()=>{scheduled=false;localizeAll();});
+  requestAnimationFrame(()=>{
+   scheduled=false;
+   if(getLocale()!=='en-US'){pendingTranslations.clear();return;}
+   const nodes=[...pendingTranslations];pendingTranslations.clear();
+   for(const node of nodes){
+    if(!node.isConnected||nodes.some(parent=>parent!==node&&parent.nodeType===1&&parent.contains(node)))continue;
+    if(node.nodeType===3)translateText(node,true);
+    else if(node.nodeType===1)visit(node,true);
+   }
+   syncLocalePage();
+  });
  });
  for(const selector of rootSelectors){const target=document.querySelector(selector);if(target)observer.observe(target,{subtree:true,childList:true,characterData:true});}
 }

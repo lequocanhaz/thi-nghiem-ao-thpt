@@ -1,4 +1,4 @@
-import {rowInGraphMode} from './electric-analysis.js?v=54';
+import {rowInGraphMode} from './electric-analysis.js?v=59';
 import {metricColor} from './workspace.js?v=54';
 const curveCache=new Map();
 import {evaluate,duration} from './models.js?v=54';

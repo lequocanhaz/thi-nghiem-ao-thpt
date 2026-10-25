@@ -1,7 +1,7 @@
 import {modelLabel} from './model-label.js?v=49';
 import {tickStep,tickValues,tickText} from './plot-grid.js?v=35';
 import * as T from './vendor/three.module.min.js';
-import {coordinateProfile,hasCoordinateGrid} from './coordinate-profile.js?v=54';
+import {coordinateProfile,hasCoordinateGrid} from './coordinate-profile.js?v=59';
 export {coordinateProfile,hasCoordinateGrid};
 const colors={x:0x2360ba,y:0xb74a25,h:0xb74a25,u:0xb74a25,z:0x087a65};
 const direction=key=>new T.Vector3(...(key==='x'?[1,0,0]:key==='z'?[0,0,1]:[0,1,0]));

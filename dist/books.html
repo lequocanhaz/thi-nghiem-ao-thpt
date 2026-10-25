@@ -7,10 +7,10 @@
  <title>Sách giáo khoa · Quanh Lab</title>
  <link rel="icon" href="brand/quanh-mark.svg?v=37" type="image/svg+xml">
  <link rel="preload" href="fonts/ManropeVariable.woff2" as="font" type="font/woff2" crossorigin>
- <link rel="stylesheet" href="app.css?v=44">
- <link rel="stylesheet" href="books.css?v=41">
- <script type="module" src="book-reader.js?v=58"></script>
- <script type="module" src="book-language.js?v=58"></script>
+ <link rel="stylesheet" href="app.css?v=59">
+ <link rel="stylesheet" href="books.css?v=59">
+ <script type="module" src="book-reader.js?v=59"></script>
+ <script type="module" src="book-language.js?v=59"></script>
 </head>
 <body class="books-body">
  <a class="skip" href="#booksMain">Đến nội dung</a>
@@ -21,12 +21,13 @@
  <main id="booksMain" class="books-main" tabindex="-1">
   <section id="bookShelf" aria-labelledby="booksTitle"><div class="books-heading"><span class="eyebrow">Kết nối tri thức với cuộc sống</span><h1 id="booksTitle">Sách giáo khoa</h1></div><div id="bookCards" class="textbook-cards"><p role="status">Đang mở thư viện sách…</p></div></section>
   <section id="reader" class="book-reader" hidden aria-labelledby="readingTitle">
-   <div class="reading-heading"><div><a class="back" href="books.html">← Đổi sách</a><h1 id="readingTitle">Vật lí</h1></div><div class="reading-selects"><label><span class="sr-only">Đổi lớp</span><select id="bookGrade" aria-label="Đổi lớp"></select></label><label><span class="sr-only">Mục lục</span><select id="bookChapter" aria-label="Mục lục theo bài học"></select></label></div></div>
+   <div class="reading-heading"><div><a class="back" href="books.html">← Đổi sách</a><h1 id="readingTitle" tabindex="-1">Vật lí</h1></div><div class="reading-selects"><label><span>Lớp học</span><select id="bookGrade" aria-label="Đổi lớp"></select></label><label><span>Mục lục theo bài</span><select id="bookChapter" aria-label="Mục lục theo bài học"></select></label></div></div>
    <div id="bookToolbar" class="reading-toolbar" aria-label="Điều khiển sách">
-    <div class="page-navigation"><button id="bookPrevious" class="icon-button" aria-label="Trang trước">←</button><form id="pageForm"><label for="bookPage" class="sr-only">Đến trang</label><input id="bookPage" type="number" min="1" inputmode="numeric" value="1" aria-label="Đến trang"><span id="pageTotal">/ 1</span><button type="submit" class="sr-only">Đến trang</button></form><button id="bookNext" class="icon-button" aria-label="Trang sau">→</button></div>
+    <div class="page-navigation"><button id="bookPrevious" class="icon-button" aria-label="Trang trước">←</button><form id="pageForm"><label for="bookPage">Trang tệp</label><input id="bookPage" type="number" min="1" inputmode="numeric" value="1" aria-label="Đến trang tệp" aria-describedby="bookPageNote"><span id="pageTotal">/ 1</span><button type="submit" class="page-go" aria-label="Đến trang tệp">Đến</button></form><button id="bookNext" class="icon-button" aria-label="Trang sau">→</button></div>
     <div class="reading-tools"><button id="zoomOut" class="icon-button" aria-label="Thu nhỏ">−</button><output id="zoomValue" aria-live="polite">100%</output><button id="zoomIn" class="icon-button" aria-label="Phóng to">+</button><button id="spreadMode" aria-pressed="true">Hai trang</button><button id="bookFullscreen" class="icon-button" aria-label="Đọc toàn màn hình"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div>
    </div>
-   <div id="bookStage" class="book-stage" aria-busy="false"><div id="paperStack" class="paper-stack"></div></div>
+   <div class="book-stage-wrap"><div id="bookStage" class="book-stage" tabindex="0" role="region" aria-label="Trang sách" aria-describedby="bookReadingHint" aria-busy="false"><div id="paperStack" class="paper-stack"></div></div><p id="bookLoading" class="book-loading" role="status" hidden>Đang tải trang sách…</p></div>
+   <div class="book-reading-meta"><p id="bookPageNote"></p><p id="bookReadingHint">Vuốt để lật trang; khi phóng to, kéo để đọc. Dùng các nút hoặc phím ← → trong trang sách để lật.</p></div>
    <p id="bookStatus" class="sr-only" role="status" aria-live="polite"></p>
    <div id="bookError" class="book-error" hidden role="alert"><span>Chưa tải được trang sách.</span><button id="retryBook">Thử lại</button></div>
   </section>

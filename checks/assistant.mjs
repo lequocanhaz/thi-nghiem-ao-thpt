@@ -4,6 +4,7 @@ import {libraryContext} from '../dist/assistant-context.js';
 import {experiments} from '../dist/experiments.js?v=17';
 import './assistant-prompts-v53.mjs';
 import './ai-locale-v54.mjs';
+import './assistant-ux-v59.mjs';
 const catalog=libraryContext(experiments);assert.equal(catalog.totalExperiments,300);assert.equal(catalog.grades.reduce((n,g)=>n+g.count,0),300);assert.equal(catalog.topics.reduce((n,t)=>n+t.count,0),300);assert.deepEqual(catalog.grades.map(g=>g.grade).sort(),[10,11,12]);
 const setup=()=>parseHTML('<body><button id="openAssistant"></button></body>');const {document}=setup();let id='ohm',sent,calls=0;
 const app=new LabAssistant({document,getContext:()=>({id,title:'Định luật Ohm',parameters:[{key:'u',value:6}]}),endpoint:'https://assistant.example/api/chat',fetcher:async(url,options)=>{sent=JSON.parse(options.body);calls++;return Response.json({answer:'<img src=x onerror=alert(1)> I = U/R.'});}});
