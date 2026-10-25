@@ -1,0 +1,4429 @@
+{
+  "testFilter": "all",
+  "scope": "Chromium headless + SwiftShader; isolated profiles, external AI blocked; simulated responsive viewports",
+  "tests": [
+    {
+      "name": "responsive 320px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 320,
+          "scroll": 320,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 118,
+            "top": 0,
+            "right": 320,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 333
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 352
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 362
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 493
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 118,
+            "top": 0,
+            "right": 320,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 333
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 352
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 362
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 493
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 118,
+            "top": 0,
+            "right": 320,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 333
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 352
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 362
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 493
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 118,
+            "top": 0,
+            "right": 320,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 333
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 352
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 362
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 372
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 493
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 119,
+            "top": 0,
+            "right": 320,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "cls": "stage-tools",
+              "right": 351
+            },
+            {
+              "tag": "DETAILS",
+              "id": "",
+              "cls": "view-menu",
+              "right": 351
+            },
+            {
+              "tag": "SUMMARY",
+              "id": "",
+              "cls": "",
+              "right": 351
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "cls": "view-menu-options",
+              "right": 351
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "cls": "axis-toggle selected",
+              "right": 322
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "cls": "grid-toggle",
+              "right": 352
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 339
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "cls": "",
+              "right": 322
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 119,
+            "top": 0,
+            "right": 320,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "cls": "stage-tools",
+              "right": 335
+            },
+            {
+              "tag": "DETAILS",
+              "id": "",
+              "cls": "view-menu",
+              "right": 335
+            },
+            {
+              "tag": "SUMMARY",
+              "id": "",
+              "cls": "",
+              "right": 335
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "cls": "view-menu-options",
+              "right": 335
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "cls": "axis-toggle selected",
+              "right": 324
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "cls": "grid-toggle",
+              "right": 345
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 333
+            },
+            {
+              "tag": "BUTTON",
+              "id": "",
+              "cls": "",
+              "right": 324
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 179,
+            "top": 0,
+            "right": 320,
+            "bottom": 179,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 320,
+            "height": 179,
+            "top": 0,
+            "right": 320,
+            "bottom": 179,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 13053
+    },
+    {
+      "name": "responsive 375px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 375,
+          "scroll": 375,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 118,
+            "top": 0,
+            "right": 375,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 379
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 390
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 520
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 520
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 118,
+            "top": 0,
+            "right": 375,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 379
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 390
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 520
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 520
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 118,
+            "top": 0,
+            "right": 375,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 379
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 390
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 520
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 520
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 118,
+            "top": 0,
+            "right": 375,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 379
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 390
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 399
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 520
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 520
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 119,
+            "top": 0,
+            "right": 375,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 384
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 384
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 398
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 421
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 413
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 119,
+            "top": 0,
+            "right": 375,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 384
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 384
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 398
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 421
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 413
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 129,
+            "top": 0,
+            "right": 375,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 375,
+          "scroll": 375,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 129,
+            "top": 0,
+            "right": 375,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 10044
+    },
+    {
+      "name": "responsive 390px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 118,
+            "top": 0,
+            "right": 390,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 397
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 528
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 528
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 528
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 118,
+            "top": 0,
+            "right": 390,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 397
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 528
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 528
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 528
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 118,
+            "top": 0,
+            "right": 390,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 397
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 528
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 528
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 528
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 118,
+            "top": 0,
+            "right": 390,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 397
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 407
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 528
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 528
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 528
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 119,
+            "top": 0,
+            "right": 390,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 398
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 421
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 413
+            },
+            {
+              "tag": "mn",
+              "id": "",
+              "cls": "",
+              "right": 418
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 433
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 119,
+            "top": 0,
+            "right": 390,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 398
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 421
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 413
+            },
+            {
+              "tag": "mn",
+              "id": "",
+              "cls": "",
+              "right": 418
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 433
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 129,
+            "top": 0,
+            "right": 390,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 129,
+            "top": 0,
+            "right": 390,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 11354
+    },
+    {
+      "name": "responsive 414px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 414,
+          "scroll": 414,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 118,
+            "top": 0,
+            "right": 414,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 429
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 414,
+          "scroll": 414,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 118,
+            "top": 0,
+            "right": 414,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 429
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 414,
+          "scroll": 414,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 118,
+            "top": 0,
+            "right": 414,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 429
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 414,
+          "scroll": 414,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 118,
+            "top": 0,
+            "right": 414,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 419
+            },
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 540
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 429
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 414,
+          "scroll": 414,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 119,
+            "top": 0,
+            "right": 414,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 421
+            },
+            {
+              "tag": "mn",
+              "id": "",
+              "cls": "",
+              "right": 418
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "cls": "base",
+              "right": 425
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 414,
+          "scroll": 414,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 119,
+            "top": 0,
+            "right": 414,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 421
+            },
+            {
+              "tag": "mn",
+              "id": "",
+              "cls": "",
+              "right": 418
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "cls": "base",
+              "right": 425
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 414,
+          "scroll": 414,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 129,
+            "top": 0,
+            "right": 414,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 414,
+          "scroll": 414,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 129,
+            "top": 0,
+            "right": 414,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 11094
+    },
+    {
+      "name": "responsive 430px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 430,
+          "scroll": 430,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 118,
+            "top": 0,
+            "right": 430,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 437
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 444
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 449
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 453
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 482
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 430,
+          "scroll": 430,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 118,
+            "top": 0,
+            "right": 430,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 437
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 444
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 449
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 453
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 482
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 430,
+          "scroll": 430,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 118,
+            "top": 0,
+            "right": 430,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 437
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 444
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 449
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 453
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 482
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 430,
+          "scroll": 430,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 118,
+            "top": 0,
+            "right": 430,
+            "bottom": 118,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 548
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 437
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 444
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 449
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 453
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 482
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 430,
+          "scroll": 430,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 119,
+            "top": 0,
+            "right": 430,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 433
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 430,
+          "scroll": 430,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 119,
+            "top": 0,
+            "right": 430,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 433
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 430,
+          "scroll": 430,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 129,
+            "top": 0,
+            "right": 430,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 430,
+          "scroll": 430,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 129,
+            "top": 0,
+            "right": 430,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 16707
+    },
+    {
+      "name": "responsive 768px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 768,
+          "scroll": 768,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 130,
+            "top": 0,
+            "right": 768,
+            "bottom": 130,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 771
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 791
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 797
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 813
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 820
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 768,
+          "scroll": 768,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 130,
+            "top": 0,
+            "right": 768,
+            "bottom": 130,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 771
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 791
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 797
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 813
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 820
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 768,
+          "scroll": 768,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 130,
+            "top": 0,
+            "right": 768,
+            "bottom": 130,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 771
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 791
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 797
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 813
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 820
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 768,
+          "scroll": 768,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 130,
+            "top": 0,
+            "right": 768,
+            "bottom": 130,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 932
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 771
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 791
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 797
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 813
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 820
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 768,
+          "scroll": 768,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 131,
+            "top": 0,
+            "right": 768,
+            "bottom": 131,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1023
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1023
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1023
+            },
+            {
+              "tag": "mstyle",
+              "id": "",
+              "cls": "",
+              "right": 779
+            },
+            {
+              "tag": "mfrac",
+              "id": "",
+              "cls": "",
+              "right": 779
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 778
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 778
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 784
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 768,
+          "scroll": 768,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 131,
+            "top": 0,
+            "right": 768,
+            "bottom": 131,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1036
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1036
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1036
+            },
+            {
+              "tag": "mstyle",
+              "id": "",
+              "cls": "",
+              "right": 792
+            },
+            {
+              "tag": "mfrac",
+              "id": "",
+              "cls": "",
+              "right": 792
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 791
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 780
+            },
+            {
+              "tag": "mn",
+              "id": "",
+              "cls": "",
+              "right": 776
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 768,
+          "scroll": 768,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 89,
+            "top": 0,
+            "right": 768,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 768,
+          "scroll": 768,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 89,
+            "top": 0,
+            "right": 768,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 10190
+    },
+    {
+      "name": "responsive 1024px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 88,
+            "top": 0,
+            "right": 1024,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1040
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1055
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1073
+            },
+            {
+              "tag": "msup",
+              "id": "",
+              "cls": "",
+              "right": 1101
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1092
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 88,
+            "top": 0,
+            "right": 1024,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1040
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1055
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1073
+            },
+            {
+              "tag": "msup",
+              "id": "",
+              "cls": "",
+              "right": 1101
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1092
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 88,
+            "top": 0,
+            "right": 1024,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1040
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1055
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1073
+            },
+            {
+              "tag": "msup",
+              "id": "",
+              "cls": "",
+              "right": 1101
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1092
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 88,
+            "top": 0,
+            "right": 1024,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1111
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1040
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1055
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1073
+            },
+            {
+              "tag": "msup",
+              "id": "",
+              "cls": "",
+              "right": 1101
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1092
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1265
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1265
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1265
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 1064
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1064
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1081
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 1113
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 1102
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1278
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1278
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1278
+            },
+            {
+              "tag": "mstyle",
+              "id": "",
+              "cls": "",
+              "right": 1033
+            },
+            {
+              "tag": "mfrac",
+              "id": "",
+              "cls": "",
+              "right": 1033
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1032
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1032
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 1039
+            }
+          ],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1024,
+          "scroll": 1024,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 89,
+            "top": 0,
+            "right": 1024,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 10125
+    },
+    {
+      "name": "responsive 1440px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 88,
+            "top": 0,
+            "right": 1440,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1455
+            },
+            {
+              "tag": "mstyle",
+              "id": "",
+              "cls": "",
+              "right": 1450
+            },
+            {
+              "tag": "mfrac",
+              "id": "",
+              "cls": "",
+              "right": 1450
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1447
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 88,
+            "top": 0,
+            "right": 1440,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1455
+            },
+            {
+              "tag": "mstyle",
+              "id": "",
+              "cls": "",
+              "right": 1450
+            },
+            {
+              "tag": "mfrac",
+              "id": "",
+              "cls": "",
+              "right": 1450
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1447
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 88,
+            "top": 0,
+            "right": 1440,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1455
+            },
+            {
+              "tag": "mstyle",
+              "id": "",
+              "cls": "",
+              "right": 1450
+            },
+            {
+              "tag": "mfrac",
+              "id": "",
+              "cls": "",
+              "right": 1450
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1447
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 88,
+            "top": 0,
+            "right": 1440,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1461
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1455
+            },
+            {
+              "tag": "mstyle",
+              "id": "",
+              "cls": "",
+              "right": 1450
+            },
+            {
+              "tag": "mfrac",
+              "id": "",
+              "cls": "",
+              "right": 1450
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 1447
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1440,
+          "scroll": 1440,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1440,
+            "height": 89,
+            "top": 0,
+            "right": 1440,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 15455
+    },
+    {
+      "name": "responsive 1920px: home/library/lab/book VI and EN + assistant bounds",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 88,
+            "top": 0,
+            "right": 1920,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 7640
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 7081
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 8213
+            }
+          ],
+          "route": "home",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 88,
+            "top": 0,
+            "right": 1920,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 7640
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 7081
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 8213
+            }
+          ],
+          "route": "home",
+          "locale": "en-US"
+        },
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 88,
+            "top": 0,
+            "right": 1920,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 7640
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 7081
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 8213
+            }
+          ],
+          "route": "#library",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 88,
+            "top": 0,
+            "right": 1920,
+            "bottom": 88,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 7640
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 7081
+            },
+            {
+              "tag": "path",
+              "id": "",
+              "cls": {},
+              "right": 8213
+            }
+          ],
+          "route": "#library",
+          "locale": "en-US"
+        },
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 89,
+            "top": 0,
+            "right": 1920,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "#lab/electric",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 89,
+            "top": 0,
+            "right": 1920,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "#lab/electric",
+          "locale": "en-US"
+        },
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 89,
+            "top": 0,
+            "right": 1920,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "vi-VN"
+        },
+        {
+          "width": 1920,
+          "scroll": 1920,
+          "lang": "en-US",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 89,
+            "top": 0,
+            "right": 1920,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "locale": "en-US"
+        }
+      ],
+      "durationMs": 11611
+    },
+    {
+      "name": "bilingual search, no-result recovery and grade filtering",
+      "status": "PASS",
+      "evidence": {
+        "queries": [
+          {
+            "locale": "vi-VN",
+            "query": "định luật ohm",
+            "cards": 1,
+            "status": "1 thí nghiệm"
+          },
+          {
+            "locale": "en-US",
+            "query": "Ohm",
+            "cards": 2,
+            "status": "2 experiments"
+          },
+          {
+            "locale": "vi-VN",
+            "query": "electric field",
+            "cards": 12,
+            "status": "12 thí nghiệm"
+          }
+        ],
+        "noResults": true,
+        "clearFilters": true,
+        "gradeFilter": true
+      },
+      "durationMs": 5312
+    },
+    {
+      "name": "browser Back/Forward and typing-safe search history",
+      "status": "PASS",
+      "evidence": {
+        "typingAddsAtMostOneHistoryEntry": true,
+        "backRestoresSearch": true,
+        "forwardRestoresLab": true
+      },
+      "durationMs": 15175
+    },
+    {
+      "name": "simulated landscape rotation 844×390 and 667×375, back to portrait",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 844,
+          "scroll": 844,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 844,
+            "height": 151,
+            "top": 0,
+            "right": 844,
+            "bottom": 151,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 1090
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 1090
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 1090
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 851
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 889
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 889
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 907
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 938
+            }
+          ],
+          "route": "#lab/electric",
+          "height": 390
+        },
+        {
+          "width": 667,
+          "scroll": 667,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 667,
+            "height": 131,
+            "top": 0,
+            "right": 667,
+            "bottom": 131,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 922
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 922
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 922
+            },
+            {
+              "tag": "mstyle",
+              "id": "",
+              "cls": "",
+              "right": 678
+            },
+            {
+              "tag": "mfrac",
+              "id": "",
+              "cls": "",
+              "right": 678
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 677
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 677
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 683
+            }
+          ],
+          "route": "#lab/electric",
+          "height": 375
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 119,
+            "top": 0,
+            "right": 390,
+            "bottom": 119,
+            "left": 0
+          },
+          "overflow": [
+            {
+              "tag": "math",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "semantics",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mrow",
+              "id": "",
+              "cls": "",
+              "right": 433
+            },
+            {
+              "tag": "mo",
+              "id": "",
+              "cls": "",
+              "right": 398
+            },
+            {
+              "tag": "msub",
+              "id": "",
+              "cls": "",
+              "right": 421
+            },
+            {
+              "tag": "mi",
+              "id": "",
+              "cls": "",
+              "right": 413
+            },
+            {
+              "tag": "mn",
+              "id": "",
+              "cls": "",
+              "right": 418
+            },
+            {
+              "tag": "mover",
+              "id": "",
+              "cls": "",
+              "right": 433
+            }
+          ],
+          "route": "#lab/electric",
+          "height": 844
+        },
+        {
+          "width": 844,
+          "scroll": 844,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 844,
+            "height": 89,
+            "top": 0,
+            "right": 844,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "height": 390
+        },
+        {
+          "width": 667,
+          "scroll": 667,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 667,
+            "height": 89,
+            "top": 0,
+            "right": 667,
+            "bottom": 89,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "height": 375
+        },
+        {
+          "width": 390,
+          "scroll": 390,
+          "lang": "vi",
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 129,
+            "top": 0,
+            "right": 390,
+            "bottom": 129,
+            "left": 0
+          },
+          "overflow": [],
+          "route": "books.html?grade=10&page=7",
+          "height": 844
+        }
+      ],
+      "durationMs": 12713
+    },
+    {
+      "name": "language switches and responsive layout preserve simulation, parameters, rows, notes; backup/import/reload",
+      "status": "PASS",
+      "evidence": {
+        "parameter": "q1",
+        "value": 4.05,
+        "recordedRows": 2,
+        "languageRoundtrips": 3,
+        "sameCanvasAndInput": true,
+        "responsivePreservesSession": true,
+        "backupImportReload": true
+      },
+      "durationMs": 26402
+    },
+    {
+      "name": "destructive measurement deletion: confirmation, cancel and undo",
+      "status": "PASS",
+      "evidence": {
+        "confirmation": true,
+        "cancelRetainsRows": true,
+        "confirmDeletesRows": true,
+        "undoRestoresRows": true
+      },
+      "durationMs": 14123
+    },
+    {
+      "name": "three textbooks: next/previous, zoom, original images and VI/EN page retention",
+      "status": "PASS",
+      "evidence": [
+        {
+          "grade": 10,
+          "pageRoundtrip": "7→8→7",
+          "zoom": true,
+          "localeRetainsPage": true,
+          "imageLoaded": true,
+          "reloadRetainsPage": true
+        },
+        {
+          "grade": 11,
+          "pageRoundtrip": "7→8→7",
+          "zoom": true,
+          "localeRetainsPage": true,
+          "imageLoaded": true,
+          "reloadRetainsPage": true
+        },
+        {
+          "grade": 12,
+          "pageRoundtrip": "7→8→7",
+          "zoom": true,
+          "localeRetainsPage": true,
+          "imageLoaded": true,
+          "reloadRetainsPage": true
+        }
+      ],
+      "durationMs": 10148
+    },
+    {
+      "name": "assistant draft, contextual suggestions, language retention and Escape focus",
+      "status": "PASS",
+      "evidence": {
+        "draftPreserved": true,
+        "promptDoesNotSubmit": true,
+        "languagePreservesDraft": true,
+        "closeReopenPreservesDraft": true,
+        "escapeRestoresFocus": true
+      },
+      "durationMs": 12088
+    },
+    {
+      "name": "static discovery/product pages at320/390/1440:300 links, formulas, lab CTA, footer focus",
+      "status": "PASS",
+      "evidence": {
+        "pages": [
+          {
+            "width": 320,
+            "scroll": 320,
+            "lang": "vi",
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 320,
+              "height": 125,
+              "top": 0,
+              "right": 320,
+              "bottom": 125,
+              "left": 0
+            },
+            "overflow": [],
+            "experimentLinks": 300,
+            "route": "experiments/"
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "lang": "vi",
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 320,
+              "height": 125,
+              "top": 0,
+              "right": 320,
+              "bottom": 125,
+              "left": 0
+            },
+            "overflow": [
+              {
+                "tag": "semantics",
+                "id": "",
+                "cls": "",
+                "right": 333
+              },
+              {
+                "tag": "mrow",
+                "id": "",
+                "cls": "",
+                "right": 333
+              },
+              {
+                "tag": "mstyle",
+                "id": "",
+                "cls": "",
+                "right": 333
+              },
+              {
+                "tag": "mfrac",
+                "id": "",
+                "cls": "",
+                "right": 333
+              },
+              {
+                "tag": "mn",
+                "id": "",
+                "cls": "",
+                "right": 330
+              },
+              {
+                "tag": "mi",
+                "id": "",
+                "cls": "",
+                "right": 332
+              }
+            ],
+            "formulaRenderedAndLabOpened": true,
+            "route": "experiments/ohm.html"
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "lang": "vi",
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 320,
+              "height": 125,
+              "top": 0,
+              "right": 320,
+              "bottom": 125,
+              "left": 0
+            },
+            "overflow": [],
+            "route": "about.html"
+          },
+          {
+            "width": 320,
+            "scroll": 320,
+            "lang": "en",
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 320,
+              "height": 125,
+              "top": 0,
+              "right": 320,
+              "bottom": 125,
+              "left": 0
+            },
+            "overflow": [],
+            "route": "about-en.html"
+          },
+          {
+            "width": 390,
+            "scroll": 390,
+            "lang": "vi",
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 125,
+              "top": 0,
+              "right": 390,
+              "bottom": 125,
+              "left": 0
+            },
+            "overflow": [],
+            "experimentLinks": 300,
+            "route": "experiments/"
+          },
+          {
+            "width": 390,
+            "scroll": 390,
+            "lang": "vi",
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 125,
+              "top": 0,
+              "right": 390,
+              "bottom": 125,
+              "left": 0
+            },
+            "overflow": [],
+            "formulaRenderedAndLabOpened": true,
+            "route": "experiments/ohm.html"
+          },
+          {
+            "width": 390,
+            "scroll": 390,
+            "lang": "vi",
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 125,
+              "top": 0,
+              "right": 390,
+              "bottom": 125,
+              "left": 0
+            },
+            "overflow": [],
+            "route": "about.html"
+          },
+          {
+            "width": 390,
+            "scroll": 390,
+            "lang": "en",
+            "header": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 125,
+              "top": 0,
+              "right": 390,
+              "bottom": 125,
+              "left": 0
+            },
+            "overflow": [],
+            "route": "about-en.html"
+          },
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "lang": "vi",
+            "header": {
+              "x": 160,
+              "y": 0,
+              "width": 1120,
+              "height": 93,
+              "top": 0,
+              "right": 1280,
+              "bottom": 93,
+              "left": 160
+            },
+            "overflow": [],
+            "experimentLinks": 300,
+            "route": "experiments/"
+          },
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "lang": "vi",
+            "header": {
+              "x": 160,
+              "y": 0,
+              "width": 1120,
+              "height": 93,
+              "top": 0,
+              "right": 1280,
+              "bottom": 93,
+              "left": 160
+            },
+            "overflow": [],
+            "formulaRenderedAndLabOpened": true,
+            "route": "experiments/ohm.html"
+          },
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "lang": "vi",
+            "header": {
+              "x": 160,
+              "y": 0,
+              "width": 1120,
+              "height": 93,
+              "top": 0,
+              "right": 1280,
+              "bottom": 93,
+              "left": 160
+            },
+            "overflow": [],
+            "route": "about.html"
+          },
+          {
+            "width": 1440,
+            "scroll": 1440,
+            "lang": "en",
+            "header": {
+              "x": 160,
+              "y": 0,
+              "width": 1120,
+              "height": 93,
+              "top": 0,
+              "right": 1280,
+              "bottom": 93,
+              "left": 160
+            },
+            "overflow": [],
+            "route": "about-en.html"
+          }
+        ],
+        "footerKeyboardFocus": true
+      },
+      "durationMs": 36138
+    },
+    {
+      "name": "actual browser scene geometry: finite collision contact and unclipped resonant sinusoid at390/1440",
+      "status": "PASS",
+      "evidence": [
+        {
+          "width": 390,
+          "experiment": "collision",
+          "state": {
+            "m1": 5,
+            "m2": 5,
+            "v1": 2,
+            "v2": -2,
+            "e": 0,
+            "t": 1.5
+          },
+          "cartCount": 2,
+          "gap": -6.4373017194530036e-09,
+          "renderer": "WebGLRenderer",
+          "projectionRetainsState": true
+        },
+        {
+          "width": 390,
+          "experiment": "collision",
+          "state": {
+            "m1": 0.05,
+            "m2": 15,
+            "v1": 2,
+            "v2": -2,
+            "e": 0,
+            "t": 1.5
+          },
+          "cartCount": 2,
+          "gap": -6.4373017194530036e-09,
+          "renderer": "WebGLRenderer",
+          "projectionRetainsState": true
+        },
+        {
+          "width": 390,
+          "experiment": "resonance",
+          "state": {
+            "f": 1,
+            "f0": 1,
+            "beta": 0.1,
+            "force": 2,
+            "t": 0.125
+          },
+          "positions": [
+            {
+              "t": 0.125,
+              "x": 1.1667261889578036,
+              "expected": 1.1667261889578033
+            },
+            {
+              "t": 0.25,
+              "x": 1.65,
+              "expected": 1.65
+            }
+          ],
+          "projectionRetainsState": true
+        },
+        {
+          "width": 1440,
+          "experiment": "collision",
+          "state": {
+            "m1": 5,
+            "m2": 5,
+            "v1": 2,
+            "v2": -2,
+            "e": 0,
+            "t": 1.5
+          },
+          "cartCount": 2,
+          "gap": -6.4373017194530036e-09,
+          "renderer": "WebGLRenderer",
+          "projectionRetainsState": true
+        },
+        {
+          "width": 1440,
+          "experiment": "collision",
+          "state": {
+            "m1": 0.05,
+            "m2": 15,
+            "v1": 2,
+            "v2": -2,
+            "e": 0,
+            "t": 1.5
+          },
+          "cartCount": 2,
+          "gap": -6.4373017194530036e-09,
+          "renderer": "WebGLRenderer",
+          "projectionRetainsState": true
+        },
+        {
+          "width": 1440,
+          "experiment": "resonance",
+          "state": {
+            "f": 1,
+            "f0": 1,
+            "beta": 0.1,
+            "force": 2,
+            "t": 0.125
+          },
+          "positions": [
+            {
+              "t": 0.125,
+              "x": 1.1667261889578036,
+              "expected": 1.1667261889578033
+            },
+            {
+              "t": 0.25,
+              "x": 1.65,
+              "expected": 1.65
+            }
+          ],
+          "projectionRetainsState": true
+        }
+      ],
+      "durationMs": 23015
+    },
+    {
+      "name": "no uncaught browser JavaScript errors",
+      "status": "PASS",
+      "evidence": {
+        "pageErrors": []
+      },
+      "durationMs": 0
+    },
+    {
+      "name": "local HTTP assets load successfully",
+      "status": "PASS",
+      "evidence": {
+        "failedAssets": []
+      },
+      "durationMs": 0
+    }
+  ],
+  "pageErrors": [],
+  "requests": [],
+  "localHTTPErrors": [],
+  "limits": [
+    "No physical iPhone, iOS Safari or Android Chrome test.",
+    "No hardware FPS, real virtual keyboard or exhaustive visual review of all 300 labs.",
+    "Independent model/catalog/asset coverage is supplied by npm run check."
+  ]
+}

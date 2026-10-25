@@ -1,6 +1,7 @@
 import {leverGeometry} from './lever-geometry.js?v=54';
 import {interferenceWindow} from './simulation-space.js?v=43';
-import {trackLayout} from './track-layout.js?v=54';
+import {trackLayout} from './track-layout.js?v=59';
+import {COLLISION_CART_SCALE,collisionCartCenter} from './collision-layout.js?v=59';
 import {labCart,cable} from './apparatus.js?v=35';
 import {buildDiscoveryModel} from './discovery-scenes.js?v=35';
 import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=35';
@@ -31,8 +32,10 @@ function incline(g,s,d,o){platform(g,7,4);const ramp=new T.Group();g.add(ramp);b
 function collision(g,s,d,o){
  const track=new T.Group();track.name='motion-track';g.add(track);
  const a=trolley(g,C.blue),b=trolley(g,C.orange);a.name='motion-cart';b.name='motion-cart';
+ const loads=[a,b].map(cart=>{cart.scale.setScalar(COLLISION_CART_SCALE);const load=box(cart,.44,.22,.42,C.metal);load.name='collision-load';return load;});
  const arrows=[arrow(g,V(),V(1,0,0),C.blue),arrow(g,V(),V(-1,0,0),C.orange)];
- return(s,d,c)=>{resizeTrack(g,track,trackLayout('collision',s));a.position.x=d.x1*.28-.42;b.position.x=d.x2*.28+.42;a.scale.setScalar(.8+s.m1*.1);b.scale.setScalar(.8+s.m2*.1);
+ return(s,d,c)=>{resizeTrack(g,track,trackLayout('collision',s));a.position.x=collisionCartCenter(d.x1,-1);b.position.x=collisionCartCenter(d.x2,1);
+  loads.forEach((load,i)=>{load.scale.y=.4+.5*Math.cbrt(i?s.m2:s.m1);load.position.y=.71+.11*load.scale.y;});
   [a,b].forEach((m,i)=>{m.position.y=.17-.063*m.scale.y;const v=i?d.v2:d.v1,arrow=arrows[i];arrow.position.set(m.position.x,Math.max(1.2,m.scale.y*.8),0);arrow.visible=c.switches?.vectors!==false&&Math.abs(v)>.01;arrow.setDirection(V(Math.sign(v)||1,0,0));arrow.setLength(Math.max(.05,Math.min(1.3,Math.abs(v)*.3)),.14,.07);});
  };
 }
@@ -67,7 +70,12 @@ function pendulum(g,s,d,o){
 function oscillator(g,s,d,o,resonance=false){
  platform(g,7,3);const rail=box(g,6,.10,.55,0xf7f9fb,0,.12,0),mount=box(g,.15,1.0,.8,C.metal,-2.65,.58,0);
  const mass=box(g,.65,.62,.65,resonance?C.purple:C.blue,0,.60,0),spring=flexibleTube(g,121,.025,C.metal),driver=resonance?sphere(g,.1,C.orange,-2.8,.6,0):null;
- return(s,d)=>{const amplitude=resonance?1.65:Math.abs(s.a)*.15,anchor=Math.min(-2.55,-amplitude-.8),left=Math.min(-3,anchor-.25),right=Math.max(3,amplitude+.5),x=resonance?Math.max(-1.65,Math.min(1.65,d.x*6)):d.x*.15;
+ mass.name='oscillator-mass';
+ return(s,d)=>{
+  // Choose one display scale for the entire steady-state cycle. Clipping x
+  // itself would flatten the waveform and make a moving oscillator stick.
+  const displayScale=resonance?Math.min(6,1.65/Math.max(Number.MIN_VALUE,d.amplitude)):.15;
+  const amplitude=resonance?d.amplitude*displayScale:Math.abs(s.a)*displayScale,anchor=Math.min(-2.55,-amplitude-.8),left=Math.min(-3,anchor-.25),right=Math.max(3,amplitude+.5),x=d.x*displayScale;
   rail.scale.x=(right-left)/6;rail.position.x=(left+right)/2;mount.position.x=anchor-.1;
   g.userData.motionBounds=new T.Box3(V(left-1,-.05,-.5),V(right+1,1.5,.5));
   mass.position.x=x;spring.userData.update(Array.from({length:121},(_,j)=>{const f=j/120,a=f*Math.PI*18;return V(anchor+f*(x-.325-anchor),.6+.13*Math.cos(a),.13*Math.sin(a));}));

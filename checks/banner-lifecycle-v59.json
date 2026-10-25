@@ -1,0 +1,24 @@
+{
+  "baselineCommit": "7e491e0c641dca33ed222b47942b085e728ab590",
+  "reason": "The v51 full-line click-handler hash also freezes unrelated deletion/import workflows. v59 protects the actual unchanged banner functions, routing, fullscreen case and lifecycle separately; historic v51 baseline is retained. Only pending confirmation cleanup is excluded from routing.",
+  "patterns": {
+    "import": "import \\{BannerScene\\} from '[^']+';",
+    "stop": "function stopBanner\\(\\)\\{[^\\n]+",
+    "mount": "function mountBanner\\(\\)\\{[^\\n]+",
+    "home": "function renderHome\\(\\)\\{[^\\n]+",
+    "lab": "function renderLab\\(e\\)\\{[^\\n]+",
+    "route": "function route\\(\\)\\{[^\\n]+",
+    "fullscreen": "case 'banner-fullscreen':[\\s\\S]*?break;case 'locate-parameter':",
+    "lifecycle": "window.addEventListener\\('hashchange',[^\\n]+"
+  },
+  "sha256": {
+    "import": "09fb2463b987cb52f9d7131f356277127066e4760629dc30ca58cfa5d23968b3",
+    "stop": "1f3edc094014892bbd5fd93efc962e1e9db9dc778e77f85d62e600c9dbc1c9d9",
+    "mount": "fdb9147600d83a7417224eed81f0e7b53f2fbb92c14e290e8814eea594f73fb2",
+    "home": "593b2da47dbabfe953b2c842794dec42d85235b67860fca3a0a4043db6bd1342",
+    "lab": "cc760f3b56812a5d9d88ac8d3b4ffeec92e2f0ba0e7900494c9ef8fb553f2deb",
+    "route": "530b68047a91915e63f010f15115cf1b774091e4b693a41d7623d281af2c7713",
+    "fullscreen": "155cbabf106a40c1e55f5db49cda98ef853c14a95734fcada0621645fb12ecdd",
+    "lifecycle": "28c2246b973a11abb3639b8ae38e094fc1a6b90d2a17910abcdfb0299a4c1219"
+  }
+}

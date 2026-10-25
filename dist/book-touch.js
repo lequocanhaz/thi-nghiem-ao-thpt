@@ -37,7 +37,9 @@ export function bindBookTouch(stage,{canStart,begin,move,finish},host=window){
   stage.addEventListener('pointermove',drag,{passive:false});
   host.addEventListener('pointerup',up);
   stage.addEventListener('pointercancel',e=>{if(e.pointerId===gesture?.id)cancel();});
-  stage.addEventListener('lostpointercapture',e=>{if(e.pointerId===gesture?.id)cancel();});
+  // Touch starts with implicit capture on the image. Its capture-loss event bubbles
+  // when the stage takes ownership; only loss from the stage itself cancels the turn.
+  stage.addEventListener('lostpointercapture',e=>{if(e.target===stage&&e.pointerId===gesture?.id)cancel();});
  }else{
   const event=(e,t)=>({pointerId:t.identifier,clientX:t.clientX,clientY:t.clientY,target:e.target,timeStamp:e.timeStamp,cancelable:e.cancelable,preventDefault:()=>e.preventDefault()});
   stage.addEventListener('touchstart',e=>{if(e.touches.length!==1){cancel();return;}down(event(e,e.touches[0]));},{passive:true});

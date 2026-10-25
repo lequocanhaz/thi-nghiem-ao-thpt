@@ -1,0 +1,558 @@
+{
+  "scope": "Chromium SwiftShader, viewport simulation",
+  "layouts": [
+    {
+      "width": 1280,
+      "transport": {
+        "x": 39.390625,
+        "y": 490.859375,
+        "width": 809.21875,
+        "height": 88,
+        "top": 490.859375,
+        "right": 848.609375,
+        "bottom": 578.859375,
+        "left": 39.390625
+      },
+      "modelTop": 578.859375,
+      "controls": [
+        {
+          "id": "play",
+          "rect": {
+            "x": 51.390625,
+            "y": 500.859375,
+            "width": 100,
+            "height": 44,
+            "top": 500.859375,
+            "right": 151.390625,
+            "bottom": 544.859375,
+            "left": 51.390625
+          }
+        },
+        {
+          "id": "record",
+          "rect": {
+            "x": 157.390625,
+            "y": 500.859375,
+            "width": 120.546875,
+            "height": 44,
+            "top": 500.859375,
+            "right": 277.9375,
+            "bottom": 544.859375,
+            "left": 157.390625
+          }
+        },
+        {
+          "id": "step",
+          "rect": {
+            "x": 283.9375,
+            "y": 500.859375,
+            "width": 44,
+            "height": 44,
+            "top": 500.859375,
+            "right": 327.9375,
+            "bottom": 544.859375,
+            "left": 283.9375
+          }
+        },
+        {
+          "id": "activityLabel",
+          "rect": {
+            "x": 51.390625,
+            "y": 552.859375,
+            "width": 785.21875,
+            "height": 18,
+            "top": 552.859375,
+            "right": 836.609375,
+            "bottom": 570.859375,
+            "left": 51.390625
+          }
+        },
+        {
+          "id": "time-slider",
+          "rect": {
+            "x": 333.9375,
+            "y": 498.859375,
+            "width": 322.671875,
+            "height": 48,
+            "top": 498.859375,
+            "right": 656.609375,
+            "bottom": 546.859375,
+            "left": 333.9375
+          }
+        },
+        {
+          "id": "speed",
+          "rect": {
+            "x": 662.609375,
+            "y": 500.859375,
+            "width": 74,
+            "height": 44,
+            "top": 500.859375,
+            "right": 736.609375,
+            "bottom": 544.859375,
+            "left": 662.609375
+          }
+        },
+        {
+          "id": "loop",
+          "rect": {
+            "x": 742.609375,
+            "y": 500.859375,
+            "width": 44,
+            "height": 44,
+            "top": 500.859375,
+            "right": 786.609375,
+            "bottom": 544.859375,
+            "left": 742.609375
+          }
+        },
+        {
+          "id": "reset",
+          "rect": {
+            "x": 792.609375,
+            "y": 500.859375,
+            "width": 44,
+            "height": 44,
+            "top": 500.859375,
+            "right": 836.609375,
+            "bottom": 544.859375,
+            "left": 792.609375
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "transport": {
+        "x": 44.1875,
+        "y": 496.25,
+        "width": 959.625,
+        "height": 88,
+        "top": 496.25,
+        "right": 1003.8125,
+        "bottom": 584.25,
+        "left": 44.1875
+      },
+      "modelTop": 584.25,
+      "controls": [
+        {
+          "id": "play",
+          "rect": {
+            "x": 56.1875,
+            "y": 506.25,
+            "width": 100,
+            "height": 44,
+            "top": 506.25,
+            "right": 156.1875,
+            "bottom": 550.25,
+            "left": 56.1875
+          }
+        },
+        {
+          "id": "record",
+          "rect": {
+            "x": 162.1875,
+            "y": 506.25,
+            "width": 120.546875,
+            "height": 44,
+            "top": 506.25,
+            "right": 282.734375,
+            "bottom": 550.25,
+            "left": 162.1875
+          }
+        },
+        {
+          "id": "step",
+          "rect": {
+            "x": 288.734375,
+            "y": 506.25,
+            "width": 44,
+            "height": 44,
+            "top": 506.25,
+            "right": 332.734375,
+            "bottom": 550.25,
+            "left": 288.734375
+          }
+        },
+        {
+          "id": "activityLabel",
+          "rect": {
+            "x": 56.1875,
+            "y": 558.25,
+            "width": 935.625,
+            "height": 18,
+            "top": 558.25,
+            "right": 991.8125,
+            "bottom": 576.25,
+            "left": 56.1875
+          }
+        },
+        {
+          "id": "time-slider",
+          "rect": {
+            "x": 338.734375,
+            "y": 504.25,
+            "width": 473.078125,
+            "height": 48,
+            "top": 504.25,
+            "right": 811.8125,
+            "bottom": 552.25,
+            "left": 338.734375
+          }
+        },
+        {
+          "id": "speed",
+          "rect": {
+            "x": 817.8125,
+            "y": 506.25,
+            "width": 74,
+            "height": 44,
+            "top": 506.25,
+            "right": 891.8125,
+            "bottom": 550.25,
+            "left": 817.8125
+          }
+        },
+        {
+          "id": "loop",
+          "rect": {
+            "x": 897.8125,
+            "y": 506.25,
+            "width": 44,
+            "height": 44,
+            "top": 506.25,
+            "right": 941.8125,
+            "bottom": 550.25,
+            "left": 897.8125
+          }
+        },
+        {
+          "id": "reset",
+          "rect": {
+            "x": 947.8125,
+            "y": 506.25,
+            "width": 44,
+            "height": 44,
+            "top": 506.25,
+            "right": 991.8125,
+            "bottom": 550.25,
+            "left": 947.8125
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "transport": {
+        "x": 189,
+        "y": 496.984375,
+        "width": 1150,
+        "height": 88,
+        "top": 496.984375,
+        "right": 1339,
+        "bottom": 584.984375,
+        "left": 189
+      },
+      "modelTop": 584.984375,
+      "controls": [
+        {
+          "id": "play",
+          "rect": {
+            "x": 201,
+            "y": 506.984375,
+            "width": 100,
+            "height": 44,
+            "top": 506.984375,
+            "right": 301,
+            "bottom": 550.984375,
+            "left": 201
+          }
+        },
+        {
+          "id": "record",
+          "rect": {
+            "x": 307,
+            "y": 506.984375,
+            "width": 120.546875,
+            "height": 44,
+            "top": 506.984375,
+            "right": 427.546875,
+            "bottom": 550.984375,
+            "left": 307
+          }
+        },
+        {
+          "id": "step",
+          "rect": {
+            "x": 433.546875,
+            "y": 506.984375,
+            "width": 44,
+            "height": 44,
+            "top": 506.984375,
+            "right": 477.546875,
+            "bottom": 550.984375,
+            "left": 433.546875
+          }
+        },
+        {
+          "id": "activityLabel",
+          "rect": {
+            "x": 201,
+            "y": 558.984375,
+            "width": 1126,
+            "height": 18,
+            "top": 558.984375,
+            "right": 1327,
+            "bottom": 576.984375,
+            "left": 201
+          }
+        },
+        {
+          "id": "time-slider",
+          "rect": {
+            "x": 483.546875,
+            "y": 504.984375,
+            "width": 663.453125,
+            "height": 48,
+            "top": 504.984375,
+            "right": 1147,
+            "bottom": 552.984375,
+            "left": 483.546875
+          }
+        },
+        {
+          "id": "speed",
+          "rect": {
+            "x": 1153,
+            "y": 506.984375,
+            "width": 74,
+            "height": 44,
+            "top": 506.984375,
+            "right": 1227,
+            "bottom": 550.984375,
+            "left": 1153
+          }
+        },
+        {
+          "id": "loop",
+          "rect": {
+            "x": 1233,
+            "y": 506.984375,
+            "width": 44,
+            "height": 44,
+            "top": 506.984375,
+            "right": 1277,
+            "bottom": 550.984375,
+            "left": 1233
+          }
+        },
+        {
+          "id": "reset",
+          "rect": {
+            "x": 1283,
+            "y": 506.984375,
+            "width": 44,
+            "height": 44,
+            "top": 506.984375,
+            "right": 1327,
+            "bottom": 550.984375,
+            "left": 1283
+          }
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "transport": {
+        "x": 17,
+        "y": 1015.28125,
+        "width": 356,
+        "height": 196.140625,
+        "top": 1015.28125,
+        "right": 373,
+        "bottom": 1211.421875,
+        "left": 17
+      },
+      "modelTop": 589.453125,
+      "controls": [
+        {
+          "id": "play",
+          "rect": {
+            "x": 27,
+            "y": 1026.28125,
+            "width": 100,
+            "height": 44,
+            "top": 1026.28125,
+            "right": 127,
+            "bottom": 1070.28125,
+            "left": 27
+          }
+        },
+        {
+          "id": "record",
+          "rect": {
+            "x": 133,
+            "y": 1026.28125,
+            "width": 104.359375,
+            "height": 44,
+            "top": 1026.28125,
+            "right": 237.359375,
+            "bottom": 1070.28125,
+            "left": 133
+          }
+        },
+        {
+          "id": "step",
+          "rect": {
+            "x": 243.359375,
+            "y": 1026.28125,
+            "width": 44,
+            "height": 44,
+            "top": 1026.28125,
+            "right": 287.359375,
+            "bottom": 1070.28125,
+            "left": 243.359375
+          }
+        },
+        {
+          "id": "activityLabel",
+          "rect": {
+            "x": 27,
+            "y": 1126.28125,
+            "width": 336,
+            "height": 20.140625,
+            "top": 1126.28125,
+            "right": 363,
+            "bottom": 1146.421875,
+            "left": 27
+          }
+        },
+        {
+          "id": "time-slider",
+          "rect": {
+            "x": 27,
+            "y": 1152.421875,
+            "width": 336,
+            "height": 48,
+            "top": 1152.421875,
+            "right": 363,
+            "bottom": 1200.421875,
+            "left": 27
+          }
+        },
+        {
+          "id": "speed",
+          "rect": {
+            "x": 27,
+            "y": 1076.28125,
+            "width": 75,
+            "height": 44,
+            "top": 1076.28125,
+            "right": 102,
+            "bottom": 1120.28125,
+            "left": 27
+          }
+        },
+        {
+          "id": "loop",
+          "rect": {
+            "x": 108,
+            "y": 1076.28125,
+            "width": 44,
+            "height": 44,
+            "top": 1076.28125,
+            "right": 152,
+            "bottom": 1120.28125,
+            "left": 108
+          }
+        },
+        {
+          "id": "reset",
+          "rect": {
+            "x": 158,
+            "y": 1076.28125,
+            "width": 44,
+            "height": 44,
+            "top": 1076.28125,
+            "right": 202,
+            "bottom": 1120.28125,
+            "left": 158
+          }
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "keyboard": [
+    {
+      "width": 320,
+      "id": "oscillation",
+      "x": 0,
+      "w": 286,
+      "full": 346,
+      "math": 326,
+      "mathClient": 246,
+      "overflow": "visible",
+      "scrollAfterArrowRight": 48
+    },
+    {
+      "width": 320,
+      "id": "wave",
+      "x": 0,
+      "w": 286,
+      "full": 328,
+      "math": 308,
+      "mathClient": 246,
+      "overflow": "visible",
+      "scrollAfterArrowRight": 42
+    },
+    {
+      "width": 320,
+      "id": "electric",
+      "x": 0,
+      "w": 286,
+      "full": 299,
+      "math": 279,
+      "mathClient": 246,
+      "overflow": "visible",
+      "scrollAfterArrowRight": 13
+    },
+    {
+      "width": 390,
+      "id": "oscillation",
+      "x": 0,
+      "w": 356,
+      "full": 356,
+      "math": 326,
+      "mathClient": 316,
+      "overflow": "visible",
+      "scrollAfterArrowRight": 0
+    },
+    {
+      "width": 390,
+      "id": "wave",
+      "x": 0,
+      "w": 356,
+      "full": 356,
+      "math": 316,
+      "mathClient": 316,
+      "overflow": "visible",
+      "scrollAfterArrowRight": 0
+    },
+    {
+      "width": 390,
+      "id": "electric",
+      "x": 0,
+      "w": 356,
+      "full": 356,
+      "math": 316,
+      "mathClient": 316,
+      "overflow": "visible",
+      "scrollAfterArrowRight": 0
+    }
+  ],
+  "errors": []
+}

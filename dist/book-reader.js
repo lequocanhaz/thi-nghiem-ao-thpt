@@ -1,10 +1,11 @@
 import {boundedPage,spreadPages,turnPage,pageImage} from './book-model.js?v=40';
-import {bindBookTouch} from './book-touch.js?v=41';
+import {bindBookTouch} from './book-touch.js?v=59';
 import {getLocale,onLocaleChange} from './i18n.js?v=54';
 import {localizedBookTitle,localizedBookString,bookChapterOptionGroups,bookShelfCards,pageStatusText} from './book-copy.js?v=58';
 
 const $=s=>document.querySelector(s);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let focusReturn=null;
 let catalog=[],book=null,page=1,zoom=1,preferTwo=true,two=false,token=0,busy=false,failedPage=null,activeTurn=null,touchController=null;
 const cache=new Map();
 const browserZoomed=()=>Number(window.visualViewport?.scale||1)>1.01;
@@ -25,7 +26,9 @@ function updateControls(){
  $('#bookPrevious').disabled=busy||visible[0]===1;$('#bookNext').disabled=busy||visible.at(-1)===book.pages;
  $('#zoomOut').disabled=zoom<=1;$('#zoomIn').disabled=zoom>=2.5;
  $('#zoomValue').textContent=Math.round(zoom*100)+'%';$('#spreadMode').setAttribute('aria-pressed',String(two));$('#spreadMode').textContent=two?localizedBookString('Một trang','Single page'):localizedBookString('Hai trang','Two pages');
- $('#bookStage').setAttribute('aria-busy',String(busy));$('#bookStage').style.touchAction=zoom>1||browserZoomed()?'pan-x pan-y pinch-zoom':'pan-y pinch-zoom';
+ $('#bookStage').setAttribute('aria-busy',String(busy));$('#bookLoading').hidden=!busy;
+ const printed=visible.map(n=>n-book.printedOffset).filter(n=>n>0);
+ $('#bookPageNote').textContent=printed.length?localizedBookString('Trang in trong sách: ','Printed textbook page: ')+printed.join(localizedBookString(' và ',' and ')):localizedBookString('Số trên thanh điều khiển là thứ tự trang tệp.','The toolbar uses the file page order.');$('#bookStage').style.touchAction=zoom>1||browserZoomed()?'pan-x pan-y pinch-zoom':'pan-y pinch-zoom';
  const chapter=[...book.chapters,...book.lessons].sort((a,b)=>b.page-a.page).find(c=>c.page<=page);$('#bookChapter').value=String(page===1?1:page===book.contentsPage?book.contentsPage:chapter?.page||0);
 }
 function sizePaper(){
@@ -126,15 +129,42 @@ function refreshBookLabels(){
  for(const image of document.querySelectorAll('#paperStack .paper-page img')){
   image.alt=localizedBookTitle(book)+' — '+localizedBookString('trang ','page ')+image.closest('.paper-page')?.dataset.page;
  }
- updateControls();
+ updateControls();syncFullscreenControl();
  $('#bookStatus').textContent=pageStatusText(book,spreadPages(page,book.pages,two));
 }
 onLocaleChange(refreshBookLabels);
-function showShelf(){touchController?.reset();discardTurn();++token;book=null;busy=false;$('#reader').hidden=true;$('#bookShelf').hidden=false;document.title=localizedBookString('Sách giáo khoa','Textbooks')+' · Quanh Lab';$('#paperStack').replaceChildren();cache.clear();}
+function showShelf(){
+ const wasReading=Boolean(book);
+ if($('#reader').classList.contains('reading-focus'))setFocusMode(false);
+ if(document.fullscreenElement)document.exitFullscreen?.().catch(()=>{});
+ touchController?.reset();discardTurn();++token;book=null;busy=false;
+ $('#reader').hidden=true;$('#bookShelf').hidden=false;
+ document.title=localizedBookString('Sách giáo khoa','Textbooks')+' · Quanh Lab';
+ $('#paperStack').replaceChildren();cache.clear();
+ if(wasReading){$('#booksTitle').setAttribute('tabindex','-1');$('#booksTitle').focus?.({preventScroll:true});}
+}
 async function readRoute(){const params=new URLSearchParams(location.search);if(params.has('grade'))await openBook(params.get('grade'),params.has('page')?params.get('page'):undefined);else showShelf();}
 function navigate(direction){if(!book||busy)return;const next=turnPage(page,book.pages,two,direction);if(next!==page)showPage(next,{animate:true,direction});}
 function changeZoom(amount){if(!book)return;touchController?.reset();if(activeTurn){discardTurn();busy=false;}zoom=Math.max(1,Math.min(2.5,zoom+amount));const nextTwo=shouldUseTwo();if(nextTwo!==two)showPage(page);else{sizePaper();updateControls();}}
-async function fullscreen(){const reader=$('#reader');if(document.fullscreenElement){try{await document.exitFullscreen();}catch{}}else if(reader.classList.contains('reading-focus'))reader.classList.remove('reading-focus');else{try{if(!reader.requestFullscreen)throw Error();await reader.requestFullscreen();}catch{reader.classList.add('reading-focus');}}$('#bookFullscreen').setAttribute('aria-label',document.fullscreenElement||reader.classList.contains('reading-focus')?localizedBookString('Thoát toàn màn hình','Exit fullscreen'):localizedBookString('Đọc toàn màn hình','Fullscreen reader'));resize();}
+function syncFullscreenControl(){
+ const on=Boolean(document.fullscreenElement)||$('#reader').classList.contains('reading-focus');
+ $('#bookFullscreen').removeAttribute('data-ql-original-aria-label');
+ $('#bookFullscreen').setAttribute('aria-label',on?localizedBookString('Thoát toàn màn hình','Exit fullscreen'):localizedBookString('Đọc toàn màn hình','Fullscreen reader'));
+}
+// Safari without element fullscreen uses the same reader, with a keyboard-contained focus view.
+function setFocusMode(on){
+ const reader=$('#reader');
+ if(on){focusReturn=document.activeElement;reader.classList.add('reading-focus');reader.setAttribute('role','dialog');reader.setAttribute('aria-modal','true');$('#bookFullscreen').focus?.({preventScroll:true});}
+ else{reader.classList.remove('reading-focus');reader.removeAttribute('role');reader.removeAttribute('aria-modal');const target=focusReturn;focusReturn=null;if(target?.isConnected)target.focus?.({preventScroll:true});}
+ syncFullscreenControl();
+}
+async function fullscreen(){
+ const reader=$('#reader');
+ if(document.fullscreenElement){try{await document.exitFullscreen();}catch{}}
+ else if(reader.classList.contains('reading-focus'))setFocusMode(false);
+ else{try{if(!reader.requestFullscreen)throw Error();await reader.requestFullscreen();}catch{setFocusMode(true);}}
+ syncFullscreenControl();resize();
+}
 function resize(){if(!book)return;touchController?.reset();if(activeTurn){discardTurn();busy=false;updateControls();}const desired=shouldUseTwo();if(desired!==two)showPage(page);else sizePaper();}
 
 $('#bookPrevious').addEventListener('click',()=>navigate(-1));$('#bookNext').addEventListener('click',()=>navigate(1));
@@ -144,8 +174,20 @@ $('#spreadMode').addEventListener('click',()=>{if(two)preferTwo=false;else{prefe
 $('#bookGrade').addEventListener('change',()=>openBook($('#bookGrade').value,undefined,{push:true}));
 $('#bookChapter').addEventListener('change',()=>{const target=Number($('#bookChapter').value);if(target)showPage(target);});
 $('#bookFullscreen').addEventListener('click',fullscreen);$('#retryBook').addEventListener('click',()=>showPage(failedPage??page));
-document.addEventListener('fullscreenchange',()=>{const on=Boolean(document.fullscreenElement)||$('#reader').classList.contains('reading-focus');$('#bookFullscreen').setAttribute('aria-label',on?localizedBookString('Thoát toàn màn hình','Exit fullscreen'):localizedBookString('Đọc toàn màn hình','Fullscreen reader'));resize();});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){$('#reader').classList.remove('reading-focus');if(!document.fullscreenElement)$('#bookFullscreen').setAttribute('aria-label',localizedBookString('Đọc toàn màn hình','Fullscreen reader'));resize();return;}if(!book||event.ctrlKey||event.metaKey||event.altKey||event.target.closest('input,select,textarea'))return;if(event.key==='ArrowRight'){event.preventDefault();navigate(1);}else if(event.key==='ArrowLeft'){event.preventDefault();navigate(-1);}else if(event.key==='Home'){event.preventDefault();showPage(1);}else if(event.key==='End'){event.preventDefault();showPage(book.pages);}});
+document.addEventListener('fullscreenchange',()=>{syncFullscreenControl();resize();});
+document.addEventListener('keydown',event=>{
+ const reader=$('#reader');
+ if(event.key==='Escape'&&reader.classList.contains('reading-focus')){event.preventDefault();setFocusMode(false);resize();return;}
+ if(event.key==='Tab'&&reader.classList.contains('reading-focus')){
+  const targets=[...reader.querySelectorAll('a[href],button,input,select,[tabindex="0"]')].filter(e=>!e.disabled&&e.getClientRects().length);
+  const first=targets[0],last=targets.at(-1);
+  if(event.shiftKey&&(document.activeElement===first||!reader.contains(document.activeElement))){event.preventDefault();last?.focus();}
+  else if(!event.shiftKey&&(document.activeElement===last||!reader.contains(document.activeElement))){event.preventDefault();first?.focus();}
+ }
+ // Page shortcuts belong to the page region, not to inputs, links or native zoomed scrolling.
+ if(!book||busy||zoom>1||browserZoomed()||event.ctrlKey||event.metaKey||event.altKey||!event.target.closest('#bookStage'))return;
+ if(event.key==='ArrowRight'){event.preventDefault();navigate(1);}else if(event.key==='ArrowLeft'){event.preventDefault();navigate(-1);}else if(event.key==='Home'){event.preventDefault();showPage(1);}else if(event.key==='End'){event.preventDefault();showPage(book.pages);}
+});
 touchController=bindBookTouch($('#bookStage'),{canStart:()=>Boolean(book)&&!busy&&zoom===1&&!browserZoomed(),begin:previewTurn,move:previewProgress,finish:finishTurn});
 window.visualViewport?.addEventListener('resize',()=>{if(browserZoomed()){touchController?.reset();if(activeTurn){discardTurn();busy=false;}}updateControls();});
 window.addEventListener('resize',resize);window.addEventListener('popstate',readRoute);
@@ -154,6 +196,6 @@ if(typeof ResizeObserver!=='undefined')new ResizeObserver(sizePaper).observe($('
 try{
  const response=await fetch('books/catalog.json?v=44');if(!response.ok)throw Error('catalog-load');catalog=await response.json();
  $('#bookCards').innerHTML=bookShelfCards(catalog,escape);
- $('#bookCards').addEventListener('click',event=>{const link=event.target.closest('a');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();openBook(new URL(link.href).searchParams.get('grade'),undefined,{push:true});});
+ $('#bookCards').addEventListener('click',event=>{const link=event.target.closest('a');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();openBook(new URL(link.href).searchParams.get('grade'),undefined,{push:true}).then(()=>$('#readingTitle').focus?.({preventScroll:true}));});
  await readRoute();
 }catch{$('#bookCards').innerHTML='<p role="alert">Chưa mở được thư viện sách. <a href="books.html">Tải lại</a></p>';}

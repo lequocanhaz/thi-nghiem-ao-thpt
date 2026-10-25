@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-26",
+  "baseCommit": "7e491e0c641dca33ed222b47942b085e728ab590",
+  "npmCheck": {
+    "exitCode": 0,
+    "log": "npm-check.txt"
+  },
+  "browser": {
+    "passed": 20,
+    "failed": 0,
+    "pageErrors": [],
+    "localHTTPErrors": []
+  },
+  "axe": {
+    "states": 36,
+    "violations": 0,
+    "manualReviewStillRequired": true
+  },
+  "booksBrowser": {
+    "passed": 8
+  },
+  "assistantBrowser": {
+    "passed": 4,
+    "mockTransport": true
+  },
+  "studioBrowser": {
+    "desktopWidths": [
+      1280,
+      1440,
+      1920
+    ],
+    "mobileWidths": [
+      320,
+      390
+    ],
+    "fullscreen": true,
+    "formulaKeyboard": true
+  },
+  "preserved": {
+    "experiments": 300,
+    "vietnameseLessons": 300,
+    "textbookPages": 388,
+    "textbookLessons": 85,
+    "audioFiles": 301
+  },
+  "independentPhysics": {
+    "verified": 280,
+    "partial": 20,
+    "failed": 0
+  },
+  "limitations": [
+    "No real iPhone/Safari/Android hardware or virtual-keyboard test",
+    "No GPU/FPS or long-term RAM benchmark",
+    "No real AI provider inference",
+    "No exhaustive visual review of all 300 models",
+    "Domain currently redirects to physicslab.tech with no public A/AAAA/CNAME answers; Pages https_enforced=false",
+    "No commercial copyright clearance or expert pedagogical acceptance"
+  ],
+  "mergedMain": "7d7b2be5e2493ef2d861472340835305eb9b6380",
+  "postMergeVerification": true
+}

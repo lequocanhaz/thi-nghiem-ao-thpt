@@ -1,3 +1,5 @@
+> **Cập nhật26/10/2026:** phần bên dưới là báo cáo lịch sử v54. HEADv58 đã có VI/EN; các thay đổi và nghiệm thu mới nhất nằm trong [báo cáo v59](REDESIGN_V59_REPORT.md). Không dùng trạng thái “chưa có selector/EN” bên dưới làm kết luận cho bản hiện tại. Các20mục khoa học PARTIAL và giới hạn thiết bị thật vẫn được giữ.
+
 # Kiểm kê và thiết kế i18n Quanh Lab — V5.0
 
 Mốc khảo sát: `4863af019a4cde215fd2f02b8b51f56922fe1f51` (v53). Đợt đầu kiểm kê dữ liệu thực; đợt tiếp theo đã thêm nền tảng ESM và bản dịch tên bài. **Chưa tích hợp chuyển ngôn ngữ trên giao diện, chưa dịch toàn bộ nội dung và chưa nghiệm thu i18n toàn site.** Không sửa mô hình, thuật toán, trang sách hay dữ liệu người dùng trong công việc này.

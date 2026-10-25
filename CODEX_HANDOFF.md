@@ -133,3 +133,20 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - i18n mới là nền tảng chưa gắn UI:784 khóa đối ứng, tên300 bài,58 thuật ngữ. KHÔNG báo website đã đổi VI/EN; chưa có selector hoặc bản EN toàn bộ bài soạn. AI có seam locale và kiểmfixture; Pages không deploy backend.
 - Kiểm số độc lập dùng checks/independent-v54 snapshot tracked, chạy node checks/audit-v54.mjs --independent; --write cập nhật báo cáo mới, không ghi đè checks/audit-300 lịch sử. Xem docs/AUDIT_REPORT.md cùng VISUAL_QA/I18N_REPORT/MOBILE_TEST_REPORT/REMAINING_ISSUES.
 - Giữ nguyên banner/video, fonts/logo,300 bài soạn,388 trang sách và301 âm thanh; giữ dữ liệu phiên. Tiếp tục theo các phần chưa hoàn thành của V5.0, không gắn nhãn hoàn tất toàn bộ.
+
+
+## Audit và nâng cấp v59 (26/10/2026)
+
+- Bắt đầu từ `7e491e0`, không quay lại mốc v54. VI/EN và mục lục tiếng Anh đã có ở HEADv58; ghi chú i18n v54 bên trên là lịch sử.
+- Xem `docs/REDESIGN_V59_REPORT.md`, `DESIGN_SYSTEM.md`, `ARCHITECTURE.md`, `COMMERCIAL_READINESS.md` và bằng chứng trong `docs/redesign-v59/`.
+- Giữ nguyên banner/media/nhận diện,300ID/300bài soạn/388trang/85bài mục lục/301âm thanh. Cân đòn/điện/khí v54 được giữ; v59 sửa tiếp xúc xe bằng chassis đồng cao và tải riêng, cộng hưởng co giãn toàn chu kì thay vì cắt li độ. Không đổi phương trình.
+- Xóa bảng và nhập đè phiên có xác nhận; giữ schema/localStorage. Search có index VI/EN/không dấu và một bộ alias dụng cụ; history không tạo một bước Back cho mỗi ký tự. EN observer chỉ duyệt subtree thay đổi.
+- Mobile header hai hàng, locale44px, bộ lọc nâng cao native details; công cụ ngoài hình. Công thức dài trên thẻ là region focusable riêng với link mở bài, có ArrowLeft/Right/Home/End. Desktop đủ rộng dùng transport gọn.
+- Sách sửa lostpointercapture bubble từ ảnh khi chuyển capture sang stage. Giữ scope phím trong vùng đọc, loading/error/retry, nhãn trang tệp/trang in và fullscreen focus/Tab/Escape. AI dùng copy VI/EN trực tiếp, cảm ứngEnter xuống dòng, giữ nháp/ảnh khi lỗi, phân biệt hủy/timeout; không deploybackend.
+- Có300trang tĩnh `dist/experiments/<id>.html`, danh mục, sitemap305URL và giới thiệuVI/EN. Chạy `npm run build:discovery` sau khi đổi mô tả/công thức/giới hạn; không để trang tĩnh cũ lệch catalog. KaTeX phải được cài trước generator.
+- Canonical vẫn GitHub Pages. Lúc rà soát, Pages `cname=physicslab.tech`, `https_enforced=false`; DNSGoogle không trảAnswerA/CNAME. Cần xác minh DNS/chứng chỉ/redirect trước chuyểncanonical; không tự đổi vì cnameđã có.
+- V51 guard trước đây hash cả dòng clickhandler nên chặn cả workflowxóa/nhậpphiên không liên quan banner. V59giữ manifest v51, kiểm hash từng trách nhiệm banner với snapshot trướcđổi trong `checks/banner-lifecycle-v59.json`; chỉ loại cleanup xácnhận khỏi hashroute. Không đổi baseline media/CSS/markup/protectedtrees.
+- Các kiểm mới đã đưa vào `npm run check`; các bộbrowser Python là tùy chọn và cần server4173/Chromium. Không commit `dist/vendor/katex/` sinhcục bộ hoặc thưmục `work/`.
+-20mục khoa học PARTIAL, nghiệm thu giáo viên, bản quyền thương mại sách/âm thanh, iPhone/Safari/Android thật, virtualkeyboard thật và FPSGPU phần cứng vẫn chưa hoàn tất. Không coi fixtureAI là inference thật hoặc axetựđộng là chứng nhậnWCAG.
+
+- Hợp nhất main mới đến `7d7b2be` trước phát hành: giữ banner “HỆ THỐNG THÍ NGHIỆM / VẬT LÍ ẢO”, stylesheet riêng v60, metadata/robots của các commit đồng thời. Entry/views/locale dùng v61 để tránh cache bản v60. Generator đọc canonical đã có trên main; không tự chuyển lại domain. Kiểm DNS/HTTPS chưa đạt, không suy ra từ metadata.
