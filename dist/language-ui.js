@@ -150,12 +150,18 @@ const blocked='script,style,noscript,textarea,code,pre,svg,canvas,.math-tex,.ai-
 function eligible(element){
  return !!element&&!element.closest(blocked);
 }
+// Only the homepage headline uses this reordered English phrase.
+const bannerSegments=new Map([['Hệ thống','Virtual Physics'],['Thí nghiệm','Experiment'],['Vật Lí Ảo','System']]);
+export function translateBannerHeading(source){
+ const value=String(source).trim();
+ return bannerSegments.has(value)?String(source).replace(value,bannerSegments.get(value)):translateShort(source);
+}
 function translateText(node,english){
  if(!eligible(node.parentElement))return;
  const current=node.nodeValue||'';
  const saved=originals.get(node);
  const source=saved&&current===saved.output?saved.source:current;
- const result=english?translateShort(source):source;
+ const result=english?(node.parentElement?.closest('#bannerTitle')?translateBannerHeading(source):translateShort(source)):source;
  if(result!==current)node.nodeValue=result;
  if(english&&result!==source)originals.set(node,{source,output:result});
  else originals.delete(node);
