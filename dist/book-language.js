@@ -50,7 +50,11 @@ function apply(){
      else if(!en&&node.hasAttribute(key)){node.setAttribute(attr,source);node.removeAttribute(key);}
     }
    }
-  }\n }\n syncReaderDisclosure();\n}\n// Explain what changes language and what is unchanged in the scanned source pages.
+  }
+ }
+ syncReaderDisclosure();
+}
+// Explain what changes language and what is unchanged in the scanned source pages.
 function syncReaderDisclosure(){
  const reader=document.getElementById('reader');
  const shelf=document.getElementById('bookShelf');
