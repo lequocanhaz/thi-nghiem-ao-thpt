@@ -17,6 +17,13 @@ for(const id of Object.keys(dictionaries['vi-VN'].experiments)){
 for(const e of experiments){const guide=englishStudy(e);if(!translations.has(e.topic))pair(e.topic,englishTopic(e.topic));pair(e.description,guide.explanation);pair(e.description.split(/(?<=[.!?])\s/)[0],guide.explanation);if(e.subtitle)pair(e.subtitle,guide.investigation);(e.params||[]).forEach((p,i)=>pair(p.label,englishParameter(p,i)));}
 for(const [vi,en] of [
  ['Thí nghiệm','Experiments'],['Vật Lí','Physics'],['Vật lí','Physics'],['Thư viện thí nghiệm','Experiment library'],
+ ['Vật lí 10','Physics 10'],['Vật lí 11','Physics 11'],['Vật lí 12','Physics 12'],
+ ['Bìa Vật lí 10','Physics 10 book cover'],['Bìa Vật lí 11','Physics 11 book cover'],['Bìa Vật lí 12','Physics 12 book cover'],
+ ['Kết nối tri thức','Connecting Knowledge'],['Đọc sách','Read textbook'],
+ ['Xem tất cả ↗','View all ↗'],['Sách giáo khoa','Textbooks'],
+ ['Môn học','Subject'],['Bộ sách','Textbook series'],['Xóa từ khóa','Clear search'],
+ ['Phím tắt tìm kiếm','Search shortcut'],['Trang thí nghiệm','Experiment pages'],
+ ['Lựa chọn nhanh','Quick navigation'],['Mở nhanh thí nghiệm','Open featured experiments'],
  ['Thư viện thí nghiệm ','Experiment library '],['Chọn thí nghiệm','Choose experiment'],
  ['Mở thí nghiệm','Open experiment'],['Xem trước','Preview'],['Chọn lớp học','Choose a grade'],
  ['Tất cả chủ đề','All topics'],['Mọi lớp','All grades'],['Mở rộng','Advanced'],['Nền tảng','Core'],
