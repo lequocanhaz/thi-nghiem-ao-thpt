@@ -13,7 +13,7 @@ for(const id of Object.keys(dictionaries['vi-VN'].experiments)){
  const en=dictionaries['en-US'].experiments[id];
  pair(vi.title,en.title);pair(vi.shortTitle,en.shortTitle);
 }
-for(const e of experiments){const guide=englishStudy(e);pair(e.topic,englishTopic(e.topic));pair(e.description,guide.explanation);pair(e.description.split(/(?<=[.!?])\s/)[0],guide.explanation);if(e.subtitle)pair(e.subtitle,guide.investigation);(e.params||[]).forEach((p,i)=>pair(p.label,englishParameter(p,i)));}
+for(const e of experiments){const guide=englishStudy(e);if(!translations.has(e.topic))pair(e.topic,englishTopic(e.topic));pair(e.description,guide.explanation);pair(e.description.split(/(?<=[.!?])\s/)[0],guide.explanation);if(e.subtitle)pair(e.subtitle,guide.investigation);(e.params||[]).forEach((p,i)=>pair(p.label,englishParameter(p,i)));}
 for(const [vi,en] of [
  ['Thí nghiệm','Experiments'],['Vật Lí','Physics'],['Vật lí','Physics'],['Thư viện thí nghiệm','Experiment library'],
  ['Thư viện thí nghiệm ','Experiment library '],['Chọn thí nghiệm','Choose experiment'],
@@ -218,6 +218,7 @@ export function installLanguageUI(){
  select.addEventListener('change',()=>{
   if(!['vi-VN','en-US'].includes(select.value))return;
   i18n.setLocale(select.value);
+  document.documentElement.lang=select.value;
   document.dispatchEvent(new CustomEvent('quanh-locale-change',{detail:{locale:select.value}}));
   localizeAll();
   observeUpdates();
