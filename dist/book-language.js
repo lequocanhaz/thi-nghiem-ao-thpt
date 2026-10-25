@@ -1,6 +1,7 @@
 // Controls surrounding textbook images are localized; the photographed textbook pages,
 // table of contents and model state are never rewritten or auto-translated.
 import {i18n,getLocale} from './i18n.js?v=54';
+import {mountLanguagePill} from './language-pill.js?v=57';
 const dictionary=new Map([
  ['Đến nội dung','Skip to main content'],['Điều hướng','Navigation'],['Thí nghiệm','Experiments'],
  ['Sách giáo khoa','Textbooks'],['Kết nối tri thức với cuộc sống','Connecting Knowledge to Life'],
@@ -48,13 +49,16 @@ function apply(){
 }
 const nav=document.querySelector('.reading-header nav');
 if(nav){
- const select=document.createElement('select');select.id='bookLocale';select.setAttribute('aria-label','Language / Ngôn ngữ');
- select.innerHTML='<option value="vi-VN">🇻🇳 VI</option><option value="en-US">🇺🇸 EN</option>';
- select.value=getLocale();
- select.style.cssText='margin-left:.5rem;max-width:5.8rem;padding:.35rem;border-radius:8px;border:1px solid #aaa;background:white;color:#222;';
- nav.append(select);
- select.addEventListener('change',()=>{if(!['vi-VN','en-US'].includes(select.value))return;i18n.setLocale(select.value);apply();});
+ mountLanguagePill(nav,{
+  id:'bookLocale',
+  onChange(){apply();}
+ });
  apply();
- const observer=new MutationObserver(()=>{if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;apply();});});
- const root=document.querySelector('#booksMain');if(root)observer.observe(root,{subtree:true,childList:true,characterData:true});
+ const observer=new MutationObserver(()=>{
+  if(scheduled)return;
+  scheduled=true;
+  requestAnimationFrame(()=>{scheduled=false;apply();});
+ });
+ const root=document.querySelector('#booksMain');
+ if(root)observer.observe(root,{subtree:true,childList:true,characterData:true});
 }
