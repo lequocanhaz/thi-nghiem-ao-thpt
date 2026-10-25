@@ -25,7 +25,7 @@ import {loadRenderers} from './lab-loader.js?v=54';
 let LabScene,SoftwareScene,sceneLoading=false,sceneError='',sceneProgress=0;
 import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=54';
 import {Narrator,Tone} from './media.js?v=55';
-import {getLocale,englishTitle,translateShort} from './language-ui.js?v=55';
+import {getLocale,englishTitle,translateShort,installLanguageUI} from './language-ui.js?v=55';
 import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=54';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -287,6 +287,7 @@ if(!Array.isArray(prefs.favorites))prefs.favorites=[];if(!Array.isArray(prefs.re
 const assistantLibrary=libraryContext(experiments);
 const assistantContext=()=>active?{id:active.id,title:active.title,catalog:assistantLibrary,formula:active.formula,conditions:active.limit,configuration:{electricMode:active.id==='electric'?electricModes[config.mode]:undefined,capacitorMode:active.id==='capacitor'?config.capMode:undefined},parameters:active.params.map(p=>({key:p.key,label:p.label,value:state[p.key],unit:p.unit})),columns:active.headers,measurements:rows.slice(-12).map(r=>r.values)}:assistantLibrary;
 assistant=new LabAssistant({getContext:assistantContext});
+installLanguageUI();
 
 // Update presentation only: keep the scene, camera, clock, controls and measurements.
 document.addEventListener('change',event=>{
