@@ -24,7 +24,7 @@ function updateControls(){
  $('#bookPage').value=String(page);$('#bookPage').max=String(book.pages);$('#pageTotal').textContent='/ '+book.pages;
  $('#bookPrevious').disabled=busy||visible[0]===1;$('#bookNext').disabled=busy||visible.at(-1)===book.pages;
  $('#zoomOut').disabled=zoom<=1;$('#zoomIn').disabled=zoom>=2.5;
- $('#zoomValue').textContent=Math.round(zoom*100)+'%';$('#spreadMode').setAttribute('aria-pressed',String(two));
+ $('#zoomValue').textContent=Math.round(zoom*100)+'%';$('#spreadMode').setAttribute('aria-pressed',String(two));$('#spreadMode').textContent=two?localizedBookString('Một trang','Single page'):localizedBookString('Hai trang','Two pages');
  $('#bookStage').setAttribute('aria-busy',String(busy));$('#bookStage').style.touchAction=zoom>1||browserZoomed()?'pan-x pan-y pinch-zoom':'pan-y pinch-zoom';
  const chapter=[...book.chapters,...book.lessons].sort((a,b)=>b.page-a.page).find(c=>c.page<=page);$('#bookChapter').value=String(page===1?1:page===book.contentsPage?book.contentsPage:chapter?.page||0);
 }
@@ -126,6 +126,7 @@ function refreshBookLabels(){
  for(const image of document.querySelectorAll('#paperStack .paper-page img')){
   image.alt=localizedBookTitle(book)+' — '+localizedBookString('trang ','page ')+image.closest('.paper-page')?.dataset.page;
  }
+ updateControls();
  $('#bookStatus').textContent=pageStatusText(book,spreadPages(page,book.pages,two));
 }
 onLocaleChange(refreshBookLabels);
@@ -133,7 +134,7 @@ function showShelf(){touchController?.reset();discardTurn();++token;book=null;bu
 async function readRoute(){const params=new URLSearchParams(location.search);if(params.has('grade'))await openBook(params.get('grade'),params.has('page')?params.get('page'):undefined);else showShelf();}
 function navigate(direction){if(!book||busy)return;const next=turnPage(page,book.pages,two,direction);if(next!==page)showPage(next,{animate:true,direction});}
 function changeZoom(amount){if(!book)return;touchController?.reset();if(activeTurn){discardTurn();busy=false;}zoom=Math.max(1,Math.min(2.5,zoom+amount));const nextTwo=shouldUseTwo();if(nextTwo!==two)showPage(page);else{sizePaper();updateControls();}}
-async function fullscreen(){const reader=$('#reader');if(document.fullscreenElement){try{await document.exitFullscreen();}catch{}}else if(reader.classList.contains('reading-focus'))reader.classList.remove('reading-focus');else{try{if(!reader.requestFullscreen)throw Error();await reader.requestFullscreen();}catch{reader.classList.add('reading-focus');}}$('#bookFullscreen').setAttribute('aria-label',document.fullscreenElement||reader.classList.contains('reading-focus')?'Thoát toàn màn hình':'Đọc toàn màn hình');resize();}
+async function fullscreen(){const reader=$('#reader');if(document.fullscreenElement){try{await document.exitFullscreen();}catch{}}else if(reader.classList.contains('reading-focus'))reader.classList.remove('reading-focus');else{try{if(!reader.requestFullscreen)throw Error();await reader.requestFullscreen();}catch{reader.classList.add('reading-focus');}}$('#bookFullscreen').setAttribute('aria-label',document.fullscreenElement||reader.classList.contains('reading-focus')?localizedBookString('Thoát toàn màn hình','Exit fullscreen'):localizedBookString('Đọc toàn màn hình','Fullscreen reader'));resize();}
 function resize(){if(!book)return;touchController?.reset();if(activeTurn){discardTurn();busy=false;updateControls();}const desired=shouldUseTwo();if(desired!==two)showPage(page);else sizePaper();}
 
 $('#bookPrevious').addEventListener('click',()=>navigate(-1));$('#bookNext').addEventListener('click',()=>navigate(1));
@@ -143,8 +144,8 @@ $('#spreadMode').addEventListener('click',()=>{if(two)preferTwo=false;else{prefe
 $('#bookGrade').addEventListener('change',()=>openBook($('#bookGrade').value,undefined,{push:true}));
 $('#bookChapter').addEventListener('change',()=>{const target=Number($('#bookChapter').value);if(target)showPage(target);});
 $('#bookFullscreen').addEventListener('click',fullscreen);$('#retryBook').addEventListener('click',()=>showPage(failedPage??page));
-document.addEventListener('fullscreenchange',()=>{const on=Boolean(document.fullscreenElement)||$('#reader').classList.contains('reading-focus');$('#bookFullscreen').setAttribute('aria-label',on?'Thoát toàn màn hình':'Đọc toàn màn hình');resize();});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){$('#reader').classList.remove('reading-focus');if(!document.fullscreenElement)$('#bookFullscreen').setAttribute('aria-label','Đọc toàn màn hình');resize();return;}if(!book||event.ctrlKey||event.metaKey||event.altKey||event.target.closest('input,select,textarea'))return;if(event.key==='ArrowRight'){event.preventDefault();navigate(1);}else if(event.key==='ArrowLeft'){event.preventDefault();navigate(-1);}else if(event.key==='Home'){event.preventDefault();showPage(1);}else if(event.key==='End'){event.preventDefault();showPage(book.pages);}});
+document.addEventListener('fullscreenchange',()=>{const on=Boolean(document.fullscreenElement)||$('#reader').classList.contains('reading-focus');$('#bookFullscreen').setAttribute('aria-label',on?localizedBookString('Thoát toàn màn hình','Exit fullscreen'):localizedBookString('Đọc toàn màn hình','Fullscreen reader'));resize();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){$('#reader').classList.remove('reading-focus');if(!document.fullscreenElement)$('#bookFullscreen').setAttribute('aria-label',localizedBookString('Đọc toàn màn hình','Fullscreen reader'));resize();return;}if(!book||event.ctrlKey||event.metaKey||event.altKey||event.target.closest('input,select,textarea'))return;if(event.key==='ArrowRight'){event.preventDefault();navigate(1);}else if(event.key==='ArrowLeft'){event.preventDefault();navigate(-1);}else if(event.key==='Home'){event.preventDefault();showPage(1);}else if(event.key==='End'){event.preventDefault();showPage(book.pages);}});
 touchController=bindBookTouch($('#bookStage'),{canStart:()=>Boolean(book)&&!busy&&zoom===1&&!browserZoomed(),begin:previewTurn,move:previewProgress,finish:finishTurn});
 window.visualViewport?.addEventListener('resize',()=>{if(browserZoomed()){touchController?.reset();if(activeTurn){discardTurn();busy=false;}}updateControls();});
 window.addEventListener('resize',resize);window.addEventListener('popstate',readRoute);
