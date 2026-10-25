@@ -55,4 +55,15 @@ for(const [dir,expected]of Object.entries(baseline.protectedTrees)){
  const names=walk(dir).sort();assert.equal(names.length,expected.files,dir+' file count');
  assert.equal(hash(names.map(name=>name+':'+hash(read(name))).join('\n')),expected.sha256,dir+' contents');
 }
+
+// Temporary read-only network diagnosis from GitHub's own runner (no credentials).
+const dns=await import('node:dns/promises');
+for(const [host,kind] of [['physicslab.tech','A'],['physicslab.tech','AAAA'],['physicslab.tech','CAA'],['www.physicslab.tech','CNAME'],['www.physicslab.tech','A']]){
+ try{const answer=await Promise.race([dns.resolve(host,kind),new Promise((_,reject)=>setTimeout(()=>reject(Error('timeout')),6000))]);console.log('DOMAIN_DIAG',host,kind,JSON.stringify(answer));}
+ catch(e){console.log('DOMAIN_DIAG',host,kind,e.code||e.message);}
+}
+for(const site of ['https://physicslab.tech/','https://www.physicslab.tech/']){
+ try{const r=await fetch(site,{method:'HEAD',redirect:'manual',signal:AbortSignal.timeout(8000)});console.log('DOMAIN_HTTP',site,r.status,r.headers.get('location')||'no redirect');}
+ catch(e){console.log('DOMAIN_HTTP',site,e.cause?.code||e.message);}
+}
 console.log('PASS v51 SHA-256: banner media/poster/playback/markup and original CSS (except scoped math SVG fix) unchanged, added UI rules exclude banner/identity; exact 300 IDs, books, audio, lessons, brand and fonts preserved. Source/asset checks only; desktop/mobile browser playback remains unverified.');
