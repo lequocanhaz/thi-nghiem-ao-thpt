@@ -1,4 +1,5 @@
 import {i18n,dictionaries} from './i18n.js?v=54';
+import {mountLanguagePill} from './language-pill.js?v=57';
 import {experiments} from './experiments.js?v=54';
 import {englishStudy,englishParameter,englishTopic} from './english-study.js?v=56';
 import {messagePairs} from './locales/messages.js?v=54';
@@ -207,25 +208,23 @@ function observeUpdates(){
 }
 export function installLanguageUI(){
  const nav=document.querySelector('.header nav');
- if(!nav||document.getElementById('quanhLanguage'))return;
- const label=document.createElement('label');
- label.className='quanh-language';
- label.setAttribute('aria-label','Language / Ngôn ngữ');
- label.innerHTML='<span class="sr-only">Ngôn ngữ / Language</span><select id="quanhLanguage" aria-label="Ngôn ngữ / Language"><option value="vi-VN">🇻🇳 VI</option><option value="en-US">🇺🇸 EN</option></select>';
- nav.insertBefore(label,nav.querySelector('[data-action="settings"]'));
- const select=label.querySelector('select');
- select.value=getLocale();
- select.addEventListener('change',()=>{
-  if(!['vi-VN','en-US'].includes(select.value))return;
-  i18n.setLocale(select.value);
-  document.documentElement.lang=select.value;
-  document.dispatchEvent(new CustomEvent('quanh-locale-change',{detail:{locale:select.value}}));
-  localizeAll();
-  observeUpdates();
+ if(!nav)return;
+ mountLanguagePill(nav,{
+  id:'quanhLanguage',
+  before:nav.querySelector('[data-action="settings"]'),
+  onChange(locale){
+   document.documentElement.lang=locale;
+   document.dispatchEvent(new CustomEvent('quanh-locale-change',{detail:{locale}}));
+   localizeAll();
+   observeUpdates();
+  }
  });
- const css=document.createElement('style');
- css.textContent='.quanh-language{display:inline-flex;align-items:center;margin:0 .25rem}.quanh-language select{border:1px solid #b9c3cf;border-radius:8px;background:var(--surface,#fff);color:inherit;padding:.35rem .3rem;font:inherit;max-width:6rem}.language-guidance{margin:.4rem 1.25rem;padding:.45rem .7rem;border-left:3px solid #476b94;font-size:.82rem;line-height:1.4;color:inherit}@media(max-width:600px){.quanh-language{margin:0}.quanh-language select{font-size:12px;padding:.2rem}}';
- document.head.append(css);
+ if(!document.getElementById('qlLanguageGuidanceStyles')){
+  const style=document.createElement('style');
+  style.id='qlLanguageGuidanceStyles';
+  style.textContent='.language-guidance{margin:.4rem 1.25rem;padding:.45rem .7rem;border-left:3px solid #476b94;font-size:.82rem;line-height:1.4;color:inherit}';
+  document.head.append(style);
+ }
  localizeAll();
  observeUpdates();
 }
