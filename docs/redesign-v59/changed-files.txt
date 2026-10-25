@@ -371,6 +371,8 @@ docs/redesign-v59/evidence/assistant-browser.json
 docs/redesign-v59/evidence/axe.json
 docs/redesign-v59/evidence/books-browser.json
 docs/redesign-v59/evidence/browser.json
+docs/redesign-v59/evidence/live-browser.json
+docs/redesign-v59/evidence/live-verification.json
 docs/redesign-v59/evidence/locale-traversal.json
 docs/redesign-v59/evidence/motion-space.json
 docs/redesign-v59/evidence/npm-check.txt
@@ -378,5 +380,6 @@ docs/redesign-v59/evidence/physics-audit.json
 docs/redesign-v59/evidence/physics-reproduction.json
 docs/redesign-v59/evidence/studio-browser.json
 docs/redesign-v59/evidence/summary.json
+docs/redesign-v59/live-lab-390.png
 package.json
 scripts/build-discovery-pages.mjs

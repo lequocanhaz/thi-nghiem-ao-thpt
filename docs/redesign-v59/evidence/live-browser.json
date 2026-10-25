@@ -1,0 +1,11 @@
+{
+  "url": "https://physicslab.tech/",
+  "scope": "Chromium headless simulated390px through the configured proxy; default TLS verification; isolated browser storage; no AI request",
+  "errors": [],
+  "entryVersion": "boot.js?v=61",
+  "recordedRows": 1,
+  "locale": "en-US",
+  "canvasCount": 1,
+  "pageURL": "https://physicslab.tech/?q=dinh+luat+ohm#lab/ohm",
+  "status": "PASS"
+}
