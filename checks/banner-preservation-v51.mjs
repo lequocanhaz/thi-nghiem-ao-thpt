@@ -35,7 +35,11 @@ for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
 assert.doesNotMatch(read('dist/visual-settings.css').toString(),/banner|cinematic|orbital|@font-face|:root|\.brand\b|@import/i,'Visual settings CSS cannot override protected identity');
 const view=read('dist/views.js').toString();
 const markup=view.slice(view.indexOf(' <section class="main-banner'),view.indexOf(' </section>')+' </section>'.length);
-assert.equal(hash(markup),baseline.bannerMarkupSHA256,'Banner markup, text and layout');
+// The owner-approved title is the sole change allowed inside the previously protected banner markup.
+const currentTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading">Hệ thống<br>Thí nghiệm<br><em>Vật Lí Ảo</em></h1>';
+const originalTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading">Thí nghiệm<br><em>Vật Lí</em></h1>';
+assert.equal(markup.split(currentTitle).length,2,'The banner heading must exactly match the requested Vietnamese title');
+assert.equal(hash(markup.replace(currentTitle,originalTitle)),baseline.bannerMarkupSHA256,'Everything beyond the new heading preserves the original banner markup');
 // v53 fixes cold anchor navigation: static startup markup is not a hydrated home.
 // Normalize those guards and the two explicit lab-only presentation additions; banner lifecycle/routing bytes stay frozen.
 const bannerApp=read('dist/app.js').toString()
