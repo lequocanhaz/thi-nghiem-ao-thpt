@@ -80,7 +80,7 @@ const nav=document.querySelector('.reading-header nav');
 if(nav){
  if(!document.getElementById('bookLanguageNoteStyles')){
  const style=document.createElement('style');style.id='bookLanguageNoteStyles';
- style.textContent='.book-language-note{margin:12px 0 20px;border-inline-start:3px solid #69788e;background:#f2f5f9;color:#28384f;border-radius:0 8px 8px 0;padding:9px 13px;font-size:.825rem;line-height:1.5;}';
+ style.textContent='.book-language-note{margin:12px 0 20px;border-inline-start:3px solid #69788e;background:#f2f5f9;color:#28384f;border-radius:0 8px 8px 0;padding:9px 13px;font-size:.825rem;line-height:1.5;} .reading-selects #bookChapter{box-sizing:border-box;max-width:100%;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;} .reading-selects label:has(#bookChapter){flex:1 1 260px;min-width:0;} @media(max-width:620px){.reading-selects{display:grid;grid-template-columns:100px minmax(0,1fr);width:100%;}.reading-selects label,.reading-selects select{width:100%!important;min-width:0!important;max-width:100%!important;}}';
  document.head.append(style);
 }
  mountLanguagePill(nav,{
