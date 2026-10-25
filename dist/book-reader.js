@@ -1,5 +1,7 @@
 import {boundedPage,spreadPages,turnPage,pageImage} from './book-model.js?v=40';
 import {bindBookTouch} from './book-touch.js?v=41';
+import {getLocale,onLocaleChange} from './i18n.js?v=54';
+import {localizedBookTitle,localizedBookString,bookChapterOptionGroups,bookShelfCards,pageStatusText} from './book-copy.js?v=58';
 
 const $=s=>document.querySelector(s);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -36,7 +38,7 @@ function sizePaper(){
  const height=Math.max(120,baseHeight)*zoom,width=height*book.ratio;
  for(const p of pages){p.style.height=height+'px';p.style.width=width+'px';}
 }
-function makePage(number,image){const wrapper=document.createElement('div');wrapper.className='paper-page';wrapper.dataset.page=number;const img=document.createElement('img');img.src=image.src;img.alt=`${book.title} — trang ${number}`;img.width=image.naturalWidth;img.height=image.naturalHeight;img.draggable=false;wrapper.append(img);return wrapper;}
+function makePage(number,image){const wrapper=document.createElement('div');wrapper.className='paper-page';wrapper.dataset.page=number;const img=document.createElement('img');img.src=image.src;img.alt=localizedBookTitle(book)+' — '+localizedBookString('trang ','page ')+number;img.width=image.naturalWidth;img.height=image.naturalHeight;img.draggable=false;wrapper.append(img);return wrapper;}
 function discardTurn(){if(activeTurn){activeTurn.animation?.cancel();activeTurn.layer.remove();activeTurn.under.remove();activeTurn=null;}$('#bookStage').classList.remove('is-turning');delete $('#bookStage').dataset.turnProgress;}
 function previewTurn(direction){
  if(!book||busy||zoom!==1)return false;
@@ -64,7 +66,7 @@ async function finishTurn(commit){
   if(!reduced){p.animation=p.layer.animate?.([{transform:p.layer.style.transform||'rotateY(0deg)'},{transform:`rotateY(${(p.direction>0?-165:165)*(commit?1:0)}deg)`}],{duration:Math.max(120,280*Math.abs((commit?1:0)-p.progress)),easing:'ease-out',fill:'forwards'});try{await p.animation?.finished;}catch{}}
   if(activeTurn!==p)return;
   if(commit)await showPage(p.target,{fromTurn:true});
- }catch{if(activeTurn===p){failedPage=p.target;$('#bookError').hidden=false;$('#bookStatus').textContent='Chưa tải được trang sách.';}}
+ }catch{if(activeTurn===p){failedPage=p.target;$('#bookError').hidden=false;$('#bookStatus').textContent=localizedBookString('Chưa tải được trang sách.','Could not load the textbook page.');}}
  finally{if(activeTurn===p){discardTurn();busy=false;updateControls();}}
 }
 async function showPage(value,{animate=false,direction=1,push=false,fromTurn=false}={}){
@@ -92,11 +94,11 @@ async function showPage(value,{animate=false,direction=1,push=false,fromTurn=fal
    try{await animation?.finished;}catch{}layer.remove();
   }
   if(generation!==token||book!==currentBook)return;
-  $('#bookStatus').textContent=`${book.title}, trang ${numbers.join(' và ')} trên ${book.pages}`;
+  $('#bookStatus').textContent=pageStatusText(book,numbers);
   const nearby=[numbers[0]-1,numbers.at(-1)+1].filter(n=>n>=1&&n<=book.pages);
   nearby.forEach(n=>{imageFor(book.grade,n).catch(()=>{});});
  }catch{
-  if(generation===token){failedPage=target;$('#bookError').hidden=false;$('#bookStatus').textContent='Chưa tải được trang sách.';}
+  if(generation===token){failedPage=target;$('#bookError').hidden=false;$('#bookStatus').textContent=localizedBookString('Chưa tải được trang sách.','Could not load the textbook page.');}
  }finally{if(generation===token){busy=false;updateControls();}}
 }
 async function openBook(grade,value,{push=false}={}){
@@ -104,12 +106,30 @@ async function openBook(grade,value,{push=false}={}){
  const selected=catalog.find(b=>b.grade===Number(grade));if(!selected){showShelf();return;}
  ++token;book=selected;page=boundedPage(value??savedPage(book.grade,book.pages),book.pages);zoom=1;two=shouldUseTwo();
  $('#bookShelf').hidden=true;$('#reader').hidden=false;$('#paperStack').replaceChildren();
- $('#readingTitle').textContent=book.title;document.title=book.title+' · Quanh Lab';
- $('#bookGrade').innerHTML=catalog.map(b=>`<option value="${b.grade}" ${b===book?'selected':''}>Lớp ${b.grade}</option>`).join('');
- $('#bookChapter').innerHTML='<option value="0">Chọn bài học</option><option value="1">Bìa sách</option>'+`<option value="${book.contentsPage}">Mục lục sách</option>`+book.chapters.map((c,i)=>`<optgroup label="${escape(c.title)}"><option value="${c.page}">Mở đầu chương · tr. ${c.printedPage}</option>${book.lessons.filter(l=>l.page>=c.page&&l.page<(book.chapters[i+1]?.page||Infinity)).map(l=>`<option value="${l.page}">Bài ${l.number}. ${escape(l.title)} · tr. ${l.printedPage}</option>`).join('')}</optgroup>`).join('');
+ $('#readingTitle').textContent=localizedBookTitle(book);document.title=localizedBookTitle(book)+' · Quanh Lab';
+ $('#bookGrade').innerHTML=catalog.map(b=>`<option value="${b.grade}" ${b===book?'selected':''}>${localizedBookString('Lớp ','Grade ')}${b.grade}</option>`).join('');
+ $('#bookChapter').innerHTML=bookChapterOptionGroups(book,escape);
  await showPage(page,{push});
 }
-function showShelf(){touchController?.reset();discardTurn();++token;book=null;busy=false;$('#reader').hidden=true;$('#bookShelf').hidden=false;document.title='Sách giáo khoa · Quanh Lab';$('#paperStack').replaceChildren();cache.clear();}
+// Language changes must never reopen books, reset zoom, drop pages or alter URL/page storage.
+function refreshBookLabels(){
+ if(!catalog.length)return;
+ const cards=$('#bookCards');
+ if(cards)cards.innerHTML=bookShelfCards(catalog,escape);
+ if(!book){document.title=localizedBookString('Sách giáo khoa','Textbooks')+' · Quanh Lab';return;}
+ const chapter=$('#bookChapter'),selected=chapter.value;
+ $('#readingTitle').textContent=localizedBookTitle(book);
+ document.title=localizedBookTitle(book)+' · Quanh Lab';
+ $('#bookGrade').innerHTML=catalog.map(b=>`<option value="${b.grade}" ${b===book?'selected':''}>${localizedBookString('Lớp ','Grade ')}${b.grade}</option>`).join('');
+ chapter.innerHTML=bookChapterOptionGroups(book,escape);
+ chapter.value=selected;
+ for(const image of document.querySelectorAll('#paperStack .paper-page img')){
+  image.alt=localizedBookTitle(book)+' — '+localizedBookString('trang ','page ')+image.closest('.paper-page')?.dataset.page;
+ }
+ $('#bookStatus').textContent=pageStatusText(book,spreadPages(page,book.pages,two));
+}
+onLocaleChange(refreshBookLabels);
+function showShelf(){touchController?.reset();discardTurn();++token;book=null;busy=false;$('#reader').hidden=true;$('#bookShelf').hidden=false;document.title=localizedBookString('Sách giáo khoa','Textbooks')+' · Quanh Lab';$('#paperStack').replaceChildren();cache.clear();}
 async function readRoute(){const params=new URLSearchParams(location.search);if(params.has('grade'))await openBook(params.get('grade'),params.has('page')?params.get('page'):undefined);else showShelf();}
 function navigate(direction){if(!book||busy)return;const next=turnPage(page,book.pages,two,direction);if(next!==page)showPage(next,{animate:true,direction});}
 function changeZoom(amount){if(!book)return;touchController?.reset();if(activeTurn){discardTurn();busy=false;}zoom=Math.max(1,Math.min(2.5,zoom+amount));const nextTwo=shouldUseTwo();if(nextTwo!==two)showPage(page);else{sizePaper();updateControls();}}
@@ -132,7 +152,7 @@ if(typeof ResizeObserver!=='undefined')new ResizeObserver(sizePaper).observe($('
 
 try{
  const response=await fetch('books/catalog.json?v=44');if(!response.ok)throw Error('catalog-load');catalog=await response.json();
- $('#bookCards').innerHTML=catalog.map(b=>`<a class="textbook-card" href="books.html?grade=${b.grade}" aria-label="Đọc ${escape(b.title)}"><div class="textbook-cover"><img src="books/${b.grade}/cover.webp" width="340" height="480" alt="Bìa ${escape(b.title)}" decoding="async"></div><div><div class="textbook-meta"><h2>${escape(b.title)}</h2><span>${b.pages} trang</span></div>${b.sample?'<div class="textbook-edition">Bản mẫu</div>':''}</div><span class="textbook-open">Đọc sách <span aria-hidden="true">↗</span></span></a>`).join('');
+ $('#bookCards').innerHTML=bookShelfCards(catalog,escape);
  $('#bookCards').addEventListener('click',event=>{const link=event.target.closest('a');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();openBook(new URL(link.href).searchParams.get('grade'),undefined,{push:true});});
  await readRoute();
 }catch{$('#bookCards').innerHTML='<p role="alert">Chưa mở được thư viện sách. <a href="books.html">Tải lại</a></p>';}
