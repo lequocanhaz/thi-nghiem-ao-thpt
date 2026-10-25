@@ -1,7 +1,7 @@
 import {loadVisualSettings,saveVisualSettings,updateVisualSetting,visualRenderConfig,applyVisualAppearance,syncVisualSettings} from './visual-settings.js?v=54';
 import {rowInGraphMode,graphColumnLabel} from './electric-analysis.js?v=54';
 import {loadTeaching} from './lesson-loader.js?v=50';
-import {lessonGuideMarkup,lessonSummaryMarkup} from './lesson-view.js?v=54';
+import {lessonGuideMarkup,lessonSummaryMarkup} from './lesson-view.js?v=56';
 import {subjects,bookSeries,matchesCatalog,readCatalogURL} from './catalog-filters.js?v=51';
 import {installMathObserver} from './math.js?v=52';
 import {isDriven,processFor,advanceProcess,seekProcess,cleanProcess} from './playback.js?v=54';
@@ -13,7 +13,7 @@ import {BannerScene} from './banner.js?v=18';
 import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=54';
 import {fitModels,fitSummary,reportMarkup} from './research.js?v=51';
 import {themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams} from './learning.js?v=17';
-import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=54';
+import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=56';
 import {curriculumOptions,curriculumMeta,curriculumKey} from './curriculum.js?v=39';
 import {tableGraph,sweepStates,segments,graphParameter,tableColumnFor} from './analytics.js?v=54';
 import {experiments,initialState,electricModes} from './experiments.js?v=54';
@@ -25,11 +25,12 @@ import {loadRenderers} from './lab-loader.js?v=54';
 let LabScene,SoftwareScene,sceneLoading=false,sceneError='',sceneProgress=0;
 import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=54';
 import {Narrator,Tone} from './media.js?v=55';
-import {getLocale,englishTitle,translateShort,installLanguageUI} from './language-ui.js?v=55';
+import {getLocale,englishTitle,translateShort,installLanguageUI} from './language-ui.js?v=56';
+import {englishIntro,englishTopic,englishStudy} from './english-study.js?v=56';
 import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=54';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt=(n,d=2)=>Number.isFinite(n)?Math.abs(n)>1e5||(Math.abs(n)<.001&&n!==0)?n.toExponential(2).replace('.',','):n.toLocaleString('vi-VN',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
+const fmt=(n,d=2)=>Number.isFinite(n)?Math.abs(n)>1e5||(Math.abs(n)<.001&&n!==0)?n.toExponential(2).replace('.',getLocale()==='en-US'?'.':','):n.toLocaleString(getLocale(),{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/đ/g,'d');
 const defaults={viewMode:'3d',viewPlane:'front',paramWindows:{},loop:false,mode:0,capMode:'charge',gasAxis:'tK',switches:{lines:true,connections:true,components:true,resultant:true,parallelogram:true,axes:true,grid:true,vectors:true,trajectory:true,handles:true,light:true,labels:false}};
 let saved={},prefs={favorites:[],recent:[],quality:'high',voice:'',rate:.95,textSize:1,progress:{},renderer:'auto',motion:!matchMedia('(prefers-reduced-motion: reduce)').matches};try{saved=JSON.parse(localStorage.getItem('thpt-lab-v1')||'{}');prefs={...prefs,...JSON.parse(localStorage.getItem('thpt-ui-v3')||'{}')}}catch{}
@@ -59,7 +60,7 @@ function updateSpeech(status){
  updateVoiceChoices(status);if(status.error)toast(status.error);
 }
 const narrator=new Narrator(updateSpeech);narrator.setLocale(getLocale());narrator.voiceName=prefs.voice;narrator.rate=prefs.rate;
-document.addEventListener('quanh-locale-change',event=>{narrator.setLocale(event.detail.locale);prefs.voice='';updateSpeech(narrator.status());});
+document.addEventListener('quanh-locale-change',event=>{narrator.setLocale(event.detail.locale);prefs.voice='';updateSpeech(narrator.status());if(active){const guide=$('.teaching-guide-content');if(guide)guide.innerHTML=lessonGuideMarkup(active);const summary=$('.lesson-summary-host');if(summary)summary.innerHTML=lessonSummaryMarkup(active);renderCoach();if(panel==='theory')renderPanel();if(panel==='discover'){const en=event.detail.locale==='en-US',study=englishStudy(active),q=$('.discovery-prompt h2');if(q)q.textContent=en?study.question:active.tasks[0];const lines=document.querySelectorAll('.investigation-steps small');const english=['Write a testable prediction.',study.investigation,study.misconception];lines.forEach((line,i)=>line.textContent=en?english[i]:(i===0?'Nêu điều bạn nghĩ sẽ xảy ra':active.tasks[i]));}}assistant?.render?.();});
 const staticIds=new Set(['electric','lever','hooke','magnetic',...experiments.filter(e=>e.static&&!e.visualOnly).map(e=>e.id)]);
 const icon=(name)=>{const paths={more:'M5 12h.01M12 12h.01M19 12h.01',sliders:'M4 6h16M4 12h16M4 18h16M8 3v6M16 9v6M10 15v6',table:'M3 3h18v18H3zM3 9h18M3 15h18M9 3v18',info:'M12 11v6M12 7h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0',plus:'M12 5v14M5 12h14',minus:'M5 12h14',loop:'M4 8h12l4 4-4 4M20 12H8l-4 4',axes:'M12 3v18M3 12h18M9 6l3-3 3 3M18 9l3 3-3 3',grid:'M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18','arrow-up-right':'M6 18 18 6M6 6h12v12','arrow-right':'M4 12h16M14 6l6 6-6 6',play:'M9 5l12 7-12 7z',pause:'M8 5v14M16 5v14',voice:'M4 10h4l5-5v14l-5-5H4zM17 8q6 4 0 8',star:'M12 3l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z',search:'M17 17l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',reset:'M4 6v6h6M4 12a8 8 0 1 1 2 6',step:'M6 5l11 7-11 7zM19 5v14',camera:'M3 7h5l2-3h4l2 3h5v13H3zM16 13a4 4 0 1 1-8 0 4 4 0 0 1 8 0',expand:'M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5'};return `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[name]||paths.play}"/></svg>`;};
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3500);}
@@ -135,11 +136,11 @@ function updateHeroDemo(){if(!heroState||heroState.id!=='ohm')return;const s=her
 function renderCards(){
  if(!$('#cards'))return;
  const terms=normalize(search).trim().split(/\s+/).filter(Boolean);
- let list=experiments.filter(e=>matchesCatalog(e,subjectFilter,bookSeriesFilter)&&(grade==='all'||e.grade===+grade)&&(topic==='all'||e.topic===topic)&&(curriculumFilter==='all'||curriculumKey(e)===curriculumFilter)&&terms.every(term=>normalize(e.title+' '+e.topic+' '+e.description).includes(term))&&(filter!=='favorites'||prefs.favorites.includes(e.id))&&(filter!=='recent'||prefs.recent.includes(e.id))&&(pathFilter===null||paths[pathFilter].ids.includes(e.id))&&(levelFilter==='all'||(levelFilter==='extra'?e.extra:!e.extra)));
+ let list=experiments.filter(e=>matchesCatalog(e,subjectFilter,bookSeriesFilter)&&(grade==='all'||e.grade===+grade)&&(topic==='all'||e.topic===topic)&&(curriculumFilter==='all'||curriculumKey(e)===curriculumFilter)&&terms.every(term=>normalize(e.title+' '+e.topic+' '+e.description+' '+englishTitle(e.id)+' '+englishTopic(e.topic)).includes(term))&&(filter!=='favorites'||prefs.favorites.includes(e.id))&&(filter!=='recent'||prefs.recent.includes(e.id))&&(pathFilter===null||paths[pathFilter].ids.includes(e.id))&&(levelFilter==='all'||(levelFilter==='extra'?e.extra:!e.extra)));
  if(filter==='recent')list.sort((a,b)=>prefs.recent.indexOf(a.id)-prefs.recent.indexOf(b.id));
  if(pathFilter!==null)list.sort((a,b)=>paths[pathFilter].ids.indexOf(a.id)-paths[pathFilter].ids.indexOf(b.id));
- if(terms.length&&catalogSort==='default'){const phrase=terms.join(' '),rank=e=>{const heading=normalize(e.title+' '+e.topic);return heading.includes(phrase)?3:terms.every(t=>heading.includes(t))?2:normalize(e.description).includes(phrase)?1:0;};list.sort((a,b)=>rank(b)-rank(a));}
- if(catalogSort==='name')list.sort((a,b)=>a.shortTitle.localeCompare(b.shortTitle,'vi'));
+ if(terms.length&&catalogSort==='default'){const phrase=terms.join(' '),rank=e=>{const heading=normalize(e.title+' '+e.topic+' '+englishTitle(e.id)+' '+englishTopic(e.topic));return heading.includes(phrase)?3:terms.every(t=>heading.includes(t))?2:normalize(e.description).includes(phrase)?1:0;};list.sort((a,b)=>rank(b)-rank(a));}
+ if(catalogSort==='name')list.sort((a,b)=>(getLocale()==='en-US'?englishTitle(a.id):a.shortTitle).localeCompare(getLocale()==='en-US'?englishTitle(b.id):b.shortTitle,getLocale()));
  if(catalogSort==='grade')list.sort((a,b)=>a.grade-b.grade);
  const size=24,pages=Math.max(1,Math.ceil(list.length/size));catalogPage=Math.max(1,Math.min(pages,catalogPage));const start=(catalogPage-1)*size;
  $('#resultCount').textContent=`${list.length} thí nghiệm${list.length>size?' · '+(start+1)+'–'+Math.min(start+size,list.length):''}`;
@@ -250,7 +251,7 @@ function exportReport(){save();const priorPanel=panel;if(panel!=='data'){panel='
 function exportCSV(){if(!rows.length){toast('Ghi ít nhất một dòng số liệu.');return}const cell=v=>'"'+String(v??'').replace(/"/g,'""')+'"';const csv=[['Lần',...active.headers],...rows.map((r,i)=>[i+1,...r.values])].map(r=>r.map(cell).join(',')).join('\r\n');download('\ufeff'+csv,active.id+'-so-lieu.csv','text/csv;charset=utf-8');}
 function stopTone(){tone.stop();const b=$('#toneButton');if(b)b.textContent='♪ Nghe âm';}
 function speak(text,clips=[]){stopTone();if(getLocale()==='en-US'){const original=String(text);if(original.startsWith('Xin chào.'))text='Welcome to Quanh Lab. Change the parameters, observe the simulation, and explain the results using measurements. A voltage of six volts across ten ohms produces a current of zero point six amperes.';else if(active&&meters[active.id]?.some(m=>original.startsWith(m.label+':')))text=englishReadouts(getData());else if(active?.tasks?.some(task=>original.startsWith(task)))text='For '+englishTitle(active.id)+', make a prediction, change one variable, record the readings, and explain your conclusion with evidence.';else text=englishIntroduction();clips=[];}const result=narrator.speak(text,clips);if(!result.ok)toast(result.reason);}
-function englishIntroduction(){return active?'Welcome to '+englishTitle(active.id)+'. Change one experimental parameter at a time, observe the model, record several measurements, and analyze the graph. Keep the other variables constant and check the conditions under which the model is valid.':'Choose an interactive experiment. Change the parameters, observe the simulation, and record your results.';}
+function englishIntroduction(){return active?englishIntro(active):'Choose an interactive experiment. Change the parameters, observe the simulation, and record your results.';}
 function englishReadouts(d){return meters[active.id].map((m,i)=>{const value=meterValue(d,state,m);const unit=active.id==='electric'&&['magnitude','z'].includes(m.key)?d.unit:m.unit;const label=translateShort(m.label);return (label===m.label?'Reading '+(i+1):label)+': '+(value===null?'undefined':Number((value*m.scale).toFixed(Math.min(6,m.digits||2))).toLocaleString('en-US'))+' '+unit+'.';}).join(' ');}
 function openDialog(title,content){const dialog=$('#dialog');if(!dialog.open)dialogReturn=document.activeElement;$('#dialogTitle').textContent=title;$('#dialogBody').innerHTML=content;if(!dialog.open)dialog.showModal();}
 function restoreDialogFocus(){const target=dialogReturn?.isConnected?dialogReturn:$('#lessonTitle')||$('#search')||$('#main');target?.focus?.({preventScroll:true});dialogReturn=null;}

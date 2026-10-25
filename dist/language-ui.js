@@ -1,8 +1,9 @@
-import {createI18n,dictionaries} from './i18n.js?v=54';
+import {i18n,dictionaries} from './i18n.js?v=54';
+import {experiments} from './experiments.js?v=54';
+import {englishStudy,englishParameter,englishTopic} from './english-study.js?v=56';
 import {messagePairs} from './locales/messages.js?v=54';
 import {physicsGlossary} from './locales/glossary.js?v=54';
 
-const i18n=createI18n();
 const translations=new Map();
 function pair(vi,en){if(vi&&en&&vi!==en)translations.set(vi,en);}
 for(const group of Object.values(messagePairs))for(const [vi,en] of Object.values(group))pair(vi,en);
@@ -12,6 +13,7 @@ for(const id of Object.keys(dictionaries['vi-VN'].experiments)){
  const en=dictionaries['en-US'].experiments[id];
  pair(vi.title,en.title);pair(vi.shortTitle,en.shortTitle);
 }
+for(const e of experiments){const guide=englishStudy(e);if(!translations.has(e.topic))pair(e.topic,englishTopic(e.topic));pair(e.description,guide.explanation);pair(e.description.split(/(?<=[.!?])\s/)[0],guide.explanation);if(e.subtitle)pair(e.subtitle,guide.investigation);(e.params||[]).forEach((p,i)=>pair(p.label,englishParameter(p,i)));}
 for(const [vi,en] of [
  ['Thí nghiệm','Experiments'],['Vật Lí','Physics'],['Vật lí','Physics'],['Thư viện thí nghiệm','Experiment library'],
  ['Thư viện thí nghiệm ','Experiment library '],['Chọn thí nghiệm','Choose experiment'],
@@ -54,6 +56,70 @@ for(const [vi,en] of [
  ['Lưu tự động trên thiết bị','Saved automatically on this device'],
  ['Thư viện','Library'],['Tiến độ','Progress'],['Tổng quan','Overview'],
  ['Phân tích','Analysis'],['Đọc bài học và tự kiểm tra','Read and self-check']
+])pair(vi,en);
+
+// Navigation, simulation panels, measurement workflows and accessibility labels.
+for(const [vi,en] of [
+ ['Đang mở không gian…','Opening the simulation…'],['Con lắc','Pendulum'],['Mạch điện','Electric circuit'],
+ ['Lăng kính','Prism'],['Xem tất cả','View all'],['Chủ đề SGK','Textbook topic'],
+ ['Sắp xếp','Sort'],['Tên A → Z','Name A → Z'],['Bỏ lọc','Clear filters'],
+ ['Tuyến khảo sát','Investigation pathways'],['Học theo một mạch kiến thức','Follow one knowledge pathway'],
+ ['3D · Tương tác','3D · Interactive'],['Đã khảo sát','Completed'],
+ ['Đổi thí nghiệm','Change experiment'],['Phiên','Session'],
+ ['Tải bản sao phiên','Download session backup'],['Mở phiên từ tệp','Open session file'],
+ ['Khám phá','Explore'],['Phân tích','Analysis'],['Trình chiếu','Present'],
+ ['Thông số','Parameters'],['Dữ liệu & ghi chép','Data and notes'],
+ ['Dữ liệu','Data'],['Tùy chọn bố cục','Layout options'],['Hướng dẫn & giọng đọc','Help and speech'],
+ ['Khôi phục bố cục','Restore layout'],['Nghe hướng dẫn','Listen to instructions'],
+ ['Thoát trình chiếu','Exit presentation'],['Công cụ','Tools'],['Trục','Axes'],['Lưới','Grid'],
+ ['Đồ họa nhẹ','Simplified graphics'],['Đang dựng mô hình…','Rendering model…'],
+ ['Hướng dẫn thí nghiệm','Experiment guide'],['Bài học','Lesson'],
+ ['Bật tương tác 3D','Enable 3D interaction'],
+ ['Kéo nền để xoay · Kéo điểm màu để điều chỉnh','Drag to rotate · Drag handles to adjust'],
+ ['Không gian ×10','Workspace ×10'],['Vừa mô hình','Fit model'],
+ ['Biến tương tác','Interactive parameter'],['Nhập số','Enter value'],['Thiết lập','Settings'],
+ ['Đọc số đo','Read measurements'],['Nghe âm','Play sound'],['Giọng đọc','Speech voice'],
+ ['Thí nghiệm trước','Previous experiment'],['Thí nghiệm tiếp theo','Next experiment'],
+ ['CÂU HỎI KHẢO SÁT','INVESTIGATION QUESTION'],['Giả thuyết của bạn','Your hypothesis'],
+ ['Tự đánh dấu bước đã làm · lưu trên thiết bị này','Mark your completed steps · saved on this device'],
+ ['Thử một thiết lập','Try a configuration'],['Viết giải thích','Write an explanation'],
+ ['Chưa tải được mô hình','Unable to load the model'],
+ ['Thông số và bảng đo vẫn được giữ.','Parameters and measurements were preserved.'],
+ ['Đang tải công cụ 3D:','Loading 3D tools:'],['Thử lại 3D','Retry 3D'],
+ ['Chi tiết','Details'],['Chọn bài để điều chỉnh và xem số liệu.','Choose an experiment to edit inputs and view data.'],
+ ['Xem tất cả thí nghiệm','View all experiments'],['Khoảng thanh trượt','Slider range'],
+ ['Áp dụng khoảng','Apply range'],['Toàn miền','Full domain'],
+ ['Khung 3D đang bị gián đoạn. Bạn vẫn có thể điều chỉnh, xem đồ thị và ghi số liệu.','3D rendering was interrupted. You can still adjust inputs, inspect graphs and record measurements.'],
+ ['A đã lưu ↔ B hiện tại','Saved A ↔ Current B'],['Về A','Restore A'],['Đổi A/B','Swap A/B'],
+ ['Bảng trạng thái','State table'],['Các trạng thái đã ghi của','Recorded states for'],
+ ['Nhấn Ghi điểm để lưu số liệu đang quan sát.','Press Record to save the current reading.'],
+ ['Tải phiên','Download session'],['Mở phiên','Open session'],
+ ['Từ dữ liệu đến kết luận','From data to conclusions'],['Nhận xét của bạn','Your interpretation'],
+ ['Tải ghi chép','Download notes'],['Khớp mô hình','Fit model'],
+ ['Dạng quan hệ','Relationship type'],['Khôi phục bảng vừa xóa','Restore deleted table'],
+ ['Chưa có số liệu.','No measurements recorded.'],
+ ['Ghi điểm đầu tiên','Record the first point'],['Hiệu ứng giao diện','Interface effects'],
+ ['Chất lượng 3D','3D quality'],['Cao · bóng đổ mịn','High · smooth shadows'],
+ ['Nhẹ · tiết kiệm máy','Light · reduced resource usage'],['Cỡ chữ','Text size'],
+ ['Rất lớn','Extra large'],['Nguồn học liệu','Learning resources'],
+ ['Nguồn giọng đọc tiếng Việt','Vietnamese speech sources'],
+ ['Giáo trình & tài liệu quốc tế','International textbooks and readings'],
+ ['Nguồn theo thí nghiệm','Sources by experiment'],['Biến quét','Sweep variable'],
+ ['Số trạng thái','Number of states'],['Giữ cố định:','Hold constant:'],
+ ['Thu số liệu','Collect data'],['Bắt đầu với chuyển động thẳng đều','Start with uniform linear motion'],
+ ['Sao chép đường dẫn','Copy link'],['Tải thông tin lỗi','Download diagnostics'],
+ ['Câu hỏi của bạn','Your question'],['Tối đa 2 ảnh/lượt','Up to 2 images per message'],
+ ['Bạn muốn khám phá điều gì?','What would you like to explore?'],
+ ['Gửi câu hỏi, ảnh bài tập hoặc đồ thị.','Ask a question, or send a problem or graph image.'],
+ ['Gửi ↑','Send ↑'],['Dừng','Stop'],['Gần đây','Recently viewed'],
+ ['Lớp','Grade'],['Toàn màn hình','Fullscreen'],['Nghe thuyết minh mô hình','Listen to the simulation narration'],
+ ['Một trang','One page'],['Hai trang','Two pages'],
+ ['Chưa có thí nghiệm đã lưu','No saved experiments'],
+ ['Chưa tìm thấy thí nghiệm phù hợp','No matching experiments'],
+ ['Những bài bạn mở sẽ xuất hiện ở đây.','Previously opened experiments will appear here.'],
+ ['Bấm ngôi sao trên một thí nghiệm để lưu vào đây.','Select the star on an experiment to save it here.'],
+ ['Thử từ khóa ngắn hơn hoặc bỏ bớt bộ lọc.','Try a shorter search or fewer filters.'],
+ ['Số liệu được tính từ mô hình. Các giả định nằm trong tab Mô hình.','Readouts are calculated by the model. See its assumptions under the Model tab.']
 ])pair(vi,en);
 
 export const getLocale=()=>i18n.getLocale();
@@ -114,7 +180,7 @@ function visit(container,english){
 function localizeAll(){
  const english=getLocale()==='en-US';
  document.documentElement.lang=english?'en-US':'vi';
- document.title=translateShort(document.title);
+ const labId=(location.hash.match(/^#lab\/([^?]+)/)||[])[1];const current=experiments.find(e=>e.id===labId);document.title=english?(current?englishStudy(current).title+' · Quanh Lab':'Quanh Lab · Experiment library'):(current?current.shortTitle+' · Quanh Lab':'Quanh Lab · Thư viện thí nghiệm');
  for(const selector of rootSelectors)visit(document.querySelector(selector),english);
  const lab=document.querySelector('.lab');
  let guidance=lab?.querySelector('.language-guidance');
@@ -123,7 +189,7 @@ function localizeAll(){
   guidance=document.createElement('p');
   guidance.className='language-guidance';
   guidance.setAttribute('lang','en-US');
-  guidance.textContent='English interface and narration are available. Detailed lesson explanations remain in Vietnamese while their scientific translations are being reviewed.';
+  guidance.textContent='English study guides are provided for all 300 models. These are original model-based explanations, not certified line-by-line translations of the Vietnamese lesson texts.';
   const heading=lab.querySelector('.lab-heading');
   heading?.insertAdjacentElement('afterend',guidance);
  }
@@ -152,6 +218,7 @@ export function installLanguageUI(){
  select.addEventListener('change',()=>{
   if(!['vi-VN','en-US'].includes(select.value))return;
   i18n.setLocale(select.value);
+  document.documentElement.lang=select.value;
   document.dispatchEvent(new CustomEvent('quanh-locale-change',{detail:{locale:select.value}}));
   localizeAll();
   observeUpdates();
