@@ -1,4 +1,4 @@
-import {atlasById,evaluateAtlas} from './atlas-catalog.js?v=17';
+import {atlasById,evaluateAtlas} from './atlas-catalog.js?v=54';
 import * as P from './physics.js?v=17';
 import {evaluateDiscovery} from './discovery-models.js?v=17';
 export const rad=d=>d*Math.PI/180;
@@ -11,7 +11,7 @@ export function evaluate(id,s,c={}){const t=s.t||0;if(atlasById[id])return evalu
  case 'boyle':return P.boyle(s.v);
  case 'gas':return P.gas(s.n,s.tK,s.v);
  case 'capacitor':return P.capacitor(s.u,s.r*1000,s.c/1e6,t,c.capMode||'charge');
- case 'electric':{const mode=c.mode??0,q=[{q:s.q1*1e-9,x:s.x1,y:s.y1,z:s.z1||0}];if(mode>=2)q.push({q:s.q2*1e-9,x:s.x2,y:s.y2,z:s.z2||0});const px=mode===0?s.x2:s.px,py=mode===0?s.y2:s.py,pz=mode===0?s.z2:s.pz;const f=P.superpose3d(q,px,py,pz||0);if(!f)return null;const factor=mode===0?s.q2*1e-9:mode===2?s.q0*1e-9:1;return {...f,x:f.x*factor,y:f.y*factor,z:f.z*factor,magnitude:f.magnitude*Math.abs(factor),parts:f.parts.map(p=>({...p,x:p.x*factor,y:p.y*factor,z:p.z*factor})),r1:f.parts[0].r,r2:f.parts[1]?.r??null,unit:[0,2].includes(mode)?'N':'N/C'};}
+ case 'electric':{const mode=c.mode??0,q=[{q:s.q1*1e-9,x:s.x1,y:s.y1,z:s.z1||0}];if(mode>=2)q.push({q:s.q2*1e-9,x:s.x2,y:s.y2,z:s.z2||0});const px=mode===0?s.x2:s.px,py=mode===0?s.y2:s.py,pz=mode===0?s.z2:s.pz;const f=P.superpose3d(q,px,py,pz||0);if(!f)return null;const factor=mode===0?s.q2*1e-9:mode===2?s.q0*1e-9:1;return {...f,x:f.x*factor,y:f.y*factor,z:f.z*factor,magnitude:f.magnitude*Math.abs(factor),parts:f.parts.map(p=>({...p,x:p.x*factor,y:p.y*factor,z:p.z*factor,magnitude:p.magnitude*Math.abs(factor)})),r1:f.parts[0].r,r2:f.parts[1]?.r??null,unit:[0,2].includes(mode)?'N':'N/C'};}
  case 'uniform':return {t,x:s.v*t,v:s.v};
  case 'acceleration':return {t,x:s.v0*t+.5*s.acc*t*t,v:s.v0+s.acc*t,acc:s.acc};
  case 'horizontal':{const duration=Math.sqrt(2*s.h0/P.G),tt=Math.min(t,duration);return {t:tt,x:s.v0*tt,y:Math.max(0,s.h0-.5*P.G*tt*tt),vx:s.v0,vy:-P.G*tt,v:Math.hypot(s.v0,P.G*tt),range:s.v0*duration,duration};}

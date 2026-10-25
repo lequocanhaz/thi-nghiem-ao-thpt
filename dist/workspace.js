@@ -1,4 +1,4 @@
-import {formulaCatalog} from './formula-catalog.js?v=52';
+import {formulaCatalog} from './formula-catalog.js?v=54';
 import {legacyFormulaToLatex,mathMarkup} from './math.js?v=52';
 export const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const esc=escapeHtml;

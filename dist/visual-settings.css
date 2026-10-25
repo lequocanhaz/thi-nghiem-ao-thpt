@@ -1,0 +1,23 @@
+/* Scoped to the experiment; scientific colors and the home identity stay intact. */
+.visual-settings{position:relative;min-width:0}
+.visual-settings>summary{display:flex;align-items:center;justify-content:center;min-height:44px;cursor:pointer;padding:8px 12px;border:1px solid #c8d2df;border-radius:8px;background:#fff;color:#1c344e;font-size:.8125rem;font-weight:700;list-style:none}
+.visual-settings>summary::-webkit-details-marker{display:none}
+.visual-settings>summary::after{content:'⌄';margin-left:8px}
+.visual-settings[open]>summary{border-color:#3c649a;background:#eef3fa}
+.visual-settings-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:320px;max-width:calc(100vw - 32px);padding:16px;display:grid;gap:14px;background:#fff;border:1px solid #c3cedb;border-radius:12px;box-shadow:0 10px 28px #182e481c;color:#1c344e;max-height:min(70svh,620px);overflow:auto;overscroll-behavior:contain}
+.visual-setting-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:12px;align-items:center;font-size:.8125rem;line-height:1.4}
+.visual-setting-row select{min-width:0;max-width:100%;min-height:44px;padding:8px;border:1px solid #bcc9d8;border-radius:7px;background:#fff;color:inherit;font:inherit}
+.visual-setting-check{display:flex;align-items:center;gap:10px;font-size:.8125rem;min-height:44px;cursor:pointer}
+.visual-setting-check input{width:20px;height:20px;accent-color:#245acb;flex-shrink:0}
+.visual-settings-note{margin:0;padding-top:12px;border-top:1px solid #dbe2eb;font-size:.75rem;line-height:1.6;color:#445b73}
+.visual-settings-status{font-size:.75rem;line-height:1.5;color:#244d38}
+.visual-settings-status:empty{display:none}
+.visual-settings :is(summary,select,input):focus-visible{outline:3px solid #255acb;outline-offset:3px}
+.stage-shell[data-visual-contrast=high]{border-color:#263d58}
+.stage-shell[data-visual-contrast=high] :is(.stage-top,.transport,.readouts,.view-controls){color:#10283f;background-color:#fff}
+.stage-shell[data-visual-contrast=high] :is(.live-tag,.activity-caption,.viewport-caption,.readouts span,.readouts small,.coordinate-legend){color:#1b344e}
+.stage-shell[data-visual-contrast=high] :is(button,select,summary){border-color:#728499}
+.stage-shell[data-visual-mode=classroom] .readouts strong{font-size:1.75rem}
+.stage-shell.visual-reduced-motion :is(button,summary,.touch-interaction,.scene-tooltip){transition:none;animation:none}
+@media(max-width:600px){.visual-settings{position:static}.visual-settings>summary{padding-inline:10px}.visual-settings-panel{width:296px;max-height:65svh;padding:12px}.visual-setting-row{gap:8px}}
+@media(prefers-reduced-motion:reduce){.visual-settings :is(summary,select,input){transition:none;animation:none}}

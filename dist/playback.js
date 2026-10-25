@@ -1,5 +1,5 @@
-import {evaluate,clampState} from './models.js?v=17';
-import {meters} from './measurements.js?v=17';
+import {evaluate,clampState} from './models.js?v=54';
+import {meters} from './measurements.js?v=54';
 import {usableParams,coreParams} from './learning.js?v=17';
 
 // A static law is driven by a controlled experimental process, never a fake t-axis.
@@ -7,7 +7,7 @@ export const isDriven=e=>['electric','lever','hooke','magnetic'].includes(e.id)|
 // Choose a control that also changes the real apparatus, before a graph-only input.
 const apparatusControl={rotational_inertia:'radius',rolling:'radius',spring_energy:'extension',string_resonance:'mode',open_pipe:'mode',closed_pipe:'mode',potential_pair:'distance',dipole_torque:'angle',inductor_energy:'current',binding_energy:'nucleons',metacentric:'angle',atwood_inertia:'m1',physical_pendulum:'length',harmonic_timbre:'second',cyclotron:'radius',em_plane_wave:'amplitude',newton_rings:'curvature',maxwell_distribution:'temperature'};
 const basis=(e,s,c,key)=>JSON.stringify([e.params.filter(p=>p.key!==key&&p.key!=='t').map(p=>[p.key,s[p.key]]),c.mode,c.capMode]);
-const outputs=(e,s,c)=>{const d=evaluate(e.id,s,c);return d?meters[e.id].map(m=>Object.hasOwn(d,m.key)?d[m.key]:s[m.key]):null;};
+const outputs=(e,s,c)=>{const d=evaluate(e.id,s,c);return d&&d.domainValid!==false?meters[e.id].map(m=>Object.hasOwn(d,m.key)?d[m.key]:s[m.key]):null;};
 const good=values=>values&&values.some(Number.isFinite)&&values.every(v=>v===null||v===undefined||Number.isFinite(v));
 function sample(e,s,key,value){return clampState(e,{...s,[key]:value});}
 function response(a,b,skip){return a.reduce((sum,v,i)=>sum+(!skip.has(i)&&(Number.isFinite(v)&&Number.isFinite(b[i])?Math.abs(v-b[i])/Math.max(1e-30,Math.abs(v),Math.abs(b[i])):0)),0);}

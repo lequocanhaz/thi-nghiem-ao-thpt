@@ -1,5 +1,5 @@
-import {experiments,initialState} from './experiments.js?v=17';
-import {evaluate,duration} from './models.js?v=17';
+import {experiments,initialState} from './experiments.js?v=54';
+import {evaluate,duration} from './models.js?v=54';
 import {tickStep} from './plot-grid.js?v=35';
 
 const specs={uniform:{origin:-3,scale:.12,range:[0,50]},acceleration:{origin:-1.5,scale:.06,range:[0,100]},newton:{origin:0,scale:.5,range:[-5,5]},collision:{origin:0,scale:.28,range:[-10,10]}};

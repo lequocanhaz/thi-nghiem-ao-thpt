@@ -1,0 +1,26 @@
+{
+  "models.js": {
+    "previousSHA256": "d0567c5d845194faa318a1ca424a17dbda4380d602b15db2f64ffda6bba57d3d",
+    "correctedSHA256": "035071a08668685f05764b9eb35fa499de8b7f38849359f24e8327623fb69ea1",
+    "reason": "Correct electric component vector norms after force charge scaling, including zero and negative test charges.",
+    "verification": [
+      "checks/electric-components-v54.mjs"
+    ]
+  },
+  "atlas-catalog.js": {
+    "previousSHA256": "aa209d4bc3a08adf50ce58a3c73e872aaa277ebbc68b438dd60ae64e4d6bb38a",
+    "correctedSHA256": "357acb21620dd37599c688fc10c73c52b372d2511a0a3f6def60ef038a295253",
+    "reason": "Use positive source-to-probe distances in scalar dipole potential; null at point-source singularities.",
+    "verification": [
+      "checks/physics-v54.mjs"
+    ]
+  },
+  "expansion-catalog.js": {
+    "previousSHA256": "39b1918465a92c20e4e1b420455ed717c9d08f50286afa193eec7fe16cf096b5",
+    "correctedSHA256": "848c5fc9d722c83d667100ee4544225cf0ebcb7f3920c8df9d2d628fac5ceb9c",
+    "reason": "Stable buffered RC convolution near equal time constants; exact charged-sheet interface; explicit nonrelativistic cyclotron and finite-Earth orbit guards.",
+    "verification": [
+      "checks/physics-v54.mjs"
+    ]
+  }
+}

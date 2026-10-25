@@ -1116,3 +1116,6 @@ button,a.button{transition:none}
  .layout-menu>summary{width:44px;padding:12px}
  .transport{border-bottom:1px solid var(--line)}
 }
+
+/* v54: explain invalid physical domains without depicting a false valid state. */
+.domain-notice{position:absolute;inset:0;z-index:5;display:grid;place-content:center;max-width:100%;padding:clamp(16px,4vw,48px);background:#fff8eb;color:#523409;font-size:1rem;line-height:1.7;overflow:auto;overflow-wrap:anywhere}

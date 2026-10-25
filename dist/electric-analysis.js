@@ -1,4 +1,4 @@
-import {electricModes} from './experiments.js?v=17';
+import {electricModes} from './experiments.js?v=54';
 
 // Older saved tables may have mode labels but no configuration snapshot.
 // Never infer an unknown mode from its magnitude or silently mix F with E.

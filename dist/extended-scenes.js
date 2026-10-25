@@ -1,9 +1,10 @@
+import {leverGeometry} from './lever-geometry.js?v=54';
 import {interferenceWindow} from './simulation-space.js?v=43';
-import {trackLayout} from './track-layout.js?v=43';
+import {trackLayout} from './track-layout.js?v=54';
 import {labCart,cable} from './apparatus.js?v=35';
 import {buildDiscoveryModel} from './discovery-scenes.js?v=35';
 import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=35';
-import {rad,interferenceAt,evaluate} from './models.js?v=17';
+import {rad,interferenceAt,evaluate} from './models.js?v=54';
 const circle=(r,n=100)=>Array.from({length:n+1},(_,i)=>V(r*Math.cos(i*2*Math.PI/n),.05,r*Math.sin(i*2*Math.PI/n)));
 function trolley(g,color,x=0){return labCart(g,color,x);}
 function resizeTrack(g,track,layout){
@@ -36,7 +37,23 @@ function collision(g,s,d,o){
  };
 }
 function circular(g,s,d,o){platform(g,7.5,7.5);const track=line(g,circle(1),0xa6bed7),ball=sphere(g,.18,C.blue);ball.userData.drag='circular-radius';ball.userData.planeNormal=[0,1,0];const force=arrow(g,V(),V(-1,0,0),C.orange),velocity=arrow(g,V(),V(0,0,1),C.green);return(s,d,c)=>{track.scale.set(s.radius,1,s.radius);ball.position.set(d.x,.3,d.z);const inward=V(-Math.cos(d.theta),0,-Math.sin(d.theta)),tangent=V(-Math.sin(d.theta),0,Math.cos(d.theta));force.position.copy(ball.position);velocity.position.copy(ball.position);force.setDirection(inward);velocity.setDirection(tangent);force.setLength(Math.min(1.5,d.force*.1+.3),.14,.07);velocity.setLength(Math.min(1.6,s.v*.2),.14,.07);force.visible=velocity.visible=c.switches?.vectors!==false;};}
-function lever(g,s,d,o){platform(g,7,3.5);const base=cylinder(g,.18,1.0,C.metal,0,.55,0);const beam=new T.Group();beam.position.y=1.7;g.add(beam);box(beam,6,.12,.25,0xb5c5d7);const weights=[cylinder(beam,.23,.45,C.blue),cylinder(beam,.23,.45,C.orange)];weights[0].userData.drag='l1';weights[1].userData.drag='l2';const ropes=[line(beam,[V(),V()],C.metal),line(beam,[V(),V()],C.metal)];sphere(g,.10,C.metal,0,1.7,0);return(s,d)=>{beam.rotation.z=Math.max(-.22,Math.min(.22,d.net*.012));weights[0].position.set(-s.l1*1.3,-.45,0);weights[1].position.set(s.l2*1.3,-.45,0);weights[0].scale.setScalar(.65+s.m1*.17);weights[1].scale.setScalar(.65+s.m2*.17);weights.forEach((m,i)=>updateLine(ropes[i],[V(m.position.x,0,0),V(m.position.x,-.30,0)]));};}
+function lever(g,s,d,o){
+ platform(g,7,3.5);cylinder(g,.18,1.6,C.metal,0,.85,0);
+ const beam=new T.Group();beam.name='lever-beam-frame';beam.position.y=1.7;g.add(beam);
+ const bar=box(beam,1,.12,.8,0xb5c5d7);bar.name='lever-beam';
+ const weights=[cylinder(g,.18,.45,C.blue),cylinder(g,.18,.45,C.orange)];
+ const ropes=[line(g,[V(),V()],C.dark),line(g,[V(),V()],C.dark)];
+ weights.forEach((weight,i)=>{weight.name='lever-load-'+i;weight.userData.drag=i?'l2':'l1';ropes[i].name='lever-cable-'+i;});
+ const pivot=sphere(g,.10,C.metal,0,1.7,0);pivot.name='lever-pivot';
+ g.userData.leverModel='absolute-perpendicular-arms';
+ return(s,d)=>{
+  const layout=leverGeometry(s,d.net);beam.rotation.z=layout.angle;bar.scale.x=layout.length;bar.position.x=layout.center;
+  layout.loads.forEach((load,i)=>{
+   weights[i].position.set(load.x,load.weightY,load.z);weights[i].scale.setScalar(load.scale);
+   updateLine(ropes[i],[V(load.x,load.attachmentY,load.z),V(load.x,load.weightY+load.height/2,load.z)]);
+  });
+ };
+}
 function hooke(g,s,d,o){platform(g,5,3);box(g,.15,3.9,.15,C.metal,-1.5,1.9,0);box(g,2.0,.15,.2,C.metal,-.6,3.8,0);const mass=cylinder(g,.28,.5,C.blue,0,1,0);mass.userData.drag='spring-load';const spring=flexibleTube(g,161,.028,C.metal);line(g,[V(.8,.4,0),V(.8,3.5,0)],0xb2c4d8);return(s,d)=>{const end=3.45-.65-d.extension;mass.position.y=end-.25;mass.scale.setScalar(.7+s.m*.16);spring.userData.update(Array.from({length:161},(_,j)=>{const f=j/160,a=f*Math.PI*20;return V(.13*Math.cos(a),3.45-f*(.65+d.extension),.13*Math.sin(a))}));};}
 function pendulum(g,s,d,o){
  platform(g,6,4);for(const x of [-2.35,2.35]){cylinder(g,.06,3.45,C.metal,x,1.78,0);box(g,.54,.08,.72,0x617b6d,x,.07,0);for(const z of [-.23,.23])cylinder(g,.036,.021,C.metal,x,.12,z);cylinder(g,.095,.12,0x516958,x,3.38,0);}

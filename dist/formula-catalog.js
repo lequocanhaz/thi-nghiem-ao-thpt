@@ -119,7 +119,7 @@ export const formulaCatalog={
  fiber_acceptance:String.raw`\mathrm{NA}=\sqrt{n_{\text{lõi}}^2-n_{\text{vỏ}}^2}`,
  uniform_field:String.raw`F=qE;\quad a=\dfrac{qE}m`,
  potential_point:String.raw`V=\dfrac{kQ}r;\quad E_{\text{hướng ra}}=\dfrac{kQ}{r^2}`,
- potential_pair:String.raw`V=\dfrac{kq}{x-a}-\dfrac{kq}{x+a}`,
+ potential_pair:String.raw`V=\dfrac{kq}{|x-a|}-\dfrac{kq}{|x+a|}`,
  dipole_torque:String.raw`M=pE\sin\alpha;\quad U=-pE\cos\alpha`,
  capacitor_plate:String.raw`C=\dfrac{\varepsilon_0S}d`,
  dielectric:String.raw`C=\varepsilon_rC_0;\quad Q=CU;\quad W=\dfrac12 CU^2`,

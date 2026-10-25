@@ -1,7 +1,7 @@
-import {rowInGraphMode} from './electric-analysis.js?v=51';
-import {metricColor} from './workspace.js?v=17';
+import {rowInGraphMode} from './electric-analysis.js?v=54';
+import {metricColor} from './workspace.js?v=54';
 const curveCache=new Map();
-import {evaluate,duration} from './models.js?v=17';
+import {evaluate,duration} from './models.js?v=54';
 export function graphFor(e,s,d,c={},rows=[]){const id=e.id;let key='t',min=0,max=duration(e,s,d),xLabel='t (s)',yLabel='',metrics=[],point=null,ignore=['t'];const curve=(label,metric,color=metricColor(e,e.graph?.metric||({I:'i',x:'x',v:'v',a:'acc',W:'total','Wđ':'k',Wt:'u'}[label]||label)))=>metrics.push({label,metric,color});
 switch(id){case 'ohm':case 'series':case 'parallel':key='u';max=12;xLabel='U (V)';yLabel='I (A)';curve('I',q=>q.i);ignore=['u','t'];break;
 case 'energy':yLabel='W (J)';curve('Wđ',q=>q.k,'#a5632c');curve('Wt',q=>q.u,'#3566b9');curve('W',q=>q.total,'#247b65');break;

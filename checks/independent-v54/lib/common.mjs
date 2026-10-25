@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+export const auditRoot=path.resolve(new URL('../',import.meta.url).pathname);
+export const repoRoot=path.resolve(auditRoot,'../..');
+export const seed=20261020;
+export const commit=()=>execFileSync('git',['rev-parse','HEAD'],{cwd:repoRoot,encoding:'utf8'}).trim();
+export const json=(name,data)=>{const file=path.resolve(auditRoot,name);if(!file.startsWith(auditRoot+path.sep))throw Error('Audit output escapes dedicated directory');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(data,(_key,value)=>typeof value==='number'&&!Number.isFinite(value)?String(value):value,2)+'\n');};
+export function hashString(text){return createHash('sha256').update(text).digest('hex');}
+export function snapshot(){const names=execFileSync('git',['ls-files','-z'],{cwd:repoRoot,encoding:'utf8'}).split('\0').filter(Boolean).filter(name=>!name.startsWith('checks/audit-300/')&&!/(^|\/)(\.env(?:\..*)?|[^/]*(?:secret|credential)[^/]*|[^/]*\.(?:pem|key|p12))$/i.test(name));return {sourceCommit:commit(),files:Object.fromEntries(names.map(name=>[name,fs.existsSync(path.join(repoRoot,name))?hashString(fs.readFileSync(path.join(repoRoot,name))):'MISSING'])),gitStatus:execFileSync('git',['status','--porcelain=v1','-z','--untracked-files=normal'],{cwd:repoRoot,encoding:'utf8'}).split('\0').filter(Boolean),excluded:'Potential credential paths are never opened; git metadata used read-only.'};}
+export function rngFor(id){let state=seed;for(const char of id)state=Math.imul(state^char.charCodeAt(0),16777619)>>>0;return()=>{state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;};}
+export function configsFor(e){return e.id==='electric'?[0,1,2,3].map(mode=>({mode,capMode:'charge'})):e.id==='capacitor'?['charge','discharge'].map(capMode=>({mode:0,capMode})):[{mode:0,capMode:'charge'}];}
+export function stateSamples(e,target=100){const base=Object.fromEntries(e.params.map(p=>[p.key,p.value])),samples=[{kind:'default',state:{...base}}];const add=(kind,s)=>samples.push({kind,state:s});for(const p of e.params)for(const [label,value]of [['min',p.min],['mid',(p.min+p.max)/2],['max',p.max]])add(p.key+'-'+label,{...base,[p.key]:discrete(p,value)});for(const fraction of [0,.5,1])add('joint-corner-'+fraction,Object.fromEntries(e.params.map(p=>[p.key,discrete(p,p.min+fraction*(p.max-p.min))])));for(const preset of e.presets||[])add('preset-'+preset.name,{...base,...preset.values});const random=rngFor(e.id);while(samples.length<Math.max(target,130))add('seeded-'+samples.length,Object.fromEntries(e.params.map(p=>[p.key,discrete(p,p.min+random()*(p.max-p.min))])));return samples;}
+function discrete(p,value){if(p.step===1&&p.digits===0)return Math.max(p.min,Math.min(p.max,p.min+Math.round((value-p.min)/p.step)*p.step));return value;}
+export function numericPaths(value,prefix=''){const out=[];if(typeof value==='number')out.push([prefix,value]);else if(value&&typeof value==='object')for(const [key,child]of Object.entries(value))out.push(...numericPaths(child,prefix?prefix+'.'+key:key));return out;}
+export function valueAt(value,key){return key.split('.').reduce((v,k)=>v?.[k],value);}
+export const csvCell=value=>'"'+String(value??'').replaceAll('"','""')+'"';
+export function near(actual,expected,rtol=1e-7,atol=1e-10){if(actual===expected)return {pass:true,absolute:0,relative:0,limit:atol+rtol*Math.abs(expected)};if(!Number.isFinite(actual)||!Number.isFinite(expected))return {pass:false,absolute:null,relative:null,limit:atol+rtol*Math.abs(expected)};const absolute=Math.abs(actual-expected);return {pass:absolute<=atol+rtol*Math.abs(expected),absolute,relative:Math.abs(expected)?absolute/Math.abs(expected):null,limit:atol+rtol*Math.abs(expected)};}
+export function validArtifactDates(start,finish,runStart){const a=Date.parse(start),b=Date.parse(finish),r=Date.parse(runStart);return [a,b,r].every(Number.isFinite)&&a>=r-1000&&b>=a;}

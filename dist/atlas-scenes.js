@@ -1,5 +1,5 @@
 import {buildExpansionModel} from './expansion-scenes.js?v=35';
-import {atlasById} from './atlas-catalog.js?v=17';
+import {atlasById} from './atlas-catalog.js?v=54';
 import {T,V,C,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,flexibleTube,beam} from './geometry-kit.js?v=35';
 import {labCart,cable,powerSupply,digitalMeter} from './apparatus.js?v=35';
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x)),r=a=>a*Math.PI/180,number=v=>v===null?'—':Math.abs(v)>1e5||Math.abs(v)>0&&Math.abs(v)<.001?v.toExponential(2):v.toLocaleString('vi-VN',{maximumFractionDigits:3});

@@ -86,7 +86,7 @@
     {
       "id": "projectile",
       "frames": 204,
-      "expandedDuringRun": false
+      "expandedDuringRun": true
     },
     {
       "id": "newton",
@@ -196,12 +196,12 @@
     {
       "id": "impulse",
       "frames": 204,
-      "expandedDuringRun": true
+      "expandedDuringRun": false
     },
     {
       "id": "buoyancy",
       "frames": 204,
-      "expandedDuringRun": true
+      "expandedDuringRun": false
     },
     {
       "id": "pressure",
@@ -341,7 +341,7 @@
     {
       "id": "relative_motion",
       "frames": 204,
-      "expandedDuringRun": true
+      "expandedDuringRun": false
     },
     {
       "id": "average_speed",
@@ -351,7 +351,7 @@
     {
       "id": "braking",
       "frames": 204,
-      "expandedDuringRun": true
+      "expandedDuringRun": false
     },
     {
       "id": "drag_fall",
@@ -566,7 +566,7 @@
     {
       "id": "telescope",
       "frames": 204,
-      "expandedDuringRun": false
+      "expandedDuringRun": true
     },
     {
       "id": "microscope",
@@ -601,7 +601,7 @@
     {
       "id": "pinhole",
       "frames": 204,
-      "expandedDuringRun": true
+      "expandedDuringRun": false
     },
     {
       "id": "fiber_acceptance",
@@ -726,7 +726,7 @@
     {
       "id": "flux_angle",
       "frames": 204,
-      "expandedDuringRun": true
+      "expandedDuringRun": false
     },
     {
       "id": "inductor_energy",
@@ -811,7 +811,7 @@
     {
       "id": "beam_supports",
       "frames": 204,
-      "expandedDuringRun": false
+      "expandedDuringRun": true
     },
     {
       "id": "three_strings",
@@ -831,12 +831,12 @@
     {
       "id": "collision_2d",
       "frames": 204,
-      "expandedDuringRun": true
+      "expandedDuringRun": false
     },
     {
       "id": "ballistic_pendulum",
       "frames": 204,
-      "expandedDuringRun": false
+      "expandedDuringRun": true
     },
     {
       "id": "newton_cradle",
@@ -1041,7 +1041,7 @@
     {
       "id": "charged_disk",
       "frames": 204,
-      "expandedDuringRun": false
+      "expandedDuringRun": true
     },
     {
       "id": "charged_solid_sphere",
@@ -1261,7 +1261,7 @@
     {
       "id": "mass_spectrometer",
       "frames": 204,
-      "expandedDuringRun": false
+      "expandedDuringRun": true
     },
     {
       "id": "cyclotron",
@@ -1331,7 +1331,7 @@
     {
       "id": "separated_lenses",
       "frames": 204,
-      "expandedDuringRun": false
+      "expandedDuringRun": true
     },
     {
       "id": "camera_defocus",

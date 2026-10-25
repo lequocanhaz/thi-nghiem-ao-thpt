@@ -1,0 +1,556 @@
+{
+  "testPattern": "all",
+  "scope": "Chromium headless SwiftShader; desktop 1440 and touch-emulated 390px, selected UI cases only",
+  "tests": [
+    {
+      "name": "1440px lever expanded-domain controls and moment readouts",
+      "status": "PASS",
+      "evidence": {
+        "cases": [
+          {
+            "l1": 0.02,
+            "l2": 10,
+            "m1": 0.02,
+            "m2": 15,
+            "net": -1471.496076
+          },
+          {
+            "l1": 10,
+            "l2": 0.02,
+            "m1": 15,
+            "m2": 0.02,
+            "net": 1471.496076
+          },
+          {
+            "l1": 0.02,
+            "l2": 0.02,
+            "m1": 15,
+            "m2": 15,
+            "net": 0
+          },
+          {
+            "l1": 10,
+            "l2": 10,
+            "m1": 15,
+            "m2": 15,
+            "net": 0
+          },
+          {
+            "l1": 1.2,
+            "l2": 0.6,
+            "m1": 1,
+            "m2": 2,
+            "net": 0
+          }
+        ],
+        "scope": "Numeric controls/readouts and screenshots; attachment constraints checked separately on actual meshes"
+      },
+      "durationMs": 14277
+    },
+    {
+      "name": "1440px gas/Boyle min-max volume in 2D and 3D",
+      "status": "PASS",
+      "evidence": {
+        "states": [
+          {
+            "id": "gas",
+            "volume": 0.2,
+            "pressure": 2993.20654248
+          },
+          {
+            "id": "gas",
+            "volume": 50,
+            "pressure": 11.97282616992
+          },
+          {
+            "id": "boyle",
+            "volume": 0.2,
+            "pressure": 3000
+          },
+          {
+            "id": "boyle",
+            "volume": 50,
+            "pressure": 12
+          }
+        ],
+        "scope": "UI/render availability, numerical pressure and screenshots; collision containment is a separate rendered-mesh test"
+      },
+      "durationMs": 9861
+    },
+    {
+      "name": "1440px dipole potential between sources and both sides",
+      "status": "PASS",
+      "evidence": {
+        "ui": [
+          {
+            "x": 0.1,
+            "actual": 3.2098399258214307,
+            "expected": 3.209839925821429
+          },
+          {
+            "x": 1,
+            "actual": 57.520331470719995,
+            "expected": 57.52033147072
+          },
+          {
+            "x": 3,
+            "actual": 15.97786985297778,
+            "expected": 15.977869852977776
+          }
+        ],
+        "negativeXModelOnly": -15.97786985297778
+      },
+      "durationMs": 3238
+    },
+    {
+      "name": "1440px invalid model domains block measurements and recover safely",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "cyclotron",
+          "priorRows": 1,
+          "restoredRows": 2
+        },
+        {
+          "id": "elliptic_orbit",
+          "priorRows": 1,
+          "restoredRows": 2
+        }
+      ],
+      "durationMs": 5243
+    },
+    {
+      "name": "1440px sweep excludes outside-domain cyclotron states",
+      "status": "PASS",
+      "evidence": {
+        "priorRows": 3,
+        "added": 6,
+        "excluded": 4,
+        "message": "Đã thu 6 điểm đo. Bỏ qua 4 thiết lập ngoài miền áp dụng."
+      },
+      "durationMs": 3028
+    },
+    {
+      "name": "1440px visual preferences preserve physical state, rows, camera and focus",
+      "status": "PASS",
+      "evidence": {
+        "presets": [
+          {
+            "mode": "high-contrast",
+            "time": 0.576641615646522,
+            "rows": 1,
+            "cameraPreserved": true
+          },
+          {
+            "mode": "classroom",
+            "time": 0.576641615646522,
+            "rows": 1,
+            "cameraPreserved": true
+          },
+          {
+            "mode": "reduced-motion",
+            "time": 0.576641615646522,
+            "rows": 1,
+            "cameraPreserved": true
+          },
+          {
+            "mode": "standard",
+            "time": 0.576641615646522,
+            "rows": 1,
+            "cameraPreserved": true
+          }
+        ],
+        "switches": {
+          "mode": "standard",
+          "contrast": "standard",
+          "reducedMotion": false,
+          "labels": false,
+          "grid": false,
+          "trajectory": false
+        },
+        "manualCamera": {
+          "position": [
+            8.00169062986539,
+            7.790959329835546,
+            10.564508903930816
+          ],
+          "quaternion": [
+            -0.18982702485353942,
+            0.3444189930597157,
+            0.07132467922320188,
+            0.9166537230539636
+          ],
+          "target": [
+            -0.29208605197032034,
+            2.340763224629222,
+            1.0859069818328657
+          ],
+          "zoom": [
+            1
+          ],
+          "projection": "3d"
+        }
+      },
+      "durationMs": 7886
+    },
+    {
+      "name": "390px lever expanded-domain controls and moment readouts",
+      "status": "PASS",
+      "evidence": {
+        "cases": [
+          {
+            "l1": 0.02,
+            "l2": 10,
+            "m1": 0.02,
+            "m2": 15,
+            "net": -1471.496076
+          },
+          {
+            "l1": 10,
+            "l2": 0.02,
+            "m1": 15,
+            "m2": 0.02,
+            "net": 1471.496076
+          },
+          {
+            "l1": 0.02,
+            "l2": 0.02,
+            "m1": 15,
+            "m2": 15,
+            "net": 0
+          },
+          {
+            "l1": 10,
+            "l2": 10,
+            "m1": 15,
+            "m2": 15,
+            "net": 0
+          },
+          {
+            "l1": 1.2,
+            "l2": 0.6,
+            "m1": 1,
+            "m2": 2,
+            "net": 0
+          }
+        ],
+        "scope": "Numeric controls/readouts and screenshots; attachment constraints checked separately on actual meshes"
+      },
+      "durationMs": 10944
+    },
+    {
+      "name": "390px gas/Boyle min-max volume in 2D and 3D",
+      "status": "PASS",
+      "evidence": {
+        "states": [
+          {
+            "id": "gas",
+            "volume": 0.2,
+            "pressure": 2993.20654248
+          },
+          {
+            "id": "gas",
+            "volume": 50,
+            "pressure": 11.97282616992
+          },
+          {
+            "id": "boyle",
+            "volume": 0.2,
+            "pressure": 3000
+          },
+          {
+            "id": "boyle",
+            "volume": 50,
+            "pressure": 12
+          }
+        ],
+        "scope": "UI/render availability, numerical pressure and screenshots; collision containment is a separate rendered-mesh test"
+      },
+      "durationMs": 6837
+    },
+    {
+      "name": "390px dipole potential between sources and both sides",
+      "status": "PASS",
+      "evidence": {
+        "ui": [
+          {
+            "x": 0.1,
+            "actual": 3.2098399258214307,
+            "expected": 3.209839925821429
+          },
+          {
+            "x": 1,
+            "actual": 57.520331470719995,
+            "expected": 57.52033147072
+          },
+          {
+            "x": 3,
+            "actual": 15.97786985297778,
+            "expected": 15.977869852977776
+          }
+        ],
+        "negativeXModelOnly": -15.97786985297778
+      },
+      "durationMs": 1955
+    },
+    {
+      "name": "390px invalid model domains block measurements and recover safely",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "cyclotron",
+          "priorRows": 1,
+          "restoredRows": 2
+        },
+        {
+          "id": "elliptic_orbit",
+          "priorRows": 1,
+          "restoredRows": 2
+        }
+      ],
+      "durationMs": 4007
+    },
+    {
+      "name": "390px sweep excludes outside-domain cyclotron states",
+      "status": "PASS",
+      "evidence": {
+        "priorRows": 3,
+        "added": 6,
+        "excluded": 4,
+        "message": "Đã thu 6 điểm đo. Bỏ qua 4 thiết lập ngoài miền áp dụng."
+      },
+      "durationMs": 1954
+    },
+    {
+      "name": "390px visual preferences preserve physical state, rows, camera and focus",
+      "status": "PASS",
+      "evidence": {
+        "presets": [
+          {
+            "mode": "high-contrast",
+            "time": 0.576641615646522,
+            "rows": 1,
+            "cameraPreserved": true
+          },
+          {
+            "mode": "classroom",
+            "time": 0.576641615646522,
+            "rows": 1,
+            "cameraPreserved": true
+          },
+          {
+            "mode": "reduced-motion",
+            "time": 0.576641615646522,
+            "rows": 1,
+            "cameraPreserved": true
+          },
+          {
+            "mode": "standard",
+            "time": 0.576641615646522,
+            "rows": 1,
+            "cameraPreserved": true
+          }
+        ],
+        "switches": {
+          "mode": "standard",
+          "contrast": "standard",
+          "reducedMotion": false,
+          "labels": false,
+          "grid": false,
+          "trajectory": false
+        },
+        "manualCamera": {
+          "position": [
+            9.9653837924784,
+            9.224110637967353,
+            12.73309846379864
+          ],
+          "quaternion": [
+            -0.1898270248535394,
+            0.34441899305971563,
+            0.07132467922320183,
+            0.9166537230539636
+          ],
+          "target": [
+            -0.42567917126306826,
+            2.39569783322296,
+            0.8575979338083917
+          ],
+          "zoom": [
+            1
+          ],
+          "projection": "3d"
+        }
+      },
+      "durationMs": 5105
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "renderers": [
+    {
+      "id": "lever",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm có màu để chỉnh. Dùng mũi tên để tăng hoặc giảm thông số đã chọn. Các ô số bên cạnh là cách điều chỉnh thay thế."
+    },
+    {
+      "id": "gas",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm có màu để chỉnh. Dùng mũi tên để tăng hoặc giảm thông số đã chọn. Các ô số bên cạnh là cách điều chỉnh thay thế."
+    },
+    {
+      "id": "boyle",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "potential_pair",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "cyclotron",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "elliptic_orbit",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "cyclotron",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "projectile",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "lever",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm có màu để chỉnh. Dùng mũi tên để tăng hoặc giảm thông số đã chọn. Các ô số bên cạnh là cách điều chỉnh thay thế."
+    },
+    {
+      "id": "gas",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm có màu để chỉnh. Dùng mũi tên để tăng hoặc giảm thông số đã chọn. Các ô số bên cạnh là cách điều chỉnh thay thế."
+    },
+    {
+      "id": "boyle",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "potential_pair",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "cyclotron",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "elliptic_orbit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "cyclotron",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    },
+    {
+      "id": "projectile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "webgl2": true,
+      "contextLost": false,
+      "ariaLabel": "Mô hình 3D. Kéo nền để xoay; kéo điểm màu để chỉnh thông số."
+    }
+  ],
+  "summary": {
+    "PASS": 12,
+    "FAIL": 0
+  }
+}

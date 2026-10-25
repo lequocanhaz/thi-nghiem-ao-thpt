@@ -1,6 +1,6 @@
-import {evaluate} from './models.js?v=17';
+import {evaluate} from './models.js?v=54';
 import {axisExtent,interferenceWindow} from './simulation-space.js?v=43';
-import {trackLayout} from './track-layout.js?v=43';
+import {trackLayout} from './track-layout.js?v=54';
 const axis=(key,unit,scale,range)=>({key,unit,scale,range});
 // World-to-physical mappings are taken from the corresponding apparatus builders.
 // A display scale is not silently interpreted as metres.

@@ -1,7 +1,7 @@
 import {T,V,C,mat,mesh,box,cylinder,line,label,setText} from './geometry-kit.js?v=35';
-import {experiments} from './experiments.js?v=17';
+import {experiments} from './experiments.js?v=54';
 import {coreParams,rigParameters,themeFor} from './learning.js?v=17';
-import {parameterText} from './workspace.js?v=17';
+import {parameterText} from './workspace.js?v=54';
 export function addInteractionRig(model,id,s,d,config,o={}){const e=experiments.find(e=>e.id===id);if(!e)return model;const rig=new T.Group(),color=new T.Color(themeFor(e).color),params=coreParams(e),handles=[],labels=[];rig.userData.isRig=true;model.group.add(rig);
 params.forEach((p,j)=>{const z=2.0+j*.62;box(rig,5.55,.10,.28,0xd4ddd4,0,.055,z);box(rig,5.27,.012,.065,0x899e90,0,.112,z);for(let k=0;k<=20;k++){const x=-2.6+k*.26;line(rig,[V(x,.112,z+.055),V(x,.112,z+(k%5===0?.125:.093))],0x617b6a);}const handle=mesh(rig,new T.CylinderGeometry(.125,.125,.085,32),mat(C.metal),0,.16,z);const cap=cylinder(handle,.091,.015,color,0,.05,0);line(handle,[V(0,.061,-.074),V(0,.061,.074)],0xf1f9ef);handle.userData.drag='param:'+p.key;handle.userData.param=p.key;handle.userData.planeNormal=[0,1,0];handles.push(handle);const l=label(rig,'',V(-1.4,.55,z),o);if(l)l.scale.set(2.45,.38,1);labels.push(l);});
 const original=model.update;model.update=(s,d,c={})=>{original(s,d,c);params.forEach((p,j)=>{const def=rigParameters(e,c)[j]||p;handles[j].userData.drag='param:'+def.key;handles[j].userData.param=def.key;handles[j].position.x=-2.6+5.2*(s[def.key]-def.min)/(def.max-def.min);setText(labels[j],`${def.label} · ${parameterText(s[def.key],def.unit)}`);});rig.visible=c.switches?.handles!==false;};model.update(s,d,config);return model;}

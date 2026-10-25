@@ -123,3 +123,13 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Xem `docs/interface-v53.md`: giữ nhận diện/banner, gọn thẻ bằng công thức thật khi chưa có ảnh mô hình, tên bài không ép hoa, menu công cụ/phiên và gợi ý trợ lý chỉ soạn nháp.
 - `.controls-rail` chặn sticky che panel dữ liệu ở hàng sau; `placeControls` chuyển cùng node qua breakpoint. Không bỏ wrapper hoặc clone điều khiển để sửa responsive.
 - Có hai bộ Chromium tùy chọn `checks/browser-interface-v53.py` và `checks/browser-catalog-math-v53.py`; ảnh/JSON ra `/tmp`, không ghi báo cáo audit cũ. Chưa xác minh Safari/thiết bị thật/FPS phần cứng. Không coi thay đổi giao diện là sửa các lỗi khoa học audit-300.
+
+## V5.0 — đợt ưu tiên v54 (25/10/2026)
+
+- Sửa độ lớn lực thành phần điện, điện thế hai nguồn (khoảng cách có độ lớn), convolution RC gần bằng, lớp điện tại x=0; thêm miền cyclotron phi tương đối tính và quỹ đạo ngoài Trái Đất. `checks/scientific-corrections-v54.json` ghi rõ hash gốc/hash sửa/lý do/kiểm chứng, không thay baseline cũ âm thầm.
+- Cân đòn dùng mô hìnhB, khoảng cách vuông góc tuyệt đối, thanh luôn chứa điểm treo; dây/tải thẳng đứng. Hạt khí/Boyle và nắp/giá đỡ theo thể tích, bán kính chỉ đồ họa. Có helper và kiểm mesh độc lập.
+- Ngoài miền: ẩn mô hình, cảnh báo, chặn ghi/chạy/step/ảnh/thanh thời điểm; quét tham số bỏ nghiệm ngoài miền và báo số bỏ qua, giữ bảng cũ. Nút Quét tham số có trong panelDữ liệu. Preset dùng originalDomain để không thay đổi khi import nhiều URL.
+- VisualSettings có bốn chế độ và kế thừa nhãn/lưới/quỹ đạo; khóa quanh-visual-v1. Không có slider bán kính/nền/vectơ chung chưa hỗ trợ. Xem docs/VISUAL_SETTINGS.md.
+- i18n mới là nền tảng chưa gắn UI:784 khóa đối ứng, tên300 bài,58 thuật ngữ. KHÔNG báo website đã đổi VI/EN; chưa có selector hoặc bản EN toàn bộ bài soạn. AI có seam locale và kiểmfixture; Pages không deploy backend.
+- Kiểm số độc lập dùng checks/independent-v54 snapshot tracked, chạy node checks/audit-v54.mjs --independent; --write cập nhật báo cáo mới, không ghi đè checks/audit-300 lịch sử. Xem docs/AUDIT_REPORT.md cùng VISUAL_QA/I18N_REPORT/MOBILE_TEST_REPORT/REMAINING_ISSUES.
+- Giữ nguyên banner/video, fonts/logo,300 bài soạn,388 trang sách và301 âm thanh; giữ dữ liệu phiên. Tiếp tục theo các phần chưa hoàn thành của V5.0, không gắn nhãn hoàn tất toàn bộ.

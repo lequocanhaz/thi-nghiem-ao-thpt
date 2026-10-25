@@ -1,6 +1,6 @@
 import {peekRenderers} from './lab-loader.js?v=49';
-import {initialState} from './experiments.js?v=17';
-import {evaluate,duration} from './models.js?v=17';
+import {initialState} from './experiments.js?v=54';
+import {evaluate,duration} from './models.js?v=54';
 
 // Each image comes from the corresponding physics simulation, not a generic AI illustration.
 // Render only visible cards; persist successfully captured previews in IndexedDB so

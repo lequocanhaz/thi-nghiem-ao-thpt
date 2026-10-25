@@ -21,16 +21,19 @@ for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','
  }
  assert.equal(hash(contents),baseline.files[name],name+' must remain byte-identical except the explicitly allowed math SVG fix');
 }
-// Shared entrypoints only change cache versions, never startup/banner behavior.
+// Entry changes are cache versions plus the explicitly scoped visual-settings stylesheet; startup/banner bytes stay frozen.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
- assert.equal(hash(read(name).toString().replace(/\?v=\d+/g,'?v=BASE')),expected,name);
+ assert.equal(hash(read(name).toString().replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
 }
+assert.doesNotMatch(read('dist/visual-settings.css').toString(),/banner|cinematic|orbital|@font-face|:root|\.brand\b|@import/i,'Visual settings CSS cannot override protected identity');
 const view=read('dist/views.js').toString();
 const markup=view.slice(view.indexOf(' <section class="main-banner'),view.indexOf(' </section>')+' </section>'.length);
 assert.equal(hash(markup),baseline.bannerMarkupSHA256,'Banner markup, text and layout');
 // v53 fixes cold anchor navigation: static startup markup is not a hydrated home.
-// Normalize only those two guards; all banner lifecycle/routing bytes stay frozen.
+// Normalize those guards and the two explicit lab-only presentation additions; banner lifecycle/routing bytes stay frozen.
 const bannerApp=read('dist/app.js').toString()
+ .replace('labMarkup(e,{prefs:{...prefs,visual:visualSettings},state,config,controls:','labMarkup(e,{prefs,state,config,controls:')
+ .replace("if(visualSettings.mode==='classroom'&&mode!=='present')setLayout('present');updateSpeech(narrator.status());","updateSpeech(narrator.status());")
  .replace("location.hash==='#library'&&!active&&$('#cards')","location.hash==='#library'&&!active&&$('#library')")
  .replace("location.hash==='#main'&&document.querySelector('.home-screen,.lab,.source-page')","location.hash==='#main'&&document.querySelector('.home,.lab,.source-page')");
 const bannerLines=bannerApp.split('\n').filter(line=>/banner|Banner/.test(line)).join('\n');
