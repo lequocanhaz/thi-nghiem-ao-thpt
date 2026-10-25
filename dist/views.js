@@ -1,5 +1,5 @@
 import {visualSettingsMarkup} from './visual-settings.js?v=54';
-import {lessonGuideMarkup,lessonSummaryMarkup} from './lesson-view.js?v=54';
+import {lessonGuideMarkup,lessonSummaryMarkup} from './lesson-view.js?v=56';
 import {formulaMarkup} from './workspace.js?v=54';
 import {subjects,subjectOf,availableCatalogFilters} from './catalog-filters.js?v=51';
 import {coordinateProfile,hasCoordinateGrid} from './coordinate-profile.js?v=54';
