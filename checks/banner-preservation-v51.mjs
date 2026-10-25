@@ -55,5 +55,4 @@ for(const [dir,expected]of Object.entries(baseline.protectedTrees)){
  const names=walk(dir).sort();assert.equal(names.length,expected.files,dir+' file count');
  assert.equal(hash(names.map(name=>name+':'+hash(read(name))).join('\n')),expected.sha256,dir+' contents');
 }
-
 console.log('PASS v51 SHA-256: banner media/poster/playback/markup and original CSS (except scoped math SVG fix) unchanged, added UI rules exclude banner/identity; exact 300 IDs, books, audio, lessons, brand and fonts preserved. Source/asset checks only; desktop/mobile browser playback remains unverified.');
