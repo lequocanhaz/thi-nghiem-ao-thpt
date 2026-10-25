@@ -28,7 +28,8 @@ for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
   assert.match(content,/<link rel="canonical" href="https:\/\/physicslab\.tech\/">/,'Canonical URL must use the custom domain');
   assert.match(content,/<meta property="og:url" content="https:\/\/physicslab\.tech\/">/,'Social URL must use the custom domain');
   // Normalise only the approved custom-domain migration while preserving the frozen banner baseline.
-  content=content.replaceAll('https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/');
+  assert.match(content,/<link rel="stylesheet" href="banner-title\.css\?v=60">/,'The centered two-line title CSS must be deployed');
+  content=content.replaceAll('https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/').replace('<link rel="stylesheet" href="banner-title.css?v=60">','');
  }
  assert.equal(hash(content.replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
 }
@@ -36,7 +37,7 @@ assert.doesNotMatch(read('dist/visual-settings.css').toString(),/banner|cinemati
 const view=read('dist/views.js').toString();
 const markup=view.slice(view.indexOf(' <section class="main-banner'),view.indexOf(' </section>')+' </section>'.length);
 // The owner-approved title is the sole change allowed inside the previously protected banner markup.
-const currentTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading">Hệ thống<br>Thí nghiệm<br><em>Vật Lí Ảo</em></h1>';
+const currentTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading"><span class="banner-title-row banner-title-row--main">HỆ THỐNG THÍ NGHIỆM</span><span class="banner-title-row banner-title-row--sub">VẬT LÍ ẢO</span></h1>';
 const originalTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading">Thí nghiệm<br><em>Vật Lí</em></h1>';
 assert.equal(markup.split(currentTitle).length,2,'The banner heading must exactly match the requested Vietnamese title');
 assert.equal(hash(markup.replace(currentTitle,originalTitle)),baseline.bannerMarkupSHA256,'Everything beyond the new heading preserves the original banner markup');
