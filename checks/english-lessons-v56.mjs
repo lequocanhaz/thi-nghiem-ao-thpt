@@ -36,7 +36,7 @@ const probe=experiments.find(e=>e.id==='electric');
 await loadTeaching(probe);
 const guide=lessonGuideMarkup(probe),summary=lessonSummaryMarkup(probe);
 assert.match(guide,/Sources and scope/);
-assert.match(guide,/openstax\.org|mit\.edu|ocw\.mit\.edu/i,'keep bibliographic links');
+assert.match(guide,/openstax\.org|github\.com\/openstax|mit\.edu|ocw\.mit\.edu/i,'keep bibliographic links');
 assert.match(summary,/Learning objective/);
 setLocale('vi-VN');
 assert.equal(getLocale(),'vi-VN');
