@@ -25,7 +25,7 @@ import {loadRenderers} from './lab-loader.js?v=54';
 let LabScene,SoftwareScene,sceneLoading=false,sceneError='',sceneProgress=0;
 import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=54';
 import {Narrator,Tone} from './media.js?v=55';
-import {getLocale,englishTitle,translateShort,installLanguageUI} from './language-ui.js?v=57';
+import {getLocale,englishTitle,translateShort,installLanguageUI} from './language-ui.js?v=58';
 import {englishIntro,englishTopic,englishStudy} from './english-study.js?v=56';
 import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=54';
