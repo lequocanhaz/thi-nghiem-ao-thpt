@@ -18,7 +18,7 @@ with sync_playwright() as p:
         context = browser.new_context(viewport={'width': 1440, 'height': 900})
         context.route('https://**/*', lambda route: route.abort())
         if variant == 'before':
-            context.route('**/language-ui.js?v=59', lambda route: route.fulfill(status=200, content_type='text/javascript', body=old))
+            context.route('**/language-ui.js*', lambda route: route.fulfill(status=200, content_type='text/javascript', body=old))
         page = context.new_page()
         errors = []
         page.on('pageerror', lambda error: errors.append(str(error)))

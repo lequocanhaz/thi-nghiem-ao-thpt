@@ -21,15 +21,26 @@ for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','
  }
  assert.equal(hash(contents),baseline.files[name],name+' must remain byte-identical except the explicitly allowed math SVG fix');
 }
-// Entry changes are cache versions, scoped visual settings, and explicit v59
-// discovery links/metadata. Static startup and banner bytes stay frozen.
+// Entry changes are cache versions plus the explicitly scoped visual-settings stylesheet; startup/banner bytes stay frozen.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
- assert.equal(hash(read(name).toString().replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace('<a href="experiments/">Danh mục đầy đủ</a><a href="about.html">Giới thiệu</a>','').replace(/<link rel="sitemap"[^>]+>/,'').replace(/<script id="quanhSiteData" type="application\/ld\+json">[^<]+<\/script>/,'').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
+ let content=read(name).toString();
+ if(name==='dist/index.html'){
+  assert.match(content,/<link rel="canonical" href="https:\/\/physicslab\.tech\/">/,'Canonical URL must use the custom domain');
+  assert.match(content,/<meta property="og:url" content="https:\/\/physicslab\.tech\/">/,'Social URL must use the custom domain');
+  // Normalise only the approved custom-domain migration while preserving the frozen banner baseline.
+  assert.match(content,/<link rel="stylesheet" href="banner-title\.css\?v=60">/,'The centered two-line title CSS must be deployed');
+  content=content.replaceAll('https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/').replace('<link rel="stylesheet" href="banner-title.css?v=60">','');
+ }
+ assert.equal(hash(content.replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace('<a href="experiments/">Danh mục đầy đủ</a><a href="about.html">Giới thiệu</a>','').replace(/<link rel="sitemap"[^>]+>/,'').replace(/<script id="quanhSiteData" type="application\/ld\+json">[^<]+<\/script>/,'').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
 }
 assert.doesNotMatch(read('dist/visual-settings.css').toString(),/banner|cinematic|orbital|@font-face|:root|\.brand\b|@import/i,'Visual settings CSS cannot override protected identity');
 const view=read('dist/views.js').toString();
 const markup=view.slice(view.indexOf(' <section class="main-banner'),view.indexOf(' </section>')+' </section>'.length);
-assert.equal(hash(markup),baseline.bannerMarkupSHA256,'Banner markup, text and layout');
+// The owner-approved title is the sole change allowed inside the previously protected banner markup.
+const currentTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading"><span class="banner-title-row banner-title-row--main">HỆ THỐNG THÍ NGHIỆM</span><em class="banner-title-row banner-title-row--sub">VẬT LÍ ẢO</em></h1>';
+const originalTitle='<h1 tabindex="-1" id="bannerTitle" class="primary-heading">Thí nghiệm<br><em>Vật Lí</em></h1>';
+assert.equal(markup.split(currentTitle).length,2,'The banner heading must exactly match the requested Vietnamese title');
+assert.equal(hash(markup.replace(currentTitle,originalTitle)),baseline.bannerMarkupSHA256,'Everything beyond the new heading preserves the original banner markup');
 // The old whole-line hash froze every unrelated action in the one-line click
 // handler. Preserve actual banner responsibilities against the pre-redesign
 // source instead, without changing or overwriting the historic v51 baseline.

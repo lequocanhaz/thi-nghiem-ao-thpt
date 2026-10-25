@@ -1,5 +1,6 @@
 // Build crawlable, script-independent entry pages from the existing catalog.
-// The production domain stays on GitHub Pages until custom DNS/HTTPS is verified.
+// Follow the canonical already selected on main. This generator neither changes
+// domain configuration nor claims DNS/HTTPS has been verified.
 import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {experiments} from '../dist/experiments.js';
@@ -7,7 +8,8 @@ import {dictionaries} from '../dist/i18n.js';
 import {formulaCatalog} from '../dist/formula-catalog.js';
 import katex from 'katex';
 
-export const siteURL='https://lequocanhaz.github.io/thi-nghiem-ao-thpt/';
+export const siteURL=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8').match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+if(!['https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/'].includes(siteURL))throw new Error('Review the canonical domain before generating discovery pages');
 const root=new URL('../dist/',import.meta.url);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');

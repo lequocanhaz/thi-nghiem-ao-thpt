@@ -148,3 +148,5 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - V51 guard trước đây hash cả dòng clickhandler nên chặn cả workflowxóa/nhậpphiên không liên quan banner. V59giữ manifest v51, kiểm hash từng trách nhiệm banner với snapshot trướcđổi trong `checks/banner-lifecycle-v59.json`; chỉ loại cleanup xácnhận khỏi hashroute. Không đổi baseline media/CSS/markup/protectedtrees.
 - Các kiểm mới đã đưa vào `npm run check`; các bộbrowser Python là tùy chọn và cần server4173/Chromium. Không commit `dist/vendor/katex/` sinhcục bộ hoặc thưmục `work/`.
 -20mục khoa học PARTIAL, nghiệm thu giáo viên, bản quyền thương mại sách/âm thanh, iPhone/Safari/Android thật, virtualkeyboard thật và FPSGPU phần cứng vẫn chưa hoàn tất. Không coi fixtureAI là inference thật hoặc axetựđộng là chứng nhậnWCAG.
+
+- Hợp nhất main mới đến `7d7b2be` trước phát hành: giữ banner “HỆ THỐNG THÍ NGHIỆM / VẬT LÍ ẢO”, stylesheet riêng v60, metadata/robots của các commit đồng thời. Entry/views/locale dùng v61 để tránh cache bản v60. Generator đọc canonical đã có trên main; không tự chuyển lại domain. Kiểm DNS/HTTPS chưa đạt, không suy ra từ metadata.

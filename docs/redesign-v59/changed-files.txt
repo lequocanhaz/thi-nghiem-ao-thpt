@@ -355,6 +355,7 @@ docs/ARCHITECTURE.md
 docs/AUDIT_REPORT.md
 docs/COMMERCIAL_READINESS.md
 docs/DESIGN_SYSTEM.md
+docs/DNS_DEPLOYMENT_STATUS.md
 docs/I18N_REPORT.md
 docs/REDESIGN_V59_REPORT.md
 docs/REMAINING_ISSUES.md
@@ -372,6 +373,7 @@ docs/redesign-v59/evidence/books-browser.json
 docs/redesign-v59/evidence/browser.json
 docs/redesign-v59/evidence/locale-traversal.json
 docs/redesign-v59/evidence/motion-space.json
+docs/redesign-v59/evidence/npm-check.txt
 docs/redesign-v59/evidence/physics-audit.json
 docs/redesign-v59/evidence/physics-reproduction.json
 docs/redesign-v59/evidence/studio-browser.json

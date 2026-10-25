@@ -44,9 +44,9 @@ Backend AI có hạ tầng/triển khai riêng; đọc `server/README.md`. Xuấ
 
 ## SEO và domain
 
-300 URL `experiments/<id>.html` có tiêu đề, mô tả, công thức MathML, điều kiện và link vào route lab tương ứng. `sitemap.xml` chứa 305 URL, được liên kết từ trang chủ. Search engine quyết định crawl/index; có sitemap không bảo đảm thứ hạng. Vì GitHub Pages chạy dưới project subpath, `robots.txt` tại subpath không điều khiển host và không được thêm để tạo cảm giác đã cấu hình robots cấp host.
+300 URL `experiments/<id>.html` có tiêu đề, mô tả, công thức MathML, điều kiện và link vào route lab tương ứng. `sitemap.xml` chứa 305 URL, được liên kết từ trang chủ. Search engine quyết định crawl/index; có sitemap không bảo đảm thứ hạng. Trên URL GitHub Pages chạy dưới project subpath, `robots.txt` tại subpath không điều khiển host. Main đồng thời đã thêm tệp này cho custom-domain root; bản hợp nhất giữ nó, nhưng chỉ xem là cấu hình có hiệu lực khi domain/DNS/HTTPS đã hoạt động.
 
-Canonical hiện giữ GitHub Pages. Chỉ đổi sang `physicslab.tech` sau khi xác minh bản ghi DNS, chứng chỉ HTTPS, Pages và redirect thực tế. Không đổi domain chỉ vì trường `cname` đã được thiết lập trong GitHub.
+Bản hợp nhất kế thừa canonical physicslab.tech từ các commit đồng thời trên main; generator đọc canonical đó từ index.html. Trạng thái DNS/HTTPS vẫn chưa nghiệm thu, việc kế thừa không chứng nhận tên miền đã sẵn sàng. Mọi thay đổi domain tiếp theo cần xác minh bản ghi DNS, chứng chỉ HTTPS, Pages và redirect thực tế; không coi cấu hình được kế thừa là bằng chứng này. Không đổi domain chỉ vì trường `cname` đã được thiết lập trong GitHub.
 
 ## Ranh giới kiểm chứng
 

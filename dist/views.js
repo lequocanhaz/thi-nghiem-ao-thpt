@@ -18,7 +18,7 @@ export function homeMarkup(experiments,prefs,{search,grade,topic,filter,pathFilt
  return `<div class="home-screen">
  <section class="main-banner orbital-banner cinematic-banner" aria-labelledby="bannerTitle">
   <div class="banner-art"><img class="cinematic-poster" src="video/black-hole.webp" width="1920" height="1080" alt="" aria-hidden="true" fetchpriority="high"><div id="bannerCanvas" class="banner-viewport"><span class="banner-loading" role="status">Đang mở không gian…</span></div></div>
-  <div class="banner-copy"><h1 tabindex="-1" id="bannerTitle" class="primary-heading">Thí nghiệm<br><em>Vật Lí</em></h1><div class="banner-actions"><a class="button primary" href="#library">Chọn thí nghiệm ${icon('arrow-up-right')}</a><a class="banner-resume" href="#lab/${resume.id}">${recent?'Tiếp tục bài gần nhất':'Bắt đầu khảo sát'} ${icon('arrow-right')}</a></div></div>
+  <div class="banner-copy"><h1 tabindex="-1" id="bannerTitle" class="primary-heading"><span class="banner-title-row banner-title-row--main">HỆ THỐNG THÍ NGHIỆM</span><em class="banner-title-row banner-title-row--sub">VẬT LÍ ẢO</em></h1><div class="banner-actions"><a class="button primary" href="#library">Chọn thí nghiệm ${icon('arrow-up-right')}</a><a class="banner-resume" href="#lab/${resume.id}">${recent?'Tiếp tục bài gần nhất':'Bắt đầu khảo sát'} ${icon('arrow-right')}</a></div></div>
   <button data-action="banner-fullscreen" class="banner-expand" aria-label="Xem banner toàn màn hình" title="Toàn màn hình">${icon('expand')}</button>
  </section>
  <div class="home">

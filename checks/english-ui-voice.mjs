@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict';
 import {dictionaries} from '../dist/i18n.js';
-import {englishTitle,translateShort,getLocale} from '../dist/language-ui.js';
+import {englishTitle,translateShort,translateBannerHeading,getLocale} from '../dist/language-ui.js';
 import {Narrator,englishVoices,englishChunks} from '../dist/media.js';
 
 assert.equal(getLocale(),'vi-VN');
 assert.equal(translateShort('Thư viện'),'Library');
+assert.equal(['HỆ THỐNG THÍ NGHIỆM','VẬT LÍ ẢO'].map(translateBannerHeading).join(' '),'VIRTUAL PHYSICS EXPERIMENT SYSTEM','English headline preserves the meaning of the new Vietnamese banner title');
+assert.equal(translateShort('Thí nghiệm'),'Experiments','The generic navigation translation must remain unchanged');
 assert.equal(translateShort('Lớp 11'),'Grade 11');
 assert.equal(translateShort('Điện trường'),'Electric field');
 const source=dictionaries['vi-VN'].experiments,target=dictionaries['en-US'].experiments;

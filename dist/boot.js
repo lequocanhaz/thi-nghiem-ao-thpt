@@ -9,4 +9,4 @@ function fallback(){
  const button=document.createElement('button');button.className='button secondary';button.textContent='Thử lại';button.addEventListener('click',()=>location.reload());status.append(' ',button);}
 }
 const timer=setTimeout(fallback,15000);
-import('./app.js?v=59').then(()=>{finished=true;clearTimeout(timer);}).catch(error=>{clearTimeout(timer);console.error('Lab startup failed',error);fallback();});
+import('./app.js?v=61').then(()=>{finished=true;clearTimeout(timer);}).catch(error=>{clearTimeout(timer);console.error('Lab startup failed',error);fallback();});

@@ -1,16 +1,16 @@
 # Quanh Lab — audit và nâng cấp v59
 
-Ngày: 26/10/2026. Mã nền đã fetch: `7e491e0c641dca33ed222b47942b085e728ab590`. Đây là đợt cải tiến trực tiếp website hiện hữu, không phải demo hoặc bản viết lại framework. Nhánh: `feat/quanh-lab-redesign-v59`.
+Ngày: 26/10/2026. Mã nền đã fetch: `7e491e0c641dca33ed222b47942b085e728ab590`. Đây là đợt cải tiến trực tiếp website hiện hữu, không phải demo hoặc bản viết lại framework. Nhánh: `feat/quanh-lab-redesign-v59`. Trước phát hành đã fetch và hợp nhất các commit mới đến `7d7b2be` trên main: giữ tiêu đề banner in hoa hai dòng, `banner-title.css`, chuyển domain/robots/SEO và các kiểm tương ứng; không ghi đè thay đổi đồng thời.
 
 ## 1. Kết quả audit
 
 HEAD thực tế đã có VI/EN, lớp học tập tiếng Anh cho 300 mô hình và mục lục sách tiếng Anh; các mô tả “chưa gắn i18n” trong bàn giao v54 đã cũ. Audit bắt đầu từ mã hiện tại, đọc `AGENTS.md`, `CODEX_HANDOFF.md`, package/workflow và kiểm số/hình học/trình duyệt. Đã gọi thực tế5 agent: `physics`, `ui`, `textbook`, `ai`, `qa`. Agent chính tích hợp, kiểm lại, bổ sung tìm kiếm/SEO/bảo vệ dữ liệu và chịu trách nhiệm phát hành. Một lượt bổ sung của agent UI bị dừng do hạn mức; agent chính tiếp quản các kiểm tra desktop và bàn phím còn lại.
 
-Không phát hiện P0 trong runtime được kiểm. Có P0 hạ tầng: URL GitHub Pages hiện chuyển hướng301sang tên miền chưa có DNS/HTTPS; cấu hình chuyển hướng chưa sửa vì cần ngoại lệ được người dùng cho phép theo ràng buộc domain. Điều này không chứng nhận toàn bộ sản phẩm không còn lỗi.
+Không phát hiện P0 trong runtime được kiểm. Có P0 hạ tầng: URL GitHub Pages hiện chuyển hướng 301 sang tên miền chưa có DNS/HTTPS; cấu hình chuyển hướng chưa sửa vì cần ngoại lệ được người dùng cho phép theo ràng buộc domain. Điều này không chứng nhận toàn bộ sản phẩm không còn lỗi.
 
 | Mức | Lỗi thực tế | Xử lý |
 |---|---|---|
-| P0 | URL GitHub Pages chuyển301sang tên miền chưa có DNS/HTTPS | Phát hiện bằng GET không cache và DNS công khai; đã nêu lựa chọn khôi phục URL cũ hoặc sửa DNS; chưa tự đổi cấu hình |
+| P0 | URL GitHub Pages chuyển 301 sang tên miền chưa có DNS/HTTPS | Phát hiện bằng GET không cache và DNS công khai; đã nêu lựa chọn khôi phục URL cũ hoặc sửa DNS; chưa tự đổi cấu hình |
 | P1 | Xóa bảng đo ngay khi bấm; nhập phiên ghi đè thông số/bảng/ghi chép không xác nhận | Dialog nêu số dòng và hậu quả, mặc định giữ dữ liệu, có tải bản sao; chỉ thay sau xác nhận |
 | P1 | Hai xe khối lượng lớn xuyên nhau tại va chạm dù dữ liệu số đúng | Mặt cản cùng cao, chassis cùng kích thước, tải riêng theo m; ánh xạ hình học và ray đồng nhất |
 | P1 | Vuốt sách bị hủy khi ảnh chuyển implicit pointer capture sang vùng đọc | Chỉ xử lý lostpointercapture của chính stage; kiểm sự kiện độc lập và CDP touch |
@@ -38,7 +38,7 @@ Không phát hiện P0 trong runtime được kiểm. Có P0 hạ tầng: URL Gi
 
 ## 3. Bảo toàn dữ liệu và mô hình
 
-Giữ đủ 300 ID thí nghiệm,300 bài soạn gốc,388 trang sách,85 bài mục lục và 301 tệp âm thanh. SHA-256 các cây tài nguyên được bảo vệ, media/markup banner, logo/phông và CSS nền ban đầu được kiểm bằng cổng preservation. Không đổi baseline lịch sử để giấu kết quả trước sửa.
+Giữ đủ 300 ID thí nghiệm,300 bài soạn gốc,388 trang sách,85 bài mục lục và 301 tệp âm thanh. SHA-256 các cây tài nguyên được bảo vệ, media/markup banner, logo/phông và CSS nền ban đầu được kiểm bằng cổng preservation. Không đổi baseline lịch sử để giấu kết quả trước sửa. Tiêu đề banner mới từ main được giữ theo ngoại lệ đã có trong các kiểm của nhánh chính; phần video, hình nền và lifecycle được bảo toàn.
 
 Guard v51 trước đây hash nguyên dòng clickhandler, bao gồm cả chức năng xóa/nhập không liên quan banner. V59 giữ manifest v51 và thêm snapshot hash từng trách nhiệm banner từ HEAD trước sửa: import, stop/mount, home/lab, route, fullscreen và lifecycle. Chỉ bỏ phần cleanup xác nhận mới khi so route; metadata/footer mới được loại rõ khỏi phép so entry. Video/poster, code banner, markup và cây tài nguyên vẫn giữ kiểm hash cũ.
 
@@ -50,11 +50,11 @@ Không thêm framework. KaTeX 0.16.45 tự phục vụ tiếp tục được đ�
 
 ## 5. Kiểm thử và bằng chứng
 
-**PASS cục bộ:** `npm run check` kết thúc exit0; browser tổng20/20, sách8/8, trợ lý4/4, studio/keyboard bổ sung và axe36trạng thái không có violation tự động. Trạng thái phát hành được chốt riêng sau CI/Pages; bằng chứng máy đọc có phạm vi nằm trong [redesign-v59/evidence](redesign-v59/evidence/).
+**PASS cục bộ:** `npm run check` kết thúc exit 0; browser tổng 20/20, sách 8/8, trợ lý 4/4, studio/keyboard bổ sung và axe 36 trạng thái không có violation tự động. Trạng thái phát hành được chốt riêng sau CI/Pages; bằng chứng máy đọc có phạm vi nằm trong [redesign-v59/evidence](redesign-v59/evidence/).
 
 | Lớp kiểm | Phạm vi và kết quả |
 |---|---|
-| Cổng bắt buộc | PASS, exit0; gồm các kiểm v59 mới và toàn bộ kiểm trước đó. [Log](redesign-v59/evidence/npm-check.log) |
+| Cổng bắt buộc | PASS, exit 0; gồm các kiểm v59 mới và toàn bộ kiểm trước đó. [Log](redesign-v59/evidence/npm-check.txt) |
 | Danh mục/tài nguyên |300 ID/300 bài soạn,388 trang/85 bài mục lục,301 âm thanh; bảo toàn hash tài nguyên |
 | Khoa học độc lập |280 VERIFIED theo tập mẫu,20 PARTIAL,0 FAILED;143.974 so sánh vật lí,895 kiểm đơn vị,3.544 kiểm đồ thị,395.911 mapping số liệu |
 | Hình học xe |320 bộ tham số,2.254 khung,218 điểm tiếp xúc,224 khung dính; actual tight mesh và mặt cản giao vùngy/z; sai số tiếp xúc khoảng6,44e-9 |
@@ -64,7 +64,7 @@ Không thêm framework. KaTeX 0.16.45 tự phục vụ tiếp tục được đ�
 | Sách browser |8 nhóm:9 viewport,scope phím,fullscreen fallback,loading/error/retry,locale giữ page/zoom,landscape và CDP touch |
 | Trợ lý browser |4 luồng:EN+LaTeX,Enter cảm ứng,lỗi 503 giữ nháp,gửi lại và focus;API giả lập |
 | Locale native DOM |Cùng 30 lần đổi nhãn: trước 150 treewalk/45.000 node visits; sau0/0, dịch đủ 30/30 và giữ input/canvas. Không phải benchmarkFPS |
-| Accessibility tự động |Axe 36 trạng thái ở 320/390/1440 với các tagA/AA liên quan; PASS36/36trạng thái,0violation; có các mục “incomplete” vẫn cần con người rà. Không phải chứng nhậnWCAG hoặc screen-reader acceptance |
+| Accessibility tự động |Axe 36 trạng thái ở 320/390/1440 với các tagA/AA liên quan; PASS 36/36 trạng thái, 0 violation; có các mục “incomplete” vẫn cần con người rà. Không phải chứng nhậnWCAG hoặc screen-reader acceptance |
 | Studio bổ sung |Desktop 1280/1440/1920,mobile 390,fullscreen; cold-library 320/390 cuộn công thức bằng bàn phím,Home/End; bằng chứng riêng |
 
 Viewport bắt buộc:320,375,390,414,430,768,1024,1440,1920 px. Browser là Chromium headless với SwiftShader và cảm ứng/viewport giả lập. Không gọi kết quả này là kiểm iPhone/Safari/Android thật, bàn phím ảo thật hoặc 60 FPS phần cứng.
@@ -92,12 +92,12 @@ Viewport bắt buộc:320,375,390,414,430,768,1024,1440,1920 px. Browser là Chr
 
 ## 8. Domain và triển khai
 
-Kiểm đọc GitHub Pages cho biết `cname=physicslab.tech`, `https_enforced=false`, `html_url=http://physicslab.tech/`. Truy vấn DNSGoogle A/CNAME ngày 26/10/2026 trả Status 0 vàSOA, không có AnswerA/CNAME/AAAA. GET có query mới tới GitHub Pages trả301vớiLocationhttps://physicslab.tech/. Truy cập HTTPS chưa thành công từ executor; endpoint kiểm health Pages trả 403 “Resource not accessible by integration”. Không coi đây là quyền sửaDNS. Vì chưa đạt DNS+HTTPS+Pages đầy đủ, canonical/OG/sitemap giữ URL GitHub Pages; không tự tạo redirect.
+Kiểm đọc GitHub Pages cho biết `cname=physicslab.tech`, `https_enforced=false`, `html_url=http://physicslab.tech/`. Truy vấn DNSGoogle A/CNAME ngày 26/10/2026 trả Status 0 và SOA, không có Answer A/CNAME/AAAA. GET có query mới tới GitHub Pages trả 301 với Location https://physicslab.tech/. Truy cập HTTPS chưa thành công từ executor; endpoint kiểm health Pages trả 403 “Resource not accessible by integration”. Không coi đây là quyền sửa DNS. Trước hợp nhất, nhánh làm việc giữ URL GitHub Pages. Main đồng thời đã đổi canonical/OG sang physicslab.tech ở commit `3cba448`; bản hợp nhất bảo toàn thay đổi đó, các trang mới theo cùng canonical để tránh hai domain mâu thuẫn. Việc kế thừa cấu hình không được coi là DNS/HTTPS đã được xác minh. Không tự tạo redirect mới; việc tạm gỡ custom domain đang chờ lựa chọn của người dùng.
 
 Mã nguồn: [repository](https://github.com/lequocanhaz/thi-nghiem-ao-thpt). Lịch sử phát hành: [commits](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/commits/main/). CI/Pages: [workflow](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/actions/workflows/pages.yml). PR và commit phát hành cụ thể được cung cấp trong lời bàn giao sau khi cổng kiểm đạt; chỉ xác nhận website đã cập nhật sau khi deploy thành công và đối chiếu tài nguyên live.
 
 ## 9. Tệp thay đổi và phát triển tiếp
 
-Danh sách đầy đủ nằm ở [changed-files.txt](redesign-v59/changed-files.txt), gồm runtime/checks/tài liệu và 301 HTMLdanh mục/trang vào được sinh. Các thay đổi cache import chỉ đổi version, không đổi công thức. Không commit `work/`, khóa hoặc KaTeX sinh cục bộ.
+Danh sách đầy đủ nằm ở [changed-files.txt](redesign-v59/changed-files.txt), gồm runtime/checks/tài liệu và 301 HTML danh mục/trang vào được sinh. Các thay đổi cache import chỉ đổi version, không đổi công thức. Không commit `work/`, khóa hoặc KaTeX sinh cục bộ.
 
 Xem [COMMERCIAL_READINESS.md](COMMERCIAL_READINESS.md): ưu tiên nghiệm thu khoa học/sư phạm, thiết bị thật, quyền tài nguyên, DNS/HTTPS và pilot trường học trước khi xây tài khoản/thanh toán. Không tuyên bố đợt này đã hoàn thành mọi tiêu chí “commercial ready”.

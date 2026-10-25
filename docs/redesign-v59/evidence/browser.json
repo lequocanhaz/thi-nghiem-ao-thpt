@@ -445,7 +445,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 14379
+      "durationMs": 13053
     },
     {
       "name": "responsive 375px: home/library/lab/book VI and EN + assistant bounds",
@@ -890,7 +890,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 8709
+      "durationMs": 10044
     },
     {
       "name": "responsive 390px: home/library/lab/book VI and EN + assistant bounds",
@@ -1335,7 +1335,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 11222
+      "durationMs": 11354
     },
     {
       "name": "responsive 414px: home/library/lab/book VI and EN + assistant bounds",
@@ -1780,7 +1780,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 13588
+      "durationMs": 11094
     },
     {
       "name": "responsive 430px: home/library/lab/book VI and EN + assistant bounds",
@@ -2189,7 +2189,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 12372
+      "durationMs": 16707
     },
     {
       "name": "responsive 768px: home/library/lab/book VI and EN + assistant bounds",
@@ -2634,7 +2634,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 12120
+      "durationMs": 10190
     },
     {
       "name": "responsive 1024px: home/library/lab/book VI and EN + assistant bounds",
@@ -3079,7 +3079,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 10690
+      "durationMs": 10125
     },
     {
       "name": "responsive 1440px: home/library/lab/book VI and EN + assistant bounds",
@@ -3426,7 +3426,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 15896
+      "durationMs": 15455
     },
     {
       "name": "responsive 1920px: home/library/lab/book VI and EN + assistant bounds",
@@ -3653,7 +3653,7 @@
           "locale": "en-US"
         }
       ],
-      "durationMs": 11395
+      "durationMs": 11611
     },
     {
       "name": "bilingual search, no-result recovery and grade filtering",
@@ -3683,7 +3683,7 @@
         "clearFilters": true,
         "gradeFilter": true
       },
-      "durationMs": 4823
+      "durationMs": 5312
     },
     {
       "name": "browser Back/Forward and typing-safe search history",
@@ -3693,7 +3693,7 @@
         "backRestoresSearch": true,
         "forwardRestoresLab": true
       },
-      "durationMs": 14091
+      "durationMs": 15175
     },
     {
       "name": "simulated landscape rotation 844×390 and 667×375, back to portrait",
@@ -3955,7 +3955,7 @@
           "height": 844
         }
       ],
-      "durationMs": 8060
+      "durationMs": 12713
     },
     {
       "name": "language switches and responsive layout preserve simulation, parameters, rows, notes; backup/import/reload",
@@ -3969,7 +3969,7 @@
         "responsivePreservesSession": true,
         "backupImportReload": true
       },
-      "durationMs": 15902
+      "durationMs": 26402
     },
     {
       "name": "destructive measurement deletion: confirmation, cancel and undo",
@@ -3980,7 +3980,7 @@
         "confirmDeletesRows": true,
         "undoRestoresRows": true
       },
-      "durationMs": 8062
+      "durationMs": 14123
     },
     {
       "name": "three textbooks: next/previous, zoom, original images and VI/EN page retention",
@@ -4011,7 +4011,7 @@
           "reloadRetainsPage": true
         }
       ],
-      "durationMs": 9261
+      "durationMs": 10148
     },
     {
       "name": "assistant draft, contextual suggestions, language retention and Escape focus",
@@ -4023,7 +4023,7 @@
         "closeReopenPreservesDraft": true,
         "escapeRestoresFocus": true
       },
-      "durationMs": 6375
+      "durationMs": 12088
     },
     {
       "name": "static discovery/product pages at320/390/1440:300 links, formulas, lab CTA, footer focus",
@@ -4280,7 +4280,7 @@
         ],
         "footerKeyboardFocus": true
       },
-      "durationMs": 29255
+      "durationMs": 36138
     },
     {
       "name": "actual browser scene geometry: finite collision contact and unclipped resonant sinusoid at390/1440",
@@ -4399,7 +4399,7 @@
           "projectionRetainsState": true
         }
       ],
-      "durationMs": 32809
+      "durationMs": 23015
     },
     {
       "name": "no uncaught browser JavaScript errors",
