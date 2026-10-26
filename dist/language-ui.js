@@ -21,6 +21,7 @@ for(const [vi,en] of [
  ['Thêm bộ lọc','More filters'],['Mức độ','Level'],
  ['Tìm định luật Ohm, điện trường, con lắc…','Find Ohm’s law, electric fields, pendulums…'],
  ['Giới thiệu','About'],['Danh mục đầy đủ','Full catalog'],
+ ['Không tải được ảnh mô hình.','The model preview could not be loaded.'],['Thử lại ảnh','Retry image'],
  ['Thí nghiệm','Experiments'],['Vật Lí','Physics'],['Vật lí','Physics'],['Thư viện thí nghiệm','Experiment library'],
  ['Vật lí 10','Physics 10'],['Vật lí 11','Physics 11'],['Vật lí 12','Physics 12'],
  ['Bìa Vật lí 10','Physics 10 book cover'],['Bìa Vật lí 11','Physics 11 book cover'],['Bìa Vật lí 12','Physics 12 book cover'],
@@ -174,7 +175,7 @@ function translateText(node,english){
 function translateElement(element,english){
  if(!element||element.nodeType!==1)return;
  if(!eligible(element))return;
- for(const attr of ['aria-label','title','placeholder']){
+ for(const attr of ['aria-label','title','placeholder','alt']){
   if(!element.hasAttribute(attr))continue;
   const name='data-quanh-original-'+attr;
   const source=element.getAttribute(name)||element.getAttribute(attr);

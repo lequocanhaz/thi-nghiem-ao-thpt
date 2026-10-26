@@ -1,44 +1,17 @@
-/* Quanh Lab: two-line, fully capitalized, center-aligned hero title. */
-.home-screen > .main-banner .banner-copy {
-  width: 100%;
-  max-width: 100%;
-}
+/* Quanh Lab: equal typography and breathing room across both title rows. */
+.home-screen > .main-banner .banner-copy {width:100%;max-width:100%}
 .home-screen > .main-banner .banner-copy #bannerTitle {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto 32px;
-  text-align: center;
-  font-weight: 800;
-  letter-spacing: -.045em;
-  line-height: 1.08;
-  text-wrap: nowrap;
+ display:grid;gap:.24em;width:100%;max-width:1120px;margin:0 auto 32px;
+ font-family:'Manrope','Segoe UI',sans-serif;font-size:clamp(16px,5.3vw,88px);
+ font-weight:750;font-style:normal;line-height:1.35;letter-spacing:.015em;
+ word-spacing:.08em;text-align:center;text-wrap:nowrap;
 }
 .home-screen > .main-banner .banner-copy #bannerTitle .banner-title-row {
-  display: block;
-  white-space: nowrap;
-  max-width: 100%;
+ display:block;max-width:100%;margin:0;font:inherit;font-style:normal;
+ line-height:inherit;letter-spacing:inherit;word-spacing:inherit;white-space:nowrap;
 }
-.home-screen > .main-banner .banner-copy #bannerTitle .banner-title-row--main {
-  font-size: clamp(20px, 5.6vw, 88px);
-  line-height: 1.13;
-}
-.home-screen > .main-banner .banner-copy #bannerTitle .banner-title-row--sub {
-  margin: .08em 0 0;
-  font-size: clamp(43px, 8vw, 120px);
-  font-style: normal;
-  line-height: 1.1;
-}
-.home-screen > .main-banner .banner-copy .banner-actions {
-  justify-content: center;
-}
-html[lang="en-US"] .home-screen > .main-banner .banner-copy #bannerTitle .banner-title-row--sub {
-  font-size: clamp(21px, 5.3vw, 86px);
-}
-@media (max-width: 620px) {
-  .home-screen > .main-banner .banner-copy #bannerTitle {
-    margin-bottom: 24px;
-  }
-  .home-screen > .main-banner .banner-copy .banner-actions {
-    align-items: center;
-  }
+.home-screen > .main-banner .banner-copy .banner-actions {justify-content:center}
+@media(max-width:620px){
+ .home-screen > .main-banner .banner-copy #bannerTitle {margin-bottom:24px}
+ .home-screen > .main-banner .banner-copy .banner-actions {align-items:center}
 }

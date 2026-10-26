@@ -36,8 +36,9 @@ export function homeMarkup(experiments,prefs,{search,grade,topic,filter,pathFilt
 export function cardsMarkup(list,prefs,icon){return list.length?list.map(e=>{
  const c=themeFor(e),meta=curriculumMeta(e),tags=interactionTags(e),done=prefs.progress?.[e.id]?.every(Boolean);
  return `<article class="experiment-card" style="--accent:${c.color};--soft:${c.soft}">
- <div class="card-image" data-thumb="${e.id}" role="region" aria-label="${esc(e.shortTitle)}" tabindex="0" aria-keyshortcuts="ArrowLeft ArrowRight Home End">
-  <div class="catalog-formula"><span class="thumb-subject">Quan hệ khảo sát</span>${formulaMarkup(e)}</div>
+ <div class="card-image" data-thumb="${e.id}" data-static-preview>
+  <a class="preview-link" href="#lab/${e.id}"><img src="previews/v62/${e.id}.webp" alt="${esc(e.shortTitle)}" width="640" height="400" loading="lazy" decoding="async"></a>
+  <div class="preview-fallback" role="status" hidden><p>Không tải được ảnh mô hình.</p><button class="button secondary" data-preview-retry="${e.id}">Thử lại ảnh</button></div>
  </div>
  <span class="grade-tag">${e.extra?'Mở rộng':'Nền tảng'}</span>
  <button class="favorite-button ${prefs.favorites.includes(e.id)?'on':''}" data-favorite="${e.id}" aria-pressed="${prefs.favorites.includes(e.id)}" aria-label="Lưu ${esc(e.shortTitle)}">${icon('star')}</button>

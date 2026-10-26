@@ -1227,3 +1227,27 @@ body:has(.home-screen) .header nav>a[aria-current],body:has(.home-screen) .heade
 .stage-shell:fullscreen .teaching-tools{flex:none}
 .stage-shell:fullscreen .direct-tools,.stage-shell:fullscreen .coordinate-legend{display:none}
 @media(max-width:620px){.stage-shell:fullscreen>.stage-viewport{flex:1 0 auto}}
+
+/* v62: static apparatus previews and aligned, generously spaced catalog copy. */
+#library .cards{gap:24px;align-items:stretch}
+#library .experiment-card{font-family:'Manrope','Segoe UI',sans-serif}
+#library .card-image{position:relative;height:auto;aspect-ratio:16/10;max-height:280px;overflow:hidden;padding:0;background:#fff}
+#library .card-image .preview-link{position:absolute;inset:0;display:block;background:#fff}
+#library .card-image img{display:block;width:100%;height:100%;object-fit:contain}
+#library .card-image .preview-link:focus-visible{outline:3px solid var(--ql-focus);outline-offset:-4px}
+#library .preview-fallback{height:100%;padding:52px 20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;line-height:1.7}
+#library .preview-fallback[hidden],#library .preview-link[hidden]{display:none}
+#library .card-body{display:grid;grid-template-rows:auto auto auto minmax(3.5em,1fr) auto auto;gap:12px;padding:24px;line-height:1.75}
+#library .card-body>*{margin:0}
+#library .card-topic{font-size:.875rem;line-height:1.6}
+#library .card-badges{margin:0;gap:10px;line-height:1.6}
+#library .card-body h3{margin:0;min-height:3em;font-size:1.25rem;font-weight:700;line-height:1.5;letter-spacing:0;text-wrap:balance}
+#library .card-purpose{margin:0;font-size:1rem;line-height:1.75}
+#library .card-syllabus{margin:0;min-height:3.2em;font-size:.8125rem;line-height:1.6}
+#library .card-syllabus small{font-size:inherit;line-height:inherit}
+#library .card-interactions{margin:0;gap:8px 12px;line-height:1.6}
+#library .interaction-tag{line-height:inherit}
+#library .card-actions{gap:12px;padding:0 24px 24px}
+#library .card-open,#library .preview-button{font-family:inherit;font-size:.875rem;line-height:1.5;min-height:44px}
+@media(max-width:620px){#library .card-body{padding:20px;gap:12px}#library .card-actions{padding:0 20px 20px}}
+@media(max-width:480px){#library .card-actions{grid-template-columns:minmax(0,1fr)}#library .card-open,#library .preview-button{width:100%;justify-content:center}}

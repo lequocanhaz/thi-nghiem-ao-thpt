@@ -28,8 +28,8 @@ for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
   assert.match(content,/<link rel="canonical" href="https:\/\/physicslab\.tech\/">/,'Canonical URL must use the custom domain');
   assert.match(content,/<meta property="og:url" content="https:\/\/physicslab\.tech\/">/,'Social URL must use the custom domain');
   // Normalise only the approved custom-domain migration while preserving the frozen banner baseline.
-  assert.match(content,/<link rel="stylesheet" href="banner-title\.css\?v=60">/,'The centered two-line title CSS must be deployed');
-  content=content.replaceAll('https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/').replace('<link rel="stylesheet" href="banner-title.css?v=60">','');
+  assert.match(content,/<link rel="stylesheet" href="banner-title\.css\?v=62">/,'The centered two-line title CSS must be deployed');
+  content=content.replaceAll('https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/').replace('<link rel="stylesheet" href="banner-title.css?v=62">','');
  }
  assert.equal(hash(content.replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace('<a href="experiments/">Danh mục đầy đủ</a><a href="about.html">Giới thiệu</a>','').replace(/<link rel="sitemap"[^>]+>/,'').replace(/<script id="quanhSiteData" type="application\/ld\+json">[^<]+<\/script>/,'').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
 }
