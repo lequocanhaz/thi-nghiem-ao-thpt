@@ -1,0 +1,51 @@
+name: Temporary production security smoke test
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify HTTPS, CSP, primary pages and hidden QA routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --max-time 20 https://physicslab.tech/ -o /tmp/quanh-home.html
+          curl -fsSL --max-time 20 https://physicslab.tech/books.html -o /tmp/quanh-books.html
+          curl -fsSL --max-time 20 https://physicslab.tech/robots.txt -o /tmp/quanh-robots.txt
+          HOME_HTTP=$(curl -s -o /dev/null -w '%{http_code}' --max-time 15 http://physicslab.tech/)
+          QA_HTTP=$(curl -s -o /dev/null -w '%{http_code}' --max-time 15 https://physicslab.tech/review/books.html)
+          export HOME_HTTP QA_HTTP
+          python3 - <<'PY'
+          import os
+          home=open('/tmp/quanh-home.html',encoding='utf-8').read()
+          books=open('/tmp/quanh-books.html',encoding='utf-8').read()
+          assert 'Content-Security-Policy' in home and 'Content-Security-Policy' in books,'Missing production CSP'
+          assert "script-src 'self'" in home
+          assert 'name="referrer"' in home
+          assert 'banner-title.css' in home
+          assert os.environ['HOME_HTTP'] in {'301','302','308'},'HTTP is not HTTPS-redirected'
+          assert os.environ['QA_HTTP']=='404','Internal QA page is still publicly served'
+          print('HTTPS/CSP/REFERRER/QA_SUCCESS',os.environ['HOME_HTTP'],os.environ['QA_HTTP'])
+          PY
+      - name: Render production homepage in headless Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          google-chrome --version
+          timeout 55s google-chrome --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=12000 --dump-dom https://physicslab.tech/ > /tmp/quanh-render.html 2>/tmp/quanh-chrome-errors.log || {
+            echo 'CHROME_LAUNCH_FAILED'
+            tail -n 35 /tmp/quanh-chrome-errors.log
+            exit 1
+          }
+          python3 - <<'PY'
+          page=open('/tmp/quanh-render.html',encoding='utf-8').read()
+          assert 'id="bannerTitle"' in page,'Main application did not mount'
+          assert 'HỆ THỐNG THÍ NGHIỆM' in page,'Homepage heading missing'
+          assert 'id="library"' in page,'Experiment library missing'
+          assert 'class="home-screen"' in page,'Home layout missing'
+          print('CHROME_BROWSER_SUCCESS',len(page))
+          PY
