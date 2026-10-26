@@ -1,0 +1,638 @@
+
+> check
+> node checks/catalog-previews-v62.mjs && node checks/catalog-search-v59.mjs && node checks/collision-contact-v59.mjs && node checks/oscillator-shape-v59.mjs && node checks/book-capture-v59.mjs && node checks/locale-mutations-v59.mjs && node checks/discovery-pages-v59.mjs && node checks/banner-preservation-v51.mjs && node checks/electric-analysis-v51.mjs && node checks/research.mjs && node checks/lessons-v50.mjs && node checks/startup-library-v49.mjs && node checks/books.mjs && node checks/touch-books-v41.mjs && node checks/space-v41.mjs && node checks/motion-space-v43.mjs && node checks/physics-v54.mjs && node checks/electric-components-v54.mjs && node checks/geometry-v54.mjs && node checks/expansion-300.mjs && node checks/domain-workflow-v54.mjs && node checks/visual-settings-v54.mjs && node checks/i18n-v54.mjs && node checks/english-ui-voice.mjs && node checks/language-pill-v57.mjs && node checks/book-english-v58.mjs && node checks/english-lessons-v56.mjs && node checks/audit-v54.mjs --independent && node checks/assets.mjs && node checks/mobile.mjs && node checks/interface-v31.mjs && node checks/playback-v32.mjs && node checks/spatial-view.mjs && node checks/workspace.mjs && node checks/parameter-window.mjs && node checks/banner.mjs && node checks/cosmos.mjs && node checks/assistant.mjs && node checks/latex-v48.mjs && node checks/math-cache-v52.mjs && node checks/rendering-v52.mjs && node checks/chat-images-v33.mjs && node checks/ui-v34.mjs && node checks/library-v39.mjs && node checks/brand-style-v35.mjs && node checks/physics-tutor.mjs && node checks/gemini.mjs && node checks/gemini-setup.mjs && node checks/local-ai.mjs && node checks/interaction-v17.mjs && node checks/dom.mjs && node server/gemini-relay/test.mjs
+
+PASS300 static actual-render previews: source/image hashes,640×400 WebP,byte budget,clickable accessible lazy images,error/retry/recovery and listener cleanup. No live WebGL on home.
+PASS bilingual/accent-insensitive phenomenon and apparatus search, punctuation, empty state, cached index and scientific metadata preservation.
+PASS finite collision-cart contact: {"parameterCases":320,"frames":2254,"contacts":218,"stickingFrames":224,"scope":"Actual tight mesh bounds and independent momentum/restitution/velocity checks; no browser pixels, GPU or real collision experiment."}
+PASS resonance waveform: {"parameterCases":38,"frames":3686,"scaledCases":9,"scope":"Actual mass positions match an independent harmonic-response oracle without clipping; numerical/CPU geometry only."}
+PASS v59: implicit child-to-stage pointer capture transfer preserves book drag; actual stage capture loss cancels once. Synthetic events; browser touch tested separately.
+PASS incremental locale updates: 30 readout updates avoid page walks, nested inserts deduplicated, VI/EN roundtrip preserves controls, values, canvas and notes. DOM instrumentation, not a hardware performance benchmark.
+PASS 300 crawlable learning resources, rendered formulas/MathML, current assumptions, live simulation links, 305 canonical sitemap URLs and bilingual product information. Indexing by search engines is not asserted.
+PASS v51 SHA-256: banner media/poster/playback/markup and original CSS (except scoped math SVG fix) unchanged, added UI rules exclude banner/identity; exact 300 IDs, books, audio, lessons, brand and fonts preserved. Source/asset checks only; desktop/mobile browser playback remains unverified.
+PASS v51 electric: 4 modes, explicit F/E units, mixed/legacy tables, original row indexes and immutability, inactive/active charge dependencies, inverse-square fit from 4 distances, unchanged Ohm behavior. Node only.
+PASS five independent analytic fits; inverse-square E/Coulomb reference values, signs, units, fixed-charge coefficients and point-source exclusion; reciprocal singularities and domains; hand-calculated noisy OLS, standard error, RMSE, constant-y undefined R², tiny x scales, Boyle recovery, escaped printable report and dynamic time duration. Node numeric/DOM checks only.
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ừ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ừ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ữ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ợ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ở' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỉ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ể' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ứ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ụ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ị' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ị' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỉ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ọ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ử' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ủ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ặ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẳ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỡ' in style 'Main-Regular' and mode 'text'
+PASS v50: 300 individually authored lessons, operational controls, traceable sources, closed native solutions, unchanged physics definitions and focused worked examples. Not independent expert certification.
+PASS v49/v51 static library/SEO/accessibility, data-backed filter options, stable legacy URLs, unchanged banner template, no home WebGL import, loader timeout/offline/retry and real module progress.
+PASS textbook assets and reader state: {"books":3,"pages":388,"transitions":1552,"reachable":"all pages in single and double page modes","limits":"File/DOM/state checks; actual page turning, zoom and layout require browser validation."}
+PASS v41: finger-following pointer/legacy touch handlers, forward/back, snap-back, vertical scroll, multitouch/cancel, zoom gate and actual reader DOM/image lifecycle. Synthetic events; no iPhone hardware/Safari claim.
+PASS {"workspaceLinearFactor":10,"studioSize":180,"trajectorySamples":1313,"phoneCameraCases":390,"catalogExperiments":300,"catalogCameraCases":9000,"phoneViewports":[[320,568],[375,667],[390,844],[393,852],[402,874],[414,896],[430,932],[440,956],[667,375],[844,390],[852,393],[874,402],[896,414],[932,430],[956,440]],"limits":"CPU camera/frustum geometry only; not browser pixels, iPhone hardware or iOS Safari."}
+PASS whole-rail regression 17185 frames
+Playback coverage 50 / 300
+Playback coverage 100 / 300
+Playback coverage 150 / 300
+Playback coverage 200 / 300
+Playback coverage 250 / 300
+Playback coverage 300 / 300
+PASS {"experiments":300,"runs":3600,"playbackFrames":61200,"wholeRailFrames":17185,"calibratedCases":518,"experimentsThatNeededReframing":50,"viewports":[[320,360],[390,360],[430,400],[844,360],[1280,500]],"scope":"Live scene/model/camera methods, real mesh bounds, 2D/3D and synthetic playback. CPU geometry only; no browser pixels, iPhone hardware or Safari."}
+PASS physics v54: 773 independent assertions for dipole potential, buffered RC convolution, charged sheet and orbital/cyclotron domains. Numerical/domain checks only; no rendered-scene or classroom certification.
+PASS electric v54: 90 signed/zero-charge 3D component magnitudes and superposition checks; force and field units separated.
+PASS v54 rendered-geometry constraints: {"leverCases":179,"particlesChecked":40682,"continuousSteps":1800,"manualCameraFrames":72,"scope":"Actual mesh/instance matrices, independent force cross-products and live CPU scene/camera path; no browser pixels, GPU/FPS or molecular collision solver certification."}
+PASS 300 unique titles/IDs; 150 new protocols, independent conservation/domain/limit checks across all 30 research groups, RLC regimes, optical nulls, normalized probability and reproducible Poisson/Brownian samples. No browser or GPU test.
+PASS domain workflow v54: stable inherited presets on repeated imports, 900 named presets, invalid playback rejection/graph gaps/input preservation, mixed-domain sweep. Browser recording/scene gates tested separately.
+PASS visual settings: 4 presets, isolated storage, inherited switches, accessible controls, 1200 unchanged model evaluations. Browser state/camera behavior is tested separately.
+PASS {"scope":"Standalone i18n foundation, not integrated full-site translation","locales":["vi-VN","en-US"],"pairedKeys":784,"experimentTitles":300,"glossaryTerms":58,"sessionStoreUntouched":true,"uiLanguageSwitch":"NOT IMPLEMENTED","lessonEnglish":"NOT IMPLEMENTED","browserLocaleAcceptance":"NOT TESTED"}
+PASS bilingual catalog titles and English browser voice selection; textbook pages and simulation state untouched.
+PASS v57: styled native-free VI/EN pills, 2 headers, mobile layout, keyboard focus, singleton sync and no data/DOM reset. No real-browser pixel test.
+PASS v58: 85 English lesson titles, 15 English chapter names, 388 original scans, 3 cards, bilingual roundtrip, stable page destinations and reader module syntax.
+PASS 300 English authored study guides, scientific metadata unchanged, sources retained and VI roundtrip.
+PASS catalog v54 runtime/default inventory: {"catalogEntries":300,"uniqueIDs":300,"byGrade":{"10":68,"11":156,"12":76},"defaultConfigurations":304,"reactiveEntries":300,"illustrativeClocks":9,"missingMeasurementDefinitions":[],"missingGraphDefinitions":[],"numericStatuses":{"PASS":280,"PARTIAL":20},"issues":[]}
+PASS {"modules":100,"localImports":180,"unchangedAudioFiles":301,"preservedScientificModules":3,"reviewedScientificCorrections":3,"baselineCommit":"de83fd8936436cd448ac5056a8478d10149c70a2","cacheVersion":54,"note":"Syntax and local paths checked. Audio hashes match the 301 fully decoded files in audit v13; no new listening or device playback test."}
+PASS {"catalogExperiments":300,"cssCascadeCases":6600,"widths":[320,360,375,390,393,402,414,430,440,620,667,736,768,812,844,852,874,896,932,956,1024,1440],"transparentBlackLabels":true,"keyboardViewport":true,"note":"CSS cascade, DOM and CPU projection checks only; no browser rendering, touch hardware or iOS Safari device test."}
+PASS v31 interface {"charts":300,"coordinateLabelSizeCases":120,"coordinateFontPixels":16,"gridUnits":"physical mappings preserved","scope":"Numeric/SVG/CPU geometry checks; no browser pixels or real device testing."}
+Frozen apparatus: []
+PASS 300 playback activities {"total":300,"selectableControls":631,"controlledProcesses":221,"timeOrEmission":79,"changedApparatus":300,"scope":"Real model geometry/material changes, finite evaluation, replay/loop/serialization. No browser or device pixels."}
+PASS v28 spatial: 300 apparatus in actual orthographic camera/Canvas projection; 13 calibrated coordinate profiles, 62 orientation-only profiles; exact SI/cm mappings, axis text, no perspective depth scaling, orthographic zoom, XZ drag plane and 3D camera restoration. CPU geometry/DOM/CSS contracts; no browser/GPU pixels.
+PASS v9 pure state and geometry: 300 restoration schemas/MathML, filtered point indices, hidden hit rejection, real pointer handlers/offset/highlight cleanup, touch scroll gating and corrected cylinder bounds. No GPU rendering.
+PASS v32 responsive modes: one stylesheet, sticky desktop parameters, inline mobile controls, contained scrolling, collapsed panels and presentation. CSS/DOM contracts only.
+PASS v14 CSS contracts: native mobile page jump, compact mobile banner with progress retained, 44 px principal targets and non-overlay shared voice player. No bounding boxes or browser rendering.
+PASS relative time boundaries from femtoseconds to years and 1,275 pagination windows.
+PASS v18 CSS/DOM contracts at 360/768/1440: clean banner, 44px fullscreen control, white copy over a full-viewport video and black reading text. No browser pixels.
+PASS all 852 non-time parameter windows across 300 investigations: invalid settings rejected, 851 custom intervals, full-domain reveal, dynamic standing-wave bound, unchanged states/results/physical limits.
+PASS continuous muted inline video, looping, preference independence, no offscreen pauses, automatic recovery, gesture retry after autoplay blocking, cleanup and promise races. Mock media events; real iOS autoplay is not tested.
+PASS packaged Full HD 165-frame NASA video hashes, faststart MP4, responsive media/assistant CSS and all four attached OTF fonts. Decoded-media audit preserved; browser pixels untested.
+PASS assistant v53: context prompts across 300 lessons and library; draft/image retention, click-time values, stale-route safety, plain text and length limits; zero submit/transport calls. DOM fixtures only.
+PASS AI locale v54: Quanh Lab branding; VI default/EN policy for OpenAI+Gemini; locale allowlist before quota; server-clock language; context separation; send-time locale snapshot, draft/image retention. Fixtures only, no live inference or backend deployment.
+PASS assistant UX v59: complete VI/EN shell/status/aria, English image-only message, context prompts, server/image errors, locale/draft retention, coarse-pointer multiline Enter and IME, distinct timeout/cancel, no real API calls.
+PASS catalog context: 300 real experiment routes counted by grade/topic. Simplified chat: question/image/send/close, no local model download, automatic lab context, safe answers, drafts/cancel/failure retention, edit preservation, honest unavailable backend. WebKit receiver-sensitive default fetch and Vietnamese network errors verified. API validation/limits retained. DOM/transport fixtures; no live inference.
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ừ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ừ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ữ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ợ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ở' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỉ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ể' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ứ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ụ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ị' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ị' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỉ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ọ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ử' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ủ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ặ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẳ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỡ' in style 'Main-Regular' and mode 'text'
+Actual KaTeX engine: 300/300 catalog formulas rendered; 0 errors.
+PASS mathematical fraction and AI LaTeX rendering, safe provider HTML handling, catalog coverage.
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ừ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ừ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ữ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ợ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ở' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỉ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ể' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ứ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ụ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ờ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ị' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ị' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỉ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẩ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ọ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ử' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ủ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ớ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỏ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ậ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ặ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ộ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ạ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ả' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ệ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ẳ' in style 'Main-Regular' and mode 'text'
+No character metrics for 'ỡ' in style 'Main-Regular' and mode 'text'
+PASS v52 math: real renderToString cache reuse, display/engine isolation, bounded eviction, trust:false security on cache hits, invalid-TeX recovery and all 300 formula sidecars.
+PASS v52 electric: four modes/units, persistent models/buffers, field invalidation and legacy-path equivalence, singular/zero recovery, manual camera preservation and Canvas drawRange. CPU geometry only; no WebGL pixels.
+PASS Quanh Lab image conversations and simplified 300 labs {"brand":"Quanh Lab","simplifiedLabs":300,"maxCurrentImages":2,"maxHistoryImages":4,"tests":["local JPEG preparation, bounds, aspect ratio, URL cleanup","image-only send and image follow-up","preview/remove, two-image limit","failure/cancel preservation","route-safe attachments and asynchronous preparation","real paste/drop/picker DOM events","300 routes without removed tools"],"limits":"DOM and injected decoding/transport fixtures; not OS photo picker or real Safari canvas."}
+PASS v34: 3600 responsive catalog charts; unmodified domains; wrapped/escaped labels; touch focus; context/draft isolation; late errors stay associated with the previous activity. DOM/geometry checks, no browser pixels.
+Library v39: 300 curriculum links, interaction badges and thumbnail slots verified.
+PASS v35: 300 original-case titles, topic tags, open/preview/favorite routes and simplified cards; transparent native vector logo; local WOFF2 font and license. DOM/file checks only.
+PASS tutor contract: 16 topic requests preserve question/history/lab state; broad scope, reviewed constants/references, no fabricated browsing/memory; 11 timezone/date/DST/fallback cases use server clock; quota and simple UI retained. Provider mocked: this does not validate model knowledge.
+PASS Gemini adapter: lab context/history/images, server-only key, key rotation, provider isolation, quota/auth/model errors, bounded transient retries, permanent-error no-retry, cancellation and private diagnostics, blocked/empty/truncated answers, malformed upstream and timeout. Fixtures only; live Gemini inference not verified.
+PASS private setup: disabled by default, CSP/no-store/password input, public JWK only, browser envelope encryption, origin/body validation, metadata key validation, ciphertext-only pending storage, expiration, cleanup. Synthetic key only; no real credential used.
+PASS retained local runtime unit checks; current chat does not load this runtime.
+PASS independent handles: 590 across all 300 labs; 852 parameter drag/keyboard paths; 1704 graphs at parameter bounds. 629 domains expanded in 270 labs. CPU geometry only.
+PASS DOM energy
+PASS DOM oscillation
+PASS DOM wave
+PASS DOM electric
+PASS DOM ohm
+PASS DOM capacitor
+PASS DOM boyle
+PASS DOM gas
+PASS DOM uniform
+PASS DOM acceleration
+PASS DOM horizontal
+PASS DOM projectile
+PASS DOM newton
+PASS DOM incline
+PASS DOM collision
+PASS DOM circular
+PASS DOM lever
+PASS DOM hooke
+PASS DOM pendulum
+PASS DOM damped
+PASS DOM resonance
+PASS DOM interference
+PASS DOM standing
+PASS DOM sound
+PASS DOM series
+PASS DOM parallel
+PASS DOM joule
+PASS DOM magnetic
+PASS DOM induction
+PASS DOM decay
+PASS DOM freefall
+PASS DOM friction
+PASS DOM work
+PASS DOM impulse
+PASS DOM buoyancy
+PASS DOM pressure
+PASS DOM reflection
+PASS DOM refraction
+PASS DOM tir
+PASS DOM lens
+PASS DOM mirror
+PASS DOM prism
+PASS DOM young
+PASS DOM diffraction
+PASS DOM polarization
+PASS DOM thermalexpansion
+PASS DOM calorimetry
+PASS DOM phasechange
+PASS DOM heattransfer
+PASS DOM isobaric
+PASS DOM isochoric
+PASS DOM firstlaw
+PASS DOM kinetic
+PASS DOM resistivity
+PASS DOM internalresistance
+PASS DOM bridge
+PASS DOM solenoid
+PASS DOM lorentz
+PASS DOM transformer
+PASS DOM ac
+PASS DOM vector_sum
+PASS DOM vector_components
+PASS DOM relative_motion
+PASS DOM average_speed
+PASS DOM braking
+PASS DOM drag_fall
+PASS DOM atwood
+PASS DOM pulley
+PASS DOM elevator
+PASS DOM banked_turn
+PASS DOM vertical_circle
+PASS DOM gravitational_force
+PASS DOM orbit
+PASS DOM escape_speed
+PASS DOM kepler
+PASS DOM torque_angle
+PASS DOM rotational_inertia
+PASS DOM angular_accel
+PASS DOM rolling
+PASS DOM spring_energy
+PASS DOM elastic_modulus
+PASS DOM hydraulic_press
+PASS DOM communicating
+PASS DOM torricelli
+PASS DOM spring_period
+PASS DOM oscillator_energy
+PASS DOM phase_difference
+PASS DOM beat
+PASS DOM doppler_source
+PASS DOM doppler_observer
+PASS DOM string_speed
+PASS DOM string_resonance
+PASS DOM open_pipe
+PASS DOM closed_pipe
+PASS DOM sound_level
+PASS DOM intensity_distance
+PASS DOM standing_phase
+PASS DOM reflection_wave
+PASS DOM wave_packet
+PASS DOM spring_parallel
+PASS DOM spring_series
+PASS DOM resonance_power
+PASS DOM ray_slab
+PASS DOM apparent_depth
+PASS DOM lens_power
+PASS DOM lenses_contact
+PASS DOM magnifier
+PASS DOM telescope
+PASS DOM microscope
+PASS DOM grating
+PASS DOM resolving_power
+PASS DOM brewster
+PASS DOM inverse_square_light
+PASS DOM mirror_rotation
+PASS DOM pinhole
+PASS DOM fiber_acceptance
+PASS DOM uniform_field
+PASS DOM potential_point
+PASS DOM potential_pair
+PASS DOM dipole_torque
+PASS DOM capacitor_plate
+PASS DOM dielectric
+PASS DOM capacitor_series
+PASS DOM capacitor_parallel
+PASS DOM capacitor_force
+PASS DOM charge_quantization
+PASS DOM drift
+PASS DOM wire_stretch
+PASS DOM potentiometer
+PASS DOM voltage_divider
+PASS DOM kirchhoff_loop
+PASS DOM diode_model
+PASS DOM meter_loading
+PASS DOM max_power
+PASS DOM battery_series
+PASS DOM battery_parallel
+PASS DOM wire_field
+PASS DOM wire_pair
+PASS DOM ampere_loop
+PASS DOM flux_angle
+PASS DOM inductor_energy
+PASS DOM rl_response
+PASS DOM lc_oscillator
+PASS DOM rlc_resonance
+PASS DOM newton_cooling
+PASS DOM carnot
+PASS DOM adiabatic
+PASS DOM photoelectric
+PASS DOM debroglie
+PASS DOM binding_energy
+PASS DOM table_hanging
+PASS DOM contact_carts
+PASS DOM accelerating_pendulum
+PASS DOM double_incline
+PASS DOM free_wedge
+PASS DOM ladder_balance
+PASS DOM beam_supports
+PASS DOM three_strings
+PASS DOM slide_tip
+PASS DOM metacentric
+PASS DOM collision_2d
+PASS DOM ballistic_pendulum
+PASS DOM newton_cradle
+PASS DOM moving_wall
+PASS DOM collision_spring
+PASS DOM yoyo_drop
+PASS DOM rolling_race
+PASS DOM angular_momentum
+PASS DOM atwood_inertia
+PASS DOM gyroscope
+PASS DOM rotating_planet
+PASS DOM elliptic_orbit
+PASS DOM binary_orbit
+PASS DOM hohmann
+PASS DOM tidal_gradient
+PASS DOM venturi
+PASS DOM siphon
+PASS DOM poiseuille
+PASS DOM stokes_settling
+PASS DOM capillary_rise
+PASS DOM coupled_pendulums
+PASS DOM large_pendulum
+PASS DOM physical_pendulum
+PASS DOM torsion_pendulum
+PASS DOM u_tube_oscillation
+PASS DOM vibration_absorber
+PASS DOM base_isolation
+PASS DOM parametric_oscillation
+PASS DOM duffing
+PASS DOM van_der_pol
+PASS DOM string_boundary
+PASS DOM bead_scattering
+PASS DOM water_refraction
+PASS DOM string_power
+PASS DOM dispersive_packet
+PASS DOM helmholtz
+PASS DOM harmonic_timbre
+PASS DOM room_reverberation
+PASS DOM sound_tdoa
+PASS DOM mach_cone
+PASS DOM charged_ring
+PASS DOM charged_rod
+PASS DOM charged_disk
+PASS DOM charged_solid_sphere
+PASS DOM charged_plane
+PASS DOM electric_turning
+PASS DOM equipotential_map
+PASS DOM three_charge_energy
+PASS DOM electric_work_paths
+PASS DOM connected_spheres
+PASS DOM conducting_shell
+PASS DOM coaxial_capacitor
+PASS DOM spherical_capacitor
+PASS DOM isolated_dielectric
+PASS DOM layered_dielectric
+PASS DOM two_meshes
+PASS DOM star_delta
+PASS DOM resistor_ladder
+PASS DOM unbalanced_bridge
+PASS DOM thevenin_norton
+PASS DOM ammeter_shunt
+PASS DOM voltmeter_design
+PASS DOM emf_compensation
+PASS DOM rc_meter_loading
+PASS DOM kelvin_four_wire
+PASS DOM two_stage_rc
+PASS DOM charge_sharing
+PASS DOM rlc_free
+PASS DOM rc_square
+PASS DOM flyback_diode
+PASS DOM half_rectifier
+PASS DOM bridge_rectifier
+PASS DOM rectifier_filter
+PASS DOM zener_regulator
+PASS DOM diode_clipper
+PASS DOM rc_lowpass
+PASS DOM rc_highpass
+PASS DOM rlc_bandwidth
+PASS DOM ac_capacitance_bridge
+PASS DOM power_factor
+PASS DOM loop_axis
+PASS DOM helmholtz_coils
+PASS DOM finite_solenoid
+PASS DOM toroid
+PASS DOM compass_coil
+PASS DOM velocity_selector
+PASS DOM mass_spectrometer
+PASS DOM cyclotron
+PASS DOM magnetic_helix
+PASS DOM hall_voltage
+PASS DOM sliding_rod
+PASS DOM magnetic_braking
+PASS DOM coil_entering_field
+PASS DOM mutual_induction
+PASS DOM faraday_disk
+PASS DOM em_plane_wave
+PASS DOM poynting_energy
+PASS DOM radiation_pressure
+PASS DOM transmission_reflection
+PASS DOM skin_depth
+PASS DOM separated_lenses
+PASS DOM camera_defocus
+PASS DOM eye_correction
+PASS DOM spherical_aberration
+PASS DOM chromatic_lens
+PASS DOM thin_film
+PASS DOM newton_rings
+PASS DOM michelson
+PASS DOM fabry_perot
+PASS DOM fringe_visibility
+PASS DOM airy_pattern
+PASS DOM finite_double_slit
+PASS DOM grating_resolution
+PASS DOM wave_plate
+PASS DOM photoelasticity
+PASS DOM convection_radiation
+PASS DOM radiative_balance
+PASS DOM layered_wall
+PASS DOM transient_heat_bar
+PASS DOM seebeck
+PASS DOM otto_cycle
+PASS DOM diesel_cycle
+PASS DOM stirling_regenerator
+PASS DOM refrigerator
+PASS DOM brayton_cycle
+PASS DOM maxwell_distribution
+PASS DOM two_level_boltzmann
+PASS DOM brownian_motion
+PASS DOM vapor_pressure
+PASS DOM van_der_waals
+PASS DOM hydrogen_lines
+PASS DOM franck_hertz
+PASS DOM compton_scattering
+PASS DOM electron_bragg
+PASS DOM quantum_box
+PASS DOM decay_chain
+PASS DOM alpha_recoil
+PASS DOM reaction_threshold
+PASS DOM gamma_attenuation
+PASS DOM poisson_counting
+PASS visual settings DOM: shared change dispatch retains both listeners, physical state/config/rows and canvas/input identities.
+PASS parsed HTML DOM: all 300 routes, labels, mounted models, play/pause time advancement, real button actions, panel transitions, recording and simplified tools. WebGL pixels are not tested.
+PASS v28: 300 real 2D/3D button flows preserve state and measurements; per-lab plane/axes restore and session schema validation. DOM only, no browser pixels.
+PASS renderer failure fallback, numerical recording, renderer retry without data loss, optical emission control and honest static experiment controls.
+PASS startup-anchor regression.
+PASS v34: real routes reset assistant context on library/sources; actual graph width and layout resize update the SVG viewBox.
+PASS research DOM: fit selection/residuals, recorded timestamps, mixed-conditions notice, plain text notes, focus, experiment switcher and time sampling beyond 10 seconds.
+PASS 300-item pagination, subject/level/search/sort, 300 authored investigations, safe control selection and recording, and slowed LC with physical model time.
+PASS mobile gestures: graph scroll/cancel preserve state, tap seeks; independent resize pointer; fullscreen fallback and Escape preserve data. DOM events only.
+PASS v12 DOM: 3 persistent layouts, prior notebook recovery, collapses, mouse/keyboard resizing, chart/row/model selection, incomplete rows refused, all 300 previews/MathML, inline numeric controls and touch-mode events. No browser pixels or real touch test.
+PASS textbook links, software fallback on WebGL failure and manual mode switching without losing data.
+PASS v12 textbook links and removed quick demo, same controls across breakpoints, preserved notes/rows, native guide toggle, visible notebook shortcut and header session export.
+PASS numeric input feedback: empty entry preserves state; out-of-range entry clamps with an explanation.
+PASS v18 continuous banner independent of UI motion preferences, removed media/source annotations, retained fullscreen and route cleanup.
+PASS v14 catalog: relevant search ordering, whitespace/diacritic folding, independent filter removal, no banner remount, 300 items via native page jump, explanatory saved-empty state and typing-safe search shortcut.
+PASS v14 all 300 numerical parameter routes, unique IDs/labels, advanced-disclosure opening, selected variable, reversible table deletion isolated by experiment, sticky-column replay action, data counts and parameter changes pause the clock.
+PASS tools reveal their panels from focus/presentation without losing model state, rows or draft notes.
+PASS v14 time controls: 79 dynamic investigations: correct initial label, 1/200 interval steps, pause/resume without tiny-time resets, finished status and restart.
+PASS v14 shared voice loading/pause/resume/stop UI, grouped scene tools, Escape restores workspace, native dialog heading label. Audio device and browser focus behavior remain untested.
+PASS v18 clean banner markup and continuous playback policy; actual autoplay is tested with media fixtures separately.
+PASS v16 window apply/validation, full-domain typing, session round trip, model reset retains rows, full-width data dock and modes retain state, 12 international references and all 300 source entries.
+PASS v31: model/chart grids preserve data and per-lab preferences; grid-free plots retain ticks; transitions respect settings and reduced motion; redundant notes removed. DOM contracts only.
+PASS v32: focused number entry pauses playback, saved progress restores, malformed imported process is rejected, reset clears procedure.
+PASS v33 AI image dialogs keep focus over fullscreen apparatus.
+PASS v49 combined subject/grade/book filters, Vietnamese IME, classroom tools/guide/Escape and hidden-tab pause preserve numerical state and recorded rows.
+PASS v51 DOM: 4 electric modes, live F/E axis/options, mixed-row filtering with full table/CSV retained, inverse-square UI and persisted rows/fit on navigation. Synthetic DOM only.
+PASS v52 DOM: persistent meters/play/SVG, current marker, grid/resize/rows invalidation, mouse/keyboard row restoration, F/E units and no duplicate stage update.
+PASS startup recovery from null/invalid saved preferences without clearing valid experiment data.
+PASS v53 cold #library/#main links hydrate search and catalog; hydrated anchor navigation retains the existing banner.
+PASS storage-denied startup retains library and default visual settings.
+PASS regional Gemini relay: fixed Google destination, secret authentication, bounded body, model allowlist, no browser CORS, preserved server quota/context/filtering, fail-closed configuration, provider errors and real localhost Node adapter. No Vercel deployment or live regional inference verified.

@@ -1,0 +1,150 @@
+{
+  "count": 300,
+  "bytes": 1717436,
+  "sourceStable": true,
+  "complete": true,
+  "uniqueImages": 295,
+  "lowInk": [
+    {
+      "id": "apparent_depth",
+      "inkFraction": 0.0025,
+      "darkFraction": 0.0,
+      "boundsInView": true,
+      "bytes": 3894
+    },
+    {
+      "id": "adiabatic",
+      "inkFraction": 0.0046,
+      "darkFraction": 0.0,
+      "boundsInView": true,
+      "bytes": 4270
+    },
+    {
+      "id": "separated_lenses",
+      "inkFraction": 0.0049,
+      "darkFraction": 0.0,
+      "boundsInView": true,
+      "bytes": 4076
+    },
+    {
+      "id": "room_reverberation",
+      "inkFraction": 0.0052,
+      "darkFraction": 0.0,
+      "boundsInView": true,
+      "bytes": 3268
+    },
+    {
+      "id": "vector_components",
+      "inkFraction": 0.0056,
+      "darkFraction": 0.0001,
+      "boundsInView": true,
+      "bytes": 3868
+    },
+    {
+      "id": "vector_sum",
+      "inkFraction": 0.0062,
+      "darkFraction": 0.0001,
+      "boundsInView": true,
+      "bytes": 3924
+    },
+    {
+      "id": "ray_slab",
+      "inkFraction": 0.0063,
+      "darkFraction": 0.0,
+      "boundsInView": true,
+      "bytes": 3804
+    },
+    {
+      "id": "dipole_torque",
+      "inkFraction": 0.0063,
+      "darkFraction": 0.0001,
+      "boundsInView": true,
+      "bytes": 4160
+    },
+    {
+      "id": "brewster",
+      "inkFraction": 0.0073,
+      "darkFraction": 0.0,
+      "boundsInView": true,
+      "bytes": 3914
+    },
+    {
+      "id": "chromatic_lens",
+      "inkFraction": 0.008,
+      "darkFraction": 0.0001,
+      "boundsInView": true,
+      "bytes": 4190
+    },
+    {
+      "id": "lorentz",
+      "inkFraction": 0.0086,
+      "darkFraction": 0.0002,
+      "boundsInView": true,
+      "bytes": 4586
+    },
+    {
+      "id": "acceleration",
+      "inkFraction": 0.0089,
+      "darkFraction": 0.0015,
+      "boundsInView": true,
+      "bytes": 3786
+    },
+    {
+      "id": "mirror_rotation",
+      "inkFraction": 0.0091,
+      "darkFraction": 0.0,
+      "boundsInView": true,
+      "bytes": 4026
+    },
+    {
+      "id": "spherical_aberration",
+      "inkFraction": 0.0096,
+      "darkFraction": 0.0001,
+      "boundsInView": true,
+      "bytes": 4350
+    },
+    {
+      "id": "friction",
+      "inkFraction": 0.0099,
+      "darkFraction": 0.0039,
+      "boundsInView": true,
+      "bytes": 3650
+    },
+    {
+      "id": "work",
+      "inkFraction": 0.0099,
+      "darkFraction": 0.0037,
+      "boundsInView": true,
+      "bytes": 3818
+    },
+    {
+      "id": "resolving_power",
+      "inkFraction": 0.0101,
+      "darkFraction": 0.0047,
+      "boundsInView": true,
+      "bytes": 3748
+    },
+    {
+      "id": "uniform",
+      "inkFraction": 0.0104,
+      "darkFraction": 0.0018,
+      "boundsInView": true,
+      "bytes": 3764
+    },
+    {
+      "id": "grating",
+      "inkFraction": 0.0107,
+      "darkFraction": 0.0067,
+      "boundsInView": true,
+      "bytes": 3988
+    },
+    {
+      "id": "incline",
+      "inkFraction": 0.0109,
+      "darkFraction": 0.0039,
+      "boundsInView": true,
+      "bytes": 3362
+    }
+  ],
+  "framingWarnings": []
+}
