@@ -14,6 +14,11 @@ assert.ok(document.querySelector('dialog[aria-labelledby="dialogTitle"]'));
 assert.ok(document.querySelector('#toast[role="status"][aria-live="polite"]'));
 for(const node of document.querySelectorAll('.brand,.footer-brand'))assert.equal(node.getAttribute('href'),'./');
 for(const name of ['og:title','og:description','og:image'])assert.ok(document.querySelector(`meta[property="${name}"]`).content);
+const seoDescription="Quanh Lab – hệ thống thí nghiệm Vật lí ảo dành cho học sinh, giáo viên THPT với 300 thí nghiệm tương tác 2D/3D, đo đạc, vẽ đồ thị và sách Vật lí 10–12.";
+assert.equal(document.querySelector('meta[name="description"]').getAttribute('content'),seoDescription,'Google search description');
+assert.equal(document.querySelector('meta[property="og:description"]').getAttribute('content'),seoDescription,'Shared preview description');
+assert.equal(document.querySelector('meta[name="twitter:description"]').getAttribute('content'),seoDescription,'X preview description');
+assert.equal(JSON.parse(document.querySelector('#quanhSiteData').textContent).description,seoDescription,'Structured website description');
 // Traverse real static ES-module edges: the home entry must not request the renderer or Three.js.
 const seen=new Set();
 function inspect(url){
