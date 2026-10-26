@@ -152,3 +152,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Hợp nhất main mới đến `7d7b2be` trước phát hành: giữ banner “HỆ THỐNG THÍ NGHIỆM / VẬT LÍ ẢO”, stylesheet riêng v60, metadata/robots của các commit đồng thời. Entry/views/locale dùng v61 để tránh cache bản v60. Generator đọc canonical đã có trên main; không tự chuyển lại domain. Kiểm DNS/HTTPS chưa đạt, không suy ra từ metadata.
 
 - **Kết thúc phát hành v59:** PR#28 đã merge tại `decfbb8555c4e43c7fe817a899297010696d23d6`, CI/Pages [https://github.com/lequocanhaz/thi-nghiem-ao-thpt/actions/runs/40246562448](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/actions/runs/40246562448) đạt. Kiểm lại DNSGoogle/Cloudflare đủ bốnA, PagesEnforceHTTPS=true, HTTPS200.388/388tệp phát hành khớp byte; Chromium live tìmOhm/mởmodel/ghi một dòng/đổiEN đạt,0pageerror. DNSkhông còn chặn; không gỡcustomdomain. Các cảnh báoDNSở đầu đợt là lịch sử. Cập nhật này chỉ là tài liệu, không đổi runtime đã kiểm.
+
+## Ảnh và typography v62
+
+- Xem docs/CATALOG_TYPE_IMAGES_V62.md. User yêu cầu banner hai dòng đồng font/cỡ/giãn dòng và ảnh mô hình trên thư viện. CSS riêng banner-title.css và các entry dùngv62; giữ tên/video/bannerlayout.
+- Cards dùng trực tiếp dist/previews/v62/<ID>.webp (300ảnh xuấtactualLabScene), loadinglazy, ảnhclick mởlab; không vẽ preview trong browserhome hoặc chờ mởlab. Thumbnails.js giờ chỉ quản lý lỗi/retry/focus và cleanup; không xóa IndexedDB hoặc dữ liệu phiên.
+- manifest.json có nguồn/hash/state/camera và generator; không tải manifest trênhome. npmcheck cócatalog-previews-v62.mjs; khi sửa renderer/science cần tái xuất ảnh theo yêu cầu, không sửa hashbaseline âmthầm. Không commit KaTeX hoặcwork sinhcục bộ.
+- Một số optionalbrowserchecks v53/v59 kỳvọng côngthức ởcard làharness lịch sử; v62 kiểmảnh qua checks/browser-catalog-v62.py. Côngthức đầyđủ vẫn ởlab/modal/info-pages.

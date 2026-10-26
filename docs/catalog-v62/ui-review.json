@@ -1,0 +1,1478 @@
+{
+  "scope": "Chromium154 viewport simulation, read-only title/cards review",
+  "cases": [
+    {
+      "width": 320,
+      "locale": "vi",
+      "overflow": false,
+      "rows": [
+        {
+          "text": "HỆ THỐNG THÍ NGHIỆM",
+          "rect": {
+            "x": 24,
+            "y": 586.1875,
+            "width": 272,
+            "height": 22.875,
+            "top": 586.1875,
+            "right": 296,
+            "bottom": 609.0625,
+            "left": 24
+          },
+          "ink": {
+            "x": 62.296875,
+            "y": 585.1875,
+            "width": 195.40625,
+            "height": 23,
+            "top": 585.1875,
+            "right": 257.703125,
+            "bottom": 608.1875,
+            "left": 62.296875
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "16.96px",
+          "weight": "750",
+          "tracking": "0.2544px",
+          "lineHeight": "22.896px",
+          "wordSpacing": "1.3568px"
+        },
+        {
+          "text": "VẬT LÍ ẢO",
+          "rect": {
+            "x": 24,
+            "y": 613.125,
+            "width": 272,
+            "height": 22.875,
+            "top": 613.125,
+            "right": 296,
+            "bottom": 636,
+            "left": 24
+          },
+          "ink": {
+            "x": 120.15625,
+            "y": 612.125,
+            "width": 79.671875,
+            "height": 23,
+            "top": 612.125,
+            "right": 199.828125,
+            "bottom": 635.125,
+            "left": 120.15625
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "16.96px",
+          "weight": "750",
+          "tracking": "0.2544px",
+          "lineHeight": "22.896px",
+          "wordSpacing": "1.3568px"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Cơ năng",
+          "box": {
+            "x": 16,
+            "y": 16.0625,
+            "width": 288,
+            "height": 622.109375,
+            "top": 16.0625,
+            "right": 304,
+            "bottom": 638.171875,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 17.0625,
+            "width": 286,
+            "height": 177.75,
+            "top": 17.0625,
+            "right": 303,
+            "bottom": 194.8125,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 517.171875,
+            "width": 286,
+            "height": 120,
+            "top": 517.171875,
+            "right": 303,
+            "bottom": 637.171875,
+            "left": 17
+          }
+        },
+        {
+          "title": "Dao động điều hòa",
+          "box": {
+            "x": 16,
+            "y": 662.171875,
+            "width": 288,
+            "height": 622.109375,
+            "top": 662.171875,
+            "right": 304,
+            "bottom": 1284.28125,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 663.171875,
+            "width": 286,
+            "height": 177.75,
+            "top": 663.171875,
+            "right": 303,
+            "bottom": 840.921875,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 1163.28125,
+            "width": 286,
+            "height": 120,
+            "top": 1163.28125,
+            "right": 303,
+            "bottom": 1283.28125,
+            "left": 17
+          }
+        },
+        {
+          "title": "Sóng cơ",
+          "box": {
+            "x": 16,
+            "y": 1308.28125,
+            "width": 288,
+            "height": 622.109375,
+            "top": 1308.28125,
+            "right": 304,
+            "bottom": 1930.390625,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 1309.28125,
+            "width": 286,
+            "height": 177.75,
+            "top": 1309.28125,
+            "right": 303,
+            "bottom": 1487.03125,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 1809.390625,
+            "width": 286,
+            "height": 120,
+            "top": 1809.390625,
+            "right": 303,
+            "bottom": 1929.390625,
+            "left": 17
+          }
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "locale": "en-US",
+      "overflow": false,
+      "rows": [
+        {
+          "text": "VIRTUAL PHYSICS",
+          "rect": {
+            "x": 24,
+            "y": 586.1875,
+            "width": 272,
+            "height": 22.875,
+            "top": 586.1875,
+            "right": 296,
+            "bottom": 609.0625,
+            "left": 24
+          },
+          "ink": {
+            "x": 84.4375,
+            "y": 585.1875,
+            "width": 151.125,
+            "height": 23,
+            "top": 585.1875,
+            "right": 235.5625,
+            "bottom": 608.1875,
+            "left": 84.4375
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "16.96px",
+          "weight": "750",
+          "tracking": "0.2544px",
+          "lineHeight": "22.896px",
+          "wordSpacing": "1.3568px"
+        },
+        {
+          "text": "EXPERIMENT SYSTEM",
+          "rect": {
+            "x": 24,
+            "y": 613.125,
+            "width": 272,
+            "height": 22.875,
+            "top": 613.125,
+            "right": 296,
+            "bottom": 636,
+            "left": 24
+          },
+          "ink": {
+            "x": 69.703125,
+            "y": 612.125,
+            "width": 180.59375,
+            "height": 23,
+            "top": 612.125,
+            "right": 250.296875,
+            "bottom": 635.125,
+            "left": 69.703125
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "16.96px",
+          "weight": "750",
+          "tracking": "0.2544px",
+          "lineHeight": "22.896px",
+          "wordSpacing": "1.3568px"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Mechanical energy and energy transformations",
+          "box": {
+            "x": 16,
+            "y": 15.859375,
+            "width": 288,
+            "height": 734.109375,
+            "top": 15.859375,
+            "right": 304,
+            "bottom": 749.96875,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 16.859375,
+            "width": 286,
+            "height": 177.75,
+            "top": 16.859375,
+            "right": 303,
+            "bottom": 194.609375,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 628.96875,
+            "width": 286,
+            "height": 120,
+            "top": 628.96875,
+            "right": 303,
+            "bottom": 748.96875,
+            "left": 17
+          }
+        },
+        {
+          "title": "Simple harmonic motion",
+          "box": {
+            "x": 16,
+            "y": 773.96875,
+            "width": 288,
+            "height": 678.109375,
+            "top": 773.96875,
+            "right": 304,
+            "bottom": 1452.078125,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 774.96875,
+            "width": 286,
+            "height": 177.75,
+            "top": 774.96875,
+            "right": 303,
+            "bottom": 952.71875,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 1331.078125,
+            "width": 286,
+            "height": 120,
+            "top": 1331.078125,
+            "right": 303,
+            "bottom": 1451.078125,
+            "left": 17
+          }
+        },
+        {
+          "title": "Mechanical waves and wavelength",
+          "box": {
+            "x": 16,
+            "y": 1476.078125,
+            "width": 288,
+            "height": 706.109375,
+            "top": 1476.078125,
+            "right": 304,
+            "bottom": 2182.1875,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 1477.078125,
+            "width": 286,
+            "height": 177.75,
+            "top": 1477.078125,
+            "right": 303,
+            "bottom": 1654.828125,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 2061.1875,
+            "width": 286,
+            "height": 120,
+            "top": 2061.1875,
+            "right": 303,
+            "bottom": 2181.1875,
+            "left": 17
+          }
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "locale": "vi",
+      "overflow": false,
+      "rows": [
+        {
+          "text": "HỆ THỐNG THÍ NGHIỆM",
+          "rect": {
+            "x": 24,
+            "y": 575.234375,
+            "width": 342,
+            "height": 27.90625,
+            "top": 575.234375,
+            "right": 366,
+            "bottom": 603.140625,
+            "left": 24
+          },
+          "ink": {
+            "x": 75.84375,
+            "y": 574.234375,
+            "width": 238.296875,
+            "height": 28,
+            "top": 574.234375,
+            "right": 314.140625,
+            "bottom": 602.234375,
+            "left": 75.84375
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "20.67px",
+          "weight": "750",
+          "tracking": "0.31005px",
+          "lineHeight": "27.9045px",
+          "wordSpacing": "1.6536px"
+        },
+        {
+          "text": "VẬT LÍ ẢO",
+          "rect": {
+            "x": 24,
+            "y": 608.09375,
+            "width": 342,
+            "height": 27.90625,
+            "top": 608.09375,
+            "right": 366,
+            "bottom": 636,
+            "left": 24
+          },
+          "ink": {
+            "x": 146.421875,
+            "y": 607.09375,
+            "width": 97.15625,
+            "height": 28,
+            "top": 607.09375,
+            "right": 243.578125,
+            "bottom": 635.09375,
+            "left": 146.421875
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "20.67px",
+          "weight": "750",
+          "tracking": "0.31005px",
+          "lineHeight": "27.9045px",
+          "wordSpacing": "1.6536px"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Cơ năng",
+          "box": {
+            "x": 16,
+            "y": 15.875,
+            "width": 358,
+            "height": 665.859375,
+            "top": 15.875,
+            "right": 374,
+            "bottom": 681.734375,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 16.875,
+            "width": 356,
+            "height": 221.5,
+            "top": 16.875,
+            "right": 373,
+            "bottom": 238.375,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 560.734375,
+            "width": 356,
+            "height": 120,
+            "top": 560.734375,
+            "right": 373,
+            "bottom": 680.734375,
+            "left": 17
+          }
+        },
+        {
+          "title": "Dao động điều hòa",
+          "box": {
+            "x": 16,
+            "y": 705.734375,
+            "width": 358,
+            "height": 665.859375,
+            "top": 705.734375,
+            "right": 374,
+            "bottom": 1371.59375,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 706.734375,
+            "width": 356,
+            "height": 221.5,
+            "top": 706.734375,
+            "right": 373,
+            "bottom": 928.234375,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 1250.59375,
+            "width": 356,
+            "height": 120,
+            "top": 1250.59375,
+            "right": 373,
+            "bottom": 1370.59375,
+            "left": 17
+          }
+        },
+        {
+          "title": "Sóng cơ",
+          "box": {
+            "x": 16,
+            "y": 1395.59375,
+            "width": 358,
+            "height": 665.859375,
+            "top": 1395.59375,
+            "right": 374,
+            "bottom": 2061.453125,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 1396.59375,
+            "width": 356,
+            "height": 221.5,
+            "top": 1396.59375,
+            "right": 373,
+            "bottom": 1618.09375,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 1940.453125,
+            "width": 356,
+            "height": 120,
+            "top": 1940.453125,
+            "right": 373,
+            "bottom": 2060.453125,
+            "left": 17
+          }
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "locale": "en-US",
+      "overflow": false,
+      "rows": [
+        {
+          "text": "VIRTUAL PHYSICS",
+          "rect": {
+            "x": 24,
+            "y": 575.234375,
+            "width": 342,
+            "height": 27.90625,
+            "top": 575.234375,
+            "right": 366,
+            "bottom": 603.140625,
+            "left": 24
+          },
+          "ink": {
+            "x": 102.84375,
+            "y": 574.234375,
+            "width": 184.296875,
+            "height": 28,
+            "top": 574.234375,
+            "right": 287.140625,
+            "bottom": 602.234375,
+            "left": 102.84375
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "20.67px",
+          "weight": "750",
+          "tracking": "0.31005px",
+          "lineHeight": "27.9045px",
+          "wordSpacing": "1.6536px"
+        },
+        {
+          "text": "EXPERIMENT SYSTEM",
+          "rect": {
+            "x": 24,
+            "y": 608.09375,
+            "width": 342,
+            "height": 27.90625,
+            "top": 608.09375,
+            "right": 366,
+            "bottom": 636,
+            "left": 24
+          },
+          "ink": {
+            "x": 84.890625,
+            "y": 607.09375,
+            "width": 220.21875,
+            "height": 28,
+            "top": 607.09375,
+            "right": 305.109375,
+            "bottom": 635.09375,
+            "left": 84.890625
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "20.67px",
+          "weight": "750",
+          "tracking": "0.31005px",
+          "lineHeight": "27.9045px",
+          "wordSpacing": "1.6536px"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Mechanical energy and energy transformations",
+          "box": {
+            "x": 16,
+            "y": 15.875,
+            "width": 358,
+            "height": 749.859375,
+            "top": 15.875,
+            "right": 374,
+            "bottom": 765.734375,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 16.875,
+            "width": 356,
+            "height": 221.5,
+            "top": 16.875,
+            "right": 373,
+            "bottom": 238.375,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 644.734375,
+            "width": 356,
+            "height": 120,
+            "top": 644.734375,
+            "right": 373,
+            "bottom": 764.734375,
+            "left": 17
+          }
+        },
+        {
+          "title": "Simple harmonic motion",
+          "box": {
+            "x": 16,
+            "y": 789.734375,
+            "width": 358,
+            "height": 721.859375,
+            "top": 789.734375,
+            "right": 374,
+            "bottom": 1511.59375,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 790.734375,
+            "width": 356,
+            "height": 221.5,
+            "top": 790.734375,
+            "right": 373,
+            "bottom": 1012.234375,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 1390.59375,
+            "width": 356,
+            "height": 120,
+            "top": 1390.59375,
+            "right": 373,
+            "bottom": 1510.59375,
+            "left": 17
+          }
+        },
+        {
+          "title": "Mechanical waves and wavelength",
+          "box": {
+            "x": 16,
+            "y": 1535.59375,
+            "width": 358,
+            "height": 721.859375,
+            "top": 1535.59375,
+            "right": 374,
+            "bottom": 2257.453125,
+            "left": 16
+          },
+          "image": {
+            "x": 17,
+            "y": 1536.59375,
+            "width": 356,
+            "height": 221.5,
+            "top": 1536.59375,
+            "right": 373,
+            "bottom": 1758.09375,
+            "left": 17
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 17,
+            "y": 2136.453125,
+            "width": 356,
+            "height": 120,
+            "top": 2136.453125,
+            "right": 373,
+            "bottom": 2256.453125,
+            "left": 17
+          }
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "locale": "vi",
+      "overflow": false,
+      "rows": [
+        {
+          "text": "HỆ THỐNG THÍ NGHIỆM",
+          "rect": {
+            "x": 160,
+            "y": 485.65625,
+            "width": 1120,
+            "height": 103.015625,
+            "top": 485.65625,
+            "right": 1280,
+            "bottom": 588.671875,
+            "left": 160
+          },
+          "ink": {
+            "x": 279.8125,
+            "y": 484.65625,
+            "width": 880.359375,
+            "height": 104,
+            "top": 484.65625,
+            "right": 1160.171875,
+            "bottom": 588.65625,
+            "left": 279.8125
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "76.32px",
+          "weight": "750",
+          "tracking": "1.1448px",
+          "lineHeight": "103.032px",
+          "wordSpacing": "6.1056px"
+        },
+        {
+          "text": "VẬT LÍ ẢO",
+          "rect": {
+            "x": 160,
+            "y": 606.984375,
+            "width": 1120,
+            "height": 103.015625,
+            "top": 606.984375,
+            "right": 1280,
+            "bottom": 710,
+            "left": 160
+          },
+          "ink": {
+            "x": 540.546875,
+            "y": 605.984375,
+            "width": 358.90625,
+            "height": 104,
+            "top": 605.984375,
+            "right": 899.453125,
+            "bottom": 709.984375,
+            "left": 540.546875
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "76.32px",
+          "weight": "750",
+          "tracking": "1.1448px",
+          "lineHeight": "103.032px",
+          "wordSpacing": "6.1056px"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Cơ năng",
+          "box": {
+            "x": 57.59375,
+            "y": 16.25,
+            "width": 425.59375,
+            "height": 664.109375,
+            "top": 16.25,
+            "right": 483.1875,
+            "bottom": 680.359375,
+            "left": 57.59375
+          },
+          "image": {
+            "x": 58.59375,
+            "y": 17.25,
+            "width": 423.59375,
+            "height": 263.734375,
+            "top": 17.25,
+            "right": 482.1875,
+            "bottom": 280.984375,
+            "left": 58.59375
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 58.59375,
+            "y": 611.359375,
+            "width": 423.59375,
+            "height": 68,
+            "top": 611.359375,
+            "right": 482.1875,
+            "bottom": 679.359375,
+            "left": 58.59375
+          }
+        },
+        {
+          "title": "Dao động điều hòa",
+          "box": {
+            "x": 507.1875,
+            "y": 16.25,
+            "width": 425.609375,
+            "height": 664.109375,
+            "top": 16.25,
+            "right": 932.796875,
+            "bottom": 680.359375,
+            "left": 507.1875
+          },
+          "image": {
+            "x": 508.1875,
+            "y": 17.25,
+            "width": 423.609375,
+            "height": 263.75,
+            "top": 17.25,
+            "right": 931.796875,
+            "bottom": 281,
+            "left": 508.1875
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 508.1875,
+            "y": 611.359375,
+            "width": 423.609375,
+            "height": 68,
+            "top": 611.359375,
+            "right": 931.796875,
+            "bottom": 679.359375,
+            "left": 508.1875
+          }
+        },
+        {
+          "title": "Sóng cơ",
+          "box": {
+            "x": 956.796875,
+            "y": 16.25,
+            "width": 425.59375,
+            "height": 664.109375,
+            "top": 16.25,
+            "right": 1382.390625,
+            "bottom": 680.359375,
+            "left": 956.796875
+          },
+          "image": {
+            "x": 957.796875,
+            "y": 17.25,
+            "width": 423.59375,
+            "height": 263.734375,
+            "top": 17.25,
+            "right": 1381.390625,
+            "bottom": 280.984375,
+            "left": 957.796875
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 957.796875,
+            "y": 611.359375,
+            "width": 423.59375,
+            "height": 68,
+            "top": 611.359375,
+            "right": 1381.390625,
+            "bottom": 679.359375,
+            "left": 957.796875
+          }
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "locale": "en-US",
+      "overflow": false,
+      "rows": [
+        {
+          "text": "VIRTUAL PHYSICS",
+          "rect": {
+            "x": 160,
+            "y": 485.65625,
+            "width": 1120,
+            "height": 103.015625,
+            "top": 485.65625,
+            "right": 1280,
+            "bottom": 588.671875,
+            "left": 160
+          },
+          "ink": {
+            "x": 379.5625,
+            "y": 484.65625,
+            "width": 680.875,
+            "height": 104,
+            "top": 484.65625,
+            "right": 1060.4375,
+            "bottom": 588.65625,
+            "left": 379.5625
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "76.32px",
+          "weight": "750",
+          "tracking": "1.1448px",
+          "lineHeight": "103.032px",
+          "wordSpacing": "6.1056px"
+        },
+        {
+          "text": "EXPERIMENT SYSTEM",
+          "rect": {
+            "x": 160,
+            "y": 606.984375,
+            "width": 1120,
+            "height": 103.015625,
+            "top": 606.984375,
+            "right": 1280,
+            "bottom": 710,
+            "left": 160
+          },
+          "ink": {
+            "x": 313.203125,
+            "y": 605.984375,
+            "width": 813.578125,
+            "height": 104,
+            "top": 605.984375,
+            "right": 1126.78125,
+            "bottom": 709.984375,
+            "left": 313.203125
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "76.32px",
+          "weight": "750",
+          "tracking": "1.1448px",
+          "lineHeight": "103.032px",
+          "wordSpacing": "6.1056px"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Mechanical energy and energy transformations",
+          "box": {
+            "x": 57.59375,
+            "y": 16.25,
+            "width": 425.59375,
+            "height": 720.09375,
+            "top": 16.25,
+            "right": 483.1875,
+            "bottom": 736.34375,
+            "left": 57.59375
+          },
+          "image": {
+            "x": 58.59375,
+            "y": 17.25,
+            "width": 423.59375,
+            "height": 263.734375,
+            "top": 17.25,
+            "right": 482.1875,
+            "bottom": 280.984375,
+            "left": 58.59375
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 58.59375,
+            "y": 667.34375,
+            "width": 423.59375,
+            "height": 68,
+            "top": 667.34375,
+            "right": 482.1875,
+            "bottom": 735.34375,
+            "left": 58.59375
+          }
+        },
+        {
+          "title": "Simple harmonic motion",
+          "box": {
+            "x": 507.1875,
+            "y": 16.25,
+            "width": 425.609375,
+            "height": 720.09375,
+            "top": 16.25,
+            "right": 932.796875,
+            "bottom": 736.34375,
+            "left": 507.1875
+          },
+          "image": {
+            "x": 508.1875,
+            "y": 17.25,
+            "width": 423.609375,
+            "height": 263.75,
+            "top": 17.25,
+            "right": 931.796875,
+            "bottom": 281,
+            "left": 508.1875
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 508.1875,
+            "y": 667.34375,
+            "width": 423.609375,
+            "height": 68,
+            "top": 667.34375,
+            "right": 931.796875,
+            "bottom": 735.34375,
+            "left": 508.1875
+          }
+        },
+        {
+          "title": "Mechanical waves and wavelength",
+          "box": {
+            "x": 956.796875,
+            "y": 16.25,
+            "width": 425.59375,
+            "height": 720.09375,
+            "top": 16.25,
+            "right": 1382.390625,
+            "bottom": 736.34375,
+            "left": 956.796875
+          },
+          "image": {
+            "x": 957.796875,
+            "y": 17.25,
+            "width": 423.59375,
+            "height": 263.734375,
+            "top": 17.25,
+            "right": 1381.390625,
+            "bottom": 280.984375,
+            "left": 957.796875
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 957.796875,
+            "y": 667.34375,
+            "width": 423.59375,
+            "height": 68,
+            "top": 667.34375,
+            "right": 1381.390625,
+            "bottom": 735.34375,
+            "left": 957.796875
+          }
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "locale": "vi",
+      "overflow": false,
+      "rows": [
+        {
+          "text": "HỆ THỐNG THÍ NGHIỆM",
+          "rect": {
+            "x": 400,
+            "y": 451.296875,
+            "width": 1120,
+            "height": 118.796875,
+            "top": 451.296875,
+            "right": 1520,
+            "bottom": 570.09375,
+            "left": 400
+          },
+          "ink": {
+            "x": 452.40625,
+            "y": 450.296875,
+            "width": 1015.171875,
+            "height": 120,
+            "top": 450.296875,
+            "right": 1467.578125,
+            "bottom": 570.296875,
+            "left": 452.40625
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "88px",
+          "weight": "750",
+          "tracking": "1.32px",
+          "lineHeight": "118.8px",
+          "wordSpacing": "7.04px"
+        },
+        {
+          "text": "VẬT LÍ ẢO",
+          "rect": {
+            "x": 400,
+            "y": 591.203125,
+            "width": 1120,
+            "height": 118.796875,
+            "top": 591.203125,
+            "right": 1520,
+            "bottom": 710,
+            "left": 400
+          },
+          "ink": {
+            "x": 753.0625,
+            "y": 590.203125,
+            "width": 413.875,
+            "height": 120,
+            "top": 590.203125,
+            "right": 1166.9375,
+            "bottom": 710.203125,
+            "left": 753.0625
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "88px",
+          "weight": "750",
+          "tracking": "1.32px",
+          "lineHeight": "118.8px",
+          "wordSpacing": "7.04px"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Cơ năng",
+          "box": {
+            "x": 254,
+            "y": 15.59375,
+            "width": 454.65625,
+            "height": 679.359375,
+            "top": 15.59375,
+            "right": 708.65625,
+            "bottom": 694.953125,
+            "left": 254
+          },
+          "image": {
+            "x": 255,
+            "y": 16.59375,
+            "width": 452.65625,
+            "height": 279,
+            "top": 16.59375,
+            "right": 707.65625,
+            "bottom": 295.59375,
+            "left": 255
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 255,
+            "y": 625.953125,
+            "width": 452.65625,
+            "height": 68,
+            "top": 625.953125,
+            "right": 707.65625,
+            "bottom": 693.953125,
+            "left": 255
+          }
+        },
+        {
+          "title": "Dao động điều hòa",
+          "box": {
+            "x": 732.65625,
+            "y": 15.59375,
+            "width": 454.671875,
+            "height": 679.359375,
+            "top": 15.59375,
+            "right": 1187.328125,
+            "bottom": 694.953125,
+            "left": 732.65625
+          },
+          "image": {
+            "x": 733.65625,
+            "y": 16.59375,
+            "width": 452.671875,
+            "height": 279,
+            "top": 16.59375,
+            "right": 1186.328125,
+            "bottom": 295.59375,
+            "left": 733.65625
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 733.65625,
+            "y": 625.953125,
+            "width": 452.671875,
+            "height": 68,
+            "top": 625.953125,
+            "right": 1186.328125,
+            "bottom": 693.953125,
+            "left": 733.65625
+          }
+        },
+        {
+          "title": "Sóng cơ",
+          "box": {
+            "x": 1211.328125,
+            "y": 15.59375,
+            "width": 454.65625,
+            "height": 679.359375,
+            "top": 15.59375,
+            "right": 1665.984375,
+            "bottom": 694.953125,
+            "left": 1211.328125
+          },
+          "image": {
+            "x": 1212.328125,
+            "y": 16.59375,
+            "width": 452.65625,
+            "height": 279,
+            "top": 16.59375,
+            "right": 1664.984375,
+            "bottom": 295.59375,
+            "left": 1212.328125
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 1212.328125,
+            "y": 625.953125,
+            "width": 452.65625,
+            "height": 68,
+            "top": 625.953125,
+            "right": 1664.984375,
+            "bottom": 693.953125,
+            "left": 1212.328125
+          }
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "locale": "en-US",
+      "overflow": false,
+      "rows": [
+        {
+          "text": "VIRTUAL PHYSICS",
+          "rect": {
+            "x": 400,
+            "y": 451.296875,
+            "width": 1120,
+            "height": 118.796875,
+            "top": 451.296875,
+            "right": 1520,
+            "bottom": 570.09375,
+            "left": 400
+          },
+          "ink": {
+            "x": 567.421875,
+            "y": 450.296875,
+            "width": 785.140625,
+            "height": 120,
+            "top": 450.296875,
+            "right": 1352.5625,
+            "bottom": 570.296875,
+            "left": 567.421875
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "88px",
+          "weight": "750",
+          "tracking": "1.32px",
+          "lineHeight": "118.8px",
+          "wordSpacing": "7.04px"
+        },
+        {
+          "text": "EXPERIMENT SYSTEM",
+          "rect": {
+            "x": 400,
+            "y": 591.203125,
+            "width": 1120,
+            "height": 118.796875,
+            "top": 591.203125,
+            "right": 1520,
+            "bottom": 710,
+            "left": 400
+          },
+          "ink": {
+            "x": 490.90625,
+            "y": 590.203125,
+            "width": 938.171875,
+            "height": 120,
+            "top": 590.203125,
+            "right": 1429.078125,
+            "bottom": 710.203125,
+            "left": 490.90625
+          },
+          "family": "Manrope, \"Segoe UI\", sans-serif",
+          "size": "88px",
+          "weight": "750",
+          "tracking": "1.32px",
+          "lineHeight": "118.8px",
+          "wordSpacing": "7.04px"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Mechanical energy and energy transformations",
+          "box": {
+            "x": 254,
+            "y": 15.59375,
+            "width": 454.65625,
+            "height": 735.359375,
+            "top": 15.59375,
+            "right": 708.65625,
+            "bottom": 750.953125,
+            "left": 254
+          },
+          "image": {
+            "x": 255,
+            "y": 16.59375,
+            "width": 452.65625,
+            "height": 279,
+            "top": 16.59375,
+            "right": 707.65625,
+            "bottom": 295.59375,
+            "left": 255
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 255,
+            "y": 681.953125,
+            "width": 452.65625,
+            "height": 68,
+            "top": 681.953125,
+            "right": 707.65625,
+            "bottom": 749.953125,
+            "left": 255
+          }
+        },
+        {
+          "title": "Simple harmonic motion",
+          "box": {
+            "x": 732.65625,
+            "y": 15.59375,
+            "width": 454.671875,
+            "height": 735.359375,
+            "top": 15.59375,
+            "right": 1187.328125,
+            "bottom": 750.953125,
+            "left": 732.65625
+          },
+          "image": {
+            "x": 733.65625,
+            "y": 16.59375,
+            "width": 452.671875,
+            "height": 279,
+            "top": 16.59375,
+            "right": 1186.328125,
+            "bottom": 295.59375,
+            "left": 733.65625
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 733.65625,
+            "y": 681.953125,
+            "width": 452.671875,
+            "height": 68,
+            "top": 681.953125,
+            "right": 1186.328125,
+            "bottom": 749.953125,
+            "left": 733.65625
+          }
+        },
+        {
+          "title": "Mechanical waves and wavelength",
+          "box": {
+            "x": 1211.328125,
+            "y": 15.59375,
+            "width": 454.65625,
+            "height": 735.359375,
+            "top": 15.59375,
+            "right": 1665.984375,
+            "bottom": 750.953125,
+            "left": 1211.328125
+          },
+          "image": {
+            "x": 1212.328125,
+            "y": 16.59375,
+            "width": 452.65625,
+            "height": 279,
+            "top": 16.59375,
+            "right": 1664.984375,
+            "bottom": 295.59375,
+            "left": 1212.328125
+          },
+          "loaded": true,
+          "naturalWidth": 640,
+          "formulaCount": 0,
+          "font": "Manrope, \"Segoe UI\", sans-serif",
+          "titleSize": "20px",
+          "lineHeight": "30px",
+          "actions": {
+            "x": 1212.328125,
+            "y": 681.953125,
+            "width": 452.65625,
+            "height": 68,
+            "top": 681.953125,
+            "right": 1664.984375,
+            "bottom": 749.953125,
+            "left": 1212.328125
+          }
+        }
+      ]
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "width": 320,
+    "locale": "vi-VN",
+    "violations": [],
+    "passedRules": 29,
+    "incompleteRules": 2
+  },
+  {
+    "width": 320,
+    "locale": "en-US",
+    "violations": [],
+    "passedRules": 29,
+    "incompleteRules": 2
+  },
+  {
+    "width": 390,
+    "locale": "vi-VN",
+    "violations": [],
+    "passedRules": 29,
+    "incompleteRules": 2
+  },
+  {
+    "width": 390,
+    "locale": "en-US",
+    "violations": [],
+    "passedRules": 29,
+    "incompleteRules": 2
+  },
+  {
+    "width": 1440,
+    "locale": "vi-VN",
+    "violations": [],
+    "passedRules": 27,
+    "incompleteRules": 2
+  },
+  {
+    "width": 1440,
+    "locale": "en-US",
+    "violations": [],
+    "passedRules": 27,
+    "incompleteRules": 2
+  }
+]
