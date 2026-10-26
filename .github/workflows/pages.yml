@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -22,6 +24,8 @@ jobs:
       - run: npm ci --ignore-scripts
       - name: Install pinned KaTeX for math validation
         run: npm install --ignore-scripts --no-save --package-lock=false katex@0.16.45
+      - name: Check public assets and browser security requirements
+        run: node checks/site-security-v63.mjs
       - run: npm run check
   deploy:
     if: github.event_name != 'pull_request'
@@ -35,6 +39,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -47,6 +53,12 @@ jobs:
           cp -R node_modules/katex/dist/fonts/. dist/vendor/katex/fonts/
           test -s dist/vendor/katex/katex.min.js
           test -s dist/vendor/katex/fonts/KaTeX_Main-Regular.woff2
+      - name: Refuse accidental public credentials
+        run: node scripts/check-public-assets.mjs
+      - name: Apply browser security policy to all HTML pages
+        run: |
+          node scripts/harden-published-pages.mjs --write
+          node scripts/harden-published-pages.mjs --verify
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
