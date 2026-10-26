@@ -36,7 +36,11 @@ function walk(dir){
  });
 }
 export function processPages({write=false,verify=false}={}){
- const htmlFiles=walk(root).filter(file=>file.endsWith('.html'));
+ // QA dashboards have inline scripts and iframes and must never ship to the public website.
+ const review=path.join(root,'review');
+ if(write&&fs.existsSync(review))fs.rmSync(review,{recursive:true,force:true});
+ if(verify&&fs.existsSync(review))throw Error('Internal QA pages were included in the published artifact');
+ const htmlFiles=walk(root).filter(file=>file.endsWith('.html')&&!path.relative(root,file).replaceAll(path.sep,'/').startsWith('review/'));
  if(htmlFiles.length<300)throw Error('Expected at least 300 published pages');
  for(const file of htmlFiles){
   const original=fs.readFileSync(file,'utf8');
