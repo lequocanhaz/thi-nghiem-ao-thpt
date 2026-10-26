@@ -170,3 +170,13 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Chủ dự án xác nhận CHƯA có Firebase, chỉ chuẩn bị tích hợp/hướng dẫn. `auth-config.js` giữ `enabled:false` tới khi có Web config công khai và provider/domain đã bật. Xem `docs/AUTH_SETUP.md`. Không cần service account/client secret. Google OAuth/email thật CHƯA nghiệm thu; chưa cloudsync, không thay khóa thpt.
 - SDK cục bộ sinh bằng `npm run bundle:auth` (Firebase13.1.0/esbuild0.28.2); vendor sinh bị gitignore. `npm ci` không tự tạo SDK; preview cần bundle và KaTeX theo workflow. CSP chỉ mở đúng Google helper origin khi auth bật. Scanner chỉ cho đúng Firebase Web key đã xác thực trong auth-config, không cho các khóa khác.
 - Browser checks tùy chọn: `browser-concepts-auth-v64.py`, `browser-observation-v64.py`, `browser-catalog-v64.py`, `browser-auth-sdk-v64.py`. Chromium/SwiftShader, không iPhone/Safari thật. Giữ các audit JSON lịch sử khi npm check sinh số đếm; bằng chứng mới ở `docs/experiments-v64`.
+
+## Quang học và độ rõ v65
+
+- Xem `docs/OPTICS_V65_REPORT.md`, `OPTICS_SCIENCE_V65.md` và `docs/optics-v65/`. Thêm 11 ID quang học vào phạm vi cải tiến (cộng dồn 132; 168 chưa thiết kế lại riêng). Giữ 13 hash khoa học/catalog/phiên của baseline v64.
+- `optics-geometry-v65.js` là hình học thuần; `optics-scenes-v65.js` giữ mesh/material/buffer khi cập nhật. Một tỉ lệ x/y; đường ảo nét đứt; không vẽ tiêu điểm hữu hạn ở D=0, không dựng ảnh cuối hữu hạn cho kính lúp/thiên văn/hiển vi đang ngắm vô cực. Xấp xỉ gần trục và giá đỡ/khe minh họa có chú thích.
+- 95 biểu đồ HTML/SVG vẫn có; 11 bài quang học thêm chú giải native details ngoài canvas. `relation-sampling.js` chia đường đúng cực điện thế, phân biệt số lượng rời rạc với góc liên tục. `observation-labels.js` có 61 cặp tên trục EN; định dạng số không đổi số tính/phiên.
+- Bỏ texture chữ của plot 3D đã ẩn. Rig quang học chỉ ẩn caption chồng ở mặt trước 2D, giữ handle và nhãn 3D. Locale pill đổi màu ngay, chỉ transition box-shadow; sách đã kiểm giữ trang/zoom/mục lục.
+- Previews hiện hành `previews/v65` đủ300 ảnh actual LabScene, không xóa v62/v64. Generator `scripts/generate-thumbnails-v65.py`; manifest kiểm nguồn/hash qua `checks/catalog-previews-v65.mjs`. Renderer thay đổi phải xuất lại, không vá baselinehash.
+- Chuỗi entry/app/views/scene và observation.css dùng65; banner/app.css/banner-title.css giữ62. `language-ui`, `language-pill`, `book-language` dùng65 để cập nhật dịch quang học/độ tương phản.
+- Kiểm mới vào npmcheck: optics-science/visual/interface, relation-sampling, observation-hardening v65. Browser tùy chọn: browser-optics/catalog/observation-v65.py. Có review physics/UI/QA/textbook, chưa phần cứng iPhone/Safari/GPU hay phản biện toàn300 bài. Firebase vẫn tắt, chưa OAuth thật/cloudsync.

@@ -1,0 +1,29 @@
+{
+  "browser": "154.0.8037.57",
+  "fullSweep": {
+    "passed": 47,
+    "failed": 0,
+    "modelScenarios": 44,
+    "modelStates": 136,
+    "actualRenderedRays": 1066,
+    "interactionFlows": 22,
+    "labelsFlows": 0,
+    "pageErrors": [],
+    "httpErrors": [],
+    "externalRequests": []
+  },
+  "finalFrozenFollowup": {
+    "passed": 27,
+    "failed": 0,
+    "modelScenarios": 22,
+    "modelStates": 24,
+    "actualRenderedRays": 178,
+    "interactionFlows": 22,
+    "labelsFlows": 10,
+    "pageErrors": [],
+    "httpErrors": [],
+    "externalRequests": []
+  },
+  "finalScreenshots": 56,
+  "sourceChangedSinceFollowupSnapshot": []
+}

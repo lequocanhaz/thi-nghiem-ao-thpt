@@ -1,0 +1,14 @@
+{
+  "files": {
+    "dist/optics-geometry-v65.js": "da1e5bd7ecc4061d38d1c3187f435dfe262e486dfaed08ccdb037aff66dbca2b",
+    "dist/optics-scenes-v65.js": "03e49eed7104c08e954f69b63d0b6b20c9ca5192f081d63bb48d50eb4efe445f",
+    "dist/scene3d.js": "6463203ea955f200c011082d9cda607b33f304eeb327885479ed37f589d926d4",
+    "dist/atlas-scenes.js": "ce6828fa2355d2a3c03bee42216dd92f46ec38519830a0be5ffa85bfc9c36378",
+    "dist/interaction-rig.js": "3b17d13cbec9c73cdc3d1b3d68a6f9365c81e835696a746d00a78e1433cf34f5",
+    "dist/observation-view.js": "d01ee3b9b0c77e968aec597da4fff37010226c95f429373be7d1811c63ccb52a",
+    "dist/observation-labels.js": "86ecad2581813ea5522a7dd8b1eb760b9798e0c7de688ae865f1c566ba4af88f",
+    "dist/app.js": "51dcc0d3c9635fb9f0d5e38f218d7630d751924d5de85032fcdac3dafe079133",
+    "checks/browser-optics-v65.py": "a00230c857a1ebdac70f169767525b20ff6f9d87aef2ff27a312bcea2189b79a"
+  },
+  "changedSinceFollowupSnapshot": []
+}

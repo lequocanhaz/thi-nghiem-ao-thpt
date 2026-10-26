@@ -1,0 +1,41 @@
+[
+  {
+    "width": 320,
+    "continuousAngle": true,
+    "discreteCharge": true,
+    "currentPointVisibleAndMoves": true,
+    "SVGStable": true,
+    "VI_EN": true,
+    "tableAvailable": true,
+    "dipolePoleGap": true,
+    "undefinedMarkerHidden": true,
+    "humanEnglishAxes": true,
+    "pageErrors": []
+  },
+  {
+    "width": 390,
+    "continuousAngle": true,
+    "discreteCharge": true,
+    "currentPointVisibleAndMoves": true,
+    "SVGStable": true,
+    "VI_EN": true,
+    "tableAvailable": true,
+    "dipolePoleGap": true,
+    "undefinedMarkerHidden": true,
+    "humanEnglishAxes": true,
+    "pageErrors": []
+  },
+  {
+    "width": 1440,
+    "continuousAngle": true,
+    "discreteCharge": true,
+    "currentPointVisibleAndMoves": true,
+    "SVGStable": true,
+    "VI_EN": true,
+    "tableAvailable": true,
+    "dipolePoleGap": true,
+    "undefinedMarkerHidden": true,
+    "humanEnglishAxes": true,
+    "pageErrors": []
+  }
+]
