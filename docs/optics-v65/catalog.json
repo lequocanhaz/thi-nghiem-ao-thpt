@@ -1,0 +1,120 @@
+{
+  "scope": "Headless Chromium, isolated cold profiles; local images decoded in the browser. Simulated viewports, no hardware Safari claim.",
+  "total": 13,
+  "passed": 13,
+  "tests": [
+    {
+      "name": "preview manifest: 300 unique IDs, completed export and exact HTTP asset hashes",
+      "status": "PASS",
+      "evidence": {
+        "experiments": 300,
+        "byteVerifiedImages": 300,
+        "uniqueImageHashes": 296,
+        "totalBytes": 1748742,
+        "sourceCommit": "1d7070ffdd941f8a8a7a4ac1434c39b2a2ee1ea6",
+        "dimensions": {
+          "width": 640,
+          "height": 400
+        }
+      }
+    },
+    {
+      "name": "cold home 320px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 320,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "cold home 375px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 375,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "cold home 390px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 390,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "cold home 414px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 414,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "cold home 430px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 430,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "cold home 768px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 768,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "cold home 1024px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 1024,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "cold home 1440px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 1440,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "cold home 1920px: 300 static previews, bilingual banner, card layout, no WebGL import",
+      "status": "PASS",
+      "evidence": {
+        "width": 1920,
+        "decodedImages": 300,
+        "catalogPages": 13
+      }
+    },
+    {
+      "name": "static preview interactions: search, quick preview, favorite, locale and real lab route",
+      "status": "PASS",
+      "evidence": {}
+    },
+    {
+      "name": "missing static image: explicit error, retry restores image and working preview",
+      "status": "PASS",
+      "evidence": {}
+    },
+    {
+      "name": "no uncaught JavaScript errors or unexpected local HTTP failures",
+      "status": "PASS",
+      "evidence": {
+        "pageErrors": []
+      }
+    }
+  ]
+}

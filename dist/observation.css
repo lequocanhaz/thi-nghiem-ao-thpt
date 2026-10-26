@@ -24,4 +24,14 @@
 .observation-values th{position:sticky;top:0;background:#f3f6fa}
 .observation-note{margin:12px 0 0;color:#526176;font-size:12px;line-height:1.8}
 #conceptObservation summary:focus-visible{outline:3px solid #235be3;outline-offset:3px}
+.optics-legend{display:flex;flex-wrap:wrap;gap:10px 20px;padding:0;list-style:none;margin:12px 0 16px;font-size:13px}
+.optics-legend li{display:flex;align-items:center;gap:8px}
+.optics-line{display:inline-block;width:28px;border-top:2px solid #66788e;flex:0 0 28px}
+.optics-line-incident{border-color:#b85c18}.optics-line-reflected{border-color:#7a45ad}.optics-line-refracted{border-color:#1764b0}.optics-line-virtual{border-color:#1764b0;border-top-style:dashed}.optics-line-axis{border-top-style:dotted}
+.optics-notes{padding-inline-start:20px;margin:12px 0;font-size:14px;line-height:1.8}
+.optics-notes li+li{margin-top:8px}
+.optics-values{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:16px 0 0}
+.optics-values>div{border-top:1px solid #d7dfe9;padding-top:10px}.optics-values dt{font-size:13px;color:#455970}.optics-values dd{margin:4px 0 0;font-size:15px;font-weight:650;font-variant-numeric:tabular-nums}
 @media(max-width:620px){#conceptObservation{padding:12px}.observation-title{font-size:14px}.observation-key{gap:8px 12px}}
+
+.optics-legend .optics-line{border-color:var(--ray-color,#66788e)}.optics-line-dashed{border-top-style:dashed}

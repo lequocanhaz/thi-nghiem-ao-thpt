@@ -4,7 +4,7 @@ import {interferenceWindow} from './simulation-space.js?v=43';
 import {trackLayout} from './track-layout.js?v=59';
 import {COLLISION_CART_SCALE,collisionCartCenter} from './collision-layout.js?v=59';
 import {labCart,cable} from './apparatus.js?v=35';
-import {buildDiscoveryModel} from './discovery-scenes.js?v=64';
+import {buildDiscoveryModel} from './discovery-scenes.js?v=65';
 import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow as apparatusArrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=35';
 import {rad,interferenceAt,evaluate} from './models.js?v=54';
 // Force and velocity arrows are explanatory overlays, readable through apparatus.

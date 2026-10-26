@@ -1,18 +1,18 @@
 import {PARTICLE_DISPLAY_RADIUS,reflectedPhase,gasDisplayLayout,boyleDisplayLayout} from './particle-layout.js?v=54';
-import {withConceptScene} from './concept-scenes.js?v=64';
+import {withConceptScene} from './concept-scenes.js?v=65';
 import {withModelWorkspace} from './model-workspace.js?v=44';
 import {modelLabel,sizeModelLabels} from './model-label.js?v=49';
-import {withCoordinates,coordinateProfile} from './coordinates.js?v=59';
+import {withCoordinates,coordinateProfile} from './coordinates.js?v=65';
 import {apparatusBounds,frameApparatus,boundsInView} from './camera-fit.js?v=43';
 import {SPACE_FACTOR,STUDIO_SIZE,STUDIO_DIVISIONS,FLOOR_SIZE,MIN_SPACE_ZOOM} from './simulation-space.js?v=43';
-import {buildAtlasModel} from './atlas-scenes.js?v=64';
+import {buildAtlasModel} from './atlas-scenes.js?v=65';
 import {atlasById} from './atlas-catalog.js?v=54';
 import {premiumOhm,upgradeModel,labCart} from './apparatus.js?v=35';
 import {roundedGeometry,flexibleTube,platform as studioPlatform} from './geometry-kit.js?v=35';
-import {addInteractionRig} from './interaction-rig.js?v=59';
+import {addInteractionRig} from './interaction-rig.js?v=65';
 import * as THREE from './vendor/three.module.min.js';
 import {RoomEnvironment} from './vendor/RoomEnvironment.js';
-import {buildExtendedModel} from './extended-scenes.js?v=64';
+import {buildExtendedModel} from './extended-scenes.js?v=65';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {field3d,wave,oscillation} from './physics.js?v=17';
 

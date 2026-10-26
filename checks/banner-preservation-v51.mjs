@@ -35,7 +35,7 @@ for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
   content=content.replace("<meta property=\"og:description\" content=\"Quanh Lab – hệ thống thí nghiệm Vật lí ảo dành cho học sinh, giáo viên THPT với 300 thí nghiệm tương tác 2D/3D, đo đạc, vẽ đồ thị và sách Vật lí 10–12.\">","<meta property=\"og:description\" content=\"Khám phá 300 thí nghiệm tương tác, điều chỉnh mô hình 3D, đo và phân tích số liệu. Đọc ba sách Vật lí lớp 10, 11, 12.\">");
   assert.ok(content.includes("<meta name=\"twitter:description\" content=\"Quanh Lab – hệ thống thí nghiệm Vật lí ảo dành cho học sinh, giáo viên THPT với 300 thí nghiệm tương tác 2D/3D, đo đạc, vẽ đồ thị và sách Vật lí 10–12.\">"),'Expected updated Twitter description');
   content=content.replace("<meta name=\"twitter:description\" content=\"Quanh Lab – hệ thống thí nghiệm Vật lí ảo dành cho học sinh, giáo viên THPT với 300 thí nghiệm tương tác 2D/3D, đo đạc, vẽ đồ thị và sách Vật lí 10–12.\">","<meta name=\"twitter:description\" content=\"300 thí nghiệm Vật lí tương tác và ba sách giáo khoa THPT.\">");
-  content=content.replace('<link rel="stylesheet" href="observation.css?v=64">','');
+  content=content.replace('<link rel="stylesheet" href="observation.css?v=65">','');
   content=content.replace('<link rel="stylesheet" href="account.css?v=64"><script type="module" src="account-ui.js?v=64"></script>','');
   content=content.replaceAll('https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/').replace('<link rel="stylesheet" href="banner-title.css?v=62">','');
  }

@@ -21,7 +21,7 @@ for(const e of experiments){
   const curve=host.querySelector('.observation-curve');updateObservation(host,model.group,e.id);
   assert.equal(host.querySelector('.observation-curve'),curve,'Keep SVG and focusable disclosure when current state is unchanged');
   updateObservation(host,model.group,e.id,'en-US');assert.match(host.querySelector('summary').textContent,/Observe/);
- }else assert.ok(host.hidden);
+ }else if(model.group.userData.opticsObservation){assert.ok(!host.hidden);assert.ok(host.querySelector('.optics-notes li'));}else assert.ok(host.hidden);
  model.group.traverse(n=>{n.geometry?.dispose();for(const m of Array.isArray(n.material)?n.material:[n.material]){m?.map?.dispose();m?.dispose();}});
 }
 assert.equal(readObservation(buildLabModel('vector_sum',initialState(experiments.find(e=>e.id==='vector_sum')),evaluate('vector_sum',initialState(experiments.find(e=>e.id==='vector_sum'))),{labels:false}).group,'vector_sum').kind,'continuous','A one-degree input step does not make the physical angle discrete');

@@ -1,0 +1,93 @@
+{
+  "scope": "Chromium SwiftShader / desktop 1440x900; 1.25 seconds of actual controlled Play per ID after a 150ms warm-up, not hardware GPU/FPS",
+  "ids": [
+    {
+      "id": "ray_slab",
+      "samples": 9,
+      "p50ms": 0.4000000059604645,
+      "p95ms": 5.100000008940697,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "apparent_depth",
+      "samples": 10,
+      "p50ms": 0.5,
+      "p95ms": 1.7999999970197678,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "brewster",
+      "samples": 9,
+      "p50ms": 0.5,
+      "p95ms": 1.8999999910593033,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "mirror_rotation",
+      "samples": 10,
+      "p50ms": 0.30000001192092896,
+      "p95ms": 0.5,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "fiber_acceptance",
+      "samples": 9,
+      "p50ms": 0.6000000089406967,
+      "p95ms": 1.7999999970197678,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "lens_power",
+      "samples": 9,
+      "p50ms": 0.5999999940395355,
+      "p95ms": 0.7000000029802322,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "lenses_contact",
+      "samples": 9,
+      "p50ms": 0.5999999940395355,
+      "p95ms": 31.600000008940697,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "magnifier",
+      "samples": 10,
+      "p50ms": 0.5,
+      "p95ms": 1.6000000089406967,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "telescope",
+      "samples": 8,
+      "p50ms": 1.2999999970197678,
+      "p95ms": 3.2999999970197678,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "microscope",
+      "samples": 8,
+      "p50ms": 0.7000000029802322,
+      "p95ms": 3.7999999970197678,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    },
+    {
+      "id": "pinhole",
+      "samples": 8,
+      "p50ms": 0.5999999940395355,
+      "p95ms": 0.7000000029802322,
+      "newGeometryAfterWarmup": 0,
+      "software": false
+    }
+  ]
+}

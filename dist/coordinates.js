@@ -43,7 +43,11 @@ function buildAid(profile,config){
 function dispose(group){group.traverse(o=>{o.geometry?.dispose();const materials=Array.isArray(o.material)?o.material:[o.material];for(const m of materials){m?.map?.dispose();m?.dispose();}});}
 export function withCoordinates(model,id,state,data,options={}){
  const update=model.update;let aid,signature;
- const sync=(s,c={})=>{const profile=coordinateProfile(id,s),on=!!profile&&!options.thumbnail&&!options.hero&&!options.config?.thumbnail&&!options.config?.hero&&c.switches?.axes!==false;const sig=on?JSON.stringify([profile,c.switches?.grid!==false]):'';
+ const sync=(s,c={})=>{let profile=coordinateProfile(id,s);
+  // This is an orientation compass, not the optical origin or a ruler. Keep it
+  // small and away from the ray junction; retain the existing axes/grid toggles.
+  if(profile&&!profile.metric&&model.group.userData.opticsGeometry)profile={...profile,origin:[-2.8,0,-.4],axes:profile.axes.map(a=>({...a,range:[0,.6]}))};
+  const on=!!profile&&!options.thumbnail&&!options.hero&&!options.config?.thumbnail&&!options.config?.hero&&c.switches?.axes!==false;const sig=on?JSON.stringify([profile,c.switches?.grid!==false]):'';
   if(sig!==signature){if(aid){model.group.remove(aid);dispose(aid);aid=null;}if(on){aid=buildAid(profile,c);model.group.add(aid);}signature=sig;}
   if(aid){for(const branch of aid.children){if(branch.userData.axisKey)branch.visible=c.viewMode!=='2d'||(c.viewPlane==='top'?['x','z']:['x','y','u','h']).includes(branch.userData.axisKey);if(branch.userData.coordinateGrid)for(const plane of branch.children)plane.visible=plane.userData.gridPlane===(c.viewMode==='2d'?(c.viewPlane||profile.plane):profile.plane);}}
  };

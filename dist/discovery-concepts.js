@@ -69,7 +69,7 @@ export function addDiscoveryConcept(group,id,state,data,o={}){
  const curve=new T.LineSegments(geometry,new T.LineBasicMaterial({color:C.blue}));curve.name='concept-theoretical-curve';panel.add(curve);
  const zero=line(panel,[V(),V()],0xaeb9c7,true),marker=sphere(panel,.075,C.orange);marker.name='concept-current-state';
  // Axis units are part of the instrument, independent of optional scene labels.
- const small={...o,labels:true,fontSize:28,fontWeight:550,width:768,height:100,pixelSize:12,scale:[4.8,.5]};
+ const small={...o,labels:false,fontSize:28,fontWeight:550,width:768,height:100,pixelSize:12,scale:[4.8,.5]};
  const title=label(panel,'',V(0,1.15,.08),small),xLabel=label(panel,'',V(.55,-1.02,.08),{...small,scale:[3.3,.43]}),yLabel=label(panel,'',V(-1.8,.86,.08),{...small,scale:[2,.36]});
  const low=label(panel,'',V(x0,-.89,.08),{...small,scale:[.9,.29]}),high=label(panel,'',V(x0+w,-.89,.08),{...small,scale:[.9,.29]}),legend=label(panel,'',V(1.3,.88,.08),{...small,scale:[2.7,.3]});
  const ylow=label(panel,'',V(x0+.33,y0+.12,.08),{...small,scale:[.7,.26]}),yhigh=label(panel,'',V(x0+.33,y0+h-.12,.08),{...small,scale:[.7,.26]});
