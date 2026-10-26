@@ -1,0 +1,15 @@
+{
+  "dist/experiments.js": "e0959b5185c34fce73170e7e63f51a914961d6eb85a72d0717a3be2fe357a66f",
+  "dist/models.js": "7c5a4dbbb999024b97004d42e1711de25b7f278ea9ee948d4c7d7105755f685a",
+  "dist/physics.js": "04a06a1bccb80356af287c476f33160cc343739d1d9fbc70ac59dd57abe5fcae",
+  "dist/discovery-models.js": "231ba1d9a1bbbba19e46c4b04f0f5ef1946940732c818f4324d588869cfe16d1",
+  "dist/atlas-catalog.js": "c0fee3ba32c0a3136a8ba6772ec039973c7d96975e4f3fd33779bf97df533b02",
+  "dist/expansion-catalog.js": "848c5fc9d722c83d667100ee4544225cf0ebcb7f3920c8df9d2d628fac5ceb9c",
+  "dist/discovery-catalog.js": "f16b9bb49cfb5ef7ef9d33144ee493610e427f5f604c9930b20c0893f1aeffa2",
+  "dist/extended-catalog.js": "2f92834ab40b80522216e656fe76cf1ef0c84c09c7a6ed6e1d4303d5cc22d9e8",
+  "dist/parameter-domains.js": "ca6df734b873053ea7ff0a9746ac7c9cf1b3d75e799239dd67b81acb64109f11",
+  "dist/measurements.js": "ebb613483c5831036a00f6664692b803fb820cffdd8f37777dfafbbcf7ff8dd1",
+  "dist/graphs.js": "707bacacbe93352783f3a49e90684000cf2bc38204ff03696792df233f5f29ae",
+  "dist/formula-catalog.js": "1b3b4046a847ea2dbc4a0dd9ac9b3c61cac21429240a206bcf4147b07b64f254",
+  "dist/playback.js": "96fa8594ba568b2b75bf32583c25dc5a9c86ff5664c22057f2191f89b0a286d9"
+}

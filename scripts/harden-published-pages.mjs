@@ -3,6 +3,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {authConfig} from '../dist/auth-config.js';
+import {validateAuthConfig} from '../dist/auth-client.js';
 
 export const policy=[
  "default-src 'self'",
@@ -19,12 +21,24 @@ export const policy=[
  "worker-src 'self' blob:",
  "upgrade-insecure-requests"
 ].join('; ');
-const marker='<meta http-equiv="Content-Security-Policy" content="'+policy+'">';
+export function accountPolicy(config=authConfig){
+ const checked=validateAuthConfig(config);
+ if(!checked.valid)return policy;
+ // Firebase's popup resolver loads Google API bootstrap and a project-specific
+ // helper iframe. Keep all remaining scripts local; never allow arbitrary hosts.
+ return policy.replace("frame-src 'none'",'frame-src https://'+checked.firebase.authDomain)
+  .replace("script-src 'self' 'wasm-unsafe-eval'","script-src 'self' 'wasm-unsafe-eval' https://apis.google.com");
+}
+export function policyForHTML(source,config=authConfig){
+ return /<script\b[^>]*src=["']account-ui\.js\?v=\d+["']/i.test(source)?accountPolicy(config):policy;
+}
+const markerFor=source=>'<meta http-equiv="Content-Security-Policy" content="'+policyForHTML(source)+'">';
 const referrer='<meta name="referrer" content="strict-origin-when-cross-origin">';
 const root=fileURLToPath(new URL('../dist/',import.meta.url));
 
 export function secureHTML(source){
  if(typeof source!=='string'||!/<head\b[^>]*>/i.test(source))throw Error('Missing document head');
+ const marker=markerFor(source);
  if(source.includes(marker))return source;
  if(/<meta\s[^>]*http-equiv=["']Content-Security-Policy["']/i.test(source))throw Error('Review existing security policy');
  return source.replace(/<head\b[^>]*>/i,head=>head+marker+referrer);
@@ -45,7 +59,7 @@ export function processPages({write=false,verify=false}={}){
  for(const file of htmlFiles){
   const original=fs.readFileSync(file,'utf8');
   if(verify){
-   if(!original.includes(marker)||!original.includes(referrer))throw Error('Unprotected HTML page: '+path.relative(root,file));
+   if(!original.includes(markerFor(original))||!original.includes(referrer))throw Error('Unprotected HTML page: '+path.relative(root,file));
    continue;
   }
   const secured=secureHTML(original);

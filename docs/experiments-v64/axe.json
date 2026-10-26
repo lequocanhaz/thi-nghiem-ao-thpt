@@ -1,0 +1,86 @@
+[
+  {
+    "width": 320,
+    "locale": "vi-VN",
+    "state": "observation",
+    "violations": [],
+    "passes": 30
+  },
+  {
+    "width": 320,
+    "locale": "vi-VN",
+    "state": "account",
+    "violations": [],
+    "passes": 19
+  },
+  {
+    "width": 320,
+    "locale": "en-US",
+    "state": "observation",
+    "violations": [],
+    "passes": 30
+  },
+  {
+    "width": 320,
+    "locale": "en-US",
+    "state": "account",
+    "violations": [],
+    "passes": 19
+  },
+  {
+    "width": 390,
+    "locale": "vi-VN",
+    "state": "observation",
+    "violations": [],
+    "passes": 30
+  },
+  {
+    "width": 390,
+    "locale": "vi-VN",
+    "state": "account",
+    "violations": [],
+    "passes": 19
+  },
+  {
+    "width": 390,
+    "locale": "en-US",
+    "state": "observation",
+    "violations": [],
+    "passes": 30
+  },
+  {
+    "width": 390,
+    "locale": "en-US",
+    "state": "account",
+    "violations": [],
+    "passes": 19
+  },
+  {
+    "width": 1440,
+    "locale": "vi-VN",
+    "state": "observation",
+    "violations": [],
+    "passes": 29
+  },
+  {
+    "width": 1440,
+    "locale": "vi-VN",
+    "state": "account",
+    "violations": [],
+    "passes": 19
+  },
+  {
+    "width": 1440,
+    "locale": "en-US",
+    "state": "observation",
+    "violations": [],
+    "passes": 29
+  },
+  {
+    "width": 1440,
+    "locale": "en-US",
+    "state": "account",
+    "violations": [],
+    "passes": 19
+  }
+]

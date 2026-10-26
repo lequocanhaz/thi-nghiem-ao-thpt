@@ -1,0 +1,27 @@
+#conceptObservation{margin:0;padding:16px 20px;border-top:1px solid #d7dfe9;background:#fff;font-family:'Manrope','Segoe UI',sans-serif;color:#213248;line-height:1.7}
+#conceptObservation[hidden]{display:none}
+.observation-details>summary{font-size:15px;font-weight:700;cursor:pointer;min-height:44px;padding:9px 0}
+.observation-content{min-width:0}
+.observation-title{margin:12px 0 8px;font-size:15px;font-weight:650;line-height:1.7}
+.observation-key{display:flex;flex-wrap:wrap;gap:8px 20px;margin:8px 0;font-size:12px;color:#455970}
+.observation-key>span{display:inline-flex;align-items:center;gap:7px}
+.observation-key i{display:inline-block;width:16px;height:3px;background:#245fa6}
+.observation-key .current-key{height:9px;width:9px;border-radius:50%;background:#ad5814}
+.observation-chart{display:block;width:100%;height:auto;max-height:320px;overflow:visible}
+.observation-axes{stroke:#66788e;stroke-width:1;fill:none}
+.observation-zero{stroke:#bbc6d4;stroke-width:1;stroke-dasharray:4 4;fill:none}
+.observation-curve{stroke:#245fa6;stroke-width:2;fill:none}
+.observation-samples{fill:#245fa6}
+.observation-current{fill:#ad5814;stroke:#fff;stroke-width:2}
+.observation-ticks{font-family:inherit;font-size:12px;fill:#455970}
+.observation-axis-labels{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 20px;font-size:13px}
+.observation-axis-labels p{margin:0}
+.observation-current-value{margin:12px 0;font-size:14px;font-weight:650;line-height:1.8;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.observation-values>summary{min-height:44px;padding:10px 0;font-size:13px;color:#24558a;cursor:pointer}
+.observation-values{max-height:300px;overflow:auto}
+.observation-values table{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+.observation-values td,.observation-values th{border-bottom:1px solid #d7dfe9;padding:8px;text-align:start;overflow-wrap:anywhere}
+.observation-values th{position:sticky;top:0;background:#f3f6fa}
+.observation-note{margin:12px 0 0;color:#526176;font-size:12px;line-height:1.8}
+#conceptObservation summary:focus-visible{outline:3px solid #235be3;outline-offset:3px}
+@media(max-width:620px){#conceptObservation{padding:12px}.observation-title{font-size:14px}.observation-key{gap:8px 12px}}

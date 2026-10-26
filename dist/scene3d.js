@@ -1,17 +1,18 @@
 import {PARTICLE_DISPLAY_RADIUS,reflectedPhase,gasDisplayLayout,boyleDisplayLayout} from './particle-layout.js?v=54';
+import {withConceptScene} from './concept-scenes.js?v=64';
 import {withModelWorkspace} from './model-workspace.js?v=44';
 import {modelLabel,sizeModelLabels} from './model-label.js?v=49';
 import {withCoordinates,coordinateProfile} from './coordinates.js?v=59';
 import {apparatusBounds,frameApparatus,boundsInView} from './camera-fit.js?v=43';
 import {SPACE_FACTOR,STUDIO_SIZE,STUDIO_DIVISIONS,FLOOR_SIZE,MIN_SPACE_ZOOM} from './simulation-space.js?v=43';
-import {buildAtlasModel} from './atlas-scenes.js?v=54';
+import {buildAtlasModel} from './atlas-scenes.js?v=64';
 import {atlasById} from './atlas-catalog.js?v=54';
 import {premiumOhm,upgradeModel,labCart} from './apparatus.js?v=35';
 import {roundedGeometry,flexibleTube,platform as studioPlatform} from './geometry-kit.js?v=35';
 import {addInteractionRig} from './interaction-rig.js?v=59';
 import * as THREE from './vendor/three.module.min.js';
 import {RoomEnvironment} from './vendor/RoomEnvironment.js';
-import {buildExtendedModel} from './extended-scenes.js?v=59';
+import {buildExtendedModel} from './extended-scenes.js?v=64';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {field3d,wave,oscillation} from './physics.js?v=17';
 
@@ -47,6 +48,7 @@ function makeElectric(g,initial,initialData,o){
  const probe=mode===0?null:sphere(g,.095,C.green),probeLabel=probe?label(g,mode===2?'q₀ / P':'P',V(),o):null;if(probe)probe.userData.drag='p';
  const connections=[line(g,[V(),V()],0x9b8bb0,true),line(g,[V(),V()],0x9b8bb0,true)];
  const components=[arrow(g,V(),V(1,0,0),C.orange),arrow(g,V(),V(1,0,0),C.blue)],resultant=arrow(g,V(),V(1,0,0),C.green),parallelogram=line(g,[V(),V(),V()],C.purple,true);
+ components.forEach((component,i)=>{component.name='electric-component-'+i;});resultant.name='electric-resultant';
  const paths=[];let lastSources;
  const setLine=(object,points)=>{const attribute=object.geometry.attributes.position;points.forEach((p,i)=>attribute.setXYZ(i,p.x,p.y,p.z));attribute.needsUpdate=true;object.geometry.computeBoundingBox();object.geometry.computeBoundingSphere();object.computeLineDistances?.();};
  const setArrow=(object,origin,vector,length=vector.length(),head=.17)=>{object.visible=length>1e-12;if(!object.visible)return;object.position.copy(origin);object.setDirection(vector.clone().normalize());object.setLength(length,head,.09);};
@@ -86,7 +88,7 @@ function makeElectric(g,initial,initialData,o){
   components.forEach(a=>{a.visible=false;});resultant.visible=parallelogram.visible=false;
   if(d){
    const force=mode===0||mode===2,base=force?1e6:.012,max=Math.max(d.magnitude,...d.parts.map(v=>Math.hypot(v.x,v.y,v.z||0)),1e-20),factor=Math.min(base,1.6/max)*(s.scale||1),vec=v=>V(v.x*factor,v.y*factor,(v.z||0)*factor),sum=vec(d);
-   if(sw.components!==false)d.parts.forEach((v,i)=>setArrow(components[i],target,vec(v)));
+   if(sw.components!==false)d.parts.forEach((v,i)=>{components[i].userData.vectorScale=factor;setArrow(components[i],target,vec(v));});
    if(sw.resultant!==false)setArrow(resultant,target,sum);
    if(sw.parallelogram&&d.parts.length===2){parallelogram.visible=true;setLine(parallelogram,[target.clone().add(vec(d.parts[0])),target.clone().add(sum),target.clone().add(vec(d.parts[1]))]);}
   }
@@ -96,7 +98,7 @@ function makeElectric(g,initial,initialData,o){
 }
 
 function buildBaseModel(id,state,data,options={}){const group=new THREE.Group();let update;switch(id){case 'ohm':update=premiumOhm(group,state,data,options);break;case 'energy':update=makeEnergy(group,state,data,options);break;case 'oscillation':update=makeOscillation(group,state,data,options);break;case 'wave':update=makeWave(group,state,data,options);break;case 'capacitor':update=makeCapacitor(group,state,data,options);break;case 'boyle':update=makeBoyle(group,state,data,options);break;case 'gas':update=makeGas(group,state,data,options);break;case 'electric':update=makeElectric(group,state,data,options);break;default:return buildExtendedModel(id,state,data,options)}update(state,data,options.config||{});return {group,update};}
-export function buildLabModel(id,s,d,o={}){s={...s,t:s.t||0};const model=atlasById[id]?buildAtlasModel(id,s,d,o):buildBaseModel(id,s,d,o);const enhanced=upgradeModel(model,id,s,d,o);return withModelWorkspace(withCoordinates(o.interactive?addInteractionRig(enhanced,id,s,d,o.config||{},o):enhanced,id,s,d,o),o);}
+export function buildLabModel(id,s,d,o={}){s={...s,t:s.t||0};const model=atlasById[id]?buildAtlasModel(id,s,d,o):buildBaseModel(id,s,d,o);const enhanced=upgradeModel(withConceptScene(model,id,s,d,o),id,s,d,o);return withModelWorkspace(withCoordinates(o.interactive?addInteractionRig(enhanced,id,s,d,o.config||{},o):enhanced,id,s,d,o),o);}
 function disposeGroup(group){group.traverse(obj=>{if(obj.isInstancedMesh)obj.dispose();obj.geometry?.dispose();const ms=Array.isArray(obj.material)?obj.material:[obj.material];for(const m of ms){if(m){m.map?.dispose();m.dispose()}}});}
 
 export function pickDragTarget(hits,root){for(const hit of hits){let visible=true;for(let q=hit.object;q;q=q.parent){if(q.visible===false){visible=false;break;}if(q===root)break;}if(!visible)continue;for(let q=hit.object;q&&q!==root;q=q.parent)if(q.userData?.drag)return {...hit,object:q};}return null;}
