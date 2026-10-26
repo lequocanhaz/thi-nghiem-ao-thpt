@@ -1,0 +1,5792 @@
+{
+  "passed": 258,
+  "failed": 0,
+  "scope": "Headless Chromium/SwiftShader, actual LabScene meshes and isolated account UI fixtures",
+  "tests": [
+    {
+      "name": "model rendering energy 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 421,
+      "evidence": {
+        "initial": {
+          "id": "energy",
+          "visibleMeshes": 16,
+          "visibleLines": 57,
+          "geometryValues": 17835,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        },
+        "endpoint": {
+          "id": "energy",
+          "visibleMeshes": 17,
+          "visibleLines": 58,
+          "geometryValues": 17890,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering oscillation 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1275,
+      "evidence": {
+        "initial": {
+          "id": "oscillation",
+          "visibleMeshes": 38,
+          "visibleLines": 78,
+          "geometryValues": 42106,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        },
+        "endpoint": {
+          "id": "oscillation",
+          "visibleMeshes": 38,
+          "visibleLines": 78,
+          "geometryValues": 42106,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering wave 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2134,
+      "evidence": {
+        "initial": {
+          "id": "wave",
+          "visibleMeshes": 19,
+          "visibleLines": 63,
+          "geometryValues": 18512,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        },
+        "endpoint": {
+          "id": "wave",
+          "visibleMeshes": 19,
+          "visibleLines": 63,
+          "geometryValues": 18512,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering electric 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1293,
+      "evidence": {
+        "initial": {
+          "id": "electric",
+          "visibleMeshes": 59,
+          "visibleLines": 141,
+          "geometryValues": 41008,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ohm 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1686,
+      "evidence": {
+        "initial": {
+          "id": "ohm",
+          "visibleMeshes": 51,
+          "visibleLines": 47,
+          "geometryValues": 57399,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering capacitor 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 987,
+      "evidence": {
+        "initial": {
+          "id": "capacitor",
+          "visibleMeshes": 20,
+          "visibleLines": 45,
+          "geometryValues": 19845,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        },
+        "endpoint": {
+          "id": "capacitor",
+          "visibleMeshes": 41,
+          "visibleLines": 54,
+          "geometryValues": 35820,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering boyle 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1003,
+      "evidence": {
+        "initial": {
+          "id": "boyle",
+          "visibleMeshes": 18,
+          "visibleLines": 34,
+          "geometryValues": 15933,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering gas 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1261,
+      "evidence": {
+        "initial": {
+          "id": "gas",
+          "visibleMeshes": 15,
+          "visibleLines": 45,
+          "geometryValues": 15249,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering uniform 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1735,
+      "evidence": {
+        "initial": {
+          "id": "uniform",
+          "visibleMeshes": 32,
+          "visibleLines": 53,
+          "geometryValues": 35591,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-uniform"
+          ]
+        },
+        "endpoint": {
+          "id": "uniform",
+          "visibleMeshes": 32,
+          "visibleLines": 53,
+          "geometryValues": 35591,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-uniform"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering acceleration 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1314,
+      "evidence": {
+        "initial": {
+          "id": "acceleration",
+          "visibleMeshes": 37,
+          "visibleLines": 78,
+          "geometryValues": 40370,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-acceleration"
+          ]
+        },
+        "endpoint": {
+          "id": "acceleration",
+          "visibleMeshes": 37,
+          "visibleLines": 78,
+          "geometryValues": 40370,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-acceleration"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering horizontal 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1085,
+      "evidence": {
+        "initial": {
+          "id": "horizontal",
+          "visibleMeshes": 18,
+          "visibleLines": 60,
+          "geometryValues": 19292,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-horizontal"
+          ]
+        },
+        "endpoint": {
+          "id": "horizontal",
+          "visibleMeshes": 19,
+          "visibleLines": 61,
+          "geometryValues": 19347,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-horizontal"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering projectile 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1626,
+      "evidence": {
+        "initial": {
+          "id": "projectile",
+          "visibleMeshes": 19,
+          "visibleLines": 60,
+          "geometryValues": 19337,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-projectile"
+          ]
+        },
+        "endpoint": {
+          "id": "projectile",
+          "visibleMeshes": 19,
+          "visibleLines": 60,
+          "geometryValues": 19317,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-projectile"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering newton 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1166,
+      "evidence": {
+        "initial": {
+          "id": "newton",
+          "visibleMeshes": 36,
+          "visibleLines": 75,
+          "geometryValues": 40283,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-newton"
+          ]
+        },
+        "endpoint": {
+          "id": "newton",
+          "visibleMeshes": 37,
+          "visibleLines": 76,
+          "geometryValues": 40358,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-newton"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering incline 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1001,
+      "evidence": {
+        "initial": {
+          "id": "incline",
+          "visibleMeshes": 18,
+          "visibleLines": 55,
+          "geometryValues": 15317,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-incline"
+          ]
+        },
+        "endpoint": {
+          "id": "incline",
+          "visibleMeshes": 18,
+          "visibleLines": 55,
+          "geometryValues": 15317,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-incline"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering collision 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1961,
+      "evidence": {
+        "initial": {
+          "id": "collision",
+          "visibleMeshes": 57,
+          "visibleLines": 105,
+          "geometryValues": 56573,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-collision"
+          ]
+        },
+        "endpoint": {
+          "id": "collision",
+          "visibleMeshes": 57,
+          "visibleLines": 105,
+          "geometryValues": 56573,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-collision"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering circular 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1040,
+      "evidence": {
+        "initial": {
+          "id": "circular",
+          "visibleMeshes": 19,
+          "visibleLines": 58,
+          "geometryValues": 20315,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-circular"
+          ]
+        },
+        "endpoint": {
+          "id": "circular",
+          "visibleMeshes": 19,
+          "visibleLines": 58,
+          "geometryValues": 20315,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-circular"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering lever 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1426,
+      "evidence": {
+        "initial": {
+          "id": "lever",
+          "visibleMeshes": 19,
+          "visibleLines": 58,
+          "geometryValues": 15338,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-lever"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering hooke 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 985,
+      "evidence": {
+        "initial": {
+          "id": "hooke",
+          "visibleMeshes": 20,
+          "visibleLines": 57,
+          "geometryValues": 21365,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-hooke"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering pendulum 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1342,
+      "evidence": {
+        "initial": {
+          "id": "pendulum",
+          "visibleMeshes": 31,
+          "visibleLines": 75,
+          "geometryValues": 29861,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-pendulum"
+          ]
+        },
+        "endpoint": {
+          "id": "pendulum",
+          "visibleMeshes": 32,
+          "visibleLines": 76,
+          "geometryValues": 29936,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-pendulum"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering damped 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1541,
+      "evidence": {
+        "initial": {
+          "id": "damped",
+          "visibleMeshes": 16,
+          "visibleLines": 51,
+          "geometryValues": 20913,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-damped"
+          ]
+        },
+        "endpoint": {
+          "id": "damped",
+          "visibleMeshes": 16,
+          "visibleLines": 51,
+          "geometryValues": 20913,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-damped"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering resonance 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1117,
+      "evidence": {
+        "initial": {
+          "id": "resonance",
+          "visibleMeshes": 17,
+          "visibleLines": 46,
+          "geometryValues": 22476,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-resonance"
+          ]
+        },
+        "endpoint": {
+          "id": "resonance",
+          "visibleMeshes": 17,
+          "visibleLines": 46,
+          "geometryValues": 22476,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-resonance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering interference 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1785,
+      "evidence": {
+        "initial": {
+          "id": "interference",
+          "visibleMeshes": 17,
+          "visibleLines": 60,
+          "geometryValues": 26342,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-interference"
+          ]
+        },
+        "endpoint": {
+          "id": "interference",
+          "visibleMeshes": 17,
+          "visibleLines": 60,
+          "geometryValues": 26322,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-interference"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering standing 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1030,
+      "evidence": {
+        "initial": {
+          "id": "standing",
+          "visibleMeshes": 20,
+          "visibleLines": 60,
+          "geometryValues": 26214,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-standing"
+          ]
+        },
+        "endpoint": {
+          "id": "standing",
+          "visibleMeshes": 20,
+          "visibleLines": 60,
+          "geometryValues": 26214,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-standing"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering sound 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1559,
+      "evidence": {
+        "initial": {
+          "id": "sound",
+          "visibleMeshes": 75,
+          "visibleLines": 45,
+          "geometryValues": 117435,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-sound"
+          ]
+        },
+        "endpoint": {
+          "id": "sound",
+          "visibleMeshes": 75,
+          "visibleLines": 45,
+          "geometryValues": 117435,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-sound"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering series 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 967,
+      "evidence": {
+        "initial": {
+          "id": "series",
+          "visibleMeshes": 22,
+          "visibleLines": 48,
+          "geometryValues": 18210,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-series"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering parallel 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1490,
+      "evidence": {
+        "initial": {
+          "id": "parallel",
+          "visibleMeshes": 24,
+          "visibleLines": 50,
+          "geometryValues": 18822,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-parallel"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering joule 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 846,
+      "evidence": {
+        "initial": {
+          "id": "joule",
+          "visibleMeshes": 16,
+          "visibleLines": 48,
+          "geometryValues": 15936,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-joule"
+          ]
+        },
+        "endpoint": {
+          "id": "joule",
+          "visibleMeshes": 16,
+          "visibleLines": 48,
+          "geometryValues": 15936,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-joule"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering magnetic 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 739,
+      "evidence": {
+        "initial": {
+          "id": "magnetic",
+          "visibleMeshes": 21,
+          "visibleLines": 57,
+          "geometryValues": 16055,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-magnetic"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering induction 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1792,
+      "evidence": {
+        "initial": {
+          "id": "induction",
+          "visibleMeshes": 35,
+          "visibleLines": 70,
+          "geometryValues": 55050,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-induction"
+          ]
+        },
+        "endpoint": {
+          "id": "induction",
+          "visibleMeshes": 35,
+          "visibleLines": 70,
+          "geometryValues": 55050,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-induction"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering decay 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1722,
+      "evidence": {
+        "initial": {
+          "id": "decay",
+          "visibleMeshes": 13,
+          "visibleLines": 45,
+          "geometryValues": 13494,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-decay"
+          ]
+        },
+        "endpoint": {
+          "id": "decay",
+          "visibleMeshes": 13,
+          "visibleLines": 45,
+          "geometryValues": 13494,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-decay"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering freefall 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1247,
+      "evidence": {
+        "initial": {
+          "id": "freefall",
+          "visibleMeshes": 11,
+          "visibleLines": 52,
+          "geometryValues": 12849,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-freefall"
+          ]
+        },
+        "endpoint": {
+          "id": "freefall",
+          "visibleMeshes": 12,
+          "visibleLines": 53,
+          "geometryValues": 12924,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-freefall"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering friction 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 887,
+      "evidence": {
+        "initial": {
+          "id": "friction",
+          "visibleMeshes": 13,
+          "visibleLines": 47,
+          "geometryValues": 12996,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-friction"
+          ]
+        },
+        "endpoint": {
+          "id": "friction",
+          "visibleMeshes": 13,
+          "visibleLines": 47,
+          "geometryValues": 12996,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-friction"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering work 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 606,
+      "evidence": {
+        "initial": {
+          "id": "work",
+          "visibleMeshes": 14,
+          "visibleLines": 48,
+          "geometryValues": 14655,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-work"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering impulse 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1194,
+      "evidence": {
+        "initial": {
+          "id": "impulse",
+          "visibleMeshes": 12,
+          "visibleLines": 46,
+          "geometryValues": 12921,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-impulse"
+          ]
+        },
+        "endpoint": {
+          "id": "impulse",
+          "visibleMeshes": 11,
+          "visibleLines": 45,
+          "geometryValues": 12846,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-impulse"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering buoyancy 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1326,
+      "evidence": {
+        "initial": {
+          "id": "buoyancy",
+          "visibleMeshes": 18,
+          "visibleLines": 48,
+          "geometryValues": 15300,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-buoyancy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering pressure 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 872,
+      "evidence": {
+        "initial": {
+          "id": "pressure",
+          "visibleMeshes": 15,
+          "visibleLines": 46,
+          "geometryValues": 15045,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-pressure"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering reflection 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2217,
+      "evidence": {
+        "initial": {
+          "id": "reflection",
+          "visibleMeshes": 23,
+          "visibleLines": 51,
+          "geometryValues": 20591,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-reflection"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering refraction 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1398,
+      "evidence": {
+        "initial": {
+          "id": "refraction",
+          "visibleMeshes": 29,
+          "visibleLines": 73,
+          "geometryValues": 28667,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-refraction"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering tir 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1587,
+      "evidence": {
+        "initial": {
+          "id": "tir",
+          "visibleMeshes": 29,
+          "visibleLines": 73,
+          "geometryValues": 28667,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-tir"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering lens 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2100,
+      "evidence": {
+        "initial": {
+          "id": "lens",
+          "visibleMeshes": 22,
+          "visibleLines": 59,
+          "geometryValues": 19457,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-lens"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering mirror 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1094,
+      "evidence": {
+        "initial": {
+          "id": "mirror",
+          "visibleMeshes": 21,
+          "visibleLines": 59,
+          "geometryValues": 17804,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-mirror"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering prism 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1903,
+      "evidence": {
+        "initial": {
+          "id": "prism",
+          "visibleMeshes": 20,
+          "visibleLines": 61,
+          "geometryValues": 12248,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-prism"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering young 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1485,
+      "evidence": {
+        "initial": {
+          "id": "young",
+          "visibleMeshes": 26,
+          "visibleLines": 59,
+          "geometryValues": 21257,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-young"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering diffraction 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1253,
+      "evidence": {
+        "initial": {
+          "id": "diffraction",
+          "visibleMeshes": 22,
+          "visibleLines": 56,
+          "geometryValues": 18656,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-diffraction"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering polarization 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1426,
+      "evidence": {
+        "initial": {
+          "id": "polarization",
+          "visibleMeshes": 22,
+          "visibleLines": 58,
+          "geometryValues": 18728,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-polarization"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering thermalexpansion 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1569,
+      "evidence": {
+        "initial": {
+          "id": "thermalexpansion",
+          "visibleMeshes": 14,
+          "visibleLines": 54,
+          "geometryValues": 16833,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-thermalexpansion"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering calorimetry 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1343,
+      "evidence": {
+        "initial": {
+          "id": "calorimetry",
+          "visibleMeshes": 18,
+          "visibleLines": 46,
+          "geometryValues": 13734,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-calorimetry"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering phasechange 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1647,
+      "evidence": {
+        "initial": {
+          "id": "phasechange",
+          "visibleMeshes": 15,
+          "visibleLines": 44,
+          "geometryValues": 15954,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-phasechange"
+          ]
+        },
+        "endpoint": {
+          "id": "phasechange",
+          "visibleMeshes": 15,
+          "visibleLines": 44,
+          "geometryValues": 14850,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-phasechange"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering heattransfer 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 959,
+      "evidence": {
+        "initial": {
+          "id": "heattransfer",
+          "visibleMeshes": 30,
+          "visibleLines": 54,
+          "geometryValues": 42510,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-heattransfer"
+          ]
+        },
+        "endpoint": {
+          "id": "heattransfer",
+          "visibleMeshes": 30,
+          "visibleLines": 54,
+          "geometryValues": 42510,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-heattransfer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering isobaric 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1408,
+      "evidence": {
+        "initial": {
+          "id": "isobaric",
+          "visibleMeshes": 15,
+          "visibleLines": 46,
+          "geometryValues": 15786,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-isobaric"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering isochoric 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2486,
+      "evidence": {
+        "initial": {
+          "id": "isochoric",
+          "visibleMeshes": 14,
+          "visibleLines": 46,
+          "geometryValues": 14094,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-isochoric"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering firstlaw 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1398,
+      "evidence": {
+        "initial": {
+          "id": "firstlaw",
+          "visibleMeshes": 12,
+          "visibleLines": 45,
+          "geometryValues": 14538,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-firstlaw"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering kinetic 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 3606,
+      "evidence": {
+        "initial": {
+          "id": "kinetic",
+          "visibleMeshes": 14,
+          "visibleLines": 46,
+          "geometryValues": 14094,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-kinetic"
+          ]
+        },
+        "endpoint": {
+          "id": "kinetic",
+          "visibleMeshes": 14,
+          "visibleLines": 46,
+          "geometryValues": 14094,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-kinetic"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering resistivity 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1298,
+      "evidence": {
+        "initial": {
+          "id": "resistivity",
+          "visibleMeshes": 12,
+          "visibleLines": 44,
+          "geometryValues": 13428,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-resistivity"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering internalresistance 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2032,
+      "evidence": {
+        "initial": {
+          "id": "internalresistance",
+          "visibleMeshes": 13,
+          "visibleLines": 46,
+          "geometryValues": 13713,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-internalresistance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering bridge 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 850,
+      "evidence": {
+        "initial": {
+          "id": "bridge",
+          "visibleMeshes": 15,
+          "visibleLines": 50,
+          "geometryValues": 14343,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-bridge"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering solenoid 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1054,
+      "evidence": {
+        "initial": {
+          "id": "solenoid",
+          "visibleMeshes": 25,
+          "visibleLines": 55,
+          "geometryValues": 26450,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-solenoid"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering lorentz 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1357,
+      "evidence": {
+        "initial": {
+          "id": "lorentz",
+          "visibleMeshes": 43,
+          "visibleLines": 55,
+          "geometryValues": 58625,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-lorentz"
+          ]
+        },
+        "endpoint": {
+          "id": "lorentz",
+          "visibleMeshes": 43,
+          "visibleLines": 55,
+          "geometryValues": 58625,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-lorentz"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering transformer 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1195,
+      "evidence": {
+        "initial": {
+          "id": "transformer",
+          "visibleMeshes": 19,
+          "visibleLines": 45,
+          "geometryValues": 20664,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-transformer"
+          ]
+        },
+        "endpoint": {
+          "id": "transformer",
+          "visibleMeshes": 19,
+          "visibleLines": 45,
+          "geometryValues": 20664,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-transformer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ac 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1311,
+      "evidence": {
+        "initial": {
+          "id": "ac",
+          "visibleMeshes": 13,
+          "visibleLines": 46,
+          "geometryValues": 13713,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-ac"
+          ]
+        },
+        "endpoint": {
+          "id": "ac",
+          "visibleMeshes": 13,
+          "visibleLines": 46,
+          "geometryValues": 13713,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-ac"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering vector_sum 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1471,
+      "evidence": {
+        "initial": {
+          "id": "vector_sum",
+          "visibleMeshes": 15,
+          "visibleLines": 59,
+          "geometryValues": 10304,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-vector_sum"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering vector_components 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 744,
+      "evidence": {
+        "initial": {
+          "id": "vector_components",
+          "visibleMeshes": 15,
+          "visibleLines": 59,
+          "geometryValues": 10304,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-vector_components"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering relative_motion 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1453,
+      "evidence": {
+        "initial": {
+          "id": "relative_motion",
+          "visibleMeshes": 53,
+          "visibleLines": 101,
+          "geometryValues": 52346,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-relative_motion"
+          ]
+        },
+        "endpoint": {
+          "id": "relative_motion",
+          "visibleMeshes": 53,
+          "visibleLines": 101,
+          "geometryValues": 52346,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-relative_motion"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering average_speed 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 793,
+      "evidence": {
+        "initial": {
+          "id": "average_speed",
+          "visibleMeshes": 50,
+          "visibleLines": 93,
+          "geometryValues": 51747,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-average_speed"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering braking 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1345,
+      "evidence": {
+        "initial": {
+          "id": "braking",
+          "visibleMeshes": 31,
+          "visibleLines": 69,
+          "geometryValues": 31227,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-braking"
+          ]
+        },
+        "endpoint": {
+          "id": "braking",
+          "visibleMeshes": 30,
+          "visibleLines": 68,
+          "geometryValues": 31152,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-braking"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering atwood 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1492,
+      "evidence": {
+        "initial": {
+          "id": "atwood",
+          "visibleMeshes": 21,
+          "visibleLines": 48,
+          "geometryValues": 20691,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-atwood"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering pulley 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 811,
+      "evidence": {
+        "initial": {
+          "id": "pulley",
+          "visibleMeshes": 17,
+          "visibleLines": 44,
+          "geometryValues": 20391,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-pulley"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering elevator 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1306,
+      "evidence": {
+        "initial": {
+          "id": "elevator",
+          "visibleMeshes": 15,
+          "visibleLines": 63,
+          "geometryValues": 13710,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-elevator"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering torque_angle 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 944,
+      "evidence": {
+        "initial": {
+          "id": "torque_angle",
+          "visibleMeshes": 15,
+          "visibleLines": 54,
+          "geometryValues": 12416,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-torque_angle"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering spring_energy 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 933,
+      "evidence": {
+        "initial": {
+          "id": "spring_energy",
+          "visibleMeshes": 33,
+          "visibleLines": 68,
+          "geometryValues": 38400,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-spring_energy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering hydraulic_press 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 898,
+      "evidence": {
+        "initial": {
+          "id": "hydraulic_press",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 13623,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-hydraulic_press"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering communicating 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1595,
+      "evidence": {
+        "initial": {
+          "id": "communicating",
+          "visibleMeshes": 14,
+          "visibleLines": 44,
+          "geometryValues": 12447,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-communicating"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering spring_period 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1288,
+      "evidence": {
+        "initial": {
+          "id": "spring_period",
+          "visibleMeshes": 33,
+          "visibleLines": 68,
+          "geometryValues": 38400,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-spring_period"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering oscillator_energy 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 784,
+      "evidence": {
+        "initial": {
+          "id": "oscillator_energy",
+          "visibleMeshes": 33,
+          "visibleLines": 68,
+          "geometryValues": 38400,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-oscillator_energy"
+          ]
+        },
+        "endpoint": {
+          "id": "oscillator_energy",
+          "visibleMeshes": 33,
+          "visibleLines": 68,
+          "geometryValues": 38400,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-oscillator_energy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering phase_difference 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 890,
+      "evidence": {
+        "initial": {
+          "id": "phase_difference",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-phase_difference"
+          ]
+        },
+        "endpoint": {
+          "id": "phase_difference",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-phase_difference"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering string_speed 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1383,
+      "evidence": {
+        "initial": {
+          "id": "string_speed",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-string_speed"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering string_resonance 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 627,
+      "evidence": {
+        "initial": {
+          "id": "string_resonance",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-string_resonance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering sound_level 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 730,
+      "evidence": {
+        "initial": {
+          "id": "sound_level",
+          "visibleMeshes": 7,
+          "visibleLines": 29,
+          "geometryValues": 10107,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-sound_level"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering intensity_distance 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1092,
+      "evidence": {
+        "initial": {
+          "id": "intensity_distance",
+          "visibleMeshes": 11,
+          "visibleLines": 51,
+          "geometryValues": 14799,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-intensity_distance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering standing_phase 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1106,
+      "evidence": {
+        "initial": {
+          "id": "standing_phase",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-standing_phase"
+          ]
+        },
+        "endpoint": {
+          "id": "standing_phase",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-standing_phase"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering reflection_wave 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1186,
+      "evidence": {
+        "initial": {
+          "id": "reflection_wave",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-reflection_wave"
+          ]
+        },
+        "endpoint": {
+          "id": "reflection_wave",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-reflection_wave"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering uniform_field 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 830,
+      "evidence": {
+        "initial": {
+          "id": "uniform_field",
+          "visibleMeshes": 27,
+          "visibleLines": 64,
+          "geometryValues": 15992,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-uniform_field"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering potential_point 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1024,
+      "evidence": {
+        "initial": {
+          "id": "potential_point",
+          "visibleMeshes": 24,
+          "visibleLines": 62,
+          "geometryValues": 14111,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-potential_point"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering potential_pair 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 957,
+      "evidence": {
+        "initial": {
+          "id": "potential_pair",
+          "visibleMeshes": 15,
+          "visibleLines": 52,
+          "geometryValues": 15014,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-potential_pair"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering capacitor_plate 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1189,
+      "evidence": {
+        "initial": {
+          "id": "capacitor_plate",
+          "visibleMeshes": 11,
+          "visibleLines": 44,
+          "geometryValues": 12840,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-capacitor_plate"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering dielectric 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 988,
+      "evidence": {
+        "initial": {
+          "id": "dielectric",
+          "visibleMeshes": 12,
+          "visibleLines": 44,
+          "geometryValues": 14532,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-dielectric"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering capacitor_series 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 922,
+      "evidence": {
+        "initial": {
+          "id": "capacitor_series",
+          "visibleMeshes": 17,
+          "visibleLines": 50,
+          "geometryValues": 19831,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-capacitor_series"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering capacitor_parallel 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1047,
+      "evidence": {
+        "initial": {
+          "id": "capacitor_parallel",
+          "visibleMeshes": 17,
+          "visibleLines": 52,
+          "geometryValues": 19840,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-capacitor_parallel"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering charge_quantization 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 704,
+      "evidence": {
+        "initial": {
+          "id": "charge_quantization",
+          "visibleMeshes": 6,
+          "visibleLines": 22,
+          "geometryValues": 5427,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-charge_quantization"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering drift 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 848,
+      "evidence": {
+        "initial": {
+          "id": "drift",
+          "visibleMeshes": 13,
+          "visibleLines": 46,
+          "geometryValues": 10545,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-drift"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering wire_stretch 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1549,
+      "evidence": {
+        "initial": {
+          "id": "wire_stretch",
+          "visibleMeshes": 11,
+          "visibleLines": 44,
+          "geometryValues": 10395,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-wire_stretch"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering potentiometer 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1190,
+      "evidence": {
+        "initial": {
+          "id": "potentiometer",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-potentiometer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering voltage_divider 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 915,
+      "evidence": {
+        "initial": {
+          "id": "voltage_divider",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-voltage_divider"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering meter_loading 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1100,
+      "evidence": {
+        "initial": {
+          "id": "meter_loading",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-meter_loading"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering battery_series 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 980,
+      "evidence": {
+        "initial": {
+          "id": "battery_series",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-battery_series"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering battery_parallel 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 784,
+      "evidence": {
+        "initial": {
+          "id": "battery_parallel",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-battery_parallel"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering wire_field 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 911,
+      "evidence": {
+        "initial": {
+          "id": "wire_field",
+          "visibleMeshes": 13,
+          "visibleLines": 50,
+          "geometryValues": 13011,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-wire_field"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering flux_angle 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1205,
+      "evidence": {
+        "initial": {
+          "id": "flux_angle",
+          "visibleMeshes": 29,
+          "visibleLines": 49,
+          "geometryValues": 30045,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-flux_angle"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering binding_energy 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 968,
+      "evidence": {
+        "initial": {
+          "id": "binding_energy",
+          "visibleMeshes": 10,
+          "visibleLines": 44,
+          "geometryValues": 10119,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-binding_energy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering table_hanging 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 991,
+      "evidence": {
+        "initial": {
+          "id": "table_hanging",
+          "visibleMeshes": 34,
+          "visibleLines": 72,
+          "geometryValues": 35211,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-table_hanging"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering contact_carts 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1284,
+      "evidence": {
+        "initial": {
+          "id": "contact_carts",
+          "visibleMeshes": 51,
+          "visibleLines": 95,
+          "geometryValues": 52413,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-contact_carts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering accelerating_pendulum 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 981,
+      "evidence": {
+        "initial": {
+          "id": "accelerating_pendulum",
+          "visibleMeshes": 16,
+          "visibleLines": 48,
+          "geometryValues": 13728,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-accelerating_pendulum"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering double_incline 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1061,
+      "evidence": {
+        "initial": {
+          "id": "double_incline",
+          "visibleMeshes": 52,
+          "visibleLines": 95,
+          "geometryValues": 54105,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-double_incline"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ladder_balance 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 875,
+      "evidence": {
+        "initial": {
+          "id": "ladder_balance",
+          "visibleMeshes": 15,
+          "visibleLines": 46,
+          "geometryValues": 14166,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-ladder_balance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering beam_supports 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 700,
+      "evidence": {
+        "initial": {
+          "id": "beam_supports",
+          "visibleMeshes": 22,
+          "visibleLines": 58,
+          "geometryValues": 15065,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-beam_supports"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering three_strings 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 971,
+      "evidence": {
+        "initial": {
+          "id": "three_strings",
+          "visibleMeshes": 20,
+          "visibleLines": 57,
+          "geometryValues": 13298,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-three_strings"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering slide_tip 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1292,
+      "evidence": {
+        "initial": {
+          "id": "slide_tip",
+          "visibleMeshes": 12,
+          "visibleLines": 46,
+          "geometryValues": 11298,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-slide_tip"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering collision_2d 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 792,
+      "evidence": {
+        "initial": {
+          "id": "collision_2d",
+          "visibleMeshes": 16,
+          "visibleLines": 54,
+          "geometryValues": 13511,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-collision_2d"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ballistic_pendulum 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 950,
+      "evidence": {
+        "initial": {
+          "id": "ballistic_pendulum",
+          "visibleMeshes": 14,
+          "visibleLines": 46,
+          "geometryValues": 13500,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-ballistic_pendulum"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering collision_spring 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 894,
+      "evidence": {
+        "initial": {
+          "id": "collision_spring",
+          "visibleMeshes": 15,
+          "visibleLines": 46,
+          "geometryValues": 17700,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-collision_spring"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering string_power 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 802,
+      "evidence": {
+        "initial": {
+          "id": "string_power",
+          "visibleMeshes": 10,
+          "visibleLines": 46,
+          "geometryValues": 12075,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-string_power"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering three_charge_energy 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 656,
+      "evidence": {
+        "initial": {
+          "id": "three_charge_energy",
+          "visibleMeshes": 15,
+          "visibleLines": 52,
+          "geometryValues": 15014,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-three_charge_energy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering electric_work_paths 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1037,
+      "evidence": {
+        "initial": {
+          "id": "electric_work_paths",
+          "visibleMeshes": 14,
+          "visibleLines": 54,
+          "geometryValues": 13379,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-electric_work_paths"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering isolated_dielectric 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1003,
+      "evidence": {
+        "initial": {
+          "id": "isolated_dielectric",
+          "visibleMeshes": 13,
+          "visibleLines": 44,
+          "geometryValues": 16185,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-isolated_dielectric"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ammeter_shunt 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 757,
+      "evidence": {
+        "initial": {
+          "id": "ammeter_shunt",
+          "visibleMeshes": 49,
+          "visibleLines": 46,
+          "geometryValues": 49471,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-ammeter_shunt"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering voltmeter_design 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 763,
+      "evidence": {
+        "initial": {
+          "id": "voltmeter_design",
+          "visibleMeshes": 48,
+          "visibleLines": 46,
+          "geometryValues": 48883,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-voltmeter_design"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering charge_sharing 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 970,
+      "evidence": {
+        "initial": {
+          "id": "charge_sharing",
+          "visibleMeshes": 29,
+          "visibleLines": 44,
+          "geometryValues": 29990,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-charge_sharing"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering sliding_rod 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 776,
+      "evidence": {
+        "initial": {
+          "id": "sliding_rod",
+          "visibleMeshes": 16,
+          "visibleLines": 47,
+          "geometryValues": 16410,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-sliding_rod"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering magnetic_braking 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 693,
+      "evidence": {
+        "initial": {
+          "id": "magnetic_braking",
+          "visibleMeshes": 14,
+          "visibleLines": 45,
+          "geometryValues": 16260,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-magnetic_braking"
+          ]
+        },
+        "endpoint": {
+          "id": "magnetic_braking",
+          "visibleMeshes": 14,
+          "visibleLines": 45,
+          "geometryValues": 16260,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-magnetic_braking"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering coil_entering_field 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 480,
+      "evidence": {
+        "initial": {
+          "id": "coil_entering_field",
+          "visibleMeshes": 13,
+          "visibleLines": 44,
+          "geometryValues": 16185,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-coil_entering_field"
+          ]
+        },
+        "endpoint": {
+          "id": "coil_entering_field",
+          "visibleMeshes": 13,
+          "visibleLines": 44,
+          "geometryValues": 16185,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-coil_entering_field"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering layered_wall 390px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 846,
+      "evidence": {
+        "initial": {
+          "id": "layered_wall",
+          "visibleMeshes": 15,
+          "visibleLines": 45,
+          "geometryValues": 15783,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-layered_wall"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering energy 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 511,
+      "evidence": {
+        "initial": {
+          "id": "energy",
+          "visibleMeshes": 16,
+          "visibleLines": 57,
+          "geometryValues": 17855,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        },
+        "endpoint": {
+          "id": "energy",
+          "visibleMeshes": 17,
+          "visibleLines": 58,
+          "geometryValues": 17930,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering oscillation 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 969,
+      "evidence": {
+        "initial": {
+          "id": "oscillation",
+          "visibleMeshes": 38,
+          "visibleLines": 78,
+          "geometryValues": 42146,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        },
+        "endpoint": {
+          "id": "oscillation",
+          "visibleMeshes": 38,
+          "visibleLines": 78,
+          "geometryValues": 42146,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering wave 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2187,
+      "evidence": {
+        "initial": {
+          "id": "wave",
+          "visibleMeshes": 19,
+          "visibleLines": 63,
+          "geometryValues": 18552,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        },
+        "endpoint": {
+          "id": "wave",
+          "visibleMeshes": 19,
+          "visibleLines": 63,
+          "geometryValues": 18552,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering electric 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1286,
+      "evidence": {
+        "initial": {
+          "id": "electric",
+          "visibleMeshes": 59,
+          "visibleLines": 141,
+          "geometryValues": 41048,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ohm 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1643,
+      "evidence": {
+        "initial": {
+          "id": "ohm",
+          "visibleMeshes": 51,
+          "visibleLines": 47,
+          "geometryValues": 57399,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering capacitor 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 684,
+      "evidence": {
+        "initial": {
+          "id": "capacitor",
+          "visibleMeshes": 20,
+          "visibleLines": 45,
+          "geometryValues": 19845,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        },
+        "endpoint": {
+          "id": "capacitor",
+          "visibleMeshes": 41,
+          "visibleLines": 54,
+          "geometryValues": 35820,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering boyle 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1364,
+      "evidence": {
+        "initial": {
+          "id": "boyle",
+          "visibleMeshes": 18,
+          "visibleLines": 34,
+          "geometryValues": 15933,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering gas 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1912,
+      "evidence": {
+        "initial": {
+          "id": "gas",
+          "visibleMeshes": 15,
+          "visibleLines": 45,
+          "geometryValues": 15249,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-observation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering uniform 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2195,
+      "evidence": {
+        "initial": {
+          "id": "uniform",
+          "visibleMeshes": 32,
+          "visibleLines": 53,
+          "geometryValues": 35591,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-uniform"
+          ]
+        },
+        "endpoint": {
+          "id": "uniform",
+          "visibleMeshes": 32,
+          "visibleLines": 53,
+          "geometryValues": 35591,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-uniform"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering acceleration 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1378,
+      "evidence": {
+        "initial": {
+          "id": "acceleration",
+          "visibleMeshes": 37,
+          "visibleLines": 78,
+          "geometryValues": 40410,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-acceleration"
+          ]
+        },
+        "endpoint": {
+          "id": "acceleration",
+          "visibleMeshes": 37,
+          "visibleLines": 78,
+          "geometryValues": 40410,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-acceleration"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering horizontal 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2350,
+      "evidence": {
+        "initial": {
+          "id": "horizontal",
+          "visibleMeshes": 18,
+          "visibleLines": 60,
+          "geometryValues": 19352,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-horizontal"
+          ]
+        },
+        "endpoint": {
+          "id": "horizontal",
+          "visibleMeshes": 19,
+          "visibleLines": 61,
+          "geometryValues": 19427,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-horizontal"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering projectile 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2183,
+      "evidence": {
+        "initial": {
+          "id": "projectile",
+          "visibleMeshes": 19,
+          "visibleLines": 60,
+          "geometryValues": 19377,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-projectile"
+          ]
+        },
+        "endpoint": {
+          "id": "projectile",
+          "visibleMeshes": 19,
+          "visibleLines": 60,
+          "geometryValues": 19377,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-projectile"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering newton 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 753,
+      "evidence": {
+        "initial": {
+          "id": "newton",
+          "visibleMeshes": 36,
+          "visibleLines": 75,
+          "geometryValues": 40283,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-newton"
+          ]
+        },
+        "endpoint": {
+          "id": "newton",
+          "visibleMeshes": 37,
+          "visibleLines": 76,
+          "geometryValues": 40358,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-newton"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering incline 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1856,
+      "evidence": {
+        "initial": {
+          "id": "incline",
+          "visibleMeshes": 18,
+          "visibleLines": 55,
+          "geometryValues": 15317,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-incline"
+          ]
+        },
+        "endpoint": {
+          "id": "incline",
+          "visibleMeshes": 18,
+          "visibleLines": 55,
+          "geometryValues": 15317,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-incline"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering collision 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2731,
+      "evidence": {
+        "initial": {
+          "id": "collision",
+          "visibleMeshes": 57,
+          "visibleLines": 105,
+          "geometryValues": 56573,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-collision"
+          ]
+        },
+        "endpoint": {
+          "id": "collision",
+          "visibleMeshes": 57,
+          "visibleLines": 105,
+          "geometryValues": 56573,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-collision"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering circular 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 792,
+      "evidence": {
+        "initial": {
+          "id": "circular",
+          "visibleMeshes": 19,
+          "visibleLines": 58,
+          "geometryValues": 20375,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-circular"
+          ]
+        },
+        "endpoint": {
+          "id": "circular",
+          "visibleMeshes": 19,
+          "visibleLines": 58,
+          "geometryValues": 20375,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-circular"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering lever 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2690,
+      "evidence": {
+        "initial": {
+          "id": "lever",
+          "visibleMeshes": 19,
+          "visibleLines": 58,
+          "geometryValues": 15338,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-lever"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering hooke 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1007,
+      "evidence": {
+        "initial": {
+          "id": "hooke",
+          "visibleMeshes": 20,
+          "visibleLines": 57,
+          "geometryValues": 21365,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-hooke"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering pendulum 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1155,
+      "evidence": {
+        "initial": {
+          "id": "pendulum",
+          "visibleMeshes": 31,
+          "visibleLines": 75,
+          "geometryValues": 29861,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-pendulum"
+          ]
+        },
+        "endpoint": {
+          "id": "pendulum",
+          "visibleMeshes": 32,
+          "visibleLines": 76,
+          "geometryValues": 29936,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-pendulum"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering damped 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1790,
+      "evidence": {
+        "initial": {
+          "id": "damped",
+          "visibleMeshes": 16,
+          "visibleLines": 51,
+          "geometryValues": 20973,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-damped"
+          ]
+        },
+        "endpoint": {
+          "id": "damped",
+          "visibleMeshes": 16,
+          "visibleLines": 51,
+          "geometryValues": 20973,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-damped"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering resonance 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1708,
+      "evidence": {
+        "initial": {
+          "id": "resonance",
+          "visibleMeshes": 17,
+          "visibleLines": 46,
+          "geometryValues": 22476,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-resonance"
+          ]
+        },
+        "endpoint": {
+          "id": "resonance",
+          "visibleMeshes": 17,
+          "visibleLines": 46,
+          "geometryValues": 22476,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-resonance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering interference 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1216,
+      "evidence": {
+        "initial": {
+          "id": "interference",
+          "visibleMeshes": 17,
+          "visibleLines": 60,
+          "geometryValues": 26382,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-interference"
+          ]
+        },
+        "endpoint": {
+          "id": "interference",
+          "visibleMeshes": 17,
+          "visibleLines": 60,
+          "geometryValues": 26382,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-interference"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering standing 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2506,
+      "evidence": {
+        "initial": {
+          "id": "standing",
+          "visibleMeshes": 20,
+          "visibleLines": 60,
+          "geometryValues": 26234,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-standing"
+          ]
+        },
+        "endpoint": {
+          "id": "standing",
+          "visibleMeshes": 20,
+          "visibleLines": 60,
+          "geometryValues": 26234,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-standing"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering sound 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1259,
+      "evidence": {
+        "initial": {
+          "id": "sound",
+          "visibleMeshes": 75,
+          "visibleLines": 45,
+          "geometryValues": 117435,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-sound"
+          ]
+        },
+        "endpoint": {
+          "id": "sound",
+          "visibleMeshes": 75,
+          "visibleLines": 45,
+          "geometryValues": 117435,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-sound"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering series 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1212,
+      "evidence": {
+        "initial": {
+          "id": "series",
+          "visibleMeshes": 22,
+          "visibleLines": 48,
+          "geometryValues": 18210,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-series"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering parallel 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2453,
+      "evidence": {
+        "initial": {
+          "id": "parallel",
+          "visibleMeshes": 24,
+          "visibleLines": 50,
+          "geometryValues": 18822,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-parallel"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering joule 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1810,
+      "evidence": {
+        "initial": {
+          "id": "joule",
+          "visibleMeshes": 16,
+          "visibleLines": 48,
+          "geometryValues": 15936,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-joule"
+          ]
+        },
+        "endpoint": {
+          "id": "joule",
+          "visibleMeshes": 16,
+          "visibleLines": 48,
+          "geometryValues": 15936,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-joule"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering magnetic 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1208,
+      "evidence": {
+        "initial": {
+          "id": "magnetic",
+          "visibleMeshes": 21,
+          "visibleLines": 57,
+          "geometryValues": 16055,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-magnetic"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering induction 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 859,
+      "evidence": {
+        "initial": {
+          "id": "induction",
+          "visibleMeshes": 35,
+          "visibleLines": 70,
+          "geometryValues": 55050,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-induction"
+          ]
+        },
+        "endpoint": {
+          "id": "induction",
+          "visibleMeshes": 35,
+          "visibleLines": 70,
+          "geometryValues": 55050,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-induction"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering decay 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1869,
+      "evidence": {
+        "initial": {
+          "id": "decay",
+          "visibleMeshes": 13,
+          "visibleLines": 45,
+          "geometryValues": 13494,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-decay"
+          ]
+        },
+        "endpoint": {
+          "id": "decay",
+          "visibleMeshes": 13,
+          "visibleLines": 45,
+          "geometryValues": 13494,
+          "nonFinite": [],
+          "conceptNames": [
+            "concept-decay"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering freefall 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1427,
+      "evidence": {
+        "initial": {
+          "id": "freefall",
+          "visibleMeshes": 11,
+          "visibleLines": 52,
+          "geometryValues": 12849,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-freefall"
+          ]
+        },
+        "endpoint": {
+          "id": "freefall",
+          "visibleMeshes": 12,
+          "visibleLines": 53,
+          "geometryValues": 12924,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-freefall"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering friction 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1595,
+      "evidence": {
+        "initial": {
+          "id": "friction",
+          "visibleMeshes": 13,
+          "visibleLines": 47,
+          "geometryValues": 12996,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-friction"
+          ]
+        },
+        "endpoint": {
+          "id": "friction",
+          "visibleMeshes": 13,
+          "visibleLines": 47,
+          "geometryValues": 12996,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-friction"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering work 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1770,
+      "evidence": {
+        "initial": {
+          "id": "work",
+          "visibleMeshes": 14,
+          "visibleLines": 48,
+          "geometryValues": 14655,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-work"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering impulse 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1287,
+      "evidence": {
+        "initial": {
+          "id": "impulse",
+          "visibleMeshes": 12,
+          "visibleLines": 46,
+          "geometryValues": 12921,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-impulse"
+          ]
+        },
+        "endpoint": {
+          "id": "impulse",
+          "visibleMeshes": 11,
+          "visibleLines": 45,
+          "geometryValues": 12846,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-impulse"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering buoyancy 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1953,
+      "evidence": {
+        "initial": {
+          "id": "buoyancy",
+          "visibleMeshes": 18,
+          "visibleLines": 48,
+          "geometryValues": 15300,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-buoyancy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering pressure 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2133,
+      "evidence": {
+        "initial": {
+          "id": "pressure",
+          "visibleMeshes": 15,
+          "visibleLines": 46,
+          "geometryValues": 15045,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-pressure"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering reflection 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2340,
+      "evidence": {
+        "initial": {
+          "id": "reflection",
+          "visibleMeshes": 23,
+          "visibleLines": 51,
+          "geometryValues": 20591,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-reflection"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering refraction 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1450,
+      "evidence": {
+        "initial": {
+          "id": "refraction",
+          "visibleMeshes": 29,
+          "visibleLines": 73,
+          "geometryValues": 28667,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-refraction"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering tir 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 955,
+      "evidence": {
+        "initial": {
+          "id": "tir",
+          "visibleMeshes": 29,
+          "visibleLines": 73,
+          "geometryValues": 28667,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-tir"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering lens 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2939,
+      "evidence": {
+        "initial": {
+          "id": "lens",
+          "visibleMeshes": 22,
+          "visibleLines": 59,
+          "geometryValues": 19457,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-lens"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering mirror 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 656,
+      "evidence": {
+        "initial": {
+          "id": "mirror",
+          "visibleMeshes": 21,
+          "visibleLines": 59,
+          "geometryValues": 17804,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-mirror"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering prism 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1628,
+      "evidence": {
+        "initial": {
+          "id": "prism",
+          "visibleMeshes": 20,
+          "visibleLines": 61,
+          "geometryValues": 12248,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-prism"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering young 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 3345,
+      "evidence": {
+        "initial": {
+          "id": "young",
+          "visibleMeshes": 26,
+          "visibleLines": 59,
+          "geometryValues": 21257,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-young"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering diffraction 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2102,
+      "evidence": {
+        "initial": {
+          "id": "diffraction",
+          "visibleMeshes": 22,
+          "visibleLines": 56,
+          "geometryValues": 18656,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-diffraction"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering polarization 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1156,
+      "evidence": {
+        "initial": {
+          "id": "polarization",
+          "visibleMeshes": 22,
+          "visibleLines": 58,
+          "geometryValues": 18728,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-polarization"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering thermalexpansion 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1302,
+      "evidence": {
+        "initial": {
+          "id": "thermalexpansion",
+          "visibleMeshes": 14,
+          "visibleLines": 54,
+          "geometryValues": 16833,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-thermalexpansion"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering calorimetry 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2109,
+      "evidence": {
+        "initial": {
+          "id": "calorimetry",
+          "visibleMeshes": 18,
+          "visibleLines": 46,
+          "geometryValues": 13734,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-calorimetry"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering phasechange 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2253,
+      "evidence": {
+        "initial": {
+          "id": "phasechange",
+          "visibleMeshes": 15,
+          "visibleLines": 44,
+          "geometryValues": 15954,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-phasechange"
+          ]
+        },
+        "endpoint": {
+          "id": "phasechange",
+          "visibleMeshes": 15,
+          "visibleLines": 44,
+          "geometryValues": 14850,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-phasechange"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering heattransfer 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1284,
+      "evidence": {
+        "initial": {
+          "id": "heattransfer",
+          "visibleMeshes": 30,
+          "visibleLines": 54,
+          "geometryValues": 42510,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-heattransfer"
+          ]
+        },
+        "endpoint": {
+          "id": "heattransfer",
+          "visibleMeshes": 30,
+          "visibleLines": 54,
+          "geometryValues": 42510,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-heattransfer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering isobaric 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1337,
+      "evidence": {
+        "initial": {
+          "id": "isobaric",
+          "visibleMeshes": 15,
+          "visibleLines": 46,
+          "geometryValues": 15786,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-isobaric"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering isochoric 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1314,
+      "evidence": {
+        "initial": {
+          "id": "isochoric",
+          "visibleMeshes": 14,
+          "visibleLines": 46,
+          "geometryValues": 14094,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-isochoric"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering firstlaw 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1645,
+      "evidence": {
+        "initial": {
+          "id": "firstlaw",
+          "visibleMeshes": 12,
+          "visibleLines": 45,
+          "geometryValues": 14538,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-firstlaw"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering kinetic 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1982,
+      "evidence": {
+        "initial": {
+          "id": "kinetic",
+          "visibleMeshes": 14,
+          "visibleLines": 46,
+          "geometryValues": 14094,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-kinetic"
+          ]
+        },
+        "endpoint": {
+          "id": "kinetic",
+          "visibleMeshes": 14,
+          "visibleLines": 46,
+          "geometryValues": 14094,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-kinetic"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering resistivity 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1654,
+      "evidence": {
+        "initial": {
+          "id": "resistivity",
+          "visibleMeshes": 12,
+          "visibleLines": 44,
+          "geometryValues": 13428,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-resistivity"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering internalresistance 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1767,
+      "evidence": {
+        "initial": {
+          "id": "internalresistance",
+          "visibleMeshes": 13,
+          "visibleLines": 46,
+          "geometryValues": 13713,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-internalresistance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering bridge 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1462,
+      "evidence": {
+        "initial": {
+          "id": "bridge",
+          "visibleMeshes": 15,
+          "visibleLines": 50,
+          "geometryValues": 14343,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-bridge"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering solenoid 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1571,
+      "evidence": {
+        "initial": {
+          "id": "solenoid",
+          "visibleMeshes": 25,
+          "visibleLines": 55,
+          "geometryValues": 26450,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-solenoid"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering lorentz 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 804,
+      "evidence": {
+        "initial": {
+          "id": "lorentz",
+          "visibleMeshes": 43,
+          "visibleLines": 55,
+          "geometryValues": 58625,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-lorentz"
+          ]
+        },
+        "endpoint": {
+          "id": "lorentz",
+          "visibleMeshes": 43,
+          "visibleLines": 55,
+          "geometryValues": 58625,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-lorentz"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering transformer 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2299,
+      "evidence": {
+        "initial": {
+          "id": "transformer",
+          "visibleMeshes": 19,
+          "visibleLines": 45,
+          "geometryValues": 20664,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-transformer"
+          ]
+        },
+        "endpoint": {
+          "id": "transformer",
+          "visibleMeshes": 19,
+          "visibleLines": 45,
+          "geometryValues": 20664,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-transformer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ac 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2071,
+      "evidence": {
+        "initial": {
+          "id": "ac",
+          "visibleMeshes": 13,
+          "visibleLines": 46,
+          "geometryValues": 13713,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-ac"
+          ]
+        },
+        "endpoint": {
+          "id": "ac",
+          "visibleMeshes": 13,
+          "visibleLines": 46,
+          "geometryValues": 13713,
+          "nonFinite": [],
+          "conceptNames": [
+            "discovery-concept-ac"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering vector_sum 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 6224,
+      "evidence": {
+        "initial": {
+          "id": "vector_sum",
+          "visibleMeshes": 15,
+          "visibleLines": 59,
+          "geometryValues": 10304,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-vector_sum"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering vector_components 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 858,
+      "evidence": {
+        "initial": {
+          "id": "vector_components",
+          "visibleMeshes": 15,
+          "visibleLines": 59,
+          "geometryValues": 10304,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-vector_components"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering relative_motion 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2821,
+      "evidence": {
+        "initial": {
+          "id": "relative_motion",
+          "visibleMeshes": 53,
+          "visibleLines": 101,
+          "geometryValues": 52346,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-relative_motion"
+          ]
+        },
+        "endpoint": {
+          "id": "relative_motion",
+          "visibleMeshes": 53,
+          "visibleLines": 101,
+          "geometryValues": 52346,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-relative_motion"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering average_speed 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2915,
+      "evidence": {
+        "initial": {
+          "id": "average_speed",
+          "visibleMeshes": 50,
+          "visibleLines": 93,
+          "geometryValues": 51747,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-average_speed"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering braking 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1499,
+      "evidence": {
+        "initial": {
+          "id": "braking",
+          "visibleMeshes": 31,
+          "visibleLines": 69,
+          "geometryValues": 31227,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-braking"
+          ]
+        },
+        "endpoint": {
+          "id": "braking",
+          "visibleMeshes": 30,
+          "visibleLines": 68,
+          "geometryValues": 31152,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-braking"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering atwood 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 3715,
+      "evidence": {
+        "initial": {
+          "id": "atwood",
+          "visibleMeshes": 21,
+          "visibleLines": 48,
+          "geometryValues": 20691,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-atwood"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering pulley 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1581,
+      "evidence": {
+        "initial": {
+          "id": "pulley",
+          "visibleMeshes": 17,
+          "visibleLines": 44,
+          "geometryValues": 20391,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-pulley"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering elevator 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2193,
+      "evidence": {
+        "initial": {
+          "id": "elevator",
+          "visibleMeshes": 15,
+          "visibleLines": 63,
+          "geometryValues": 13710,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-elevator"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering torque_angle 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2814,
+      "evidence": {
+        "initial": {
+          "id": "torque_angle",
+          "visibleMeshes": 15,
+          "visibleLines": 54,
+          "geometryValues": 12416,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-torque_angle"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering spring_energy 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1338,
+      "evidence": {
+        "initial": {
+          "id": "spring_energy",
+          "visibleMeshes": 33,
+          "visibleLines": 68,
+          "geometryValues": 38400,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-spring_energy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering hydraulic_press 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1763,
+      "evidence": {
+        "initial": {
+          "id": "hydraulic_press",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 13623,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-hydraulic_press"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering communicating 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1973,
+      "evidence": {
+        "initial": {
+          "id": "communicating",
+          "visibleMeshes": 14,
+          "visibleLines": 44,
+          "geometryValues": 12447,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-communicating"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering spring_period 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1158,
+      "evidence": {
+        "initial": {
+          "id": "spring_period",
+          "visibleMeshes": 33,
+          "visibleLines": 68,
+          "geometryValues": 38400,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-spring_period"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering oscillator_energy 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1800,
+      "evidence": {
+        "initial": {
+          "id": "oscillator_energy",
+          "visibleMeshes": 33,
+          "visibleLines": 68,
+          "geometryValues": 38400,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-oscillator_energy"
+          ]
+        },
+        "endpoint": {
+          "id": "oscillator_energy",
+          "visibleMeshes": 33,
+          "visibleLines": 68,
+          "geometryValues": 38400,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-oscillator_energy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering phase_difference 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1963,
+      "evidence": {
+        "initial": {
+          "id": "phase_difference",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-phase_difference"
+          ]
+        },
+        "endpoint": {
+          "id": "phase_difference",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-phase_difference"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering string_speed 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1653,
+      "evidence": {
+        "initial": {
+          "id": "string_speed",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-string_speed"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering string_resonance 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1737,
+      "evidence": {
+        "initial": {
+          "id": "string_resonance",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-string_resonance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering sound_level 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1574,
+      "evidence": {
+        "initial": {
+          "id": "sound_level",
+          "visibleMeshes": 7,
+          "visibleLines": 29,
+          "geometryValues": 10107,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-sound_level"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering intensity_distance 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 976,
+      "evidence": {
+        "initial": {
+          "id": "intensity_distance",
+          "visibleMeshes": 11,
+          "visibleLines": 51,
+          "geometryValues": 14799,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-intensity_distance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering standing_phase 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1580,
+      "evidence": {
+        "initial": {
+          "id": "standing_phase",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-standing_phase"
+          ]
+        },
+        "endpoint": {
+          "id": "standing_phase",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-standing_phase"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering reflection_wave 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2399,
+      "evidence": {
+        "initial": {
+          "id": "reflection_wave",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-reflection_wave"
+          ]
+        },
+        "endpoint": {
+          "id": "reflection_wave",
+          "visibleMeshes": 16,
+          "visibleLines": 44,
+          "geometryValues": 25608,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-reflection_wave"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering uniform_field 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 944,
+      "evidence": {
+        "initial": {
+          "id": "uniform_field",
+          "visibleMeshes": 27,
+          "visibleLines": 64,
+          "geometryValues": 15992,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-uniform_field"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering potential_point 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1363,
+      "evidence": {
+        "initial": {
+          "id": "potential_point",
+          "visibleMeshes": 24,
+          "visibleLines": 62,
+          "geometryValues": 14111,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-potential_point"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering potential_pair 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2366,
+      "evidence": {
+        "initial": {
+          "id": "potential_pair",
+          "visibleMeshes": 15,
+          "visibleLines": 52,
+          "geometryValues": 15014,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-potential_pair"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering capacitor_plate 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2433,
+      "evidence": {
+        "initial": {
+          "id": "capacitor_plate",
+          "visibleMeshes": 11,
+          "visibleLines": 44,
+          "geometryValues": 12840,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-capacitor_plate"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering dielectric 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1186,
+      "evidence": {
+        "initial": {
+          "id": "dielectric",
+          "visibleMeshes": 12,
+          "visibleLines": 44,
+          "geometryValues": 14532,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-dielectric"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering capacitor_series 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2002,
+      "evidence": {
+        "initial": {
+          "id": "capacitor_series",
+          "visibleMeshes": 17,
+          "visibleLines": 50,
+          "geometryValues": 19831,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-capacitor_series"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering capacitor_parallel 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1286,
+      "evidence": {
+        "initial": {
+          "id": "capacitor_parallel",
+          "visibleMeshes": 17,
+          "visibleLines": 52,
+          "geometryValues": 19840,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-capacitor_parallel"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering charge_quantization 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1267,
+      "evidence": {
+        "initial": {
+          "id": "charge_quantization",
+          "visibleMeshes": 6,
+          "visibleLines": 22,
+          "geometryValues": 5427,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-charge_quantization"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering drift 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2581,
+      "evidence": {
+        "initial": {
+          "id": "drift",
+          "visibleMeshes": 13,
+          "visibleLines": 46,
+          "geometryValues": 10545,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-drift"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering wire_stretch 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1545,
+      "evidence": {
+        "initial": {
+          "id": "wire_stretch",
+          "visibleMeshes": 11,
+          "visibleLines": 44,
+          "geometryValues": 10395,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-wire_stretch"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering potentiometer 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 979,
+      "evidence": {
+        "initial": {
+          "id": "potentiometer",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-potentiometer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering voltage_divider 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1340,
+      "evidence": {
+        "initial": {
+          "id": "voltage_divider",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-voltage_divider"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering meter_loading 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2468,
+      "evidence": {
+        "initial": {
+          "id": "meter_loading",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-meter_loading"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering battery_series 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 946,
+      "evidence": {
+        "initial": {
+          "id": "battery_series",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-battery_series"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering battery_parallel 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1397,
+      "evidence": {
+        "initial": {
+          "id": "battery_parallel",
+          "visibleMeshes": 34,
+          "visibleLines": 46,
+          "geometryValues": 40978,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-battery_parallel"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering wire_field 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2184,
+      "evidence": {
+        "initial": {
+          "id": "wire_field",
+          "visibleMeshes": 13,
+          "visibleLines": 50,
+          "geometryValues": 13011,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-wire_field"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering flux_angle 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 855,
+      "evidence": {
+        "initial": {
+          "id": "flux_angle",
+          "visibleMeshes": 29,
+          "visibleLines": 49,
+          "geometryValues": 30045,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-flux_angle"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering binding_energy 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2357,
+      "evidence": {
+        "initial": {
+          "id": "binding_energy",
+          "visibleMeshes": 10,
+          "visibleLines": 44,
+          "geometryValues": 10119,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-binding_energy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering table_hanging 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 939,
+      "evidence": {
+        "initial": {
+          "id": "table_hanging",
+          "visibleMeshes": 34,
+          "visibleLines": 72,
+          "geometryValues": 35211,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-table_hanging"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering contact_carts 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 3322,
+      "evidence": {
+        "initial": {
+          "id": "contact_carts",
+          "visibleMeshes": 51,
+          "visibleLines": 95,
+          "geometryValues": 52413,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-contact_carts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering accelerating_pendulum 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2844,
+      "evidence": {
+        "initial": {
+          "id": "accelerating_pendulum",
+          "visibleMeshes": 16,
+          "visibleLines": 48,
+          "geometryValues": 13728,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-accelerating_pendulum"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering double_incline 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2895,
+      "evidence": {
+        "initial": {
+          "id": "double_incline",
+          "visibleMeshes": 52,
+          "visibleLines": 95,
+          "geometryValues": 54105,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-double_incline"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ladder_balance 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1805,
+      "evidence": {
+        "initial": {
+          "id": "ladder_balance",
+          "visibleMeshes": 15,
+          "visibleLines": 46,
+          "geometryValues": 14166,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-ladder_balance"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering beam_supports 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1576,
+      "evidence": {
+        "initial": {
+          "id": "beam_supports",
+          "visibleMeshes": 22,
+          "visibleLines": 58,
+          "geometryValues": 15065,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-beam_supports"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering three_strings 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2764,
+      "evidence": {
+        "initial": {
+          "id": "three_strings",
+          "visibleMeshes": 20,
+          "visibleLines": 57,
+          "geometryValues": 13298,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-three_strings"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering slide_tip 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1593,
+      "evidence": {
+        "initial": {
+          "id": "slide_tip",
+          "visibleMeshes": 12,
+          "visibleLines": 46,
+          "geometryValues": 11298,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-slide_tip"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering collision_2d 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 950,
+      "evidence": {
+        "initial": {
+          "id": "collision_2d",
+          "visibleMeshes": 16,
+          "visibleLines": 54,
+          "geometryValues": 13511,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-collision_2d"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ballistic_pendulum 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1382,
+      "evidence": {
+        "initial": {
+          "id": "ballistic_pendulum",
+          "visibleMeshes": 14,
+          "visibleLines": 46,
+          "geometryValues": 13500,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-ballistic_pendulum"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering collision_spring 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2593,
+      "evidence": {
+        "initial": {
+          "id": "collision_spring",
+          "visibleMeshes": 15,
+          "visibleLines": 46,
+          "geometryValues": 17700,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-collision_spring"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering string_power 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1606,
+      "evidence": {
+        "initial": {
+          "id": "string_power",
+          "visibleMeshes": 10,
+          "visibleLines": 46,
+          "geometryValues": 12075,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-string_power"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering three_charge_energy 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1744,
+      "evidence": {
+        "initial": {
+          "id": "three_charge_energy",
+          "visibleMeshes": 15,
+          "visibleLines": 52,
+          "geometryValues": 15014,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-three_charge_energy"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering electric_work_paths 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1680,
+      "evidence": {
+        "initial": {
+          "id": "electric_work_paths",
+          "visibleMeshes": 14,
+          "visibleLines": 54,
+          "geometryValues": 13379,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-electric_work_paths"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering isolated_dielectric 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1820,
+      "evidence": {
+        "initial": {
+          "id": "isolated_dielectric",
+          "visibleMeshes": 13,
+          "visibleLines": 44,
+          "geometryValues": 16185,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-isolated_dielectric"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering ammeter_shunt 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1079,
+      "evidence": {
+        "initial": {
+          "id": "ammeter_shunt",
+          "visibleMeshes": 49,
+          "visibleLines": 46,
+          "geometryValues": 49471,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-ammeter_shunt"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering voltmeter_design 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1422,
+      "evidence": {
+        "initial": {
+          "id": "voltmeter_design",
+          "visibleMeshes": 48,
+          "visibleLines": 46,
+          "geometryValues": 48883,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-voltmeter_design"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering charge_sharing 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2636,
+      "evidence": {
+        "initial": {
+          "id": "charge_sharing",
+          "visibleMeshes": 29,
+          "visibleLines": 44,
+          "geometryValues": 29990,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-charge_sharing"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering sliding_rod 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2180,
+      "evidence": {
+        "initial": {
+          "id": "sliding_rod",
+          "visibleMeshes": 16,
+          "visibleLines": 47,
+          "geometryValues": 16410,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-sliding_rod"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering magnetic_braking 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 691,
+      "evidence": {
+        "initial": {
+          "id": "magnetic_braking",
+          "visibleMeshes": 14,
+          "visibleLines": 45,
+          "geometryValues": 16260,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-magnetic_braking"
+          ]
+        },
+        "endpoint": {
+          "id": "magnetic_braking",
+          "visibleMeshes": 14,
+          "visibleLines": 45,
+          "geometryValues": 16260,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-magnetic_braking"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering coil_entering_field 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 2108,
+      "evidence": {
+        "initial": {
+          "id": "coil_entering_field",
+          "visibleMeshes": 13,
+          "visibleLines": 44,
+          "geometryValues": 16185,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-coil_entering_field"
+          ]
+        },
+        "endpoint": {
+          "id": "coil_entering_field",
+          "visibleMeshes": 13,
+          "visibleLines": 44,
+          "geometryValues": 16185,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-coil_entering_field"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model rendering layered_wall 1440px: actual concepts, default and time endpoint finite",
+      "status": "PASS",
+      "durationMs": 1439,
+      "evidence": {
+        "initial": {
+          "id": "layered_wall",
+          "visibleMeshes": 15,
+          "visibleLines": 45,
+          "geometryValues": 15783,
+          "nonFinite": [],
+          "conceptNames": [
+            "",
+            "foundation-concept-layered_wall"
+          ]
+        }
+      }
+    },
+    {
+      "name": "model interaction 390px: parameter observation, recording, locale, 2D/3D, play/pause and camera",
+      "status": "PASS",
+      "durationMs": 62361,
+      "evidence": [
+        {
+          "id": "energy",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "wave",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "electric",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "ohm",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "collision",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "lever",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "reflection",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "phasechange",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "vector_sum",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "atwood",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "capacitor_plate",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "sliding_rod",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        }
+      ]
+    },
+    {
+      "name": "model interaction 1440px: parameter observation, recording, locale, 2D/3D, play/pause and camera",
+      "status": "PASS",
+      "durationMs": 78325,
+      "evidence": [
+        {
+          "id": "energy",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "wave",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "electric",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "ohm",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "collision",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "lever",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "reflection",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "phasechange",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "vector_sum",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "atwood",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "capacitor_plate",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        },
+        {
+          "id": "sliding_rod",
+          "parameterChangedScene": true,
+          "recordedRows": 1,
+          "localeProjectionPreserveState": true,
+          "manualCameraPreserved": true
+        }
+      ]
+    },
+    {
+      "name": "account header 320px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 3260,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 320,
+          "scroll": 320,
+          "height": 844
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 320,
+          "scroll": 320,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 320,
+          "scroll": 320,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 320,
+          "scroll": 320,
+          "height": 844
+        }
+      ]
+    },
+    {
+      "name": "account header 375px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 4160,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 375,
+          "scroll": 375,
+          "height": 844
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 375,
+          "scroll": 375,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 375,
+          "scroll": 375,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 375,
+          "scroll": 375,
+          "height": 844
+        }
+      ]
+    },
+    {
+      "name": "account header 390px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 4144,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 390,
+          "scroll": 390,
+          "height": 844
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 390,
+          "scroll": 390,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 390,
+          "scroll": 390,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 390,
+          "scroll": 390,
+          "height": 844
+        }
+      ]
+    },
+    {
+      "name": "account header 414px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 3857,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 414,
+          "scroll": 414,
+          "height": 844
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 414,
+          "scroll": 414,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 414,
+          "scroll": 414,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 414,
+          "scroll": 414,
+          "height": 844
+        }
+      ]
+    },
+    {
+      "name": "account header 430px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 3999,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 430,
+          "scroll": 430,
+          "height": 844
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 430,
+          "scroll": 430,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 430,
+          "scroll": 430,
+          "height": 844
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 430,
+          "scroll": 430,
+          "height": 844
+        }
+      ]
+    },
+    {
+      "name": "account header 768px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 4046,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 768,
+          "scroll": 768,
+          "height": 900
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 768,
+          "scroll": 768,
+          "height": 900
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 768,
+          "scroll": 768,
+          "height": 900
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 768,
+          "scroll": 768,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "name": "account header 1024px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 4092,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 1024,
+          "scroll": 1024,
+          "height": 900
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 1024,
+          "scroll": 1024,
+          "height": 900
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 1024,
+          "scroll": 1024,
+          "height": 900
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 1024,
+          "scroll": 1024,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "name": "account header 1440px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 4542,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 1440,
+          "scroll": 1440,
+          "height": 900
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 1440,
+          "scroll": 1440,
+          "height": 900
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 1440,
+          "scroll": 1440,
+          "height": 900
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 1440,
+          "scroll": 1440,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "name": "account header 1920px: home and textbooks, VI/EN, touch target and no overflow",
+      "status": "PASS",
+      "durationMs": 4059,
+      "evidence": [
+        {
+          "path": "",
+          "locale": "vi-VN",
+          "width": 1920,
+          "scroll": 1920,
+          "height": 900
+        },
+        {
+          "path": "",
+          "locale": "en-US",
+          "width": 1920,
+          "scroll": 1920,
+          "height": 900
+        },
+        {
+          "path": "books.html",
+          "locale": "vi-VN",
+          "width": 1920,
+          "scroll": 1920,
+          "height": 900
+        },
+        {
+          "path": "books.html",
+          "locale": "en-US",
+          "width": 1920,
+          "scroll": 1920,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "name": "auth fixture 320px: validation, pending, email/signup/reset/Google/error/logout/delete, focus and lab data",
+      "status": "PASS",
+      "durationMs": 7935,
+      "evidence": {
+        "width": 320,
+        "validation": true,
+        "pendingDuplicatePrevention": true,
+        "signInSignUpResetGoogleErrorSignOutDelete": true,
+        "profileEscaped": true,
+        "localSessionPreserved": true,
+        "focusAndEscape": true,
+        "calls": [
+          {
+            "method": "prepare",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signIn",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "signOut",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signUp",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "signOut",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "resetPassword",
+            "email": "qa@example.invalid",
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signIn",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "google",
+            "email": null,
+            "remember": false,
+            "passwordLength": null
+          },
+          {
+            "method": "google",
+            "email": null,
+            "remember": false,
+            "passwordLength": null
+          },
+          {
+            "method": "deleteAccount",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "prepare",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "auth fixture 390px: validation, pending, email/signup/reset/Google/error/logout/delete, focus and lab data",
+      "status": "PASS",
+      "durationMs": 8601,
+      "evidence": {
+        "width": 390,
+        "validation": true,
+        "pendingDuplicatePrevention": true,
+        "signInSignUpResetGoogleErrorSignOutDelete": true,
+        "profileEscaped": true,
+        "localSessionPreserved": true,
+        "focusAndEscape": true,
+        "calls": [
+          {
+            "method": "prepare",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signIn",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "signOut",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signUp",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "signOut",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "resetPassword",
+            "email": "qa@example.invalid",
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signIn",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "google",
+            "email": null,
+            "remember": false,
+            "passwordLength": null
+          },
+          {
+            "method": "google",
+            "email": null,
+            "remember": false,
+            "passwordLength": null
+          },
+          {
+            "method": "deleteAccount",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "prepare",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "auth fixture 1440px: validation, pending, email/signup/reset/Google/error/logout/delete, focus and lab data",
+      "status": "PASS",
+      "durationMs": 10250,
+      "evidence": {
+        "width": 1440,
+        "validation": true,
+        "pendingDuplicatePrevention": true,
+        "signInSignUpResetGoogleErrorSignOutDelete": true,
+        "profileEscaped": true,
+        "localSessionPreserved": true,
+        "focusAndEscape": true,
+        "calls": [
+          {
+            "method": "prepare",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signIn",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "signOut",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signUp",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "signOut",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "resetPassword",
+            "email": "qa@example.invalid",
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "signIn",
+            "email": "qa@example.invalid",
+            "remember": false,
+            "passwordLength": 13
+          },
+          {
+            "method": "google",
+            "email": null,
+            "remember": false,
+            "passwordLength": null
+          },
+          {
+            "method": "google",
+            "email": null,
+            "remember": false,
+            "passwordLength": null
+          },
+          {
+            "method": "deleteAccount",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          },
+          {
+            "method": "prepare",
+            "email": null,
+            "remember": null,
+            "passwordLength": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "auth fixture disabled/loading: truthful missing config, pending feedback, keyboard and short viewport",
+      "status": "PASS",
+      "durationMs": 6019,
+      "evidence": {
+        "configMissing": true,
+        "lazyInitializationPending": true,
+        "focusContained": true,
+        "shortViewport": true,
+        "escapeFocus": true
+      }
+    },
+    {
+      "name": "no uncaught JavaScript errors or unexpected HTTP/external requests",
+      "status": "PASS",
+      "durationMs": 0,
+      "evidence": {
+        "pageErrors": [],
+        "httpErrors": [],
+        "externalRequests": []
+      }
+    }
+  ],
+  "pageErrors": [],
+  "httpErrors": [],
+  "externalRequests": [],
+  "limits": [
+    "No real Google OAuth, Firebase project, account creation, reset email or cloud data sync was tested by the UI fixture.",
+    "No physical iPhone/Android/iOS Safari or virtual keyboard test.",
+    "Scene metadata and numerical references have bounded coverage; this is not independent expert certification of all scientific models."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "scope": "Chromium actual locally bundled Firebase 13.1.0; mocked Firebase REST only",
+  "tests": [
+    {
+      "name": "Actual SDK prepares SESSION without Firebase REST or Google requests",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual SDK email signup not marked verified; sessionStorage persistence",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit remember uses Firebase LOCAL and own opt-in flag",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual SDK restores remembered account after page reload",
+      "status": "PASS"
+    },
+    {
+      "name": "Actual SDK password-reset and account deletion REST flows complete",
+      "status": "PASS"
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/v1/accounts:signUp"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/accounts:lookup"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/accounts:signInWithPassword"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/accounts:lookup"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/accounts:lookup"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/accounts:sendOobCode"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/accounts:delete"
+    }
+  ],
+  "pageErrors": [],
+  "blocked": [],
+  "limits": [
+    "No real Firebase project or account; no real passwords; no Google OAuth.",
+    "No physical device or Safari verification."
+  ]
+}

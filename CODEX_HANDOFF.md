@@ -159,3 +159,14 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Cards dùng trực tiếp dist/previews/v62/<ID>.webp (300ảnh xuấtactualLabScene), loadinglazy, ảnhclick mởlab; không vẽ preview trong browserhome hoặc chờ mởlab. Thumbnails.js giờ chỉ quản lý lỗi/retry/focus và cleanup; không xóa IndexedDB hoặc dữ liệu phiên.
 - manifest.json có nguồn/hash/state/camera và generator; không tải manifest trênhome. npmcheck cócatalog-previews-v62.mjs; khi sửa renderer/science cần tái xuất ảnh theo yêu cầu, không sửa hashbaseline âmthầm. Không commit KaTeX hoặcwork sinhcục bộ.
 - Một số optionalbrowserchecks v53/v59 kỳvọng côngthức ởcard làharness lịch sử; v62 kiểmảnh qua checks/browser-catalog-v62.py. Côngthức đầyđủ vẫn ởlab/modal/info-pages.
+
+
+## Mô phỏng rõ hiện tượng và tài khoản v64
+
+- Xem `docs/EXPERIMENT_AUTH_V64.md` và `docs/experiments-v64/EXPERIMENTS.md`: cải tiến 121 ID (60 bài gốc +61 bài nền tảng khác);179 bài chưa thiết kế lại riêng. Không suy ra cả300 bài được giáo viên nghiệm thu.13 hash trong `checks/concept-preservation-v64.json` giữ phương trình, catalog và hợp đồng phiên.
+- Các helper concept giữ tham số/đầu ra bất biến. Hai mạch tụ có topology đúng; diện tích bản cùng thang thể hiện tỉ lệ điện dung. Không tạo dòng DC xuyên điện môi. Bản này qua playback300/300; hình phản ứng với tham số.
+- 95 quan hệ lý thuyết ở `observation-view.js`/`observation.css`, bên ngoài canvas. Các plot root3D giữ data/buffer nhưng ẩn; không bật lại billboard gây chữ chồng hoặc ép camera. Hàng bảng chỉ tạo khi mở; giữ SVG/focus khi chỉ điểm hiện tại thay đổi. Góc là liên tục; số lượng/mode rời rạc dùng scatter.
+- Thư viện dùng `previews/v64`; v62 giữ lịch sử. Sau đổi nguồn renderer, chạy `scripts/generate-thumbnails-v64.py`, rồi check `catalog-previews-v64`. Entry/app/views/lab-loader và chuỗi scene dùng64; banner/style62 giữ nguyên. Không sửa hash manifest để né tái xuất.
+- Chủ dự án xác nhận CHƯA có Firebase, chỉ chuẩn bị tích hợp/hướng dẫn. `auth-config.js` giữ `enabled:false` tới khi có Web config công khai và provider/domain đã bật. Xem `docs/AUTH_SETUP.md`. Không cần service account/client secret. Google OAuth/email thật CHƯA nghiệm thu; chưa cloudsync, không thay khóa thpt.
+- SDK cục bộ sinh bằng `npm run bundle:auth` (Firebase13.1.0/esbuild0.28.2); vendor sinh bị gitignore. `npm ci` không tự tạo SDK; preview cần bundle và KaTeX theo workflow. CSP chỉ mở đúng Google helper origin khi auth bật. Scanner chỉ cho đúng Firebase Web key đã xác thực trong auth-config, không cho các khóa khác.
+- Browser checks tùy chọn: `browser-concepts-auth-v64.py`, `browser-observation-v64.py`, `browser-catalog-v64.py`, `browser-auth-sdk-v64.py`. Chromium/SwiftShader, không iPhone/Safari thật. Giữ các audit JSON lịch sử khi npm check sinh số đếm; bằng chứng mới ở `docs/experiments-v64`.

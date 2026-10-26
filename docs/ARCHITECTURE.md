@@ -51,3 +51,10 @@ Bản hợp nhất kế thừa canonical physicslab.tech từ các commit đồn
 ## Ranh giới kiểm chứng
 
 Các oracle độc lập kiểm tập trạng thái hữu hạn;20 mục vẫn PARTIAL. Kiểm geometry CPU không chứng minh WebGL/điểm chạm thực tế. SwiftShader không đại diện hiệu năng GPU điện thoại. Báo cáo phát hành ghi riêng lớp kiểm và các phần chưa nghiệm thu; giữ báo cáo lịch sử và không ghi đè baseline để biến lỗi thành PASS.
+
+
+## v64 — quan sát và tài khoản
+
+Các renderer tạo dữ liệu quan hệ lý thuyết kèm trạng thái hiện tại; `observation-view.js` đọc dữ liệu theo giao diện nhỏ, không nhập Three.js vào trang chủ. HTML/SVG đặt dưới khung mô hình thay cho billboard3D. Bảng lý thuyết tách khỏi các dòng đo của người học.
+
+`account-ui.js` dùng `auth-client.js`, SDK App/Auth bundle cục bộ và config công khai riêng. SDK chỉ khởi tạo khi người dùng mở tài khoản, không có database học sinh hoặc cloudsync. Firebase quản lý persistence; dữ liệu thí nghiệm tiếp tục thuộc các khóa hiện tại. Config mặc định tắt. Workflow tạo SDK, kiểm publicassets và áp CSP theo authdomain đã xác thực. Xem `AUTH_SETUP.md` để kích hoạt bằng Firebase project thật.
