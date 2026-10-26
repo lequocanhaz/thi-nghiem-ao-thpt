@@ -51,7 +51,7 @@ let frames=0;
 for(const e of discoveryExperiments){
  const s=initial(e),d=evaluateDiscovery(e.id,s),model=buildDiscoveryModel(e.id,s,d,{labels:false,thumbnail:true});
  const panel=model.group.getObjectByName('discovery-concept-'+e.id),curve=panel.getObjectByName('concept-theoretical-curve');
- assert.ok(panel.userData.theoretical);assert.ok(curve);assert.ok(panel.children.some(o=>o.userData.modelLabel),'Instrument units remain available when optional labels are off');
+ assert.ok(panel.userData.theoretical);assert.ok(curve);assert.ok(panel.userData.relation.xLabel&&panel.userData.relation.yLabel,'Units remain in the readable relation panel');assert.equal(panel.children.some(o=>o.userData.modelLabel),false,'Hidden3D charts must not allocate unused label textures');
  const originalCurve=curve.geometry,originalMarker=panel.getObjectByName('concept-current-state');
  const states=[s,...e.params.flatMap(p=>[{...s,[p.key]:p.min},{...s,[p.key]:p.max}])];
  for(const state of states){

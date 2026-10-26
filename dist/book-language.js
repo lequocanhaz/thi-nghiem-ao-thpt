@@ -1,7 +1,7 @@
 // Controls surrounding textbook images are localized; the photographed textbook pages,
 // table of contents and model state are never rewritten or auto-translated.
 import {i18n,getLocale} from './i18n.js?v=54';
-import {mountLanguagePill} from './language-pill.js?v=59';
+import {mountLanguagePill} from './language-pill.js?v=65';
 const dictionary=new Map([
  ['Đến','Go'],['Lớp học','Grade'],['Mục lục theo bài','Lesson contents'],['Trang tệp','File page'],['Đến trang tệp','Go to file page'],['Trang sách','Textbook pages'],['Đang tải trang sách…','Loading textbook page…'],['Vuốt để lật trang; khi phóng to, kéo để đọc. Dùng các nút hoặc phím ← → trong trang sách để lật.','Swipe to turn pages; drag to read when zoomed. Use the buttons or ← → keys within the page to turn.'],
  ['Đến nội dung','Skip to main content'],['Điều hướng','Navigation'],['Thí nghiệm','Experiments'],

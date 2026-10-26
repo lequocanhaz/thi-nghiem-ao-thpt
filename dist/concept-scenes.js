@@ -42,11 +42,8 @@ function plot(group,id,position,{width=2.6,height=.85,xLabel,yLabel,title}){
  line(root,'concept-plot-axes',[V(0,height),V(),V(width)],C.ink);
  const series=line(root,`concept-${id}-curve`,Array.from({length:65},()=>V()),C.blue);
  const point=sphere(root,`concept-${id}-point`,.075,C.orange);
- const xMax=label(root,'',V(width,-.2,.02)),yMax=label(root,'',V(-.25,height,.02),{scale:[.65,.2]});
- label(root,xLabel,V(width/2,-.35,.02),{scale:[1.6,.22]});
- label(root,yLabel,V(.38,height+.23,.02),{scale:[1.6,.22]});
- const caption=label(root,title,V(width*.67,height+.23,.02),{scale:[1.8,.22]});
- const current=label(root,'',V(width/2,-.6,.04),{scale:[2.2,.25]});
+ // Text is displayed by observation-view outside the canvas. No hidden canvas
+ // textures are needed for labels that will never be painted in the 3D scene.
  let signature;
  return {
   root,
@@ -60,10 +57,8 @@ function plot(group,id,position,{width=2.6,height=.85,xLabel,yLabel,title}){
     const values=Array.from({length:65},(_,i)=>{const a=xmin+(xmax-xmin)*i/64;return[a,curve(a)];});
     writeLine(series,values.map(([a,b])=>project(a,b)));series.userData.data=values;
     root.userData.curveRevisions=(root.userData.curveRevisions||0)+1;signature=next;
-    xMax?.userData.setText(number(xmax));yMax?.userData.setText(number(ymax));
    }
    point.position.copy(project(x,y));point.userData.value=[x,y];
-   current?.userData.setText(copy||'');caption?.userData.setText(nextTitle||title);
    root.userData.observation={xmin,xmax,ymin,ymax,xLabel,yLabel,title:nextTitle||title,points:series.userData.data,current:[x,y],kind:'continuous'};
    // Relations are rendered in the readable HTML panel, outside the apparatus.
    root.visible=false;

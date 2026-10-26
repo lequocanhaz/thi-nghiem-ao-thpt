@@ -1,4 +1,4 @@
-import {addDiscoveryConcept} from './discovery-concepts.js?v=64';
+import {addDiscoveryConcept} from './discovery-concepts.js?v=65';
 import {premiumRayOptics} from './optics-studio.js?v=35';
 import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,updateLine} from './geometry-kit.js?v=35';
 import {evaluateDiscovery,fringe} from './discovery-models.js?v=17';

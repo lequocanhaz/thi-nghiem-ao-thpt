@@ -1,0 +1,22 @@
+import {translateShort} from '../dist/language-ui.js';
+import assert from 'node:assert/strict';
+import {parseHTML} from 'linkedom';
+import {foundationAxisLabels,observationNumber} from '../dist/observation-labels.js';
+import {FOUNDATION_CONCEPTS} from '../dist/foundation-concepts.js';
+import {updateOpticsObservation} from '../dist/observation-view.js';
+assert.deepEqual(new Set(Object.keys(foundationAxisLabels)),new Set(Object.keys(FOUNDATION_CONCEPTS)));
+for(const labels of Object.values(foundationAxisLabels))for(const label of labels)assert.ok(label.length>2&&!/[_]/.test(label),'Human-readable English labels');
+for(const n of [1e-20,-1e-12,1e10,-1e100])for(const locale of ['vi-VN','en-US']){
+ const text=observationNumber(n,locale,true);assert.ok(text.length<=9,'Compact scientific tick notation');assert.match(text,/e/);
+}
+assert.equal(observationNumber(null),'—');assert.equal(observationNumber(0),'0');
+assert.equal(translateShort('Tiêu cự vật kính'),'Objective focal length');assert.equal(translateShort('Nửa khoảng cách hai điện tích'),'Half charge separation');
+const {document}=parseHTML('<section></section>'),host=document.querySelector('section');
+const data={id:'fixture',notes:{vi:['Nét đứt là đường kéo dài.'],en:['Dashed lines are extensions.']},legend:[{kind:'virtual',labels:{vi:'Tia kéo dài',en:'Virtual extension'}}],image:{kind:'infinite'},values:[{key:'f',label:{vi:'Tiêu cự',en:'Focal length'},value:25,unit:'cm'}]};
+updateOpticsObservation(host,data);assert.ok(!host.hidden);assert.match(host.textContent,/Ảnh ở vô cực/);const details=host.querySelector('details');details.removeAttribute('open');
+updateOpticsObservation(host,data);assert.equal(host.querySelector('details'),details,'Identical state must preserve focus/node');
+updateOpticsObservation(host,data,'en-US');assert.equal(host.querySelector('details').hasAttribute('open'),false);assert.match(host.textContent,/Image at infinity/);
+updateOpticsObservation(host,{...data,notes:{vi:['<img src=x onerror=alert(1)>'],en:[]}});assert.equal(host.querySelector('img'),null,'Guide text is never HTML');
+updateOpticsObservation(host,{...data,image:{kind:'none'}});assert.equal(host.querySelector('.observation-title'),null,'A ray-only experiment must not assert a missing image');
+updateOpticsObservation(host,{...data,image:{kind:'none',afocal:true}},'en-US');assert.match(host.textContent,/Afocal system/,'Zero-power optics has an explicit meaningful state');
+console.log('PASS observation hardening v65: explicit English axes for61 relations, bounded scientific ticks, bilingual optics legend/image status/values, retained disclosure and safe escaped notes.');

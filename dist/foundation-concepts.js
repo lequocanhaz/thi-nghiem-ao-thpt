@@ -2,6 +2,7 @@ import {T,V,C,line,arrow,sphere,box,label,setText,updateLine} from './geometry-k
 import {evaluate} from './models.js?v=54';
 import {getLocale} from './i18n.js?v=54';
 import {englishParameter} from './english-study.js?v=56';
+import {sampleRelation} from './relation-sampling.js?v=65';
 
 // Explicit per-experiment scope. Existing apparatus remains the primary view.
 // These predictions are from the scientific evaluator, not fabricated readings.
@@ -23,16 +24,13 @@ const fmt=x=>finite(x)?new Intl.NumberFormat('en',{maximumSignificantDigits:3}).
 export function foundationPrediction(e,state){
  const spec=FOUNDATION_CONCEPTS[e.id];if(!spec)return null;
  const [inputKey,outputKey,principle]=spec,p=e.params.find(p=>p.key===inputKey),q=e.readouts.find(q=>q.key===outputKey);
- const current=evaluate(e.id,state),points=[];
- for(let i=0;i<=64;i++){
-  let x=p.min+(p.max-p.min)*i/64;
-  if(p.step===1&&p.digits===0)x=Math.round(x);
-  if(points.length&&points.at(-1)?.[0]===x)continue;
+ const current=evaluate(e.id,state),excludedInputs=e.id==='potential_pair'?[state.half,-state.half].filter(x=>x>=p.min&&x<=p.max):[];
+ const points=sampleRelation({min:p.min,max:p.max,integer:['charge_quantization','pulley','string_resonance','battery_series','battery_parallel'].includes(e.id),excluded:excludedInputs},x=>{
   const d=evaluate(e.id,{...state,[inputKey]:x});
-  points.push(d&&d.domainValid!==false&&finite(d[outputKey])?[x,d[outputKey]]:null);
- }
+  return d&&d.domainValid!==false?d[outputKey]:null;
+ });
  return {id:e.id,inputKey,outputKey,principle,xUnit:p.unit,yUnit:q.unit,inputLabel:p.label,outputLabel:q.label,
-  points,current:current&&current.domainValid!==false&&finite(current[outputKey])?[state[inputKey],current[outputKey]]:null};
+  points,excludedInputs,current:current&&current.domainValid!==false&&finite(current[outputKey])?[state[inputKey],current[outputKey]]:null};
 }
 /** Two actual capacitor branches, including their conducting connections. The
  * steady-state diagram has no moving carriers: a charged ideal capacitor does
@@ -45,7 +43,7 @@ export function buildFoundationCapacitors(e,state,data,o={}){
   const root=new T.Group();root.name='network-capacitor-'+(i+1);root.position.copy(p);group.add(root);
   const positive=box(root,.06,.75,.45,C.orange,-.12,0,0),negative=box(root,.06,.75,.45,C.blue,.12,0,0);
   const field=arrow(root,V(-.1,0,.35),V(1,0,0),C.green,.2);field.name='capacitor-field-'+(i+1);
-  const caption=text(root,'',V(0,.64,.05),o),values=text(root,'',V(0,-.58,.05),o);
+  const caption=text(root,'',V(0,.64,.05),{...o,labels:true}),values=text(root,'',V(0,-.58,.05),o);
   return{root,field,caption,values,plates:[positive,negative]};
  });
  if(parallel){for(const p of centers){rails([V(-2.5,p.y),V(p.x-.15,p.y)]);rails([V(p.x+.15,p.y),V(2.5,p.y)]);}rails([V(-2.5,2.5),V(-2.5,.15),V(-.25,.15)]);rails([V(.25,.15),V(2.5,.15),V(2.5,2.5)]);}
@@ -73,8 +71,8 @@ export function buildFoundationCapacitors(e,state,data,o={}){
  }};
  model.update(state,data,o.config||{});return model;
 }
-function text(g,value,p,o){
- if(typeof document==='undefined')return null;
+function text(g,value,p,o={}){
+ if(typeof document==='undefined'||g.name==='foundation-observation-plot'||o.labels===false)return null;
  return label(g,value,p,{...o,labels:true,width:768,height:96,fontSize:34,fontWeight:600,pixelSize:12,scale:[3.2,.4]});
 }
 function setArrow(a,p,v,k=1){const n=v.length()*k;a.position.copy(p);a.visible=n>1e-9;if(a.visible){a.setDirection(v.clone().normalize());a.setLength(n,Math.min(.13,n*.3),Math.min(.065,n*.15));}}

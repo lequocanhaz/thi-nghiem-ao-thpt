@@ -1,5 +1,5 @@
 import {i18n,dictionaries} from './i18n.js?v=54';
-import {mountLanguagePill} from './language-pill.js?v=59';
+import {mountLanguagePill} from './language-pill.js?v=65';
 import {experiments} from './experiments.js?v=59';
 import {englishStudy,englishParameter,englishTopic} from './english-study.js?v=56';
 import {messagePairs} from './locales/messages.js?v=54';
@@ -134,6 +134,19 @@ for(const [vi,en] of [
  ['Bấm ngôi sao trên một thí nghiệm để lưu vào đây.','Select the star on an experiment to save it here.'],
  ['Thử từ khóa ngắn hơn hoặc bỏ bớt bộ lọc.','Try a shorter search or fewer filters.'],
  ['Số liệu được tính từ mô hình. Các giả định nằm trong tab Mô hình.','Readouts are calculated by the model. See its assumptions under the Model tab.']
+])pair(vi,en);
+
+// Explicit optical terminology replaces context-free “Variable”/ambiguous symbol fallbacks.
+for(const [vi,en] of [
+ ['Góc tới','Angle of incidence'],['Chiết suất bản','Slab refractive index'],['Bề dày bản','Slab thickness'],['Độ lệch ngang','Lateral displacement'],['Góc trong bản','Angle inside slab'],['Góc ló','Angle of emergence'],
+ ['Độ sâu thật','Real depth'],['Chiết suất chất lỏng','Liquid refractive index'],['Độ sâu biểu kiến','Apparent depth'],['Độ nâng ảnh','Apparent rise'],['Độ sâu thật / biểu kiến','Real / apparent depth'],
+ ['Chiết suất môi trường 2','Second medium refractive index'],['Chiết suất môi trường 1','First medium refractive index'],['Góc Brewster',"Brewster's angle"],['Góc khúc xạ','Angle of refraction'],['Tổng hai góc','Sum of angles'],
+ ['Góc xoay gương','Mirror rotation'],['Độ quay tia phản xạ','Reflected-ray rotation'],['Độ quay pháp tuyến','Normal rotation'],['Tỉ số hai góc','Angle ratio'],
+ ['Chiết suất lõi','Core refractive index'],['Chiết suất vỏ','Cladding refractive index'],['Khẩu độ số NA','Numerical aperture NA'],['Góc nhận cực đại','Maximum acceptance angle'],['Góc giới hạn lõi–vỏ','Core–cladding critical angle'],
+ ['Tiêu cự','Focal length'],['Độ tụ','Optical power'],['Tia song song hội tụ','Parallel rays converge'],['Độ tụ kính 1','First lens power'],['Độ tụ kính 2','Second lens power'],['Độ tụ hệ','Combined power'],['Tiêu cự hệ','Combined focal length'],['Hội tụ: 1; phân kì: −1','Converging: 1; diverging: −1'],
+ ['Tiêu cự kính','Lens focal length'],['Bội giác','Angular magnification'],['Khoảng vật–kính','Object–lens distance'],['Tiêu cự vật kính','Objective focal length'],['Tiêu cự thị kính','Eyepiece focal length'],['Bội giác góc có dấu','Signed angular magnification'],['Chiều dài ống','Tube length'],['Tỉ số tiêu cự','Focal-length ratio'],
+ ['Độ dài quang học','Optical interval'],['Bội giác góc','Angular magnification'],['Phóng đại của vật kính','Objective linear magnification'],['Bội giác thị kính','Eyepiece angular magnification'],
+ ['Khoảng cách vật','Object distance'],['Khoảng cách màn','Screen distance'],['Chiều cao vật','Object height'],['Chiều cao ảnh có dấu','Signed image height'],['Độ phóng đại','Linear magnification'],['Tỉ số khoảng cách','Distance ratio'],['Nửa khoảng cách hai điện tích','Half charge separation']
 ])pair(vi,en);
 
 export const getLocale=()=>i18n.getLocale();
