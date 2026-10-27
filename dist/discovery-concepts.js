@@ -1,3 +1,4 @@
+import {scientificNumber} from './number-format.js?v=66';
 // Theoretical relations accompanying the apparatus. No recorded data are modified.
 import {T,C,V,box,line,sphere,label,setText,updateLine} from './geometry-kit.js?v=35';
 import {evaluateDiscovery} from './discovery-models.js?v=17';
@@ -74,7 +75,7 @@ export function addDiscoveryConcept(group,id,state,data,o={}){
  const low=label(panel,'',V(x0,-.89,.08),{...small,scale:[.9,.29]}),high=label(panel,'',V(x0+w,-.89,.08),{...small,scale:[.9,.29]}),legend=label(panel,'',V(1.3,.88,.08),{...small,scale:[2.7,.3]});
  const ylow=label(panel,'',V(x0+.33,y0+.12,.08),{...small,scale:[.7,.26]}),yhigh=label(panel,'',V(x0+.33,y0+h-.12,.08),{...small,scale:[.7,.26]});
  let signature='',relation;
- const number=x=>Math.abs(x)>9999||Math.abs(x)>0&&Math.abs(x)<.001?x.toExponential(1):Number(x.toFixed(3)).toString();
+ const number=x=>Math.abs(x)>9999||Math.abs(x)>0&&Math.abs(x)<.001?scientificNumber(x,{locale:getLocale(),digits:1,compact:true}):Number(x.toFixed(3)).toString();
  function update(s,d){
   const q=discoveryConcepts[id],key=JSON.stringify(Object.entries(s).filter(([name])=>name!==q.variable&&name!=='t'&&!(q.variable==='inverseDistance'&&name==='distance')));
   if(key!==signature){
