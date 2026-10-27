@@ -1,4 +1,3 @@
-import {scientificNumber} from './number-format.js?v=66';
 import {T,V,C,mat,mesh,box,sphere,cylinder,line,arrow,label,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=35';
 import {labCart,cable,powerSupply,digitalMeter} from './apparatus.js?v=35';
 const clip=(x,a,b)=>Math.max(a,Math.min(b,x)),r=x=>x*Math.PI/180,num=(x,f=0)=>Number.isFinite(x)?x:f;
@@ -10,7 +9,7 @@ function ring(g,radius,color=C.blue){return line(g,Array.from({length:129},(_,i)
 function spring(rope,a,b,z=0){rope.userData.update(Array.from({length:129},(_,i)=>{const f=i/128,t=f*Math.PI*20;return V(a+(b-a)*f,.65+.12*Math.cos(t),z+.12*Math.sin(t));}));}
 function column(g,x,color){return box(g,.45,1,.45,color,x,.6,0);}
 function height(m,v,scale=1){const h=clip(Math.abs(num(v))*scale,.015,2.7);m.scale.y=h;m.position.y=.12+h/2;}
-const fmt=x=>x===null?'Không xác định':Number.isFinite(x)?Math.abs(x)>1e5||Math.abs(x)<.0001&&x!==0?scientificNumber(x,{digits:2}):x.toLocaleString('vi-VN',{maximumFractionDigits:3}):'—';
+const fmt=x=>x===null?'Không xác định':Number.isFinite(x)?Math.abs(x)>1e5||Math.abs(x)<.0001&&x!==0?x.toExponential(2):x.toLocaleString('vi-VN',{maximumFractionDigits:3}):'—';
 export function buildExpansionModel(e,s,d,o={}){
  const g=new T.Group(),view=e.view;platform(g,7.6,4.5);let update;
  switch(e.scene){
