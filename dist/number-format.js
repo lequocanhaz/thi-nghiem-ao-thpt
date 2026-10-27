@@ -13,3 +13,9 @@ export function scientificNumber(value,{locale='vi-VN',digits=2,compact=false}={
  if(locale==='vi-VN')mantissa=mantissa.replace('.',',');
  return `${mantissa}${compact?'×':' × '}10${superscript(Number(exponent))}`;
 }
+
+/** Convert existing UI-only exponential strings without changing the numeric value. */
+export function scientificText(value,{compact=false}={}){
+ return String(value??'').replace(/(-?\d+(?:[.,]\d+)?)[eE]([+-]?\d+)/g,
+  (_match,mantissa,exponent)=>`${mantissa}${compact?'×':' × '}10${superscript(Number(exponent))}`);
+}
