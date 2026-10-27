@@ -1,4 +1,3 @@
-import {scientificNumber} from './number-format.js?v=66';
 import {formulaCatalog} from './formula-catalog.js?v=54';
 import {legacyFormulaToLatex,mathMarkup} from './math.js?v=52';
 export const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -13,7 +12,7 @@ export function pageWindow(current,total){
  const values=[...selected].filter(n=>n>=1&&n<=count).sort((a,b)=>a-b),result=[];
  for(const n of values){if(result.length&&n-result.at(-1)>1)result.push(null);result.push(n);}return result;
 }
-export function parameterText(value,unit=''){return Number.isFinite(value)?((Math.abs(value)>0&&Math.abs(value)<1e-4||Math.abs(value)>=1e8)?scientificNumber(value,{digits:5}):value.toLocaleString('vi-VN',{maximumFractionDigits:8}))+(unit?' '+unit:''):'Chưa xác định';}
+export function parameterText(value,unit=''){return Number.isFinite(value)?((Math.abs(value)>0&&Math.abs(value)<1e-4||Math.abs(value)>=1e8)?value.toExponential(5).replace('.',','):value.toLocaleString('vi-VN',{maximumFractionDigits:8}))+(unit?' '+unit:''):'Chưa xác định';}
 export const layoutDefaults={controlsWidth:380,dockWidth:520,chartHeight:380,tableHeight:360,dataExpanded:true,controlsCollapsed:false,dockCollapsed:false,exploreDock:false,guidance:false,chartCollapsed:false,tableCollapsed:false};
 export function cleanLayout(raw={}){raw=raw&&typeof raw==='object'?raw:{};const x={...layoutDefaults};for(const [k,min,max]of [['controlsWidth',300,560],['dockWidth',360,900],['chartHeight',260,900],['tableHeight',240,900]])if(Number.isFinite(+raw[k]))x[k]=Math.max(min,Math.min(max,+raw[k]));for(const k of ['dataExpanded','controlsCollapsed','dockCollapsed','exploreDock','guidance','chartCollapsed','tableCollapsed'])if(typeof raw[k]==='boolean')x[k]=raw[k];return x;}
 export function restorableRow(e,row){if(!row||!row.s||typeof row.s!=='object'||!e.params.every(p=>Object.hasOwn(row.s,p.key)&&Number.isFinite(row.s[p.key])&&row.s[p.key]>=p.min-1e-6&&(p.key==='t'||row.s[p.key]<=p.max+1e-6)))return false;if(e.id==='electric'&&![0,1,2,3].includes(row.c?.mode))return false;if(e.id==='capacitor'&&!['charge','discharge'].includes(row.c?.capMode))return false;return true;}
