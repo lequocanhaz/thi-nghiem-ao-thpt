@@ -1,4 +1,4 @@
-import {authConfig} from './auth-config.js?v=64';
+import {authConfig} from './auth-config.js?v=66';
 
 export const authPersistenceKey='quanh.auth.persistence.v1';
 const appName='quanh-lab-auth';

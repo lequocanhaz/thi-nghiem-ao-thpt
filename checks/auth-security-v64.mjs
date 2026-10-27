@@ -8,7 +8,7 @@ import {accountErrorKey} from '../dist/account-ui.js';
 // Synthetic well-formed public identifier only; never a provisioned provider key.
 const firebase={apiKey:'AIza'+'x'.repeat(35),authDomain:'quanh-fixture.firebaseapp.com',projectId:'quanh-fixture',appId:'1:123456789:web:abc123'};
 const config={enabled:true,firebase};
-assert.equal(accountPolicy(),policy,'Unconfigured release must not enable Google scripts or frames');
+assert.equal(accountPolicy({enabled:false,firebase:null}),policy,'Unconfigured release must not enable Google scripts or frames');
 const enabled=accountPolicy(config);
 assert.ok(enabled.includes("script-src 'self' 'wasm-unsafe-eval' https://apis.google.com"));
 assert.ok(enabled.includes('frame-src https://quanh-fixture.firebaseapp.com'));
@@ -32,5 +32,5 @@ assert.equal(accountErrorKey('auth/invalid-credential'),'invalid');
 assert.equal(accountErrorKey('auth/unauthorized-domain'),'unavailable');
 const source=fs.readFileSync(new URL('../dist/account-ui.js',import.meta.url),'utf8');
 assert.doesNotMatch(source,/localStorage\.(?:clear|removeItem|setItem)|sessionStorage\.(?:clear|removeItem|setItem)|innerHTML\s*=.*(?:snapshot\.user|\.email|\.displayName)/);
-for(const file of ['index.html','books.html'])assert.match(fs.readFileSync(new URL('../dist/'+file,import.meta.url),'utf8'),/account-ui\.js\?v=64/);
+for(const file of ['index.html','books.html'])assert.match(fs.readFileSync(new URL('../dist/'+file,import.meta.url),'utf8'),/account-ui\.js\?v=66/);
 console.log('PASS auth security: exact configured Firebase helper origins, isolated public web-config exception, other keys blocked, disabled configuration makes no Google policy exception, safe profile text and session preservation.');

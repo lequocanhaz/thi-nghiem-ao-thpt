@@ -36,7 +36,7 @@ for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
   assert.ok(content.includes("<meta name=\"twitter:description\" content=\"Quanh Lab – hệ thống thí nghiệm Vật lí ảo dành cho học sinh, giáo viên THPT với 300 thí nghiệm tương tác 2D/3D, đo đạc, vẽ đồ thị và sách Vật lí 10–12.\">"),'Expected updated Twitter description');
   content=content.replace("<meta name=\"twitter:description\" content=\"Quanh Lab – hệ thống thí nghiệm Vật lí ảo dành cho học sinh, giáo viên THPT với 300 thí nghiệm tương tác 2D/3D, đo đạc, vẽ đồ thị và sách Vật lí 10–12.\">","<meta name=\"twitter:description\" content=\"300 thí nghiệm Vật lí tương tác và ba sách giáo khoa THPT.\">");
   content=content.replace('<link rel="stylesheet" href="observation.css?v=65">','');
-  content=content.replace('<link rel="stylesheet" href="account.css?v=64"><script type="module" src="account-ui.js?v=64"></script>','');
+  content=content.replace('<link rel="stylesheet" href="account.css?v=64"><script type="module" src="account-ui.js?v=66"></script>','');
   content=content.replaceAll('https://physicslab.tech/','https://lequocanhaz.github.io/thi-nghiem-ao-thpt/').replace('<link rel="stylesheet" href="banner-title.css?v=62">','');
  }
  assert.equal(hash(content.replace('<link rel="stylesheet" href="visual-settings.css?v=54">','').replace('<a href="experiments/">Danh mục đầy đủ</a><a href="about.html">Giới thiệu</a>','').replace(/<link rel="sitemap"[^>]+>/,'').replace(/<script id="quanhSiteData" type="application\/ld\+json">[^<]+<\/script>/,'').replace(/\?v=\d+/g,'?v=BASE')),expected,name);
