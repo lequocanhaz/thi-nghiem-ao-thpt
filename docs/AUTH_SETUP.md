@@ -2,6 +2,8 @@
 
 Mã v64 bổ sung adapter cho email/mật khẩu, tạo tài khoản, đặt lại mật khẩu, Google popup, đăng xuất và xóa tài khoản. Cập nhật 27/10/2026: cấu hình trong nhánh `main` đã bật và vượt qua validator định dạng. Việc này chưa xác minh provider, authorized domains, đăng nhập Google hoặc gửi email thật; cần kiểm tra các bước bên dưới với project của chủ website. Khi `dist/auth-config.js` có `enabled:false`, client không kết nối dịch vụ. Đây không phải tài khoản giả lưu trong trình duyệt; kiểm thử fixtures không chứng minh đăng nhập thật đã hoạt động.
 
+Kiểm tra ngày 27/10/2026 trên `physicslab.tech`: trong phiên Chromium mới, nút Google mở cửa sổ tới `accounts.google.com`, không hiện lỗi trang hoặc lỗi domain trước khi đóng phiên thử. Không nhập thông tin, không tạo người dùng và không hoàn tất đăng nhập; thao tác này chưa nghiệm thu toàn bộ OAuth, email/password hoặc thiết bị thật.
+
 ## Cấu hình một lần bởi chủ dự án
 
 1. Tạo/chọn Firebase project do chủ dự án quản lý. Trong Project settings, thêm Web App. Không bật Analytics chỉ để dùng đăng nhập.
