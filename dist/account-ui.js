@@ -1,6 +1,6 @@
 // Account controls are independent of routing and never rewrite experiment storage.
 import {i18n} from './i18n.js?v=54';
-import {createAuthClient} from './auth-client.js?v=64';
+import {createAuthClient} from './auth-client.js?v=66';
 
 const copy={
  'vi-VN':{
