@@ -1,3 +1,4 @@
+import {scientificNumber} from './number-format.js?v=66';
 import {withExtendedConcepts} from './extended-concepts.js?v=64';
 import {leverGeometry} from './lever-geometry.js?v=54';
 import {interferenceWindow} from './simulation-space.js?v=43';
@@ -8,6 +9,7 @@ import {buildDiscoveryModel} from './discovery-scenes.js?v=65';
 import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow as apparatusArrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=35';
 import {rad,interferenceAt,evaluate} from './models.js?v=54';
 // Force and velocity arrows are explanatory overlays, readable through apparatus.
+const readableCurrent=value=>!Number.isFinite(value)?'—':value!==0&&(Math.abs(value)<.001||Math.abs(value)>=1e5)?scientificNumber(value,{digits:2}):value.toLocaleString('vi-VN',{maximumSignificantDigits:3});
 const arrow=(...args)=>{const node=apparatusArrow(...args);node.traverse(part=>{part.renderOrder=900;if(part.material){part.material.depthTest=false;part.material.depthWrite=false;}});return node;};
 const circle=(r,n=100)=>Array.from({length:n+1},(_,i)=>V(r*Math.cos(i*2*Math.PI/n),.05,r*Math.sin(i*2*Math.PI/n)));
 function trolley(g,color,x=0){return labCart(g,color,x);}
@@ -102,7 +104,7 @@ function network(g,s,d,o,parallel=false){
  paths.forEach((p,j)=>line(g,p,[0x2369b1,0xbd6b23,0x168064][j]));makeR(parallel?0:-.75,-1);makeR(parallel?0:.75,parallel?1:-1);
  const curves=paths.map(points=>new T.CurvePath());paths.forEach((points,j)=>points.slice(1).forEach((p,k)=>curves[j].add(new T.LineCurve3(points[k],p))));
  const clouds=paths.map((_,j)=>{const node=new T.InstancedMesh(new T.SphereGeometry(.055,10,8),new T.MeshBasicMaterial({color:[0x2369b1,0xbd6b23,0x168064][j]}),12);node.name='circuit-carriers-'+j;g.add(node);return node;}),dummy=new T.Object3D();
- return(s,d)=>{setText(labels[0],`U=${s.u} V`);setText(labels[1],`R₁=${s.r1} Ω · I₁=${d.i1.toPrecision(3)} A`);setText(labels[2],`R₂=${s.r2} Ω · I₂=${d.i2.toPrecision(3)} A`);if(!parallel){labels[1]?.position.set(-.75,1.05,-1);labels[2]?.position.set(.75,1.05,-1);}
+ return(s,d)=>{setText(labels[0],`U=${s.u} V`);setText(labels[1],`R₁=${s.r1} Ω · I₁=${readableCurrent(d.i1)} A`);setText(labels[2],`R₂=${s.r2} Ω · I₂=${readableCurrent(d.i2)} A`);if(!parallel){labels[1]?.position.set(-.75,1.05,-1);labels[2]?.position.set(.75,1.05,-1);}
   clouds.forEach((node,k)=>{const current=parallel?[d.i1,d.i2,d.i][k]:d.i;node.visible=Math.abs(current)>1e-12;node.userData.current=current;node.userData.unit='A';node.userData.phaseRate=current*.18;
    for(let j=0;j<12;j++){const f=((s.t||0)*current*.18+j/12)%1;dummy.position.copy(curves[k].getPointAt((f+1)%1));dummy.position.y+=.035;dummy.updateMatrix();node.setMatrixAt(j,dummy.matrix);}node.instanceMatrix.needsUpdate=true;
   });
