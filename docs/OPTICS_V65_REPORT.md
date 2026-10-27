@@ -2,6 +2,8 @@
 
 Ngày: 26/10/2026. Mốc trước thay đổi: `1d7070ffdd941f8a8a7a4ac1434c39b2a2ee1ea6` (v64). Nhánh: `feat/optics-clarity-v65`.
 
+**Cập nhật 27/10/2026:** trạng thái Firebase ở cuối báo cáo là lịch sử của đợt v65. Cấu hình trên `main` hiện đã bật và hợp lệ về định dạng; Google/email thật vẫn cần kiểm thử dịch vụ và domain. Xem [AUTH_SETUP.md](AUTH_SETUP.md).
+
 ## Kết quả thực hiện
 
 Đợt này thiết kế lại phần hình học và dụng cụ của **11 thí nghiệm quang học**: bản mặt song song, độ sâu biểu kiến, góc Brewster, gương quay, góc nhận sợi quang, độ tụ, hệ kính sát nhau, kính lúp, kính thiên văn, kính hiển vi và ảnh qua lỗ nhỏ. Các tia có chiều truyền, màu theo vai trò và đường kéo dài ảo nét đứt. Chú giải VI/EN nằm ngoài không gian mô hình, có thể thu gọn.

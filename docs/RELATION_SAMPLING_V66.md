@@ -6,4 +6,6 @@ Mã đang chuẩn bị sửa trường hợp tổng quát trong `sampleRelation`
 
 Đã cập nhật chuỗi query-version đến module thay đổi để trình duyệt tải mã mới. Đã xuất đủ 300 ảnh bằng LabScene vào `work/previews-v66-final`: 300/300 thành công, nguồn ổn định trong khi chụp và tất cả ảnh trùng byte với ảnh v65 hiện hành. `dist/previews/v65/manifest.json` được lấy từ lần xuất thực tế này; ảnh cũ không bị thay thế. Trường commit trong manifest chỉ ghi HEAD lúc bắt đầu, còn các hash nguồn ghi đúng trạng thái workspace chưa commit khi chụp.
 
-Các kết quả kiểm thử, review độc lập và phát hành cần được cập nhật theo phiên làm việc. Không dùng tài liệu này để kết luận rằng toàn bộ 300 mô hình đã được kiểm nghiệm khoa học hoặc rằng iPhone/Safari đã được kiểm thử trên thiết bị thật.
+Kiểm thử sau khi hợp nhất `main` mới: `npm run check` đạt; kiểm tra trình duyệt Chromium cho biểu đồ ở 320/390/1440 px đạt; validator cấu hình Firebase và các fixture tài khoản/bảo mật đạt. Các phép thử tài khoản này không xác minh đăng nhập Google/email thật.
+
+Phiên thực hiện không có công cụ gọi sub-agent vật lí và QA theo quy trình trong `AGENTS.md`; việc review độc lập vẫn còn thiếu. Không dùng tài liệu này để kết luận rằng toàn bộ 300 mô hình đã được kiểm nghiệm khoa học hoặc rằng iPhone/Safari đã được kiểm thử trên thiết bị thật.
