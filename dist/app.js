@@ -1,4 +1,4 @@
-import {scientificNumber} from './number-format.js?v=66';
+import {scientificNumber,scientificText} from './number-format.js?v=66';
 import {updateObservation} from './observation-view.js?v=65';
 import {searchTerms,matchesSearch,searchRank} from './catalog-search.js?v=59';
 import {loadVisualSettings,saveVisualSettings,updateVisualSetting,visualRenderConfig,applyVisualAppearance,syncVisualSettings} from './visual-settings.js?v=54';
@@ -13,7 +13,7 @@ import {libraryContext} from './assistant-context.js?v=24';
 import {LabAssistant} from './assistant.js?v=59';
 import {parameterLimits,parameterWindow,cleanParameterWindows,revealParameterWindows} from './parameter-window.js?v=17';
 import {BannerScene} from './banner.js?v=18';
-import {atEnd,pageWindow,parameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=54';
+import {atEnd,pageWindow,parameterText as rawParameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=54';
 import {fitModels,fitSummary,reportMarkup} from './research.js?v=51';
 import {themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams} from './learning.js?v=17';
 import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=65';
@@ -22,7 +22,7 @@ import {tableGraph,sweepStates,segments,graphParameter,tableColumnFor} from './a
 import {experiments,initialState,electricModes} from './experiments.js?v=59';
 import {evaluate,duration,clampState} from './models.js?v=54';
 import {meters,tableValues} from './measurements.js?v=59';
-import {plotGrid} from './plot-grid.js?v=37';
+import {plotGrid as originalPlotGrid} from './plot-grid.js?v=37';
 import {graphFor} from './graphs.js?v=59';
 import {loadRenderers} from './lab-loader.js?v=65';
 let LabScene,SoftwareScene,sceneLoading=false,sceneError='',sceneProgress=0;
@@ -34,6 +34,14 @@ import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=54';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=(n,d=2)=>Number.isFinite(n)?Math.abs(n)>1e5||(Math.abs(n)<.001&&n!==0)?scientificNumber(n,{locale:getLocale(),digits:2}):n.toLocaleString(getLocale(),{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
+// Keep the validated 300-preview rendering sources untouched; adapt display strings at the UI boundary.
+const parameterText=(...args)=>scientificText(rawParameterText(...args));
+const plotGrid=(...args)=>{
+ const result=originalPlotGrid(...args);
+ const markup=result.markup.replace(/(<text class="plot-tick"[^>]*>)([^<]*)(<\/text>)/g,
+  (_full,open,value,close)=>open+scientificText(value,{compact:true})+close);
+ return {...result,markup};
+};
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/đ/g,'d');
 const defaults={viewMode:'3d',viewPlane:'front',paramWindows:{},loop:false,mode:0,capMode:'charge',gasAxis:'tK',switches:{lines:true,connections:true,components:true,resultant:true,parallelogram:true,axes:true,grid:true,vectors:true,trajectory:true,handles:true,light:true,labels:false}};
 let saved={},prefs={favorites:[],recent:[],quality:'high',voice:'',rate:.95,textSize:1,progress:{},renderer:'auto',motion:!matchMedia('(prefers-reduced-motion: reduce)').matches};try{saved=JSON.parse(localStorage.getItem('thpt-lab-v1')||'{}');prefs={...prefs,...JSON.parse(localStorage.getItem('thpt-ui-v3')||'{}')}}catch{}
