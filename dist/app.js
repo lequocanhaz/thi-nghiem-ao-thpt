@@ -23,7 +23,7 @@ import {evaluate,duration,clampState} from './models.js?v=54';
 import {meters,tableValues} from './measurements.js?v=59';
 import {plotGrid} from './plot-grid.js?v=37';
 import {graphFor} from './graphs.js?v=59';
-import {loadRenderers} from './lab-loader.js?v=65';
+import {loadRenderers} from './lab-loader.js?v=66';
 let LabScene,SoftwareScene,sceneLoading=false,sceneError='',sceneProgress=0;
 import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=62';
 import {Narrator,Tone} from './media.js?v=55';

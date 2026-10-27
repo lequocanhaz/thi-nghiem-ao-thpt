@@ -17,6 +17,9 @@ for(const half of [.005,.15,.42,1.5]){
 }
 assert.deepEqual(sampleRelation({min:0,max:3,count:4,excluded:[1]},x=>x*x),[[0,0],null,[2,4],[3,9]]);
 assert.deepEqual(sampleRelation({min:0,max:1,count:5,integer:true},x=>x),[[0,0],[1,1]]);
+assert.deepEqual(sampleRelation({min:2.2,max:3.8,count:5,integer:true},x=>x),[[3,3]]);
+assert.deepEqual(sampleRelation({min:2.2,max:3.8,count:2,integer:true},x=>x),[[3,3]]);
+assert.deepEqual(sampleRelation({min:2.2,max:2.4,count:5,integer:true},x=>x),[]);
 assert.ok(sampleRelation({min:0,max:1},()=>null).every(p=>p===null));
 assert.throws(()=>sampleRelation({min:1,max:1},x=>x),RangeError);
 console.log('PASS relation sampling v65: independently checked dipole law, explicit pole cuts between uniform samples, immutable inputs, no fabricated finite pole value, discrete quantities and invalid domains.');

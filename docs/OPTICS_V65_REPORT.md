@@ -54,6 +54,8 @@ Không kéo giãn riêng trục y để làm vật nhỏ trông lớn hơn. Đ�
 
 Các ca trình duyệt ghi nhận 0 lỗi JavaScript chưa được bắt; bộ quang học không có HTTP lỗi nội bộ/request nhà cung cấp ngoài. Đo Play 1,25 giây/bài sau warm-up trên Chromium/SwiftShader: 0 geometry mới, trung vị cập nhật 0,3–1,3ms; có mẫu p95 31,6ms ở hệ kính. Đây là phép đo ngắn trên máy chủ, chưa chứng minh FPS/GPU điện thoại.
 
+**Lưu ý về hash bằng chứng:** `optics-v65/renderer-source-hashes.json` là ảnh chụp của lượt QA trước khi hoàn thiện giao diện phát hành. Sau ảnh chụp đó, `dist/app.js` và `dist/observation-view.js` đã thay đổi; các tệp hình học và mô hình trong ảnh chụp không đổi. Không dùng danh sách hash cũ để xác nhận toàn bộ mã nguồn hiện tại. Lượt QA lại 27/27 trên mã phát hành và 12 hash tương ứng được ghi trong [PR #39](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/pull/39).
+
 Đã thực sự gọi các agent chuyên môn: `optics_physics`, `optics_ui`, `optics_qa`, `book_locale_review`. Agent chính tích hợp, kiểm tra chung và phụ trách phát hành. Bằng chứng chọn lọc, tên tệp thay đổi và ảnh ở [optics-v65](optics-v65/).
 
 ### Ảnh trước/sau cùng cấu hình mặc định

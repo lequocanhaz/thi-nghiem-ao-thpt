@@ -2,7 +2,7 @@ import {T,V,C,line,arrow,sphere,box,label,setText,updateLine} from './geometry-k
 import {evaluate} from './models.js?v=54';
 import {getLocale} from './i18n.js?v=54';
 import {englishParameter} from './english-study.js?v=56';
-import {sampleRelation} from './relation-sampling.js?v=65';
+import {sampleRelation} from './relation-sampling.js?v=66';
 
 // Explicit per-experiment scope. Existing apparatus remains the primary view.
 // These predictions are from the scientific evaluator, not fabricated readings.
