@@ -1,4 +1,4 @@
-import {scientificNumber} from '../dist/number-format.js';
+import {scientificNumber,scientificText} from '../dist/number-format.js';
 import {tickText} from '../dist/plot-grid.js';
 import {translateShort} from '../dist/language-ui.js';
 import assert from 'node:assert/strict';
@@ -19,7 +19,9 @@ assert.equal(scientificNumber(6.626e-34,{locale:'en-US',digits:3}),'6.626 × 10�
 assert.equal(scientificNumber(3e8,{digits:0}),'3 × 10⁸');
 assert.equal(scientificNumber(1e-100,{compact:true,digits:1}),'1×10⁻¹⁰⁰');
 assert.equal(scientificNumber(-1e-100,{compact:true,digits:1}),'-1×10⁻¹⁰⁰');
-assert.equal(tickText(1e-34,1e-35),'1×10⁻³⁴');
+assert.equal(scientificText(tickText(1e-34,1e-35),{compact:true}),'1,0×10⁻³⁴');
+assert.equal(scientificText('Giới hạn: 6,62600e-34 J'),'Giới hạn: 6,62600 × 10⁻³⁴ J');
+assert.equal(scientificText('V = -1.6e+19 V'),'V = -1.6 × 10¹⁹ V');
 assert.equal(scientificNumber(Infinity),'—');
 assert.equal(observationNumber(null),'—');assert.equal(observationNumber(0),'0');
 assert.equal(translateShort('Tiêu cự vật kính'),'Objective focal length');assert.equal(translateShort('Nửa khoảng cách hai điện tích'),'Half charge separation');
