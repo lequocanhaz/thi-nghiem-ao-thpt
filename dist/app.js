@@ -1,3 +1,4 @@
+import {scientificNumber} from './number-format.js?v=66';
 import {updateObservation} from './observation-view.js?v=65';
 import {searchTerms,matchesSearch,searchRank} from './catalog-search.js?v=59';
 import {loadVisualSettings,saveVisualSettings,updateVisualSetting,visualRenderConfig,applyVisualAppearance,syncVisualSettings} from './visual-settings.js?v=54';
@@ -32,7 +33,7 @@ import {englishIntro,englishTopic,englishStudy} from './english-study.js?v=56';
 import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=54';
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt=(n,d=2)=>Number.isFinite(n)?Math.abs(n)>1e5||(Math.abs(n)<.001&&n!==0)?n.toExponential(2).replace('.',getLocale()==='en-US'?'.':','):n.toLocaleString(getLocale(),{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
+const fmt=(n,d=2)=>Number.isFinite(n)?Math.abs(n)>1e5||(Math.abs(n)<.001&&n!==0)?scientificNumber(n,{locale:getLocale(),digits:2}):n.toLocaleString(getLocale(),{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
 const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/đ/g,'d');
 const defaults={viewMode:'3d',viewPlane:'front',paramWindows:{},loop:false,mode:0,capMode:'charge',gasAxis:'tK',switches:{lines:true,connections:true,components:true,resultant:true,parallelogram:true,axes:true,grid:true,vectors:true,trajectory:true,handles:true,light:true,labels:false}};
 let saved={},prefs={favorites:[],recent:[],quality:'high',voice:'',rate:.95,textSize:1,progress:{},renderer:'auto',motion:!matchMedia('(prefers-reduced-motion: reduce)').matches};try{saved=JSON.parse(localStorage.getItem('thpt-lab-v1')||'{}');prefs={...prefs,...JSON.parse(localStorage.getItem('thpt-ui-v3')||'{}')}}catch{}
