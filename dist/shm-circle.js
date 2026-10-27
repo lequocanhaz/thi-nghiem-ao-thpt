@@ -52,7 +52,7 @@ function markup(locale){
  const en=localeIsEnglish(locale);
  const phaseButtons=[[0,'0'],[90,'π/2'],[180,'π'],[270,'3π/2'],[360,'2π']];
  return '<details class="shm-circle" open><summary>'+
-  '<span class="shm-kicker">'+msg(en,'CHUYỂN ĐỘNG TRÒN ĐỀU',en?'UNIFORM CIRCULAR MOTION':'CHUYỂN ĐỘNG TRÒN ĐỀU')+'</span>'+
+  '<span class="shm-kicker">'+msg('UNIFORM CIRCULAR MOTION','CHUYỂN ĐỘNG TRÒN ĐỀU',en)+'</span>'+
   '<strong>'+msg('The circle behind the oscillation','Vòng tròn lượng giác và dao động điều hòa',en)+'</strong>'+
   '<span class="shm-summary-chevron" aria-hidden="true">▾</span></summary>'+
   '<div class="shm-body"><p class="shm-lead">'+msg('Drag point M around the circle, or choose a phase. The spring, projection and graph share the same clock.','Kéo điểm M trên đường tròn hoặc chọn pha. Hình chiếu, con lắc lò xo và đồ thị cùng dùng một thời điểm.',en)+'</p>'+
