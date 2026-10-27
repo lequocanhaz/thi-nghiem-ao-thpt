@@ -1,3 +1,4 @@
+import {scientificNumber} from './number-format.js?v=66';
 // Explicit names preserve context: e.g. "half" in a dipole is not a half-life.
 export const foundationAxisLabels=Object.freeze({
  vector_sum:['Angle between forces','Resultant force'],vector_components:['Angle to x-axis','Force along x'],
@@ -30,6 +31,6 @@ export function observationAxisLabel(label,english){
 export function observationNumber(value,locale='vi-VN',axis=false){
  if(!Number.isFinite(value))return '—';
  const a=Math.abs(value);
- if(a!==0&&(a>=1e4||a<.001))return value.toExponential(axis?1:4).replace('e+','e').replace('.',locale==='vi-VN'?',':'.');
+ if(a!==0&&(a>=1e4||a<.001))return scientificNumber(value,{locale,digits:axis?1:4,compact:axis});
  return new Intl.NumberFormat(locale,{maximumSignificantDigits:axis?3:5}).format(value);
 }

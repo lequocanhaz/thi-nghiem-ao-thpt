@@ -1,3 +1,5 @@
+import {scientificNumber,scientificText} from '../dist/number-format.js';
+import {tickText} from '../dist/plot-grid.js';
 import {translateShort} from '../dist/language-ui.js';
 import assert from 'node:assert/strict';
 import {parseHTML} from 'linkedom';
@@ -7,8 +9,20 @@ import {updateOpticsObservation} from '../dist/observation-view.js';
 assert.deepEqual(new Set(Object.keys(foundationAxisLabels)),new Set(Object.keys(FOUNDATION_CONCEPTS)));
 for(const labels of Object.values(foundationAxisLabels))for(const label of labels)assert.ok(label.length>2&&!/[_]/.test(label),'Human-readable English labels');
 for(const n of [1e-20,-1e-12,1e10,-1e100])for(const locale of ['vi-VN','en-US']){
- const text=observationNumber(n,locale,true);assert.ok(text.length<=9,'Compact scientific tick notation');assert.match(text,/e/);
+ const text=observationNumber(n,locale,true);
+ assert.ok(text.length<=11,'Compact scientific tick notation');
+ assert.match(text,/×10[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+/);
+ assert.doesNotMatch(text,/e[+-]?\d+/i,'Do not show programming notation to students');
 }
+assert.equal(scientificNumber(6.626e-34,{digits:3}),'6,626 × 10⁻³⁴');
+assert.equal(scientificNumber(6.626e-34,{locale:'en-US',digits:3}),'6.626 × 10⁻³⁴');
+assert.equal(scientificNumber(3e8,{digits:0}),'3 × 10⁸');
+assert.equal(scientificNumber(1e-100,{compact:true,digits:1}),'1×10⁻¹⁰⁰');
+assert.equal(scientificNumber(-1e-100,{compact:true,digits:1}),'-1×10⁻¹⁰⁰');
+assert.equal(scientificText(tickText(1e-34,1e-35),{compact:true}),'1,0×10⁻³⁴');
+assert.equal(scientificText('Giới hạn: 6,62600e-34 J'),'Giới hạn: 6,62600 × 10⁻³⁴ J');
+assert.equal(scientificText('V = -1.6e+19 V'),'V = -1.6 × 10¹⁹ V');
+assert.equal(scientificNumber(Infinity),'—');
 assert.equal(observationNumber(null),'—');assert.equal(observationNumber(0),'0');
 assert.equal(translateShort('Tiêu cự vật kính'),'Objective focal length');assert.equal(translateShort('Nửa khoảng cách hai điện tích'),'Half charge separation');
 const {document}=parseHTML('<section></section>'),host=document.querySelector('section');

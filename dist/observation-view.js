@@ -57,7 +57,7 @@ export function updateObservation(host,group,id,locale='vi-VN'){
  if(!data||![data.xmin,data.xmax,data.ymin,data.ymax].every(finite)||data.xmax<=data.xmin||data.ymax<=data.ymin){host.hidden=true;return;}
  host.hidden=false;host.setAttribute('aria-label',en?'Observe a theoretical relationship':'Quan sát quan hệ lý thuyết');
  const old=states.get(host),number=x=>observationNumber(x,locale),tick=x=>observationNumber(x,locale,true);
- const measured=Number(host.clientWidth),width=Math.max(260,Math.min(1000,Number.isFinite(measured)&&measured>0?measured-32:600)),height=224,left=60,right=18,top=20,bottom=48;
+ const measured=Number(host.clientWidth),width=Math.max(260,Math.min(1000,Number.isFinite(measured)&&measured>0?measured-32:600)),height=224,left=72,right=18,top=20,bottom=48;
  const project=p=>[left+(p[0]-data.xmin)/(data.xmax-data.xmin)*(width-left-right),height-bottom-(p[1]-data.ymin)/(data.ymax-data.ymin)*(height-top-bottom)];
  const signature=JSON.stringify([id,locale,width,data.xmin,data.xmax,data.ymin,data.ymax,data.xLabel,data.yLabel,data.title]);
  if(!old||old.signature!==signature||old.points!==data.points){
