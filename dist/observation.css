@@ -1,3 +1,4 @@
+@import url("./shm-circle.css?v=67");
 #conceptObservation{margin:0;padding:16px 20px;border-top:1px solid #d7dfe9;background:#fff;font-family:'Manrope','Segoe UI',sans-serif;color:#213248;line-height:1.7}
 #conceptObservation[hidden]{display:none}
 .observation-details>summary{font-size:15px;font-weight:700;cursor:pointer;min-height:44px;padding:9px 0}
