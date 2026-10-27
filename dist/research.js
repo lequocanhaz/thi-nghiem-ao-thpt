@@ -1,3 +1,4 @@
+import {scientificNumber} from './number-format.js?v=66';
 const transforms={linear:x=>x,square:x=>x*x,inverse:x=>x===0?NaN:1/x,inverseSquare:x=>x===0?NaN:1/(x*x),log:x=>x>0?Math.log(x):NaN};
 export const fitModels=[{key:'linear',label:'Tuyến tính',symbol:'x'},{key:'square',label:'Bậc hai',symbol:'x²'},{key:'inverse',label:'Nghịch đảo',symbol:'1/x'},{key:'inverseSquare',label:'Nghịch đảo bình phương',symbol:'1/x²'},{key:'log',label:'Logarit',symbol:'ln(x/x₀)'}];
 
@@ -24,7 +25,7 @@ export function fitModel(input,kind='linear'){
 }
 
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const num=v=>Number.isFinite(v)?(Math.abs(v)>1e6||(v!==0&&Math.abs(v)<.0001)?v.toExponential(3).replace('.',','):v.toLocaleString('vi-VN',{maximumSignificantDigits:5})):'—';
+const num=v=>Number.isFinite(v)?(Math.abs(v)>1e6||(v!==0&&Math.abs(v)<.0001)?scientificNumber(v,{digits:3}):v.toLocaleString('vi-VN',{maximumSignificantDigits:5})):'—';
 export function residualSvg(fit){
   if(!fit)return '';
   const w=420,h=190,m={l:74,r:20,t:20,b:42},xs=fit.residuals.map(p=>p[0]);
