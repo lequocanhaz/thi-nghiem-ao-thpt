@@ -1,3 +1,4 @@
+import {scientificNumber} from './number-format.js?v=66';
 // Shared numeric spacing for SVG charts and calibrated model grids.
 export function tickStep(min,max,target=4){
  const raw=Math.abs(max-min)/target;if(!Number.isFinite(raw)||raw===0)return 1;
@@ -11,7 +12,7 @@ export function tickValues(min,max,step){
 }
 export function tickText(value,step){
  if(value===0)return '0';
- if(Math.abs(value)>=1e5||Math.abs(value)<.001)return value.toExponential(1).replace('.',',').replace('e+','e');
+ if(Math.abs(value)>=1e5||Math.abs(value)<.001)return scientificNumber(value,{digits:1,compact:true});
  const digits=Math.min(8,Math.max(0,-Math.floor(Math.log10(step)))+(Math.abs(step/10**Math.floor(Math.log10(step))-2.5)<1e-8?1:0));
  return value.toLocaleString('vi-VN',{maximumFractionDigits:digits});
 }
