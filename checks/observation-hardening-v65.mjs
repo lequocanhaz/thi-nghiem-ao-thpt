@@ -12,7 +12,7 @@ for(const n of [1e-20,-1e-12,1e10,-1e100])for(const locale of ['vi-VN','en-US'])
  const text=observationNumber(n,locale,true);
  assert.ok(text.length<=11,'Compact scientific tick notation');
  assert.match(text,/×10[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+/);
- assert.doesNotMatch(text,/e[+-]?\\d+/i,'Do not show programming notation to students');
+ assert.doesNotMatch(text,/e[+-]?\d+/i,'Do not show programming notation to students');
 }
 assert.equal(scientificNumber(6.626e-34,{digits:3}),'6,626 × 10⁻³⁴');
 assert.equal(scientificNumber(6.626e-34,{locale:'en-US',digits:3}),'6.626 × 10⁻³⁴');
