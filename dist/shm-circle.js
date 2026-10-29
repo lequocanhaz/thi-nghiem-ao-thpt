@@ -23,7 +23,7 @@ export function circleState(state){
 }
 export function phaseToTime(phase,period,currentTime=0,maxTime=20){
  if(!Number.isFinite(phase)||!Number.isFinite(period)||period<=0)return null;
- const cycle=Math.floor(Math.max(0,currentTime)/period);
+ const cycle=Math.min(Math.floor(Math.max(0,currentTime)/period),Math.max(0,Math.ceil(maxTime/period)-1));
  const phaseClamped=Math.max(0,Math.min(TAU,phase));
  return Math.min(Math.max(0,maxTime),Math.max(0,cycle*period+phaseClamped/TAU*period));
 }
@@ -144,7 +144,7 @@ export function mountCircle(host,onPhase,locale='vi-VN'){
  };
  svg?.addEventListener('pointerdown',event=>{
   if(event.button!==undefined&&event.button!==0)return;
-  dragging=true;svg.setPointerCapture?.(event.pointerId);seek(event);event.preventDefault();
+  dragging=true;slider?.blur?.();svg.setPointerCapture?.(event.pointerId);seek(event);event.preventDefault();
  });
  svg?.addEventListener('pointermove',event=>{if(dragging)seek(event);});
  const stop=()=>{dragging=false;};

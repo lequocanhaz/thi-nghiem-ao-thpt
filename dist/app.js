@@ -1,6 +1,6 @@
 import {scientificNumber,scientificText} from './number-format.js?v=66';
 import {updateObservation} from './observation-view.js?v=65';
-import {mountCircle,updateCircle,phaseToTime} from './shm-circle.js?v=67';
+import {mountCircle,updateCircle,phaseToTime} from './shm-circle.js?v=68';
 import {searchTerms,matchesSearch,searchRank} from './catalog-search.js?v=59';
 import {loadVisualSettings,saveVisualSettings,updateVisualSetting,visualRenderConfig,applyVisualAppearance,syncVisualSettings} from './visual-settings.js?v=54';
 import {rowInGraphMode,graphColumnLabel} from './electric-analysis.js?v=59';
@@ -17,7 +17,7 @@ import {BannerScene} from './banner.js?v=18';
 import {atEnd,pageWindow,parameterText as rawParameterText,layoutDefaults,cleanLayout,restorableRow,rowMatches,metricColor,toolDescription,formulaMarkup,previewMarkup} from './workspace.js?v=54';
 import {fitModels,fitSummary,reportMarkup} from './research.js?v=51';
 import {themeFor,paths,coreParams,parameterFromDrag,adjustParameter,usableParams} from './learning.js?v=17';
-import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=65';
+import {homeMarkup,cardsMarkup,labMarkup,discoveryMarkup,coachMarkup} from './views.js?v=68';
 import {curriculumOptions,curriculumMeta,curriculumKey} from './curriculum.js?v=39';
 import {tableGraph,sweepStates,segments,graphParameter,tableColumnFor} from './analytics.js?v=59';
 import {experiments,initialState,electricModes} from './experiments.js?v=59';

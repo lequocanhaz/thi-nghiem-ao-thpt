@@ -1,3 +1,4 @@
+import {evaluate} from '../dist/models.js';
 import assert from 'node:assert/strict';
 import {parseHTML} from 'linkedom';
 import {TAU,circleState,phaseToTime,mountCircle,updateCircle} from '../dist/shm-circle.js';
@@ -28,7 +29,8 @@ for(const t of [0,.03,.25,.73,1.28,3.5,19.9]){
 }
 close(phaseToTime(Math.PI/2,2,4.4),4.5,'Choosing a phase preserves the current cycle');
 close(phaseToTime(TAU,2,4.4),6,'A full turn advances to the end of the current cycle');
-close(phaseToTime(0,2,20),20,'Respect the experiment time domain');
+close(phaseToTime(0,2,20),18,'At the final boundary, allow seeking in the last cycle');
+close(phaseToTime(Math.PI,2,20),19,'Final-cycle half turn is reachable');
 assert.equal(phaseToTime(0,0,0),null);
 assert.equal(circleState({a:5,period:0,t:0}),null);
 
@@ -58,3 +60,10 @@ assert.match(host.textContent,/circle behind the oscillation/i,'English users se
 assert.ok(updateCircle(host,{...initial,t:1},{x:q2.x,v:q2.v,acc:q2.acc},'en-US'));
 assert.match(host.querySelector('[data-shm-x]').textContent,/-5.00 cm/);
 console.log('PASS SHM circle v67: 16 marked angles, exact cosine projections and velocities, signed acceleration, synchronized SVG/presets, VI/EN, accessible slider and limits.');
+
+for(const a of [1,5,10])for(const period of [.5,2,4])for(let i=0;i<=160;i++){
+ const t=i/8,q=circleState({a,period,t}),d=evaluate('oscillation',{a,period,t});
+ close(q.x,d.x,'Engine displacement');close(q.v,d.v,'Engine velocity');close(q.acc,d.acc,'Engine acceleration');
+ close(q.x*q.x+(a*Math.sin(q.phase))**2,a*a,'Radius invariant');
+}
+console.log('PASS 1449 phase-circle states against the oscillator engine and radius invariant.');

@@ -24,6 +24,7 @@ for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','
 // Entry changes are cache versions plus the explicitly scoped visual-settings stylesheet; startup/banner bytes stay frozen.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
  let content=read(name).toString();
+ content=content.replace('<link rel="stylesheet" href="shm-circle.css?v=68">','');
  content=content.replace('<link rel="stylesheet" href="lab-extras-v67.css"><script type="module" src="appearance-v67.js"></script>','');
  if(name==='dist/index.html'){
   assert.match(content,/<link rel="canonical" href="https:\/\/physicslab\.tech\/">/,'Canonical URL must use the custom domain');
