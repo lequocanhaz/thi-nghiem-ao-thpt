@@ -67,3 +67,10 @@ for(const a of [1,5,10])for(const period of [.5,2,4])for(let i=0;i<=160;i++){
  close(q.x*q.x+(a*Math.sin(q.phase))**2,a*a,'Radius invariant');
 }
 console.log('PASS 1449 phase-circle states against the oscillator engine and radius invariant.');
+
+for(const period of [.5,1.3,2,3,3.7,4])for(const phase of [0,Math.PI/2,Math.PI,3*Math.PI/2,TAU]){
+ const t=phaseToTime(phase,period,20,20);assert.ok(t>=0&&t<=20);
+ close(Math.cos(TAU*t/period),Math.cos(phase),'Selected phase remains representable at final time');
+ close(Math.sin(TAU*t/period),Math.sin(phase),'Signed phase remains representable at final time');
+}
+console.log('PASS final partial cycles preserve the selected phase, including T=3 seconds.');

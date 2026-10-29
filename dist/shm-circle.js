@@ -25,7 +25,9 @@ export function phaseToTime(phase,period,currentTime=0,maxTime=20){
  if(!Number.isFinite(phase)||!Number.isFinite(period)||period<=0)return null;
  const cycle=Math.min(Math.floor(Math.max(0,currentTime)/period),Math.max(0,Math.ceil(maxTime/period)-1));
  const phaseClamped=Math.max(0,Math.min(TAU,phase));
- return Math.min(Math.max(0,maxTime),Math.max(0,cycle*period+phaseClamped/TAU*period));
+ let next=cycle*period+phaseClamped/TAU*period;
+ if(next>maxTime&&cycle>0)next-=period;
+ return Math.min(Math.max(0,maxTime),Math.max(0,next));
 }
 const svgNumber=value=>Number(value.toFixed(3));
 const position=(degree,radius=R)=>{
