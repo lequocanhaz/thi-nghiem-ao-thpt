@@ -1,0 +1,37 @@
+.appearance-toggle{position:fixed;bottom:max(12px,env(safe-area-inset-bottom));left:max(12px,env(safe-area-inset-left));z-index:120;min-height:44px;padding:10px 16px;border:1px solid var(--ql-border,#cbd5e1);border-radius:10px;background:var(--ql-surface,#fff);color:var(--ql-ink,#172033);box-shadow:0 3px 12px #0002;font:600 14px/1.4 Manrope,sans-serif}
+.stage-viewport.with-phase-circle{display:grid!important;grid-template-columns:minmax(0,1fr) 260px;align-items:start}
+.with-phase-circle>.visual{min-width:0;width:100%}.phase-circle{grid-column:2;grid-row:1;padding:16px;background:var(--ql-surface,#fff);color:var(--ql-ink,#172033);border-left:1px solid var(--ql-border,#dce1e8);font-variant-numeric:tabular-nums}
+.phase-circle h2{font:700 16px/1.5 Manrope,sans-serif;letter-spacing:0}.phase-circle svg{display:block;width:100%;max-width:260px;margin:auto;color:inherit}.phase-circle svg text{fill:currentColor;font:12px Manrope,sans-serif}.phase-orbit{fill:none;stroke:#64748b;stroke-width:1.5}.phase-axis{fill:none;stroke:#94a3b8}.phase-radius{fill:none;stroke:#2563eb;stroke-width:2.5}.phase-projection{fill:none;stroke:#d97706;stroke-width:2;stroke-dasharray:4 3}.phase-point{fill:#2563eb}.phase-x{fill:#b45309}.phase-circle [data-phase-hit]{touch-action:none;cursor:grab}.phase-circle label{display:block;font-size:14px}.phase-circle input{width:100%;min-height:44px;accent-color:#2563eb}.phase-circle output{display:block;font-weight:700;font-size:14px;margin:8px 0}.phase-circle p{font-size:13px;line-height:1.65;color:var(--ql-secondary,#475569)}
+@media(max-width:900px){.stage-viewport.with-phase-circle{grid-template-columns:minmax(0,1fr)}.phase-circle{grid-column:1;grid-row:2;border-left:0;border-top:1px solid var(--ql-border,#dce1e8);width:100%}.phase-circle svg{max-width:220px}.appearance-toggle{font-size:12px;padding:8px 12px}}
+html[data-appearance=dark]{color-scheme:dark;--paper:#111820;--ink:#eef2f7;--muted:#c2ccda;--line:#394555;--surface:#1a2430;--ql-ink:#eef2f7;--ql-secondary:#c2ccda;--ql-border:#394555;--ql-surface:#1a2430;--ql-subtle:#202c39;--ql-action:#e7edf7;--ql-focus:#8fb4ff}
+html[data-appearance=dark] body{background:#111820;color:#eef2f7}
+html[data-appearance=dark] :is(.home-section-title,.lab-heading,.lab-breadcrumb,.lab-intro,.workspace-toolbar,.direct-tools,.coordinate-legend,.model-status,.source-note){color:#eef2f7}
+html[data-appearance=dark] :is(header,footer,.experiment-card,.stage-shell,.controls,.research-dock,.stage-top,.transport,.space-controls,.readouts,.meter,.work-tabs,.panel,.direct-tools,.guide-disclosure,.session-menu-options,.view-menu-options,.layout-menu>div,dialog,.parameter,.home-book,.recent-entry,.class-entry button,.observation-content,.observation-details,.account-dialog){background:#1a2430;color:#eef2f7;border-color:#394555}
+html[data-appearance=dark] :is(input,select,textarea){background:#111820;color:#eef2f7;border-color:#526173}
+html[data-appearance=dark] :is(.card-body,.card-body p,.card-topic,.card-meta,.card-actions,.card-title,.observation-axis-labels,.observation-note,.observation-current-value,.parameter-label,.parameter-label label,.parameter-label small,.meter span,.meter strong){color:#eef2f7}
+html[data-appearance=dark] :is(.button.primary,.button.accent){background:#dce7ff;color:#101820}
+html[data-appearance=dark] :is(.button.secondary,.icon-button){color:#eef2f7;border-color:#526173}
+html[data-appearance=dark] .phase-radius{stroke:#93b6ff}html[data-appearance=dark] .phase-point{fill:#93b6ff}html[data-appearance=dark] .phase-projection{stroke:#ffbc72}html[data-appearance=dark] .phase-x{fill:#ffbc72}
+html[data-appearance=dark] .observation-ticks text{fill:#c2ccda}
+@media print{.appearance-toggle{display:none}}
+.with-phase-circle>.teaching-tools{grid-column:1/-1;grid-row:2}.with-phase-circle>.touch-interaction{position:static;grid-column:1;grid-row:3;justify-self:end;margin:8px}
+@media(max-width:900px){.with-phase-circle>.teaching-tools{grid-row:3}.with-phase-circle>.touch-interaction{grid-row:4}}
+html[data-appearance=dark] .with-phase-circle>.teaching-tools{background:#1a2430}
+body{padding-bottom:72px}
+html[data-appearance=dark] :is(button,summary){background:#202c39;color:#eef2f7;border-color:#526173}
+html[data-appearance=dark] :is(.button.primary,.button.accent){background:#dce7ff;color:#101820}
+html[data-appearance=dark] :is(.phase-circle,.observation-content,.observation-details){background:#1a2430;color:#eef2f7}
+html[data-appearance=dark] :is(.phase-circle p,.phase-circle label,.phase-circle output,#runStatus,.meter small,.direct-tools output){color:#dce5f2}
+html[data-appearance=dark] .phase-circle input{background:transparent}
+.stage-top{flex-wrap:wrap;gap:8px}.stage-tools{min-width:0;flex-wrap:wrap}
+html[data-appearance=dark] .stage-shell button{background:#202c39!important;color:#eef2f7!important;border-color:#526173!important}
+html[data-appearance=dark] .stage-shell button.primary,html[data-appearance=dark] .stage-shell button.accent{background:#dce7ff!important;color:#101820!important}
+html[data-appearance=dark] .live-tag{background:#203e35;color:#d7f5df}
+html[data-appearance=dark] .stage-viewport.with-phase-circle{background:#1a2430}
+html[data-appearance=dark] :is(.experiment-card p,.experiment-card span,.experiment-card small,.experiment-card strong,#library>p,#library label,#library small,.search-count,.filter-count,.results-count,.card-curriculum,.card-features){color:#dce5f2!important}
+html[data-appearance=dark] :is(input,select,textarea){background-color:#111820!important;color:#eef2f7!important;border-color:#526173!important}
+html[data-appearance=dark] :is(.card-image .badge,.card-image .level-badge,.card-image>span){background:#202c39;color:#eef2f7}
+html[data-appearance=dark] :is(.home-book,.recent-entry,.class-entry button) :is(p,span,small,strong){color:#dce5f2}
+html[data-appearance=dark] :is(.textbook-card,.reading-toolbar,.reading-header,.book-reading-meta,.book-stage-wrap){background:#1a2430;color:#eef2f7;border-color:#394555}
+html[data-appearance=dark] :is(.textbook-card,.reading-heading,.book-reading-meta) :is(p,h1,h2,h3,span,small,strong){color:#dce5f2}
+html[data-appearance=dark] .grade-tag{background:#202c39;color:#eef2f7;border-color:#526173}
