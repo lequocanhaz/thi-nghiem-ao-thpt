@@ -149,6 +149,10 @@ for(const [vi,en] of [
  ['Khoảng cách vật','Object distance'],['Khoảng cách màn','Screen distance'],['Chiều cao vật','Object height'],['Chiều cao ảnh có dấu','Signed image height'],['Độ phóng đại','Linear magnification'],['Tỉ số khoảng cách','Distance ratio'],['Nửa khoảng cách hai điện tích','Half charge separation']
 ])pair(vi,en);
 
+// Shared quantity names must not inherit one experiment's parameter unit.
+// Each measurement/parameter renders its own catalog unit beside the value.
+pair('Vận tốc','Velocity');pair('Gia tốc','Acceleration');pair('Li độ','Displacement');
+
 export const getLocale=()=>i18n.getLocale();
 export const englishTitle=id=>dictionaries['en-US'].experiments[id]?.shortTitle||id;
 export function translateShort(source){

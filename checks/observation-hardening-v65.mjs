@@ -25,6 +25,8 @@ assert.equal(scientificText('V = -1.6e+19 V'),'V = -1.6 × 10¹⁹ V');
 assert.equal(scientificNumber(Infinity),'—');
 assert.equal(observationNumber(null),'—');assert.equal(observationNumber(0),'0');
 assert.equal(translateShort('Tiêu cự vật kính'),'Objective focal length');assert.equal(translateShort('Nửa khoảng cách hai điện tích'),'Half charge separation');
+// Generic quantity translations cannot inject m-based units into cm-based labs.
+assert.equal(translateShort('Vận tốc'),'Velocity');assert.equal(translateShort('Gia tốc'),'Acceleration');assert.equal(translateShort('Li độ'),'Displacement');
 const {document}=parseHTML('<section></section>'),host=document.querySelector('section');
 const data={id:'fixture',notes:{vi:['Nét đứt là đường kéo dài.'],en:['Dashed lines are extensions.']},legend:[{kind:'virtual',labels:{vi:'Tia kéo dài',en:'Virtual extension'}}],image:{kind:'infinite'},values:[{key:'f',label:{vi:'Tiêu cự',en:'Focal length'},value:25,unit:'cm'}]};
 updateOpticsObservation(host,data);assert.ok(!host.hidden);assert.match(host.textContent,/Ảnh ở vô cực/);const details=host.querySelector('details');details.removeAttribute('open');

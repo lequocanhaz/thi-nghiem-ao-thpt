@@ -14,7 +14,7 @@ with sync_playwright()as p:
   assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),w
   page.locator('[data-locale="en-US"]').click();assert 'Rotating' in page.locator('.shm-circle-svg').get_attribute('aria-label')
   if w in [390,1440]:page.locator('.stage-shell').screenshot(path=str(OUT/f'stage-{w}.png'))
-  beforeX=page.locator('[data-shm-m]').get_attribute('cx');page.locator('#play').click();page.wait_for_timeout(350);assert page.locator('[data-shm-m]').get_attribute('cx')!=beforeX;page.locator('#play').click()
+  beforeX=page.locator('[data-shm-m]').get_attribute('cx');page.locator('#play').click();page.wait_for_function("x=>document.querySelector('[data-shm-m]').getAttribute('cx')!==x",arg=beforeX,timeout=8000);page.locator('#play').click()
   page.locator('#appearanceToggle').click();page.reload(wait_until='networkidle');assert page.locator('html').get_attribute('data-appearance')=='light'
   assert not errors,errors
   print('PASS',w,flush=True);page.close()

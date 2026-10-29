@@ -1,5 +1,5 @@
 .appearance-toggle{position:fixed;bottom:max(12px,env(safe-area-inset-bottom));left:max(12px,env(safe-area-inset-left));z-index:120;min-height:44px;padding:10px 16px;border:1px solid var(--ql-border,#cbd5e1);border-radius:10px;background:var(--ql-surface,#fff);color:var(--ql-ink,#172033);box-shadow:0 3px 12px #0002;font:600 14px/1.4 Manrope,sans-serif}
-html[data-appearance=dark]{color-scheme:dark;--paper:#111820;--ink:#eef2f7;--muted:#c2ccda;--line:#394555;--surface:#1a2430;--ql-ink:#eef2f7;--ql-secondary:#c2ccda;--ql-border:#394555;--ql-surface:#1a2430;--ql-subtle:#202c39;--ql-action:#e7edf7;--ql-focus:#8fb4ff}
+html[data-appearance=dark],html[data-appearance=dark] body{color-scheme:dark;--paper:#111820;--ink:#eef2f7;--muted:#c2ccda;--line:#394555;--surface:#1a2430;--ql-ink:#eef2f7;--ql-secondary:#c2ccda;--ql-border:#394555;--ql-surface:#1a2430;--ql-subtle:#202c39;--ql-action:#e7edf7;--ql-focus:#8fb4ff}
 html[data-appearance=dark] body{background:#111820;color:#eef2f7}
 html[data-appearance=dark] :is(.home-section-title,.lab-heading,.lab-breadcrumb,.lab-intro,.workspace-toolbar,.direct-tools,.coordinate-legend,.model-status,.source-note){color:#eef2f7}
 html[data-appearance=dark] :is(header,footer,.experiment-card,.stage-shell,.controls,.research-dock,.stage-top,.transport,.space-controls,.readouts,.meter,.work-tabs,.panel,.direct-tools,.guide-disclosure,.session-menu-options,.view-menu-options,.layout-menu>div,dialog,.parameter,.home-book,.recent-entry,.class-entry button,.observation-content,.observation-details,.account-dialog){background:#1a2430;color:#eef2f7;border-color:#394555}
@@ -37,3 +37,16 @@ html[data-appearance=dark] .shm-key-radius{border-color:#9bbdff!important}html[d
 html[data-appearance=dark] :is(.stage-viewport:has(>#shmCirclePanel),.stage-viewport>.teaching-tools){background:#1a2430}
 html[data-appearance=dark] .shm-pedagogical-note{color:#c2ccda}
 .shm-controls input[type=range]{min-height:44px}.shm-phase-presets button{min-height:44px;min-width:44px}
+/* Review corrections: keep foreground and surface paired in night mode. */
+html[data-appearance=dark] :is(.header nav>a[href='#library'],.reading-header nav a[aria-current],.measurement-count){background:#26384c;color:#eef2f7}
+html[data-appearance=dark] :is(.brand-wordmark,.brand-wordmark b,#pageForm>label,.readouts .meter strong small){color:#eef2f7!important}
+html[data-appearance=dark] :is(.control-heading,.parameter-window,.window-actions,.teaching-guide-content,.entry-grid,.search kbd,.catalog-options>summary,.skip){background:#1a2430;color:#eef2f7;border-color:#526173}
+html[data-appearance=dark] .window-actions button{background:#202c39!important;color:#eef2f7!important;border-color:#526173!important}
+html[data-appearance=dark] :is(.parameter-window p,.parameter-window label,.catalog-options label>span,.lesson-scope,.lesson-evidence,.lesson-audio-note){color:#c2ccda}
+html[data-appearance=dark] .teaching-guide-content :is(h2,h3,p,dt,dd,li,a){color:#eef2f7}
+html[data-appearance=dark] .projection-switch button[aria-pressed=true]{background:#dce7ff!important;color:#101820!important;border-color:#8fb4ff!important;box-shadow:none}
+html[data-appearance=dark] .shm-summary-chevron{color:#c2ccda}
+html[data-appearance=dark] :is(input,textarea)::placeholder{color:#c2ccda;opacity:1}
+html[data-appearance=dark] .session-storage{color:#c2ccda}
+html[data-appearance=dark] .visual-settings[open]>summary{background:#202c39;color:#eef2f7}
+@media(max-width:600px){.stage-tools .visual-settings-panel{left:0;right:auto;width:296px;max-width:100%;box-sizing:border-box}}

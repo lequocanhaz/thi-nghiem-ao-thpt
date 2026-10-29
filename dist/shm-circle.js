@@ -125,6 +125,7 @@ function markup(locale){
 }
 export function mountCircle(host,onPhase,locale='vi-VN'){
  if(!host)return;
+ host.setAttribute('aria-label',locale==='en-US'?'Phase circle for simple harmonic motion':'Vòng tròn lượng giác biểu diễn dao động điều hòa');
  if(host.dataset.locale===locale&&host.querySelector('.shm-circle-svg'))return;
  const expanded=host.querySelector('.shm-circle')?.open!==false;
  host.innerHTML=markup(locale);
@@ -171,7 +172,7 @@ export function updateCircle(host,state,data,locale='vi-VN'){
  const projected=host.querySelector('[data-shm-projected-v]');
  const vx=-sin;
  projected?.setAttribute('x1',x);projected?.setAttribute('y1',CY);
- projected?.setAttribute('x2',x+(Math.abs(vx)<1e-7?0:Math.sign(vx)*(15+25*Math.abs(vx))));
+ projected?.setAttribute('x2',x+33*vx);
  projected?.setAttribute('y2',CY);
  if(projected)projected.style.display=Math.abs(vx)<1e-7?'none':'';
  const endX=CX+27*Math.cos(angle),endY=CY-27*Math.sin(angle);

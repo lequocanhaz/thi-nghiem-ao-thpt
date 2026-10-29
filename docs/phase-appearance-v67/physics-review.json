@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "scope": "Independent read-only physics review of dirty source on b103142. No browser/hardware claim.",
+  "selectionCases": 32490,
+  "derivativeCases": 16200,
+  "maxPhaseError": 6.301556498833349e-13,
+  "maxDerivativeRelativeError": 6.686716741255203e-10,
+  "checks": [
+    "checks/shm-projection-v68.mjs PASS 243 actual SVG vector states",
+    "checks/shm-circle-v67.mjs PASS 1449 engine states and final partial cycles"
+  ],
+  "findings": [
+    "Projected velocity now retains exactly the x component of the circular tangent; no minimum arrow magnitude.",
+    "All sampled phase selections remain representable within 0–20 s, including final partial cycles.",
+    "Numerical derivatives of displacement and velocity agree with displayed velocity and acceleration."
+  ],
+  "blockers": [],
+  "sourceSha256": "2798624e3a7398fbdb17e8660f3a9cb44498499649328e8bd5fd249681165f5f",
+  "relationSampling": {
+    "status": "PASS",
+    "catalogStates": 50,
+    "catalog": [
+      {
+        "id": "charge_quantization",
+        "min": 0,
+        "max": 10000,
+        "pointCount": 65
+      },
+      {
+        "id": "pulley",
+        "min": 1,
+        "max": 4,
+        "pointCount": 4
+      },
+      {
+        "id": "string_resonance",
+        "min": 1,
+        "max": 6,
+        "pointCount": 6
+      },
+      {
+        "id": "battery_series",
+        "min": 1,
+        "max": 8,
+        "pointCount": 8
+      },
+      {
+        "id": "battery_parallel",
+        "min": 1,
+        "max": 8,
+        "pointCount": 8
+      }
+    ],
+    "propertyCases": 5000,
+    "queryVersionEdgesVerified": 8,
+    "scope": "PR43 inherited PR40 integer-domain fix; no changed equations or synthetic finite samples. Discrete catalog point lists match base 5b75f2e exactly across all sampled states."
+  }
+}

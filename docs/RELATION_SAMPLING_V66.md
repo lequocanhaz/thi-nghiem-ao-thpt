@@ -8,4 +8,4 @@ Mã đang chuẩn bị sửa trường hợp tổng quát trong `sampleRelation`
 
 Kiểm thử sau khi hợp nhất `main` mới: `npm run check` đạt; kiểm tra trình duyệt Chromium cho biểu đồ ở 320/390/1440 px đạt; validator cấu hình Firebase và các fixture tài khoản/bảo mật đạt. Các phép thử tài khoản này không xác minh đăng nhập Google/email thật.
 
-Phiên thực hiện không có công cụ gọi sub-agent vật lí và QA theo quy trình trong `AGENTS.md`; việc review độc lập vẫn còn thiếu. Không dùng tài liệu này để kết luận rằng toàn bộ 300 mô hình đã được kiểm nghiệm khoa học hoặc rằng iPhone/Safari đã được kiểm thử trên thiết bị thật.
+Đợt phát hành PR43 bổ sung review độc lập bởi các agent Vật lí và QA; xem `PHASE_APPEARANCE_V67.md` cùng bằng chứng đi kèm. Ghi chú cũ cho rằng công cụ sub-agent không khả dụng đã được đính chính. Không dùng tài liệu này để kết luận rằng toàn bộ 300 mô hình đã được kiểm nghiệm khoa học hoặc rằng iPhone/Safari đã được kiểm thử trên thiết bị thật.

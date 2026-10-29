@@ -12,4 +12,19 @@ Kiểm tra: các pha đặc biệt và 1.449 trạng thái đối chiếu với 
 
 Ảnh ở `phase-appearance-v67/` ghi bố cục được kiểm tra; các tinh chỉnh tương phản chữ phụ được bổ sung sau ảnh chụp đó. Không coi ảnh là bằng chứng cho mọi màn hình và mọi trạng thái.
 
-Chưa có review độc lập của các sub-agent physics/UI/QA theo AGENTS.md: công cụ gọi sub-agent không khả dụng trong phiên này. Trạng thái phát hành phải xem PR tương ứng; không suy ra đã lên website từ việc mã có trong workspace.
+Rà soát độc lập trước phát hành được thực hiện bởi các agent `release_physics`, `release_ui`, `release_books` và `release_qa`. Kết quả và phạm vi được ghi trong `phase-appearance-v67/`. Ghi chú trước đó cho rằng công cụ sub-agent không khả dụng là không chính xác; đợt này đã gọi agent thực tế và kiểm tra trên mã cuối.
+
+Các lỗi phát hiện trong rà soát và đã sửa:
+
+- Vectơ vận tốc chiếu từng thêm độ dài tối thiểu cho dễ nhìn; nay lấy đúng thành phần ngang của vectơ tiếp tuyến, gồm góc rất nhỏ. Thêm kiểm độc lập `checks/shm-projection-v68.mjs` vào `npm run check`.
+- Sửa nhãn đại lượng EN không chèn đơn vị m/s vào số đo cm/s; giữ đơn vị catalog và các giá trị tính toán.
+- Ghép lại màu chữ/nền trong chế độ đêm cho header, số đo/đơn vị, bảng tham số, hướng dẫn, thư viện và sách; làm rõ trạng thái 2D/3D được chọn. Sửa màu placeholder, thông tin phiên và nút Hiển thị khi mở; giữ popup Hiển thị trong màn hình điện thoại.
+- Nút ngày/đêm theo dõi ngôn ngữ trang sách ngay; nhãn accessible của vùng vòng tròn theo VI/EN.
+
+Bộ kiểm tra bảo toàn 300 thí nghiệm/bài soạn, 388 trang sách, 85 mục lục bài học và 301 âm thanh. Bản này cũng chứa sửa lấy mẫu rời rạc từ PR40; xem `RELATION_SAMPLING_V66.md`. Không coi các kiểm thử này là phản biện khoa học toàn bộ 300 bài.
+
+Còn chưa nghiệm thu: thiết bị iPhone/Safari/Android thật, bàn phím ảo, FPS GPU phần cứng và đăng nhập Google/email bằng tài khoản thật. Một nhãn điều hướng sách cũ còn tiếng Việt trong giao diện EN. Bản quét sách gốc giữ tiếng Việt, không tuyên bố đã dịch nội dung trang.
+
+Trạng thái triển khai cuối xem [PR43](https://github.com/lequocanhaz/thi-nghiem-ao-thpt/pull/43) và workflow gắn với commit đã merge. Việc có mã hoặc ảnh trong repository tự nó không chứng minh website đã được triển khai.
+
+Kết quả trước merge: `npm run check` đạt (exit0), kiểm bảo vệ banner và visual-settings sau CSS menu cuối đạt. UI47/47 và18 trạng thái tương phản; QA9 viewport; sách12/12; physics không có blocker trong phạm vi nêu trên. CI trên commit phát hành và kiểm HTTPS sau deploy được gắn trong PR.

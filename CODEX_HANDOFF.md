@@ -180,3 +180,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Previews hiện hành `previews/v65` đủ300 ảnh actual LabScene, không xóa v62/v64. Generator `scripts/generate-thumbnails-v65.py`; manifest kiểm nguồn/hash qua `checks/catalog-previews-v65.mjs`. Renderer thay đổi phải xuất lại, không vá baselinehash.
 - Chuỗi entry/app/views/scene và observation.css dùng65; banner/app.css/banner-title.css giữ62. `language-ui`, `language-pill`, `book-language` dùng65 để cập nhật dịch quang học/độ tương phản.
 - Kiểm mới vào npmcheck: optics-science/visual/interface, relation-sampling, observation-hardening v65. Browser tùy chọn: browser-optics/catalog/observation-v65.py. Có review physics/UI/QA/textbook, chưa phần cứng iPhone/Safari/GPU hay phản biện toàn300 bài. Firebase vẫn tắt, chưa OAuth thật/cloudsync.
+
+## Vòng tròn tương tác và ngày/đêm v67
+
+- Xem `docs/PHASE_APPEARANCE_V67.md` và `docs/phase-appearance-v67/`. Vòng tròn main được tích hợp ngay `.stage-viewport`, cùng clock của mô hình; không thêm mô hình thứ hai. Desktop cạnh nhau, mobile xếp dưới trong cùng vùng tương tác.
+- Chọn pha xử lý cuối chu kỳ không trọn; vận tốc chiếu đúng thành phần ngang của tiếp tuyến, không thêm độ dài giả. Kiểm243 trạng thái SVG và1.449 trạng thái engine trong npmcheck; review độc lập physics/UI/books/QA thực tế đã thực hiện.
+- Ngày/đêm là `appearance-v67.js`/`lab-extras-v67.css`, khóa `quanh-appearance-v1`. Token đêm phải áp cảhtml/body do token gốc khai báo trênbody. Giữ màu ảnh gốc và số liệu; sách theo locale qua root.lang observer. Các nhãn EN đại lượng chung không được chèn đơn vị từ thí nghiệm khác.
+- Các kiểm browser9width/pointer/keyboard/CDPtouch là Chromium/SwiftShader giả lập; không iPhone/Safari/Android thật. OAuth/email thật và nghiệm thu giáo viên toàn300bài chưa hoàn tất. Trạng thái triển khai xem PR43/Actions.
