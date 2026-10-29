@@ -1,8 +1,8 @@
 {
   "schema": "quanh-lab.simulation-previews.v1",
   "version": 65,
-  "createdAt": "2026-10-26T16:47:18.441208+00:00",
-  "sourceCommit": "1d7070ffdd941f8a8a7a4ac1434c39b2a2ee1ea6",
+  "createdAt": "2026-10-27T07:22:50.326255+00:00",
+  "sourceCommit": "e01bc93eecfc2258f902cc71b41298627fe62bed",
   "provenance": "Actual Quanh Lab LabScene WebGL rendering; no AI images, substitutions or changes to equations/default scientific parameters.",
   "dimensions": {
     "width": 640,
@@ -33,7 +33,7 @@
     },
     {
       "path": "dist/atlas-scenes.js",
-      "sha256": "ce6828fa2355d2a3c03bee42216dd92f46ec38519830a0be5ffa85bfc9c36378"
+      "sha256": "7d2c58248fea45973f5b524652ce3ea2592552e13da5eb4f7433d01ab843a4d3"
     },
     {
       "path": "dist/camera-fit.js",
@@ -105,7 +105,7 @@
     },
     {
       "path": "dist/foundation-concepts.js",
-      "sha256": "7587955b62ebc90788ea8c2fd9a313d2715fa1d5fb0fd6ca1c00ba4b704becc1"
+      "sha256": "724ae0fda465ca70700d61a024f8b1de69618dbab03c442679e8f98d8ee0eea9"
     },
     {
       "path": "dist/geometry-kit.js",
@@ -197,11 +197,11 @@
     },
     {
       "path": "dist/relation-sampling.js",
-      "sha256": "05078833a98b423aa564d6573b9a300cf39a99320f7c2568ee47881a1eeb60cb"
+      "sha256": "57a2a7e768b28caa6a67cb7fbbe4243b8043a506df4b7978082e045cd815d6a6"
     },
     {
       "path": "dist/scene3d.js",
-      "sha256": "6463203ea955f200c011082d9cda607b33f304eeb327885479ed37f589d926d4"
+      "sha256": "54b71e4da06fda4c311c5ed2647e28a01fe3e9f890d0536cb97a7cb3c326b576"
     },
     {
       "path": "dist/simulation-space.js",
@@ -21493,7 +21493,7 @@
     "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
     "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
   },
-  "durationSeconds": 303.774,
+  "durationSeconds": 127.624,
   "complete": true,
   "sourceStable": true
 }

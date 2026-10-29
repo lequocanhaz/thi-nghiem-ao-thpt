@@ -1,5 +1,5 @@
 import {buildOpticsModel} from './optics-scenes-v65.js?v=65';
-import {enhanceFoundation,buildFoundationCapacitors} from './foundation-concepts.js?v=65';
+import {enhanceFoundation,buildFoundationCapacitors} from './foundation-concepts.js?v=66';
 import {buildExpansionModel} from './expansion-scenes.js?v=35';
 import {atlasById} from './atlas-catalog.js?v=54';
 import {T,V,C,mat,mesh,box,sphere,cylinder,line,arrow,label,setText,platform,flexibleTube,beam,updateLine} from './geometry-kit.js?v=35';

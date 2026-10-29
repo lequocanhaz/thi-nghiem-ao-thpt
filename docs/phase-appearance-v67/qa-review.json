@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "reviewer": "/root/release_qa",
+  "headAtReview": "b103142d7e77c48fcfe666bdc449365ed412a270",
+  "runtimeSourcesVerifiedStableAtIndependentCompletion": true,
+  "hashComparisonAtSummaryTime": {
+    "allSame": false,
+    "changedFiles": [
+      "dist/lab-extras-v67.css"
+    ],
+    "nonCSSStable": true
+  },
+  "committedScriptSourcesStableAtSummaryTime": false,
+  "reviewHandoff": "After final independent390/1440 completed, root added isolated CSS corrections for placeholders,storage hint,opened visual summary,mobilevisualpanel anchoring/boxsizing. UI reviewer owns targeted3width verification; QA runtimeJS unchanged. No fullmatrix rerun needed for isolatedmenuCSS. Finalstatus refers to QA behavioral coverage and defers finalCSSvisual acceptance toUI review.",
+  "runtimeHashesAtFinalIndependentStart": {
+    "dist/app.js": "2d954bf532369c5c22f407d39c2fe884f4810b635f7bbda6290b3a39bd308a72",
+    "dist/language-ui.js": "2b08caa598f0061536a0c34f3651f594ff6d283f325391ded68938137c29b31d",
+    "dist/shm-circle.js": "2798624e3a7398fbdb17e8660f3a9cb44498499649328e8bd5fd249681165f5f",
+    "dist/lab-extras-v67.css": "d96545f76a73409b5fb28e37d0277454fca89dc1b189a788cf1cf718054da7e9",
+    "dist/appearance-v67.js": "828fd602d1205495d26d883923e32ccb4ca1d32ff633abd1f7455cb8712d4251",
+    "dist/index.html": "a3c38c080b4c4cfe3c1752fd09034021b755735b96beecc07d13228cebb8f33b",
+    "dist/views.js": "75a83c379178d5f03de2c37acf9128e3957ecb1fb5d17bbb37f90855f4b5d62a"
+  },
+  "runtimeHashesAtSummary": {
+    "dist/app.js": "2d954bf532369c5c22f407d39c2fe884f4810b635f7bbda6290b3a39bd308a72",
+    "dist/language-ui.js": "2b08caa598f0061536a0c34f3651f594ff6d283f325391ded68938137c29b31d",
+    "dist/shm-circle.js": "2798624e3a7398fbdb17e8660f3a9cb44498499649328e8bd5fd249681165f5f",
+    "dist/lab-extras-v67.css": "2d1600c9cefb12f956256d451819f268f4e9dcbfbfed8d1ade9eba93fa6b90d9",
+    "dist/appearance-v67.js": "828fd602d1205495d26d883923e32ccb4ca1d32ff633abd1f7455cb8712d4251",
+    "dist/index.html": "a3c38c080b4c4cfe3c1752fd09034021b755735b96beecc07d13228cebb8f33b",
+    "dist/views.js": "75a83c379178d5f03de2c37acf9128e3957ecb1fb5d17bbb37f90855f4b5d62a"
+  },
+  "browser": "154.0.8037.57",
+  "coverage": {
+    "committedPhaseScript": [
+      {
+        "script": "browser-phase-v67.py",
+        "status": "PASS",
+        "durationMs": 162366
+      },
+      {
+        "script": "browser-phase-gestures-v67.py",
+        "status": "PASS",
+        "durationMs": 12660
+      }
+    ],
+    "viewports": [
+      320,
+      375,
+      390,
+      414,
+      430,
+      768,
+      1024,
+      1440,
+      1920,
+      1440
+    ],
+    "independentPhysicalRender": [
+      {
+        "width": 390,
+        "status": "PASS",
+        "finalPartialCyclePresets": [
+          0,
+          90,
+          180,
+          270,
+          360
+        ],
+        "rowsPreserved": 1,
+        "notesPreserved": true,
+        "CDPTouch": true
+      },
+      {
+        "width": 1440,
+        "status": "PASS",
+        "finalPartialCyclePresets": [
+          0,
+          90,
+          180,
+          270,
+          360
+        ],
+        "rowsPreserved": 1,
+        "notesPreserved": true,
+        "CDPTouch": false
+      }
+    ],
+    "readoutLabelsAndUnits": [
+      {
+        "width": 390,
+        "locale": "en-US",
+        "labels": [
+          "Displacement",
+          "Velocity",
+          "Acceleration"
+        ],
+        "units": [
+          "cm",
+          "cm/s",
+          "cm/s²"
+        ]
+      },
+      {
+        "width": 1440,
+        "locale": "en-US",
+        "labels": [
+          "Displacement",
+          "Velocity",
+          "Acceleration"
+        ],
+        "units": [
+          "cm",
+          "cm/s",
+          "cm/s²"
+        ]
+      }
+    ],
+    "relation": [
+      {
+        "width": 320,
+        "continuousAngle": true,
+        "discreteCharge": true,
+        "poleGap": true,
+        "VI_EN": true
+      },
+      {
+        "width": 390,
+        "continuousAngle": true,
+        "discreteCharge": true,
+        "poleGap": true,
+        "VI_EN": true
+      },
+      {
+        "width": 1440,
+        "continuousAngle": true,
+        "discreteCharge": true,
+        "poleGap": true,
+        "VI_EN": true
+      }
+    ]
+  },
+  "errors": {
+    "pageErrors": {
+      "committed": [],
+      "independent": []
+    },
+    "consoleErrors": {
+      "committed": [],
+      "independent": []
+    },
+    "httpErrors": {
+      "committed": [],
+      "independent": []
+    },
+    "externalRequests": {
+      "committed": [],
+      "independent": []
+    }
+  },
+  "resolvedTestFlake": "Initial original350ms fixed-delay playback assertion failed once at375 under concurrent Chromium load. Kept original evidence.375 conditionwait retest passed; nine-viewports conditionwait passed. Final committed test uses same8s wait-for-motion condition. Runtime was not changed to satisfy this assertion.",
+  "reviewedChangesDuringEarlierRun": "Only final frozen390/1440 includes bodytoken CSS and unit-safeEN quantity translations. Earlier9width behavioral run crossed CSS/locale changes and was followed by final committed run.",
+  "remainingNonBlocking": [
+    "Some existing VI labels remain in EN. Full translation of all content is not certified."
+  ],
+  "limits": [
+    "Chromium/SwiftShader simulated viewports, not physical iPhone/Android/Safari.",
+    "Mouse/keyboard and Chromium CDP touch input; no physical touch or virtual keyboard.",
+    "No OAuth, Firebase or hardware GPU/FPS verification."
+  ],
+  "evidence": [
+    "original-checks.json",
+    "retest375/original-checks.json",
+    "adaptive/original-checks.json",
+    "committed-final/original-checks.json",
+    "frozen/independent-checks.json",
+    "relation/report.json"
+  ],
+  "workingTreeRuntimeFrozenAtFinalIndependentStart": true,
+  "finalCSSAcceptance": "Deferred to independent UI targeted3width review after isolated menu/placeholderCSS changes."
+}

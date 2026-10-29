@@ -23,9 +23,11 @@ export function circleState(state){
 }
 export function phaseToTime(phase,period,currentTime=0,maxTime=20){
  if(!Number.isFinite(phase)||!Number.isFinite(period)||period<=0)return null;
- const cycle=Math.floor(Math.max(0,currentTime)/period);
+ const cycle=Math.min(Math.floor(Math.max(0,currentTime)/period),Math.max(0,Math.ceil(maxTime/period)-1));
  const phaseClamped=Math.max(0,Math.min(TAU,phase));
- return Math.min(Math.max(0,maxTime),Math.max(0,cycle*period+phaseClamped/TAU*period));
+ let next=cycle*period+phaseClamped/TAU*period;
+ if(next>maxTime&&cycle>0)next-=period;
+ return Math.min(Math.max(0,maxTime),Math.max(0,next));
 }
 const svgNumber=value=>Number(value.toFixed(3));
 const position=(degree,radius=R)=>{
@@ -123,6 +125,7 @@ function markup(locale){
 }
 export function mountCircle(host,onPhase,locale='vi-VN'){
  if(!host)return;
+ host.setAttribute('aria-label',locale==='en-US'?'Phase circle for simple harmonic motion':'Vòng tròn lượng giác biểu diễn dao động điều hòa');
  if(host.dataset.locale===locale&&host.querySelector('.shm-circle-svg'))return;
  const expanded=host.querySelector('.shm-circle')?.open!==false;
  host.innerHTML=markup(locale);
@@ -144,7 +147,7 @@ export function mountCircle(host,onPhase,locale='vi-VN'){
  };
  svg?.addEventListener('pointerdown',event=>{
   if(event.button!==undefined&&event.button!==0)return;
-  dragging=true;svg.setPointerCapture?.(event.pointerId);seek(event);event.preventDefault();
+  dragging=true;slider?.blur?.();svg.setPointerCapture?.(event.pointerId);seek(event);event.preventDefault();
  });
  svg?.addEventListener('pointermove',event=>{if(dragging)seek(event);});
  const stop=()=>{dragging=false;};
@@ -169,7 +172,7 @@ export function updateCircle(host,state,data,locale='vi-VN'){
  const projected=host.querySelector('[data-shm-projected-v]');
  const vx=-sin;
  projected?.setAttribute('x1',x);projected?.setAttribute('y1',CY);
- projected?.setAttribute('x2',x+(Math.abs(vx)<1e-7?0:Math.sign(vx)*(15+25*Math.abs(vx))));
+ projected?.setAttribute('x2',x+33*vx);
  projected?.setAttribute('y2',CY);
  if(projected)projected.style.display=Math.abs(vx)<1e-7?'none':'';
  const endX=CX+27*Math.cos(angle),endY=CY-27*Math.sin(angle);
