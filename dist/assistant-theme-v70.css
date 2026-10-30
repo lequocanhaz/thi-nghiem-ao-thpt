@@ -1,0 +1,94 @@
+/* Every chat foreground travels with its surface, including generated math. */
+.ai-assistant {
+ --ai-canvas:#fff;
+ --ai-raised:#f3f3f3;
+ --ai-ink:#202020;
+ --ai-muted:#626262;
+ --ai-border:#d9d9d9;
+ --ai-action:#171717;
+ --ai-action-ink:#fff;
+ --ai-focus:#245bd6;
+ --ai-link:#1755ad;
+ --ai-warning:#fff1d9;
+ --ai-warning-ink:#704400;
+ --ai-error:#fff0ee;
+ --ai-error-ink:#9e2e24;
+ background:var(--ai-canvas);
+ color:var(--ai-ink);
+ border-color:var(--ai-border);
+}
+html[data-appearance=dark] .ai-assistant {
+ --ai-canvas:#212121;
+ --ai-raised:#303030;
+ --ai-ink:#ececec;
+ --ai-muted:#b4b4b4;
+ --ai-border:#4d4d4d;
+ --ai-action:#f4f4f4;
+ --ai-action-ink:#171717;
+ --ai-focus:#a8c7fa;
+ --ai-link:#a8c7fa;
+ --ai-warning:#3e3320;
+ --ai-warning-ink:#f6d99c;
+ --ai-error:#3e2928;
+ --ai-error-ink:#ffc6be;
+ background:var(--ai-canvas);
+ color:var(--ai-ink);
+ border-color:var(--ai-border);
+}
+.ai-assistant .ai-head {
+ background:var(--ai-canvas);
+ color:var(--ai-ink);
+ border-color:var(--ai-border);
+}
+.ai-assistant :is(.ai-brand,.ai-head h2) {color:var(--ai-ink)}
+.ai-assistant :is(.ai-context,.ai-empty p,.ai-prompt-hint,.ai-attachment-hint) {color:var(--ai-muted)}
+.ai-assistant .ai-messages {background:var(--ai-canvas);color:var(--ai-ink);gap:24px;scrollbar-color:var(--ai-border) var(--ai-canvas)}
+.ai-assistant .ai-message {
+ color:var(--ai-ink);
+ background:transparent;
+ border:0;
+ border-radius:0;
+ padding:0;
+ line-height:1.75;
+}
+.ai-assistant :is(.ai-message[data-role=user],.ai-message.user) {
+ background:var(--ai-raised);
+ color:var(--ai-ink);
+ border-radius:16px;
+ padding:12px 16px;
+}
+.ai-assistant .ai-message :is(.math-tex,.katex) {color:inherit}
+.ai-assistant .ai-message a {color:var(--ai-link);text-underline-offset:.18em}
+.ai-assistant .ai-pending {color:var(--ai-muted)}
+.ai-assistant .ai-compose {background:var(--ai-canvas);color:var(--ai-ink);border-color:var(--ai-border)}
+.ai-assistant .ai-compose textarea,
+html[data-appearance=dark] .ai-assistant .ai-compose textarea {
+ background:var(--ai-raised)!important;
+ color:var(--ai-ink)!important;
+ border-color:var(--ai-border)!important;
+ caret-color:var(--ai-ink);
+ line-height:1.6;
+}
+.ai-assistant .ai-compose textarea::placeholder {color:var(--ai-muted);opacity:1}
+.ai-assistant :is(button,.ai-prompt),
+html[data-appearance=dark] .ai-assistant :is(button,.ai-prompt) {
+ background:var(--ai-raised);
+ color:var(--ai-ink);
+ border-color:var(--ai-border);
+}
+.ai-assistant :is(.ai-head button,.ai-compose [data-ai=attach]),
+html[data-appearance=dark] .ai-assistant :is(.ai-head button,.ai-compose [data-ai=attach]) {background:transparent;color:var(--ai-ink);border-color:var(--ai-border)}
+.ai-assistant .ai-compose button[type=submit],
+html[data-appearance=dark] .ai-assistant .ai-compose button[type=submit] {background:var(--ai-action);color:var(--ai-action-ink);border-color:var(--ai-action)}
+.ai-assistant .ai-compose button[type=submit]:disabled {opacity:.45;cursor:default}
+.ai-assistant :is(.ai-head button,.ai-compose [data-ai=attach],.ai-prompt):hover {background:var(--ai-raised);border-color:var(--ai-muted)}
+.ai-assistant :is(button,textarea,a):focus-visible {outline:2px solid var(--ai-focus);outline-offset:3px}
+.ai-assistant .ai-status {background:var(--ai-warning);color:var(--ai-warning-ink);border-top:1px solid var(--ai-border)}
+.ai-assistant .ai-status[data-state=error] {background:var(--ai-error);color:var(--ai-error-ink)}
+.ai-assistant .ai-attachment {background:var(--ai-raised);color:var(--ai-ink);border-color:var(--ai-border)}
+.ai-assistant .ai-attachment button {border-color:var(--ai-canvas)}
+.ai-assistant .ai-compose.is-dragging {background:var(--ai-raised);outline-color:var(--ai-focus)}
+.ai-assistant ::selection {background:var(--ai-focus);color:#171717}
+html[data-appearance=dark] .ai-image-dialog {background:#212121;color:#ececec;border-color:#4d4d4d}
+html[data-appearance=dark] .ai-image-dialog button {background:#303030;color:#ececec;border-color:#4d4d4d}
+@media(prefers-reduced-motion:reduce) {.ai-assistant * {scroll-behavior:auto}}
