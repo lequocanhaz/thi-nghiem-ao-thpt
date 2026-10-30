@@ -202,3 +202,8 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - `lab-extras-v67.css?v=70` dùng xám trung tính thay xanh xám; giữ màu khoa học/ảnh/font/banner. Sách có token book riêng, loading/error/fullscreen cùng theme, scan giữ gốc.
 - Browser checks `browser-assistant-v70.py` và `browser-night-v70.py` dùng transport giả lập; không coi là inference thật hay phần cứng iPhone/Safari.
 - Backend Sites riêng đã sửa CORS cho physicslab.tech và origin GitHub cũ ở version8/source7bb4f333546e38d013718e1a20d31fcc09f52227. `/health` configured Gemini, inference thật đã trả I=0.5A trong phiên cấu hình. Bản sao `server/ai-handler.mjs` tại GitHub chưa được đồng bộ với Sites; không triển khai bản sao cũ đè lên backend hoặc suy ra Pages triển khai server.
+
+## Thư viện trung tính v71
+
+- `catalog-theme-v71.css` chỉ scope thư viện, ghép nền/chữ/focus cho search wrapper và input; dùng selected cho nhóm lớp, favorites/recent; chủ đề ghost với trạng thái chọn rõ. Không đảo màu ảnh preview.
+- Các button lớp học trên home và catalog trùng data-grade; browser harness phải scope#library để tránh nhấn nhầm. Xem docs/CATALOG_V71.md và PR phát hành để biết nghiệm thu thực tế.
