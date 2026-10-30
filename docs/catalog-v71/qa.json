@@ -1,0 +1,409 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "theme": "light",
+      "locale": "vi-VN",
+      "palette": {
+        ".search": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(32, 32, 32)"
+        },
+        ".grade-filters": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(222, 222, 222)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 5.5948967180317775
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "locale": "en-US",
+      "palette": {
+        ".search": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(32, 32, 32)"
+        },
+        ".grade-filters": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(222, 222, 222)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 5.5948967180317775
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "locale": "vi-VN",
+      "palette": {
+        ".search": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(236, 236, 236)"
+        },
+        ".grade-filters": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(69, 69, 69)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 6.828845615211053
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "locale": "en-US",
+      "palette": {
+        ".search": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(236, 236, 236)"
+        },
+        ".grade-filters": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(69, 69, 69)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 6.828845615211053
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "locale": "vi-VN",
+      "palette": {
+        ".search": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(32, 32, 32)"
+        },
+        ".grade-filters": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(222, 222, 222)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 5.5948967180317775
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "locale": "en-US",
+      "palette": {
+        ".search": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(32, 32, 32)"
+        },
+        ".grade-filters": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(222, 222, 222)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 5.5948967180317775
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "locale": "vi-VN",
+      "palette": {
+        ".search": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(236, 236, 236)"
+        },
+        ".grade-filters": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(69, 69, 69)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 6.828845615211053
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "locale": "en-US",
+      "palette": {
+        ".search": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(236, 236, 236)"
+        },
+        ".grade-filters": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(69, 69, 69)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 6.828845615211053
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "locale": "vi-VN",
+      "palette": {
+        ".search": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(32, 32, 32)"
+        },
+        ".grade-filters": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(222, 222, 222)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 5.5948967180317775
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "locale": "en-US",
+      "palette": {
+        ".search": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(32, 32, 32)"
+        },
+        ".grade-filters": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(222, 222, 222)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 5.5948967180317775
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "locale": "vi-VN",
+      "palette": {
+        ".search": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(236, 236, 236)"
+        },
+        ".grade-filters": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(69, 69, 69)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 6.828845615211053
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "locale": "en-US",
+      "palette": {
+        ".search": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(236, 236, 236)"
+        },
+        ".grade-filters": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(69, 69, 69)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 6.828845615211053
+    },
+    {
+      "width": 1920,
+      "theme": "light",
+      "locale": "vi-VN",
+      "palette": {
+        ".search": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(32, 32, 32)"
+        },
+        ".grade-filters": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(222, 222, 222)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 5.5948967180317775
+    },
+    {
+      "width": 1920,
+      "theme": "light",
+      "locale": "en-US",
+      "palette": {
+        ".search": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(32, 32, 32)"
+        },
+        ".grade-filters": {
+          "background": "rgb(245, 245, 245)",
+          "border": "rgb(222, 222, 222)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(222, 222, 222)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 5.5948967180317775
+    },
+    {
+      "width": 1920,
+      "theme": "dark",
+      "locale": "vi-VN",
+      "palette": {
+        ".search": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(236, 236, 236)"
+        },
+        ".grade-filters": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(69, 69, 69)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 6.828845615211053
+    },
+    {
+      "width": 1920,
+      "theme": "dark",
+      "locale": "en-US",
+      "palette": {
+        ".search": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".search input": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(236, 236, 236)"
+        },
+        ".grade-filters": {
+          "background": "rgb(43, 43, 43)",
+          "border": "rgb(69, 69, 69)"
+        },
+        ".catalog-toolbar": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(69, 69, 69)"
+        }
+      },
+      "status": "PASS",
+      "minContrast": 6.828845615211053
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Chromium viewport emulation; not real Safari/iPhone.",
+    "No AI calls or scientific model acceptance."
+  ]
+}
