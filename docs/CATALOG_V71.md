@@ -7,3 +7,5 @@
 Không sửa ảnh xem trước gốc, dữ liệu, phương trình, banner, font/logo hoặc cơ chế lưu phiên. Nền trắng trong chính ảnh mô hình được giữ theo tài nguyên gốc, không đảo màu ảnh.
 
 `npm run check`, security baseline và banner preservation đạt. Agent UI/QA độc lập kiểm16/16 tổ hợp320/390/1440/1920px × ngày/đêm × VI/EN: search/clear, lớp/chủ đề, lưu/bỏ lưu, lọc nâng cao và trạng thái rỗng đạt, không lỗiJS/tràn ngang. Tương phản chữ đo thấp nhất5,59:1. Xem [QA](catalog-v71/qa.json), [desktop](catalog-v71/desktop-dark.png), [mobile](catalog-v71/mobile-dark.png). Kết quả phát hành sẽ ghi trong PR sau khi kiểm chứng. Chỉ Chromium giả lập; không chứng nhận Safari/iPhone thật.
+
+Rà soát trạng thái tải ảnh còn phát hiện lỗi chữ sáng trên nền trắng khi ảnh xem trước không tải được. Bản này ghép lại màu fallback và nút thử lại, không thay ảnh mô hình gốc.
