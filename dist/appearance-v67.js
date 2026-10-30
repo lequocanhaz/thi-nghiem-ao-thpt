@@ -9,7 +9,7 @@ function apply(){
  const en=root.lang.toLowerCase().startsWith('en');
  const label=mode==='dark'?(en?'Day mode':'Chế độ ban ngày'):(en?'Night mode':'Chế độ ban đêm');
  button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+(mode==='dark'?sun:moon)+'</svg>';
- button.setAttribute('aria-label',label);button.title=label;button.setAttribute('aria-pressed',String(mode==='dark'));
+ button.setAttribute('aria-label',label);button.title=label;
 }
 button.addEventListener('click',()=>{mode=mode==='dark'?'light':'dark';try{localStorage.setItem(key,mode);}catch{}apply();});
 function mount(){const nav=document.querySelector('.header nav,.reading-header nav');if(nav)nav.append(button);apply();}

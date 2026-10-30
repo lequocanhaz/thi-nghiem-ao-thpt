@@ -38,3 +38,7 @@ Chromium/SwiftShader giả lập không phải iPhone/Safari/Android thật, kh�
 Bản phát hành được xác định bằng PR/CI/Pages tương ứng và kiểm HTTPS sau triển khai; ảnh và source trong repository tự nó không chứng minh đã lên web.
 
 Ảnh bố cục trước/sau: [desktopv67](phase-appearance-v67/desktop-dark.png), [mobilev67](phase-appearance-v67/mobile-dark.png); [desktopv69](studio-v69/desktop-dark.png), [mobilev69](studio-v69/mobile-dark.png). NhãnM được kiểm riêng sau lớp halo cuối; không coi một ảnh là bằng chứng mọi trạng thái.
+
+Hậu kiểm bố cục chung: cơ năng, điện trường, sóng và khí tại390/1440px đạt8/8 tình huống WebGL, đổi/khôi phục tham số, ghi số liệu, VI/EN và ngày/đêm; không tràn ngang hay lỗi JS/HTTP. Đây là kiểm mẫu bố cục, không phải nghiệm thu toàn300 mô hình. Xem `studio-v69/shared-layout-qa.json`.
+
+Nút ngày/đêm dùng tên hành động thay đổi theo chế độ; đã bỏ `aria-pressed` để tránh đọc sai trạng thái. Tám tình huống trợ năng của header chính/sách, VI/EN và sáng/tối kiểm lại tên, title, Enter/Space, lưu chế độ và focus đều đạt; xem `studio-v69/theme-button-review.json`.
