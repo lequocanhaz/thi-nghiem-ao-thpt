@@ -195,3 +195,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - `studio-v69.css` tổ chức chrome chung và ordermobile bằngdisplay:contents, không clone/move các node trạng thái. Chạy/Ghi điểm trước phần mở rộng; ngày/đêm nằmheader. Header sách mobile2hàng; giữ font/brand/banner/media gốc.
 - Kiểm mới `shm-linked-v69.mjs` nằmnpmcheck. Browser mới `checks/browser-studio-v69.py` thay phạm vi kiểm default3D của harnessv67; nó kiểm cảLiênhệ, 2D/3D, PNG, fullscreen/menu,9widths. Các scriptbrowserv67 là mốc lịch sử, không dùng kỳ vọngdefault3D của chúng để hoàn tácLiênhệ.
 - Fullscreenfocus phải xét TẤT CẢ ancestor details đóng. Popupplayback/studymode đóng khi nhấn ngoài/Escape. Các báo cáo ghi rõ phạmvi kiểm độc lập và giả lập; chưa thiết bị thật/nghiệmthu toàn300bài/OAuththật.
+
+## Trợ lý AI và màu đêm v70
+
+- Xem `docs/NIGHT_AI_V70.md`. Lỗi ảnh người dùng là nền chat trắng cố định trong khi chữ kế thừa theme đêm; `assistant-theme-v70.css` ghép màu cho mọi trạng thái chat. Không sửa JS/khóa/provider.
+- `lab-extras-v67.css?v=70` dùng xám trung tính thay xanh xám; giữ màu khoa học/ảnh/font/banner. Sách có token book riêng, loading/error/fullscreen cùng theme, scan giữ gốc.
+- Browser checks `browser-assistant-v70.py` và `browser-night-v70.py` dùng transport giả lập; không coi là inference thật hay phần cứng iPhone/Safari.
+- Backend Sites riêng đã sửa CORS cho physicslab.tech và origin GitHub cũ ở version8/source7bb4f333546e38d013718e1a20d31fcc09f52227. `/health` configured Gemini, inference thật đã trả I=0.5A trong phiên cấu hình. Bản sao `server/ai-handler.mjs` tại GitHub chưa được đồng bộ với Sites; không triển khai bản sao cũ đè lên backend hoặc suy ra Pages triển khai server.

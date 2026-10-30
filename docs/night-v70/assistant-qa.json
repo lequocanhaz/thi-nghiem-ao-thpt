@@ -1,0 +1,1111 @@
+{
+  "transport": "synthetic; no AI inference",
+  "browser": "Chromium emulation; not real Safari/iPhone",
+  "cases": [
+    {
+      "width": 390,
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS",
+      "colors": {
+        ".ai-head h2": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        ".ai-context": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 6.09972980752698
+        },
+        ".ai-prompt": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        ".ai-prompt-hint": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 6.09972980752698
+        },
+        "textarea": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        "placeholder": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 5.497130838786946
+        },
+        ".ai-message[data-role=assistant]": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        ".ai-message[data-role=user]": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        ".katex": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        "error": {
+          "background": [
+            255,
+            240,
+            238
+          ],
+          "color": [
+            158,
+            46,
+            36
+          ],
+          "contrast": 6.602797749808295
+        }
+      }
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "locale": "en-US",
+      "status": "PASS",
+      "colors": {
+        ".ai-head h2": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        ".ai-context": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 6.09972980752698
+        },
+        ".ai-prompt": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        ".ai-prompt-hint": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 6.09972980752698
+        },
+        "textarea": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        "placeholder": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 5.497130838786946
+        },
+        ".ai-message[data-role=assistant]": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        ".ai-message[data-role=user]": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        ".katex": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        "error": {
+          "background": [
+            255,
+            240,
+            238
+          ],
+          "color": [
+            158,
+            46,
+            36
+          ],
+          "contrast": 6.602797749808295
+        }
+      }
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "locale": "vi-VN",
+      "status": "PASS",
+      "colors": {
+        ".ai-head h2": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        ".ai-context": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 7.766026072853823
+        },
+        ".ai-prompt": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        ".ai-prompt-hint": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 7.766026072853823
+        },
+        "textarea": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        "placeholder": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 6.365399362090964
+        },
+        ".ai-message[data-role=assistant]": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        ".ai-message[data-role=user]": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        ".katex": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        "error": {
+          "background": [
+            62,
+            41,
+            40
+          ],
+          "color": [
+            255,
+            198,
+            190
+          ],
+          "contrast": 9.064017087750535
+        }
+      }
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS",
+      "colors": {
+        ".ai-head h2": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        ".ai-context": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 7.766026072853823
+        },
+        ".ai-prompt": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        ".ai-prompt-hint": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 7.766026072853823
+        },
+        "textarea": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        "placeholder": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 6.365399362090964
+        },
+        ".ai-message[data-role=assistant]": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        ".ai-message[data-role=user]": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        ".katex": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        "error": {
+          "background": [
+            62,
+            41,
+            40
+          ],
+          "color": [
+            255,
+            198,
+            190
+          ],
+          "contrast": 9.064017087750535
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS",
+      "colors": {
+        ".ai-head h2": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        ".ai-context": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 6.09972980752698
+        },
+        ".ai-prompt": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        ".ai-prompt-hint": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 6.09972980752698
+        },
+        "textarea": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        "placeholder": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 5.497130838786946
+        },
+        ".ai-message[data-role=assistant]": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        ".ai-message[data-role=user]": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        ".katex": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        "error": {
+          "background": [
+            255,
+            240,
+            238
+          ],
+          "color": [
+            158,
+            46,
+            36
+          ],
+          "contrast": 6.602797749808295
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "locale": "en-US",
+      "status": "PASS",
+      "colors": {
+        ".ai-head h2": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        ".ai-context": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 6.09972980752698
+        },
+        ".ai-prompt": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        ".ai-prompt-hint": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 6.09972980752698
+        },
+        "textarea": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        "placeholder": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            98,
+            98,
+            98
+          ],
+          "contrast": 5.497130838786946
+        },
+        ".ai-message[data-role=assistant]": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        ".ai-message[data-role=user]": {
+          "background": [
+            243,
+            243,
+            243
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 14.683626869078335
+        },
+        ".katex": {
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "color": [
+            32,
+            32,
+            32
+          ],
+          "contrast": 16.29325535858735
+        },
+        "error": {
+          "background": [
+            255,
+            240,
+            238
+          ],
+          "color": [
+            158,
+            46,
+            36
+          ],
+          "contrast": 6.602797749808295
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "locale": "vi-VN",
+      "status": "PASS",
+      "colors": {
+        ".ai-head h2": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        ".ai-context": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 7.766026072853823
+        },
+        ".ai-prompt": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        ".ai-prompt-hint": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 7.766026072853823
+        },
+        "textarea": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        "placeholder": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 6.365399362090964
+        },
+        ".ai-message[data-role=assistant]": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        ".ai-message[data-role=user]": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        ".katex": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        "error": {
+          "background": [
+            62,
+            41,
+            40
+          ],
+          "color": [
+            255,
+            198,
+            190
+          ],
+          "contrast": 9.064017087750535
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS",
+      "colors": {
+        ".ai-head h2": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        ".ai-context": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 7.766026072853823
+        },
+        ".ai-prompt": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        ".ai-prompt-hint": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 7.766026072853823
+        },
+        "textarea": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        "placeholder": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            180,
+            180,
+            180
+          ],
+          "contrast": 6.365399362090964
+        },
+        ".ai-message[data-role=assistant]": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        ".ai-message[data-role=user]": {
+          "background": [
+            48,
+            48,
+            48
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 11.171875025212726
+        },
+        ".katex": {
+          "background": [
+            33,
+            33,
+            33
+          ],
+          "color": [
+            236,
+            236,
+            236
+          ],
+          "contrast": 13.630106736926937
+        },
+        "error": {
+          "background": [
+            62,
+            41,
+            40
+          ],
+          "color": [
+            255,
+            198,
+            190
+          ],
+          "contrast": 9.064017087750535
+        }
+      }
+    }
+  ],
+  "errors": []
+}
