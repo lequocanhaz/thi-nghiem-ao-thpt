@@ -1,0 +1,225 @@
+{
+  "status": "PASS in the reviewed shared-layout scope",
+  "caseCount": 8,
+  "passedCases": 8,
+  "minMeasuredLabelUnitContrast": 7.557378129674007,
+  "sourceStart": {
+    "dist/app.js": "4b0352846c3c66682efaa06ce756a3eb21d280c712dfe1409d98c89a274ef9e5",
+    "dist/studio-v69.css": "069fcccd2758095c4d278459f8a0b1bca6e8ae58f4d76c2729ebd5abcd59f202",
+    "dist/lab-extras-v67.css": "eec61910e8e2fd333e6aaf27f5c9f694e917927d1b0f0ad878aac0876e081067",
+    "dist/appearance-v67.js": "6c29c4b9322eb8b4260c92728ac2bcaef9f2a13fcf7cb85138f44ce32a46abbc",
+    "dist/views.js": "517f6387e861247d15b39028d0088e57d4dcf25ee2ea98149714368ecb1ae8d3"
+  },
+  "sourceEnd": {
+    "dist/app.js": "4b0352846c3c66682efaa06ce756a3eb21d280c712dfe1409d98c89a274ef9e5",
+    "dist/studio-v69.css": "069fcccd2758095c4d278459f8a0b1bca6e8ae58f4d76c2729ebd5abcd59f202",
+    "dist/lab-extras-v67.css": "eec61910e8e2fd333e6aaf27f5c9f694e917927d1b0f0ad878aac0876e081067",
+    "dist/appearance-v67.js": "54fcf1ae618e752dd8b75b7d0b7a7d6dede4c776346b496f890bb2cfffab78a3",
+    "dist/views.js": "517f6387e861247d15b39028d0088e57d4dcf25ee2ea98149714368ecb1ae8d3"
+  },
+  "sourceStableDuringElectricFollowup": true,
+  "filesChangedDuringInitialRun": [
+    "dist/appearance-v67.js"
+  ],
+  "sourceChangeExplanation": "Only dist/appearance-v67.js changed during the initial run: root removed aria-pressed from an action-labelled Day/Night button. No mode/storage/handler/title/style change. Root assigned the focused accessible-name/Space recheck to the UI agent. The electric follow-up ran on stable final source.",
+  "harnessCorrection": "The first run selected [data-electric-mode], including hidden div#graphOptions metadata after4actual mode buttons; it incorrectly tried to click that div. Changed to button[data-electric-mode] and reran electric390/1440. All4actual modes are reachable and retain recorded rows. Earlier harness failures remain in the initial report.",
+  "pageErrors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "scope": "Read-only Chromium/SwiftShader shared-lab layout smoke;390/1440; energy/electric/wave/gas. No physical Safari/mobile, all300 science, OAuth or GPU/FPS claim.",
+  "limits": [
+    "Eight sampled experiments/viewports, not all300model verification",
+    "Computed contrast measured visible parameter/readout labels and units; not whole-page WCAG certification",
+    "No physical iPhone/Android/Safari, virtual keyboard or hardware FPS",
+    "VI/EN switching and session/unit preservation checked; not a claim of complete English translation"
+  ],
+  "passed": true,
+  "cases": [
+    {
+      "width": 390,
+      "id": "energy",
+      "status": "PASS",
+      "actualWebGL": {
+        "exists": true,
+        "lost": false,
+        "width": 364,
+        "height": 360
+      },
+      "parameterKey": "h0",
+      "parameterChangeRestore": true,
+      "recordedRows": 1,
+      "localeThemePreservesSession": true,
+      "measurementUnitsPreserved": [
+        "J",
+        "J",
+        "J"
+      ],
+      "electricModes": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "id": "electric",
+      "status": "PASS",
+      "actualWebGL": {
+        "exists": true,
+        "lost": false,
+        "width": 364,
+        "height": 360
+      },
+      "parameterKey": "q1",
+      "parameterChangeRestore": true,
+      "recordedRows": 1,
+      "localeThemePreservesSession": true,
+      "measurementUnitsPreserved": [
+        "N",
+        "m",
+        "N"
+      ],
+      "electricModes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "id": "wave",
+      "status": "PASS",
+      "actualWebGL": {
+        "exists": true,
+        "lost": false,
+        "width": 364,
+        "height": 360
+      },
+      "parameterKey": "a",
+      "parameterChangeRestore": true,
+      "recordedRows": 1,
+      "localeThemePreservesSession": true,
+      "measurementUnitsPreserved": [
+        "m",
+        "s",
+        "m/s"
+      ],
+      "electricModes": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "id": "gas",
+      "status": "PASS",
+      "actualWebGL": {
+        "exists": true,
+        "lost": false,
+        "width": 364,
+        "height": 360
+      },
+      "parameterKey": "tK",
+      "parameterChangeRestore": true,
+      "recordedRows": 1,
+      "localeThemePreservesSession": true,
+      "measurementUnitsPreserved": [
+        "kPa",
+        "K",
+        "m/s"
+      ],
+      "electricModes": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "id": "energy",
+      "status": "PASS",
+      "actualWebGL": {
+        "exists": true,
+        "lost": false,
+        "width": 1000,
+        "height": 600
+      },
+      "parameterKey": "h0",
+      "parameterChangeRestore": true,
+      "recordedRows": 1,
+      "localeThemePreservesSession": true,
+      "measurementUnitsPreserved": [
+        "J",
+        "J",
+        "J"
+      ],
+      "electricModes": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "id": "electric",
+      "status": "PASS",
+      "actualWebGL": {
+        "exists": true,
+        "lost": false,
+        "width": 1000,
+        "height": 600
+      },
+      "parameterKey": "q1",
+      "parameterChangeRestore": true,
+      "recordedRows": 1,
+      "localeThemePreservesSession": true,
+      "measurementUnitsPreserved": [
+        "N",
+        "m",
+        "N"
+      ],
+      "electricModes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "id": "wave",
+      "status": "PASS",
+      "actualWebGL": {
+        "exists": true,
+        "lost": false,
+        "width": 1000,
+        "height": 600
+      },
+      "parameterKey": "a",
+      "parameterChangeRestore": true,
+      "recordedRows": 1,
+      "localeThemePreservesSession": true,
+      "measurementUnitsPreserved": [
+        "m",
+        "s",
+        "m/s"
+      ],
+      "electricModes": [],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "id": "gas",
+      "status": "PASS",
+      "actualWebGL": {
+        "exists": true,
+        "lost": false,
+        "width": 1000,
+        "height": 600
+      },
+      "parameterKey": "tK",
+      "parameterChangeRestore": true,
+      "recordedRows": 1,
+      "localeThemePreservesSession": true,
+      "measurementUnitsPreserved": [
+        "kPa",
+        "K",
+        "m/s"
+      ],
+      "electricModes": [],
+      "overflow": false
+    }
+  ]
+}

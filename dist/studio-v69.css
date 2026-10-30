@@ -1,0 +1,129 @@
+/* Observation leads; the surrounding chrome stays quiet. */
+.header .appearance-toggle,.reading-header .appearance-toggle{position:static;display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;min-height:44px;padding:10px;border:1px solid var(--ql-border,#dce1e8);border-radius:8px;background:transparent;color:inherit;box-shadow:none;cursor:pointer}
+.appearance-toggle svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.appearance-toggle:focus-visible{outline:3px solid #6694ef;outline-offset:3px}
+.lab{max-width:1600px;line-height:1.6;padding-top:24px}
+.lab .lab-breadcrumb{margin-bottom:16px;gap:12px;color:var(--ql-secondary)}
+.lab .lab-heading h1{font-size:clamp(24px,2.5vw,34px);line-height:1.3;margin:4px 0;letter-spacing:-.025em}
+.lab .lesson-icon{display:none}
+.lab .lab-intro{align-items:center;margin:10px 0 18px;gap:18px}
+.lab .lab-intro p{margin:0;color:var(--ql-secondary);font-size:14px;line-height:1.65;max-width:64ch}
+.study-mode-menu{position:relative;flex:0 0 auto}
+.study-mode-menu>summary{list-style:none;display:flex;gap:12px;align-items:center;justify-content:center;cursor:pointer;min-height:44px;padding:8px 12px;font-size:13px;font-weight:600;color:var(--ql-ink);border:1px solid var(--ql-border);border-radius:8px;background:var(--ql-surface)}
+.study-mode-menu>summary:after{content:'⌄';color:var(--ql-secondary)}
+.study-mode-menu>summary::-webkit-details-marker{display:none}
+.study-mode-menu .mode-switch{position:absolute;right:0;top:calc(100% + 6px);z-index:40;display:grid;min-width:180px;gap:4px;padding:6px;background:var(--ql-surface);border:1px solid var(--ql-border);border-radius:10px;box-shadow:0 8px 30px #0002}
+.study-mode-menu .mode-switch button{min-height:44px;padding:10px 14px;text-align:left;border:0;background:transparent;color:var(--ql-ink);font-size:14px}
+.study-mode-menu .mode-switch button[aria-pressed=true]{background:var(--ql-subtle);color:var(--ql-ink);box-shadow:none}
+.lab .workspace-toolbar{margin-bottom:12px;gap:8px}
+.lab .workspace-toolbar button,.lab .layout-menu>summary{background:transparent;border:1px solid transparent;color:var(--ql-secondary);padding:8px 10px;font-size:13px;box-shadow:none}
+.lab .workspace-toolbar button[aria-expanded=true]{background:var(--ql-subtle);border-color:var(--ql-border);color:var(--ql-ink)}
+.lab .stage-shell{border-radius:12px;border-color:var(--ql-border);box-shadow:none;overflow:visible}
+.lab .stage-top{border-radius:12px 12px 0 0;background:var(--ql-surface);padding:10px 14px;gap:10px}
+.lab .stage-tools{gap:8px}
+.lab .stage-tools :is(.visual-settings>summary,.view-menu>summary){border:0;background:transparent;color:var(--ql-secondary);border-radius:6px;box-shadow:none;padding:8px;font-size:13px}
+.lab .projection-switch{border:1px solid var(--ql-border);background:var(--ql-subtle);padding:3px;border-radius:8px;gap:2px}
+.lab .projection-switch button{border:0;border-radius:5px;min-height:38px;padding:6px 12px;font-size:13px;background:transparent;box-shadow:none;color:var(--ql-secondary)}
+.lab .projection-switch button[aria-pressed=true]{background:var(--ql-surface);color:var(--ql-ink);box-shadow:0 1px 3px #0001}
+#shmCirclePanel{display:none;min-width:0;padding:0}
+.stage-shell[data-shm-view=linked] .stage-viewport{background:var(--ql-surface);display:block}
+.stage-shell[data-shm-view=linked] #shmCirclePanel{display:block}
+.stage-shell[data-shm-view=linked] .stage-viewport>.visual{display:none}
+.stage-shell[data-shm-view=linked] :is(.space-controls,.touch-interaction,.direct-tools,.teaching-tools>[data-action=reset-camera],#conceptObservation){display:none!important}
+.stage-shell[data-shm-view=linked] .teaching-tools{border-top:0;padding:4px 16px 12px;background:var(--ql-surface)}
+.lab .transport{background:var(--ql-surface);padding:12px 14px;border-top:1px solid var(--ql-border);border-bottom:1px solid var(--ql-border);gap:8px}
+.lab .transport .button{border-radius:8px;min-height:44px;font-size:13px;padding:8px 14px}
+.lab .transport #play{background:#245bd7!important;color:#fff!important;border-color:#245bd7!important;box-shadow:none}
+.lab .transport [data-action=record]{background:var(--ql-subtle)!important;color:var(--ql-ink)!important;border-color:var(--ql-border)!important}
+.lab .readouts{gap:0;border-top:0;padding:8px 12px;background:var(--ql-surface);border-radius:0 0 12px 12px}
+.lab .readouts .meter{border:0;border-radius:0;background:transparent;padding:12px 16px;display:block;min-width:0}
+.lab .readouts .meter+.meter{border-left:1px solid var(--ql-border)}
+.lab .meter>span{font-size:12px;color:var(--ql-secondary)}
+.lab .meter strong{font-size:22px;font-weight:650;line-height:1.5;margin:3px 0 0;letter-spacing:-.025em}
+.lab .meter strong small{font-size:12px;font-weight:500;margin-left:5px}
+.lab .controls,.lab .research-dock{border-radius:12px;box-shadow:none;background:var(--ql-surface)}
+.lab .control-heading{padding:16px 18px;background:var(--ql-surface)}
+.lab .control-heading h2{font-size:16px}
+.lab .parameter{border:0;border-bottom:1px solid var(--ql-border);border-radius:0;padding:16px 0;margin:0 0 4px;background:transparent}
+.lab .parameter-label label{font-size:14px;font-weight:600}
+.lab .value-entry input{font-size:18px;line-height:1.5;font-weight:600}
+.lab .experiment-tools{gap:12px;padding:4px 0}
+.lab .experiment-tools button{background:transparent;color:var(--ql-secondary);font-size:13px;border:0}
+.lab .model-footnote{margin-top:4px}
+.lab .live-tag{font-size:11px;padding:4px 8px;background:var(--ql-subtle);color:var(--ql-secondary)}
+@media(min-width:1101px){.lab:not([data-controls-collapsed=true]):not(.focus) .workspace{grid-template-columns:minmax(0,1fr) 12px minmax(300px,min(var(--controls-width,320px),340px))}}
+@media(max-width:1100px){.lab .controls{margin-top:16px}.lab .stage-top{padding:8px 12px}}
+@media(max-width:620px){
+ body .header:has(nav.ql-language-ready){grid-template-columns:repeat(3,minmax(0,1fr)) 53px 44px 44px;grid-template-areas:"ql-brand ql-brand ql-brand ql-language ql-language ql-theme" "ql-library ql-books ql-help ql-assistant ql-settings ql-account";column-gap:4px;row-gap:4px;padding:8px 12px}
+ .header nav.ql-language-ready>#appearanceToggle{grid-area:ql-theme;justify-self:end}
+ .header nav.ql-language-ready>#openAccount{grid-area:ql-account;justify-self:end;min-width:44px;width:44px}
+ .header nav.ql-language-ready>a[href="#library"]{font-size:12px;padding:4px;white-space:normal;line-height:1.2}
+ .header nav.ql-language-ready>a.nav-books{font-size:12px;padding:4px}
+ .reading-header .appearance-toggle{margin-inline-start:auto}
+ .lab{padding:14px 12px 32px}
+ .lab .lab-breadcrumb{margin-bottom:12px;gap:8px}
+ .lab .lab-topic{display:none}
+ .lab .lab-selector{font-size:0;gap:0;flex:1;justify-content:flex-end}
+ .lab .lab-selector select{font-size:13px;max-width:100%;min-height:40px;height:40px;padding-block:6px}
+ .lab .lab-heading h1{font-size:24px;letter-spacing:-.025em}
+ .lab .lab-header-actions{gap:4px}
+ .lab .lab-header-actions .icon-button,.lab .session-menu>summary{width:40px;min-width:40px;padding:8px}
+ .lab .lab-intro{flex-direction:row;align-items:center;gap:12px;margin:6px 0 12px}
+ .lab .lab-intro p{font-size:13px;line-height:1.5}
+ .study-mode-menu>summary{font-size:12px;padding:6px 8px;gap:8px}
+ .lab .workspace-toolbar{margin-bottom:8px;flex-wrap:nowrap;gap:4px}
+ .lab .workspace-toolbar>div{gap:4px;flex-wrap:nowrap}
+ .lab .workspace-toolbar button,.lab .layout-menu>summary{font-size:12px;padding:6px 8px}
+ .lab .stage-top .live-tag{position:absolute;width:1px;height:1px;padding:0;margin:-1px;clip:rect(0,0,0,0);overflow:hidden;white-space:nowrap}
+ .lab .stage-tools{width:100%;max-width:100%;gap:6px;justify-content:space-between}
+ .lab .projection-switch button{font-size:12px;padding:6px 9px}
+ .lab .stage-tools :is(.visual-settings>summary,.view-menu>summary){font-size:12px;padding:8px 4px}
+ #shmCirclePanel{padding:0}
+ .lab .readouts{grid-template-columns:repeat(3,minmax(0,1fr));padding:4px}
+ .lab .readouts .meter{padding:10px 8px}
+ .lab .meter>span{font-size:11px}
+ .lab .meter strong{font-size:17px}
+ .lab .meter strong small{display:block;margin:0;font-size:11px}
+ .lab .transport .time-slider{min-width:0}
+ .lab .stage-shell[data-shm-view=linked] .transport{order:2}
+ .lab .stage-shell[data-shm-view=linked] .readouts{order:3}
+}
+@media(max-width:390px){.header:has(nav.ql-language-ready) .brand-wordmark{font-size:18px}.header:has(nav.ql-language-ready)>.brand{gap:4px}.header:has(nav.ql-language-ready)>.brand>img{width:26px;height:26px}}
+@media print{.appearance-toggle{display:none!important}}
+/* The default diagram has one set of readouts and one nearby playback action. */
+.lab .readouts .meter:last-child{grid-column:auto;display:block}
+.playback-options{position:relative;margin-left:auto}
+.playback-options>summary{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 12px;list-style:none;font-size:12px;color:var(--ql-secondary);cursor:pointer;border-radius:8px}
+.playback-options>summary:after{content:'⌄'}
+.playback-options>summary::-webkit-details-marker{display:none}
+.playback-options-body{position:absolute;right:0;top:calc(100% + 6px);z-index:50;width:340px;max-width:calc(100vw - 48px);box-sizing:border-box;display:flex;flex-wrap:wrap;gap:8px;padding:14px;background:var(--ql-surface);color:var(--ql-ink);border:1px solid var(--ql-border);border-radius:10px;box-shadow:0 8px 24px #0002}
+.playback-options-body .time-slider{order:0;flex:1 1 100%;width:100%;margin:0}
+.lab[data-experiment=oscillation] .transport{position:relative}
+.skip:not(:focus){clip-path:inset(100%);width:1px;height:1px;overflow:hidden;padding:0}
+@media(max-width:620px){.lab .transport .playback-options>summary{padding:8px 4px;font-size:11px}.lab .transport>.button{padding:8px 10px}.lab .readouts .meter:last-child{grid-column:auto}.lab .playback-options{position:static}.playback-options-body{left:8px;right:8px;width:auto;max-width:none}.lab .transport .playback-options-body .time-slider{flex-basis:100%}}
+@media(max-width:620px){
+ /* Flatten presentation wrappers, not stateful nodes: controls stay mounted. */
+ .lab .stage-shell[data-shm-view=linked]{display:flex;flex-direction:column}
+ .lab .stage-shell[data-shm-view=linked] :is(.stage-viewport,#shmCirclePanel,.shm-circle,.shm-visual-grid){display:contents}
+ .lab .stage-shell[data-shm-view=linked] .shm-svg-wrap{order:1;padding:8px 14px 0}
+ .lab .stage-shell[data-shm-view=linked] .transport{order:2}
+ .lab .stage-shell[data-shm-view=linked] .shm-controls{order:3;margin:0;padding:10px 14px 12px;border:0}
+ .lab .stage-shell[data-shm-view=linked] .readouts{order:4;border-top:1px solid var(--ql-border)}
+ .lab .stage-shell[data-shm-view=linked] .shm-side{order:5;margin:0;padding:0 14px 8px}
+ .lab .stage-shell[data-shm-view=linked] .teaching-tools{order:6;padding:4px 14px 12px}
+ .lab[data-experiment=oscillation] .transport>.button{min-width:0;padding:8px 10px;gap:6px;font-size:12px}
+ .lab .transport .playback-options>summary{font-size:0;width:44px;box-sizing:border-box;justify-content:center;padding:8px}
+ .lab .transport .playback-options>summary:after{content:'•••';font-size:18px;letter-spacing:1px}
+ .lab .lab-selector select{min-height:44px;height:44px}
+ .lab .lab-header-actions .icon-button,.lab .session-menu>summary{width:44px;min-width:44px;min-height:44px}
+ body .reading-header{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 101px 44px;grid-template-areas:"book-brand book-brand book-brand book-theme" "book-library book-shelf book-language book-account";gap:6px;padding:10px 16px}
+ body .reading-header>.brand{grid-area:book-brand;min-width:0;justify-self:start}
+ body .reading-header nav.ql-language-ready{display:contents}
+ body .reading-header nav>a[href="index.html#library"]{grid-area:book-library}
+ body .reading-header nav>a[href="books.html"]{grid-area:book-shelf}
+ body .reading-header nav>a{min-width:0;font-size:12px;line-height:1.3;min-height:44px;padding:4px;display:flex;align-items:center;justify-content:center;text-align:center}
+ body .reading-header nav>.ql-language-switch{grid-area:book-language;margin:0!important}
+ body .reading-header #appearanceToggle{grid-area:book-theme;justify-self:end}
+ body .reading-header #openAccount{grid-area:book-account;width:44px;min-width:44px;padding:10px;justify-self:end}
+ body .reading-header #openAccount>span{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+}

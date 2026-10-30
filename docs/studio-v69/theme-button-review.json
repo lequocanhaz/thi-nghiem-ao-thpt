@@ -1,0 +1,120 @@
+{
+  "scope": "Read-only final semantics recheck; local headless Chromium at390px, main and books headers. No screen-reader/hardware certification.",
+  "sourceSha256": "54fcf1ae618e752dd8b75b7d0b7a7d6dede4c776346b496f890bb2cfffab78a3",
+  "cases": [
+    {
+      "route": "#lab/oscillation",
+      "locale": "vi-VN",
+      "mode": "light",
+      "accessibleName": "Chế độ ban đêm",
+      "ariaSnapshot": "- button \"Chế độ ban đêm\"",
+      "ariaPressedAbsent": true,
+      "keyboardEnterAndSpace": true,
+      "storedMode": "light",
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "route": "#lab/oscillation",
+      "locale": "vi-VN",
+      "mode": "dark",
+      "accessibleName": "Chế độ ban ngày",
+      "ariaSnapshot": "- button \"Chế độ ban ngày\"",
+      "ariaPressedAbsent": true,
+      "keyboardEnterAndSpace": true,
+      "storedMode": "dark",
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "route": "#lab/oscillation",
+      "locale": "en-US",
+      "mode": "light",
+      "accessibleName": "Night mode",
+      "ariaSnapshot": "- button \"Night mode\"",
+      "ariaPressedAbsent": true,
+      "keyboardEnterAndSpace": true,
+      "storedMode": "light",
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "route": "#lab/oscillation",
+      "locale": "en-US",
+      "mode": "dark",
+      "accessibleName": "Day mode",
+      "ariaSnapshot": "- button \"Day mode\"",
+      "ariaPressedAbsent": true,
+      "keyboardEnterAndSpace": true,
+      "storedMode": "dark",
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "route": "books.html",
+      "locale": "vi-VN",
+      "mode": "light",
+      "accessibleName": "Chế độ ban đêm",
+      "ariaSnapshot": "- button \"Chế độ ban đêm\"",
+      "ariaPressedAbsent": true,
+      "keyboardEnterAndSpace": true,
+      "storedMode": "light",
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "route": "books.html",
+      "locale": "vi-VN",
+      "mode": "dark",
+      "accessibleName": "Chế độ ban ngày",
+      "ariaSnapshot": "- button \"Chế độ ban ngày\"",
+      "ariaPressedAbsent": true,
+      "keyboardEnterAndSpace": true,
+      "storedMode": "dark",
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "route": "books.html",
+      "locale": "en-US",
+      "mode": "light",
+      "accessibleName": "Night mode",
+      "ariaSnapshot": "- button \"Night mode\"",
+      "ariaPressedAbsent": true,
+      "keyboardEnterAndSpace": true,
+      "storedMode": "light",
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    },
+    {
+      "route": "books.html",
+      "locale": "en-US",
+      "mode": "dark",
+      "accessibleName": "Day mode",
+      "ariaSnapshot": "- button \"Day mode\"",
+      "ariaPressedAbsent": true,
+      "keyboardEnterAndSpace": true,
+      "storedMode": "dark",
+      "focus": {
+        "outline": "solid",
+        "width": "3px"
+      }
+    }
+  ],
+  "errors": [],
+  "sourceStable": true
+}

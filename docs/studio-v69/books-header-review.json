@@ -1,0 +1,29 @@
+{
+  "status": "PASS after compact header CSS",
+  "cases": 15,
+  "viewports": [
+    320,
+    390,
+    1440
+  ],
+  "sourceStable": true,
+  "sourceHashes": {
+    "dist/appearance-v67.js": "6c29c4b9322eb8b4260c92728ac2bcaef9f2a13fcf7cb85138f44ce32a46abbc",
+    "dist/lab-extras-v67.css": "eec61910e8e2fd333e6aaf27f5c9f694e917927d1b0f0ad878aac0876e081067",
+    "dist/studio-v69.css": "069fcccd2758095c4d278459f8a0b1bca6e8ae58f4d76c2729ebd5abcd59f202",
+    "dist/books.html": "cab4743570952a6feeca6578ac80600db6fcca75003513a44be0b93bbc760beb"
+  },
+  "headerHeightMobile": {
+    "320": [
+      123,
+      125.8
+    ],
+    "390": [
+      123
+    ]
+  },
+  "minimumHeaderContrast": 10.659,
+  "errors": [],
+  "failures": [],
+  "scope": "Targeted header/keyboard/VIEN/theme/reading state after CSS-only compaction. Earlier12 reader scenarios retained; not rerun in full."
+}

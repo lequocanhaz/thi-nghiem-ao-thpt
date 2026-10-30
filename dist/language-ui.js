@@ -151,7 +151,7 @@ for(const [vi,en] of [
 
 // Shared quantity names must not inherit one experiment's parameter unit.
 // Each measurement/parameter renders its own catalog unit beside the value.
-pair('Vận tốc','Velocity');pair('Gia tốc','Acceleration');pair('Li độ','Displacement');
+pair('Thời gian & tùy chọn','Time and options');pair('Liên hệ','Linked view');pair('Vận tốc','Velocity');pair('Gia tốc','Acceleration');pair('Li độ','Displacement');
 
 export const getLocale=()=>i18n.getLocale();
 export const englishTitle=id=>dictionaries['en-US'].experiments[id]?.shortTitle||id;
