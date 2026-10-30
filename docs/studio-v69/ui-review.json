@@ -1,0 +1,52 @@
+{
+  "status": "PASS within reviewed scope",
+  "reviewer": "/root/unified_ui_review_v69",
+  "scope": "Independent read-only integrated UI review; local Chromium/SwiftShader, simulated320/390/1440px, light/dark. No real-device/Safari or full WCAG certification.",
+  "cases": 6,
+  "sourceStableDuringMatrix": true,
+  "pageErrors": [],
+  "httpErrors": [],
+  "visibleTextContrastFailures": 0,
+  "menusChecked": 24,
+  "allMenuHorizontalBoundsFit": true,
+  "documentOverflow": false,
+  "mobileFigureToPlayGapPx": {
+    "320": 93.59,
+    "390": 103.7
+  },
+  "beforeGapPx": {
+    "320": 406.98,
+    "390": 411.9
+  },
+  "actualMassLabelContrast": {
+    "light": 5.16855556002256,
+    "dark": 7.729874463956537
+  },
+  "keyboardThemeOutline": "solid3px in all6 contexts; skip link visible on focus",
+  "defaultCardinalLabelCollisions": 0,
+  "labelFollowup": {
+    "cases": 8,
+    "stable": true,
+    "errors": [],
+    "cssChange": "Only text M paint-order/stroke halo added after matrix, target screenshots in both themes at0/60/180/270 verified. Geometry unchanged.",
+    "hashes": {
+      "dist/shm-circle.js": "f00331663f489fb713d6c7553f4c9b5fc4ffe0d919745036f52fcdd4ff5d8001",
+      "dist/shm-circle.css": "d29ccd9ac3e60575c8bd5807f5d0a736eb36b0975ea2771f64caf88421a4d3e8",
+      "dist/studio-v69.css": "069fcccd2758095c4d278459f8a0b1bca6e8ae58f4d76c2729ebd5abcd59f202"
+    }
+  },
+  "hashesDuringMatrix": {
+    "dist/app.js": "4b0352846c3c66682efaa06ce756a3eb21d280c712dfe1409d98c89a274ef9e5",
+    "dist/views.js": "517f6387e861247d15b39028d0088e57d4dcf25ee2ea98149714368ecb1ae8d3",
+    "dist/shm-circle.js": "f00331663f489fb713d6c7553f4c9b5fc4ffe0d919745036f52fcdd4ff5d8001",
+    "dist/shm-circle.css": "d668d5fdfd80234a5d840e875dcd9048a7705bb76d9fa928adaa66ffa9a9fe57",
+    "dist/studio-v69.css": "069fcccd2758095c4d278459f8a0b1bca6e8ae58f4d76c2729ebd5abcd59f202",
+    "dist/lab-extras-v67.css": "eec61910e8e2fd333e6aaf27f5c9f694e917927d1b0f0ad878aac0876e081067",
+    "dist/appearance-v67.js": "6c29c4b9322eb8b4260c92728ac2bcaef9f2a13fcf7cb85138f44ce32a46abbc"
+  },
+  "remainingNonBlockers": [
+    "At320px the Tools disclosure wraps to a second toolbar line; all items fit and keep touch targets.",
+    "This is a focused oscillation and shared chrome review; existing3D world palette and all300 individual model compositions were not visually recertified.",
+    "Beauty is not certified by contrast/QA checks; visual conclusions below concern the concrete layout and pedagogical relationship."
+  ]
+}

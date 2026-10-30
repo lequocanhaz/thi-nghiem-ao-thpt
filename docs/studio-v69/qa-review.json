@@ -1,0 +1,106 @@
+{
+  "status": "PASS within the stated reviewed scope",
+  "author": "/root/unified_qa_v69",
+  "runtimeEdits": false,
+  "checksFile": "checks/browser-studio-v69.py",
+  "sourceFinal": {
+    "dist/app.js": "4b0352846c3c66682efaa06ce756a3eb21d280c712dfe1409d98c89a274ef9e5",
+    "dist/views.js": "517f6387e861247d15b39028d0088e57d4dcf25ee2ea98149714368ecb1ae8d3",
+    "dist/shm-circle.js": "f00331663f489fb713d6c7553f4c9b5fc4ffe0d919745036f52fcdd4ff5d8001",
+    "dist/shm-circle.css": "d29ccd9ac3e60575c8bd5807f5d0a736eb36b0975ea2771f64caf88421a4d3e8",
+    "dist/studio-v69.css": "069fcccd2758095c4d278459f8a0b1bca6e8ae58f4d76c2729ebd5abcd59f202",
+    "dist/appearance-v67.js": "6c29c4b9322eb8b4260c92728ac2bcaef9f2a13fcf7cb85138f44ce32a46abbc",
+    "dist/studio-export-v69.js": "836a9e317f1efd75298140ea33df2abe98fb1db14d01dbea994049b75e14ec2a"
+  },
+  "coverage": {
+    "initial9Viewports": {
+      "passed": [
+        320,
+        375,
+        390,
+        414,
+        430,
+        768,
+        1024,
+        1440,
+        1920
+      ],
+      "scope": "Default linked with no WebGL download, geometry, record/notebook, VI/EN/theme/reload, playback and overflow; followed by targeted final-source reviews, not falsely recertified as one frozen full run."
+    },
+    "finalDeep390": {
+      "status": "PASS",
+      "sourceStable": true,
+      "matchesCurrent": true,
+      "checks": [
+        "T=3/t=20 special phases +359 slider",
+        "mouse/keyboard/CDP touch",
+        "actual WebGL3D +2D +camera zoom",
+        "return linked retains data/notes; hidden WebGL state and renderer frame frozen",
+        "100 Tab/ShiftTab CSS fullscreen boundaries +Escape",
+        "PNG720x828 current cart pixels"
+      ]
+    },
+    "finalDeep1440": {
+      "status": "PASS",
+      "sourceStable": true,
+      "changedAfterRun": [
+        "dist/shm-circle.css",
+        "dist/studio-export-v69.js"
+      ],
+      "scope": "All deep checks passed after menu/focus fix; subsequent text halo CSS and export paint-order are covered on final390."
+    },
+    "finalMobileLayout": {
+      "passed": [
+        320,
+        390,
+        414,
+        430
+      ],
+      "sourceStable": true,
+      "checks": [
+        "figure→transport→phase→readouts→disclosures→teaching",
+        "play button55.17px below SVG",
+        "no horizontal document overflow"
+      ]
+    },
+    "menuFollowup": [
+      {
+        "width": 390,
+        "status": "PASS",
+        "escapeFocus": true,
+        "outsideMenuClose": true
+      },
+      {
+        "width": 1440,
+        "status": "PASS",
+        "escapeFocus": true,
+        "outsideMenuClose": true
+      }
+    ]
+  },
+  "failuresAndResolution": [
+    {
+      "finding": "Desktop1440 playback popup blocked PNG in Tools menu",
+      "resolution": "Root added outside/Escape popup closing; deep1440 PNG and targeted390/1440 menus passed."
+    },
+    {
+      "finding": "Fullscreen Tab escaped after lesson-guide summary to controls outside stage",
+      "resolution": "Root scans all closed-details ancestors.100 Tab/ShiftTab cycles pass in final deep390/1440."
+    },
+    {
+      "finding": "After mobile reorder the time popup covers phase presets while open",
+      "resolution": "Harness now closes the native time details before phase selection, matching normal user navigation. Separate outside/Escape behavior is tested."
+    }
+  ],
+  "errorsOnFinalDeep": {
+    "pageErrors": [],
+    "consoleErrors": [],
+    "httpErrors": []
+  },
+  "limits": [
+    "Chromium154/SwiftShader and viewport/CDP touch simulation only; no physical Safari/iPhone/Android or virtual keyboard",
+    "No OAuth/provider sign-in, AI calls or GPU/FPS benchmark",
+    "Focused UI/physics presentation QA, not certification of all300 scientific models or complete WCAG compliance",
+    "External requests were not instrumented in earlier runs; no zero-external-request claim is made from empty legacy report fields. Observer was added for future harness runs."
+  ]
+}

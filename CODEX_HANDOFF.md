@@ -187,3 +187,11 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Chọn pha xử lý cuối chu kỳ không trọn; vận tốc chiếu đúng thành phần ngang của tiếp tuyến, không thêm độ dài giả. Kiểm243 trạng thái SVG và1.449 trạng thái engine trong npmcheck; review độc lập physics/UI/books/QA thực tế đã thực hiện.
 - Ngày/đêm là `appearance-v67.js`/`lab-extras-v67.css`, khóa `quanh-appearance-v1`. Token đêm phải áp cảhtml/body do token gốc khai báo trênbody. Giữ màu ảnh gốc và số liệu; sách theo locale qua root.lang observer. Các nhãn EN đại lượng chung không được chèn đơn vị từ thí nghiệm khác.
 - Các kiểm browser9width/pointer/keyboard/CDPtouch là Chromium/SwiftShader giả lập; không iPhone/Safari/Android thật. OAuth/email thật và nghiệm thu giáo viên toàn300bài chưa hoàn tất. Trạng thái triển khai xem PR43/Actions.
+
+## Bố cục và biểu diễn dao động v69
+
+- Xem `docs/STUDIO_V69_REPORT.md`. V67 bị chủ dự án phản hồi cả bố cục lẫn cách diễn tả; v69 chuyển sang một SVG thật có đường chiếu từM/H xuống vật lò xo cùngx/thang±A. Không coi kiểm contrast/chạy đúng là chứng minh thiết kế đẹp.
+- Defaultdaođộng làLiênhệ; 2D/3D vẫn giữmodelcũ. KhóaUIriêng `quanh-shm-view-v69`, không thêm schema phiên. Linked không tải renderer lúc vào mới và không cập nhật/render model3D khi đã ẩn; PNG xuất SVG hiện hành.
+- `studio-v69.css` tổ chức chrome chung và ordermobile bằngdisplay:contents, không clone/move các node trạng thái. Chạy/Ghi điểm trước phần mở rộng; ngày/đêm nằmheader. Header sách mobile2hàng; giữ font/brand/banner/media gốc.
+- Kiểm mới `shm-linked-v69.mjs` nằmnpmcheck. Browser mới `checks/browser-studio-v69.py` thay phạm vi kiểm default3D của harnessv67; nó kiểm cảLiênhệ, 2D/3D, PNG, fullscreen/menu,9widths. Các scriptbrowserv67 là mốc lịch sử, không dùng kỳ vọngdefault3D của chúng để hoàn tácLiênhệ.
+- Fullscreenfocus phải xét TẤT CẢ ancestor details đóng. Popupplayback/studymode đóng khi nhấn ngoài/Escape. Các báo cáo ghi rõ phạmvi kiểm độc lập và giả lập; chưa thiết bị thật/nghiệmthu toàn300bài/OAuththật.
