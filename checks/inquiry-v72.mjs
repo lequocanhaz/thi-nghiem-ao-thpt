@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {parseHTML} from 'linkedom';
+import {experiments} from '../dist/experiments.js';
+import {mountInquiry,inquiryStorageKey,normalizeInquiry} from '../dist/inquiry-v72.js';
+const memory=new Map(),storage={getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v)};
+const create=()=>{const {document,window}=parseHTML('<html lang="vi"><body><section id="host"></section></body></html>');return {document,window,host:document.querySelector('#host')};};
+let cases=0;
+for(const e of experiments){
+ const {document,window,host}=create();const ui=mountInquiry(host,e,{storage,document});
+ assert.equal(ui.root.querySelectorAll('textarea').length,5);assert.equal(ui.root.hasAttribute('open'),false);
+ assert.equal(ui.root.querySelectorAll('select option').length,e.params.length+1);
+ const input=ui.root.querySelector('[data-inquiry-field=prediction]');input.value='Dự đoán riêng: <img src=x onerror=alert(1)>';
+ input.dispatchEvent(new window.Event('input',{bubbles:true}));
+ ui.setLocale('en-US');assert.equal(input.value,'Dự đoán riêng: <img src=x onerror=alert(1)>');
+ assert.equal(ui.root.querySelector('summary').textContent,'Your investigation');assert.equal(ui.root.querySelectorAll('img').length,0);
+ const exported=ui.exportData();assert.equal(exported.worksheet.prediction,input.value);assert.equal(exported.experimentId,e.id);
+ ui.destroy();assert.equal(host.children.length,0);
+ const reloaded=mountInquiry(host,e,{storage,document});assert.equal(reloaded.root.querySelector('[data-inquiry-field=prediction]').value,input.value);
+ reloaded.destroy();cases++;
+}
+const e=experiments.find(x=>x.params.length>1),keys=e.params.map(p=>p.key),{host,document,window}=create();
+storage.setItem(inquiryStorageKey(e.id),JSON.stringify({prediction:'saved',independent:keys[0],controlled:[keys[0],keys[1],'not-a-param'],support:false}));
+const ui=mountInquiry(host,e,{storage,document,locale:'en-US',getParameters:()=>({[keys[0]]:7}),getRows:()=>[{x:1,y:2}]});
+assert.equal(ui.root.querySelector('textarea').placeholder,'');
+assert.deepEqual(ui.exportData().worksheet.controlled,[keys[1]]);
+assert.equal(ui.root.querySelector('[data-inquiry-controlled="'+keys[0]+'"]').disabled,true);
+assert.deepEqual(ui.exportData().currentParameters,{[keys[0]]:7});assert.deepEqual(ui.exportData().recordedData,[{x:1,y:2}]);
+const select=ui.root.querySelector('select');for(const option of select.options)option.removeAttribute('selected');select.querySelector('option[value="'+keys[1]+'"]').setAttribute('selected','');select.dispatchEvent(new window.Event('input',{bubbles:true}));
+assert.deepEqual(ui.exportData().worksheet.controlled,[]);assert.equal(ui.root.querySelector('[data-inquiry-controlled="'+keys[1]+'"]').disabled,true);
+ui.destroy();
+const broken={getItem(){throw Error('blocked');},setItem(){throw Error('quota');}};
+const denied=mountInquiry(host,e,{document,storage:broken});const field=denied.root.querySelector('textarea');field.value='keep despite quota';field.dispatchEvent(new window.Event('input',{bubbles:true}));assert.match(denied.root.querySelector('[role=status]').textContent,/Không lưu được/);assert.equal(denied.exportData().worksheet.prediction,'keep despite quota');denied.destroy();
+storage.setItem(inquiryStorageKey(e.id),'{badjson');const corrupt=mountInquiry(host,e,{document,storage});assert.equal(corrupt.exportData().worksheet.prediction,'');corrupt.destroy();
+const normalized=normalizeInquiry({prediction:'a'.repeat(7000),conclusion:5,independent:'unknown',controlled:[{},null]},e);assert.equal(normalized.prediction.length,6000);assert.equal(normalized.conclusion,'');assert.equal(normalized.independent,'');assert.deepEqual(normalized.controlled,[]);
+assert.equal(memory.has('thpt'),false);
+console.log(`PASS inquiry: ${cases} experiment worksheets persist learner-owned text across mount and locale; actual parameter choices, no HTML injection, controlled-variable exclusion, export snapshots, corrupt/storage-denied recovery; no simulation/session/cloud writes.`);

@@ -1,0 +1,555 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "theme": "light",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 12,
+          "y": 144.359375,
+          "width": 296,
+          "height": 1628.03125,
+          "top": 144.359375,
+          "right": 308,
+          "bottom": 1772.390625,
+          "left": 12
+        },
+        "model": {
+          "x": 12,
+          "y": -2092.625,
+          "width": 296,
+          "height": 1497.984375,
+          "top": -2092.625,
+          "right": 308,
+          "bottom": -594.640625,
+          "left": 12
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 12,
+          "y": 144.359375,
+          "width": 296,
+          "height": 1628.03125,
+          "top": 144.359375,
+          "right": 308,
+          "bottom": 1772.390625,
+          "left": 12
+        },
+        "model": {
+          "x": 12,
+          "y": -2092.625,
+          "width": 296,
+          "height": 1497.984375,
+          "top": -2092.625,
+          "right": 308,
+          "bottom": -594.640625,
+          "left": 12
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 375,
+      "theme": "light",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 12,
+          "y": 193.171875,
+          "width": 351,
+          "height": 1628.03125,
+          "top": 193.171875,
+          "right": 363,
+          "bottom": 1821.203125,
+          "left": 12
+        },
+        "model": {
+          "x": 12,
+          "y": -1993.625,
+          "width": 351,
+          "height": 1447.796875,
+          "top": -1993.625,
+          "right": 363,
+          "bottom": -545.828125,
+          "left": 12
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 12,
+          "y": 193.171875,
+          "width": 351,
+          "height": 1628.03125,
+          "top": 193.171875,
+          "right": 363,
+          "bottom": 1821.203125,
+          "left": 12
+        },
+        "model": {
+          "x": 12,
+          "y": -1993.625,
+          "width": 351,
+          "height": 1447.796875,
+          "top": -1993.625,
+          "right": 363,
+          "bottom": -545.828125,
+          "left": 12
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 430,
+      "theme": "light",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 12,
+          "y": 254.75,
+          "width": 406,
+          "height": 1608.234375,
+          "top": 254.75,
+          "right": 418,
+          "bottom": 1862.984375,
+          "left": 12
+        },
+        "model": {
+          "x": 12,
+          "y": -1909.625,
+          "width": 406,
+          "height": 1425.375,
+          "top": -1909.625,
+          "right": 418,
+          "bottom": -484.25,
+          "left": 12
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 430,
+      "theme": "dark",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 12,
+          "y": 254.75,
+          "width": 406,
+          "height": 1608.234375,
+          "top": 254.75,
+          "right": 418,
+          "bottom": 1862.984375,
+          "left": 12
+        },
+        "model": {
+          "x": 12,
+          "y": -1909.625,
+          "width": 406,
+          "height": 1425.375,
+          "top": -1909.625,
+          "right": 418,
+          "bottom": -484.25,
+          "left": 12
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 16,
+          "y": 187.125,
+          "width": 736,
+          "height": 1484.75,
+          "top": 187.125,
+          "right": 752,
+          "bottom": 1671.875,
+          "left": 16
+        },
+        "model": {
+          "x": 16,
+          "y": -2183.53125,
+          "width": 736,
+          "height": 1669.703125,
+          "top": -2183.53125,
+          "right": 752,
+          "bottom": -513.828125,
+          "left": 16
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 16,
+          "y": 285.125,
+          "width": 736,
+          "height": 1484.75,
+          "top": 285.125,
+          "right": 752,
+          "bottom": 1769.875,
+          "left": 16
+        },
+        "model": {
+          "x": 16,
+          "y": -2085.53125,
+          "width": 736,
+          "height": 1669.703125,
+          "top": -2085.53125,
+          "right": 752,
+          "bottom": -415.828125,
+          "left": 16
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 30.71875,
+          "y": 285.21875,
+          "width": 962.5625,
+          "height": 1484.75,
+          "top": 285.21875,
+          "right": 993.28125,
+          "bottom": 1769.96875,
+          "left": 30.71875
+        },
+        "model": {
+          "x": 30.71875,
+          "y": -1910.453125,
+          "width": 962.5625,
+          "height": 1496.71875,
+          "top": -1910.453125,
+          "right": 993.28125,
+          "bottom": -413.734375,
+          "left": 30.71875
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "status": "PASS",
+      "measurement": {
+        "bad": [],
+        "overflow": false,
+        "rect": {
+          "x": 30.71875,
+          "y": 285.21875,
+          "width": 962.5625,
+          "height": 1484.75,
+          "top": 285.21875,
+          "right": 993.28125,
+          "bottom": 1769.96875,
+          "left": 30.71875
+        },
+        "model": {
+          "x": 30.71875,
+          "y": -1910.453125,
+          "width": 962.5625,
+          "height": 1496.71875,
+          "top": -1910.453125,
+          "right": 993.28125,
+          "bottom": -413.734375,
+          "left": 30.71875
+        },
+        "labels": [
+          {
+            "id": "inquiry-1-prediction",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-variable",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conditions",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-observations",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-conclusion",
+            "label": true
+          },
+          {
+            "id": "inquiry-1-application",
+            "label": true
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

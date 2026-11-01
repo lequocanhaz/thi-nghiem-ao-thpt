@@ -1,0 +1,88 @@
+QUANH LAB  |  PHYSICSLAB.TECH
+ĐẶC TẢ CHỈNH SỬA VÀ HOÀN THIỆN300 THÍ NGHIỆM VẬT LÍ ẢO
+Bản hướng dẫn triển khai chi tiết cho lập trình viên, chuyên gia Vật lí và giáo viên thẩm định
+300 HỒ SƠ HẠNG MỤC  •  TIÊU CHÍ NGHIỆM THU  •  KẾ HOẠCH TRIỂN KHAI
+Website: https://physicslab.tech/Repository: https://github.com/lequocanhaz/thi-nghiem-ao-thptNgày biên soạn: 30/10/2026Phiên bản tài liệu: 1.0 – Đặc tả đề xuất / trước nghiệm thu
+
+LƯU Ý HỌC THUẬT  Các nội dung “cần sửa/bổ sung” là công việc phải kiểm tra và đưa vào kế hoạch cải tiến; không mặc định tính năng hiện tại đã hỏng. Tài liệu đối chiếu 300 ID và báo cáo thẩm định đã có, nhưng chưa phải kết quả chạy trực tiếp 300 mô hình trên thiết bị thật hoặc xác nhận đạt YCCĐ cụ thể.
+
+1. CÁCH ĐỌC VÀ SỬ DỤNG ĐẶC TẢ
+Mỗi thí nghiệm được tách thành một phiếu phát triển có mã ID gốc. Phiếu ưu tiên hành động mà nhóm phát triển có thể giao việc, có đầu vào, đầu ra, phép thử và điều kiện đóng hạng mục. Những phần đã đúng trên bản triển khai cần được bảo toàn, không xây lại chỉ để đáp ứng câu chữ báo cáo.
+Mã công việc
+Phạm vi sửa
+Bằng chứng cần lưu
+S1 – Khoa học
+Công thức, điều kiện áp dụng, trường hợp biên, phương trình/solver
+Bộ dữ liệu đầu vào–đầu ra độc lập, kết quả sai số
+S2 – Cảnh mô hình
+Dụng cụ, trục, tia, vectơ, quy ước chiều/pha
+Ảnh hoặc video trước–sau tại 3 bộ tham số
+S3 – Tương tác
+Thanh chỉnh, đơn vị, giới hạn, tạm dừng/khởi động lại
+Nhật ký thao tác và kiểm thử bàn phím/cảm ứng
+S4 – Dữ liệu
+Bảng, đồ thị, tên trục, dữ liệu đo vs đường lý thuyết
+CSV/JSON và ảnh đồ thị khớp số học
+S5 – Sư phạm
+YCCĐ, dự đoán, khảo sát, kết luận, vận dụng
+Phiếu thử với học sinh và rubrics
+S6 – Khả dụng
+Điện thoại, a11y, xử lý lỗi, đa ngôn ngữ
+Chụp màn hình Android/iPhone/desktop, log lỗi
+S7 – Nghiệm thu
+Tái lập, kiểm thử tự động và giáo viên ký duyệt
+Commit SHA, trình duyệt, PASS/FAIL, biên bản
+
+Quy ước ưu tiên: P1 là hạng mục cần rà soát trước khi sử dụng chính khóa hoặc chưa có hồ sơ cải tiến riêng trong v64; P2 là tối ưu hóa bổ sung và nghiệm thu sau khi đã có bằng chứng cải tiến riêng. P1/P2 không phải kết luận có lỗi hay không có lỗi.
+2. TỔNG QUAN PHẠM VI VÀ GIỚI HẠN BẰNG CHỨNG
+Chỉ báo
+Kết quả đối chiếu
+Cách hiểu đúng
+Danh mục
+300
+300 ID phân biệt, có đường dẫn mở bài theo hash route
+Gắn lớp
+Lớp 10: 68; lớp 11: 156; lớp 12: 76
+Phân lớp theo metadata, chưa xác nhận khớp toàn bộ YCCĐ
+Báo cáo v64: cải tiến riêng
+121
+Có bằng chứng thay đổi thiết kế, không phải nghiệm thu của giáo viên
+Báo cáo v64: chưa thiết kế lại riêng
+179
+Không thể suy ra 179 bài sai; cần lập đặc tả/kiểm thử theo bài
+Nghiệm thu sư phạm
+Chưa có đầy đủ 300 phiếu
+Không khẳng định bất cứ bài nào “đạt chuẩn” chỉ từ mã nguồn
+Nền tảng tài khoản
+Cấu hình Firebase đã bật
+Đăng nhập không đồng nghĩa đồng bộ bài đo, tiến độ và bài nộp
+
+Với các bài thuộc vật lí chuyên sâu hoặc quang học đang gắn lớp 11, đề nghị thể hiện nhãn “mở rộng/chuyên đề” cho đến khi có đối chiếu YCCĐ; học sinh không bị ép làm như nội dung bắt buộc. Cơ sở là định hướng CTGDPT 2018 và phạm vi thực tế mô hình trên website; đây không phải quyết định phân phối chương trình của nhà trường.
+3. CÁC THAY ĐỔI HỆ THỐNG PHẢI LÀM MỘT LẦN CHO TẤT CẢ BÀI
+3.1. Bản đồ chương trình – SGK – thí nghiệm  Tạo bảng ánh xạ `experimentId → lớp → mạch nội dung → YCCĐ → bài SGK → loại cốt lõi/mở rộng → mục tiêu đo lường`. Cho phép một bài liên kết nhiều mạch nhưng không tự nhận là thuộc bộ sách chỉ theo chủ đề. Hiển thị trạng thái “chờ đối chiếu” thay vì nhãn sai.
+3.2. Chu trình học tập thống nhất  Mọi bài có vùng ngắn “Dự đoán → Chọn biến → Khảo sát → Ghi số liệu → Phân tích → Kết luận → Vận dụng”. Người học được ẩn các gợi ý sau khi hiểu; tự chọn mức hỗ trợ. Không buộc đọc cả trang lí thuyết trước khi thao tác.
+3.3. Quy ước tính toán và đồ họa  Dùng kết quả của solver khoa học làm nguồn dữ liệu duy nhất cho số đo, đồ thị, thanh trạng thái và cảnh 3D. Không tính vật lí từ chiều dài mũi tên pixel. Không sửa phương trình để đạt biểu đồ “đẹp” hoặc giữ vật trong khung nhìn.
+3.4. Đồ thị và số liệu  Mỗi đồ thị cần tên, hai trục–đơn vị, thang đo phù hợp, chú giải đường lý thuyết/điểm người học ghi, phóng to và xuất CSV/JSON. Khi thay biến kiểm soát phải mở dataset mới hoặc phân nhóm; không trộn điểm khác điều kiện vào một đường hồi quy.
+3.5. Công thức và đơn vị  Sử dụng hiển thị 10 mũ cho ký hiệu khoa học, không xuất “e-34” khó đọc ở vùng HS. Công bố SI, quy đổi nC/µC, cm/m, kΩ/Ω, µF/F, eV/J, °C/K với làm tròn và chữ số có nghĩa. Kết quả không được dùng chuỗi đã format làm dữ liệu đầu vào.
+3.6. Điều khiển và trạng thái  Đặt tên tham số giống bảng đo; có nút mặc định, chạy/tạm dừng/tua từng bước; khóa các miền phi vật lí, giải thích vì sao khóa. Khi đang chạy mà người học chỉnh tham số: tạm dừng có thông báo, không làm mất bảng số liệu cũ.
+3.7. Bảo đảm truy cập  Thử 320/375/390/430/768/1024/1440 px và máy thật; mục tiêu vùng bấm tối thiểu 44 px; bàn phím Tab/Enter/Escape, nhãn screen reader, màu có chữ/dấu thay thế, không chỉ thông tin qua màu. Giữ cửa sổ chat/nhật ký không che mô hình.
+3.8. Tài khoản và dữ liệu học tập  Thiết kế đồng bộ tùy chọn theo người dùng (Firestore/DB phân quyền nếu được duyệt), tách user ID với dữ liệu cục bộ, chống xung đột phiên, cơ chế xuất/xóa dữ liệu, quyền xem của giáo viên. Không được giả định cấu hình Firebase Auth hiện nay đã lưu tiến độ cloud.
+3.9. Trợ lý AI  Tách đầu ra AI khỏi số đo vật lí: AI chỉ giải thích theo ID, tham số và dữ liệu được phép gửi; hiển thị cảnh báo “cần kiểm chứng”. Có giới hạn lượt dùng, kiểm thử prompt injection và fallback khi backend lỗi/quota hết. Không tự gửi dữ liệu học sinh/ảnh nếu chưa nhấn Gửi.
+3.10. Phân tích sử dụng và quyền riêng tư  Thu thập tối thiểu sự kiện phi cá nhân: mở bài, chạy, ghi số, xuất, lỗi. Nếu thu dữ liệu học sinh thì phải có chính sách xử lý, thời hạn lưu, quyền phụ huynh/trường, và cơ chế đồng ý phù hợp. Không theo dõi nội dung bài làm nhạy cảm vì tiện phân tích.
+3.11. Học liệu và bản quyền  Rà soát quyền cung cấp sách giáo khoa, hình ảnh, âm thanh, video, font; kiểm tra riêng nếu dự kiến thu phí/thương mại hóa. Ghi nguồn học liệu ở bài có sử dụng.
+3.12. Quy trình CI và phát hành  Giữ bài test cũ, thêm test `physics(id)`, `interaction(id)`, `lesson(id)`, `mobile(id)`. Mọi sửa bài phải gắn commit, ảnh trước/sau, cảnh báo thay đổi mô hình, phản biện của người thứ hai, và kiểm HTTPS thật sau khi Pages triển khai.
+4. TIÊU CHÍ NGHIỆM THU CỤ THỂ
+Trụ cột
+Điều kiện nghiệm thu bắt buộc
+Vật lí
+Ca chuẩn độc lập khớp trong sai số phù hợp mô hình; bảo toàn/đối xứng/đơn điệu đúng; xử lí miền không xác định, không có NaN/Infinity không giải thích.
+Giao diện
+Giữ dụng cụ và đại lượng chính đọc được trên 390 px; có chú giải trục, màu, vectơ, nguồn, trạng thái; không chồng các lớp chữ lên đối tượng.
+Thao tác
+Tất cả biến được tuyên bố điều khiển hoạt động theo khoảng cho phép, reset tái lập, không mất số liệu ngoài ý muốn; dùng được bàn phím và cảm ứng.
+Học tập
+HS dự đoán–thao tác–đọc số–kết luận; ít nhất một câu hỏi buộc dùng dữ liệu, không chỉ nhắc lại công thức; giáo viên xác nhận mục tiêu/YCCĐ.
+Truy vết
+Lưu ID, bộ tham số, thời điểm, phiên bản, người thử, thiết bị và ảnh/log chứng cứ; có trạng thái PASS / FAIL / cần cải thiện.
+
+Ngưỡng sai số số học: tùy mô hình và phương pháp tính, nhóm Vật lí phải phê duyệt riêng. Không áp một ngưỡng 1% cho tất cả, đặc biệt tại điểm kì dị, gần ngưỡng chuyển pha hoặc mô hình Monte Carlo. Với toán giải tích đơn giản có thể bắt đầu kiểm tương đối 0,1–1% ngoài vùng gần 0, sau đó hiệu chỉnh theo yêu cầu thực tế.
