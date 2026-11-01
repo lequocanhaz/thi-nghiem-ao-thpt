@@ -214,3 +214,8 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Phiếu inquiry-v72 gắn sau mô hình, native details, trường do người học viết, khóa cục bộ riêng từngID, không gửi AI/cloud; xuấtJSONthô. Không thay schema phiên hoặc các ghi chép cũ.
 - analytics?v72 nhóm điều kiện từ snapshot s/c, không khớp gộp khi khác/thiếu điều kiện; giữ mọiđiểm. Kiểm soát t khi trục khôngphảit, phân biệt initialparameters và dependentcolumns để không tạo hồi quy giả.
 -208 đối chứng số học8bàilõi; khôngđổi solver/renderer/previews. C/D/E và thẩmđịnhsưphạm chưa hoàn tất. Browser mô phỏng khôngchứngnhận Safari/iPhone thật.
+
+## Audit 52 bài gốc còn lại v73
+
+- Xem docs/SPECIFICATION_V73_AUDIT.md; checks/spec-core-mechanics-v73.mjs và spec-core-discovery-v73.mjs bổ sung oracle cho 009–060, tổng60ID đã có đối chứng trong v72–v73. Không đổi solver/renderer/ảnh/runtime.
+- Known issue mở: damped.envelope là hệ số suy giảm a exp(-beta t), không phải strict upper bound của nghiệm v0=0; x/v/energy kiểm đúng, trường chưa hiển thị. Không gọi mọi trường đã đúng chỉ vì numeric tests PASS. Tracker lưu rõ và giữ mọi giáo viên/thiết bị/chương trình pending.

@@ -42,7 +42,7 @@
     {
       "id": "uniform",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -68,12 +68,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "acceleration",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -99,12 +100,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "horizontal",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -130,12 +132,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "projectile",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -161,12 +164,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "newton",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -192,12 +196,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "incline",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -223,12 +228,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "collision",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -254,12 +260,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "circular",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -285,12 +292,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "lever",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -316,12 +324,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "hooke",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -347,12 +356,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "freefall",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -378,12 +388,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "friction",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -409,12 +420,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "work",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -440,12 +452,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "impulse",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -471,12 +484,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "buoyancy",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -502,12 +516,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "pressure",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -533,7 +548,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "vector_sum",
@@ -2279,7 +2295,7 @@
     {
       "id": "pendulum",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2305,12 +2321,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "damped",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2336,12 +2353,16 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md",
+      "knownIssues": [
+        "Legacy envelope field is a decay coefficient, not a strict upper bound; semantic clarification pending. Displacement, velocity and energy reference cases pass."
       ]
     },
     {
       "id": "resonance",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2367,12 +2388,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "interference",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2398,12 +2420,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "standing",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2429,12 +2452,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "sound",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2460,12 +2484,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "series",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2491,12 +2516,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "parallel",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2522,12 +2548,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "joule",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2553,12 +2580,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "reflection",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2584,12 +2612,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "refraction",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2615,12 +2644,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "tir",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2646,12 +2676,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "lens",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2677,12 +2708,16 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md",
+      "knownIssues": [
+        "P2: selected model/control labels remain Vietnamese after EN switch; observed in Chromium390/1440, localization acceptance pending."
       ]
     },
     {
       "id": "mirror",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2708,12 +2743,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "prism",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2739,12 +2775,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "young",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2770,12 +2807,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "diffraction",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2801,12 +2839,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "polarization",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2832,12 +2871,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "resistivity",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2863,12 +2903,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "internalresistance",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2894,12 +2935,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "bridge",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -2925,7 +2967,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "spring_period",
@@ -7024,7 +7067,7 @@
     {
       "id": "magnetic",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7050,12 +7093,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "induction",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7081,12 +7125,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "decay",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7112,12 +7157,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "thermalexpansion",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7143,12 +7189,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "calorimetry",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7174,12 +7221,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "phasechange",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7205,12 +7253,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "heattransfer",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7236,12 +7285,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "isobaric",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7267,12 +7317,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "isochoric",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7298,12 +7349,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "firstlaw",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7329,12 +7381,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "kinetic",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7360,12 +7413,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "solenoid",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7391,12 +7445,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "lorentz",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7422,12 +7477,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "transformer",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7453,12 +7509,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "ac",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7484,7 +7541,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md"
     },
     {
       "id": "wire_field",
