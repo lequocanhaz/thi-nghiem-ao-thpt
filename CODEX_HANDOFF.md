@@ -207,3 +207,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 
 - `catalog-theme-v71.css` chỉ scope thư viện, ghép nền/chữ/focus cho search wrapper và input; dùng selected cho nhóm lớp, favorites/recent; chủ đề ghost với trạng thái chọn rõ. Không đảo màu ảnh preview.
 - Các button lớp học trên home và catalog trùng data-grade; browser harness phải scope#library để tránh nhấn nhầm. Xem docs/CATALOG_V71.md và PR phát hành để biết nghiệm thu thực tế.
+
+## Đặc tả 300 phiếu v72 — nền tảng A/B
+
+- Nguồn Word người dùng được nhập đủ300ID vào sources/specification-v72, tracker docs/spec-v72/coverage.json. Xem docs/SPECIFICATION_V72_REPORT.md; yêu cầu đề xuất không phải bằng chứng mọi bài lỗi. Không đóng phiếu giáo viên/thiết bị khi chưa có xác nhận.
+- Phiếu inquiry-v72 gắn sau mô hình, native details, trường do người học viết, khóa cục bộ riêng từngID, không gửi AI/cloud; xuấtJSONthô. Không thay schema phiên hoặc các ghi chép cũ.
+- analytics?v72 nhóm điều kiện từ snapshot s/c, không khớp gộp khi khác/thiếu điều kiện; giữ mọiđiểm. Kiểm soát t khi trục khôngphảit, phân biệt initialparameters và dependentcolumns để không tạo hồi quy giả.
+-208 đối chứng số học8bàilõi; khôngđổi solver/renderer/previews. C/D/E và thẩmđịnhsưphạm chưa hoàn tất. Browser mô phỏng khôngchứngnhận Safari/iPhone thật.

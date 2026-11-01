@@ -26,6 +26,7 @@ for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
  let content=read(name).toString();
  content=content.replace(/<link rel="stylesheet" href="catalog-theme-v71\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="assistant-theme-v70\.css\?v=\d+">/g,'');
+ content=content.replace(/<link rel="stylesheet" href="inquiry-v72\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="shm-circle\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="lab-extras-v67\.css(?:\?v=\d+)?">/g,'').replace(/<link rel="stylesheet" href="studio-v69\.css\?v=\d+">/g,'').replace(/<script type="module" src="appearance-v67\.js(?:\?v=\d+)?"><\/script>/g,'');
  if(name==='dist/index.html'){
@@ -60,7 +61,7 @@ const lifecycle=JSON.parse(fs.readFileSync(new URL('./banner-lifecycle-v59.json'
 const currentApp=read('dist/app.js').toString();
 for(const [key,pattern] of Object.entries(lifecycle.patterns)){
  const fragment=currentApp.match(new RegExp(pattern))?.[0];assert.ok(fragment,'Missing protected banner responsibility: '+key);
- assert.equal(hash(fragment.replace('pendingClearId=null;pendingSession=null;','')),lifecycle.sha256[key],'Unchanged banner '+key);
+ assert.equal(hash(fragment.replace('pendingClearId=null;pendingSession=null;','').replace('inquiry?.destroy();inquiry=null;','').replace('mountInvestigation(e);','')),lifecycle.sha256[key],'Unchanged banner '+key);
 }
 const ids=experiments.map(e=>e.id).sort();
 assert.equal(ids.length,300);assert.equal(new Set(ids).size,300);

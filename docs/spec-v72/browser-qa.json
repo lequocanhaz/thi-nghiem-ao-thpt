@@ -1,0 +1,131 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "id": "energy",
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "id": "oscillation",
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "id": "wave",
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "id": "electric",
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "id": "ohm",
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "id": "capacitor",
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "id": "boyle",
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "id": "gas",
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "energy",
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "oscillation",
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "wave",
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "electric",
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "ohm",
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "capacitor",
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "boyle",
+      "theme": "light",
+      "locale": "vi-VN",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "gas",
+      "theme": "dark",
+      "locale": "en-US",
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "id": "ohm-fit-pause",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "id": "ohm-fit-pause",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Chromium/SwiftShader emulation, not real Safari/iPhone or Android hardware.",
+    "No teacher acceptance or AI calls."
+  ]
+}
