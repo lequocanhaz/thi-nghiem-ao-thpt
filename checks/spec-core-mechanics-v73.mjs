@@ -22,7 +22,7 @@ function oracle(id,s){let t=s.t||0;const r=d=>d*pi/180;
  case'lever':return {torque1:s.m1*G*s.l1,torque2:s.m2*G*s.l2,net:G*(s.m1*s.l1-s.m2*s.l2)};
  case'hooke':return {force:s.m*G,extension:s.m*G/s.k,energy:(s.m*G)**2/(2*s.k)};
  case'pendulum':{const w=Math.sqrt(G/s.length),theta=r(s.angle)*Math.cos(w*t),v=-s.length*r(s.angle)*w*Math.sin(w*t);return {theta,angle:theta*180/pi,v,period:2*pi*Math.sqrt(s.length/G),k:s.m*v*v/2,u:s.m*G*s.length*theta*theta/2};}
- case'damped':{const w=2*pi/s.period,q=Math.sqrt(w*w-s.beta*s.beta),decay=Math.exp(-s.beta*t),x=s.a*decay*(Math.cos(q*t)+s.beta*Math.sin(q*t)/q),v=-s.a*w*w*decay*Math.sin(q*t)/q;return {x,v,acc:-2*s.beta*v-w*w*x,envelope:s.a*decay,energy:(v*v+w*w*x*x)/20000};}
+ case'damped':{const w=2*pi/s.period,q=Math.sqrt(w*w-s.beta*s.beta),decay=Math.exp(-s.beta*t),x=s.a*decay*(Math.cos(q*t)+s.beta*Math.sin(q*t)/q),v=-s.a*w*w*decay*Math.sin(q*t)/q;return {x,v,acc:-2*s.beta*v-w*w*x,envelope:Math.abs(s.a)*Math.hypot(1,s.beta/q)*decay,decayCoefficient:s.a*decay,energy:(v*v+w*w*x*x)/20000};}
  case'resonance':{const w=2*pi*s.f,w0=2*pi*s.f0,amplitude=s.force/Math.sqrt((w0*w0-w*w)**2+4*s.beta*s.beta*w*w),phase=Math.atan2(2*s.beta*w,w0*w0-w*w);return {amplitude,phase,x:amplitude*Math.cos(w*t-phase),v:-w*amplitude*Math.sin(w*t-phase),acc:-w*w*amplitude*Math.cos(w*t-phase)};}
  case'interference':{const r1=Math.sqrt((s.probeX+s.separation/2)**2+s.probeZ**2),r2=Math.sqrt((s.probeX-s.separation/2)**2+s.probeZ**2),k=2*pi*s.f/s.speed,p=r(s.phase),u1=s.a*Math.cos(2*pi*s.f*t-k*r1),u2=s.a*Math.cos(2*pi*s.f*t-k*r2+p);return {u1,u2,u:u1+u2,amplitude:s.a*Math.sqrt(Math.max(0,2+2*Math.cos(k*(r2-r1)-p))),delta:r2-r1,lambda:s.speed/s.f};}
  case'standing':{const x=Math.min(s.probeX,s.length),f=s.mode*s.speed/(2*s.length);return {x,frequency:f,lambda:2*s.length/s.mode,nodes:s.mode+1,antinodes:s.mode,u:2*s.a*Math.sin(s.mode*pi*x/s.length)*Math.cos(2*pi*f*t)};}
@@ -92,10 +92,11 @@ for(const [a,period,beta] of [[5,2,.25],[.1,.5,0],[50,4,1.5]]){
   assert.ok(d.energy<=previous+1e-10,'damped mechanical energy cannot increase');previous=d.energy;assertions++;
  }
 }
-// The legacy field is a decay coefficient, not a rigorous displacement bound.
+// Regression for the v73 finding: the coefficient is retained under its own
+// explicit name, while envelope now bounds the zero-initial-velocity solution.
 const nearCritical=evaluate('damped',{a:.1,period:4,beta:1.5,t:1});
-assert.ok(Math.abs(nearCritical.x)>nearCritical.envelope,'Known semantic issue: legacy envelope must not be interpreted as a rigorous bound');
-const rigorousBound=.1*(Math.PI/2)/Math.sqrt((Math.PI/2)**2-1.5**2)*Math.exp(-1.5);
-assert.ok(Math.abs(nearCritical.x)<=rigorousBound,'Correct analytic upper bound');
-const knownIssues=[{id:'damped',field:'envelope',status:'pending-semantic-clarification',meaning:'Legacy a exp(-beta t) is a decay coefficient; strict bound needs omega0/omegaD.',sample:{x:nearCritical.x,legacyCoefficient:nearCritical.envelope,rigorousBound}}];
-console.log(JSON.stringify({status:'PASS',knownIssues,ids,assertions,configurations:counts,limits:'Independent closed-form CPU oracles and raw numeric table values; small-angle pendulum approximation only; no browser, hardware or teacher acceptance.'}));
+near(nearCritical.envelope,.07517047340087202,'near-critical rigorous envelope');
+near(nearCritical.decayCoefficient,.022313016014842982,'legacy coefficient preserved under explicit name');
+assert.ok(Math.abs(nearCritical.x)>nearCritical.decayCoefficient,'Decay coefficient is not a displacement bound');assertions++;
+assert.ok(Math.abs(nearCritical.x)<=nearCritical.envelope,'Envelope bounds the displacement');assertions++;
+console.log(JSON.stringify({status:'PASS',resolvedIssues:[{id:'damped',field:'envelope',status:'fixed-v74',meaning:'Envelope includes omega0/omegaD; former coefficient retained as decayCoefficient.'}],ids,assertions,configurations:counts,limits:'Independent closed-form CPU oracles and raw numeric table values; small-angle pendulum approximation only; no browser, hardware or teacher acceptance.'}));

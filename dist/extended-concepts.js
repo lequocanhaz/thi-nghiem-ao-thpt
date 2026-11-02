@@ -1,7 +1,7 @@
 import {T,V,line,arrow,sphere,box,label,setText,updateLine} from './geometry-kit.js?v=35';
-import {trackLayout} from './track-layout.js?v=59';
+import {trackLayout} from './track-layout.js?v=74';
 import {leverGeometry} from './lever-geometry.js?v=54';
-import {evaluate} from './models.js?v=54';
+import {evaluate} from './models.js?v=74';
 
 // These are observation aids. Their coordinates reuse each existing apparatus
 // mapping; they never write to the scientific state or replace calculated data.

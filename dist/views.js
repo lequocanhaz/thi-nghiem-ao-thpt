@@ -4,7 +4,7 @@ import {getLocale} from './i18n.js?v=54';
 import {englishStudy} from './english-study.js?v=56';
 import {formulaMarkup} from './workspace.js?v=54';
 import {subjects,subjectOf,availableCatalogFilters} from './catalog-filters.js?v=51';
-import {coordinateProfile,hasCoordinateGrid} from './coordinate-profile.js?v=59';
+import {coordinateProfile,hasCoordinateGrid} from './coordinate-profile.js?v=74';
 import {themeFor,paths,coreParams,usableParams} from './learning.js?v=17';
 import {curriculumMeta,interactionTags} from './curriculum.js?v=39';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -37,7 +37,7 @@ export function cardsMarkup(list,prefs,icon){return list.length?list.map(e=>{
  const c=themeFor(e),meta=curriculumMeta(e),tags=interactionTags(e),done=prefs.progress?.[e.id]?.every(Boolean);
  return `<article class="experiment-card" style="--accent:${c.color};--soft:${c.soft}">
  <div class="card-image" data-thumb="${e.id}" data-static-preview>
-  <a class="preview-link" href="#lab/${e.id}"><img src="previews/v65/${e.id}.webp" alt="${esc(e.shortTitle)}" width="640" height="400" loading="lazy" decoding="async"></a>
+  <a class="preview-link" href="#lab/${e.id}"><img src="previews/v74/${e.id}.webp" alt="${esc(e.shortTitle)}" width="640" height="400" loading="lazy" decoding="async"></a>
   <div class="preview-fallback" role="status" hidden><p>Không tải được ảnh mô hình.</p><button class="button secondary" data-preview-retry="${e.id}">Thử lại ảnh</button></div>
  </div>
  <span class="grade-tag">${e.extra?'Mở rộng':'Nền tảng'}</span>

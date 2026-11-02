@@ -1,5 +1,5 @@
 import {T,V,C,line,arrow,sphere,box,label,setText,updateLine} from './geometry-kit.js?v=35';
-import {evaluate} from './models.js?v=54';
+import {evaluate} from './models.js?v=74';
 import {getLocale} from './i18n.js?v=54';
 import {englishParameter} from './english-study.js?v=56';
 import {sampleRelation} from './relation-sampling.js?v=66';

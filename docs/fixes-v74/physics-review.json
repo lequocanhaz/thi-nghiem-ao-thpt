@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "reviewer": "independent physics_review74",
+  "derivation": "delta=atan2(beta,omegaD); C=abs(A)/cos(delta); x=sign(A)*C*exp(-beta*t)*cos(omegaD*t-delta). Envelope C*exp(-beta*t), old coefficient preserved separately.",
+  "permittedCatalog": {
+    "a": [
+      0.1,
+      50
+    ],
+    "period": [
+      0.5,
+      4
+    ],
+    "beta": [
+      0,
+      1.5
+    ],
+    "t": [
+      0,
+      20
+    ]
+  },
+  "baseCommit": "31b47fdfc85a1795d323aaedd1fc64aa7b30099d",
+  "modelSHA256": "0c81b9bc92ec8d4e02a1c0cd828b4c44e9d9b8cbe563904fe94ae9f359253af5",
+  "cases": 108108,
+  "sharpPhaseCases": 1719,
+  "bitwiseUnchangedLegacyFields": 540540,
+  "maxPhaseError": 3.772537837676282e-13,
+  "maxBoundExcess": 0,
+  "legacyFailingSample": {
+    "t": 1,
+    "x": 0.5220112251515953,
+    "v": -0.5308189033582964,
+    "acc": 0.304445638781331,
+    "envelope": 0.7517047340087203,
+    "decayCoefficient": 0.22313016014842982,
+    "energy": 0.00004770624727486367
+  },
+  "limits": [
+    "CPU analytic checks only, undercritical permitted catalog domain.",
+    "Negative amplitude/zero amplitude checked as mathematical robustness only, not available UI parameters.",
+    "No browser, teacher or hardware acceptance."
+  ]
+}

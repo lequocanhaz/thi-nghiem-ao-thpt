@@ -219,3 +219,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 
 - Xem docs/SPECIFICATION_V73_AUDIT.md; checks/spec-core-mechanics-v73.mjs và spec-core-discovery-v73.mjs bổ sung oracle cho 009–060, tổng60ID đã có đối chứng trong v72–v73. Không đổi solver/renderer/ảnh/runtime.
 - Known issue mở: damped.envelope là hệ số suy giảm a exp(-beta t), không phải strict upper bound của nghiệm v0=0; x/v/energy kiểm đúng, trường chưa hiển thị. Không gọi mọi trường đã đúng chỉ vì numeric tests PASS. Tracker lưu rõ và giữ mọi giáo viên/thiết bị/chương trình pending.
+
+## Sửa đường bao và nhãn quang học v74
+
+- Xem docs/FIXES_V74_REPORT.md. Damped.envelope là |a|ω0/ωd exp(-βt); decayCoefficient giữ aexp(-βt) cũ. Không đổi x/v/acc/energy/table. Independentphysics review108108states,1719contacts,540540valuesbitwiseunchanged; tests28463assertions. MiềnUIvẫndướitớihạn.
+- Nămnhãn lensEN cònthiếu và accessible names đượcghépcặp exact tronglanguage-ui. ClockvisualOnly syncvisible/aria-valuetext/aria-label ngaylocaleevent vàrefresh, khôngadvance/rebuild. Khôngdịch notes/AI/math.
+- Previews/v74 actual300captures sourceStabletrue,300/300imagebytesgiốngv65. Giữoldsnapshots. Activeguard catalog-previews-v74; generatorv74. Modulecachegraph74; khôngresetbaselinev64, reviewedexactchanges trongconcept-corrections-v74 vàscientific-corrections-v54.
+- UI4/4+ARIA2/2, QA8/8+ARIA2/2PASS Chromiumemulation. HaiP2khác cònmở: coordinatelegendVIvàsharedobservationnightcontrast, trackerghi rõ. KhôngcoilàfullEN/WCAG/hardwareacceptance.

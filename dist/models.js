@@ -23,7 +23,9 @@ export function evaluate(id,s,c={}){const t=s.t||0;if(atlasById[id])return evalu
  case 'lever':return {torque1:s.m1*P.G*s.l1,torque2:s.m2*P.G*s.l2,net:P.G*(s.m1*s.l1-s.m2*s.l2),balance:s.m1*s.l1-s.m2*s.l2};
  case 'hooke':return {force:s.m*P.G,extension:s.m*P.G/s.k,energy:.5*(s.m*P.G)**2/s.k};
  case 'pendulum':{const w=Math.sqrt(P.G/s.length),theta=rad(s.angle)*Math.cos(w*t),thetav=-rad(s.angle)*w*Math.sin(w*t),v=s.length*thetav;return {t,theta,angle:theta*180/Math.PI,v,period:2*Math.PI/w,k:.5*s.m*v*v,u:.5*s.m*P.G*s.length*theta*theta};}
- case 'damped':{const w0=2*Math.PI/s.period,wd=Math.sqrt(w0*w0-s.beta*s.beta),exp=Math.exp(-s.beta*t),x=s.a*exp*(Math.cos(wd*t)+s.beta/wd*Math.sin(wd*t)),v=-s.a*exp*w0*w0/wd*Math.sin(wd*t);return {t,x,v,acc:-2*s.beta*v-w0*w0*x,envelope:s.a*exp,energy:.5*(v*v+w0*w0*x*x)/10000};}
+ // Zero-initial-velocity underdamped solution: envelope bounds |x| in cm;
+ // decayCoefficient retains a exp(-beta t), which alone is not that bound.
+ case 'damped':{const w0=2*Math.PI/s.period,wd=Math.sqrt(w0*w0-s.beta*s.beta),exp=Math.exp(-s.beta*t),x=s.a*exp*(Math.cos(wd*t)+s.beta/wd*Math.sin(wd*t)),v=-s.a*exp*w0*w0/wd*Math.sin(wd*t);return {t,x,v,acc:-2*s.beta*v-w0*w0*x,envelope:Math.abs(s.a)*w0/wd*exp,decayCoefficient:s.a*exp,energy:.5*(v*v+w0*w0*x*x)/10000};}
  case 'resonance':{const w0=2*Math.PI*s.f0,w=2*Math.PI*s.f,amplitude=s.force/Math.hypot(w0*w0-w*w,2*s.beta*w),phase=Math.atan2(2*s.beta*w,w0*w0-w*w);return {t,amplitude,phase,x:amplitude*Math.cos(w*t-phase),v:-amplitude*w*Math.sin(w*t-phase),acc:-amplitude*w*w*Math.cos(w*t-phase)};}
  case 'interference':return {t,...interferenceAt(s,s.probeX,s.probeZ)};
  case 'standing':{const frequency=s.speed*s.mode/(2*s.length),x=Math.min(s.length,s.probeX),u=2*s.a*Math.sin(s.mode*Math.PI*x/s.length)*Math.cos(2*Math.PI*frequency*t);return {t,x,u,frequency,lambda:2*s.length/s.mode,nodes:s.mode+1,antinodes:s.mode};}

@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "theme": "dark",
+      "status": "PASS",
+      "recordedRows": 1,
+      "parameterDistance": 43,
+      "notesPreserved": true,
+      "screenReaderTimeValue": "Slow illustration"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "status": "PASS",
+      "recordedRows": 1,
+      "parameterDistance": 43,
+      "notesPreserved": true,
+      "screenReaderTimeValue": "Slow illustration"
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Chromium emulated390/1440, not physical Safari/iPhone.",
+    "No API inference or account login."
+  ]
+}

@@ -2355,8 +2355,13 @@
         "controlled-condition-fit-protection"
       ],
       "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md",
-      "knownIssues": [
-        "Legacy envelope field is a decay coefficient, not a strict upper bound; semantic clarification pending. Displacement, velocity and energy reference cases pass."
+      "knownIssues": [],
+      "resolvedIssues": [
+        {
+          "issue": "Damped envelope was only a decay coefficient, not a strict bound.",
+          "status": "fixed-v74",
+          "evidence": "checks/damped-envelope-v74.mjs; docs/fixes-v74/physics-review.md"
+        }
       ]
     },
     {
@@ -2711,7 +2716,15 @@
       ],
       "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md",
       "knownIssues": [
-        "P2: selected model/control labels remain Vietnamese after EN switch; observed in Chromium390/1440, localization acceptance pending."
+        "P2: coordinate-legend sentence remains Vietnamese after EN switch; outside the five corrected labels.",
+        "P2: shared observation graph styling has subdued legend contrast/outer white surface in night mode; pending dedicated theme follow-up."
+      ],
+      "resolvedIssues": [
+        {
+          "issue": "Selected model and control labels remained Vietnamese after EN switch.",
+          "status": "fixed-v74",
+          "evidence": "checks/language-optics-v74.mjs; docs/FIXES_V74_REPORT.md"
+        }
       ]
     },
     {

@@ -1,12 +1,12 @@
-import {withExtendedConcepts} from './extended-concepts.js?v=64';
+import {withExtendedConcepts} from './extended-concepts.js?v=74';
 import {leverGeometry} from './lever-geometry.js?v=54';
 import {interferenceWindow} from './simulation-space.js?v=43';
-import {trackLayout} from './track-layout.js?v=59';
+import {trackLayout} from './track-layout.js?v=74';
 import {COLLISION_CART_SCALE,collisionCartCenter} from './collision-layout.js?v=59';
 import {labCart,cable} from './apparatus.js?v=35';
 import {buildDiscoveryModel} from './discovery-scenes.js?v=65';
 import {T,C,V,mat,mesh,box,sphere,cylinder,line,arrow as apparatusArrow,label,setText,platform,updateLine,flexibleTube,beam} from './geometry-kit.js?v=35';
-import {rad,interferenceAt,evaluate} from './models.js?v=54';
+import {rad,interferenceAt,evaluate} from './models.js?v=74';
 // Force and velocity arrows are explanatory overlays, readable through apparatus.
 const arrow=(...args)=>{const node=apparatusArrow(...args);node.traverse(part=>{part.renderOrder=900;if(part.material){part.material.depthTest=false;part.material.depthWrite=false;}});return node;};
 const circle=(r,n=100)=>Array.from({length:n+1},(_,i)=>V(r*Math.cos(i*2*Math.PI/n),.05,r*Math.sin(i*2*Math.PI/n)));
