@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "knownIssues": [
+    {
+      "id": "damped",
+      "field": "envelope",
+      "status": "pending-semantic-clarification",
+      "meaning": "Legacy a exp(-beta t) is a decay coefficient; strict bound needs omega0/omegaD.",
+      "sample": {
+        "x": 0.05220112251515952,
+        "legacyCoefficient": 0.022313016014842982,
+        "rigorousBound": 0.07517047340087202
+      }
+    }
+  ],
+  "ids": [
+    "uniform",
+    "acceleration",
+    "horizontal",
+    "projectile",
+    "newton",
+    "incline",
+    "collision",
+    "circular",
+    "lever",
+    "hooke",
+    "pendulum",
+    "damped",
+    "resonance",
+    "interference",
+    "standing",
+    "sound",
+    "series",
+    "parallel",
+    "joule",
+    "magnetic",
+    "induction",
+    "decay"
+  ],
+  "assertions": 2708,
+  "configurations": {
+    "uniform": 9,
+    "acceleration": 9,
+    "horizontal": 9,
+    "projectile": 9,
+    "newton": 9,
+    "incline": 9,
+    "collision": 9,
+    "circular": 9,
+    "lever": 3,
+    "hooke": 3,
+    "pendulum": 9,
+    "damped": 9,
+    "resonance": 9,
+    "interference": 9,
+    "standing": 9,
+    "sound": 9,
+    "series": 3,
+    "parallel": 3,
+    "joule": 9,
+    "magnetic": 3,
+    "induction": 9,
+    "decay": 9
+  },
+  "limits": "Independent closed-form CPU oracles and raw numeric table values; small-angle pendulum approximation only; no browser, hardware or teacher acceptance."
+}

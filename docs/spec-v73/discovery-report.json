@@ -1,0 +1,191 @@
+{
+  "scope": "Independent analytic physics and unit identities, original31–60",
+  "models": 30,
+  "assertions": 807,
+  "records": [
+    {
+      "id": "freefall",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "friction",
+      "configurations": 3,
+      "assertions": 27,
+      "status": "PASS"
+    },
+    {
+      "id": "work",
+      "configurations": 3,
+      "assertions": 27,
+      "status": "PASS"
+    },
+    {
+      "id": "impulse",
+      "configurations": 3,
+      "assertions": 30,
+      "status": "PASS"
+    },
+    {
+      "id": "buoyancy",
+      "configurations": 3,
+      "assertions": 30,
+      "status": "PASS"
+    },
+    {
+      "id": "pressure",
+      "configurations": 3,
+      "assertions": 21,
+      "status": "PASS"
+    },
+    {
+      "id": "reflection",
+      "configurations": 3,
+      "assertions": 15,
+      "status": "PASS"
+    },
+    {
+      "id": "refraction",
+      "configurations": 3,
+      "assertions": 23,
+      "status": "PASS"
+    },
+    {
+      "id": "tir",
+      "configurations": 3,
+      "assertions": 23,
+      "status": "PASS"
+    },
+    {
+      "id": "lens",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "mirror",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "prism",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "young",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "diffraction",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "polarization",
+      "configurations": 3,
+      "assertions": 18,
+      "status": "PASS"
+    },
+    {
+      "id": "thermalexpansion",
+      "configurations": 3,
+      "assertions": 21,
+      "status": "PASS"
+    },
+    {
+      "id": "calorimetry",
+      "configurations": 3,
+      "assertions": 27,
+      "status": "PASS"
+    },
+    {
+      "id": "phasechange",
+      "configurations": 3,
+      "assertions": 28,
+      "status": "PASS"
+    },
+    {
+      "id": "heattransfer",
+      "configurations": 3,
+      "assertions": 33,
+      "status": "PASS"
+    },
+    {
+      "id": "isobaric",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "isochoric",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "firstlaw",
+      "configurations": 3,
+      "assertions": 24,
+      "status": "PASS"
+    },
+    {
+      "id": "kinetic",
+      "configurations": 3,
+      "assertions": 21,
+      "status": "PASS"
+    },
+    {
+      "id": "resistivity",
+      "configurations": 3,
+      "assertions": 27,
+      "status": "PASS"
+    },
+    {
+      "id": "internalresistance",
+      "configurations": 3,
+      "assertions": 27,
+      "status": "PASS"
+    },
+    {
+      "id": "bridge",
+      "configurations": 3,
+      "assertions": 33,
+      "status": "PASS"
+    },
+    {
+      "id": "solenoid",
+      "configurations": 3,
+      "assertions": 21,
+      "status": "PASS"
+    },
+    {
+      "id": "lorentz",
+      "configurations": 3,
+      "assertions": 36,
+      "status": "PASS"
+    },
+    {
+      "id": "transformer",
+      "configurations": 3,
+      "assertions": 33,
+      "status": "PASS"
+    },
+    {
+      "id": "ac",
+      "configurations": 3,
+      "assertions": 36,
+      "status": "PASS"
+    }
+  ],
+  "limits": [
+    "No scene geometry or real device certification.",
+    "No teacher acceptance."
+  ]
+}
