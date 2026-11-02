@@ -91,7 +91,9 @@ for(const [vi,en] of [
  ['Bật tương tác 3D','Enable 3D interaction'],
  ['Kéo nền để xoay · Kéo điểm màu để điều chỉnh','Drag to rotate · Drag handles to adjust'],
  ['Không gian ×10','Workspace ×10'],['Vừa mô hình','Fit model'],
- ['Biến tương tác','Interactive parameter'],['Nhập số','Enter value'],['Thiết lập','Settings'],
+ ['Biến tương tác','Interactive parameter'],['Nhập số','Enter value'],['Nhập số ↗','Enter value ↗'],['Thiết lập','Settings'],
+ ['Phát tia','Trace rays'],['Minh họa chậm','Slow illustration'],
+ ['Thông số điều chỉnh trực tiếp','Direct manipulation parameter'],['Mở ô nhập số của biến tương tác','Open numeric input for the interactive parameter'],['Thời điểm thí nghiệm','Experiment time'],
  ['Đọc số đo','Read measurements'],['Nghe âm','Play sound'],['Giọng đọc','Speech voice'],
  ['Thí nghiệm trước','Previous experiment'],['Thí nghiệm tiếp theo','Next experiment'],
  ['CÂU HỎI KHẢO SÁT','INVESTIGATION QUESTION'],['Giả thuyết của bạn','Your hypothesis'],
@@ -146,7 +148,7 @@ for(const [vi,en] of [
  ['Tiêu cự','Focal length'],['Độ tụ','Optical power'],['Tia song song hội tụ','Parallel rays converge'],['Độ tụ kính 1','First lens power'],['Độ tụ kính 2','Second lens power'],['Độ tụ hệ','Combined power'],['Tiêu cự hệ','Combined focal length'],['Hội tụ: 1; phân kì: −1','Converging: 1; diverging: −1'],
  ['Tiêu cự kính','Lens focal length'],['Bội giác','Angular magnification'],['Khoảng vật–kính','Object–lens distance'],['Tiêu cự vật kính','Objective focal length'],['Tiêu cự thị kính','Eyepiece focal length'],['Bội giác góc có dấu','Signed angular magnification'],['Chiều dài ống','Tube length'],['Tỉ số tiêu cự','Focal-length ratio'],
  ['Độ dài quang học','Optical interval'],['Bội giác góc','Angular magnification'],['Phóng đại của vật kính','Objective linear magnification'],['Bội giác thị kính','Eyepiece angular magnification'],
- ['Khoảng cách vật','Object distance'],['Khoảng cách màn','Screen distance'],['Chiều cao vật','Object height'],['Chiều cao ảnh có dấu','Signed image height'],['Độ phóng đại','Linear magnification'],['Tỉ số khoảng cách','Distance ratio'],['Nửa khoảng cách hai điện tích','Half charge separation']
+ ['Khoảng cách vật','Object distance'],['Khoảng cách ảnh','Image distance'],['Khoảng cách màn','Screen distance'],['Chiều cao vật','Object height'],['Chiều cao ảnh','Image height'],['Chiều cao ảnh có dấu','Signed image height'],['Độ phóng đại','Linear magnification'],['Tỉ số khoảng cách','Distance ratio'],['Nửa khoảng cách hai điện tích','Half charge separation']
 ])pair(vi,en);
 
 // Shared quantity names must not inherit one experiment's parameter unit.

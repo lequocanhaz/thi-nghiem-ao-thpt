@@ -1,10 +1,12 @@
 {
   "models.js": {
     "previousSHA256": "d0567c5d845194faa318a1ca424a17dbda4380d602b15db2f64ffda6bba57d3d",
-    "correctedSHA256": "035071a08668685f05764b9eb35fa499de8b7f38849359f24e8327623fb69ea1",
-    "reason": "Correct electric component vector norms after force charge scaling, including zero and negative test charges.",
+    "correctedSHA256": "0785a83c1f9ad1b30775ee720e24766f365377379a122acfc6cb2b1103992e1e",
+    "reason": "Correct electric component vector norms after force charge scaling, including zero and negative test charges. Correct the damped zero-initial-velocity phase envelope to |a| omega0/omegaD exp(-beta t), retaining the original decay coefficient separately and preserving kinematics, energy and measured rows.",
     "verification": [
-      "checks/electric-components-v54.mjs"
+      "checks/electric-components-v54.mjs",
+      "checks/damped-envelope-v74.mjs",
+      "checks/spec-core-mechanics-v73.mjs"
     ]
   },
   "atlas-catalog.js": {

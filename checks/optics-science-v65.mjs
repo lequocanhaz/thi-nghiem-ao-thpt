@@ -171,7 +171,12 @@ for(const id of OPTICS_IDS){
 assert.equal(OPTICS_IDS.length,11);assert.equal(buildOpticsGeometry('not-optics',{}),null);
 // Preserve the scientific/session contracts protected by the preceding release.
 const protectedFiles=JSON.parse(fs.readFileSync(new URL('./concept-preservation-v64.json',import.meta.url),'utf8'));
-for(const [path,expected]of Object.entries(protectedFiles))assert.equal(createHash('sha256').update(fs.readFileSync(new URL('../'+path,import.meta.url))).digest('hex'),expected,'Preserved equation/catalog/session source: '+path);
+const reviewedCorrections=JSON.parse(fs.readFileSync(new URL('./concept-corrections-v74.json',import.meta.url),'utf8'));
+for(const [path,expected]of Object.entries(protectedFiles)){
+ const review=reviewedCorrections[path];
+ if(review){assert.equal(review.previousSHA256,expected);assert.ok(review.reason&&review.verification.length);}
+ assert.equal(createHash('sha256').update(fs.readFileSync(new URL('../'+path,import.meta.url))).digest('hex'),review?.correctedSHA256||expected,'Preserved or exactly reviewed equation/catalog/session source: '+path);
+}
 
 // Independent review of the retained renderer after its parameter-update
 // refactor. Recover the actual arrow-cone tips: a correct marker declaration

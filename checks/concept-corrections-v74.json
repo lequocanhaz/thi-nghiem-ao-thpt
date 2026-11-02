@@ -1,0 +1,32 @@
+{
+  "dist/models.js": {
+    "previousSHA256": "7c5a4dbbb999024b97004d42e1711de25b7f278ea9ee948d4c7d7105755f685a",
+    "correctedSHA256": "0c81b9bc92ec8d4e02a1c0cd828b4c44e9d9b8cbe563904fe94ae9f359253af5",
+    "reason": "Reviewed damped envelope correction; kinematics, energy and measured rows are unchanged.",
+    "verification": [
+      "checks/damped-envelope-v74.mjs",
+      "checks/spec-core-mechanics-v73.mjs",
+      "checks/data-session-v72.mjs"
+    ]
+  },
+  "dist/graphs.js": {
+    "previousSHA256": "707bacacbe93352783f3a49e90684000cf2bc38204ff03696792df233f5f29ae",
+    "correctedSHA256": "6a12fa74059a81c828f0a302ba10bed2a60c5bc9532bb7f1950ca8bbe60d024f",
+    "reason": "Module cache version only; graph mathematics unchanged.",
+    "verification": [
+      "checks/damped-envelope-v74.mjs",
+      "checks/spec-core-mechanics-v73.mjs",
+      "checks/data-session-v72.mjs"
+    ]
+  },
+  "dist/playback.js": {
+    "previousSHA256": "96fa8594ba568b2b75bf32583c25dc5a9c86ff5664c22057f2191f89b0a286d9",
+    "correctedSHA256": "0f4445d55bda3965176a2eaee458d9337e38c62b47f29c344fb4ebef168e6b31",
+    "reason": "Module cache version only; process and session semantics unchanged.",
+    "verification": [
+      "checks/damped-envelope-v74.mjs",
+      "checks/spec-core-mechanics-v73.mjs",
+      "checks/data-session-v72.mjs"
+    ]
+  }
+}

@@ -140,11 +140,12 @@ ref('pendulum','Small-angle pendulum θ̈+(g/l)θ=0.',
 ref('damped','Damped linear oscillator with x(0)=A and v(0)=0.',
  'Combine the two characteristic-root exponentials into real displacement and its analytic derivative.',
  ['Underdamped only; mass=1 kg; input/output displacement cm converted to m for energy.'],
- {...unitsTime,x:'cm',v:'cm/s',acc:'cm/s²',envelope:'cm',energy:'J'},s=>{
+ {...unitsTime,x:'cm',v:'cm/s',acc:'cm/s²',envelope:'cm',decayCoefficient:'cm',energy:'J'},s=>{
  const w0=2*pi/s.period,wd=Math.sqrt(w0*w0-s.beta*s.beta),t=time(s),atten=Math.exp(-s.beta*t),cs=Math.cos(wd*t),sn=Math.sin(wd*t);
  const x=atten*(s.a*cs+s.a*s.beta/wd*sn);
  const v=atten*((s.a*s.beta-s.beta*s.a)*cs+(-s.a*wd-s.beta*s.a*s.beta/wd)*sn);
- return {t,x,v,acc:-2*s.beta*v-w0*w0*x,envelope:s.a*atten,energy:(v*v+w0*w0*x*x)*.5*.01*.01};
+ // Amplitude of C cos(wd t)+D sin(wd t), with C=A and D=A beta/wd.
+ return {t,x,v,acc:-2*s.beta*v-w0*w0*x,envelope:Math.hypot(s.a,s.a*s.beta/wd)*atten,decayCoefficient:s.a*atten,energy:(v*v+w0*w0*x*x)*.5*.01*.01};
  },{domain:s=>s.beta<0?bad('outside','Negative damping is outside this passive model.'):s.beta>=2*pi/s.period?bad('model-limit','The declared underdamped solution requires beta < 2π/T.'):positive(s,'period')});
 ref('resonance','Steady forced response from the harmonic transfer function.',
  'Take reciprocal complex impedance (ω0²−ω²)+i2βω; amplitude is modulus and lag is its argument.',

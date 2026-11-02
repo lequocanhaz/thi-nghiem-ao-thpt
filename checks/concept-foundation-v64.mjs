@@ -14,7 +14,13 @@ const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-7*Math.max(1,Math.abs(b)),`${a} !=
 const scope=experiments.slice(60).filter(e=>e.extra!==true);
 assert.equal(scope.length,61);assert.deepEqual(new Set(scope.map(e=>e.id)),new Set(Object.keys(FOUNDATION_CONCEPTS)));
 const protectedFiles=JSON.parse(fs.readFileSync(new URL('./concept-preservation-v64.json',import.meta.url),'utf8'));
-for(const [path,expected]of Object.entries(protectedFiles))assert.equal(createHash('sha256').update(fs.readFileSync(new URL('../'+path,import.meta.url))).digest('hex'),expected,'Scientific calculation/catalog/session contract unchanged: '+path);
+// Keep the v64 baseline immutable; permit only exact, reviewed v74 changes.
+const reviewedCorrections=JSON.parse(fs.readFileSync(new URL('./concept-corrections-v74.json',import.meta.url),'utf8'));
+for(const [path,expected]of Object.entries(protectedFiles)){
+ const review=reviewedCorrections[path];
+ if(review){assert.equal(review.previousSHA256,expected);assert.ok(review.reason&&review.verification.length);}
+ assert.equal(createHash('sha256').update(fs.readFileSync(new URL('../'+path,import.meta.url))).digest('hex'),review?.correctedSHA256||expected,'Scientific calculation/catalog/session contract preserved or exactly reviewed: '+path);
+}
 const dispose=model=>model.group.traverse(n=>{n.geometry?.dispose();for(const m of Array.isArray(n.material)?n.material:[n.material]){m?.map?.dispose();m?.dispose();}});
 let states=0,points=0;
 for(const e of scope){
