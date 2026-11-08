@@ -1,0 +1,263 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "theme": "light",
+      "actualSlab": [
+        {
+          "source": "#d98220",
+          "color": "color(srgb 0.808431 0.484314 0.119216)",
+          "pixel": [
+            206,
+            124,
+            30,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 3.2178135922656788
+        },
+        {
+          "source": "#087f89",
+          "color": "color(srgb 0.0298039 0.473137 0.510392)",
+          "pixel": [
+            8,
+            121,
+            130,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.162730730275798
+        },
+        {
+          "source": "#2468cc",
+          "color": "color(srgb 0.134118 0.387451 0.76)",
+          "pixel": [
+            34,
+            99,
+            194,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.782319303275904
+        },
+        {
+          "source": "#65758b",
+          "color": "color(srgb 0.376275 0.435882 0.517843)",
+          "pixel": [
+            96,
+            111,
+            132,
+            255
+          ],
+          "pattern": "dashed",
+          "ratio": 5.116555507121193
+        }
+      ],
+      "paletteFixture": [
+        {
+          "source": "#d98220",
+          "color": "color(srgb 0.808431 0.484314 0.119216)",
+          "pixel": [
+            206,
+            124,
+            30,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 3.2178135922656788
+        },
+        {
+          "source": "#087f89",
+          "color": "color(srgb 0.0298039 0.473137 0.510392)",
+          "pixel": [
+            8,
+            121,
+            130,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.162730730275798
+        },
+        {
+          "source": "#2468cc",
+          "color": "color(srgb 0.134118 0.387451 0.76)",
+          "pixel": [
+            34,
+            99,
+            194,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.782319303275904
+        },
+        {
+          "source": "#ba4255",
+          "color": "color(srgb 0.692941 0.245882 0.316667)",
+          "pixel": [
+            177,
+            63,
+            81,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.67683980817849
+        },
+        {
+          "source": "#8656bd",
+          "color": "color(srgb 0.499216 0.320392 0.704118)",
+          "pixel": [
+            127,
+            82,
+            180,
+            255
+          ],
+          "pattern": "dashed",
+          "ratio": 5.572686365065392
+        },
+        {
+          "source": "#65758b",
+          "color": "color(srgb 0.376275 0.435882 0.517843)",
+          "pixel": [
+            96,
+            111,
+            132,
+            255
+          ],
+          "pattern": "dashed",
+          "ratio": 5.116555507121193
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "actualSlab": [
+        {
+          "source": "#d98220",
+          "color": "color(srgb 0.808431 0.484314 0.119216)",
+          "pixel": [
+            206,
+            124,
+            30,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 3.2178135922656788
+        },
+        {
+          "source": "#087f89",
+          "color": "color(srgb 0.0298039 0.473137 0.510392)",
+          "pixel": [
+            8,
+            121,
+            130,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.162730730275798
+        },
+        {
+          "source": "#2468cc",
+          "color": "color(srgb 0.134118 0.387451 0.76)",
+          "pixel": [
+            34,
+            99,
+            194,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.782319303275904
+        },
+        {
+          "source": "#65758b",
+          "color": "color(srgb 0.376275 0.435882 0.517843)",
+          "pixel": [
+            96,
+            111,
+            132,
+            255
+          ],
+          "pattern": "dashed",
+          "ratio": 5.116555507121193
+        }
+      ],
+      "paletteFixture": [
+        {
+          "source": "#d98220",
+          "color": "color(srgb 0.808431 0.484314 0.119216)",
+          "pixel": [
+            206,
+            124,
+            30,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 3.2178135922656788
+        },
+        {
+          "source": "#087f89",
+          "color": "color(srgb 0.0298039 0.473137 0.510392)",
+          "pixel": [
+            8,
+            121,
+            130,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.162730730275798
+        },
+        {
+          "source": "#2468cc",
+          "color": "color(srgb 0.134118 0.387451 0.76)",
+          "pixel": [
+            34,
+            99,
+            194,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.782319303275904
+        },
+        {
+          "source": "#ba4255",
+          "color": "color(srgb 0.692941 0.245882 0.316667)",
+          "pixel": [
+            177,
+            63,
+            81,
+            255
+          ],
+          "pattern": "solid",
+          "ratio": 5.67683980817849
+        },
+        {
+          "source": "#8656bd",
+          "color": "color(srgb 0.499216 0.320392 0.704118)",
+          "pixel": [
+            127,
+            82,
+            180,
+            255
+          ],
+          "pattern": "dashed",
+          "ratio": 5.572686365065392
+        },
+        {
+          "source": "#65758b",
+          "color": "color(srgb 0.376275 0.435882 0.517843)",
+          "pixel": [
+            96,
+            111,
+            132,
+            255
+          ],
+          "pattern": "dashed",
+          "ratio": 5.116555507121193
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

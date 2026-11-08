@@ -1,0 +1,3325 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "vector_sum",
+      "states": [
+        {
+          "locale": "vi-VN",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Quan sát quan hệ"
+            },
+            {
+              "selector": ".observation-title",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Quan hệ khi giữ các biến khác không đổi"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Đường lý thuyết"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Trạng thái hiện tại"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "y: Hợp lực (N)"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "x: Góc giữa hai lực (°)"
+            },
+            {
+              "selector": ".observation-current-value",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Hiện tại: x = 30; y = 24,183"
+            },
+            {
+              "selector": ".observation-values>summary",
+              "property": "color",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 4.5,
+              "text": "Xem giá trị lý thuyết (65)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Góc giữa hai lực (°)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Hợp lực (N)"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "25"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "2,8125"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,993"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "5,625"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,971"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "8,4375"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,935"
+            },
+            {
+              "selector": ".observation-note",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Tính từ mô hình lý tưởng; đây không phải các điểm "
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "27"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "-2"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "180"
+            },
+            {
+              "selector": ".observation-curve",
+              "property": "stroke",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-axes",
+              "property": "stroke",
+              "color": "rgb(102, 120, 142)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 4.523772514595093,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-zero",
+              "property": "stroke",
+              "color": "rgb(123, 135, 152)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.6450868343383767,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-current",
+              "property": "fill",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".theory-key",
+              "property": "backgroundColor",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".current-key",
+              "property": "backgroundColor",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": {
+            "theory": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "curve": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "current": [
+              173,
+              88,
+              20,
+              255
+            ],
+            "marker": [
+              173,
+              88,
+              20,
+              255
+            ]
+          }
+        },
+        {
+          "locale": "en-US",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Observe the relationship"
+            },
+            {
+              "selector": ".observation-title",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Controlled relationship"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Analytical prediction"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Current state"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "y: Resultant force (N)"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "x: Angle between forces (°)"
+            },
+            {
+              "selector": ".observation-current-value",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Current: x = 30; y = 24.183"
+            },
+            {
+              "selector": ".observation-values>summary",
+              "property": "color",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 4.5,
+              "text": "View theoretical values (65)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Angle between forces (°)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Resultant force (N)"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "25"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "2.8125"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24.993"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "5.625"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24.971"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "8.4375"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24.935"
+            },
+            {
+              "selector": ".observation-note",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Calculated from the ideal model; these are not rec"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "27"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "-2"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "180"
+            },
+            {
+              "selector": ".observation-curve",
+              "property": "stroke",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-axes",
+              "property": "stroke",
+              "color": "rgb(102, 120, 142)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 4.523772514595093,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-zero",
+              "property": "stroke",
+              "color": "rgb(123, 135, 152)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.6450868343383767,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-current",
+              "property": "fill",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".theory-key",
+              "property": "backgroundColor",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".current-key",
+              "property": "backgroundColor",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": {
+            "theory": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "curve": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "current": [
+              173,
+              88,
+              20,
+              255
+            ],
+            "marker": [
+              173,
+              88,
+              20,
+              255
+            ]
+          }
+        },
+        {
+          "locale": "vi-VN",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Quan sát quan hệ"
+            },
+            {
+              "selector": ".observation-title",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Quan hệ khi giữ các biến khác không đổi"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Đường lý thuyết"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Trạng thái hiện tại"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "y: Hợp lực (N)"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "x: Góc giữa hai lực (°)"
+            },
+            {
+              "selector": ".observation-current-value",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Hiện tại: x = 30; y = 24,183"
+            },
+            {
+              "selector": ".observation-values>summary",
+              "property": "color",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 4.5,
+              "text": "Xem giá trị lý thuyết (65)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Góc giữa hai lực (°)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Hợp lực (N)"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "25"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "2,8125"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,993"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "5,625"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,971"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "8,4375"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,935"
+            },
+            {
+              "selector": ".observation-note",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Tính từ mô hình lý tưởng; đây không phải các điểm "
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "27"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "-2"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "180"
+            },
+            {
+              "selector": ".observation-curve",
+              "property": "stroke",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-axes",
+              "property": "stroke",
+              "color": "rgb(102, 120, 142)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 4.523772514595093,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-zero",
+              "property": "stroke",
+              "color": "rgb(123, 135, 152)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.6450868343383767,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-current",
+              "property": "fill",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".theory-key",
+              "property": "backgroundColor",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".current-key",
+              "property": "backgroundColor",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": {
+            "theory": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "curve": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "current": [
+              173,
+              88,
+              20,
+              255
+            ],
+            "marker": [
+              173,
+              88,
+              20,
+              255
+            ]
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "ray_slab",
+      "states": [
+        {
+          "locale": "vi-VN",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Hiểu sơ đồ tia sáng"
+            },
+            {
+              "selector": ".optics-notes li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia ló song song tia tới; d đo vuông góc giữa hai "
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia tới"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia trong môi trường"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia ló / truyền qua"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Pháp tuyến / đường dựng"
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.808431 0.484314 0.119216)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.2178135922656788,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.0298039 0.473137 0.510392)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.162730730275798,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.134118 0.387451 0.76)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.782319303275904,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.376275 0.435882 0.517843)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.116555507121193,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": null
+        },
+        {
+          "locale": "en-US",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Understand the ray diagram"
+            },
+            {
+              "selector": ".optics-notes li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "The emergent ray is parallel to the incident ray; "
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Incident ray"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Ray inside the medium"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Emergent / transmitted ray"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Normal / construction"
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.808431 0.484314 0.119216)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.2178135922656788,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.0298039 0.473137 0.510392)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.162730730275798,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.134118 0.387451 0.76)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.782319303275904,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.376275 0.435882 0.517843)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.116555507121193,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": null
+        },
+        {
+          "locale": "vi-VN",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Hiểu sơ đồ tia sáng"
+            },
+            {
+              "selector": ".optics-notes li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia ló song song tia tới; d đo vuông góc giữa hai "
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia tới"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia trong môi trường"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia ló / truyền qua"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Pháp tuyến / đường dựng"
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.808431 0.484314 0.119216)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.2178135922656788,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.0298039 0.473137 0.510392)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.162730730275798,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.134118 0.387451 0.76)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.782319303275904,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.376275 0.435882 0.517843)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.116555507121193,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": null
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "vector_sum",
+      "states": [
+        {
+          "locale": "vi-VN",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Quan sát quan hệ"
+            },
+            {
+              "selector": ".observation-title",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Quan hệ khi giữ các biến khác không đổi"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Đường lý thuyết"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Trạng thái hiện tại"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "y: Hợp lực (N)"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "x: Góc giữa hai lực (°)"
+            },
+            {
+              "selector": ".observation-current-value",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Hiện tại: x = 30; y = 24,183"
+            },
+            {
+              "selector": ".observation-values>summary",
+              "property": "color",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 4.5,
+              "text": "Xem giá trị lý thuyết (65)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Góc giữa hai lực (°)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Hợp lực (N)"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "25"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "2,8125"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,993"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "5,625"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,971"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "8,4375"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,935"
+            },
+            {
+              "selector": ".observation-note",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Tính từ mô hình lý tưởng; đây không phải các điểm "
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "27"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "-2"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "180"
+            },
+            {
+              "selector": ".observation-curve",
+              "property": "stroke",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-axes",
+              "property": "stroke",
+              "color": "rgb(102, 120, 142)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 4.523772514595093,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-zero",
+              "property": "stroke",
+              "color": "rgb(123, 135, 152)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.6450868343383767,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-current",
+              "property": "fill",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".theory-key",
+              "property": "backgroundColor",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".current-key",
+              "property": "backgroundColor",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": {
+            "theory": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "curve": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "current": [
+              173,
+              88,
+              20,
+              255
+            ],
+            "marker": [
+              173,
+              88,
+              20,
+              255
+            ]
+          }
+        },
+        {
+          "locale": "en-US",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Observe the relationship"
+            },
+            {
+              "selector": ".observation-title",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Controlled relationship"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Analytical prediction"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Current state"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "y: Resultant force (N)"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "x: Angle between forces (°)"
+            },
+            {
+              "selector": ".observation-current-value",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Current: x = 30; y = 24.183"
+            },
+            {
+              "selector": ".observation-values>summary",
+              "property": "color",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 4.5,
+              "text": "View theoretical values (65)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Angle between forces (°)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Resultant force (N)"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "25"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "2.8125"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24.993"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "5.625"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24.971"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "8.4375"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24.935"
+            },
+            {
+              "selector": ".observation-note",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Calculated from the ideal model; these are not rec"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "27"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "-2"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "180"
+            },
+            {
+              "selector": ".observation-curve",
+              "property": "stroke",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-axes",
+              "property": "stroke",
+              "color": "rgb(102, 120, 142)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 4.523772514595093,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-zero",
+              "property": "stroke",
+              "color": "rgb(123, 135, 152)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.6450868343383767,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-current",
+              "property": "fill",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".theory-key",
+              "property": "backgroundColor",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".current-key",
+              "property": "backgroundColor",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": {
+            "theory": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "curve": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "current": [
+              173,
+              88,
+              20,
+              255
+            ],
+            "marker": [
+              173,
+              88,
+              20,
+              255
+            ]
+          }
+        },
+        {
+          "locale": "vi-VN",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Quan sát quan hệ"
+            },
+            {
+              "selector": ".observation-title",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Quan hệ khi giữ các biến khác không đổi"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Đường lý thuyết"
+            },
+            {
+              "selector": ".observation-key>span",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Trạng thái hiện tại"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "y: Hợp lực (N)"
+            },
+            {
+              "selector": ".observation-axis-labels p",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "x: Góc giữa hai lực (°)"
+            },
+            {
+              "selector": ".observation-current-value",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Hiện tại: x = 30; y = 24,183"
+            },
+            {
+              "selector": ".observation-values>summary",
+              "property": "color",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 4.5,
+              "text": "Xem giá trị lý thuyết (65)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Góc giữa hai lực (°)"
+            },
+            {
+              "selector": ".observation-values th",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                243,
+                246,
+                250
+              ],
+              "ratio": 11.999918955340327,
+              "minimum": 4.5,
+              "text": "Hợp lực (N)"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "25"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "2,8125"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,993"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "5,625"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,971"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "8,4375"
+            },
+            {
+              "selector": ".observation-values td",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "24,935"
+            },
+            {
+              "selector": ".observation-note",
+              "property": "color",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "Tính từ mô hình lý tưởng; đây không phải các điểm "
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "27"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "-2"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "0"
+            },
+            {
+              "selector": ".observation-ticks text",
+              "property": "fill",
+              "color": "rgb(69, 89, 112)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 7.201735959262808,
+              "minimum": 4.5,
+              "text": "180"
+            },
+            {
+              "selector": ".observation-curve",
+              "property": "stroke",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-axes",
+              "property": "stroke",
+              "color": "rgb(102, 120, 142)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 4.523772514595093,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-zero",
+              "property": "stroke",
+              "color": "rgb(123, 135, 152)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.6450868343383767,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".observation-current",
+              "property": "fill",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".theory-key",
+              "property": "backgroundColor",
+              "color": "rgb(36, 95, 166)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 6.436718596996968,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".current-key",
+              "property": "backgroundColor",
+              "color": "rgb(173, 88, 20)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.0205146511612355,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": {
+            "theory": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "curve": [
+              36,
+              95,
+              166,
+              255
+            ],
+            "current": [
+              173,
+              88,
+              20,
+              255
+            ],
+            "marker": [
+              173,
+              88,
+              20,
+              255
+            ]
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "ray_slab",
+      "states": [
+        {
+          "locale": "vi-VN",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Hiểu sơ đồ tia sáng"
+            },
+            {
+              "selector": ".optics-notes li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia ló song song tia tới; d đo vuông góc giữa hai "
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia tới"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia trong môi trường"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia ló / truyền qua"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Pháp tuyến / đường dựng"
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.808431 0.484314 0.119216)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.2178135922656788,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.0298039 0.473137 0.510392)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.162730730275798,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.134118 0.387451 0.76)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.782319303275904,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.376275 0.435882 0.517843)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.116555507121193,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": null
+        },
+        {
+          "locale": "en-US",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Understand the ray diagram"
+            },
+            {
+              "selector": ".optics-notes li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "The emergent ray is parallel to the incident ray; "
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Incident ray"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Ray inside the medium"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Emergent / transmitted ray"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Normal / construction"
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.808431 0.484314 0.119216)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.2178135922656788,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.0298039 0.473137 0.510392)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.162730730275798,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.134118 0.387451 0.76)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.782319303275904,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.376275 0.435882 0.517843)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.116555507121193,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": null
+        },
+        {
+          "locale": "vi-VN",
+          "pairs": [
+            {
+              "selector": ".observation-details>summary",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Hiểu sơ đồ tia sáng"
+            },
+            {
+              "selector": ".optics-notes li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia ló song song tia tới; d đo vuông góc giữa hai "
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia tới"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia trong môi trường"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Tia ló / truyền qua"
+            },
+            {
+              "selector": ".optics-legend li",
+              "property": "color",
+              "color": "rgb(33, 50, 72)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 13.007256867782251,
+              "minimum": 4.5,
+              "text": "Pháp tuyến / đường dựng"
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.808431 0.484314 0.119216)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 3.2178135922656788,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.0298039 0.473137 0.510392)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.162730730275798,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.134118 0.387451 0.76)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.782319303275904,
+              "minimum": 3,
+              "text": ""
+            },
+            {
+              "selector": ".optics-line",
+              "property": "borderTopColor",
+              "color": "color(srgb 0.376275 0.435882 0.517843)",
+              "background": [
+                255,
+                255,
+                255
+              ],
+              "ratio": 5.116555507121193,
+              "minimum": 3,
+              "text": ""
+            }
+          ],
+          "rootBackground": "rgb(255, 255, 255)",
+          "keys": null
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "base": "http://127.0.0.1:4173/",
+  "contrastEnforced": true,
+  "limits": [
+    "Chromium/SwiftShader emulation; not physical Safari/iPhone/Android.",
+    "No AI inference or teacher acceptance.",
+    "Selected visible text and graphic pairs sampled, not full WCAG certification."
+  ],
+  "sourceStable": true,
+  "sourceHashes": {
+    "observation-theme-v75.css": "464f6b1f30bae973e4d22473145b84213ef325e4fab700589fdd451546a1d32c",
+    "language-ui.js": "1de41bc8268f5539c35199c9fc6e7bfecf11d17b2c5235d92e5cf48580437db7"
+  }
+}
