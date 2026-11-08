@@ -554,7 +554,7 @@
     {
       "id": "vector_sum",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -580,12 +580,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "vector_components",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -611,12 +612,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "relative_motion",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -642,12 +644,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "average_speed",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -673,12 +676,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "braking",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -704,7 +708,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "drag_fall",
@@ -740,7 +745,7 @@
     {
       "id": "atwood",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -766,12 +771,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "pulley",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -797,12 +803,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "elevator",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -828,7 +835,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "banked_turn",
@@ -1019,7 +1027,7 @@
     {
       "id": "torque_angle",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1045,7 +1053,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "rotational_inertia",
@@ -1143,7 +1152,7 @@
     {
       "id": "spring_energy",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1169,7 +1178,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "elastic_modulus",
@@ -1205,7 +1215,7 @@
     {
       "id": "hydraulic_press",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1231,12 +1241,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "communicating",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1262,7 +1273,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "torricelli",
@@ -1298,7 +1310,7 @@
     {
       "id": "table_hanging",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1324,12 +1336,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "contact_carts",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1355,12 +1368,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "accelerating_pendulum",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1386,12 +1400,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "double_incline",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1417,7 +1432,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "free_wedge",
@@ -1453,7 +1469,7 @@
     {
       "id": "ladder_balance",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1479,12 +1495,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "beam_supports",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1510,12 +1527,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "three_strings",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1541,12 +1559,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "slide_tip",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1572,12 +1591,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "collision_2d",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1603,12 +1623,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "ballistic_pendulum",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1634,7 +1655,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "newton_cradle",
@@ -1701,7 +1723,7 @@
     {
       "id": "collision_spring",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -1727,7 +1749,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "yoyo_drop",
@@ -2715,15 +2738,22 @@
         "controlled-condition-fit-protection"
       ],
       "numericEvidence": "checks/spec-core-mechanics-v73.mjs; checks/spec-core-discovery-v73.mjs; docs/SPECIFICATION_V73_AUDIT.md",
-      "knownIssues": [
-        "P2: coordinate-legend sentence remains Vietnamese after EN switch; outside the five corrected labels.",
-        "P2: shared observation graph styling has subdued legend contrast/outer white surface in night mode; pending dedicated theme follow-up."
-      ],
+      "knownIssues": [],
       "resolvedIssues": [
         {
           "issue": "Selected model and control labels remained Vietnamese after EN switch.",
           "status": "fixed-v74",
           "evidence": "checks/language-optics-v74.mjs; docs/FIXES_V74_REPORT.md"
+        },
+        {
+          "issue": "P2: coordinate-legend sentence remains Vietnamese after EN switch; outside the five corrected labels.",
+          "status": "fixed-v75-selected-browser-cases",
+          "evidence": "docs/SPECIFICATION_V75_REPORT.md"
+        },
+        {
+          "issue": "P2: shared observation graph styling has subdued legend contrast/outer white surface in night mode; pending dedicated theme follow-up.",
+          "status": "fixed-v75-selected-browser-cases",
+          "evidence": "docs/SPECIFICATION_V75_REPORT.md"
         }
       ]
     },
@@ -2986,7 +3016,7 @@
     {
       "id": "spring_period",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3012,12 +3042,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "oscillator_energy",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3043,12 +3074,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "phase_difference",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3074,7 +3106,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "beat",
@@ -3172,7 +3205,7 @@
     {
       "id": "string_speed",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3198,12 +3231,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "string_resonance",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3229,7 +3263,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "open_pipe",
@@ -3296,7 +3331,7 @@
     {
       "id": "sound_level",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3322,12 +3357,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "intensity_distance",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3353,12 +3389,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "standing_phase",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3384,12 +3421,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "reflection_wave",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -3415,7 +3453,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "wave_packet",
@@ -3978,7 +4017,7 @@
     {
       "id": "uniform_field",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4004,12 +4043,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "potential_point",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4035,12 +4075,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "potential_pair",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4066,7 +4107,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "dipole_torque",
@@ -4102,7 +4144,7 @@
     {
       "id": "capacitor_plate",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4128,12 +4170,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "dielectric",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4159,12 +4202,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "capacitor_series",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4190,12 +4234,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "capacitor_parallel",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4221,7 +4266,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "capacitor_force",
@@ -4257,7 +4303,7 @@
     {
       "id": "charge_quantization",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4283,12 +4329,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "drift",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4314,12 +4361,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "wire_stretch",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4345,12 +4393,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "potentiometer",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4376,12 +4425,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "voltage_divider",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4407,7 +4457,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "kirchhoff_loop",
@@ -4474,7 +4525,7 @@
     {
       "id": "meter_loading",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4500,7 +4551,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "max_power",
@@ -4536,7 +4588,7 @@
     {
       "id": "battery_series",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4562,12 +4614,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "battery_parallel",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -4593,7 +4646,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "metacentric",
@@ -5094,7 +5148,7 @@
     {
       "id": "string_power",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -5120,7 +5174,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "dispersive_packet",
@@ -5528,7 +5583,7 @@
     {
       "id": "three_charge_energy",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -5554,12 +5609,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "electric_work_paths",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -5585,7 +5641,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "connected_spheres",
@@ -5714,7 +5771,7 @@
     {
       "id": "isolated_dielectric",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -5740,7 +5797,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "layered_dielectric",
@@ -5931,7 +5989,7 @@
     {
       "id": "ammeter_shunt",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -5957,12 +6015,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "voltmeter_design",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed-with-open-domain-issue",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -5988,6 +6047,10 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md",
+      "knownIssues": [
+        "Open physical-domain issue: allowed inputs can require a negative passive series resistance when range < Ig*Rg; no domain rejection yet. Reproduced in docs/spec-v75/physics-b.json. Arithmetic agreement does not accept this unrealizable design."
       ]
     },
     {
@@ -6117,7 +6180,7 @@
     {
       "id": "charge_sharing",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -6143,7 +6206,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "rlc_free",
@@ -7560,7 +7624,7 @@
     {
       "id": "wire_field",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7586,7 +7650,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "wire_pair",
@@ -7653,7 +7718,7 @@
     {
       "id": "flux_angle",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7679,7 +7744,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "inductor_energy",
@@ -7963,7 +8029,7 @@
     {
       "id": "binding_energy",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -7989,7 +8055,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "loop_axis",
@@ -8304,7 +8371,7 @@
     {
       "id": "sliding_rod",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -8330,12 +8397,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "magnetic_braking",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -8361,12 +8429,13 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "coil_entering_field",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -8392,7 +8461,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "mutual_induction",
@@ -8676,7 +8746,7 @@
     {
       "id": "layered_wall",
       "stage": "C-D-E",
-      "scientificReview": "pending",
+      "scientificReview": "reference-cases-passed",
       "pedagogicalReview": "pending",
       "realDeviceReview": "pending",
       "curriculum": {
@@ -8702,7 +8772,8 @@
         "explicit-worksheet-export",
         "parameter-edit-pause-notice",
         "controlled-condition-fit-protection"
-      ]
+      ],
+      "numericEvidence": "checks/spec-foundation-a-v75.mjs; checks/spec-foundation-b-v75.mjs; docs/SPECIFICATION_V75_REPORT.md"
     },
     {
       "id": "transient_heat_bar",

@@ -1,0 +1,22 @@
+/* Observation panels have their own canvas: foreground and data keys follow it. */
+#conceptObservation{--observation-canvas:#fff;--observation-ink:#213248;--observation-muted:#455970;--observation-border:#d7dfe9;--observation-raised:#f3f6fa;--observation-curve:#245fa6;--observation-current:#ad5814;--observation-axis:#66788e;--observation-zero:#7b8798;background:var(--observation-canvas);color:var(--observation-ink);border-color:var(--observation-border)}
+html[data-appearance=dark] #conceptObservation{--observation-canvas:#2f2f2f;--observation-ink:#ececec;--observation-muted:#c4c4c4;--observation-border:#666;--observation-raised:#383838;--observation-curve:#8abaff;--observation-current:#ffbd7a;--observation-axis:#b4b4b4;--observation-zero:#858585}
+#conceptObservation .observation-content{background:var(--observation-canvas);color:var(--observation-ink)}
+#conceptObservation :is(.observation-title,.observation-axis-labels,.observation-current-value,.optics-notes,.optics-legend,.optics-values dd){color:var(--observation-ink)}
+#conceptObservation :is(.observation-key,.observation-note,.optics-values dt){color:var(--observation-muted)}
+#conceptObservation .observation-key .theory-key{background:var(--observation-curve)}
+#conceptObservation .observation-key .current-key{background:var(--observation-current)}
+#conceptObservation .observation-curve{stroke:var(--observation-curve)}
+#conceptObservation .observation-samples{fill:var(--observation-curve)}
+#conceptObservation .observation-current{fill:var(--observation-current);stroke:var(--observation-canvas)}
+#conceptObservation .observation-axes{stroke:var(--observation-axis)}
+#conceptObservation .observation-zero{stroke:var(--observation-zero)}
+#conceptObservation .observation-ticks{fill:var(--observation-muted)}
+#conceptObservation .observation-values{color:var(--observation-ink);scrollbar-color:var(--observation-axis) var(--observation-canvas)}
+#conceptObservation .observation-values>summary{color:var(--observation-curve);background:var(--observation-canvas)}
+#conceptObservation .observation-values :is(table,tbody,tr,td){background:var(--observation-canvas);color:var(--observation-ink)}
+#conceptObservation .observation-values th{background:var(--observation-raised);color:var(--observation-ink)}
+#conceptObservation :is(.observation-values td,.observation-values th,.optics-values>div){border-color:var(--observation-border)}
+#conceptObservation summary:focus-visible{outline-color:var(--ql-focus,#235be3)}
+#conceptObservation .optics-legend .optics-line{border-color:color-mix(in srgb,var(--ray-color,#66788e) 95%,#000)}
+html[data-appearance=dark] #conceptObservation .optics-legend .optics-line{border-color:color-mix(in srgb,var(--ray-color,#66788e) 65%,#fff)}

@@ -1,0 +1,238 @@
+{
+  "scope": "last30 of exactly61 extra!==true experiments after original60",
+  "experiments": 30,
+  "numericComparisons": 2510,
+  "entries": [
+    {
+      "id": "potentiometer",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 0
+    },
+    {
+      "id": "voltage_divider",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 2.842170943040401e-14
+    },
+    {
+      "id": "meter_loading",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 2.220446049250313e-14
+    },
+    {
+      "id": "battery_series",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 0
+    },
+    {
+      "id": "battery_parallel",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 0
+    },
+    {
+      "id": "wire_field",
+      "status": "PASS-reference-cases",
+      "cases": 5,
+      "numericComparisons": 40,
+      "maxAbsoluteError": 2.842170943040401e-14
+    },
+    {
+      "id": "flux_angle",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 7.105427357601002e-15
+    },
+    {
+      "id": "binding_energy",
+      "status": "PASS-reference-cases",
+      "cases": 5,
+      "numericComparisons": 40,
+      "maxAbsoluteError": 0
+    },
+    {
+      "id": "table_hanging",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 3.552713678800501e-15
+    },
+    {
+      "id": "contact_carts",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 1.7763568394002505e-15
+    },
+    {
+      "id": "accelerating_pendulum",
+      "status": "PASS-reference-cases",
+      "cases": 5,
+      "numericComparisons": 40,
+      "maxAbsoluteError": 7.105427357601002e-15
+    },
+    {
+      "id": "double_incline",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 1.2434497875801753e-14
+    },
+    {
+      "id": "ladder_balance",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 1.1368683772161603e-13
+    },
+    {
+      "id": "beam_supports",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 0
+    },
+    {
+      "id": "three_strings",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 2.842170943040401e-14
+    },
+    {
+      "id": "slide_tip",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 0
+    },
+    {
+      "id": "collision_2d",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 112,
+      "maxAbsoluteError": 1.1368683772161603e-13
+    },
+    {
+      "id": "ballistic_pendulum",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 7.105427357601002e-15
+    },
+    {
+      "id": "collision_spring",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 3.3306690738754696e-15
+    },
+    {
+      "id": "string_power",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 1.4210854715202004e-14
+    },
+    {
+      "id": "three_charge_energy",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 4.547473508864641e-13
+    },
+    {
+      "id": "electric_work_paths",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 7.105427357601002e-15
+    },
+    {
+      "id": "isolated_dielectric",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 4.547473508864641e-13
+    },
+    {
+      "id": "ammeter_shunt",
+      "status": "PASS-reference-cases",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 1.1102230246251565e-16
+    },
+    {
+      "id": "voltmeter_design",
+      "status": "PARTIAL-reference-cases-pass-domain-constraint-fails",
+      "cases": 7,
+      "numericComparisons": 63,
+      "maxAbsoluteError": 0
+    },
+    {
+      "id": "charge_sharing",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 99,
+      "maxAbsoluteError": 5.820766091346741e-11
+    },
+    {
+      "id": "sliding_rod",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 117,
+      "maxAbsoluteError": 6.938893903907228e-18
+    },
+    {
+      "id": "magnetic_braking",
+      "status": "PASS-reference-cases",
+      "cases": 13,
+      "numericComparisons": 156,
+      "maxAbsoluteError": 8.881784197001252e-16
+    },
+    {
+      "id": "coil_entering_field",
+      "status": "PASS-reference-cases",
+      "cases": 20,
+      "numericComparisons": 220,
+      "maxAbsoluteError": 0
+    },
+    {
+      "id": "layered_wall",
+      "status": "PASS-reference-cases",
+      "cases": 9,
+      "numericComparisons": 90,
+      "maxAbsoluteError": 3.552713678800501e-15
+    }
+  ],
+  "knownIssues": [
+    {
+      "id": "voltmeter_design",
+      "status": "FAIL-domain-constraint-pending",
+      "state": {
+        "range": 0.1,
+        "galvanometer": 10,
+        "resistance": 1000
+      },
+      "actual": -990,
+      "unit": "Ω",
+      "minimumRealizableRange": 10,
+      "expected": "Require Umax >= Ig Rg and indicate invalid state instead of presenting negative passive series resistance.",
+      "reason": "Expanded independent controls permit Umax<IgRg; current output has no invalid-domain flag despite catalog claiming positive added resistor."
+    }
+  ],
+  "limits": [
+    "Analytic reference and table numeric checks only; not all scenes, physical hardware, curriculum or teacher signoff.",
+    "Literal anchors may intentionally bypass UI ranges to isolate conservation/units; domain probes use declared current ranges.",
+    "Negative passive voltmeter resistor is recorded as a genuine failure, not certified as valid."
+  ]
+}

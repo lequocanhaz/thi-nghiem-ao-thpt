@@ -155,6 +155,10 @@ for(const [vi,en] of [
 // Each measurement/parameter renders its own catalog unit beside the value.
 pair('Thời gian & tùy chọn','Time and options');pair('Liên hệ','Linked view');pair('Vận tốc','Velocity');pair('Gia tốc','Acceleration');pair('Li độ','Displacement');
 
+// Coordinate orientation guidance is interface copy, never a metric ruler.
+pair('Trục định hướng · không dùng để đọc số đo','Orientation axes · not for taking measurements');
+pair('Trục định hướng của hình minh họa; không dùng chiều dài trên hình để đọc số đo.','Illustration orientation axes; do not use lengths on the illustration to take measurements.');
+
 export const getLocale=()=>i18n.getLocale();
 export const englishTitle=id=>dictionaries['en-US'].experiments[id]?.shortTitle||id;
 export function translateShort(source){

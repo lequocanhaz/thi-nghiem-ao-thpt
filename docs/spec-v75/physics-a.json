@@ -1,0 +1,590 @@
+{
+  "scope": "first31 of exact61 foundation IDs",
+  "ids": 31,
+  "comparisons": 2979,
+  "records": [
+    {
+      "id": "vector_sum",
+      "status": "PASS",
+      "cases": 11,
+      "comparisons": 105,
+      "literalAnchor": {
+        "input": {
+          "force": 3,
+          "second": 4,
+          "angle": 90
+        },
+        "expected": {
+          "result": 5,
+          "fx": 3,
+          "fy": 4
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "vector_components",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 70,
+      "literalAnchor": {
+        "input": {
+          "force": 10,
+          "angle": 90
+        },
+        "expected": {
+          "fx": 0,
+          "fy": 10,
+          "result": 10
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "relative_motion",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "speed": -3,
+          "frame": 2,
+          "t": 4
+        },
+        "expected": {
+          "relative": -5,
+          "x": -12,
+          "frameX": 8
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "average_speed",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "v1": 5,
+          "v2": 10,
+          "distance": 30
+        },
+        "expected": {
+          "average": 6.666666666666667,
+          "t1": 6,
+          "t2": 3
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "braking",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 108,
+      "literalAnchor": {
+        "input": {
+          "speed": 10,
+          "deceleration": 5,
+          "t": 3
+        },
+        "expected": {
+          "stopDistance": 10,
+          "stopTime": 2,
+          "v": 0,
+          "x": 10
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "atwood",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 86,
+      "literalAnchor": {
+        "input": {
+          "m1": 1,
+          "m2": 1
+        },
+        "expected": {
+          "acc": 0,
+          "tension": 9.81,
+          "difference": 0
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "pulley",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 106,
+      "literalAnchor": {
+        "input": {
+          "mass": 2,
+          "branches": 4,
+          "lift": 0.5
+        },
+        "expected": {
+          "pull": 4.905,
+          "rope": 2,
+          "work": 9.81
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "elevator",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 70,
+      "literalAnchor": {
+        "input": {
+          "mass": 2,
+          "acc": -9.81
+        },
+        "expected": {
+          "normal": 0,
+          "weight": 19.62,
+          "ratio": 0
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "torque_angle",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "force": 10,
+          "length": 2,
+          "angle": 30
+        },
+        "expected": {
+          "torque": 10,
+          "arm": 1,
+          "perpendicular": 5
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "spring_energy",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 70,
+      "literalAnchor": {
+        "input": {
+          "stiffness": 100,
+          "extension": 0.2
+        },
+        "expected": {
+          "energy": 2,
+          "force": 20,
+          "average": 10
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "hydraulic_press",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "force": 10,
+          "small": 2,
+          "large": 30
+        },
+        "expected": {
+          "output": 150,
+          "pressure": 50,
+          "ratio": 15
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "communicating",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 106,
+      "literalAnchor": {
+        "input": {
+          "density1": 800,
+          "density2": 1000,
+          "height": 0.5
+        },
+        "expected": {
+          "height2": 0.4,
+          "pressure": 3.924,
+          "ratio": 0.8
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "spring_period",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 70,
+      "literalAnchor": {
+        "input": {
+          "mass": 1,
+          "stiffness": 4
+        },
+        "expected": {
+          "period": 3.141592653589793,
+          "frequency": 0.3183098861837907,
+          "omega": 2
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "oscillator_energy",
+      "status": "PASS",
+      "cases": 17,
+      "comparisons": 212,
+      "literalAnchor": {
+        "input": {
+          "mass": 1,
+          "stiffness": 4,
+          "amplitude": 0.1,
+          "t": 0
+        },
+        "expected": {
+          "x": 0.1,
+          "kinetic": 0,
+          "potential": 0.02,
+          "total": 0.02
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "phase_difference",
+      "status": "PASS",
+      "cases": 12,
+      "comparisons": 126,
+      "literalAnchor": {
+        "input": {
+          "phase": 180,
+          "amplitude": 1,
+          "frequency": 1,
+          "t": 0
+        },
+        "expected": {
+          "x1": 1,
+          "x2": -1,
+          "sum": 0
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "string_speed",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 70,
+      "literalAnchor": {
+        "input": {
+          "tension": 20,
+          "linear": 5
+        },
+        "expected": {
+          "speed": 63.245553203367585,
+          "wavelength": 6.324555320336759,
+          "ratio": 200
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "string_resonance",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "length": 1,
+          "tension": 20,
+          "mode": 2
+        },
+        "expected": {
+          "frequency": 63.245553203367585,
+          "fundamental": 31.622776601683793,
+          "wavelength": 1
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "sound_level",
+      "status": "PASS",
+      "cases": 6,
+      "comparisons": 48,
+      "literalAnchor": {
+        "input": {
+          "exponent": -6
+        },
+        "expected": {
+          "level": 60,
+          "intensity": 1,
+          "ratio": 1000000
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "intensity_distance",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 70,
+      "literalAnchor": {
+        "input": {
+          "distance": 1,
+          "power": 0.01
+        },
+        "expected": {
+          "intensity": 795.7747154594767,
+          "level": 89.00790135977904,
+          "area": 12.566370614359172
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "standing_phase",
+      "status": "PASS",
+      "cases": 15,
+      "comparisons": 141,
+      "literalAnchor": {
+        "input": {
+          "probe": 0,
+          "phase": 0,
+          "t": 0
+        },
+        "expected": {
+          "signal": 2,
+          "envelope": 2,
+          "x": 0
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "reflection_wave",
+      "status": "PASS",
+      "cases": 16,
+      "comparisons": 150,
+      "literalAnchor": {
+        "input": {
+          "probe": 0,
+          "frequency": 1,
+          "t": 0.25
+        },
+        "expected": {
+          "incident": 0,
+          "reflected": 0,
+          "signal": 0
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "uniform_field",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "field": 300,
+          "charge": -2,
+          "mass": 5
+        },
+        "expected": {
+          "force": -0.6,
+          "acc": -120,
+          "work": -60
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "potential_point",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 78,
+      "literalAnchor": {
+        "input": {
+          "charge": 1,
+          "distance": 1
+        },
+        "expected": {
+          "potential": 8.9875517923,
+          "field": 8.9875517923,
+          "work": 8.9875517923
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "potential_pair",
+      "status": "PASS",
+      "cases": 12,
+      "comparisons": 114,
+      "literalAnchor": {
+        "input": {
+          "charge": 1,
+          "half": 0.5,
+          "distance": 0.5
+        },
+        "expected": {
+          "near": null,
+          "far": -8.9875517923,
+          "potential": null
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "capacitor_plate",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "area": 100,
+          "gap": 1,
+          "voltage": 10
+        },
+        "expected": {
+          "capacity": 88.541878128,
+          "charge": 0.88541878128,
+          "field": 10
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "dielectric",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "dielectric": 3,
+          "base": 100,
+          "voltage": 10
+        },
+        "expected": {
+          "capacity": 300,
+          "charge": 3,
+          "energy": 15
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "capacitor_series",
+      "status": "PASS",
+      "cases": 11,
+      "comparisons": 127,
+      "literalAnchor": {
+        "input": {
+          "c1": 20,
+          "c2": 30,
+          "voltage": 12
+        },
+        "expected": {
+          "capacity": 12,
+          "u1": 7.2,
+          "u2": 4.8
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "capacitor_parallel",
+      "status": "PASS",
+      "cases": 10,
+      "comparisons": 96,
+      "literalAnchor": {
+        "input": {
+          "c1": 20,
+          "c2": 30,
+          "voltage": 12
+        },
+        "expected": {
+          "capacity": 50,
+          "q1": 240,
+          "q2": 360
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "charge_quantization",
+      "status": "PASS",
+      "cases": 6,
+      "comparisons": 48,
+      "literalAnchor": {
+        "input": {
+          "electrons": 1000
+        },
+        "expected": {
+          "charge": -0.1602176634,
+          "count": 1000,
+          "unit": 0.0001602176634
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "drift",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 70,
+      "literalAnchor": {
+        "input": {
+          "current": 1,
+          "area": 1
+        },
+        "expected": {
+          "drift": 0.0734295185222525,
+          "density": 1,
+          "charge": 1
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    },
+    {
+      "id": "wire_stretch",
+      "status": "PASS",
+      "cases": 8,
+      "comparisons": 70,
+      "literalAnchor": {
+        "input": {
+          "factor": 2,
+          "base": 5
+        },
+        "expected": {
+          "resistance": 20,
+          "area": 0.5,
+          "ratio": 4
+        }
+      },
+      "scope": "analytic reference outputs and raw table columns; no scene/device/teacher acceptance"
+    }
+  ],
+  "limits": [
+    "Analytic numeric and raw-table checks only.",
+    "No physical-device, scene-geometry, curriculum or teacher signoff."
+  ]
+}

@@ -226,3 +226,8 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Nămnhãn lensEN cònthiếu và accessible names đượcghépcặp exact tronglanguage-ui. ClockvisualOnly syncvisible/aria-valuetext/aria-label ngaylocaleevent vàrefresh, khôngadvance/rebuild. Khôngdịch notes/AI/math.
 - Previews/v74 actual300captures sourceStabletrue,300/300imagebytesgiốngv65. Giữoldsnapshots. Activeguard catalog-previews-v74; generatorv74. Modulecachegraph74; khôngresetbaselinev64, reviewedexactchanges trongconcept-corrections-v74 vàscientific-corrections-v54.
 - UI4/4+ARIA2/2, QA8/8+ARIA2/2PASS Chromiumemulation. HaiP2khác cònmở: coordinatelegendVIvàsharedobservationnightcontrast, trackerghi rõ. KhôngcoilàfullEN/WCAG/hardwareacceptance.
+
+## Chú giải và quan hệ nền tảng v75
+
+- Xem docs/SPECIFICATION_V75_REPORT.md. observation-theme-v75.css ghép cặp màu theo ID để bỏ outerwhite trong night; theory/currentkey khớp curve/marker; bảngstickyheader/note/ticks/axes/focus đều theo theme. Exactcoordinatelegendtranslation chỉlanguage-ui, không sửa renderer/science/image. Cacheboot/app/language75, scientificmodules/previews74 giữ nguyên.
+- Oracle nền tảng lấy đúng61ID sau60gốc với extra!==true, hai nhóm31/30 kiểm5489so sánh độc lập. Tracker121córeference; voltmeter_design PARTIAL miền vật lí: Umax<IgRg trả điện trở phụ âm chưa báo invalid. Không kẹp về0 hoặc coi numericPASS là validpassivedesign. 179ID cònchưađốichứngriêng, giáo viên/thiết bị/chương trình đều pending.

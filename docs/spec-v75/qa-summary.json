@@ -1,0 +1,162 @@
+{
+  "scope": "20 unique contexts covered by initial matrix and final targeted followups; not a single frozen-source run",
+  "initial": {
+    "cases": 20,
+    "pass": 18,
+    "sourceStable": false,
+    "errors": []
+  },
+  "followup": {
+    "cases": 4,
+    "pass": 4,
+    "sourceStable": true,
+    "errors": []
+  },
+  "cases": [
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "vector_sum",
+      "status": "PASS",
+      "evidence": "qa-followup.json"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "spring_period",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "charge_quantization",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "potential_point",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "id": "ray_slab",
+      "status": "PASS",
+      "evidence": "qa-followup.json"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "vector_sum",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "spring_period",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "charge_quantization",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "potential_point",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "id": "ray_slab",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "vector_sum",
+      "status": "PASS",
+      "evidence": "qa-followup.json"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "spring_period",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "charge_quantization",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "potential_point",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "id": "ray_slab",
+      "status": "PASS",
+      "evidence": "qa-followup.json"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "vector_sum",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "spring_period",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "charge_quantization",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "potential_point",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "id": "ray_slab",
+      "status": "PASS",
+      "evidence": "qa-initial.json"
+    }
+  ],
+  "limitations": [
+    "Chromium/SwiftShader emulation; not physical Safari/iPhone/Android.",
+    "No AI inference or teacher acceptance.",
+    "Selected visible text and graphic pairs sampled, not full WCAG certification."
+  ]
+}
