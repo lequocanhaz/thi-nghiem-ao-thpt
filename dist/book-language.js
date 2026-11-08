@@ -4,7 +4,7 @@ import {i18n,getLocale} from './i18n.js?v=54';
 import {mountLanguagePill} from './language-pill.js?v=65';
 const dictionary=new Map([
  ['Đến','Go'],['Lớp học','Grade'],['Mục lục theo bài','Lesson contents'],['Trang tệp','File page'],['Đến trang tệp','Go to file page'],['Trang sách','Textbook pages'],['Đang tải trang sách…','Loading textbook page…'],['Vuốt để lật trang; khi phóng to, kéo để đọc. Dùng các nút hoặc phím ← → trong trang sách để lật.','Swipe to turn pages; drag to read when zoomed. Use the buttons or ← → keys within the page to turn.'],
- ['Đến nội dung','Skip to main content'],['Điều hướng','Navigation'],['Thí nghiệm','Experiments'],
+ ['Đến nội dung','Skip to main content'],['Điều hướng','Navigation'],['Thí nghiệm','Experiments'],['Thí nghiệm ↗','Experiments ↗'],
  ['Sách giáo khoa','Textbooks'],['Kết nối tri thức với cuộc sống','Connecting Knowledge to Life'],
  ['Đang mở thư viện sách…','Loading textbook library…'],['← Đổi sách','← Change textbook'],
  ['Trang chủ','Home'],['Vật lí','Physics'],['Bìa sách','Book cover'],['Lớp 10','Grade 10'],['Lớp 11','Grade 11'],['Lớp 12','Grade 12'],

@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "mobilePopup": {
+        "x": 21,
+        "y": 368.515625,
+        "width": 348,
+        "height": 230
+      },
+      "repeatDataFocusRows": "PASS",
+      "touchExitPresent": "PASS",
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "desktopDisclosure": "PASS",
+      "resizer": {
+        "requested": "560",
+        "actual": 560
+      },
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Chromium headless viewport emulation; not real Safari/iPhone/Android hardware.",
+    "Targeted final review, not a complete WCAG or physics audit."
+  ],
+  "sourceStart": {
+    "dist/app.js": "fb97baebfb80bca7639aabf7006bde0031141d17184f7b1e36748adac226a207",
+    "dist/views.js": "c7dbffb98efdbe60b6cc0556337c4c9ce2fd93b862567761ecb16da22cd07aa3",
+    "dist/product-ux-v76.css": "7bfdf32f84346b91818d57e1f644ed09020d28967aea8c2da16f8f676c4d8f81",
+    "dist/books-ux-v76.css": "9196446abdb3334fcda4fe198f418cf28c1043ed71b942631f2450aff0a587a7"
+  },
+  "sourceEnd": {
+    "dist/app.js": "fb97baebfb80bca7639aabf7006bde0031141d17184f7b1e36748adac226a207",
+    "dist/views.js": "c7dbffb98efdbe60b6cc0556337c4c9ce2fd93b862567761ecb16da22cd07aa3",
+    "dist/product-ux-v76.css": "7bfdf32f84346b91818d57e1f644ed09020d28967aea8c2da16f8f676c4d8f81",
+    "dist/books-ux-v76.css": "9196446abdb3334fcda4fe198f418cf28c1043ed71b942631f2450aff0a587a7"
+  },
+  "sourceStable": true,
+  "passed": true
+}

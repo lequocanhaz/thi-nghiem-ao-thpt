@@ -231,3 +231,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 
 - Xem docs/SPECIFICATION_V75_REPORT.md. observation-theme-v75.css ghép cặp màu theo ID để bỏ outerwhite trong night; theory/currentkey khớp curve/marker; bảngstickyheader/note/ticks/axes/focus đều theo theme. Exactcoordinatelegendtranslation chỉlanguage-ui, không sửa renderer/science/image. Cacheboot/app/language75, scientificmodules/previews74 giữ nguyên.
 - Oracle nền tảng lấy đúng61ID sau60gốc với extra!==true, hai nhóm31/30 kiểm5489so sánh độc lập. Tracker121córeference; voltmeter_design PARTIAL miền vật lí: Umax<IgRg trả điện trở phụ âm chưa báo invalid. Không kẹp về0 hoặc coi numericPASS là validpassivedesign. 179ID cònchưađốichứngriêng, giáo viên/thiết bị/chương trình đều pending.
+
+## Trải nghiệm sản phẩm v76
+
+- Xem docs/PRODUCT_UX_V76.md. product-ux-v76.css/ books-ux-v76.css giữ brand/banner/font/photos/science nhưng compact header/cards/shelf/readingcontrols và sửa luồng mobile.
+- Toolbar hiện có là destination Mô hình/Thông số/Dữ liệu ở<=620px; params/data phải mở rồi focus, không toggle khi bấm lại. Không tựcuộn mỗi lần ghi. Không bật bàn phím số trên coarsepointer chỉ vì mở params. Mobilecontrols co nội dung, dữliệu1row co theo bảng; nav không che chat/fullscreen/editing/toast, touchPresent cóExit.
+- Nativeplaybackdetails mọi bài: desktop mở/summaryẩn, mobile đóng/summaryhiện. canDismissWorkspaceMenu phải SKIP desktop playback ởoutsideclick và cả2Escapehandlers; resize qua620 đồng bộ open. Teachingtools được chuyển node khi đổi kích thước, không clone.
+- Desktopcontrols resize thật300–560px; đừng phục hồi clamp340 cũ. Kiểm Browser mới browser-product-ux-v76.py, books review nguồnstate riêng. Không thay schema/session hoặc solver/renderer/previews.

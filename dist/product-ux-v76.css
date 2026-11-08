@@ -1,0 +1,154 @@
+/* One workspace rhythm. Science, photos and the user's saved values keep their own colors. */
+body{--ux-canvas:#fff;--ux-surface:#f5f6f8;--ux-ink:#20242a;--ux-muted:#59616c;--ux-line:#dce0e6;--ux-focus:#245bd7}
+html[data-appearance=dark] body{--ux-canvas:#212121;--ux-surface:#2f2f2f;--ux-ink:#ececec;--ux-muted:#b8b8b8;--ux-line:#505050;--ux-focus:#a8c7fa}
+.header{min-height:76px;padding-block:12px}
+.header>.brand>img{width:46px;height:42px}
+.header .brand-wordmark{font-size:26px;letter-spacing:-.035em}
+.header nav>a,.header nav>button{min-height:44px;font-size:14px}
+.lab{padding-top:20px;line-height:1.65}
+.lab .lab-breadcrumb{margin-bottom:12px}
+.lab .lab-heading h1{font-size:clamp(25px,2.4vw,32px);line-height:1.3;margin:4px 0}
+.lab .lab-heading{gap:16px;align-items:center}
+.lab .lab-intro{margin:8px 0 12px;gap:16px}
+.lab .workspace-toolbar{margin-bottom:10px}
+.workspace-model-jump{display:none!important}
+.lab :is(.stage-shell,.controls,.research-dock){border-radius:14px}
+.lab .stage-top{padding:8px 12px;border-radius:14px 14px 0 0}
+.lab .control-heading{padding:16px}
+.lab .control-body{padding:16px 20px}
+.lab .parameter{padding-block:12px}
+.lab :is(.control-heading h2,.dock-title h2){line-height:1.4;font-size:15px}
+.lab .value-entry input{border-radius:8px}
+.lab .parameter :is(input[type=range],select){min-height:44px}
+.lab .dock-title{display:grid;grid-template-columns:minmax(0,1fr) auto 44px;align-items:center;gap:8px;padding:12px 16px}
+.lab .dock-title h2{min-width:0;margin:0}
+.lab .dock-title button{min-height:44px}
+.lab .dock-title [data-action=toggle-dock]{width:44px;min-width:44px;padding:8px;font-size:24px}
+.lab .work-tabs{padding:6px 12px;gap:4px;background:var(--ux-canvas);border-color:var(--ux-line)}
+.lab .work-tabs button{min-height:44px;border-radius:7px;padding:8px 14px;color:var(--ux-muted);background:transparent;white-space:nowrap}
+.lab .work-tabs button.selected{color:var(--ux-ink);background:var(--ux-surface);box-shadow:none}
+.lab :is(.controls,.research-dock,.stage-shell){scroll-margin-top:16px}
+.lab :is(.stage-top,.control-heading h2,.dock-title h2){scroll-margin-top:16px}
+.lab :is(.stage-top,.control-heading h2,.dock-title h2):focus-visible{outline:2px solid var(--ux-focus);outline-offset:4px}
+.lab .lab-navigation{margin-top:28px;padding-top:20px}
+/* Cards reveal the decision first; the Preview action retains the full lesson context. */
+#library .card-body{display:grid;grid-template-columns:minmax(0,1fr) auto;align-content:start;gap:10px 12px;padding:18px 20px}
+#library .card-body .card-topic{grid-column:1;font-size:13px;line-height:1.5;color:var(--ux-muted)!important}
+#library .card-badges{grid-column:2;margin:0;font-size:12px;line-height:1.5;align-items:center}
+#library .card-badges>span:first-child,#library .card-badges>span:last-child{display:none}
+#library .card-badges>span{border:0;padding:0;color:var(--ux-muted)!important}
+#library .card-body h3{grid-column:1/-1;margin:2px 0 0;font-size:21px;line-height:1.4;letter-spacing:-.025em}
+#library .card-body p{grid-column:1/-1;margin:0;font-size:14px;line-height:1.7;color:var(--ux-muted)!important}
+#library :is(.card-syllabus,.card-interactions){display:none}
+#library .card-complete{grid-column:1/-1}
+#library .card-actions{gap:10px;padding:8px 20px 18px}
+#library .experiment-card{transition:border-color .15s}
+#library .experiment-card:focus-within{outline:2px solid var(--ux-focus);outline-offset:3px;box-shadow:none}
+@media(hover:hover){#library .experiment-card:hover{border-color:var(--ux-focus)}}
+@media(min-width:621px){
+ .lab .playback-options>summary{display:none}
+ .lab .transport{flex-wrap:wrap}
+ .lab .transport .time-slider{flex:1 1 160px}
+}
+@media(max-width:620px){
+ body .header:has(nav.ql-language-ready){padding:6px 10px;row-gap:0}
+ .header .brand-wordmark{font-size:21px}
+ .header>.brand>img{width:30px;height:30px}
+ .lab{padding:12px 12px 92px}
+ .lab .lab-breadcrumb{gap:8px;margin-bottom:10px}
+ .lab .lab-selector select{font-size:12px;max-width:100%}
+ .lab .lab-heading{gap:8px}
+ .lab .lab-heading h1{font-size:23px;line-height:1.3;margin:3px 0}
+ .lab .lab-heading .eyebrow{font-size:12px}
+ .lab .lab-intro{margin:6px 0 12px;gap:12px;align-items:flex-start}
+ .lab .lab-intro p{font-size:13px;line-height:1.55;max-width:48ch}
+ .lab .study-mode-menu>summary{min-height:44px;font-size:12px;white-space:nowrap}
+ .lab .workspace-toolbar{position:fixed;inset:auto 0 0;z-index:95;display:flex;justify-content:space-between;align-items:center;gap:4px;padding:6px 12px max(6px,env(safe-area-inset-bottom));margin:0;border-top:1px solid var(--ux-line);background:var(--ux-canvas);box-shadow:0 -4px 18px #0000000a}
+ .lab .workspace-toolbar>div:first-child{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));flex:1;min-width:0;gap:4px}
+ .lab .workspace-toolbar>div:last-child{flex:0 0 44px;display:block}
+ .lab .workspace-toolbar button,.lab .workspace-toolbar .layout-menu>summary{display:flex;align-items:center;justify-content:center;gap:5px;min-height:48px;min-width:0;padding:6px 4px;font-size:12px;line-height:1.3;white-space:nowrap;background:transparent;color:var(--ux-ink);border:0;border-radius:8px}
+ .lab .workspace-toolbar button svg{width:16px;height:16px;flex:0 0 16px}
+ .lab .workspace-toolbar .workspace-model-jump{display:flex!important}
+ .lab .workspace-toolbar .layout-menu>summary{width:44px}
+ .lab .workspace-toolbar .layout-menu>div{position:absolute;top:auto;bottom:calc(100% + 10px);right:8px;width:240px;background:var(--ux-canvas);color:var(--ux-ink);border:1px solid var(--ux-line)}
+ .lab .workspace-toolbar .layout-menu>div button{justify-content:flex-start;text-align:left;padding:10px 14px;white-space:normal}
+ .lab .workspace-toolbar .measurement-count{font-size:10px;min-width:16px;margin-left:0}
+ body:has(.lab) footer{padding-bottom:88px}
+ body:has(.stage-shell.is-fullscreen) .workspace-toolbar,body:has(.ai-assistant:not([hidden])) .lab .workspace-toolbar{display:none}
+ .lab .stage-top{padding:6px 8px;gap:4px}
+ .lab .projection-switch button{min-height:44px;padding:5px 10px}
+ .lab .stage-tools{gap:3px}
+ .lab .stage-tools :is(.visual-settings>summary,.view-menu>summary){min-height:44px;font-size:12px}
+ .lab .stage-shell:not([data-shm-view=linked]):not(.is-fullscreen){display:flex;flex-direction:column}
+ .lab .stage-shell:not([data-shm-view=linked]):not(.is-fullscreen) .stage-top{order:0}
+ .lab .stage-shell:not([data-shm-view=linked]):not(.is-fullscreen) .stage-viewport{order:1}
+ .lab .stage-shell:not([data-shm-view=linked]):not(.is-fullscreen) .transport{order:2}
+ .lab .stage-shell:not([data-shm-view=linked]):not(.is-fullscreen) .readouts{order:3}
+ .lab .stage-shell:not([data-shm-view=linked]):not(.is-fullscreen) .space-controls{order:4}
+ .lab .stage-shell>.teaching-tools{order:5;display:flex;flex-wrap:wrap;gap:6px;padding:8px;border-top:1px solid var(--ux-line);background:var(--ux-canvas)}
+ .lab .stage-shell>.teaching-tools button{min-height:44px;font-size:12px;flex:1;padding:6px}
+ .lab .transport{padding:10px 8px;gap:8px}
+ .lab .transport>.button{font-size:13px;min-height:44px;padding:8px 12px}
+ .lab .transport .playback-options{position:static;margin-left:auto}
+ .lab .transport .playback-options>summary{min-height:44px;font-size:0;width:44px;justify-content:center;padding:8px}
+ .lab .transport .playback-options>summary:after{content:'•••';font-size:18px;letter-spacing:1px}
+ .lab .transport .playback-options-body{left:8px;right:8px;top:calc(100% + 4px);width:auto;max-width:none;padding:12px;gap:8px}
+ .lab .space-controls{padding:8px;gap:6px}
+ .lab .space-controls button{min-height:44px;font-size:12px}
+ .lab .controls{height:auto!important;max-height:none!important;margin-top:12px}
+ .lab .control-body{overflow:visible;max-height:none;height:auto;padding:12px 16px}
+ .lab .dock-title{grid-template-columns:minmax(0,1fr) 44px 44px;gap:4px;padding:10px 12px}
+ .lab .dock-title [data-action=expand-data]{font-size:0;padding:8px;width:44px}
+ .lab .dock-title [data-action=expand-data]:after{content:'↔';font-size:20px}
+ .lab .work-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:4px;overflow:visible;gap:0}
+ .lab .work-tabs button{padding:8px 2px;min-width:0;font-size:11px;white-space:normal;line-height:1.3}
+ .lab .table-scroll{height:auto;min-height:100px;max-height:var(--table-height,360px)}
+ #library .card-body{padding:16px;gap:8px 12px}
+ #library .card-body h3{font-size:20px}
+ #library .card-actions{padding:6px 16px 16px}
+}
+@media(prefers-reduced-motion:reduce){#library .experiment-card{transition:none}}
+@media print{.workspace-model-jump,.lab .workspace-toolbar{display:none!important}}
+@media(max-width:620px){
+ .lab .workspace-toolbar :is(.present-narration,.exit-present){display:none}
+ .lab .workspace-toolbar .layout-menu>summary>span{display:none}
+ body:has(.lab textarea:focus,.lab input[type=number]:focus,.lab input[type=text]:focus) .lab .workspace-toolbar{display:none}
+}
+@media(max-width:620px){
+ html{scroll-padding-bottom:92px}
+ .lab :is(button,a,input,select,textarea,summary,[tabindex]){scroll-margin-bottom:92px}
+ /* Keep playback visible directly after the drawing; retain the scale explanation. */
+ .lab .stage-shell[data-shm-view=linked] .shm-svg-wrap{display:contents}
+ .lab .stage-shell[data-shm-view=linked] .shm-circle-svg{order:1;max-width:310px;padding:8px 6px 0;box-sizing:border-box}
+ .lab .stage-shell[data-shm-view=linked] .transport{order:2}
+ .lab .stage-shell[data-shm-view=linked] .shm-caption{order:3;margin:8px 14px 0}
+ .lab .stage-shell[data-shm-view=linked] .shm-controls{order:4}
+ .lab .stage-shell[data-shm-view=linked] .readouts{order:5}
+ .lab .stage-shell[data-shm-view=linked] .shm-side{order:6}
+ .lab .stage-shell[data-shm-view=linked]>.teaching-tools{order:7}
+}
+@media(max-width:360px){
+ .lab .space-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 44px 44px;gap:4px;padding:6px}
+ .lab .space-controls button{min-width:0;width:100%;margin:0!important;padding:6px 3px;font-size:11px;white-space:normal;line-height:1.3}
+}
+
+.lab .transport{position:relative}
+@media(max-width:620px){
+ .lab .transport .playback-options-body{top:auto;bottom:calc(100% + 6px);max-height:min(360px,65dvh);overflow:auto}
+ .lab[data-layout=present] .workspace-toolbar>div:first-child{display:none}
+ .lab[data-layout=present] .workspace-toolbar>div:last-child{display:flex;flex:1;justify-content:space-between;gap:8px}
+ .lab[data-layout=present] .workspace-toolbar :is(.present-narration,.exit-present){display:flex;min-height:48px;padding:8px}
+}
+@media(max-width:620px){body:has(.lab) #toast{bottom:calc(82px + env(safe-area-inset-bottom));font-size:13px;line-height:1.5}}
+/* Match the resize handle's actual 300–560 px range. */
+@media(min-width:1101px){.lab:not([data-controls-collapsed=true]):not(.focus) .workspace{grid-template-columns:minmax(0,1fr) 12px minmax(300px,min(var(--controls-width,320px),560px))}}
+@media(max-width:360px){.lab .stage-shell[data-shm-view=linked] .shm-circle-svg{max-width:276px}}
+@media(min-width:621px){
+ /* Keep native details as one flexible group; avoid anonymous contents creating three rows. */
+ .lab .transport .playback-options{display:block;flex:1 1 420px;min-width:0;margin:0}
+ .lab .transport .playback-options-body{display:flex;position:static;align-items:center;flex-wrap:wrap;gap:8px;width:auto;max-width:none;min-width:0;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent}
+ .lab .transport .playback-options-body .time-slider{flex:1 1 150px;min-width:100px}
+}
+@media(min-width:621px){
+ .lab:not([data-controls-collapsed=true]) .transport .parameters-shortcut,.lab .transport .playback-options-body>[data-action=info]{display:none}
+}

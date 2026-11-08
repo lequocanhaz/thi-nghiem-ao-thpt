@@ -1,0 +1,1881 @@
+{
+  "sourceHash": "9196446abdb3334fcda4fe198f418cf28c1043ed71b942631f2450aff0a587a7",
+  "cases": [
+    {
+      "width": 320,
+      "theme": "light",
+      "shelfHeight": 488.6875,
+      "disabledPageStyle": {
+        "background": "rgb(242, 243, 245)",
+        "color": "rgb(86, 96, 108)"
+      },
+      "grades": [
+        {
+          "grade": 10,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 166,
+              "h": 44,
+              "left": 138,
+              "right": 304
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 87,
+              "right": 145
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 189,
+              "right": 233
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 127,
+              "right": 171
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            }
+          ]
+        },
+        {
+          "grade": 11,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 166,
+              "h": 44,
+              "left": 138,
+              "right": 304
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 87,
+              "right": 145
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 189,
+              "right": 233
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 127,
+              "right": 171
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            }
+          ]
+        },
+        {
+          "grade": 12,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 166,
+              "h": 44,
+              "left": 138,
+              "right": 304
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 87,
+              "right": 145
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 189,
+              "right": 233
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 127,
+              "right": 171
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            }
+          ]
+        }
+      ],
+      "stickyToolbarTop": 59.171875,
+      "status": "PASS"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "shelfHeight": 488.6875,
+      "disabledPageStyle": {
+        "background": "rgb(56, 56, 56)",
+        "color": "rgb(180, 180, 180)"
+      },
+      "grades": [
+        {
+          "grade": 10,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 166,
+              "h": 44,
+              "left": 138,
+              "right": 304
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 87,
+              "right": 145
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 189,
+              "right": 233
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 127,
+              "right": 171
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            }
+          ]
+        },
+        {
+          "grade": 11,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 166,
+              "h": 44,
+              "left": 138,
+              "right": 304
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 87,
+              "right": 145
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 189,
+              "right": 233
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 127,
+              "right": 171
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            }
+          ]
+        },
+        {
+          "grade": 12,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 166,
+              "h": 44,
+              "left": 138,
+              "right": 304
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 87,
+              "right": 145
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 189,
+              "right": 233
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 27,
+              "right": 71
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 127,
+              "right": 171
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 249,
+              "right": 293
+            }
+          ]
+        }
+      ],
+      "stickyToolbarTop": 59.171875,
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "shelfHeight": 550.328125,
+      "disabledPageStyle": {
+        "background": "rgb(242, 243, 245)",
+        "color": "rgb(86, 96, 108)"
+      },
+      "grades": [
+        {
+          "grade": 10,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 236,
+              "h": 44,
+              "left": 138,
+              "right": 374
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 116,
+              "right": 174
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 230,
+              "right": 274
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 135,
+              "right": 179
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            }
+          ]
+        },
+        {
+          "grade": 11,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 236,
+              "h": 44,
+              "left": 138,
+              "right": 374
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 116,
+              "right": 174
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 230,
+              "right": 274
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 135,
+              "right": 179
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            }
+          ]
+        },
+        {
+          "grade": 12,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 236,
+              "h": 44,
+              "left": 138,
+              "right": 374
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 116,
+              "right": 174
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 230,
+              "right": 274
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 135,
+              "right": 179
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            }
+          ]
+        }
+      ],
+      "stickyToolbarTop": 55.390625,
+      "status": "PASS"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "shelfHeight": 550.328125,
+      "disabledPageStyle": {
+        "background": "rgb(56, 56, 56)",
+        "color": "rgb(180, 180, 180)"
+      },
+      "grades": [
+        {
+          "grade": 10,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 236,
+              "h": 44,
+              "left": 138,
+              "right": 374
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 116,
+              "right": 174
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 230,
+              "right": 274
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 135,
+              "right": 179
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            }
+          ]
+        },
+        {
+          "grade": 11,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 236,
+              "h": 44,
+              "left": 138,
+              "right": 374
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 116,
+              "right": 174
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 230,
+              "right": 274
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 135,
+              "right": 179
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            }
+          ]
+        },
+        {
+          "grade": 12,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 112,
+              "h": 44,
+              "left": 16,
+              "right": 128
+            },
+            {
+              "id": "bookChapter",
+              "w": 236,
+              "h": 44,
+              "left": 138,
+              "right": 374
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "bookPage",
+              "w": 58,
+              "h": 44,
+              "left": 116,
+              "right": 174
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 230,
+              "right": 274
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 29,
+              "right": 73
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 135,
+              "right": 179
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 317,
+              "right": 361
+            }
+          ]
+        }
+      ],
+      "stickyToolbarTop": 55.390625,
+      "status": "PASS"
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "shelfHeight": 406.5,
+      "disabledPageStyle": {
+        "background": "rgb(242, 243, 245)",
+        "color": "rgb(86, 96, 108)"
+      },
+      "grades": [
+        {
+          "grade": 10,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 120,
+              "h": 44,
+              "left": 30.71875,
+              "right": 150.71875
+            },
+            {
+              "id": "bookChapter",
+              "w": 574.5625,
+              "h": 44,
+              "left": 162.71875,
+              "right": 737.28125
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 47.71875,
+              "right": 91.71875
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 101.71875,
+              "right": 165.71875
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 221.71875,
+              "right": 265.71875
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 275.71875,
+              "right": 319.71875
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 431.421875,
+              "right": 475.421875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 533.421875,
+              "right": 577.421875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 585.421875,
+              "right": 668.28125
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 676.28125,
+              "right": 720.28125
+            }
+          ]
+        },
+        {
+          "grade": 11,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 120,
+              "h": 44,
+              "left": 30.71875,
+              "right": 150.71875
+            },
+            {
+              "id": "bookChapter",
+              "w": 574.5625,
+              "h": 44,
+              "left": 162.71875,
+              "right": 737.28125
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 47.71875,
+              "right": 91.71875
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 101.71875,
+              "right": 165.71875
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 221.71875,
+              "right": 265.71875
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 275.71875,
+              "right": 319.71875
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 431.421875,
+              "right": 475.421875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 533.421875,
+              "right": 577.421875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 585.421875,
+              "right": 668.28125
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 676.28125,
+              "right": 720.28125
+            }
+          ]
+        },
+        {
+          "grade": 12,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 120,
+              "h": 44,
+              "left": 30.71875,
+              "right": 150.71875
+            },
+            {
+              "id": "bookChapter",
+              "w": 574.5625,
+              "h": 44,
+              "left": 162.71875,
+              "right": 737.28125
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 47.71875,
+              "right": 91.71875
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 101.71875,
+              "right": 165.71875
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 221.71875,
+              "right": 265.71875
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 275.71875,
+              "right": 319.71875
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 431.421875,
+              "right": 475.421875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 533.421875,
+              "right": 577.421875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 585.421875,
+              "right": 668.28125
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 676.28125,
+              "right": 720.28125
+            }
+          ]
+        }
+      ],
+      "stickyToolbarTop": 72.09375,
+      "status": "PASS"
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "shelfHeight": 406.5,
+      "disabledPageStyle": {
+        "background": "rgb(56, 56, 56)",
+        "color": "rgb(180, 180, 180)"
+      },
+      "grades": [
+        {
+          "grade": 10,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 120,
+              "h": 44,
+              "left": 30.71875,
+              "right": 150.71875
+            },
+            {
+              "id": "bookChapter",
+              "w": 574.5625,
+              "h": 44,
+              "left": 162.71875,
+              "right": 737.28125
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 47.71875,
+              "right": 91.71875
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 101.71875,
+              "right": 165.71875
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 221.71875,
+              "right": 265.71875
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 275.71875,
+              "right": 319.71875
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 431.421875,
+              "right": 475.421875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 533.421875,
+              "right": 577.421875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 585.421875,
+              "right": 668.28125
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 676.28125,
+              "right": 720.28125
+            }
+          ]
+        },
+        {
+          "grade": 11,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 120,
+              "h": 44,
+              "left": 30.71875,
+              "right": 150.71875
+            },
+            {
+              "id": "bookChapter",
+              "w": 574.5625,
+              "h": 44,
+              "left": 162.71875,
+              "right": 737.28125
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 47.71875,
+              "right": 91.71875
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 101.71875,
+              "right": 165.71875
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 221.71875,
+              "right": 265.71875
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 275.71875,
+              "right": 319.71875
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 431.421875,
+              "right": 475.421875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 533.421875,
+              "right": 577.421875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 585.421875,
+              "right": 668.28125
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 676.28125,
+              "right": 720.28125
+            }
+          ]
+        },
+        {
+          "grade": 12,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 120,
+              "h": 44,
+              "left": 30.71875,
+              "right": 150.71875
+            },
+            {
+              "id": "bookChapter",
+              "w": 574.5625,
+              "h": 44,
+              "left": 162.71875,
+              "right": 737.28125
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 47.71875,
+              "right": 91.71875
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 101.71875,
+              "right": 165.71875
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 221.71875,
+              "right": 265.71875
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 275.71875,
+              "right": 319.71875
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 431.421875,
+              "right": 475.421875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 533.421875,
+              "right": 577.421875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 585.421875,
+              "right": 668.28125
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 676.28125,
+              "right": 720.28125
+            }
+          ]
+        }
+      ],
+      "stickyToolbarTop": 72.09375,
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "shelfHeight": 491.296875,
+      "disabledPageStyle": {
+        "background": "rgb(242, 243, 245)",
+        "color": "rgb(86, 96, 108)"
+      },
+      "grades": [
+        {
+          "grade": 10,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 110,
+              "h": 44,
+              "left": 649.40625,
+              "right": 759.40625
+            },
+            {
+              "id": "bookChapter",
+              "w": 571,
+              "h": 44,
+              "left": 771.40625,
+              "right": 1342.40625
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 114.59375,
+              "right": 158.59375
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 168.59375,
+              "right": 232.59375
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 288.59375,
+              "right": 332.59375
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 342.59375,
+              "right": 386.59375
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 1036.546875,
+              "right": 1080.546875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 1138.546875,
+              "right": 1182.546875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 1190.546875,
+              "right": 1273.40625
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 1281.40625,
+              "right": 1325.40625
+            }
+          ]
+        },
+        {
+          "grade": 11,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 110,
+              "h": 44,
+              "left": 581.40625,
+              "right": 691.40625
+            },
+            {
+              "id": "bookChapter",
+              "w": 639,
+              "h": 44,
+              "left": 703.40625,
+              "right": 1342.40625
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 114.59375,
+              "right": 158.59375
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 168.59375,
+              "right": 232.59375
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 288.59375,
+              "right": 332.59375
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 342.59375,
+              "right": 386.59375
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 1036.546875,
+              "right": 1080.546875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 1138.546875,
+              "right": 1182.546875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 1190.546875,
+              "right": 1273.40625
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 1281.40625,
+              "right": 1325.40625
+            }
+          ]
+        },
+        {
+          "grade": 12,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 110,
+              "h": 44,
+              "left": 486.40625,
+              "right": 596.40625
+            },
+            {
+              "id": "bookChapter",
+              "w": 734,
+              "h": 44,
+              "left": 608.40625,
+              "right": 1342.40625
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 114.59375,
+              "right": 158.59375
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 168.59375,
+              "right": 232.59375
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 288.59375,
+              "right": 332.59375
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 342.59375,
+              "right": 386.59375
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 1036.546875,
+              "right": 1080.546875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 1138.546875,
+              "right": 1182.546875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 1190.546875,
+              "right": 1273.40625
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 1281.40625,
+              "right": 1325.40625
+            }
+          ]
+        }
+      ],
+      "stickyToolbarTop": 72.59375,
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "shelfHeight": 491.296875,
+      "disabledPageStyle": {
+        "background": "rgb(56, 56, 56)",
+        "color": "rgb(180, 180, 180)"
+      },
+      "grades": [
+        {
+          "grade": 10,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 110,
+              "h": 44,
+              "left": 649.40625,
+              "right": 759.40625
+            },
+            {
+              "id": "bookChapter",
+              "w": 571,
+              "h": 44,
+              "left": 771.40625,
+              "right": 1342.40625
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 114.59375,
+              "right": 158.59375
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 168.59375,
+              "right": 232.59375
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 288.59375,
+              "right": 332.59375
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 342.59375,
+              "right": 386.59375
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 1036.546875,
+              "right": 1080.546875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 1138.546875,
+              "right": 1182.546875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 1190.546875,
+              "right": 1273.40625
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 1281.40625,
+              "right": 1325.40625
+            }
+          ]
+        },
+        {
+          "grade": 11,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 110,
+              "h": 44,
+              "left": 581.40625,
+              "right": 691.40625
+            },
+            {
+              "id": "bookChapter",
+              "w": 639,
+              "h": 44,
+              "left": 703.40625,
+              "right": 1342.40625
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 114.59375,
+              "right": 158.59375
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 168.59375,
+              "right": 232.59375
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 288.59375,
+              "right": 332.59375
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 342.59375,
+              "right": 386.59375
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 1036.546875,
+              "right": 1080.546875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 1138.546875,
+              "right": 1182.546875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 1190.546875,
+              "right": 1273.40625
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 1281.40625,
+              "right": 1325.40625
+            }
+          ]
+        },
+        {
+          "grade": 12,
+          "page": 39,
+          "zoom": "125%",
+          "controls": [
+            {
+              "id": "bookGrade",
+              "w": 110,
+              "h": 44,
+              "left": 486.40625,
+              "right": 596.40625
+            },
+            {
+              "id": "bookChapter",
+              "w": 734,
+              "h": 44,
+              "left": 608.40625,
+              "right": 1342.40625
+            },
+            {
+              "id": "bookPrevious",
+              "w": 44,
+              "h": 44,
+              "left": 114.59375,
+              "right": 158.59375
+            },
+            {
+              "id": "bookPage",
+              "w": 64,
+              "h": 44,
+              "left": 168.59375,
+              "right": 232.59375
+            },
+            {
+              "id": "",
+              "w": 44,
+              "h": 44,
+              "left": 288.59375,
+              "right": 332.59375
+            },
+            {
+              "id": "bookNext",
+              "w": 44,
+              "h": 44,
+              "left": 342.59375,
+              "right": 386.59375
+            },
+            {
+              "id": "zoomOut",
+              "w": 44,
+              "h": 44,
+              "left": 1036.546875,
+              "right": 1080.546875
+            },
+            {
+              "id": "zoomIn",
+              "w": 44,
+              "h": 44,
+              "left": 1138.546875,
+              "right": 1182.546875
+            },
+            {
+              "id": "spreadMode",
+              "w": 82.859375,
+              "h": 44,
+              "left": 1190.546875,
+              "right": 1273.40625
+            },
+            {
+              "id": "bookFullscreen",
+              "w": 44,
+              "h": 44,
+              "left": 1281.40625,
+              "right": 1325.40625
+            }
+          ]
+        }
+      ],
+      "stickyToolbarTop": 72.59375,
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "limits": [
+    "Chromium viewport emulation; not physical iPhone/Safari.",
+    "No source scans or book state implementation changed."
+  ],
+  "sourceStable": true,
+  "passed": true
+}

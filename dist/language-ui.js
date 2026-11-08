@@ -153,7 +153,7 @@ for(const [vi,en] of [
 
 // Shared quantity names must not inherit one experiment's parameter unit.
 // Each measurement/parameter renders its own catalog unit beside the value.
-pair('Thời gian & tùy chọn','Time and options');pair('Liên hệ','Linked view');pair('Vận tốc','Velocity');pair('Gia tốc','Acceleration');pair('Li độ','Displacement');
+pair('Mô hình','Model');pair('Thời gian & tùy chọn','Time and options');pair('Liên hệ','Linked view');pair('Vận tốc','Velocity');pair('Gia tốc','Acceleration');pair('Li độ','Displacement');
 
 // Coordinate orientation guidance is interface copy, never a metric ruler.
 pair('Trục định hướng · không dùng để đọc số đo','Orientation axes · not for taking measurements');
