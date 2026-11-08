@@ -1,0 +1,116 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "loadingContrast": {
+        "fg": "rgb(236, 236, 236)",
+        "bg": "rgb(48, 48, 48)",
+        "ratio": 11.17187502521273
+      },
+      "errorContrast": [
+        {
+          "sel": ".reading-selects label",
+          "fg": "rgb(180, 180, 180)",
+          "bg": "rgb(33, 33, 33)",
+          "ratio": 7.766026072853823
+        },
+        {
+          "sel": ".reading-selects label",
+          "fg": "rgb(180, 180, 180)",
+          "bg": "rgb(33, 33, 33)",
+          "ratio": 7.766026072853823
+        },
+        {
+          "sel": ".book-error",
+          "fg": "rgb(255, 198, 190)",
+          "bg": "rgb(62, 41, 40)",
+          "ratio": 9.064017087750535
+        },
+        {
+          "sel": "#retryBook",
+          "fg": "rgb(236, 236, 236)",
+          "bg": "rgb(56, 56, 56)",
+          "ratio": 9.925587703313312
+        },
+        {
+          "sel": "#bookPage",
+          "fg": "rgb(236, 236, 236)",
+          "bg": "rgb(48, 48, 48)",
+          "ratio": 11.17187502521273
+        },
+        {
+          "sel": "#pageTotal",
+          "fg": "rgb(180, 180, 180)",
+          "bg": "rgb(47, 47, 47)",
+          "ratio": 6.457179609992402
+        }
+      ],
+      "retryPassed": true,
+      "fullscreenBackground": "rgb(33, 33, 33)",
+      "scanUnfiltered": {
+        "filter": "none",
+        "src": "http://127.0.0.1:4173/books/11/039.webp",
+        "w": 1131
+      },
+      "pageZoomPreserved": true
+    },
+    {
+      "width": 1440,
+      "loadingContrast": {
+        "fg": "rgb(236, 236, 236)",
+        "bg": "rgb(48, 48, 48)",
+        "ratio": 11.17187502521273
+      },
+      "errorContrast": [
+        {
+          "sel": ".reading-selects label",
+          "fg": "rgb(180, 180, 180)",
+          "bg": "rgb(33, 33, 33)",
+          "ratio": 7.766026072853823
+        },
+        {
+          "sel": ".reading-selects label",
+          "fg": "rgb(180, 180, 180)",
+          "bg": "rgb(33, 33, 33)",
+          "ratio": 7.766026072853823
+        },
+        {
+          "sel": ".book-error",
+          "fg": "rgb(255, 198, 190)",
+          "bg": "rgb(62, 41, 40)",
+          "ratio": 9.064017087750535
+        },
+        {
+          "sel": "#retryBook",
+          "fg": "rgb(236, 236, 236)",
+          "bg": "rgb(56, 56, 56)",
+          "ratio": 9.925587703313312
+        },
+        {
+          "sel": "#bookPage",
+          "fg": "rgb(236, 236, 236)",
+          "bg": "rgb(48, 48, 48)",
+          "ratio": 11.17187502521273
+        },
+        {
+          "sel": "#pageTotal",
+          "fg": "rgb(180, 180, 180)",
+          "bg": "rgb(47, 47, 47)",
+          "ratio": 6.457179609992402
+        }
+      ],
+      "retryPassed": true,
+      "fullscreenBackground": "rgb(33, 33, 33)",
+      "scanUnfiltered": {
+        "filter": "none",
+        "src": "http://127.0.0.1:4173/books/11/039.webp",
+        "w": 1131
+      },
+      "pageZoomPreserved": true
+    }
+  ],
+  "failures": [],
+  "jsErrors": [],
+  "sourceStable": true,
+  "passed": true
+}
