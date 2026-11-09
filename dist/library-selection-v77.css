@@ -1,0 +1,19 @@
+/* Curated entry points use the existing type, spacing and neutral palette. */
+#library .collection-switch{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+#library .collection-switch button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:10px 16px;border:1px solid var(--catalog-line);border-radius:10px;background:var(--catalog-surface);color:var(--catalog-text);font:inherit;font-size:14px;line-height:1.5}
+#library .collection-switch button[aria-pressed=true]{background:var(--catalog-selected);color:var(--catalog-selected-text);border-color:var(--catalog-selected)}
+#library .collection-switch button>span{font-size:12px;opacity:.8;font-variant-numeric:tabular-nums}
+#library .collection-switch button:focus-visible,.selection-notice a:focus-visible{outline:2px solid var(--ux-focus);outline-offset:3px}
+#library .collection-description{margin:0 0 22px;max-width:75ch;font-size:14px;line-height:1.7;color:var(--catalog-muted)}
+#library .card-body .card-limitation{font-size:12px;padding-top:10px;border-top:1px solid var(--catalog-line)}
+.lab .selection-notice{padding:14px 18px;margin:16px 0;border:1px solid var(--ux-line);border-left:3px solid var(--ux-muted);border-radius:10px;background:var(--ux-surface);color:var(--ux-ink);font-size:14px;line-height:1.7}
+.lab .selection-notice p{margin:4px 0;max-width:85ch}
+.lab .selection-notice a{display:inline-flex;align-items:center;min-height:44px;padding:6px 0;margin-right:24px;color:inherit;text-underline-offset:4px;overflow-wrap:anywhere}
+.lab .selection-notice--supplementary{display:flex;align-items:center;flex-wrap:wrap;gap:0 16px;padding:4px 14px}
+.lab .selection-notice--supplementary a{margin:0;font-size:13px}
+@media(max-width:620px){
+ #library .collection-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ #library .collection-switch button{padding:10px 8px;font-size:12px;gap:6px}
+ .lab .selection-notice{padding:12px 14px;font-size:13px}
+ .lab .selection-notice a{margin-right:12px}
+}

@@ -49,7 +49,7 @@ export function relationPaths(points,project,discrete=false){
  }
  return{path,circles};
 }
-export function updateObservation(host,group,id,locale='vi-VN'){
+export function updateObservation(host,group,id,locale='vi-VN',{initialOpen=true}={}){
  if(!host)return;
  const optics=group?.userData?.opticsObservation;
  if(optics?.id===id){updateOpticsObservation(host,optics,locale);return;}
@@ -61,7 +61,7 @@ export function updateObservation(host,group,id,locale='vi-VN'){
  const project=p=>[left+(p[0]-data.xmin)/(data.xmax-data.xmin)*(width-left-right),height-bottom-(p[1]-data.ymin)/(data.ymax-data.ymin)*(height-top-bottom)];
  const signature=JSON.stringify([id,locale,width,data.xmin,data.xmax,data.ymin,data.ymax,data.xLabel,data.yLabel,data.title]);
  if(!old||old.signature!==signature||old.points!==data.points){
-  const disclosure=host.querySelector('.observation-details'),open=old&&disclosure?disclosure.hasAttribute('open'):true;
+  const disclosure=host.querySelector('.observation-details'),open=old&&disclosure?disclosure.hasAttribute('open'):initialOpen;
   const valuesOpen=old?host.querySelector('.observation-values')?.open===true:false;
   const paths=relationPaths(data.points,project,data.kind==='discrete-points'),zero=project([data.xmin,0])[1];
   const rows=(data.points||[]).map(p=>Array.isArray(p)?p:p?[p.x,p.y]:null).filter(p=>p&&p.every(finite));

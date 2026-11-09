@@ -1,0 +1,134 @@
+{
+  "cases": [
+    {
+      "name": "collection",
+      "width": 375,
+      "theme": "light",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 375,
+      "theme": "dark",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 414,
+      "theme": "light",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 414,
+      "theme": "dark",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 430,
+      "theme": "light",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 430,
+      "theme": "dark",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 1024,
+      "theme": "light",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 1024,
+      "theme": "dark",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 1920,
+      "theme": "light",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    },
+    {
+      "name": "collection",
+      "width": 1920,
+      "theme": "dark",
+      "main": 40,
+      "archive": 260,
+      "localeRoundTrip": true,
+      "firstImageLoaded": true,
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "httpErrors": [],
+  "limits": [
+    "Chromium/SwiftShader viewport emulation, not physical Safari/iPhone/Android or a virtual keyboard.",
+    "No teacher acceptance, full scientific-model certification, or AI inference test.",
+    "The main collection is a reversible editorial selection; supplementary does not mean scientifically invalid."
+  ],
+  "sourceStart": {
+    "dist/app.js": "a8753f1741a2fc0da52b3ff1d01614aef6b9aa04cd0c5e763d21aeae2eb2544c",
+    "dist/views.js": "dff0b7f3db1267bacfc6f06e70697e3e663474fe1cf84c584d36c17e7944fb14",
+    "dist/library-selection-v77.js": "ee473dcd8dde022f3adb7826d227c7589b671fd1516a3763323afd0ef50cb830",
+    "dist/observation-view.js": "bc9adff9b7d555c309878734fdfe7e7c63977e361803d45e73da5a45718723a3",
+    "dist/language-ui.js": "cc5182425536ae59e5473c3e4ec911eeed0ea6a9af7a62251be301af877c4194",
+    "dist/library-selection-v77.css": "39bf63408b2e5fa7d487b99f871b44155a048245b3422fc0398c8cef0db50b37",
+    "dist/boot.js": "32eb036ce119ccfd4ed14bd99493b1d72b517f9f1095d21c96a28ab1a002dfa4",
+    "dist/index.html": "e0ef8359ac3b741edb370ae991591925543d7583d33e94fb0b78cf29ff1c67c7"
+  },
+  "browserVersion": "154.0.8037.57",
+  "sourceEnd": {
+    "dist/app.js": "a8753f1741a2fc0da52b3ff1d01614aef6b9aa04cd0c5e763d21aeae2eb2544c",
+    "dist/views.js": "dff0b7f3db1267bacfc6f06e70697e3e663474fe1cf84c584d36c17e7944fb14",
+    "dist/library-selection-v77.js": "ee473dcd8dde022f3adb7826d227c7589b671fd1516a3763323afd0ef50cb830",
+    "dist/observation-view.js": "bc9adff9b7d555c309878734fdfe7e7c63977e361803d45e73da5a45718723a3",
+    "dist/language-ui.js": "cc5182425536ae59e5473c3e4ec911eeed0ea6a9af7a62251be301af877c4194",
+    "dist/library-selection-v77.css": "39bf63408b2e5fa7d487b99f871b44155a048245b3422fc0398c8cef0db50b37",
+    "dist/boot.js": "32eb036ce119ccfd4ed14bd99493b1d72b517f9f1095d21c96a28ab1a002dfa4",
+    "dist/index.html": "e0ef8359ac3b741edb370ae991591925543d7583d33e94fb0b78cf29ff1c67c7"
+  },
+  "sourceStable": true,
+  "passed": true
+}

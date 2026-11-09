@@ -1,3 +1,4 @@
+import {selectionCopy,mainExperimentIds} from './library-selection-v77.js?v=77';
 import {i18n,dictionaries} from './i18n.js?v=54';
 import {mountLanguagePill} from './language-pill.js?v=65';
 import {experiments} from './experiments.js?v=59';
@@ -7,6 +8,9 @@ import {physicsGlossary} from './locales/glossary.js?v=54';
 
 const translations=new Map();
 function pair(vi,en){if(vi&&en&&vi!==en)translations.set(vi,en);}
+for(const [vi,en] of selectionCopy)pair(vi,en);
+pair(mainExperimentIds.length+' thí nghiệm chính · Vật lí lớp 10–12',mainExperimentIds.length+' main experiments · Physics grades 10–12');
+pair('Bài nhập môn liên quan:','Related introductory investigation:');
 for(const group of Object.values(messagePairs))for(const [vi,en] of Object.values(group))pair(vi,en);
 for(const term of physicsGlossary)pair(term.vi,term.en);
 for(const id of Object.keys(dictionaries['vi-VN'].experiments)){
@@ -167,7 +171,7 @@ export function translateShort(source){
  if(translations.has(value))return source.replace(value,translations.get(value));
  if(/^Lớp (10|11|12)$/.test(value))return source.replace(value,'Grade '+value.slice(4));
  if(/^Lớp (10|11|12) · Mở rộng$/.test(value))return source.replace(value,'Grade '+value.slice(4,6)+' · Advanced');
- if(/^\d+ thí nghiệm$/.test(value))return source.replace(value,value.replace('thí nghiệm','experiments'));
+ if(/^\d+ thí nghiệm(?: · \d+–\d+)?$/.test(value))return source.replace(value,value.replace('thí nghiệm','experiments'));
  if(/^← Thư viện$/.test(value))return source.replace(value,'← Library');
  return source;
 }
@@ -198,7 +202,7 @@ function translateText(node,english){
 function translateElement(element,english){
  if(!element||element.nodeType!==1)return;
  if(!eligible(element))return;
- for(const attr of ['aria-label','title','placeholder','alt']){
+ for(const attr of ['aria-label','title','placeholder','alt',...(element.tagName==='OPTGROUP'?['label']:[])]){
   if(!element.hasAttribute(attr))continue;
   const name='data-quanh-original-'+attr;
   const source=element.getAttribute(name)||element.getAttribute(attr);
@@ -224,7 +228,7 @@ function syncLocalePage(){
  const english=getLocale()==='en-US';
  document.documentElement.lang=english?'en-US':'vi';
  const labId=(location.hash.match(/^#lab\/([^?]+)/)||[])[1];const current=experiments.find(e=>e.id===labId);document.title=english?(current?englishStudy(current).title+' · Quanh Lab':'Quanh Lab · Experiment library'):(current?current.shortTitle+' · Quanh Lab':'Quanh Lab · Thư viện thí nghiệm');
- const description=document.querySelector('meta[name="description"]');if(description)description.content=current?(english?englishStudy(current).explanation:current.description):(english?'Explore 300 interactive high-school physics experiments. Adjust parameters, record measurements, analyze graphs and read Vietnamese textbooks.':'300 thí nghiệm Vật lí THPT tương tác. Điều chỉnh tham số, ghi số liệu, phân tích đồ thị và đọc sách Vật lí lớp 10–12.');
+ const description=document.querySelector('meta[name="description"]');if(description)description.content=current?(english?englishStudy(current).explanation:current.description):(english?'Start with 40 main high-school physics investigations. Adjust parameters, record measurements and explore specialized models in the supplementary collection.':'Bắt đầu với 40 thí nghiệm Vật lí chính. Điều chỉnh tham số, ghi số liệu và khám phá các mô hình chuyên đề trong kho bổ trợ.');
  const lab=document.querySelector('.lab');
  let guidance=lab?.querySelector('.language-guidance');
  if(!english){guidance?.remove();return;}
