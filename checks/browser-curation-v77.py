@@ -182,7 +182,7 @@ with sync_playwright() as p:
             found = set()
             pages = (expected + 23) // 24
             for n in range(1, pages + 1):
-                
+
                 if n > 1:
                     page.locator('#pagination > button').last.click()
                 found.update(page.locator('#cards [data-thumb]').evaluate_all('es=>es.map(e=>e.dataset.thumb)'))
