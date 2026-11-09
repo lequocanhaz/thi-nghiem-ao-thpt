@@ -24,6 +24,7 @@ for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','
 // Entry changes are cache versions plus the explicitly scoped visual-settings stylesheet; startup/banner bytes stay frozen.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
  let content=read(name).toString();
+ content=content.replace(/<link rel="stylesheet" href="library-selection-v77\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="observation-theme-v75\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="catalog-theme-v71\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="(?:product-ux-v76|books-ux-v76)\.css\?v=\d+">/g,'');
@@ -32,6 +33,12 @@ for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
  content=content.replace(/<link rel="stylesheet" href="shm-circle\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="lab-extras-v67\.css(?:\?v=\d+)?">/g,'').replace(/<link rel="stylesheet" href="studio-v69\.css\?v=\d+">/g,'').replace(/<script type="module" src="appearance-v67\.js(?:\?v=\d+)?"><\/script>/g,'');
  if(name==='dist/index.html'){
+  // v77: owner requests fewer primary investigations. Normalize only reviewed
+  // catalog metadata/startup copy; the protected media and banner still hash.
+  content=content.replaceAll('Quanh Lab – bắt đầu với 40 thí nghiệm Vật lí chính: quan sát mô hình, điều chỉnh tham số, ghi số liệu, vẽ đồ thị và đọc sách Vật lí 10–12.','Quanh Lab – hệ thống thí nghiệm Vật lí ảo dành cho học sinh, giáo viên THPT với 300 thí nghiệm tương tác 2D/3D, đo đạc, vẽ đồ thị và sách Vật lí 10–12.')
+   .replace('Quanh Lab · Thí nghiệm Vật lí THPT','Quanh Lab · 300 thí nghiệm Vật lí THPT')
+   .replace('40 thí nghiệm chính cho Vật lí lớp 10–12. Khám phá hiện tượng, điều chỉnh dụng cụ và thu thập số liệu.','300 thí nghiệm Vật lí lớp 10–12. Khám phá hiện tượng, điều chỉnh dụng cụ và thu thập số liệu.');
+
   assert.match(content,/<link rel="canonical" href="https:\/\/physicslab\.tech\/">/,'Canonical URL must use the custom domain');
   assert.match(content,/<meta property="og:url" content="https:\/\/physicslab\.tech\/">/,'Social URL must use the custom domain');
   // Normalise only the approved custom-domain migration while preserving the frozen banner baseline.

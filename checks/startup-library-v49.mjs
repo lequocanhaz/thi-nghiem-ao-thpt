@@ -14,7 +14,7 @@ assert.ok(document.querySelector('dialog[aria-labelledby="dialogTitle"]'));
 assert.ok(document.querySelector('#toast[role="status"][aria-live="polite"]'));
 for(const node of document.querySelectorAll('.brand,.footer-brand'))assert.equal(node.getAttribute('href'),'./');
 for(const name of ['og:title','og:description','og:image'])assert.ok(document.querySelector(`meta[property="${name}"]`).content);
-const seoDescription="Quanh Lab – hệ thống thí nghiệm Vật lí ảo dành cho học sinh, giáo viên THPT với 300 thí nghiệm tương tác 2D/3D, đo đạc, vẽ đồ thị và sách Vật lí 10–12.";
+const seoDescription="Quanh Lab – bắt đầu với 40 thí nghiệm Vật lí chính: quan sát mô hình, điều chỉnh tham số, ghi số liệu, vẽ đồ thị và đọc sách Vật lí 10–12.";
 assert.equal(document.querySelector('meta[name="description"]').getAttribute('content'),seoDescription,'Google search description');
 assert.equal(document.querySelector('meta[property="og:description"]').getAttribute('content'),seoDescription,'Shared preview description');
 assert.equal(document.querySelector('meta[name="twitter:description"]').getAttribute('content'),seoDescription,'X preview description');
@@ -40,7 +40,7 @@ const home=list=>parseHTML(homeMarkup(list,{favorites:[],recent:[],progress:{}},
 const currentHome=home(experiments);
 assert.equal(currentHome.querySelector('#subjectFilter'),null,'One subject does not need a selector');
 assert.equal(currentHome.querySelector('#bookSeriesFilter'),null,'Do not offer unverified textbook mappings');
-assert.match(currentHome.querySelector('#catalogScope').textContent,/300 thí nghiệm Vật lí · Lớp 10, 11, 12/);
+assert.match(currentHome.querySelector('#catalogScope').textContent,/40 thí nghiệm chính · Lớp 10, 11, 12/);
 const futureCatalog=[...experiments,{...experiments[0],id:'chemistry-fixture',subject:'chemistry',bookSeries:['ket-noi']},{...experiments[0],id:'biology-fixture',subject:'biology',bookSeries:['canh-dieu']}];
 const futureHome=home(futureCatalog);
 for(const [id,key] of [['subjectFilter','subject'],['bookSeriesFilter','series']]){
