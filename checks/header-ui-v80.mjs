@@ -1,0 +1,41 @@
+// DOM contract only; native keyboard/layout is covered in browser-visual-v80.py.
+import assert from 'node:assert/strict';
+import {parseHTML} from 'linkedom';
+import {installHeaderUI} from '../dist/header-ui-v80.js';
+import {i18n} from '../dist/i18n.js?v=54';
+const {document,window:domWindow}=parseHTML('<!doctype html><html><body><header class="header"><a class="brand" href="./">Quanh Lab</a><nav><a href="#library">Thư viện</a><a href="books.html">Sách</a><button id="openAssistant"><svg></svg>Trợ lý AI</button><button data-action="guide"><span>?</span><span>Hướng dẫn</span></button><button data-action="settings">Cài đặt</button></nav></header><main><h1>Thí nghiệm</h1></main></body></html>');
+Object.defineProperty(domWindow.HTMLElement.prototype,'open',{configurable:true,get(){return this.hasAttribute('open')},set(value){this.toggleAttribute('open',!!value)}});
+const focus=[];domWindow.HTMLElement.prototype.focus=function(){focus.push(this);};
+const refs=Object.fromEntries(['#openAssistant','[data-action=guide]','[data-action=settings]'].map(selector=>[selector,document.querySelector(selector)]));
+const counts={guide:0,settings:0,theme:0,locale:0};
+refs['[data-action=guide]'].addEventListener('click',()=>counts.guide++);refs['[data-action=settings]'].addEventListener('click',()=>counts.settings++);
+let observerCallbacks=0;const mediaListeners=new Set(),windowListeners=new Map();
+const media={matches:true,addEventListener:(_,fn)=>mediaListeners.add(fn),removeEventListener:(_,fn)=>mediaListeners.delete(fn)};
+class Observer{constructor(callback){// LinkeDOM incorrectly emits attributes for childList-only observations; match native filtering.
+this.observer=new domWindow.MutationObserver(records=>{records=records.filter(record=>record.type==='childList');if(!records.length)return;observerCallbacks++;assert.ok(observerCallbacks<30,'Header observer entered an unbounded mutation cycle');callback(records);});}observe(...args){this.observer.observe(...args);}disconnect(){this.observer.disconnect();}}
+const window={MutationObserver:Observer,matchMedia:()=>media,location:{hash:'#library'},addEventListener:(name,fn)=>windowListeners.set(name,fn),removeEventListener:name=>windowListeners.delete(name)};
+const flush=()=>new Promise(setImmediate);
+const installed=installHeaderUI({document,window}),header=document.querySelector('header'),nav=header.querySelector('nav');
+assert.equal(header.dataset.sharedHeader,'pending');assert.equal(document.querySelector('#headerUtilities'),null,'Wait until asynchronously mounted controls exist');
+const account=document.createElement('button');account.id='openAccount';account.textContent='Đăng nhập';nav.append(account);
+await flush();assert.equal(document.querySelector('#headerUtilities'),null);
+const theme=document.createElement('button');theme.id='appearanceToggle';theme.setAttribute('aria-label','Chế độ ban đêm');theme.addEventListener('click',()=>{counts.theme++;theme.setAttribute('aria-label','Chế độ ban ngày');});
+const language=document.createElement('div');language.className='ql-language-switch';const locale=document.createElement('button');locale.dataset.locale='en-US';locale.textContent='EN';locale.addEventListener('click',()=>{counts.locale++;i18n.setLocale('en-US');});language.append(locale);nav.append(theme,language);
+await flush();await flush();
+assert.equal(header.dataset.sharedHeader,'ready');const menu=document.querySelector('#headerUtilities'),panel=document.querySelector('#headerUtilityPanel'),summary=menu.querySelector('summary');
+assert.deepEqual([...nav.children].map(node=>node.dataset.headerItem),['account','utilities','library','books','ai']);
+assert.deepEqual([...panel.children],[language,refs['[data-action=guide]'],refs['[data-action=settings]'],theme],'Utilities reuse the original mounted nodes');
+for(const [selector,node]of Object.entries(refs))assert.equal(document.querySelector(selector),node);
+assert.equal(document.querySelector('#openAccount'),account);
+menu.open=true;locale.click();await flush();assert.equal(counts.locale,1);assert.match(nav.querySelector('a[href="#library"]').textContent,/Library/);assert.match(refs['#openAssistant'].textContent,/AI assistant/);
+menu.open=true;theme.click();await flush();assert.equal(counts.theme,1);assert.equal(theme.dataset.menuLabel,'Chế độ ban ngày');
+menu.open=true;refs['[data-action=settings]'].click();assert.equal(counts.settings,1);assert.equal(menu.open,false,'Settings closes utilities while retaining its original handler');
+menu.open=true;refs['[data-action=guide]'].click();assert.equal(counts.guide,1);assert.equal(menu.open,false);
+menu.open=true;const escape=new domWindow.Event('keydown',{bubbles:true,cancelable:true});Object.defineProperty(escape,'key',{value:'Escape'});theme.dispatchEvent(escape);assert.equal(menu.open,false);assert.equal(focus.at(-1),summary);
+menu.open=true;document.querySelector('main').click();assert.equal(menu.open,false,'Click outside dismisses the menu');
+media.matches=false;for(const listener of mediaListeners)listener();await flush();assert.deepEqual([...nav.children].map(node=>node.dataset.headerItem),['library','books','ai','account','utilities']);
+window.location.hash='#lab/ohm';windowListeners.get('hashchange')();await flush();assert.equal(nav.querySelector('a[href="#library"]').getAttribute('aria-current'),'location');
+assert.equal(installHeaderUI({document,window}),null,'Repeated installation cannot duplicate controls');assert.equal(document.querySelectorAll('#headerUtilities').length,1);
+const settled=observerCallbacks;await flush();await flush();assert.equal(observerCallbacks,settled,'Header settles after rearrangement instead of observing its own writes forever');
+installed.destroy();assert.equal(mediaListeners.size,0);assert.equal(windowListeners.size,0);i18n.setLocale('vi-VN');
+console.log('PASS header v80 DOM: asynchronous mounts, same-node listeners, mobile/desktop DOM order, VI/EN, utility Escape/outside/actions, active lab destination, idempotence, observer settles and cleanup. Native browser layout/keyboard tested separately.');

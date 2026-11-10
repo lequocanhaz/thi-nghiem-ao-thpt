@@ -1,0 +1,95 @@
+/* Instrument workspace: one model shell, quiet controls and clear reading order. */
+.lab{--instrument-line:var(--ux-line,#dce0e6);--instrument-quiet:var(--ux-muted,#59616c);--instrument-surface:var(--ux-canvas,#fff);--instrument-accent:#245bd7;--instrument-tint:#eef3ff}
+html[data-appearance=dark] .lab{--instrument-accent:#a8c7fa;--instrument-tint:#303c53}
+.lab .lab-breadcrumb{font-size:13px;margin-bottom:16px}
+.lab .lab-topic{background:transparent;border:0;padding-inline:0;color:var(--instrument-quiet)}
+.lab .lab-heading h1{font-size:clamp(26px,2.7vw,36px);line-height:1.25;letter-spacing:-.035em}
+.lab .lab-heading .eyebrow{font-size:12px;letter-spacing:.035em;font-weight:600;color:var(--instrument-quiet)}
+.lab .lab-intro{margin:10px 0 18px}
+.lab .lab-intro p{max-width:68ch;line-height:1.65}
+.lab .workspace-toolbar{margin-bottom:12px}
+.lab .workspace-toolbar button[aria-expanded=true]{border-color:var(--instrument-line);background:transparent;color:var(--ux-ink)}
+.lab .stage-shell{border:1px solid var(--instrument-line);border-radius:14px;box-shadow:none}
+.lab .stage-top{background:var(--instrument-surface);padding:8px 14px;border-bottom:1px solid var(--instrument-line)}
+.lab .projection-switch{border:0;background:var(--ux-surface);border-radius:8px;padding:3px}
+.lab .projection-switch button{border-radius:6px;box-shadow:none}
+.lab .projection-switch button[aria-pressed=true]{background:var(--instrument-surface);box-shadow:0 1px 3px #00000014}
+.lab .stage-tools :is(.view-menu>summary,.visual-settings>summary){color:var(--instrument-quiet);font-weight:500}
+.lab .transport{background:var(--instrument-surface);border-top:0;border-bottom:1px solid var(--instrument-line);gap:8px;padding:12px 14px}
+.lab .transport>.button{font-weight:600;letter-spacing:-.01em}
+.lab .transport #play{min-width:100px;background:#245bd7!important;color:#fff!important;border-color:#245bd7!important}
+.lab .transport [data-action=record]{background:var(--instrument-tint)!important;color:var(--instrument-accent)!important;border-color:var(--instrument-accent)!important}
+.lab .transport .playback-options-body>:is(button,select){background:transparent;color:var(--ux-ink);border-color:var(--instrument-line);box-shadow:none}
+.lab .space-controls{background:var(--instrument-surface);border-block:0;padding:8px 12px;gap:8px}
+.lab .space-controls button{background:transparent;border-color:var(--instrument-line);font-size:12px;box-shadow:none}
+.lab .teaching-tools{background:var(--instrument-surface);border-top:1px solid var(--instrument-line)}
+.lab .teaching-tools>button,.lab .teaching-guide>summary{border-color:transparent;background:transparent;color:var(--instrument-quiet);box-shadow:none}
+.lab .controls{background:transparent;border:0;border-radius:0;box-shadow:none}
+.lab .control-heading{background:transparent;border-bottom:1px solid var(--instrument-line);padding:8px 16px 12px}
+.lab .control-heading h2{font-size:15px;font-weight:700;letter-spacing:-.015em}
+.lab .control-heading>.icon-button{background:transparent;border-color:transparent;color:var(--instrument-quiet)}
+.lab .control-body{padding:16px}
+.lab .parameter{padding:18px 0 14px;margin:0;border-bottom:1px solid var(--instrument-line)}
+.lab .parameter-label label{font-weight:600}
+.lab .value-entry input{background:var(--instrument-surface);border-color:var(--instrument-line);border-radius:7px;font-weight:650}
+.lab .parameter-bounds{color:var(--instrument-quiet)}
+.lab .parameter-window{border:0;border-radius:0;background:transparent;margin-top:4px;box-shadow:none}
+.lab .parameter-window>summary{background:transparent;color:var(--instrument-quiet);font-size:12px;padding:8px 0}
+.lab .display-settings{border:0;border-radius:0;background:transparent}
+.lab .display-settings>summary{background:transparent;border:0;color:var(--instrument-quiet);padding-inline:0}
+.lab .research-dock{border:1px solid var(--instrument-line);box-shadow:none}
+.lab .dock-title{background:transparent;padding:14px 16px;border-bottom:1px solid var(--instrument-line)}
+.lab .dock-title h2{font-size:16px;letter-spacing:-.02em}
+.lab .work-tabs{border-bottom:1px solid var(--instrument-line);background:transparent;padding:8px 12px}
+.lab .work-tabs button{border-radius:6px}
+.lab .work-tabs button.selected{background:var(--ux-surface);font-weight:650}
+.lab .research-dock :is(.chart-card,.table-card){border:0;border-top:1px solid var(--instrument-line);border-radius:0;box-shadow:none}
+.lab .research-dock :is(.chart-card,.table-card)>summary{background:transparent;font-size:14px;border-bottom-color:var(--instrument-line)}
+.lab .readouts .meter{padding-block:14px}
+.lab .meter strong{font-size:24px;font-weight:650;letter-spacing:-.025em}
+.lab .meter>span{font-size:12px;color:var(--instrument-quiet)}
+/* Original model thumbnails remain unchanged; titles and actions carry the hierarchy. */
+#library .cards{gap:24px}
+#library .experiment-card{border-radius:12px;border:1px solid var(--catalog-line);box-shadow:none;background:var(--catalog-surface)}
+#library .card-image{height:auto;aspect-ratio:1.6;border-bottom:1px solid var(--catalog-line)}
+#library .card-image .preview-link{height:100%;display:block}
+#library .card-image img{width:100%;height:100%;object-fit:contain}
+#library .card-body{padding:20px 20px 12px;gap:8px 12px}
+#library .card-body .card-topic{font-size:12px;line-height:1.5;letter-spacing:.015em}
+#library .card-body h3{font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.025em;margin:2px 0 4px}
+#library .card-body p{font-size:14px;line-height:1.65;color:var(--catalog-muted)!important}
+#library .card-body .card-interactions{gap:6px;margin-top:8px}
+#library .card-interactions .interaction-tag{background:transparent;border-color:var(--catalog-line);font-size:12px;padding:3px 7px}
+#library .card-actions{padding:12px 20px 20px;gap:8px;align-items:center}
+#library .card-actions .card-open{background:var(--catalog-selected);color:var(--catalog-selected-text);border:1px solid var(--catalog-selected);font-weight:650;border-radius:7px;min-height:44px}
+#library .card-actions .preview-button{background:transparent;color:var(--catalog-text);border:1px solid var(--catalog-line);border-radius:7px;font-weight:500;min-height:44px}
+@media(max-width:1100px){.lab .controls{margin:18px 0}.lab .control-heading{padding-inline:4px}.lab .control-body{padding-inline:4px}}
+@media(max-width:620px){
+ .lab .lab-breadcrumb{margin-bottom:12px}
+ .lab .lab-heading h1{font-size:26px}
+ .lab .lab-intro{margin:8px 0 16px}
+ .lab .stage-top{padding:8px}
+ .lab .transport{padding:10px 8px;gap:8px}
+ .lab .transport #play{min-width:96px}
+ .lab .transport [data-action=record]{padding-inline:12px}
+ .lab .space-controls{padding:8px;gap:6px}
+ .lab .control-heading{padding-block:4px 12px}
+ .lab .control-body{padding-block:12px}
+ .lab .meter strong{font-size:21px}
+ .lab .experiment-work>.readouts{border-inline:0;border-radius:0;border-color:var(--instrument-line);background:transparent;padding:6px 0;margin-bottom:20px}
+ .lab .experiment-work>.readouts .meter{padding-block:12px}
+ #library .cards{gap:22px}
+ #library .card-image{aspect-ratio:1.6}
+ #library .card-body{padding:18px 16px 10px}
+ #library .card-body h3{font-size:22px}
+ #library .card-actions{padding:12px 16px 18px}
+}
+@media(hover:hover){
+ .lab .space-controls button:hover,.lab .teaching-tools>button:hover{background:var(--ux-surface);color:var(--ux-ink)}
+ #library .experiment-card:hover{border-color:var(--catalog-muted);box-shadow:0 4px 16px #00000008}
+}
+/* Override the earlier night-theme button specificity without changing model colors. */
+html[data-appearance=dark] .lab .transport [data-action=record]{background:var(--instrument-tint)!important;color:var(--instrument-accent)!important;border-color:var(--instrument-accent)!important}
+html[data-appearance=dark] .lab :is(.controls,.control-heading,.parameter,.parameter-window,.parameter-window>summary,.display-settings,.display-settings>summary){background:transparent}
+html[data-appearance=dark] .lab :is(.stage-top,.transport,.space-controls,.teaching-tools){background:var(--instrument-surface)}
+html[data-appearance=dark] .lab .control-heading>.icon-button,html[data-appearance=dark] .lab .teaching-tools>button{background:transparent;color:var(--instrument-quiet);border-color:transparent}

@@ -1,0 +1,24 @@
+/* A profile identity and one editing area, rather than a stack of inner cards. */
+.account-dialog{width:min(520px,calc(100% - 24px));border-radius:18px;padding:28px}
+.account-dialog:has(#accountMember:not([hidden])) .account-eyebrow{display:none}
+.account-dialog .account-profile-card{border:0;border-radius:0;background:transparent;padding:8px 0 20px;gap:18px;margin:20px 0 0}
+.account-dialog .account-avatar{width:72px;height:72px;flex:0 0 72px;font-size:30px;background:#e8eefb;color:#254fa7}
+.account-dialog .account-profile-card .account-name{font-size:23px;letter-spacing:-.02em;line-height:1.35}
+.account-dialog .account-profile-card .account-user-email{margin-top:6px}
+.account-dialog #accountProvider{margin:0;padding:0 0 20px;border-bottom:1px solid #d8dee7;font-size:13px}
+.account-dialog .account-profile-form{gap:10px;margin:24px 0}
+.account-dialog .account-profile-form .account-hint{margin:0 0 10px}
+.account-dialog #accountSave{background:#245bd7;border-color:#245bd7;color:#fff}
+.account-dialog #accountSave:hover:enabled{background:#1949b6}
+.account-dialog #accountSignOut{margin-top:8px;background:transparent}
+.account-dialog .account-manage{margin-top:20px;padding-top:10px}
+.account-dialog .account-local{border:0;border-radius:10px;background:#f3f6fb;padding:14px 16px;margin:24px 0 8px;font-size:12px;line-height:1.75}
+.account-dialog .account-privacy{font-size:12px}
+html[data-appearance=dark] .account-dialog .account-profile-card{background:transparent;border:0}
+html[data-appearance=dark] .account-dialog #accountProvider{border-color:#505968}
+html[data-appearance=dark] .account-dialog .account-local{background:#252c37;color:#c1cad8}
+html[data-appearance=dark] .account-dialog #accountSave{background:#a8c7fa;border-color:#a8c7fa;color:#172640}
+html[data-appearance=dark] .account-dialog #accountSave:hover:enabled{background:#c1d7ff}
+@media(max-width:620px){.account-dialog{padding:20px}.account-dialog .account-avatar{width:56px;height:56px;flex-basis:56px;font-size:24px}.account-dialog .account-profile-card{gap:14px}.account-dialog .account-profile-card .account-name{font-size:20px}}
+.account-dialog:has(#accountMember:not([hidden])) .account-status{border:0;background:transparent;padding:0;margin:14px 0;color:#526176;font-size:13px}
+html[data-appearance=dark] .account-dialog:has(#accountMember:not([hidden])) .account-status{color:#c1cad8;background:transparent}

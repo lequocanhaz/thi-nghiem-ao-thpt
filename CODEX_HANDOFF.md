@@ -251,3 +251,11 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Sách hiện tên bài đang đọc/đọc tiếp theo trang đã lưu; getReadingContext() cung cấp metadata cho books-assistant-v79.js. AI không có OCR nội dung sách mặc định; không được bịa nội dung trang quét.
 - AI giữ lỗi theo ngữ cảnh và vị trí cuộn; hồ sơ tải ảnh Google HTTPS allowlist với fallback chữ cái. Chat vẫn trong memory từng trang, không thêm storage/backend.
 - Entry JS/CSS v79; SDK Firebase vẫn v78 vì export không đổi. Giữ40bài chính+260bổ trợ và đủ388trang. Checks mới book-ux-v79/assistant-ux-v79/profile-avatar-v79 nằm trong npm check; browser-ui-spec-v79.py kiểm ma trận sáu width và fixtures, không chứng nhận Safari/thiết bị thật.
+
+## Tinh chỉnh thị giác v80 (10/11/2026)
+
+- Header chung qua header-ui-v80.js/css: giữ node/listener, chờ locale/account/theme mount rồi gom tiện ích vào native details; Library/Books/AI hiện rõ, tài khoản truy cập trực tiếp. DOMorder đổi theo720px; dropdown nằm dưới toànheader mobile. Phải giữ reset specificity của reading-header cũ và clip-path avatar. Trình chiếu/in ẩnheader như cũ.
+- workspace-polish-v80.css làm nhẹ khung/parameter, phân cấp Chạy–Ghiđiểm và thẻ; account-polish-v80.css chỉnh identity/form. Không đổi science/assets/session. Xem docs/VISUAL_V80.md và VISUAL_V80_UI.md.
+- Bỏ append AI cũ ở books-assistant-v79.js, entryquery80 (tênfile giữv79). Headernormalize phụ trách thứtự; đừng khôi phục appendcũ gây race. Entrypoint mớiselfhost, không thêmSDK/backend.
+- header-ui-v80.mjs thêm npmcheck; browser-visual-v80.py kiểm headerutility và workflow. Chỉ báo deployed sau Pages thành công, không đồng nhất browseremulation với thiết bị/Safari thật.
+- QA v80:64/64 browsercasesPASS,0pageerror; includes utility action listeners/VIEN/theme/active nav, signedavatar clipping, numericcontrast andpresent/print. Fixture/emulation scope ghi docs/VISUAL_V80.md, không gọi là Safari/physical acceptance.
