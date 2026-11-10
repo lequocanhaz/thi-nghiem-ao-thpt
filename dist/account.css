@@ -62,3 +62,53 @@
  .header nav.ql-language-ready>.account-trigger{grid-area:ql-account;width:44px;min-width:44px;padding:10px;justify-self:end}
  .header nav.ql-language-ready>a.nav-books{padding-inline:2px}
 }
+/* Preserve Google's four colors; global button icon rules must not add outlines. */
+.account-dialog .account-google .google-symbol{display:block;width:20px;height:20px;flex:0 0 20px;stroke:none;stroke-width:0}
+.account-dialog .google-symbol path{stroke:none;stroke-width:0}
+.account-trigger [hidden]{display:none!important}
+.account-trigger-avatar,.account-avatar{display:grid;place-items:center;border-radius:50%;background:#e8eefb;color:#254fa7;font-weight:750;line-height:1}
+.account-trigger-avatar{width:26px;height:26px;flex:0 0 26px;font-size:13px}
+.account-trigger.is-signed-in{border-color:#b8c8e8;background:#f1f5ff;color:#254fa7}
+.account-profile-card{display:flex;align-items:center;gap:16px;margin:20px 0 12px;padding:18px;border:1px solid #d8e1ef;border-radius:16px;background:#f5f8fd}
+.account-avatar{width:64px;height:64px;flex:0 0 64px;font-size:26px}
+.account-identity{min-width:0}
+.account-profile-card .account-name{margin:0 0 4px;font-size:20px;line-height:1.4}
+.account-profile-card .account-user-email{font-size:14px;line-height:1.6}
+.account-profile-card #accountVerified{display:inline-flex;margin:8px 0 0;padding:3px 8px;border-radius:6px;background:#fff2d9;color:#714707;font-size:12px;font-weight:650}
+.account-profile-card #accountVerified.is-verified{background:#e3f3e9;color:#20623b}
+.account-provider{padding-bottom:16px;border-bottom:1px solid #d8dee7;overflow-wrap:anywhere}
+.account-profile-form{display:grid;gap:8px;margin:20px 0}
+.account-profile-form .account-hint{margin:0 0 8px}
+.account-manage{margin-top:16px;border-top:1px solid #d8dee7;padding-top:8px}
+.account-manage summary{min-height:44px;padding:10px 0;color:#526176;font-size:14px;cursor:pointer}
+.account-dialog button,.account-dialog a,.account-trigger{touch-action:manipulation}
+.account-dialog #accountClose:hover{background:#e8edf5}
+@media(max-width:1100px){.header nav>.account-trigger>.account-trigger-avatar{display:grid}.header nav>.account-trigger>.account-trigger-label{display:none}.header nav>.account-trigger.is-signed-in{padding:8px}}
+@media(max-width:620px){
+ .account-dialog{padding:20px;width:min(480px,calc(100% - 20px))}
+ .account-dialog h2{font-size:22px}
+ .account-modes{margin-top:16px}
+ .account-profile-card{gap:12px;padding:14px}
+ .account-avatar{width:48px;height:48px;flex-basis:48px;font-size:22px}
+ .account-profile-card .account-name{font-size:18px}
+ .account-password{position:relative}
+ .account-password>input{padding-right:76px}
+ .account-password>button{position:absolute;right:4px;top:4px;bottom:4px;min-height:40px;width:68px;padding:4px;border:0;background:transparent;font-size:11px}
+}
+/* Account controls retain readable pairs in the site's dark appearance. */
+html[data-appearance=dark] .account-dialog :is(#accountIntro,.account-eyebrow,.account-hint,.account-consent,.account-local,.account-user-email,#accountProvider,.account-manage summary){color:#c1cad8}
+html[data-appearance=dark] .account-dialog label{color:#ececec}
+html[data-appearance=dark] .account-profile-card{background:#252b35;border-color:#525e70}
+html[data-appearance=dark] .account-dialog input:is([type=email],[type=password],[type=text]){background:#20242b;color:#f2f4f8;border-color:#778397}
+html[data-appearance=dark] .account-dialog input::placeholder{color:#b8c2d0}
+html[data-appearance=dark] .account-dialog .account-modes button[aria-pressed=true]{border-bottom-color:#e3eaf5;color:#fff}
+html[data-appearance=dark] .account-dialog :is(.account-secondary,.account-close){background:#383e49;color:#f2f4f8;border-color:#778397}
+html[data-appearance=dark] .account-dialog .account-danger{color:#ffbaba}
+html[data-appearance=dark] .account-dialog .account-privacy{color:#afc8ff}
+html[data-appearance=dark] .account-trigger.is-signed-in{background:#25334b;color:#d6e4ff;border-color:#849cc5}
+html[data-appearance=dark] .account-dialog .account-primary{background:#e5edff;color:#15233d;border-color:#e5edff}
+html[data-appearance=dark] .account-dialog .account-primary:hover:enabled{background:#cbdcff}
+html[data-appearance=dark] .account-dialog .account-destructive{background:#932929;color:#fff;border-color:#b36c6c}
+html[data-appearance=dark] .account-dialog .account-manage summary{background:transparent}
+html[data-appearance=dark] .account-dialog .account-google{background:#fff;color:#18212e;border-color:#b8c2d0}
+html[data-appearance=dark] .account-dialog .account-google:hover:enabled{background:#e8edf5}

@@ -12,7 +12,7 @@ const knownCodes=new Set([
  'auth/account-exists-with-different-credential','auth/credential-already-in-use',
  'auth/operation-not-allowed','auth/unauthorized-domain','auth/web-storage-unsupported',
  'auth/operation-not-supported-in-this-environment','auth/requires-recent-login',
- 'auth/invalid-api-key','auth/app-not-authorized','auth/no-current-user'
+ 'auth/invalid-display-name','auth/invalid-api-key','auth/app-not-authorized','auth/no-current-user'
 ]);
 const errorPairs={
  'auth/not-configured':['Đăng nhập chưa được kết nối. Chủ website cần hoàn tất cấu hình Firebase.','Sign-in is not connected yet. The website owner needs to finish Firebase setup.'],
@@ -71,7 +71,7 @@ export function validateAuthConfig(config){
  return Object.freeze({enabled:true,valid:true,errorCode:null,firebase:Object.freeze(cleaned)});
 }
 export function authAvailability(config=authConfig){const {enabled,errorCode}=validateAuthConfig(config);return Object.freeze({enabled,errorCode});}
-function localSDKLoader(){let attempt=0;return ()=>{const retry=attempt++?'&retry='+attempt:'';return import('./vendor/firebase-auth.js?v=64'+retry);};}
+function localSDKLoader(){let attempt=0;return ()=>{const retry=attempt++?'&retry='+attempt:'';return import('./vendor/firebase-auth.js?v=78'+retry);};}
 function defaultStorage(){try{return globalThis.localStorage;}catch{return null;}}
 function safeUser(user){
  if(!user)return null;
@@ -159,6 +159,12 @@ export function createAuthClient({config=authConfig,loadSDK=localSDKLoader(),sto
   signUp:input=>emailAction('signUp',input,true),
   resetPassword:input=>run('resetPassword',async()=>{const {email}=credentials({email:input?.email,password:'not-used'});try{await sdk.sendPasswordResetEmail(auth,email);}catch(error){if(error?.code!=='auth/user-not-found')throw error;}}),
   signInWithGoogle:({remember=false}={})=>run('google',async()=>{await persistence(remember===true);const provider=new sdk.GoogleAuthProvider();provider.setCustomParameters({prompt:'select_account'});const result=await sdk.signInWithPopup(auth,provider,sdk.browserPopupRedirectResolver);const user=safeUser(result.user);emit({user});return user;}),
+  updateDisplayName:displayName=>run('updateProfile',async()=>{
+   if(!auth.currentUser)throw failure('auth/no-current-user');
+   if(typeof displayName!=='string'||!displayName.trim()||displayName.trim().length>80)throw failure('auth/invalid-display-name');
+   await sdk.updateProfile(auth.currentUser,{displayName:displayName.trim()});
+   const user=safeUser(auth.currentUser);emit({user});return user;
+  }),
   signOut:()=>run('signOut',async()=>{await sdk.signOut(auth);try{storage?.removeItem(authPersistenceKey);}catch{}emit({user:null});}),
   deleteAccount:()=>run('deleteAccount',async()=>{if(!auth.currentUser)throw failure('auth/no-current-user');await sdk.deleteUser(auth.currentUser);try{storage?.removeItem(authPersistenceKey);}catch{}emit({user:null});}),
   destroy(){destroyed=true;unsubscribe?.();listeners.clear();}

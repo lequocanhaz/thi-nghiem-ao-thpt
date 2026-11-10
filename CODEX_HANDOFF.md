@@ -238,3 +238,9 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Toolbar hiện có là destination Mô hình/Thông số/Dữ liệu ở<=620px; params/data phải mở rồi focus, không toggle khi bấm lại. Không tựcuộn mỗi lần ghi. Không bật bàn phím số trên coarsepointer chỉ vì mở params. Mobilecontrols co nội dung, dữliệu1row co theo bảng; nav không che chat/fullscreen/editing/toast, touchPresent cóExit.
 - Nativeplaybackdetails mọi bài: desktop mở/summaryẩn, mobile đóng/summaryhiện. canDismissWorkspaceMenu phải SKIP desktop playback ởoutsideclick và cả2Escapehandlers; resize qua620 đồng bộ open. Teachingtools được chuyển node khi đổi kích thước, không clone.
 - Desktopcontrols resize thật300–560px; đừng phục hồi clamp340 cũ. Kiểm Browser mới browser-product-ux-v76.py, books review nguồnstate riêng. Không thay schema/session hoặc solver/renderer/previews.
+
+## Hồ sơ tài khoản v78 (10/11/2026)
+
+- `docs/account-profile-v78.md`: profile card, avatar chữ cái, sửa tên bằng Firebase updateProfile, header tự nhận phiên sau reload; Google SVG không còn viền đen từ CSS chung.
+- UI/SDK query v78, local Firebase bundle phải export updateProfile; không dùng SDK cache v64 cho tính năng sửa tên.
+- Quản lý/xóa tài khoản thu gọn, giữ xác nhận và dữ liệu phiên thí nghiệm. Kiểm thử adapter/DOM mới nằm trong npm check; browser-account-profile-v78.py dùng SDK fixture và Chromium, không khẳng định Google OAuth hay Firebase production đã nghiệm thu.

@@ -13,7 +13,7 @@ const esbuildPackage=JSON.parse(fs.readFileSync(require.resolve('esbuild/package
 if(firebasePackage.version!=='13.1.0'||esbuildPackage.version!=='0.28.2')throw Error('Use the pinned Firebase 13.1.0 and esbuild 0.28.2 versions from npm ci.');
 fs.mkdirSync(vendor,{recursive:true});
 await build({
- stdin:{contents:`export {initializeApp,getApps} from 'firebase/app';\nexport {getAuth,initializeAuth,browserSessionPersistence,browserLocalPersistence,onAuthStateChanged,setPersistence,createUserWithEmailAndPassword,signInWithEmailAndPassword,sendPasswordResetEmail,GoogleAuthProvider,signInWithPopup,browserPopupRedirectResolver,signOut,deleteUser} from 'firebase/auth';`,resolveDir:projectRoot,sourcefile:'firebase-auth-entry.js',loader:'js'},
+ stdin:{contents:`export {initializeApp,getApps} from 'firebase/app';\nexport {getAuth,initializeAuth,browserSessionPersistence,browserLocalPersistence,onAuthStateChanged,setPersistence,createUserWithEmailAndPassword,signInWithEmailAndPassword,sendPasswordResetEmail,GoogleAuthProvider,signInWithPopup,browserPopupRedirectResolver,signOut,deleteUser,updateProfile} from 'firebase/auth';`,resolveDir:projectRoot,sourcefile:'firebase-auth-entry.js',loader:'js'},
  outfile:path.join(vendor,'firebase-auth.js'),bundle:true,format:'esm',platform:'browser',target:'es2020',minify:true,sourcemap:false,legalComments:'eof',charset:'utf8',
  banner:{js:'// Quanh Lab: Firebase App/Authentication 13.1.0, locally bundled. Apache-2.0. See FIREBASE-LICENSE.txt.'}
 });

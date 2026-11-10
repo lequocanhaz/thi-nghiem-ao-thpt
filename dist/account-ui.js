@@ -1,10 +1,10 @@
 // Account controls are independent of routing and never rewrite experiment storage.
 import {i18n} from './i18n.js?v=54';
-import {createAuthClient} from './auth-client.js?v=66';
+import {createAuthClient} from './auth-client.js?v=78';
 
 const copy={
  'vi-VN':{
-  open:'Đăng nhập',account:'Tài khoản',title:'Chào bạn đến Quanh Lab',intro:'Đăng nhập bằng email hoặc tài khoản Google.',close:'Đóng tài khoản',
+  profile:'Hồ sơ tài khoản',profileIntro:'Thông tin và cài đặt tài khoản Quanh Lab của bạn.',nameLabel:'Tên hiển thị',nameHint:'Tên này xuất hiện trong hồ sơ của bạn.',save:'Lưu thay đổi',saved:'Đã cập nhật hồ sơ.',manage:'Quản lý tài khoản',invalidName:'Nhập tên từ 1 đến 80 ký tự.',open:'Đăng nhập',account:'Tài khoản',title:'Chào bạn đến Quanh Lab',intro:'Đăng nhập bằng email hoặc tài khoản Google.',close:'Đóng tài khoản',
   signin:'Đăng nhập',signup:'Tạo tài khoản',reset:'Quên mật khẩu',email:'Email',password:'Mật khẩu',show:'Hiện mật khẩu',hide:'Ẩn mật khẩu',
   passwordHint:'Dùng ít nhất 8 ký tự khi tạo tài khoản.',remember:'Giữ đăng nhập trên thiết bị này',shared:'Bỏ chọn khi dùng máy tính chung.',
   google:'Tiếp tục với Google',or:'hoặc dùng email',submitReset:'Gửi email đặt lại mật khẩu',back:'Quay lại đăng nhập',
@@ -20,7 +20,7 @@ const copy={
   unavailable:'Dịch vụ đăng nhập chưa sẵn sàng. Bạn có thể tiếp tục dùng thí nghiệm.',generic:'Chưa thực hiện được. Vui lòng thử lại.',delete:'Xóa tài khoản',deleteTitle:'Xóa tài khoản này?',deleteNotice:'Tài khoản xác thực sẽ bị xóa vĩnh viễn. Bảng đo, ghi chép và tiến độ trên thiết bị này vẫn được giữ.',deleteConfirm:'Xóa vĩnh viễn tài khoản',deleteCancel:'Giữ tài khoản',deleted:'Tài khoản đã được xóa. Dữ liệu thí nghiệm trên thiết bị vẫn được giữ.',recent:'Để xóa tài khoản, hãy đăng xuất rồi đăng nhập lại, sau đó thử xóa lần nữa.',consent:'Khi tiếp tục, thông tin đăng nhập được xử lý theo chính sách quyền riêng tư bên dưới.',session:'Không thể lưu phiên đăng nhập trên trình duyệt này. Hãy cho phép dữ liệu trang web rồi thử lại.'
  },
  'en-US':{
-  open:'Sign in',account:'Account',title:'Welcome to Quanh Lab',intro:'Sign in with your email or Google account.',close:'Close account',
+  profile:'Account profile',profileIntro:'Your Quanh Lab account information and settings.',nameLabel:'Display name',nameHint:'This name appears in your profile.',save:'Save changes',saved:'Profile updated.',manage:'Manage account',invalidName:'Enter a name between 1 and 80 characters.',open:'Sign in',account:'Account',title:'Welcome to Quanh Lab',intro:'Sign in with your email or Google account.',close:'Close account',
   signin:'Sign in',signup:'Create account',reset:'Forgot password',email:'Email',password:'Password',show:'Show password',hide:'Hide password',
   passwordHint:'Use at least 8 characters when creating an account.',remember:'Keep me signed in on this device',shared:'Leave unchecked on a shared computer.',
   google:'Continue with Google',or:'or use email',submitReset:'Send password reset email',back:'Back to sign in',
@@ -38,6 +38,7 @@ const copy={
 };
 export function accountErrorKey(code=''){
  if(/invalid-(credential|email|login-credentials)|wrong-password|user-not-found|user-disabled/.test(code))return 'invalid';
+ if(/invalid-display-name/.test(code))return 'invalidName';
  if(/requires-recent-login/.test(code))return 'recent';
  if(/network|timeout/.test(code))return 'network';
  if(/popup-blocked/.test(code))return 'blocked';
@@ -57,8 +58,8 @@ export function installAccountUI({client=createAuthClient()}={}){
  let snapshot=client.getSnapshot();
  const c=()=>copy[i18n.getLocale()]||copy['vi-VN'];
  const button=document.createElement('button');button.id='openAccount';button.className='account-trigger';button.type='button';
- button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-controls','accountDialog');
- button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span></span>';
+ button.setAttribute('aria-expanded','false');button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-controls','accountDialog');
+ button.innerHTML='<span class="account-trigger-avatar" aria-hidden="true" hidden></span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span class="account-trigger-label"></span>';
  nav.append(button);
  const dialog=document.createElement('dialog');dialog.id='accountDialog';dialog.className='account-dialog';dialog.setAttribute('aria-labelledby','accountTitle');dialog.setAttribute('aria-describedby','accountIntro');
  dialog.innerHTML=`<div class="account-heading"><div><p class="account-eyebrow">QUANH LAB</p><h2 id="accountTitle"></h2></div><button id="accountClose" class="account-close" type="button">×</button></div>
@@ -73,15 +74,24 @@ export function installAccountUI({client=createAuthClient()}={}){
     <button id="accountSubmit" class="account-primary" type="submit"></button>
    </form><button type="button" id="accountReset" class="account-text-button" data-account-mode="reset"></button><button type="button" id="accountBack" class="account-text-button" data-account-mode="signin" hidden></button>
   </div>
-  <div id="accountMember" hidden><p id="accountName" class="account-name"></p><p id="accountUserEmail" class="account-user-email"></p><p id="accountVerified"></p><p id="accountProvider"></p><button id="accountSignOut" type="button" class="account-secondary"></button><button id="accountDelete" type="button" class="account-text-button account-danger"></button><section id="accountDeletePanel" aria-labelledby="accountDeleteTitle" hidden><h3 id="accountDeleteTitle" data-account-copy="deleteTitle"></h3><p data-account-copy="deleteNotice"></p><p id="accountDeleteEmail"></p><button id="accountDeleteCancel" class="account-secondary" type="button" data-account-copy="deleteCancel"></button><button id="accountDeleteConfirm" class="account-primary account-destructive" type="button" data-account-copy="deleteConfirm"></button></section></div>
+  <div id="accountMember" hidden>
+   <section class="account-profile-card" aria-labelledby="accountName"><div id="accountAvatar" class="account-avatar" aria-hidden="true"></div><div class="account-identity"><h3 id="accountName" class="account-name"></h3><p id="accountUserEmail" class="account-user-email"></p><p id="accountVerified" class="account-verified"></p></div></section>
+   <p id="accountProvider" class="account-provider"></p>
+   <form id="accountProfileForm" class="account-profile-form"><label for="accountDisplayName" data-account-copy="nameLabel"></label><input id="accountDisplayName" type="text" name="displayName" autocomplete="nickname" maxlength="80" required aria-describedby="accountNameHint"><p id="accountNameHint" class="account-hint" data-account-copy="nameHint"></p><button id="accountSave" type="submit" class="account-primary" data-account-copy="save"></button></form>
+   <button id="accountSignOut" type="button" class="account-secondary"></button>
+   <details id="accountManage" class="account-manage"><summary data-account-copy="manage"></summary><button id="accountDelete" type="button" class="account-text-button account-danger"></button><section id="accountDeletePanel" aria-labelledby="accountDeleteTitle" hidden><h3 id="accountDeleteTitle" data-account-copy="deleteTitle"></h3><p data-account-copy="deleteNotice"></p><p id="accountDeleteEmail"></p><button id="accountDeleteCancel" class="account-secondary" type="button" data-account-copy="deleteCancel"></button><button id="accountDeleteConfirm" class="account-primary account-destructive" type="button" data-account-copy="deleteConfirm"></button></section></details>
+  </div>
   <p class="account-local" data-account-copy="local"></p><a class="account-privacy" href="privacy.html" data-account-copy="privacy"></a>`;
  document.body.append(dialog);
  const $=s=>dialog.querySelector(s);
  function render(){
   const t=c(),signed=!!snapshot.user,unavailable=!snapshot.enabled,working=busy||['loading','busy'].includes(snapshot.status),reset=mode==='reset';
-  button.querySelector('span').textContent=signed?t.account:t.open;button.setAttribute('aria-label',signed?t.account:t.open);
-  dialog.lang=i18n.getLocale();$('#accountTitle').textContent=signed?t.signedTitle:reset?t.reset:t.title;
-  $('#accountIntro').textContent=signed?'':t.intro;$('#accountIntro').hidden=signed;
+  button.querySelector('.account-trigger-label').textContent=signed?t.profile:t.open;button.setAttribute('aria-label',signed?t.profile:t.open);
+  const initials=Array.from((snapshot.user?.displayName||snapshot.user?.email||'Q').trim()).slice(0,1).join('').toLocaleUpperCase();
+  button.querySelector('.account-trigger-avatar').textContent=initials;button.querySelector('.account-trigger-avatar').hidden=!signed;button.querySelector('svg').toggleAttribute('hidden',signed);
+  button.classList.toggle('is-signed-in',signed);button.title=signed?t.profile:t.open;
+  dialog.lang=i18n.getLocale();$('#accountTitle').textContent=signed?t.profile:reset?t.reset:t.title;
+  $('#accountIntro').textContent=signed?t.profileIntro:t.intro;$('#accountIntro').hidden=false;
   $('#accountClose').setAttribute('aria-label',t.close);
   for(const node of dialog.querySelectorAll('[data-account-copy]'))node.textContent=t[node.dataset.accountCopy];
   $('#accountGuest').hidden=signed||unavailable;$('#accountMember').hidden=!signed;
@@ -98,16 +108,21 @@ export function installAccountUI({client=createAuthClient()}={}){
   $('#accountReset').textContent=t.reset;$('#accountReset').hidden=reset;$('#accountBack').textContent=t.back;$('#accountBack').hidden=!reset;
   for(const id of ['accountSubmit','accountGoogle','accountReset','accountBack','accountSignOut','accountDelete','accountDeleteCancel','accountDeleteConfirm'])$('#'+id).disabled=working||unavailable;
   $('#accountForm').setAttribute('aria-busy',String(working));
+  $('#accountProfileForm').setAttribute('aria-busy',String(working));$('#accountSave').disabled=working||!client.updateDisplayName;$('#accountDisplayName').disabled=working;
   const status=unavailable?t.disabled:snapshot.status==='loading'?t.loading:working?t.busy:messageKey?t[messageKey]:'';
   $('#accountStatus').textContent=status;$('#accountStatus').hidden=!status;
   const error=errorKey||(snapshot.status==='error'?accountErrorKey(snapshot.errorCode):'');
   $('#accountError').textContent=error?t[error]:'';$('#accountError').hidden=!error;
   if(signed){
    // Authenticated profile text is never inserted as HTML.
+   $('#accountAvatar').textContent=initials;
    $('#accountName').textContent=snapshot.user.displayName||t.account;$('#accountUserEmail').textContent=snapshot.user.email||'';
    $('#accountVerified').textContent=snapshot.user.emailVerified?t.verified:t.unverified;
+   $('#accountVerified').classList.toggle('is-verified',snapshot.user.emailVerified);
+   if($('#accountDisplayName').dataset.uid!==snapshot.user.uid){$('#accountDisplayName').value=snapshot.user.displayName||'';$('#accountDisplayName').dataset.uid=snapshot.user.uid;}
    $('#accountProvider').textContent=t.provider+': '+(snapshot.user.providerIds||[]).map(id=>id==='google.com'?'Google':id==='password'?'Email':id).join(', ');
   }
+  if(!signed){delete $('#accountDisplayName').dataset.uid;$('#accountDisplayName').value='';$('#accountManage').open=false;}
   $('#accountSignOut').textContent=t.signout;$('#accountDelete').textContent=t.delete;
   $('#accountDeletePanel').hidden=!signed||!deleteConfirm;$('#accountDeleteEmail').textContent=snapshot.user?.email||'';
  }
@@ -117,22 +132,22 @@ export function installAccountUI({client=createAuthClient()}={}){
   if(busy)return;busy=true;messageKey='';errorKey='';render();
   try{await action();messageKey=success;deleteConfirm=false;$('#accountPassword').value='';if(['signedOut','deleted'].includes(success))$('#accountRemember').checked=false;}
   catch(error){errorKey=accountErrorKey(error?.code||client.getSnapshot().errorCode);}
-  finally{busy=false;snapshot=client.getSnapshot();render();if(dialog.open&&!errorKey&&['signedIn','created','signedOut','deleted'].includes(messageKey))(snapshot.user?$('#accountClose'):$('#accountEmail')).focus();}
+  finally{busy=false;snapshot=client.getSnapshot();render();if(dialog.open&&success==='saved')$('#accountDisplayName').focus();if(dialog.open&&!errorKey&&['signedIn','created','signedOut','deleted'].includes(messageKey))(snapshot.user?$('#accountClose'):$('#accountEmail')).focus();}
  }
  async function open(){
-  previousFocus=document.activeElement;messageKey='';errorKey='';render();dialog.showModal();
+  previousFocus=document.activeElement;messageKey='';errorKey='';if(snapshot.user)$('#accountDisplayName').value=snapshot.user.displayName||'';render();dialog.showModal();button.setAttribute('aria-expanded','true');
   if(snapshot.enabled)await perform(()=>client.prepare(),'ready');
   if(dialog.open)(snapshot.enabled&&!snapshot.user?$('#accountEmail'):$('#accountClose')).focus();
  }
  function close(){dialog.close();}
  button.addEventListener('click',open);$('#accountClose').addEventListener('click',close);
- const onClose=()=>{showPassword=false;deleteConfirm=false;$('#accountPassword').value='';render();previousFocus?.isConnected&&previousFocus.focus({preventScroll:true});};
+ const onClose=()=>{button.setAttribute('aria-expanded','false');showPassword=false;deleteConfirm=false;$('#accountPassword').value='';render();previousFocus?.isConnected&&previousFocus.focus({preventScroll:true});};
  dialog.addEventListener('close',onClose);
  dialog.addEventListener('keydown',event=>{
   // Lab/reader shortcuts must not act on the background while this dialog is open.
   event.stopPropagation();
   if(event.key!=='Tab')return;
-  const targets=[...dialog.querySelectorAll('button,a[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')].filter(node=>!node.disabled&&node.getClientRects().length);
+  const targets=[...dialog.querySelectorAll('button,a[href],input,select,textarea,summary,[tabindex]:not([tabindex="-1"])')].filter(node=>!node.disabled&&node.getClientRects().length);
   if(!targets.length){event.preventDefault();return;}
   const index=targets.indexOf(document.activeElement);
   if(event.shiftKey&&index<=0||!event.shiftKey&&(index<0||index===targets.length-1)){
@@ -152,11 +167,20 @@ export function installAccountUI({client=createAuthClient()}={}){
   else void perform(()=>client.signIn({email,password,remember}),'signedIn');
  });
  $('#accountGoogle').addEventListener('click',()=>{if(snapshot.enabled)void perform(()=>client.signInWithGoogle({remember:$('#accountRemember').checked}),'signedIn');});
+ $('#accountProfileForm').addEventListener('submit',event=>{
+  event.preventDefault();if(busy||!snapshot.user||!client.updateDisplayName)return;
+  const displayName=$('#accountDisplayName').value.trim();
+  if(!displayName||displayName.length>80){errorKey='invalidName';render();$('#accountDisplayName').focus();return;}
+  void perform(()=>client.updateDisplayName(displayName),'saved');
+ });
  $('#accountSignOut').addEventListener('click',()=>void perform(()=>client.signOut(),'signedOut'));
  $('#accountDelete').addEventListener('click',()=>{deleteConfirm=true;render();$('#accountDeleteCancel').focus();});
  $('#accountDeleteCancel').addEventListener('click',()=>{deleteConfirm=false;render();$('#accountDelete').focus();});
  $('#accountDeleteConfirm').addEventListener('click',()=>void perform(()=>client.deleteAccount(),'deleted'));
  render();
+ // Restore the Firebase session so the header reflects sign-in after a reload.
+ // The local SDK does not load Google's popup helper until Google is selected.
+ if(snapshot.enabled)void client.prepare().catch(()=>{});
  return {client,open,destroy(){unsubscribe();unsubscribeLocale();button.removeEventListener('click',open);dialog.remove();button.remove();}};
 }
 if(typeof document!=='undefined')globalThis.quanhAccountUI=installAccountUI();

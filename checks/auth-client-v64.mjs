@@ -21,6 +21,7 @@ function fixtures({initialUser=null,initialDelay=false}={}){
   sendPasswordResetEmail:async(target,email)=>{calls.push(['resetPassword',email]);fail();},
   GoogleAuthProvider:class{setCustomParameters(parameters){this.parameters=parameters;}},
   signInWithPopup:async(target,provider,resolver)=>{calls.push(['google',provider.parameters,resolver]);fail();change({...user,providerData:[{providerId:'google.com'}],emailVerified:true});return {user:auth.currentUser};},
+  updateProfile:async(target,patch)=>{calls.push(['updateProfile',target.uid,patch]);fail();Object.assign(target,patch);},
   signOut:async()=>{calls.push(['signOut']);fail();change(null);},
   deleteUser:async target=>{calls.push(['deleteUser',target.uid]);fail();change(null);}
  };
@@ -34,7 +35,7 @@ for(const firebase of [{...config.firebase,authDomain:'https://quanh-fixture.fir
 let disabledLoads=0;
 const disabled=createAuthClient({config:{enabled:false,firebase:null},loadSDK:()=>{disabledLoads++;throw Error('must not load');},storage:memory()});
 const disabledStates=[];disabled.subscribe(s=>disabledStates.push(s));assert.equal(disabled.getSnapshot().status,'disabled');
-for(const method of ['prepare','signIn','signUp','resetPassword','signInWithGoogle','signOut','deleteAccount'])await assert.rejects(disabled[method]({email:'test@example.test',password:'not-a-real-password'}),{code:'auth/not-configured'});
+for(const method of ['prepare','signIn','signUp','resetPassword','signInWithGoogle','signOut','deleteAccount','updateDisplayName'])await assert.rejects(disabled[method]({email:'test@example.test',password:'not-a-real-password'}),{code:'auth/not-configured'});
 assert.equal(disabledLoads,0);assert.equal(disabledStates.length,1,'No fake auth state when disconnected');
 const sdkUnavailable=createAuthClient({config,loadSDK:async()=>{throw Error('private diagnostic');},storage:memory()});await assert.rejects(sdkUnavailable.prepare(),{code:'auth/sdk-unavailable'});assert.equal(sdkUnavailable.getSnapshot().errorCode,'auth/sdk-unavailable');
 const stalled=createAuthClient({config,loadSDK:()=>new Promise(()=>{}),storage:memory(),startupTimeoutMs:1});await assert.rejects(stalled.prepare(),{code:'auth/initialization-timeout'});stalled.destroy();
@@ -45,6 +46,20 @@ await assert.rejects(client.signUp({email:'invalid',password:'123456'}),{code:'a
 const account=await client.signUp({email:' learner@example.test ',password:'do-not-store-me',remember:false});
 assert.equal(account.email,'learner@example.test');assert.equal(account.emailVerified,false,'Do not claim an unverified email is verified');assert.equal(account.accessToken,undefined);assert.equal(account.refreshToken,undefined);assert.equal(Object.isFrozen(account),true);assert.equal(client.getSnapshot().status,'ready');assert.equal(client.getSnapshot().user.uid,'fixture-account');
 assert.equal(storage.getItem(authPersistenceKey),null);assert.ok(!JSON.stringify(client.getSnapshot()).includes('do-not-store-me'));assert.ok(!JSON.stringify([...storage.map]).includes('do-not-store-me'));assert.equal(fixture.calls.find(c=>c[0]==='signUp')[1],'learner@example.test');
+// Profile writes use Firebase's current user, publish a sanitized snapshot only after success,
+// and leave measurements and authentication persistence unchanged.
+const profileStorageBefore=[...storage.map];
+const updated=await client.updateDisplayName('  Học sinh Quanh Lab  ');
+assert.equal(updated.displayName,'Học sinh Quanh Lab');assert.equal(client.getSnapshot().user.displayName,'Học sinh Quanh Lab');
+assert.deepEqual(fixture.calls.filter(call=>call[0]==='updateProfile').at(-1),['updateProfile','fixture-account',{displayName:'Học sinh Quanh Lab'}]);
+assert.equal(updated.accessToken,undefined);assert.equal(updated.refreshToken,undefined);assert.equal(Object.isFrozen(updated),true);
+assert.deepEqual([...storage.map],profileStorageBefore,'Profile editing does not change persistence or lab data');
+const profileWrites=fixture.calls.filter(call=>call[0]==='updateProfile').length;
+for(const name of ['', '   ', 'x'.repeat(81), null, 42])await assert.rejects(client.updateDisplayName(name),{code:'auth/invalid-display-name'});
+assert.equal(fixture.calls.filter(call=>call[0]==='updateProfile').length,profileWrites,'Invalid names never reach Firebase');
+fixture.setFail('auth/network-request-failed');await assert.rejects(client.updateDisplayName('Unsaved name'),{code:'auth/network-request-failed'});
+assert.equal(client.getSnapshot().user.displayName,'Học sinh Quanh Lab','Failed profile edits preserve confirmed identity');
+fixture.setFail(null);
 await client.signOut();assert.equal(client.getSnapshot().user,null);assert.equal(storage.getItem('thpt-vat-li-session'),'keep-lab-session');
 await client.signIn({email:'learner@example.test',password:'do-not-store-me',remember:true});assert.equal(storage.getItem(authPersistenceKey),'local');assert.equal(fixture.calls.filter(c=>c[0]==='persistence').at(-1)[1],'LOCAL');
 const rememberedFixture=fixtures({initialUser:fixture.user}),restored=createAuthClient({config,loadSDK:rememberedFixture.loadSDK,storage});
@@ -52,6 +67,7 @@ await restored.prepare();assert.equal(rememberedFixture.calls.find(c=>c[0]==='in
 fixture.setFail('auth/requires-recent-login');await assert.rejects(client.deleteAccount(),{code:'auth/requires-recent-login'});assert.equal(client.getSnapshot().user.uid,'fixture-account');assert.equal(storage.getItem('thpt-vat-li-session'),'keep-lab-session');
 fixture.setFail(null);await client.deleteAccount();assert.equal(client.getSnapshot().user,null);assert.equal(storage.getItem(authPersistenceKey),null);assert.equal(storage.getItem('thpt-vat-li-session'),'keep-lab-session');
 await assert.rejects(client.deleteAccount(),{code:'auth/no-current-user'});
+await assert.rejects(client.updateDisplayName('Guest edit'),{code:'auth/no-current-user'});
 fixture.setFail('auth/user-not-found');await client.resetPassword({email:'missing@example.test'});assert.equal(client.getSnapshot().status,'ready','Do not reveal reset account existence');
 fixture.setFail(null);await client.resetPassword({email:'learner@example.test'});assert.equal(client.getSnapshot().user,null);
 for(const code of ['auth/popup-blocked','auth/popup-closed-by-user','auth/cancelled-popup-request','auth/operation-not-allowed','auth/unauthorized-domain','auth/network-request-failed']){
@@ -64,5 +80,5 @@ const timeoutFixture=fixtures({initialDelay:true}),timed=createAuthClient({confi
 const blocked=createAuthClient({config,loadSDK:fixtures().loadSDK,storage:{getItem:()=>null,setItem:()=>{throw Error('blocked');},removeItem:()=>{}}});await assert.rejects(blocked.signIn({email:'test@example.test',password:'password',remember:true}),{code:'auth/web-storage-unsupported'});assert.equal(blocked.getSnapshot().user,null);
 assert.ok(storage.writes.every(key=>key===authPersistenceKey),'Adapter never modifies lab/storage keys');
 client.destroy();await assert.rejects(client.prepare(),{code:'auth/client-destroyed'});restored.destroy();serial.destroy();timed.destroy();blocked.destroy();
-const source=fs.readFileSync(new URL('../dist/auth-client.js',import.meta.url),'utf8');assert.doesNotMatch(source,/signInWithRedirect|signInWithCustomToken|fetch\(|(?:localStorage|sessionStorage|storage)\??\.clear\(/);assert.match(source,/import\('\.\/vendor\/firebase-auth\.js\?v=64'\+retry\)/);
+const source=fs.readFileSync(new URL('../dist/auth-client.js',import.meta.url),'utf8');assert.doesNotMatch(source,/signInWithRedirect|signInWithCustomToken|fetch\(|(?:localStorage|sessionStorage|storage)\??\.clear\(/);assert.match(source,/import\('\.\/vendor\/firebase-auth\.js\?v=78'\+retry\)/);
 console.log('PASS auth adapter v64: lazy/disconnected states, config allowlist, local SDK failure, SESSION default/explicit LOCAL restore, signup/signin/reset/Google/signout/delete fixtures, recent-login and popup errors, no token/password copies or lab data changes, no real auth service calls.');

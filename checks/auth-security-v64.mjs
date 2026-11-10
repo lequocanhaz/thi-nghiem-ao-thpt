@@ -32,5 +32,5 @@ assert.equal(accountErrorKey('auth/invalid-credential'),'invalid');
 assert.equal(accountErrorKey('auth/unauthorized-domain'),'unavailable');
 const source=fs.readFileSync(new URL('../dist/account-ui.js',import.meta.url),'utf8');
 assert.doesNotMatch(source,/localStorage\.(?:clear|removeItem|setItem)|sessionStorage\.(?:clear|removeItem|setItem)|innerHTML\s*=.*(?:snapshot\.user|\.email|\.displayName)/);
-for(const file of ['index.html','books.html'])assert.match(fs.readFileSync(new URL('../dist/'+file,import.meta.url),'utf8'),/account-ui\.js\?v=66/);
+for(const file of ['index.html','books.html'])assert.match(fs.readFileSync(new URL('../dist/'+file,import.meta.url),'utf8'),/account-ui\.js\?v=78/);
 console.log('PASS auth security: exact configured Firebase helper origins, isolated public web-config exception, other keys blocked, disabled configuration makes no Google policy exception, safe profile text and session preservation.');
