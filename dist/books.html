@@ -12,14 +12,14 @@
  <link rel="preload" href="fonts/ManropeVariable.woff2" as="font" type="font/woff2" crossorigin>
  <link rel="stylesheet" href="app.css?v=62">
  <link rel="stylesheet" href="books.css?v=59">
- <script type="module" src="book-reader.js?v=59"></script>
+ <script type="module" src="book-reader.js?v=79"></script>
  <script type="module" src="book-language.js?v=76"></script>
-<link rel="stylesheet" href="account.css?v=78"><script type="module" src="account-ui.js?v=78"></script><link rel="stylesheet" href="lab-extras-v67.css?v=70"><link rel="stylesheet" href="studio-v69.css?v=69"><script type="module" src="appearance-v67.js?v=69"></script><link rel="stylesheet" href="books-ux-v76.css?v=76"></head>
+<link rel="stylesheet" href="account.css?v=79"><script type="module" src="account-ui.js?v=79"></script><link rel="stylesheet" href="lab-extras-v67.css?v=70"><link rel="stylesheet" href="studio-v69.css?v=69"><script type="module" src="appearance-v67.js?v=69"></script><link rel="stylesheet" href="books-ux-v76.css?v=79"><link rel="stylesheet" href="ui-foundation-v79.css?v=79"><link rel="stylesheet" href="assistant-theme-v70.css?v=79"><link rel="stylesheet" href="vendor/katex/katex.min.css?v=48"><script defer src="vendor/katex/katex.min.js?v=48"></script><script type="module" src="books-assistant-v79.js?v=79"></script></head>
 <body class="books-body">
  <a class="skip" href="#booksMain">Đến nội dung</a>
  <header class="reading-header">
   <a class="brand" href="index.html" aria-label="Quanh Lab — Trang chủ"><img src="brand/quanh-mark.svg?v=37" alt="" width="48" height="42"><span class="brand-wordmark">QUANH <b>LAB</b></span></a>
-  <nav aria-label="Điều hướng"><a href="index.html#library">Thí nghiệm ↗</a><a href="books.html" aria-current="page">Sách giáo khoa</a></nav>
+  <nav aria-label="Điều hướng"><button id="openAssistant" type="button" aria-controls="aiAssistant" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4Z"/></svg><span>Trợ lý AI</span></button><a href="index.html#library">Thí nghiệm ↗</a><a href="books.html" aria-current="page">Sách giáo khoa</a></nav>
  </header>
  <main id="booksMain" class="books-main" tabindex="-1">
   <section id="bookShelf" aria-labelledby="booksTitle"><div class="books-heading"><span class="eyebrow">Kết nối tri thức với cuộc sống</span><h1 id="booksTitle">Sách giáo khoa</h1></div><div id="bookCards" class="textbook-cards"><p role="status">Đang mở thư viện sách…</p></div></section>

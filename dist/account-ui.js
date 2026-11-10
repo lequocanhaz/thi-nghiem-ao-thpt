@@ -1,6 +1,6 @@
 // Account controls are independent of routing and never rewrite experiment storage.
 import {i18n} from './i18n.js?v=54';
-import {createAuthClient} from './auth-client.js?v=78';
+import {createAuthClient,profilePhotoURL} from './auth-client.js?v=79';
 
 const copy={
  'vi-VN':{
@@ -84,11 +84,21 @@ export function installAccountUI({client=createAuthClient()}={}){
   <p class="account-local" data-account-copy="local"></p><a class="account-privacy" href="privacy.html" data-account-copy="privacy"></a>`;
  document.body.append(dialog);
  const $=s=>dialog.querySelector(s);
+ function avatar(host,initials,url){
+  let image=host.querySelector('img'),fallback=host.querySelector('.account-avatar-initial');
+  if(!fallback){host.textContent='';fallback=document.createElement('span');fallback.className='account-avatar-initial';host.append(fallback);image=document.createElement('img');image.alt='';image.referrerPolicy='no-referrer';image.hidden=true;host.append(image);
+   image.addEventListener('load',()=>{image.hidden=false;fallback.hidden=true;});
+   image.addEventListener('error',()=>{image.hidden=true;fallback.hidden=false;});
+  }
+  fallback.textContent=initials;
+  const safe=profilePhotoURL(url);if(image.dataset.url!==(safe||'')){image.hidden=true;fallback.hidden=false;image.dataset.url=safe||'';if(safe)image.src=safe;else image.removeAttribute('src');}
+ }
+
  function render(){
   const t=c(),signed=!!snapshot.user,unavailable=!snapshot.enabled,working=busy||['loading','busy'].includes(snapshot.status),reset=mode==='reset';
   button.querySelector('.account-trigger-label').textContent=signed?t.profile:t.open;button.setAttribute('aria-label',signed?t.profile:t.open);
   const initials=Array.from((snapshot.user?.displayName||snapshot.user?.email||'Q').trim()).slice(0,1).join('').toLocaleUpperCase();
-  button.querySelector('.account-trigger-avatar').textContent=initials;button.querySelector('.account-trigger-avatar').hidden=!signed;button.querySelector('svg').toggleAttribute('hidden',signed);
+  avatar(button.querySelector('.account-trigger-avatar'),initials,snapshot.user?.photoURL);button.querySelector('.account-trigger-avatar').hidden=!signed;button.querySelector('svg').toggleAttribute('hidden',signed);
   button.classList.toggle('is-signed-in',signed);button.title=signed?t.profile:t.open;
   dialog.lang=i18n.getLocale();$('#accountTitle').textContent=signed?t.profile:reset?t.reset:t.title;
   $('#accountIntro').textContent=signed?t.profileIntro:t.intro;$('#accountIntro').hidden=false;
@@ -115,7 +125,7 @@ export function installAccountUI({client=createAuthClient()}={}){
   $('#accountError').textContent=error?t[error]:'';$('#accountError').hidden=!error;
   if(signed){
    // Authenticated profile text is never inserted as HTML.
-   $('#accountAvatar').textContent=initials;
+   avatar($('#accountAvatar'),initials,snapshot.user.photoURL);
    $('#accountName').textContent=snapshot.user.displayName||t.account;$('#accountUserEmail').textContent=snapshot.user.email||'';
    $('#accountVerified').textContent=snapshot.user.emailVerified?t.verified:t.unverified;
    $('#accountVerified').classList.toggle('is-verified',snapshot.user.emailVerified);

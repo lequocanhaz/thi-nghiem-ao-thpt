@@ -24,6 +24,7 @@ for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','
 // Entry changes are cache versions plus the explicitly scoped visual-settings stylesheet; startup/banner bytes stay frozen.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
  let content=read(name).toString();
+ content=content.replace(/<link rel="stylesheet" href="ui-foundation-v79\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="library-selection-v77\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="observation-theme-v75\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="catalog-theme-v71\.css\?v=\d+">/g,'');

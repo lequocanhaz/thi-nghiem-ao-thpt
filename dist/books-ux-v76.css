@@ -70,3 +70,42 @@ html[data-appearance=dark] .books-body{--reader-surface:#2f2f2f;--reader-subtle:
 @media(prefers-reduced-motion:reduce){.books-body .textbook-card{transition:none}}
 .books-body .reading-toolbar button:disabled{background:var(--reader-subtle)!important;color:var(--reader-muted)!important;border-color:var(--reader-line);border-style:solid;cursor:not-allowed;opacity:.65!important}
 @media(max-width:620px){.books-body .reading-selects{grid-template-columns:112px minmax(0,1fr)}.books-body .reading-heading .back{min-height:44px}}
+/* v79: make saved reading position and the current lesson visible without truncation. */
+.books-body .book-current-lesson{flex-basis:100%;font-size:14px;font-weight:650;line-height:1.6;color:var(--reader-ink);overflow-wrap:anywhere}
+.books-body .textbook-card.has-reading-progress{border-color:var(--reader-focus)}
+.books-body .textbook-card.has-reading-progress .textbook-open{color:var(--reader-focus)}
+.books-body .book-reading-meta{font-size:14px}
+.books-body .reading-selects label{font-size:14px}
+.books-body .reading-heading,.books-body .reading-selects{min-width:0}
+.books-body .reading-heading h1{overflow-wrap:anywhere}
+.books-body .reading-tools #spreadMode:disabled{cursor:not-allowed}
+@media(max-width:620px){.books-body .book-current-lesson{margin-bottom:8px}.books-body .textbook-open{font-size:14px;flex-wrap:wrap;line-height:1.5}}
+.books-body .reading-header .brand{min-height:44px}
+@media(max-width:620px){
+ .books-body .reading-header .brand{max-width:calc(100% - 56px)}
+ .books-body .reading-header .brand>img{flex-shrink:0}
+ .books-body .reading-header .brand-wordmark{display:block;min-width:0;white-space:normal;line-height:1.15}
+ .books-body .page-navigation form{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;flex:1;max-width:calc(100% - 104px);gap:4px 8px}
+ .books-body .page-navigation form>label{flex-basis:100%}
+ .books-body .page-navigation form .page-go{flex:0 0 auto;width:auto}
+ .books-body .page-navigation form #bookPage{flex:0 1 58px;min-width:0}
+}
+/* Compact by default; enlarged text may wrap destinations onto another row. */
+@media(max-width:620px){
+ .books-body .reading-header{display:flex;position:relative;flex-wrap:wrap;gap:6px 2px}
+ .books-body .reading-header>.brand{max-width:calc(100% - 56px);flex:1 1 calc(100% - 56px)}
+ .books-body .reading-header nav.ql-language-ready{display:flex!important;flex-wrap:wrap;width:100%;gap:6px 2px;justify-content:flex-start}
+ .books-body .reading-header nav>a{display:block;align-content:center;text-align:center;flex:1 0 44px;min-width:min-content;overflow-wrap:normal;word-break:normal}
+ .books-body .reading-header nav.ql-language-ready>.ql-language-switch{width:88px!important;min-width:88px!important;padding:0!important;gap:0!important;border:0!important;margin:0!important}
+ .books-body .reading-header #appearanceToggle{position:absolute;top:10px;right:16px;margin:0}
+ .books-body .reading-header #openAccount{flex:0 0 44px}
+ .books-body .reading-header #openAssistant{display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;min-width:44px;min-height:44px;padding:8px}
+ .books-body .reading-header #openAssistant>span{display:none}
+ .books-body .reading-header #openAssistant svg{display:block;width:20px;height:20px;flex:none}
+}
+@media(max-width:620px){
+ .books-body .reading-header nav>a{order:1}
+ .books-body .reading-header nav>.ql-language-switch{order:2}
+ .books-body .reading-header #openAccount{order:3}
+ .books-body .reading-header #openAssistant{order:4}
+}

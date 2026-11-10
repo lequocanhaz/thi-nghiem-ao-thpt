@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {parseHTML} from 'linkedom';
+import {LabAssistant} from '../dist/assistant.js';
+const {document,window}=parseHTML('<html lang="vi"><body><button id="openAssistant"></button></body></html>');
+let id='ohm',fail=true;
+const chat=new LabAssistant({document,getContext:()=>({id,title:id}),endpoint:'https://fixture.invalid/chat',fetcher:async()=>fail?Response.json({error:'Thử gửi lại sau.'},{status:503}):Response.json({answer:'Câu trả lời thử.'})});
+chat.open();chat.input.value='Giữ câu hỏi';await chat.send();assert.equal(chat.status.dataset.state,'error');chat.close();chat.open();assert.equal(chat.status.textContent,'Thử gửi lại sau.','Reopening must retain the actionable error');assert.equal(chat.input.value,'Giữ câu hỏi');
+id='wave';chat.refreshContext();assert.equal(chat.status.hidden,true,'Previous lab errors must not leak into a different context');chat.input.value='Bản nháp bài sóng';id='ohm';chat.refreshContext();assert.equal(chat.status.textContent,'Thử gửi lại sau.');assert.equal(chat.input.value,'Giữ câu hỏi');
+const list=chat.q('.ai-messages');Object.defineProperties(list,{scrollHeight:{configurable:true,value:1000},clientHeight:{configurable:true,value:200}});list.scrollTop=150;chat.render();assert.equal(list.scrollTop,150,'Rendering must retain a reader scrolled away from the end');list.scrollTop=800;chat.render();assert.equal(list.scrollTop,1000,'A reader following the end should continue following it');
+let escaped=0;document.body.addEventListener('keydown',()=>escaped++);const typing=new window.Event('keydown',{bubbles:true,cancelable:true});Object.assign(typing,{key:' '});chat.input.dispatchEvent(typing);assert.equal(escaped,0,'Typing in chat must not reach lab shortcuts');
+fail=false;await chat.send();assert.equal(chat.status.hidden,true,'Successful retry clears the old error');assert.equal(chat.input.value,'');assert.equal(chat.thread().length,2);
+id='wave';chat.refreshContext();assert.equal(chat.input.value,'Bản nháp bài sóng');assert.equal(chat.thread().length,0);
+const textbook=new LabAssistant({document:parseHTML('<html lang="vi"><body></body></html>').document,getContext:()=>({id:'textbook-10',kind:'textbook',title:'Vật lí 10',page:23,lesson:'Lực và chuyển động'}),endpoint:'https://fixture.invalid/chat'});
+textbook.open();assert.equal(textbook.q('.ai-context').textContent,'Vật lí 10 · Trang 23');assert.equal(textbook.q('.ai-prompt').textContent,'Hiểu bài đang đọc');textbook.q('.ai-prompt').click();assert.match(textbook.input.value,/gửi ảnh/);assert.match(textbook.input.value,/trang tệp 23/);assert.match(textbook.input.value,/Lực và chuyển động/);
+textbook.document.documentElement.lang='en';textbook.render();textbook.q('.ai-prompt').click();assert.match(textbook.input.value,/attach a page image/);
+console.log('PASS assistant UX v79: per-context recoverable error retention, draft isolation, reader scroll retention, lab shortcut isolation and success recovery. DOM/transport fixtures only; no inference or physical mobile claim.');

@@ -92,3 +92,15 @@ html[data-appearance=dark] .ai-assistant .ai-compose button[type=submit] {backgr
 html[data-appearance=dark] .ai-image-dialog {background:#212121;color:#ececec;border-color:#4d4d4d}
 html[data-appearance=dark] .ai-image-dialog button {background:#303030;color:#ececec;border-color:#4d4d4d}
 @media(prefers-reduced-motion:reduce) {.ai-assistant * {scroll-behavior:auto}}
+
+/* v79: readable content and controls without clipping the conversation. */
+.ai-assistant :is(.ai-messages,.ai-message,.ai-compose,.ai-compose-actions){min-width:0}
+.ai-assistant .ai-message{overflow-wrap:anywhere}
+.ai-assistant .ai-message :is(pre,table){display:block;max-width:100%;overflow:auto;overscroll-behavior-inline:contain}
+.ai-assistant .ai-message pre{white-space:pre;tab-size:2}
+.ai-assistant .ai-status{max-height:30%;overflow:auto;overflow-wrap:anywhere}
+.ai-assistant .ai-attachment button{width:44px;height:44px;min-width:44px;min-height:44px;right:-4px;top:-4px;touch-action:manipulation}
+.ai-assistant :is(button,a){touch-action:manipulation}
+.ai-assistant .ai-head button{min-width:44px;min-height:44px;flex:0 0 44px}
+.ai-assistant .ai-compose textarea{scroll-margin-block:16px}
+@media(max-width:390px){.ai-assistant .ai-compose-actions{gap:8px}.ai-assistant .ai-attachment-hint{max-width:90px;line-height:1.5}}

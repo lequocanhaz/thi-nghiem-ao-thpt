@@ -1,7 +1,7 @@
 import {boundedPage,spreadPages,turnPage,pageImage} from './book-model.js?v=40';
 import {bindBookTouch} from './book-touch.js?v=59';
 import {getLocale,onLocaleChange} from './i18n.js?v=54';
-import {localizedBookTitle,localizedBookString,bookChapterOptionGroups,bookShelfCards,pageStatusText} from './book-copy.js?v=58';
+import {localizedBookTitle,localizedBookString,bookChapterOptionGroups,bookShelfCards,pageStatusText,localizedLessonTitle,localizedChapterTitle} from './book-copy.js?v=58';
 
 const $=s=>document.querySelector(s);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -19,6 +19,30 @@ function imageFor(grade,number){
 }
 function shouldUseTwo(){return preferTwo&&zoom===1&&window.innerWidth>=860;}
 function updateURL(push=false){const url=new URL('books.html',location.href);if(book){url.searchParams.set('grade',book.grade);url.searchParams.set('page',page);}history[push?'pushState':'replaceState']({},'',url);}
+function refreshShelfProgress(){
+ for(const card of document.querySelectorAll('#bookCards .textbook-card')){
+  const grade=Number(new URL(card.href,location.href).searchParams.get('grade')),item=catalog.find(b=>b.grade===grade);
+  if(!item)continue;
+  const saved=savedPage(grade,item.pages),continuing=saved>1;
+  card.classList.toggle('has-reading-progress',continuing);
+  const action=continuing?localizedBookString('Tiếp tục trang ','Continue at page ')+saved:localizedBookString('Đọc sách','Read book');
+  const label=card.querySelector('.textbook-open');
+  label.replaceChildren(document.createTextNode(action));
+  const arrow=document.createElement('span');arrow.setAttribute('aria-hidden','true');arrow.textContent='↗';label.append(arrow);
+  card.setAttribute('aria-label',continuing?localizedBookTitle(item)+' · '+action:action+' '+localizedBookTitle(item));
+ }
+}
+function readingLocation(){
+ if(page===1)return localizedBookString('Bìa sách','Cover');
+ if(page===book.contentsPage)return localizedBookString('Mục lục sách','Contents');
+ const lesson=[...book.lessons].reverse().find(item=>item.page<=page);
+ const chapter=[...book.chapters].map((item,index)=>({item,index})).reverse().find(({item})=>item.page<=page);
+ if(chapter&&(!lesson||chapter.item.page>lesson.page))return localizedChapterTitle(book,chapter.index);
+ return lesson?localizedBookString('Bài ','Lesson ')+lesson.number+'. '+localizedLessonTitle(book,lesson):localizedBookTitle(book);
+}
+export function getReadingContext(){
+ return book?{id:'textbook-'+book.grade,kind:'textbook',title:localizedBookTitle(book),grade:book.grade,page,pages:book.pages,lesson:readingLocation()}:null;
+}
 function updateControls(){
  if(!book)return;
  const visible=spreadPages(page,book.pages,two);
@@ -26,10 +50,20 @@ function updateControls(){
  $('#bookPrevious').disabled=busy||visible[0]===1;$('#bookNext').disabled=busy||visible.at(-1)===book.pages;
  $('#zoomOut').disabled=zoom<=1;$('#zoomIn').disabled=zoom>=2.5;
  $('#zoomValue').textContent=Math.round(zoom*100)+'%';$('#spreadMode').setAttribute('aria-pressed',String(two));$('#spreadMode').textContent=two?localizedBookString('Một trang','Single page'):localizedBookString('Hai trang','Two pages');
+ const spreadUnavailable=window.innerWidth<860;
+ $('#spreadMode').disabled=spreadUnavailable;
+ $('#spreadMode').title=spreadUnavailable?localizedBookString('Mở rộng cửa sổ để đọc hai trang cạnh nhau.','Widen the window to read two pages side by side.'):'';
+ $('#spreadMode').setAttribute('aria-label',spreadUnavailable?$('#spreadMode').title:$('#spreadMode').textContent);
+ let locationLabel=$('#bookCurrentLesson');
+ if(!locationLabel){locationLabel=document.createElement('p');locationLabel.id='bookCurrentLesson';locationLabel.className='book-current-lesson';$('.book-reading-meta').prepend(locationLabel);}
+ const locationText=localizedBookString('Đang đọc: ','Reading: ')+readingLocation();
+ if(locationLabel.textContent!==locationText)locationLabel.textContent=locationText;
+ $('#bookChapter').title=readingLocation();
  $('#bookStage').setAttribute('aria-busy',String(busy));$('#bookLoading').hidden=!busy;
  const printed=visible.map(n=>n-book.printedOffset).filter(n=>n>0);
  $('#bookPageNote').textContent=printed.length?localizedBookString('Trang in trong sách: ','Printed textbook page: ')+printed.join(localizedBookString(' và ',' and ')):localizedBookString('Số trên thanh điều khiển là thứ tự trang tệp.','The toolbar uses the file page order.');$('#bookStage').style.touchAction=zoom>1||browserZoomed()?'pan-x pan-y pinch-zoom':'pan-y pinch-zoom';
  const chapter=[...book.chapters,...book.lessons].sort((a,b)=>b.page-a.page).find(c=>c.page<=page);$('#bookChapter').value=String(page===1?1:page===book.contentsPage?book.contentsPage:chapter?.page||0);
+ document.dispatchEvent(new window.CustomEvent('quanh-book-context-change',{detail:getReadingContext()}));
 }
 function sizePaper(){
  if(!book)return;
@@ -118,7 +152,7 @@ async function openBook(grade,value,{push=false}={}){
 function refreshBookLabels(){
  if(!catalog.length)return;
  const cards=$('#bookCards');
- if(cards)cards.innerHTML=bookShelfCards(catalog,escape);
+ if(cards){cards.innerHTML=bookShelfCards(catalog,escape);refreshShelfProgress();}
  if(!book){document.title=localizedBookString('Sách giáo khoa','Textbooks')+' · Quanh Lab';return;}
  const chapter=$('#bookChapter'),selected=chapter.value;
  $('#readingTitle').textContent=localizedBookTitle(book);
@@ -140,7 +174,8 @@ function showShelf(){
  touchController?.reset();discardTurn();++token;book=null;busy=false;
  $('#reader').hidden=true;$('#bookShelf').hidden=false;
  document.title=localizedBookString('Sách giáo khoa','Textbooks')+' · Quanh Lab';
- $('#paperStack').replaceChildren();cache.clear();
+ $('#paperStack').replaceChildren();cache.clear();refreshShelfProgress();
+ document.dispatchEvent(new window.CustomEvent('quanh-book-context-change',{detail:null}));
  if(wasReading){$('#booksTitle').setAttribute('tabindex','-1');$('#booksTitle').focus?.({preventScroll:true});}
 }
 async function readRoute(){const params=new URLSearchParams(location.search);if(params.has('grade'))await openBook(params.get('grade'),params.has('page')?params.get('page'):undefined);else showShelf();}
@@ -195,7 +230,7 @@ if(typeof ResizeObserver!=='undefined')new ResizeObserver(sizePaper).observe($('
 
 try{
  const response=await fetch('books/catalog.json?v=44');if(!response.ok)throw Error('catalog-load');catalog=await response.json();
- $('#bookCards').innerHTML=bookShelfCards(catalog,escape);
+ $('#bookCards').innerHTML=bookShelfCards(catalog,escape);refreshShelfProgress();
  $('#bookCards').addEventListener('click',event=>{const link=event.target.closest('a');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();openBook(new URL(link.href).searchParams.get('grade'),undefined,{push:true}).then(()=>$('#readingTitle').focus?.({preventScroll:true}));});
  await readRoute();
-}catch{$('#bookCards').innerHTML='<p role="alert">Chưa mở được thư viện sách. <a href="books.html">Tải lại</a></p>';}
+}catch{$('#bookCards').innerHTML='<p role="alert">'+localizedBookString('Chưa mở được thư viện sách.','Could not open the textbook library.')+' <a href="books.html">'+localizedBookString('Tải lại','Reload')+'</a></p>';}

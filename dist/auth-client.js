@@ -73,9 +73,13 @@ export function validateAuthConfig(config){
 export function authAvailability(config=authConfig){const {enabled,errorCode}=validateAuthConfig(config);return Object.freeze({enabled,errorCode});}
 function localSDKLoader(){let attempt=0;return ()=>{const retry=attempt++?'&retry='+attempt:'';return import('./vendor/firebase-auth.js?v=78'+retry);};}
 function defaultStorage(){try{return globalThis.localStorage;}catch{return null;}}
+export function profilePhotoURL(value){
+ if(typeof value!=='string'||value.length>2048)return null;
+ try{const url=new URL(value);return url.protocol==='https:'&&!url.username&&!url.password&&/(^|\.)googleusercontent\.com$/i.test(url.hostname)?url.href:null;}catch{return null;}
+}
 function safeUser(user){
  if(!user)return null;
- return Object.freeze({uid:String(user.uid||'').slice(0,128),email:typeof user.email==='string'?user.email.slice(0,254):null,displayName:typeof user.displayName==='string'?user.displayName.slice(0,200):null,emailVerified:user.emailVerified===true,providerIds:Object.freeze([...new Set((user.providerData||[]).map(p=>p.providerId).filter(p=>typeof p==='string'))])});
+ return Object.freeze({uid:String(user.uid||'').slice(0,128),email:typeof user.email==='string'?user.email.slice(0,254):null,displayName:typeof user.displayName==='string'?user.displayName.slice(0,200):null,photoURL:profilePhotoURL(user.photoURL),emailVerified:user.emailVerified===true,providerIds:Object.freeze([...new Set((user.providerData||[]).map(p=>p.providerId).filter(p=>typeof p==='string'))])});
 }
 function credentials({email,password}={},signup=false){
  email=typeof email==='string'?email.trim():'';

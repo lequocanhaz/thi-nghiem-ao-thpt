@@ -244,3 +244,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - `docs/account-profile-v78.md`: profile card, avatar chữ cái, sửa tên bằng Firebase updateProfile, header tự nhận phiên sau reload; Google SVG không còn viền đen từ CSS chung.
 - UI/SDK query v78, local Firebase bundle phải export updateProfile; không dùng SDK cache v64 cho tính năng sửa tên.
 - Quản lý/xóa tài khoản thu gọn, giữ xác nhận và dữ liệu phiên thí nghiệm. Kiểm thử adapter/DOM mới nằm trong npm check; browser-account-profile-v78.py dùng SDK fixture và Chromium, không khẳng định Google OAuth hay Firebase production đã nghiệm thu.
+
+## Hoàn thiện UI/UX Phase 01 v79 (10/11/2026)
+
+- Đối chiếu Word chủ dự án và triển khai P0→P1→P2 trong docs/UI_UX_SPEC_V79.md; ui-foundation-v79.css giữ nhận diện/mô hình, tăng44px/cỡ nhãn/focus và bound data. Mobile placeReadouts chuyển cùng node sau controls, restore khi desktop/fullscreen/present.
+- Sách hiện tên bài đang đọc/đọc tiếp theo trang đã lưu; getReadingContext() cung cấp metadata cho books-assistant-v79.js. AI không có OCR nội dung sách mặc định; không được bịa nội dung trang quét.
+- AI giữ lỗi theo ngữ cảnh và vị trí cuộn; hồ sơ tải ảnh Google HTTPS allowlist với fallback chữ cái. Chat vẫn trong memory từng trang, không thêm storage/backend.
+- Entry JS/CSS v79; SDK Firebase vẫn v78 vì export không đổi. Giữ40bài chính+260bổ trợ và đủ388trang. Checks mới book-ux-v79/assistant-ux-v79/profile-avatar-v79 nằm trong npm check; browser-ui-spec-v79.py kiểm ma trận sáu width và fixtures, không chứng nhận Safari/thiết bị thật.

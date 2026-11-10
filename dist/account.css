@@ -112,3 +112,8 @@ html[data-appearance=dark] .account-dialog .account-destructive{background:#9329
 html[data-appearance=dark] .account-dialog .account-manage summary{background:transparent}
 html[data-appearance=dark] .account-dialog .account-google{background:#fff;color:#18212e;border-color:#b8c2d0}
 html[data-appearance=dark] .account-dialog .account-google:hover:enabled{background:#e8edf5}
+
+.account-trigger-avatar,.account-avatar{overflow:hidden;position:relative}
+.account-trigger-avatar>img,.account-avatar>img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.account-trigger-avatar>.account-avatar-initial,.account-avatar>.account-avatar-initial{display:grid;place-items:center;width:100%;height:100%}
+.account-trigger-avatar>[hidden],.account-avatar>[hidden]{display:none!important}

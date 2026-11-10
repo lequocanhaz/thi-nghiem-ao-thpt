@@ -1,0 +1,68 @@
+/* Phase 01: readable controls and bounded workspaces; existing model colors stay intact. */
+body{--ui-target:44px;--ui-label-size:14px;--ui-focus:var(--ux-focus,#245bd7)}
+.header>.brand{min-height:var(--ui-target)}
+.lab :is(.lab-heading>div,.lab-selector,.stage-tools,.parameter-label,.value-entry,.table-card,.chart-card){min-width:0}
+.lab .lab-heading h1{overflow-wrap:anywhere}
+.lab .lab-heading :is(.icon-button,.session-menu>summary){min-width:var(--ui-target);min-height:var(--ui-target);height:auto}
+.lab .lab-selector select{min-height:var(--ui-target);height:auto;font-size:14px}
+.lab :is(button,summary,select,input[type=number]){min-height:var(--ui-target)}
+.lab :is(.projection-switch button,.stage-tools>button,.direct-tools button,.space-controls button){min-width:var(--ui-target)}
+.lab .parameter-label{flex-wrap:wrap;gap:8px}
+.lab .parameter-label label{font-size:var(--ui-label-size);line-height:1.5}
+.lab .value-entry{min-height:var(--ui-target);max-width:100%;gap:8px}
+.lab .value-entry input{min-width:0;min-height:var(--ui-target);font-size:18px}
+.lab .parameter-bounds{font-size:12px;line-height:1.5}
+.lab .control-body :is(select,input[type=number]){font-size:16px}
+.lab .parameter input[type=range]{min-height:var(--ui-target);touch-action:pan-y}
+.lab :is(.control-body,.research-dock,.data-layout,#panel,.table-card,.chart-card,#graph){min-width:0;max-width:100%}
+.lab .table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain}
+.lab .table-scroll:focus-visible{outline:3px solid var(--ui-focus);outline-offset:2px}
+.lab :is(.work-tabs,.graph-options,.data-actions){flex-wrap:wrap}
+.lab :is(button,a,summary,input,select,textarea):focus-visible,.header :is(button,a):focus-visible{outline:3px solid var(--ui-focus);outline-offset:3px;scroll-margin-block:90px}
+.lab .parameter:focus-within{border-color:var(--ui-focus)}
+.lab :is(.control-body,.table-scroll){scrollbar-gutter:stable}
+@media(max-width:1100px){
+ .lab .control-body{max-height:none;height:auto;overflow:visible}
+ .lab .lab-heading{align-items:flex-start}
+}
+@media(max-width:620px){
+ .lab .lab-breadcrumb{flex-wrap:wrap}
+ .lab .lab-selector{flex:1 1 180px;min-width:0}
+ .lab .lab-selector select{width:100%;font-size:14px}
+ .lab .lab-heading>div:first-child{flex:1 1 180px}
+ .lab .lab-header-actions{flex:0 0 auto}
+ .lab .lab-header-actions .icon-button,.lab .session-menu>summary{width:44px;min-width:44px}
+ .lab .lab-intro{align-items:flex-start;flex-wrap:wrap}
+ .lab .lab-intro p{font-size:14px;flex:1 1 180px}
+ .lab .stage-tools{flex-wrap:wrap;gap:8px}
+ .lab .projection-switch button{min-width:44px;min-height:44px}
+ .lab .stage-tools :is(.view-menu>summary,.visual-settings>summary){min-height:44px}
+ .lab .experiment-work>.readouts{margin:0 0 16px;border:1px solid var(--ux-line);border-radius:12px;background:var(--ql-surface,#fff)}
+ .lab .readouts{grid-template-columns:repeat(auto-fit,minmax(min(96px,100%),1fr))}
+ .lab .meter>span,.lab .meter strong small{font-size:12px;line-height:1.5}
+ .lab .meter strong{overflow-wrap:anywhere}
+ .lab .control-body{grid-template-columns:minmax(0,1fr);padding:12px 16px}
+ .lab .work-tabs{display:flex;flex-wrap:wrap;gap:4px;padding:6px}
+ .lab .work-tabs button{flex:1 1 76px;font-size:13px;min-height:44px;line-height:1.4}
+ .lab .dock-title{grid-template-columns:minmax(0,1fr) 44px 44px}
+ .lab .graph-options label{min-width:0;max-width:100%;font-size:14px}
+ .lab .graph-options select{min-width:0;max-width:100%;font-size:16px}
+ .lab .lab-navigation{flex-wrap:wrap;gap:8px}
+ .lab .lab-navigation button{flex:1 1 132px;white-space:normal}
+ .lab .workspace-toolbar button,.lab .workspace-toolbar .layout-menu>summary{white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){
+ .lab,.lab :is(button,a,input,select,textarea,summary,.controls,.research-dock,.workspace-toolbar),.header *,#library :is(button,a,input,select,summary,.experiment-card){scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+@media(forced-colors:active){
+ .lab :is(button,a,summary,input,select,textarea):focus-visible,.header :is(button,a):focus-visible{outline-color:Highlight}
+}
+/* Existing interaction metadata makes dynamic and survey activities distinguishable. */
+#library .card-body .card-interactions{display:flex;grid-column:1/-1;flex-wrap:wrap;gap:6px;margin-top:4px}
+#library .card-interactions .interaction-tag{display:inline-block;max-width:100%;padding:4px 8px;border:1px solid var(--catalog-line);border-radius:6px;background:var(--catalog-subtle,var(--ux-surface));color:var(--catalog-text);font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+#library .collection-switch button{min-width:44px;min-height:46px;white-space:normal}
+#library .collection-switch button[aria-pressed=true]{font-weight:700;box-shadow:inset 0 -3px 0 currentColor}
+@media(max-width:620px){
+ #library .collection-switch button{flex-wrap:wrap;font-size:13px;padding:10px 8px;gap:4px 6px}
+ #library .card-interactions .interaction-tag{font-size:12px}
+}
