@@ -1,0 +1,27 @@
+/* Recorded-data feedback uses real state from the graph controller. */
+.lab #graph[data-state=empty]{display:grid;place-items:center;min-height:220px;height:auto;padding:24px 12px;background:transparent}
+.lab .graph-empty-state{max-width:40ch;text-align:center;color:var(--ux-muted,#59616c);line-height:1.65;overflow-wrap:anywhere}
+.lab .graph-empty-state h3{margin:0 0 8px;color:var(--ux-ink,#20242a);font-size:18px;font-weight:650;line-height:1.4}
+.lab .graph-empty-state p{margin:0 0 16px;font-size:14px}
+.lab .graph-empty-state button{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;max-width:100%;height:auto;padding:10px 16px;border:1px solid var(--ux-line,#dce0e6);border-radius:8px;background:var(--ux-surface,#f5f6f8);color:var(--ux-ink,#20242a);font:inherit;font-size:14px;font-weight:600;white-space:normal;line-height:1.5;overflow-wrap:anywhere}
+.lab #graphStateCaption{margin:10px 0 0;color:var(--ux-muted,#59616c);font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+html[data-appearance=dark] .lab .graph-empty-state button{background:var(--ux-surface);color:var(--ux-ink);border-color:var(--ux-line)}
+@media(max-width:620px){
+ /* Stack decorative icons above labels. Anonymous text flex items wrap at large text sizes. */
+ .lab .workspace-toolbar{align-items:stretch;margin:0;padding:6px 8px max(6px,env(safe-area-inset-bottom));gap:4px}
+ .lab .workspace-toolbar>div:first-child{align-items:stretch;gap:4px}
+ .lab .workspace-toolbar>div:first-child>button{position:relative;display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:4px;min-width:44px;min-height:64px;height:auto;padding:6px 4px;line-height:1.35;white-space:normal;overflow-wrap:anywhere;text-align:center}
+ .lab .workspace-toolbar>div:first-child>button>svg{align-self:center;flex:0 0 16px;width:16px;height:16px}
+ .lab .workspace-toolbar>div:first-child>button>.measurement-count{position:absolute;top:3px;right:3px;min-width:16px;margin:0;font-size:10px;line-height:1.4;max-width:calc(100% - 8px)}
+ .lab .workspace-toolbar>div:last-child{align-self:stretch}
+ .lab .workspace-toolbar .layout-menu{height:100%}
+ .lab .workspace-toolbar .layout-menu>summary{min-height:64px;height:100%;box-sizing:border-box}
+ .lab{padding-bottom:max(92px,calc(var(--workspace-toolbar-height,77px) + 24px))}
+ body:has(.lab) footer{padding-bottom:max(88px,calc(var(--workspace-toolbar-height,77px) + 24px))}
+ .lab :is(button,a,summary,input,select,textarea,[tabindex]){scroll-margin-bottom:max(90px,calc(var(--workspace-toolbar-height,77px) + 16px))}
+ body:has(.lab) #toast{bottom:calc(var(--workspace-toolbar-height,77px) + 16px)}
+ .lab #graph[data-state=empty]{min-height:200px;padding:20px 8px}
+}
+/* Axis names and units live in wrapping HTML, outside the SVG clipping rectangle. */
+.lab .graph-axis-labels{font-size:14px;line-height:1.65;color:var(--ux-muted,#526176);padding:10px 4px;overflow-wrap:anywhere;min-width:0;max-width:100%}
+.lab #graph .plot-axis-title{display:none}

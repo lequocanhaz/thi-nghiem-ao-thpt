@@ -4,6 +4,8 @@ import {getLocale,onLocaleChange} from './i18n.js?v=54';
 import {localizedBookTitle,localizedBookString,bookChapterOptionGroups,bookShelfCards,pageStatusText,localizedLessonTitle,localizedChapterTitle} from './book-copy.js?v=58';
 
 const $=s=>document.querySelector(s);
+// Keep the original alert/retry control next to the page region, including failed first loads.
+$('.book-stage-wrap').append($('#bookError'));
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let focusReturn=null;
 let catalog=[],book=null,page=1,zoom=1,preferTwo=true,two=false,token=0,busy=false,failedPage=null,activeTurn=null,touchController=null;
@@ -16,6 +18,19 @@ function imageFor(grade,number){
  if(cache.has(src)){const item=cache.get(src);cache.delete(src);cache.set(src,item);return item;}
  const pending=new Promise((resolve,reject)=>{const image=new Image();image.decoding='async';image.onload=async()=>{try{await image.decode?.();}catch{}resolve(image);};image.onerror=()=>{cache.delete(src);reject(Error('image-load'));};image.src=src;});
  cache.set(src,pending);while(cache.size>6)cache.delete(cache.keys().next().value);return pending;
+}
+function showBookError(target){
+ failedPage=target;
+ const alert=$('#bookError');
+ alert.hidden=false;
+ alert.querySelector('span').textContent=localizedBookString('Chưa tải được trang sách.','Could not load the textbook page.');
+ $('#retryBook').textContent=localizedBookString('Thử lại','Try again');
+ $('#bookStatus').textContent=localizedBookString('Chưa tải được trang sách.','Could not load the textbook page.');
+ window.requestAnimationFrame?.(()=>{
+  if(alert.hidden||$('#reader').hidden)return;
+  const rect=alert.getBoundingClientRect(),height=window.visualViewport?.height||window.innerHeight;
+  if(rect.top<0||rect.bottom>height)alert.scrollIntoView?.({block:'nearest',behavior:'instant'});
+ });
 }
 function shouldUseTwo(){return preferTwo&&zoom===1&&window.innerWidth>=860;}
 function updateURL(push=false){const url=new URL('books.html',location.href);if(book){url.searchParams.set('grade',book.grade);url.searchParams.set('page',page);}history[push?'pushState':'replaceState']({},'',url);}
@@ -103,7 +118,7 @@ async function finishTurn(commit){
   if(!reduced){p.animation=p.layer.animate?.([{transform:p.layer.style.transform||'rotateY(0deg)'},{transform:`rotateY(${(p.direction>0?-165:165)*(commit?1:0)}deg)`}],{duration:Math.max(120,280*Math.abs((commit?1:0)-p.progress)),easing:'ease-out',fill:'forwards'});try{await p.animation?.finished;}catch{}}
   if(activeTurn!==p)return;
   if(commit)await showPage(p.target,{fromTurn:true});
- }catch{if(activeTurn===p){failedPage=p.target;$('#bookError').hidden=false;$('#bookStatus').textContent=localizedBookString('Chưa tải được trang sách.','Could not load the textbook page.');}}
+ }catch{if(activeTurn===p){showBookError(p.target);}}
  finally{if(activeTurn===p){discardTurn();busy=false;updateControls();}}
 }
 async function showPage(value,{animate=false,direction=1,push=false,fromTurn=false}={}){
@@ -135,7 +150,7 @@ async function showPage(value,{animate=false,direction=1,push=false,fromTurn=fal
   const nearby=[numbers[0]-1,numbers.at(-1)+1].filter(n=>n>=1&&n<=book.pages);
   nearby.forEach(n=>{imageFor(book.grade,n).catch(()=>{});});
  }catch{
-  if(generation===token){failedPage=target;$('#bookError').hidden=false;$('#bookStatus').textContent=localizedBookString('Chưa tải được trang sách.','Could not load the textbook page.');}
+  if(generation===token){showBookError(target);}
  }finally{if(generation===token){busy=false;updateControls();}}
 }
 async function openBook(grade,value,{push=false}={}){

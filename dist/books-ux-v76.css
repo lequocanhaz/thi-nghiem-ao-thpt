@@ -109,3 +109,11 @@ html[data-appearance=dark] .books-body{--reader-surface:#2f2f2f;--reader-subtle:
  .books-body .reading-header #openAccount{order:3}
  .books-body .reading-header #openAssistant{order:4}
 }
+/* Failed page images keep a retry beside the page, without discarding a loaded spread. */
+.books-body .book-stage-wrap>.book-error{position:absolute;inset:12px 12px auto;z-index:8;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;margin:0;padding:12px;border-color:#b65d42;background:#fff6f1;color:#74301c;box-shadow:0 4px 16px #0002;font-size:14px;line-height:1.5}
+.books-body .book-stage-wrap>.book-error>span{min-width:0;overflow-wrap:anywhere}
+.books-body .book-stage-wrap>.book-error>button{min-width:44px;min-height:44px;height:auto;padding:8px 12px;border:1px solid #b65d42;border-radius:8px;background:#fff;color:#74301c;font:inherit;font-weight:650;line-height:1.5;white-space:normal}
+.books-body .book-stage-wrap>.book-error>button:focus-visible{outline:3px solid var(--reader-focus);outline-offset:3px}
+html[data-appearance=dark] .books-body .book-stage-wrap>.book-error{background:#3e2928;color:#ffc6be;border-color:#b36c6c}
+html[data-appearance=dark] .books-body .book-stage-wrap>.book-error>button{background:#553333;color:#ffe1dc;border-color:#d48c86}
+@media(max-width:390px){.books-body .book-stage-wrap>.book-error{inset:8px 8px auto;padding:8px}}

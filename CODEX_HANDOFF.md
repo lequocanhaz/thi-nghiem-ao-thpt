@@ -259,3 +259,11 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Bỏ append AI cũ ở books-assistant-v79.js, entryquery80 (tênfile giữv79). Headernormalize phụ trách thứtự; đừng khôi phục appendcũ gây race. Entrypoint mớiselfhost, không thêmSDK/backend.
 - header-ui-v80.mjs thêm npmcheck; browser-visual-v80.py kiểm headerutility và workflow. Chỉ báo deployed sau Pages thành công, không đồng nhất browseremulation với thiết bị/Safari thật.
 - QA v80:64/64 browsercasesPASS,0pageerror; includes utility action listeners/VIEN/theme/active nav, signedavatar clipping, numericcontrast andpresent/print. Fixture/emulation scope ghi docs/VISUAL_V80.md, không gọi là Safari/physical acceptance.
+
+## Trạng thái dữ liệu và phục hồi UI v81 (11/11/2026)
+
+- Xem docs/UI_UX_GAPS_V81.md: empty/othermode/nonfinite graph UI, nhãn trụcHTML ngoàiSVG và caption điểm thực. Không sửa analytics/plot-grid/science. #graphEmptyCTA dùng actionrecord cũ, focus sau thao tác tới điểm thực; helper giữ nút khi refresh cùng trạng thái.
+- workspace-insets-v81.js đo toolbar thật, CSStextresize xếpicon trên chữ và reserve đáy/toast. Observer chỉ theo #main directreplacement/ResizeObserver, không theo từngtick/ảnhSVG; route/chart/chat giữ hành vi v79/v80.
+- #bookError/#retryBook giữ cùngnode cạnh trang sách, lỗi không nằm dưới vùngtrống; ảnhthaythếlỗi giữ trang/zoom đã tải. Bookreader/helper/CSSentryquery81.
+- AI kệ sách có nhãn/gợi ý đúng; localehelper microtask tránhdoc.lang cũ. Lỗi pending lưu sourcekey; offcontext dùng thông báo tạm, không ghi đè lỗi currentkey.
+- assistant-navigation-v81.js chỉ cảnh báo link tải tài liệu mới khi có chat/pending/draft/ảnh; không persistence/backend. Currenttextarea authoritative thay stale draftMap; sameURLnopasthash brand/kệ sách reload phải guard, explicitfragment SPA không guard. Mởtabmới nativeanchor noopener giữ tài liệu nguồn; không tuyên bố chat chung hoặcBack/reload restore.

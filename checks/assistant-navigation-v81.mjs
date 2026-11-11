@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {parseHTML} from 'linkedom';
+import {hasConversationWork,installConversationNavigation} from '../dist/assistant-navigation-v81.js';
+const {document,window}=parseHTML('<!doctype html><html lang="vi"><body><a id="books" href="books.html">Books</a><a id="brand" href="./">Home</a><a id="hash" href="#library">Library</a><a id="new" href="books.html" target="_blank">New</a><a id="download" href="books.html" download>Download</a></body></html>');
+let focused,assigned;window.HTMLElement.prototype.focus=function(){focused=this;};window.HTMLElement.prototype.showModal=function(){this.setAttribute('open','');};window.HTMLElement.prototype.close=function(){this.removeAttribute('open');};
+const browser={location:{href:'https://lab.example/#lab/ohm',assign:url=>assigned=url}};
+const assistant={currentKey:'ohm',input:{value:''},threads:new Map(),drafts:new Map(),attachments:new Map()};
+assert.equal(hasConversationWork(assistant),false);assistant.drafts.set('ohm','stale deleted draft');assert.equal(hasConversationWork(assistant),false);assistant.drafts.set('lens','inactive draft');assert.equal(hasConversationWork(assistant),true);assistant.drafts.clear();
+const guard=installConversationNavigation({assistant,document,window:browser});
+function click(selector,extra={}){const event=new window.Event('click',{bubbles:true,cancelable:true});Object.assign(event,{button:0,...extra});document.querySelector(selector).dispatchEvent(event);return event;}
+assert.equal(click('#books').defaultPrevented,false,'No extra flow when there is no conversation');
+assistant.busy=true;
+for(const selector of ['#hash','#new','#download'])assert.equal(click(selector).defaultPrevented,false,selector);
+assert.equal(click('#books',{ctrlKey:true}).defaultPrevented,false);
+assert.equal(click('#books').defaultPrevented,true);const modal=document.querySelector('#conversationNavigation');assert.equal(modal.hasAttribute('open'),true);assert.equal(focused,modal.querySelector('[data-conversation-stay]'));
+assert.equal(modal.querySelector('[data-conversation-new-tab]').getAttribute('href'),'https://lab.example/books.html');assert.equal(modal.querySelector('[data-conversation-new-tab]').rel,'noopener');
+click('[data-conversation-stay]');assert.equal(assistant.busy,true);assert.equal(modal.hasAttribute('open'),false);assert.equal(focused,document.querySelector('#books'));
+assert.equal(click('#brand').defaultPrevented,true,'A same-path link without an explicit fragment reloads the document');
+click('[data-conversation-leave]');assert.equal(assigned,'https://lab.example/');
+browser.location.href='https://lab.example/books.html';assistant.busy=false;assistant.input.value='draft';document.documentElement.lang='en-US';assert.equal(click('#books').defaultPrevented,true,'Active bookshelf link also reloads');assert.match(modal.querySelector('h2').textContent,/Keep this conversation/);
+click('[data-conversation-stay]');assistant.input.value='';assistant.attachments.set('ohm',[{id:'image'}]);assert.equal(guard.hasWork(),true);assert.equal(click('#books').defaultPrevented,true,'Image-only work is protected');
+click('[data-conversation-new-tab]');await new Promise(queueMicrotask);assert.equal(modal.hasAttribute('open'),false);assert.equal(assistant.attachments.get('ohm').length,1,'New-tab action leaves original work untouched; native popup verified in Chromium');
+guard.destroy();assert.equal(document.querySelector('#conversationNavigation'),null);assert.equal(click('#books').defaultPrevented,false);
+console.log('PASS conversation navigation v81: no-work/SPA/modifier/download/newtab bypass, explicit stay/leave/newtab, pending/images retained, same-URL reload guard, stale draft handling and localized text. Native tabs/dialog behavior is tested separately.');

@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {parseHTML} from 'linkedom';
+import {renderGraphFeedback,measuredGraphState} from '../dist/graph-feedback-v81.js';
+const {document}=parseHTML('<!doctype html><html><body><div id="chart"><div id="graph"></div></div></body></html>');
+const host=document.querySelector('#graph'),rows=[],graph={points:[],pointRows:[],excludedModes:0,xLabel:'U (V)',yLabel:'I (A)'};
+const render=patch=>renderGraphFeedback({host,graph,rows,measured:true,...patch});
+assert.equal(render(),true);assert.equal(host.dataset.state,'empty');assert.match(host.textContent,/Chưa có điểm đo/);assert.equal(host.querySelector('svg'),null);
+const button=host.querySelector('[data-action=record]');render();assert.equal(host.querySelector('[data-action=record]'),button,'Repeated refresh does not replace the focused recovery action');
+assert.match(document.querySelector('#graphAxisLabels').textContent,/Trục x: U \(V\); Trục y: I \(A\)/);
+const data=[{values:[6,0.6]}],copy=structuredClone(data);const other={...graph,excludedModes:1};assert.equal(measuredGraphState(data,other),'other-mode');render({rows:data,graph:other});assert.match(host.textContent,/chế độ khác/);assert.deepEqual(data,copy);
+render({rows:data,graph,valid:false,locale:'en-US'});assert.match(host.textContent,/No valid pair/);assert.equal(host.querySelector('button').hasAttribute('disabled'),true);
+const ready={...graph,points:[[6,0.6]],pointRows:[3]};assert.equal(render({rows:data,graph:ready,selectedRow:3,format:String}),false);assert.equal(host.dataset.state,'ready');assert.match(document.querySelector('#graphStateCaption').textContent,/Lần 4.*U \(V\): 6; I \(A\): 0.6/);
+render({rows:data,graph:{...ready,xLabel:'<img src=x onerror=alert(1)>'},locale:'en-US'});assert.equal(document.querySelector('#graphAxisLabels img'),null);assert.match(document.querySelector('#graphAxisLabels').textContent,/x axis:/);
+render({rows:data,graph:ready,measured:false});assert.equal(document.querySelector('#graphStateCaption').hidden,true,'A model curve does not invent a recorded-row caption');
+console.log('PASS graph feedback v81: truthful zero/mismatched/nonfinite states, stable recovery button, disabled invalid recording, actual row/value/unit caption, escaped wrapping axis labels and no data mutation.');
