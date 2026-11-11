@@ -267,3 +267,14 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - #bookError/#retryBook giữ cùngnode cạnh trang sách, lỗi không nằm dưới vùngtrống; ảnhthaythếlỗi giữ trang/zoom đã tải. Bookreader/helper/CSSentryquery81.
 - AI kệ sách có nhãn/gợi ý đúng; localehelper microtask tránhdoc.lang cũ. Lỗi pending lưu sourcekey; offcontext dùng thông báo tạm, không ghi đè lỗi currentkey.
 - assistant-navigation-v81.js chỉ cảnh báo link tải tài liệu mới khi có chat/pending/draft/ảnh; không persistence/backend. Currenttextarea authoritative thay stale draftMap; sameURLnopasthash brand/kệ sách reload phải guard, explicitfragment SPA không guard. Mởtabmới nativeanchor noopener giữ tài liệu nguồn; không tuyên bố chat chung hoặcBack/reload restore.
+
+## Khả năng truy cập bảng và tương thích v82 (12/11/2026)
+
+- Xem `docs/ACCESSIBILITY_V82.md`. `accessibility-v82.css` nạp cuối index, chỉ scope bảng trong lab: ghép nền/chữ sáng/tối cho header/cột đầu/nút/dòng chọn. Giữ các màu khoa học; tối header từ1,09 lên11,17:1, selected9,94:1 trong bảng24dòng đã đo.
+- `#graphOptions.dataset.electricMode` là cache, không phải nút. Hai chỗ đồng bộ selected/aria-pressed trong app phải dùng `button[data-electric-mode]`; không mở rộng lại selector khiến div nhận trạng thái nút. Table-scroll có tên+tabindex+role region. DOM regression đã thêm vào checks/dom.mjs, có trong npmcheck.
+- Entry boot/app query82; các module/model/previews không sửa. Banner hash gốc giữ nguyên, normalize chỉ bỏ đúng link stylesheet mới.
+- Firefox tái hiện thêm chữ sáng/nền sáng ở rendererNotice và selectedState tối; CSS82 ghép cảnh báo/nút và thông báo khôi phục dòng. UI đo Firefox thực cảnh báo9,00/10,11:1 sáng/tối, selectednotice10,08/9,46:1. Không đổi hidden hoặc cách ghi/khôi phục số liệu.
+- `browser-accessibility-v82.py` dùng axe-core4.10.3 cài ngoài nguồn, truyền `--axe-path`/AXE_CORE_PATH; hỗ trợ Chromium/Firefox/WebKit. Báo cáo giữ `incomplete` riêng, không coi axe0violations là WCAG certification. Các div có tên ở bookToolbar/bannerlinks và quan hệ tới accountdialog đóng cần rà soát thủ công; xem giới hạn trong báo cáo.
+- Browser/axe/thư viện hệ điều hành dùng kiểm thử nằm ngoài git. Không suy từ WebKitheadless ra Safari/iPhone thật hoặc từ authfixture ra OAuthproduction.
+- UI+QA đã review thật: 72trạng thái cuối trên Chromium156/Firefox153/WebKit26.5 không có axeviolation/JSerror. RawChrome6actionabilitytimeouts vàFF4contrastfindings giữ nguyên, chỉ thay kết quả từngca bằng targetedrecheck thành công; không nói lượt đầu tất cảPASS. 126incomplete làruleinstances lặp lại, không chứng nhận fullWCAG. Chi tiết/provenance/giới hạn trong báo cáo.
+- Trước phát hành: npmcheck exit0 trên Node24.22.1, security/diffcheck đạt. Báo cáo audit sinh tạm đã restore; không commit KaTeX/work. Chỉ xác nhận cập nhật web sau Pages thành công.

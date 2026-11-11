@@ -1,0 +1,21 @@
+/* Match sticky table surfaces with their text in both appearances. Model colors stay untouched. */
+.lab{--table-canvas:var(--ux-canvas,#fff);--table-ink:var(--ux-ink,#20242a);--table-head:var(--ux-surface,#f5f6f8);--table-line:var(--ux-line,#dce0e6);--table-selected:#e8f2ed;--table-selected-ink:#173b2a;--table-selected-edge:#28734f}
+html[data-appearance=dark] .lab{--table-canvas:#212121;--table-ink:#ececec;--table-head:#303030;--table-line:#505050;--table-selected:#203d31;--table-selected-ink:#d8f1e4;--table-selected-edge:#81bc9c}
+.lab .table-scroll table{background:var(--table-canvas);color:var(--table-ink)}
+.lab .table-scroll :is(th,td){border-color:var(--table-line)}
+.lab .table-scroll th,.lab .table-scroll td:first-child{background:var(--table-head);color:var(--table-ink)}
+.lab .table-scroll td button{background:var(--table-head);color:var(--table-ink);border-color:var(--table-line)}
+.lab .table-scroll tr:is(.selected-row,[aria-selected=true]) td{background:var(--table-selected);color:var(--table-selected-ink);border-bottom-color:var(--table-selected-edge)}
+.lab .table-scroll tr:is(.selected-row,[aria-selected=true]) td:first-child{box-shadow:inset 3px 0 var(--table-selected-edge)}
+.lab .table-scroll tr:is(.selected-row,[aria-selected=true]) td button{background:var(--table-selected);color:var(--table-selected-ink);border-color:var(--table-selected-edge);font-weight:700}
+@media(forced-colors:active){
+ .lab .table-scroll tr:is(.selected-row,[aria-selected=true]) td{border-bottom:2px solid Highlight}
+ .lab .table-scroll tr:is(.selected-row,[aria-selected=true]) td button{outline:2px solid Highlight;outline-offset:-2px}
+}
+/* A renderer fallback is a warning surface, with its own readable text pair. */
+.lab #rendererNotice{background:#fff3da;color:#5d3c11;border-bottom:1px solid #e3c98d}
+html[data-appearance=dark] .lab #rendererNotice{background:#3c3220;color:#f6e5be;border-bottom-color:#756444}
+.lab #rendererNotice button{background:transparent!important;color:inherit!important;border-color:currentColor}
+/* Restored-row feedback remains readable after selecting a recorded state. */
+.lab #selectedState{background:#edf3ff;color:#203b64;border-color:#b4c8e8}
+html[data-appearance=dark] .lab #selectedState{background:#26374f;color:#d6e5fc;border-color:#7794bc}

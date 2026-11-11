@@ -303,6 +303,9 @@ assert.equal(exec('rows.length'),8);
 const electricSaved=exec('JSON.stringify(rows)');
 exec('save();renderLab(experiments.find(e=>e.id==="ohm"));renderLab(experiments.find(e=>e.id==="electric"))');
 assert.equal(exec('JSON.stringify(rows)'),electricSaved);assert.equal(exec('config.fitModel'),'inverseSquare');
+assert.equal(document.querySelector('#graphOptions').hasAttribute('aria-pressed'),false,'Noninteractive graph options must not receive button-only state');
+assert.equal(document.querySelector('.table-scroll').getAttribute('role'),'region','Named keyboard-scrollable measurement table exposes a region');
+assert.equal(document.querySelector('button[data-electric-mode="1"]').getAttribute('aria-pressed'),'true');
 console.log('PASS v51 DOM: 4 electric modes, live F/E axis/options, mixed-row filtering with full table/CSV retained, inverse-square UI and persisted rows/fit on navigation. Synthetic DOM only.');
 
 // v52: retain live nodes, move graph marker, and invalidate cached plot when data/layout changes.
