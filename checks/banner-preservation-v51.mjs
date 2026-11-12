@@ -21,9 +21,11 @@ for(const name of ['dist/banner.js','dist/app.css','dist/video/black-hole.mp4','
  }
  assert.equal(hash(contents),baseline.files[name],name+' must remain byte-identical except the explicitly allowed math SVG fix');
 }
-// Entry changes are cache versions plus the explicitly scoped visual-settings stylesheet; startup/banner bytes stay frozen.
+// Entry changes include scoped UI styles; the original banner bytes stay frozen.
+// v83 is an explicit owner-requested compact layout in its own stylesheet, not a reset of the historical hashes.
 for(const [name,expected]of Object.entries(baseline.normalizedSharedFiles)){
  let content=read(name).toString();
+ content=content.replace(/<link rel="stylesheet" href="home-layout-v83\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="accessibility-v82\.css\?v=\d+">/g,'');
  content=content.replace(/<link rel="stylesheet" href="(?:data-feedback|assistant-navigation)-v81\.css\?v=\d+">/g,'').replace(/<script type="module" src="workspace-insets-v81\.js\?v=\d+"><\/script>/g,'');
  content=content.replace(/<link rel="stylesheet" href="(?:workspace-polish|account-polish|header-ui)-v80\.css\?v=\d+">/g,'').replace(/<script type="module" src="header-ui-v80\.js\?v=\d+"><\/script>/g,'');
@@ -86,4 +88,4 @@ for(const [dir,expected]of Object.entries(baseline.protectedTrees)){
  const names=walk(dir).sort();assert.equal(names.length,expected.files,dir+' file count');
  assert.equal(hash(names.map(name=>name+':'+hash(read(name))).join('\n')),expected.sha256,dir+' contents');
 }
-console.log('PASS v51 SHA-256: banner media/poster/playback/markup and original CSS (except scoped math SVG fix) unchanged, added UI rules exclude banner/identity; exact 300 IDs, books, audio, lessons, brand and fonts preserved. Source/asset checks only; desktop/mobile browser playback remains unverified.');
+console.log('PASS v51 SHA-256: banner media/poster/playback/markup and original CSS (except scoped math SVG fix) unchanged; owner-requested v83 home geometry is scoped separately; exact 300 IDs, books, audio, lessons, brand and fonts preserved. Source/asset checks only; desktop/mobile browser playback remains unverified.');

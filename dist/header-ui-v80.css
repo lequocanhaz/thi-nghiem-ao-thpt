@@ -73,3 +73,6 @@ body :is(.header,.reading-header).shared-header-v80 .header-utility-panel>#appea
 /* Presentation and print retain the existing distraction-free workspace. */
 html.teacher-mode body :is(.header,.reading-header).shared-header-v80{display:none!important}
 @media print{body :is(.header,.reading-header).shared-header-v80{display:none!important}}
+/* The shared header has an opaque surface, including on the cinematic home page. */
+body :is(.header,.reading-header).shared-header-v80 .brand-wordmark,
+body :is(.header,.reading-header).shared-header-v80 .brand-wordmark b{color:var(--header-ink)!important}

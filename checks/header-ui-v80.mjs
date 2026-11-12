@@ -9,11 +9,13 @@ const focus=[];domWindow.HTMLElement.prototype.focus=function(){focus.push(this)
 const refs=Object.fromEntries(['#openAssistant','[data-action=guide]','[data-action=settings]'].map(selector=>[selector,document.querySelector(selector)]));
 const counts={guide:0,settings:0,theme:0,locale:0};
 refs['[data-action=guide]'].addEventListener('click',()=>counts.guide++);refs['[data-action=settings]'].addEventListener('click',()=>counts.settings++);
-let observerCallbacks=0;const mediaListeners=new Set(),windowListeners=new Map();
+let observerCallbacks=0,headerHeight=80,resizeCallback,resizeDisconnected=false;const mediaListeners=new Set(),windowListeners=new Map();
+document.querySelector('header').getBoundingClientRect=()=>({height:headerHeight});
 const media={matches:true,addEventListener:(_,fn)=>mediaListeners.add(fn),removeEventListener:(_,fn)=>mediaListeners.delete(fn)};
 class Observer{constructor(callback){// LinkeDOM incorrectly emits attributes for childList-only observations; match native filtering.
 this.observer=new domWindow.MutationObserver(records=>{records=records.filter(record=>record.type==='childList');if(!records.length)return;observerCallbacks++;assert.ok(observerCallbacks<30,'Header observer entered an unbounded mutation cycle');callback(records);});}observe(...args){this.observer.observe(...args);}disconnect(){this.observer.disconnect();}}
-const window={MutationObserver:Observer,matchMedia:()=>media,location:{hash:'#library'},addEventListener:(name,fn)=>windowListeners.set(name,fn),removeEventListener:name=>windowListeners.delete(name)};
+class SizeObserver{constructor(callback){resizeCallback=callback;}observe(){}disconnect(){resizeDisconnected=true;}}
+const window={MutationObserver:Observer,ResizeObserver:SizeObserver,matchMedia:()=>media,location:{hash:'#library'},addEventListener:(name,fn)=>windowListeners.set(name,fn),removeEventListener:name=>windowListeners.delete(name)};
 const flush=()=>new Promise(setImmediate);
 const installed=installHeaderUI({document,window}),header=document.querySelector('header'),nav=header.querySelector('nav');
 assert.equal(header.dataset.sharedHeader,'pending');assert.equal(document.querySelector('#headerUtilities'),null,'Wait until asynchronously mounted controls exist');
@@ -23,6 +25,9 @@ const theme=document.createElement('button');theme.id='appearanceToggle';theme.s
 const language=document.createElement('div');language.className='ql-language-switch';const locale=document.createElement('button');locale.dataset.locale='en-US';locale.textContent='EN';locale.addEventListener('click',()=>{counts.locale++;i18n.setLocale('en-US');});language.append(locale);nav.append(theme,language);
 await flush();await flush();
 assert.equal(header.dataset.sharedHeader,'ready');const menu=document.querySelector('#headerUtilities'),panel=document.querySelector('#headerUtilityPanel'),summary=menu.querySelector('summary');
+assert.equal(header.querySelector('.brand').getAttribute('href'),'#','App logo returns home through the existing router without reloading its live document');
+assert.equal(document.documentElement.style.getPropertyValue('--quanh-header-height'),'80px');
+headerHeight=132.25;resizeCallback();assert.equal(document.documentElement.style.getPropertyValue('--quanh-header-height'),'133px','Hero reserves the actual wrapped header height');
 assert.deepEqual([...nav.children].map(node=>node.dataset.headerItem),['account','utilities','library','books','ai']);
 assert.deepEqual([...panel.children],[language,refs['[data-action=guide]'],refs['[data-action=settings]'],theme],'Utilities reuse the original mounted nodes');
 for(const [selector,node]of Object.entries(refs))assert.equal(document.querySelector(selector),node);
@@ -37,5 +42,5 @@ media.matches=false;for(const listener of mediaListeners)listener();await flush(
 window.location.hash='#lab/ohm';windowListeners.get('hashchange')();await flush();assert.equal(nav.querySelector('a[href="#library"]').getAttribute('aria-current'),'location');
 assert.equal(installHeaderUI({document,window}),null,'Repeated installation cannot duplicate controls');assert.equal(document.querySelectorAll('#headerUtilities').length,1);
 const settled=observerCallbacks;await flush();await flush();assert.equal(observerCallbacks,settled,'Header settles after rearrangement instead of observing its own writes forever');
-installed.destroy();assert.equal(mediaListeners.size,0);assert.equal(windowListeners.size,0);i18n.setLocale('vi-VN');
+installed.destroy();assert.equal(mediaListeners.size,0);assert.equal(windowListeners.size,0);assert.equal(resizeDisconnected,true);i18n.setLocale('vi-VN');
 console.log('PASS header v80 DOM: asynchronous mounts, same-node listeners, mobile/desktop DOM order, VI/EN, utility Escape/outside/actions, active lab destination, idempotence, observer settles and cleanup. Native browser layout/keyboard tested separately.');

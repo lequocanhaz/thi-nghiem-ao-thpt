@@ -6,7 +6,11 @@ export function installHeaderUI({document=globalThis.document,window=globalThis.
  if(!header||!nav||header.dataset.sharedHeader)return null;
  header.dataset.sharedHeader='pending';
  const media=window.matchMedia('(max-width: 720px)');
- let menu,panel,summary,scheduled=false;
+ let menu,panel,summary,scheduled=false,headerHeight=0;
+ function measureHeader(){
+  const height=Math.ceil(header.getBoundingClientRect?.()?.height||0);
+  if(height>0&&height!==headerHeight){headerHeight=height;document.documentElement.style.setProperty('--quanh-header-height',`${height}px`);}
+ }
  const en=()=>getLocale()==='en-US';
  function label(button,text){
   let span=button.querySelector('span');
@@ -50,10 +54,14 @@ export function installHeaderUI({document=globalThis.document,window=globalThis.
   if(settings)settings.dataset.menuLabel=en()?'Settings':'Cài đặt';
   theme.dataset.menuLabel=theme.getAttribute('aria-label')||'';
   const bookPage=header.classList.contains('reading-header');
+  // The app already routes an empty fragment home. Keep its live document
+  // (including account and assistant state) instead of reloading on the logo.
+  if(!bookPage)header.querySelector('.brand')?.setAttribute('href','#');
   if(bookPage){books.setAttribute('aria-current','page');library.removeAttribute('aria-current');}
   else {books.removeAttribute('aria-current');if(!window.location.hash.startsWith('#sources'))library.setAttribute('aria-current',window.location.hash.startsWith('#lab/')?'location':'page');else library.removeAttribute('aria-current');}
   ordered(nav,media.matches?[account,menu,library,books,ai]:[library,books,ai,account,menu]);
   nav.classList.add('shared-nav-v80');header.classList.add('shared-header-v80');header.dataset.sharedHeader='ready';
+  measureHeader();
  }
  function schedule(){if(!scheduled){scheduled=true;queueMicrotask(normalize);}}
  const observer=new window.MutationObserver(schedule);observer.observe(nav,{childList:true});
@@ -62,7 +70,9 @@ export function installHeaderUI({document=globalThis.document,window=globalThis.
  const appearance=()=>{if(menu?.open)queueMicrotask(()=>{const theme=panel.querySelector('#appearanceToggle');if(theme)theme.dataset.menuLabel=theme.getAttribute('aria-label')||'';});};
  document.addEventListener('click',outside);document.addEventListener('click',appearance);
  window.addEventListener('hashchange',refresh);media.addEventListener('change',refresh);
+ const sizeObserver=typeof window.ResizeObserver==='function'?new window.ResizeObserver(measureHeader):null;
+ sizeObserver?.observe(header);window.addEventListener('resize',measureHeader);
  const unsubscribe=onLocaleChange(schedule);normalize();
- return {refresh:schedule,destroy(){observer.disconnect();unsubscribe();document.removeEventListener('click',outside);document.removeEventListener('click',appearance);window.removeEventListener('hashchange',refresh);media.removeEventListener('change',refresh);}};
+ return {refresh:schedule,destroy(){observer.disconnect();sizeObserver?.disconnect();unsubscribe();document.removeEventListener('click',outside);document.removeEventListener('click',appearance);window.removeEventListener('hashchange',refresh);window.removeEventListener('resize',measureHeader);media.removeEventListener('change',refresh);}};
 }
 if(typeof document!=='undefined')installHeaderUI();
