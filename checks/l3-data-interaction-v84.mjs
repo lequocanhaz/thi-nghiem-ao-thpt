@@ -1,0 +1,61 @@
+// Data and input lifecycle regression. No scientific or device certification.
+import assert from 'node:assert/strict';
+import {parseHTML} from 'linkedom';
+import {newSession,newTrial,parseSession,serializeSession,exportCSV,renderNotebook} from '../dist/l3/data-notebook.js';
+import {createState,observe,validateState,applyAction} from '../dist/l3/thermal-physics.js';
+import {readingFromObservation} from '../dist/l3/measurement-engine.js';
+import {pourTargetAt} from '../dist/l3/apparatus-registry.js';
+import {installInteractionCore,makeEvent} from '../dist/l3/interaction-core.js';
+const receiving={vesselPlaced:true};
+assert.equal(pourTargetAt({x:410,y:100},receiving),'vessel');
+assert.equal(pourTargetAt({x:480,y:116},receiving),'vessel','A falling stream above the rim enters the vessel');
+assert.equal(pourTargetAt({x:200,y:100},receiving),'table');
+assert.equal(pourTargetAt({x:410,y:100},{vesselPlaced:false}),'table');
+assert.equal(pourTargetAt({x:410,y:400},receiving),'table');
+const c={waterMassKg:0,waterTempK:313.15,iceMassKg:0,iceTempK:273.15,solidMassKg:.1,solidTempK:293.15,calorimeterHeatCapacityJPerK:0,mixingIntensity:0};
+const session=newSession('ice'),trial=newTrial(session,'ice',c);session.physicalState=createState('ice');
+trial.hypothesis='Dự đoán <script>alert(1)</script>';trial.analysis='Dữ liệu, có "trích dẫn"';trial.conclusion='Cần kiểm tra vị trí đầu dò.';
+trial.readings.push(readingFromObservation(observe(session.physicalState),'77.7',trial.conditionsSI));
+trial.events.push(makeEvent({sessionId:session.sessionId,simTimeS:0,actionType:'place-vessel',payloadSI:{placed:true},accepted:true}));
+const text=serializeSession(session),opts={activity:'ice',validateState:s=>validateState(s).valid};
+assert.deepEqual(parseSession(text,opts).session,session);
+assert.equal(trial.readings[0].studentValueC,77.7);assert.ok(Math.abs(trial.readings[0].studentValue-350.85)<1e-9);
+assert.equal(trial.readings[0].measuredValue,null);assert.equal(trial.readings[0].valid,false);
+const copy=parseSession(text,opts).session;copy.trials[0].readings[0].studentValueC=0;assert.equal(trial.readings[0].studentValueC,77.7,'Parsing must not alias live data');
+for(const value of ['', 'NaN','Infinity', '151', '-51'])assert.throws(()=>readingFromObservation(observe(session.physicalState),value,c));
+const csv=exportCSV(session);assert.ok(csv.startsWith('\uFEFF'));assert.match(csv,/"student"/);assert.match(csv,/"77\.7"/);assert.match(csv,/"false"/);
+const {document}=parseHTML(renderNotebook(session,'vi-VN'));assert.equal(document.querySelector('#l3StudentTemperature').getAttribute('value'),null);assert.equal(document.querySelectorAll('script').length,0);
+const classic={schema:'thpt.session.v1',id:'calorimetry',rows:[{values:[80,20,42.5],note:'giữ < & " nguyên'}],notes:'Đá không phải dữ liệu hai nước'};
+const legacy=parseSession(JSON.stringify(classic),opts);assert.equal(legacy.legacy,true);assert.deepEqual(legacy.session.legacySessions,[classic]);assert.equal(legacy.session.trials.length,0);
+const reject=(name,change)=>{const bad=structuredClone(session);change(bad);assert.throws(()=>parseSession(JSON.stringify(bad),opts),undefined,name);};
+reject('water contact contradicts an outside probe pose',s=>{let physical=applyAction(s.physicalState,{actionType:'place-vessel',payloadSI:{placed:true}}).state;physical=applyAction(physical,{actionType:'pour',payloadSI:{massKg:.2,target:'vessel'}}).state;s.physicalState=applyAction(physical,{actionType:'place-probe',payloadSI:{placement:'water'}}).state;});
+reject('foreign activity',s=>s.activity='solid');reject('wrong model',s=>s.modelVersion='unknown');reject('negative measurement time',s=>s.trials[0].readings[0].simTimeS=-1);reject('contradictory Celsius/Kelvin',s=>s.trials[0].readings[0].studentValueC=0);
+reject('nonstring prediction must not crash assessment',s=>{s.mode='assessment';s.trials[0].hypothesis=42;});
+reject('nonstring conclusion',s=>s.trials[0].conclusion={bad:true});reject('unknown mode',s=>s.mode='unexpected');
+reject('placement object cannot reach table rendering',s=>s.trials[0].readings[0].observation.probePlacement={toString:42});
+reject('observation must be structured metadata',s=>s.trials[0].readings[0].observation=[]);
+reject('classic session collection must be an array',s=>s.legacySessions={bad:true});
+reject('automatic trace phase cannot be an object',s=>s.trials[0].trace=[{simTimeS:1,phase:{toString:42},valid:false,displayTemperatureC:null}]);
+reject('camera too small',s=>s.apparatusState.camera={x:0,y:0,width:100,height:60});
+reject('camera malformed aspect',s=>s.apparatusState.camera={x:0,y:0,width:800,height:700});
+reject('camera nonnumeric',s=>s.apparatusState.camera={x:'0',y:0,width:800,height:480});
+reject('nonnumeric mass entry',s=>s.trials[0].readings[0].studentMassesKg={water:'200'});
+assert.throws(()=>parseSession(text.replace('"mode": "guided"','"__proto__": {}, "mode": "guided"'),opts),/Unsafe object key/);
+assert.throws(()=>parseSession(' '.repeat(1500001),opts),/exceeds/);
+assert.equal(serializeSession(session),text,'Rejected payloads must not alter original data');
+// Real DOM event dispatch over a minimal SVG fixture isolates cancel/capture lifecycle.
+const dom=parseHTML('<svg id="bench"><g data-l3-target="cup" tabindex="0"><rect id="hit"/></g></svg>'),stage=dom.document.querySelector('svg'),node=stage.querySelector('g'),hit=stage.querySelector('rect');
+stage.getBoundingClientRect=()=>({left:0,top:0,width:800,height:480});node.focus=()=>{};let captured=null;node.setPointerCapture=id=>captured=id;node.hasPointerCapture=id=>captured===id;node.releasePointerCapture=()=>captured=null;
+const positions={cup:{x:100,y:100}};let dropped=0,canceled=0;
+const core=installInteractionCore(stage,{positions,onMove:(id,p)=>positions[id]={...p},onDrop:()=>dropped++,onCancel:()=>canceled++,onActivate:()=>{},onRotate:()=>{},onStir:()=>{}});
+function dispatch(type,x=100,y=100,pointerId=7){const event=new dom.window.Event(type,{bubbles:true,cancelable:true});Object.assign(event,{button:0,isPrimary:true,clientX:x,clientY:y,pointerId});hit.dispatchEvent(event);}
+dispatch('pointerdown');dispatch('pointermove',200,200);assert.deepEqual(positions.cup,{x:200,y:200});dispatch('pointercancel',200,200);assert.deepEqual(positions.cup,{x:100,y:100});assert.equal(dropped,0);assert.equal(canceled,1);
+dispatch('pointerdown');dispatch('pointermove',140,150);dispatch('lostpointercapture',140,150);assert.deepEqual(positions.cup,{x:100,y:100});assert.equal(canceled,2);assert.equal(dropped,0);
+dispatch('pointerdown');dispatch('pointermove',180,170);dispatch('pointerup',180,170);assert.equal(dropped,1);assert.deepEqual(positions.cup,{x:180,y:170});
+// Synthetic touchscreen DOM fixture proves camera gestures do not move apparatus.
+stage.setAttribute('viewBox','0 0 800 480');
+function touch(type,id,x,y,target=stage){const event=new dom.window.Event(type,{bubbles:true,cancelable:true});Object.assign(event,{button:0,pointerType:'touch',isPrimary:id===21,pointerId:id,clientX:x,clientY:y});target.dispatchEvent(event);}
+const unchanged={...positions.cup};touch('pointerdown',21,240,430);touch('pointerdown',22,560,430);touch('pointermove',21,200,430);touch('pointermove',22,600,430);assert.notEqual(stage.getAttribute('viewBox'),'0 0 800 480');assert.deepEqual(positions.cup,unchanged);touch('pointerup',21,200,430);touch('pointerup',22,600,430);
+const cameraBefore=stage.getAttribute('viewBox');touch('pointerdown',21,180,170,hit);touch('pointerdown',22,560,430);touch('pointermove',22,600,430);assert.equal(stage.getAttribute('viewBox'),cameraBefore,'A held apparatus must not become a camera gesture');touch('pointercancel',21,180,170,hit);
+core.destroy();dispatch('pointerdown',180,170);dispatch('pointermove',280,270);assert.deepEqual(positions.cup,{x:180,y:170});
+console.log('PASS v84 data: manual/invalid entries retained; JSON/CSV/legacy and type validation; HTML escaping; cancel/lost capture restore, completed drop and listener cleanup. Node DOM fixture, no real-device or L3 completion claim.');

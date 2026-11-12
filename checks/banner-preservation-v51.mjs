@@ -76,7 +76,7 @@ const lifecycle=JSON.parse(fs.readFileSync(new URL('./banner-lifecycle-v59.json'
 const currentApp=read('dist/app.js').toString();
 for(const [key,pattern] of Object.entries(lifecycle.patterns)){
  const fragment=currentApp.match(new RegExp(pattern))?.[0];assert.ok(fragment,'Missing protected banner responsibility: '+key);
- assert.equal(hash(fragment.replace('pendingClearId=null;pendingSession=null;','').replace('inquiry?.destroy();inquiry=null;','').replace('mountInvestigation(e);','')),lifecycle.sha256[key],'Unchanged banner '+key);
+ assert.equal(hash(fragment.replace('pendingClearId=null;pendingSession=null;','').replace('inquiry?.destroy();inquiry=null;','').replace('mountInvestigation(e);','').replace('if(routeLevel3())return;','')),lifecycle.sha256[key],'Unchanged banner '+key);
 }
 const ids=experiments.map(e=>e.id).sort();
 assert.equal(ids.length,300);assert.equal(new Set(ids).size,300);

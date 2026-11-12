@@ -1,0 +1,533 @@
+{
+  "date": "2026-11-12",
+  "baseCommit": "6aba10bd33f013d2f96d51513764022a65b65d86",
+  "reports": {
+    "aggregate": {
+      "source": "work/level3-v84/browser/accepted-report.json",
+      "engine": null,
+      "browserVersion": null,
+      "status": null,
+      "cases": [
+        {
+          "name": "ice_journey",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "solid_journey",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "data_roundtrip",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "cancel_and_hold",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "handle_and_stir",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "malformed_import",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "responsive_mobile",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "solid_weigh_pickup",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "insufficient_heat_repeat",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "activity_switch_retains_sessions",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "touch_camera_and_hit_targets",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        },
+        {
+          "name": "paused_pour_hides_stream",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "228e9ac69de8f568f9d94ad98368608de08bbdb2ec72a95cf4a090f29a91ca27",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "3c05b8afef35fa4d5edefd61aa1d9a52bd01453c5ffee5d14c521f9d91903993",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        }
+      ],
+      "provenance": null
+    },
+    "contact": {
+      "source": "work/level3-v84/browser/contact-final/report.json",
+      "engine": null,
+      "browserVersion": null,
+      "status": null,
+      "cases": [
+        {
+          "name": "probe_contact_tracks_geometry",
+          "status": "PASS",
+          "sourceBefore": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "ed2cc1ccf604e056e10127063d9bc514ed80e27f5c5346324379af1ebf8e5da0",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "fe16addd014dce2146d10b2298197216f50148d909979f298214c97aedfb7018",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          },
+          "sourceAfter": {
+            "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+            "dist/l3/thermal-pilot.js": "ed2cc1ccf604e056e10127063d9bc514ed80e27f5c5346324379af1ebf8e5da0",
+            "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+            "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+            "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+            "dist/l3/data-notebook.js": "fe16addd014dce2146d10b2298197216f50148d909979f298214c97aedfb7018",
+            "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+            "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+            "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+            "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+          }
+        }
+      ],
+      "provenance": null
+    },
+    "uiCamera": {
+      "source": "work/l3-ui/camera-final.json",
+      "items": [
+        {
+          "viewBox": "-193.5374149659864 -138.22666015624998 1066.6666666666667 640",
+          "minHit": 44.99998474121094,
+          "overflow": false,
+          "masses": [
+            {
+              "field": "water",
+              "value": "",
+              "width": 270,
+              "height": 44,
+              "label": "Khối lượng nước em cân (g)"
+            },
+            {
+              "field": "sample",
+              "value": "",
+              "width": 270,
+              "height": 44,
+              "label": "Khối lượng đá em cân (g)"
+            }
+          ],
+          "width": 320,
+          "activity": "ice",
+          "locale": "vi-VN",
+          "errors": [],
+          "positionsUnchanged": true,
+          "physicalStateUnchanged": true,
+          "cameraStored": {
+            "x": -193.5374149659864,
+            "y": -138.22666015624998,
+            "width": 1066.6666666666667,
+            "height": 640
+          },
+          "touchTargets": [
+            {
+              "target": "path",
+              "x": 160,
+              "y": 715.4562377929688
+            },
+            {
+              "target": "path",
+              "x": 196.75,
+              "y": 715.4562377929688
+            }
+          ],
+          "positionDiff": {}
+        },
+        {
+          "viewBox": "-185.16483516483515 -148.02666015625 1066.6666666666667 640",
+          "minHit": 45,
+          "overflow": false,
+          "masses": [
+            {
+              "field": "water",
+              "value": "",
+              "width": 340,
+              "height": 44,
+              "label": "Your weighed water mass (g)"
+            },
+            {
+              "field": "sample",
+              "value": "",
+              "width": 340,
+              "height": 44,
+              "label": "Your weighed solid mass (g)"
+            }
+          ],
+          "width": 390,
+          "activity": "solid",
+          "locale": "en-US",
+          "errors": [],
+          "positionsUnchanged": true,
+          "physicalStateUnchanged": true,
+          "cameraStored": {
+            "x": -185.16483516483515,
+            "y": -148.02666015625,
+            "width": 1066.6666666666667,
+            "height": 640
+          },
+          "touchTargets": [
+            {
+              "target": "path",
+              "x": 195,
+              "y": 702.5812377929688
+            },
+            {
+              "target": "path",
+              "x": 240.5,
+              "y": 702.5812377929688
+            }
+          ],
+          "positionDiff": {}
+        }
+      ]
+    },
+    "ai": {
+      "source": "work/level3-v84/ai/report.json",
+      "engine": null,
+      "browserVersion": "Chromium 156.0.8078.79 built on Debian GNU/Linux 13 (trixie)",
+      "status": null,
+      "cases": [
+        {
+          "name": "pilot-A-B-legacy-logo-isolation",
+          "status": "PASS",
+          "sourceBefore": null,
+          "sourceAfter": null
+        },
+        {
+          "name": "delayed-pilot-module-cleanup",
+          "status": "PASS pending context isolation and stale mount cleanup",
+          "sourceBefore": null,
+          "sourceAfter": null
+        }
+      ],
+      "provenance": null
+    }
+  },
+  "runtimeSHA256": {
+    "dist/app.js": "710466bbf8951e0b796d1f8ef1565dc5679d3f177054bc9c523c0c9d0e925e65",
+    "dist/assistant.js": "db7f01e951bb72d266bb899f64c9f85ba204f3b5e6f78172a551e70f52cc11a8",
+    "dist/boot.js": "5047f815d294875ff1f816ceffbd44a88f6527df437ae9a49750fa231e6436d6",
+    "dist/index.html": "204f96f07ad5f37931520415ce1d603041f5d6f611f36687a282c102e90db143",
+    "dist/l3/apparatus-registry.js": "ee32625027d7c1cf2c758b597c1ddab681228f6892f228345d807676106c03cb",
+    "dist/l3/data-notebook.js": "d49e1ed601a2237c4bb87c3e85acbfaf32e173c540f2ebc59aa2a773930f8522",
+    "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+    "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+    "dist/l3/thermal-physics.js": "09fe79ebd4f90b33e25b40606efaa4d0a2be6124e5f3728b4fb482fba6e6b880",
+    "dist/l3/thermal-pilot.js": "aa1ec6e0f14d7eb8e92b82f3dc56ab324493f0869c1a2752c03671184eb3925e",
+    "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+    "dist/l3/thermal-view.js": "6d0ed158864e4df99fe1fdb66031967a9e065430c8952186e6e02e57ef4abdd6",
+    "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+  },
+  "commands": {
+    "physics": "node checks/l3-thermal-physics-v84.mjs",
+    "data": "node checks/l3-data-interaction-v84.mjs",
+    "audit": "node scripts/audit-level3-v84.mjs --check",
+    "full": "npm run check",
+    "browser": "python3 checks/browser-level3-v84.py"
+  },
+  "limits": [
+    "Software/browser evidence only; no teacher sign-off or physical device acceptance.",
+    "12-case aggregate has separate targeted fixture recheck; later contact synchronisation has a separate bounded browser report. No claim of a single unchanged source across those reports.",
+    "Finite-time N02 browser readings do not establish final equilibrium; analytical equilibrium is a separate physics oracle."
+  ]
+}

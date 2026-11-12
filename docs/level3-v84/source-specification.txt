@@ -1,0 +1,480 @@
+QUANH LAB
+ĐẶC TẢ NÂNG CẤP300 THÍ NGHIỆM VẬT LÍLÊN CẤP ĐỘ 3
+Phòng thí nghiệm ảo thao tác thực – đo đạc – điều tra – kết luận
+Mã tài liệu
+Phiên bản
+Phạm vi
+QL-L3-SRS-001
+1.0 · 12/11/2026
+300 mục thí nghiệm hiện có trên repository; toàn bộ chỉ đạt khi nghiệm thu L3
+
+QUYẾT ĐỊNH THIẾT KẾ
+Không tăng số lượng thí nghiệm bằng cách tạo “mô phỏng xem trước”. Chuẩn triển khai duy nhất là thí nghiệm học sinh tự bố trí, thao tác, đo, xử lí dữ liệu và rút ra kết luận; mô hình khoa học quyết định trạng thái, hoạt ảnh chỉ hiển thị kết quả.
+
+Sản phẩm bàn giao: (1) File đặc tả Word này; (2) QUANH_LAB_SIEU_PROMPT_CAP_DO_3.md – siêu prompt triển khai dành cho AI coding agent.
+Phạm vi khảo sát: website công khai và repository GitHub vào ngày 12/11/2026. Đây là đặc tả mục tiêu, KHÔNG phải báo cáo đã thực hiện hoặc đã kiểm thử trên thiết bị thật.
+Website: https://physicslab.tech/    |    Repository: https://github.com/lequocanhaz/thi-nghiem-ao-thpt
+
+TÓM TẮT QUẢN TRỊ
+Quanh Lab có kho 300 mô hình trong repository và hạ tầng dữ liệu/đồ thị/2D–3D đáng kể. Tuy nhiên, tương tác hiện hữu không đồng nghĩa mọi bài đã là thí nghiệm cấp độ 3. Lộ trình này chuẩn hóa nhân–quả khoa học, thao tác trực tiếp và bằng chứng học tập cho từng ID mà không thay mới website.
+Khía cạnh
+Yêu cầu bắt buộc
+Phạm vi
+Toàn bộ 300 ID hiện hành được kiểm toán; không xóa ID, không đánh dấu đạt hàng loạt.
+Tương tác
+Học sinh trực tiếp thao tác vào hệ/dụng cụ: kéo, thả, nối, rót, khuấy, xoay, đo… tùy ngữ cảnh.
+Khoa học
+State SI và bộ giải vật lí là nguồn sự thật; có giả định, miền áp dụng, điều kiện biên, kiểm chứng độc lập.
+Sư phạm
+Giả thuyết → thiết kế → thao tác → đo → lặp/đối chiếu → kết luận; có lỗi thao tác được phản hồi.
+Nền tảng
+Giữ vanilla ES modules + Three.js và hệ thống đang chạy; nâng cấp theo archetype có thể tái sử dụng.
+Nghiệm thu
+Mỗi lab phải đạt 8 cổng L3, có test khoa học, UI, thiết bị và duyệt sư phạm.
+
+LƯU Ý PHẢN BIỆN
+Yêu cầu “100% cấp độ 3” là mục tiêu chất lượng, không thể suy ra hoàn thành chỉ bằng một lệnh AI hoặc các kiểm thử DOM/CPU. Một số bài vật lí vi mô, thiên văn, quan hệ tĩnh không có dụng cụ “cầm nắm”; phải thiết kế thao tác điều khiển nguồn–đầu dò–bố trí thực nghiệm tương đương, tránh lắp dụng cụ giả tạo.
+
+1. Đối tượng, phạm vi và trạng thái hiện hữu
+1.1. Dữ kiện đã đối chiếu
+Trang chủ physicslab.tech có lời giới thiệu “40 thí nghiệm chính”, trong khi repository và tài liệu mã nguồn nêu danh mục 300 bài; cần đối chiếu chính xác phạm vi phát hành/đường dẫn và trạng thái 300 ID trước khi nghiệm thu.
+Repository sử dụng HTML/CSS/JavaScript ES modules, Three.js; `dist/` là frontend đang phục vụ, không phải thư mục build có thể xóa.
+Có các mô-đun `dist/experiments.js`, `models.js`, `physics.js`, `measurements.js`, `scene3d.js`, `software-scene.js`, `views.js`, `graphs.js`; kiểm tra nguồn thực tế trước khi thêm module.
+Theo README hiện có, 79 bài có diễn biến thời gian/phát tia và 221 bài có quy trình tác động tự động. Điều này KHÔNG chứng nhận 221 bài có động lực học liên tục hay 300 bài đã được thao tác thực.
+Đã có hệ thống kiểm thử `npm run check` và tài liệu bàn giao; kiểm thử Node/DOM/CPU không thay thế kiểm thử thật trên Safari, thiết bị cảm ứng và GPU.
+1.2. Trong phạm vi / ngoài phạm vi
+Trong phạm vi
+Không mặc định thay đổi
+Tăng cấp tương tác; mô hình khoa học; dụng cụ; đo; thao tác sai; dữ liệu; UX mobile; chất lượng sư phạm
+Tái tạo toàn bộ thương hiệu, logo, banner video; thay stack frontend; viết lại kho sách
+Áp dụng giao thức chung, lab pilot và lộ trình nâng cấp 300 bài
+Hệ thống thanh toán, tài khoản học sinh trên cloud, backend AI hoặc dịch máy mới
+Tương thích phiên, i18n VI/EN, kiểm thử và phát hành theo CI
+Tuyên bố 300 lab đạt khi chỉ có demo hoặc CSS/DOM PASS
+
+2. Định nghĩa tiêu chuẩn L3
+Một thí nghiệm đạt cấp độ 3 khi người học có quyền tự tổ chức quá trình thu thập bằng chứng, và tác động trực tiếp của họ làm biến đổi hệ vật lí/điều kiện quan sát. Các thao tác phải có tính nhân quả và có thể kiểm chứng. Không bắt buộc mọi bài đều có cùng số lượng đồ vật hoặc cử chỉ.
+Mã cổng
+Điều kiện PASS
+Bằng chứng tối thiểu
+L3-01
+Tự thiết lập/bố trí hệ
+Thao tác đặt/lắp/cấu hình vật lí có điều kiện hợp lệ
+L3-02
+Tự tiến hành tác động
+Input trực tiếp làm phát sinh event được ghi nhận
+L3-03
+Quan hệ nhân quả đúng
+State vật lí và hành vi sai/đúng theo điều kiện
+L3-04
+Dùng dụng cụ đo
+Độ phân giải/đơn vị/miền đo; người dùng ghi số liệu
+L3-05
+Kiểm soát biến và lặp
+Ít nhất một biến điều khiển, một đại lượng đo, một lần lặp
+L3-06
+Xử lí và xuất dữ liệu
+Bảng/đồ thị kèm CSV và JSON phiên
+L3-07
+Năng lực điều tra
+Giả thuyết, phân tích, kết luận, nhận diện giới hạn
+L3-08
+Nghiệm thu đa lớp
+Test độc lập + thao tác + sư phạm + thiết bị
+
+2.1. Những “giải pháp giả” bị loại
+Kéo hình cốc nước nhưng số đo không thay đổi theo lượng nước đã rót; hoạt ảnh khuấy không ảnh hưởng tốc độ trộn.
+Để máy tự lắp mạch hoặc tự ghi toàn bộ số liệu, người học chỉ bấm “Bắt đầu”.
+Dùng slider làm tương tác duy nhất cho bài vốn có thể bố trí/đo trực tiếp; một số slider phụ trợ vẫn được phép.
+Cho kết quả đúng sẵn hoặc tự sửa dây sai/đầu dò đặt sai mà không thông báo nguyên nhân.
+Khẳng định chuyển động chất lỏng/hạt là CFD hay dữ liệu thực nếu chỉ dựng đồ họa minh họa.
+3. Kịch bản học tập và hành trình người dùng
+3.1. Chu trình điều tra
+MỞ LAB → XÁC ĐỊNH CÂU HỎI → NÊU DỰ ĐOÁN → CHỌN DỤNG CỤ → LẮP ĐẶT → TIẾN HÀNH → ĐO/ GHI → LẶP LẠI → XỬ LÍ/ ĐỒ THỊ → LÍ GIẢI → XUẤT/ LƯU PHIÊN.
+3.2. Ba chế độ, một chuẩn chất lượng
+Chế độ
+Bản chất
+Không được làm
+Khám phá tự do
+Có bộ dụng cụ và khả năng thử sai, không khóa quy trình cứng
+Tự động đưa ngay kết luận khi mới mở
+Hướng dẫn gợi mở
+Có câu hỏi, gợi ý ngắn theo bối cảnh
+Buộc bấm theo kịch bản đến mức chỉ còn “Next”
+Thực nghiệm/đánh giá
+Lưu dấu vết quan trọng, yêu cầu giải thích, ẩn đáp án đến sau thực nghiệm
+Chấm hoàn thành chỉ dựa trên số lần click
+
+3.3. Ví dụ các thao tác sai có ý nghĩa
+Thả vật ngoài miệng bình: vật rơi trên bàn hoặc thao tác bị từ chối có lý do; khối lượng trong bình không được tăng.
+Nhiệt kế nằm ngoài chất lỏng: kết quả là nhiệt độ môi trường hoặc “chưa nhúng”, không được đọc như nước đang đo.
+Vôn kế mắc nối tiếp hoặc ampe kế mắc song song: hình mạch và kết quả/cảnh báo phải nhất quán mô hình an toàn.
+Đặt màn ảnh sai vị trí: ảnh chưa nét; người học phải tự dịch màn để tìm ảnh rõ.
+4. Kiến trúc phần mềm mục tiêu
+NGUYÊN TẮC KIẾN TRÚC
+Không xây “300 trang demo” rời rạc. Xây một hệ điều khiển hành động–mô hình–dụng cụ–đo–ghi–kết luận có thể cắm plugin theo bài, bảo toàn `dist/` và các dịch vụ hiện hữu.
+
+Tầng / module đề xuất
+Chức năng
+Bất biến kỹ thuật
+interaction-core
+Picking, pointer/touch, grab, drag, rotate, pour, stir, connect, attach, undo
+Không làm mất event khi kéo ra ngoài stage; hủy an toàn
+apparatus-registry
+Định nghĩa dụng cụ, vùng tiếp xúc, socket, nguồn chứa/đích chứa, trạng thái
+Không để đồ họa quyết định số liệu
+lab-physics-adapter
+PhysicalStateSI, applyAction, step(dt), constraints, conservation oracle
+Một state nguồn; unit SI; giá trị xác định
+measurement-engine
+Thermometer, ruler, timer, scale, ammeter, voltmeter, sensor, noise
+Đo từ trạng thái + vị trí dụng cụ, không từ animation
+lab-protocol-engine
+Giả thuyết, nhiệm vụ, gợi ý, chứng cứ, rubric
+Không tự làm thay người học
+data-notebook
+Lần thử, bảng, đồ thị, fit, CSV, JSON, notes, export/import
+Không xóa phiên cũ; schema version
+render-adapters
+2D Canvas/SVG, 2.5D hoặc Three.js / fallback
+Renderer phụ thuộc state, không là physics solver
+catalog-audit + qa-oracles
+Kiểm toán đủ ID; trạng thái L3; fixtures, benchmark, hình ảnh
+Không thay đổi trạng thái PASS không có bằng chứng
+
+4.1. Vòng dữ liệu chuẩn
+pointer/touch/keyboard → action command→ validate constraints → state SI → physics step(dt)→ instrument observation → notebook/graph + renderer→ evidence rules → progress / student feedback
+
+Các phép đo phải cùng nguồn dữ liệu với hình và đồ thị. Cần lưu tính bất định, đơn vị thực, khả năng tái tạo bằng random seed nếu có nhiễu. Kho dữ liệu sự kiện không được ghi nhiều thông tin cá nhân hơn mức cần thiết.
+4.2. Hợp đồng mô hình và hành động (mẫu)
+LabV3 { id, catalogId, apparatus[], physicalStateSI,  allowedActions[], applyAction(state,event), step(state,dt),  observe(state,instrument), measurementSchema,  evidenceRules[], physicsOracles[], limitations[] }LabEvent { version, labId, simTimeS, actorAction,  targetId, payloadSI, seed? }
+
+4.3. Chính sách thời gian và năng lượng
+Có thời gian mô phỏng riêng và thời gian thực; thao tác tạm dừng/tiếp tục không làm thay đổi kết quả cuối lí tưởng nếu cùng điều kiện, trừ mô hình có thất thoát theo thời gian.
+Áp dụng fixed timestep ổn định và giới hạn bước tích phân; phân biệt tốc độ playback với diễn tiến vật lí.
+Mọi “hiệu ứng đẹp” như bắn nước, rung dụng cụ, phát sáng phải được gắn nhãn đồ họa hoặc gắn mô hình năng lượng nếu được tính thật.
+Đối với vấn đề vật lí không khả thi realtime chi tiết, cho phép mô hình xấp xỉ công khai (lumped model, particle illustration), tuyệt đối không mạo nhận mức độ chính xác.
+5. Thư viện dụng cụ thao tác (cơ sở dùng chung)
+Lớp dụng cụ
+Hành vi bắt buộc
+Dữ liệu vật lí
+Bình / cốc / chất lỏng
+Grab, tilt, pour, spill, volume marking, snap/collision
+Khối lượng, nhiệt độ, thành phần, mực chất lỏng
+Nhiệt kế / đầu dò
+Nhúng, rút, thay vị trí, thời gian đáp ứng, hiệu chuẩn
+Độ phân giải, vị trí, T thực, T hiển thị
+Cân / quả nặng
+Đặt lên cân, tare, đọc số, nâng/hạ
+Khối lượng, sai số cân
+Que khuấy / kẹp
+Cầm, khuấy theo quỹ đạo, gắp/thả vật
+Cường độ trộn, truyền động, điều kiện tiếp xúc
+Dây điện / đầu nối / đồng hồ
+Cắm socket, tháo, phân cực, đóng mạch
+Đồ thị kết nối, U, I, R, giới hạn thiết bị
+Thước / đồng hồ / photogate
+Đặt gốc, kéo đo, bắt đầu/dừng, đọc giá trị
+Tọa độ SI, thời gian, độ phân giải
+Nguồn sáng / kính / màn
+Đặt, xoay, chọn phương, dịch màn, định vị ảnh
+Góc, tiêu cự, hình học tia/ảnh
+Lò xo / dây / ròng rọc
+Gắn, kéo giãn, thả, đổi tải, giới hạn chiều dài
+k, m, x, v, a, lực và ràng buộc
+Xi lanh / piston / van
+Kéo/đẩy, mở/đóng van, đọc áp kế
+p, V, T, n và dạng quá trình
+Đầu dò/ detector trừu tượng
+Dịch điểm đo, xoay góc, thiết lập cửa sổ
+Tín hiệu/trường/xác suất đã định nghĩa
+
+5.1. Quy tắc kích hoạt vật lí
+Mỗi dụng cụ có vùng tương tác, vùng hiệu lực đo, điểm/cổng kết nối, trạng thái vật chất/vật lí và điều kiện sử dụng. Ví dụ “thả viên đá trong bình” được chấp nhận khi trọng tâm nằm trong miền nhận của bình và bình còn đủ thể tích. “Rót nước” phải cập nhật khối lượng chất lỏng, không chỉ tăng texture mặt nước.
+5.2. Độ chính xác và sai số đo
+Mỗi thiết bị định nghĩa range, resolution, responseTime, systematicBias (mặc định 0 trong chế độ lí tưởng), randomNoise có seed, calibration và placementValidity.
+Phân biệt trueState, instrumentReading và studentRecordedValue. Nếu HS ghi nhầm, lưu đúng giá trị đã nhập, không tự thay bằng trueState.
+Mọi số liệu xuất đi kèm đơn vị, thời điểm, config, điều kiện đo và version model; tránh làm tròn trước khi tính toán.
+6. Mô hình theo từng miền Vật lí
+Miền
+Tác động trực tiếp bắt buộc phù hợp
+Bất biến / sai số
+Cơ học
+Cầm vật, treo tải, buộc dây, thả, đo đoạn/giây
+Động lượng/cơ năng khi giả thiết bảo toàn; va chạm và tiếp xúc
+Dao động – sóng
+Kéo lệch thả, tạo xung, đặt đầu dò, đo chu kì/độ dài
+Pha, chu kì, biên độ, phương trình truyền sóng
+Điện – điện từ
+Lắp mạch, cắm dây, đóng ngắt, đặt điện tích/đầu dò
+KCL/KVL, định luật Ohm, chồng chất và miền giới hạn
+Quang học
+Xoay gương, đặt kính/màn/nguồn, đo ảnh, tia
+Định luật phản xạ/khúc xạ, hình học, giới hạn tia
+Nhiệt học – khí
+Rót/khuấy/gia nhiệt, gắp vật, piston/van, nhiệt kế
+Bảo toàn năng lượng và khối lượng; nhiệt dung/ẩn nhiệt
+Vi mô/thiên văn
+Đặt detector/nguồn/biến môi trường, ghi phân bố
+Công khai mô hình xác suất/xấp xỉ, seed và độ tin cậy
+
+Với tất cả 300 bài cần sinh ma trận `catalogId → system → apparatus → actions → measurements → independent/control variables → oracle → evidence`. Danh mục hiện tại phải được lấy bằng chương trình đọc catalog ở HEAD, không tự chép danh sách bằng trí nhớ. Mọi bài không phù hợp phân loại phải được đánh giá riêng, không nhét vào archetype bất kể sai khoa học.
+7. Đặc tả mẫu đầy đủ: Nhiệt lượng kế – nước nóng và đá
+7.1. Xác định đúng mục tiêu
+Đây là thí nghiệm cân bằng nhiệt và, nếu dữ liệu phù hợp, xác định nhiệt nóng chảy riêng của nước đá; không mặc định gọi là “đo nhiệt dung riêng”. Thí nghiệm đo nhiệt dung riêng của vật rắn được thiết kế riêng ở Mục 8.
+7.2. Dụng cụ, mặt bàn và tương tác
+Đối tượng
+Thao tác người học
+State/Phản hồi bắt buộc
+Cốc nước nóng
+Lấy cốc, nghiêng và rót theo góc/luồng chảy
+Thể tích cốc giảm, khối lượng nước bình tăng, có tràn
+Khay đá / cân
+Đặt viên lên cân, chọn/tách viên, thả trong bình
+Khối lượng đá đúng, nổi/trôi/tan theo trạng thái nhiệt
+Nhiệt lượng kế
+Đặt vị trí, có nắp tùy chọn, chọn đặc tính bình
+Mức nước, khả năng chứa, nhiệt dung bình
+Nhiệt kế
+Kéo vào bình, nhúng đủ sâu, đọc theo thời gian
+T_probe(t), độ trễ, độ phân giải, đặt sai có phản hồi
+Que khuấy
+Nhấn giữ + di chuyển vòng tròn, thả que
+Khuấy làm tăng trao đổi/nồng độ trộn, không tự tạo nhiệt
+Sổ tay / đồng hồ
+Ghi bằng tay/đo tự động có chọn nguồn, lặp lần
+Các cột thời gian, T, khối lượng đá còn, quan sát
+
+7.3. State khoa học tối thiểu
+waterMassKg, iceMassKg, waterTempC, iceTempC,calorimeterHeatCapacityJPerK, iceMeltFraction,probeTempC, probePositionM, mixingIntensity,ambientTempC, timeS, energyInJ, energyOutJ,waterVolumeL, spillMassKg, instrumentState
+
+7.4. Phương trình và ràng buộc
+Trong chế độ cơ sở: nước và nhiệt lượng kế ban đầu cùng T_w > 0 °C, nước đá ở 0 °C, hệ cách nhiệt; c_w = 4180 J/(kg·K), L_f = 334 000 J/kg, C_cal có thể chọn 0 để đơn giản hóa.
+Q_available = (m_w · c_w + C_cal) · T_wNếu Q_available < m_i · L_f:  T_eq = 0 °C; m_ice,left = m_i − Q_available / L_fNgược lại:  T_eq = (Q_available − m_i · L_f) /         ((m_w + m_i) · c_w + C_cal)
+
+Đây là quan hệ cân bằng sau cùng, không tự mô tả sự tan theo thời gian. Để có tương tác khuấy thực sự, cần mô hình truyền nhiệt hữu hạn theo thời gian (nút nhiệt hoặc cách tiếp cận đã thẩm định). Tham số khuấy có thể làm tăng hệ số trao đổi và mức trộn; với hệ cách nhiệt lí tưởng, thay tốc độ khuấy không được làm đổi T cân bằng. Mô hình 2D của dòng nước, sóng mặt nước, trôi viên đá có thể dùng animation đơn giản, ghi rõ không phải CFD.
+7.5. Trường hợp kiểm thử độc lập
+Case
+Dữ kiện
+Kết quả kỳ vọng
+N-01 / tan hết
+m_w=0,20 kg; T_w=40 °C; m_i=0,020 kg; C_cal=0
+T_eq ≈ 29,100 °C
+N-02 / đá còn
+m_w=0,20 kg; T_w=20 °C; m_i=0,10 kg; C_cal=0
+T_eq=0 °C; đá còn ≈ 0,04994 kg
+N-03 / hai cách khuấy
+Giữ toàn bộ dữ kiện như N-01, đổi tốc độ khuấy
+T_eq như nhau; thời gian đạt cân bằng khác
+N-04 / đầu dò sai
+Đặt đầu dò ngoài mặt nước hoặc trên thành bình
+Không được lấy trực tiếp nhiệt độ nước như đo đúng
+N-05 / cân sai
+Cân đá chưa tare/đọc sai khối lượng
+Số đo người học khác khối lượng thật; có thể phát hiện
+N-06 / bảo toàn
+Tăng giảm dt nhỏ, không mất nhiệt môi trường
+Energy residual và sai lệch mass trong dung sai đã cấu hình
+
+7.6. Giao diện kịch bản thực nghiệm
+Chọn nhiệt lượng kế và cốc, đưa vào vùng làm việc. Chọn bình cách nhiệt lí tưởng hoặc bật hiệu ứng môi trường (nâng cao).
+Đặt cốc lên cân nếu cần, rót nước vào bình bằng thao tác nghiêng/rót; hiển thị mực nước đi kèm khối lượng.
+Chọn và cân từng viên đá; đưa vào bình bằng kéo–thả có phát hiện vùng nhận; vật nổi và tan theo mô hình.
+Đặt nhiệt kế vào đúng chất, đợi phản ứng và đọc tại các thời điểm; rút ra/nhúng lại thay đổi chỉ số phù hợp.
+Cầm que khuấy và vẽ chuyển động khuấy bằng chuột/tay; quan sát quá trình đồng đều hóa và nhiệt độ.
+Ghi tối thiểu năm điểm T(t), thay lượng đá, lặp thí nghiệm; lập đồ thị, giải thích vì sao khuấy làm nhanh cân bằng.
+Tự kết luận, báo cáo nguồn sai số và xuất CSV/JSON; giữ phiên qua reload/import.
+7.7. Trải nghiệm thị giác không được tạo số liệu giả
+Đá phải trôi/nổi phù hợp hình học cơ bản và kích cỡ giảm liên quan đến khối lượng còn lại; không được tan cùng thời gian trong mọi điều kiện.
+Mặt nước khi rót phải tăng theo thể tích; tràn bình phải ảnh hưởng m_w và năng lượng còn trong bình.
+T_probe có độ trễ theo tau được nêu; không cho nhiệt kế cập nhật tức thời nếu mô hình đang hiển thị độ trễ.
+Đồ thị nhiệt độ lấy từ state/measurement, không lấy ngẫu nhiên từ hiệu ứng shader.
+8. Bài nhiệt thứ hai: Xác định nhiệt dung riêng vật rắn
+Bộ dụng cụ: vật rắn có khối lượng và vật liệu chưa biết, cân, bể gia nhiệt/kẹp gắp, nhiệt lượng kế chứa nước, nhiệt kế, que khuấy, đồng hồ. Học sinh tự đặt điều kiện đầu, gắp vật nóng chuyển vào bình, khuấy, đo T_f và suy ra c_vật; có thể thử lại, thay khối lượng và đánh giá sai số.
+c_solid = [(m_water · c_water + C_cal) · (T_f − T_water,0)]          / [m_solid · (T_solid,0 − T_f)]
+
+Công thức dùng cho tình huống hai vật trao đổi nhiệt trong hệ cách nhiệt và nhiệt dung vật không đổi. T_f phải nằm giữa hai nhiệt độ đầu nếu không có nguồn nhiệt/tổn thất khác. Cần ghi rõ bỏ qua nhiệt dung dụng cụ gắp và nhiệt thất thoát; ở chế độ nâng cao có thể đưa chúng vào mô hình rồi yêu cầu so sánh kết quả.
+Luồng bắt buộc
+Điều kiện quan sát
+Cân và gia nhiệt vật
+Khối lượng thật/khối lượng cân đọc, nhiệt độ trước khi chuyển
+Dùng kẹp chuyển vật
+Nếu đặt ngoài bình, không có biến đổi nhiệt lượng nước; nếu chậm có thể mất nhiệt
+Khuấy và đo đúng
+Nhiệt độ tiến về cân bằng, tốc độ trộn ảnh hưởng thời gian đọc
+Tính kết quả
+Giá trị suy ra từ số liệu HS, chỉ ra sai số và giả định
+Lặp/đổi vật liệu
+Nhiều trial, đồ thị và CSV/JSON riêng từng trial
+
+9. Giao diện UX/UI và khả năng tiếp cận
+9.1. Desktop và mobile
+Desktop: không gian thao tác chiếm ưu tiên, bảng dụng cụ và điều khiển đặt bên cạnh/thu gọn; đồ thị và sổ tay không che bình chính; giữ camera/zoom hiện tại khi lab chạy.
+Mobile: vùng thao tác lớn, kho dụng cụ dạng ngăn kéo, vùng nhận rõ, hỗ trợ một ngón cầm dụng cụ/khuấy và hai ngón pan/zoom khi không giữ vật; có chế độ thao tác chính xác cho ngón tay che vật.
+Pointer Events + capture; xử lí pointerup/pointercancel/lostpointercapture, chuyển tab và xoay màn hình; không gắn touch-action:none lên toàn bộ trang khiến không cuộn được.
+Cỡ vùng chạm tối thiểu 44×44 CSS px cho điều khiển quan trọng; zoom không làm vỡ transform giữa tọa độ pixel và đơn vị vật lí.
+Bố cục hỗ trợ VI/EN và công thức KaTeX; nhãn số liệu không tràn trên 320–390 px, không có overlay chặn gesture.
+9.2. Thiết kế chú trọng học sinh
+Hướng dẫn ngắn theo ngữ cảnh, ưu tiên trực tiếp trên dụng cụ; không đưa ghi chú kỹ thuật developer vào màn hình trình chiếu.
+Có nút tạm dừng, reset xác nhận khi có dữ liệu, undo thao tác hữu ích; không bấm nhầm làm mất trial.
+Cảnh báo thao tác sai ghi nguyên nhân cụ thể: “Đầu dò chưa nhúng”, “Mạch chưa kín”, “Nước đã vượt dung tích bình”.
+Thông tin đo dùng chữ/số rõ, màu không phải tín hiệu duy nhất; hỗ trợ tab bàn phím và trạng thái aria cho các control có thể truy cập.
+10. Thu thập dữ liệu, xử lí và báo cáo
+Thành phần
+Yêu cầu
+Dòng đo
+trialId, simTime, instrumentId, measuredValue, unit, instrumentConfig, method, valid/invalid flag
+Bảng thực nghiệm
+Lưu tất cả lần đo; cho nhập ghi chú và loại điểm có lí do, không xóa âm thầm
+Đồ thị
+Chọn trục phù hợp, đơn vị và sai số nếu có, bảng nguồn từ cùng state
+Xuất CSV
+UTF-8 BOM tùy chọn cho Excel tiếng Việt; decimal và separator rõ ràng
+Xuất JSON
+schemaVersion, modelVersion, apparatus configuration, trials, measurement events, seed khi có
+Nhập phiên
+Kiểm schema, version, giới hạn số và ID; xác nhận trước khi ghi đè; bảo tồn file cũ
+Chia sẻ/đánh giá
+Báo cáo gồm câu hỏi/giả thuyết/cách làm/số đo/đồ thị/kết luận, không tiết lộ thông tin không cần thiết
+
+10.1. Hồ sơ thực nghiệm đề xuất
+{ schemaVersion: "lab.session.v3", catalogId, createdAt,  modelVersion, apparatusState, experimentConditionsSI,  trials: [{trialId, hypothesis, events, readings,            analysis, conclusion}], locale, seed? }
+
+Phiên bản schema là đề xuất mới; cần adapter/migration từ `thpt.session.v1` hiện có. Không ghi đè định dạng cũ hay xóa localStorage để “đồng bộ” triển khai.
+11. Kiểm thử và nghiệm thu
+11.1. Năm lớp bằng chứng
+Lớp
+Test bắt buộc
+Điều không được suy diễn
+F1 – mô hình
+Unit/deterministic fixtures; invariant SI; biên và điều kiện lỗi
+Không chứng nhận cảm giác tương tác
+F2 – tương tác
+Event pointer, snap/collision, state transitions, undo, nhúng/đo sai
+Không chứng nhận GPU/browser thực
+F3 – dữ liệu
+Export/import, reload, session legacy, đơn vị/đồ thị
+Không chứng nhận sư phạm
+F4 – trình duyệt
+E2E desktop/mobile viewport, screenshot/touch integration
+Viewport không chứng nhận iPhone thật
+F5 – nghiệm thu
+Thiết bị thật + giáo viên đối chiếu mục tiêu và quy trình
+Một demo tốt không chứng nhận 300 lab
+
+11.2. Bộ tiêu chí định lượng đề xuất
+Công thức/oracle độc lập: dung sai thiết kế riêng cho lab; với bài lí tưởng cơ bản nên đối chiếu ở mức ≤1% hoặc ngưỡng tuyệt đối thích hợp, ghi rõ ngoại lệ.
+Bảo toàn vật chất/năng lượng/điện tích: đánh giá sai số tích lũy trên khoảng thời gian/trạng thái đã quy định; không dùng một hằng số cho mọi miền.
+Độ trễ phản hồi trực tiếp mục tiêu P95 ≤100 ms trên thiết bị mục tiêu; mượt ≥30 FPS với cảnh 2D điển hình trên điện thoại tầm trung trong kịch bản đo thật.
+Mọi ID phải có 1 thao tác đúng, 1 thao tác sai, 1 kịch bản biên, 1 lần đo+lặp, 1 export/import và đánh giá mục tiêu sư phạm.
+Với dữ liệu nhập không hợp lệ (NaN, vô cực, m<0, phóng điện không hợp lí, lượng nước vượt dung tích...), trả lỗi rõ ràng; không tạo giá trị biểu đồ giả.
+11.3. Ma trận thiết bị
+Thiết bị/ môi trường
+Cần xác nhận
+Chrome/Edge desktop, chuột
+Drag/drop ngoài khung, zoom, graph, CSV/JSON
+Android Chrome cảm ứng
+Single finger, two-finger zoom, rotate, pan, no scroll-lock
+iPhone Safari thực
+Pointer cancel, scroll vs gesture, thay orientation, không mất object
+Máy chiếu/màn hình thấp
+Cỡ chữ, tool palette, stage, fullscreen, không cắt dụng cụ
+Fallback Canvas, WebGL yếu
+Dữ liệu/đo không đổi dù renderer khác
+
+Mọi kết quả test phải lưu timestamp, commit SHA, môi trường, lệnh, PASS/FAIL, bằng chứng screenshot/video khi có và giới hạn. Không gọi Node mock hay Safari emulation là test cảm ứng thật.
+12. Lộ trình triển khai cho 300 thí nghiệm
+Giai đoạn
+Sản phẩm bàn giao
+Điều kiện qua cổng
+P0 – Kiểm toán
+Danh sách đúng 300 ID từ catalog; archetypes, L3 gap, mức ưu tiên, baseline tests
+Không có ID thất lạc/nhân bản và không có PASS tự động
+P1 – Hạt nhân + thí điểm nhiệt
+Interaction core, apparatus, measurement, notebook; 2 bài nhiệt chạy thực
+Test N-01…N-06, thao tác trên browser, dữ liệu xuất/nhập
+P2 – Mẫu liên ngành
+Mỗi miền có ít nhất 1 lab chuẩn: mạch, quang, cơ, sóng, khí, điện trường
+Rút được primitive chung không phá đặc trưng khoa học
+P3 – 300 lab theo lô
+Mỗi ID có plugin/protocol/test, teacher sign-off; dashboard số PASS
+Từng bài qua 8 cổng, không dùng một test chung thay thế
+P4 – Phát hành & kiểm hậu kiểm
+CI, Pages, live audit, khảo sát HS/GV, tối ưu thiết bị
+Kiểm được URL live và thiết bị, không có lỗi chặn L3
+
+12.1. Phân công nhóm kỹ thuật và sư phạm
+Physics: duyệt nghiệm độc lập, bảo toàn, sai số, miền áp dụng, định nghĩa vật lí của hành động.
+Interaction/UI: dựng vùng thao tác, cử chỉ, hit-testing, UX mobile, 2D/3D, accessibility.
+Data/QA: số đo, phiên, đồ thị, fixtures, E2E, kiểm hồi quy, đo hiệu năng và báo cáo hiện trạng.
+Textbook/Pedagogy: ánh xạ mục tiêu, tiến trình điều tra, gợi ý ngắn, các nhận định sai phổ biến của HS, rubric.
+AI/security: chỉ khi công việc đụng backend trợ lý; không dùng AI để sinh kết luận thay vì dữ liệu thực nghiệm.
+12.2. Ưu tiên giai đoạn đầu
+Nhiệt lượng kế được ưu tiên vì kiểm tra được đồng thời nhiều hành vi còn thiếu: rót, thả, khuấy, cảm biến, cân bằng năng lượng, số liệu theo thời gian và sự khác biệt giữa hoạt ảnh với mô hình. Tuy nhiên, sau pilot cần một mẫu ở các miền khác để tránh kiến trúc chỉ phù hợp nhiệt học.
+13. Tiêu chí nghiệm thu cuối và biên bản
+Mã
+Mục nghiệm thu
+Trạng thái ghi khi chưa kiểm
+AC-01
+300 ID được audit có hash/version; nguồn catalog rõ
+NOT TESTED
+AC-02
+Mọi ID có mục tiêu, bộ dụng cụ, thao tác nhân quả riêng
+NOT TESTED
+AC-03
+Mọi ID có dữ liệu đo thực + lần lặp + đồ thị/export
+NOT TESTED
+AC-04
+Mọi ID có physics oracle và giới hạn mô hình
+NOT TESTED
+AC-05
+Sai thao tác được xử lí đúng, không auto-correct âm thầm
+NOT TESTED
+AC-06
+Tương thích mobile, iOS Safari thật trên mẫu đại diện
+BLOCKED đến khi đo
+AC-07
+Import phiên cũ và không mất dữ liệu
+NOT TESTED
+AC-08
+Giáo viên nghiệm thu sư phạm từng bài/nhóm tiêu chí
+NOT TESTED
+AC-09
+CI/Pages và website live xác minh đúng phiên bản
+NOT TESTED
+
+ĐIỀU KIỆN TUYÊN BỐ HOÀN TẤT
+Chỉ công bố “300/300 thí nghiệm cấp độ 3” nếu đủ 300 ID có L3-01 đến L3-08 = PASS kèm bằng chứng. Chỉ công bố “đã nâng cấp website” khi mã đã được phát hành và website live đã kiểm chứng.
+
+14. Giả định, rủi ro và quyết định cần theo dõi
+Rủi ro / giả định
+Phòng ngừa / hành động
+“300” là số mục danh mục, không đồng nghĩa 300 solver độc lập
+Kiểm mã ID và logic theo từng archetype; không lấy số thẻ UI làm bằng chứng
+Lạm dụng hiệu ứng hình ảnh, sai bảo toàn vật lí
+Oracles độc lập; state SI; cấm dự đoán từ pixel
+Đòi 3D cho toàn bộ bài gây chậm mobile
+2D/2.5D ưu tiên, 3D khi có giá trị học tập; fallback
+Thao tác sai vô tình khóa người học
+Thông báo nguyên nhân; undo/restore hợp lí; không auto sửa
+Khuấy bị hiểu sai là sinh nhiệt
+Mô hình trao đổi nhiệt, tách năng lượng cơ nếu được tính; không đổi T_eq vô cớ
+Thay session schema làm mất dữ liệu
+Migration test và kiểm trước khi ghi đè
+Kết quả web live không khớp repo
+Kiểm CI, Pages deploy, cache, hostname và module version
+Không có kiểm thử chạm thật
+Để BLOCKED; không suy diễn từ viewport hoặc webdriver
+
+15. Hướng dẫn sử dụng siêu prompt
+Mở coding agent ở repository chính, có quyền đọc mã và chạy test; ưu tiên nhánh/commit thực tế mới nhất.
+Đính kèm tài liệu Word này hoặc đặt vào thư mục tài liệu, và gửi toàn bộ nội dung file `QUANH_LAB_SIEU_PROMPT_CAP_DO_3.md`.
+Yêu cầu agent làm P0 và pilot P1 trước; sau mỗi lô phải báo số PASS, PARTIAL, NOT TESTED, BLOCKED và bằng chứng kiểm chứng.
+Đối chiếu bản phát hành trên physicslab.tech, không đánh giá dựa trên ảnh chụp thiết kế hoặc console PASS không có thao tác thực.
+Nguồn tham khảo và ranh giới xác minh
+Nguồn đối chiếu dự án (đọc ngày 12/11/2026):
+Website công khai: https://physicslab.tech/  (trang chủ công khai nêu “40 thí nghiệm chính”; nội dung tương tác JS chưa được kiểm nghiệm trực tiếp trong tài liệu này).
+Repository: https://github.com/lequocanhaz/thi-nghiem-ao-thpt  (README, AGENTS.md, CODEX_HANDOFF.md, package.json, docs/ARCHITECTURE.md, dist/experiments.js, dist/physics.js).
+Nguyên tắc mô phỏng tương tác của PhET: https://phetsims.colorado.edu/en/about (điều tra khoa học, phản hồi nhân quả, đa biểu diễn, đo đạc).
+MDN Pointer Events: https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events (hỗ trợ chuột/chạm/bút và quản lí pointer capture).
+Các ngưỡng hiệu năng, tiêu chí PASS và kiến trúc module trong tài liệu là YÊU CẦU ĐỀ XUẤT để triển khai/kiểm thử, không phải sự kiện đã quan sát trên website. Độ chính xác của từng mô hình cần được thẩm định theo từng trường hợp.

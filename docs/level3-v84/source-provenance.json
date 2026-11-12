@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-12",
+  "baseCommit": "6aba10bd33f013d2f96d51513764022a65b65d86",
+  "specification": {
+    "fileName": "QUANH_LAB_DAC_TA_300_THI_NGHIEM_CAP_DO_3.docx",
+    "sha256": "dd781c117c264d4fcb0bf727245bb86e69d367e4826ed5a8e811f03c2d61dc1f",
+    "extracted": "source-specification.txt"
+  },
+  "userRequest": {
+    "fileName": "Văn bản đã dán.txt",
+    "sha256": "ecc49d107cc6eb538dbeb2719fd800d46cdd75f80bc949496ac590c846bb4d2d",
+    "copied": "source-request.txt"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "catalogId": "calorimetry",
+  "status": "PARTIAL",
+  "modelVersion": "thermal.nodes.v1",
+  "scope": "Two new activities, one existing ID; classic two-water route preserved",
+  "physicalSystem": "Insulated calorimeter with two finite water nodes and either ice at 0 C or a solid sample; external thermostat and optional solid air cooling have explicit energy ledgers",
+  "apparatus": {
+    "calorimeter": {
+      "positionM": {
+        "x": 0.41,
+        "y": 0.26
+      },
+      "regionM": {
+        "x": 0.32,
+        "y": 0.15,
+        "width": 0.18,
+        "height": 0.2
+      }
+    },
+    "cup": {
+      "positionM": {
+        "x": 0.12,
+        "y": 0.13
+      }
+    },
+    "ice": {
+      "positionM": {
+        "x": 0.66,
+        "y": 0.29
+      }
+    },
+    "probe": {
+      "positionM": {
+        "x": 0.6,
+        "y": 0.18
+      },
+      "rangeK": [
+        273.15,
+        373.15
+      ],
+      "resolutionK": 0.1,
+      "responseTimeS": 2
+    },
+    "stirrer": {
+      "positionM": {
+        "x": 0.72,
+        "y": 0.34
+      }
+    },
+    "tongs": {
+      "positionM": {
+        "x": 0.27,
+        "y": 0.09
+      }
+    },
+    "solid": {
+      "positionM": {
+        "x": 0.26,
+        "y": 0.39
+      }
+    },
+    "scale": {
+      "positionM": {
+        "x": 0.675,
+        "y": 0.105
+      },
+      "regionM": {
+        "x": 0.6,
+        "y": 0.05,
+        "width": 0.15,
+        "height": 0.11
+      },
+      "resolutionKg": 0.001
+    },
+    "bath": {
+      "positionM": {
+        "x": 0.14,
+        "y": 0.265
+      },
+      "regionM": {
+        "x": 0.05,
+        "y": 0.19,
+        "width": 0.18,
+        "height": 0.16
+      }
+    }
+  },
+  "activities": [
+    {
+      "activity": "ice",
+      "route": "#lab/calorimetry?l3=ice",
+      "title": "Cân bằng nhiệt: nước và đá",
+      "hypothesisPrompts": [
+        "Giữ nguyên lượng nước và nhiệt độ đầu, thay lượng đá: em dự đoán điều gì về nhiệt độ cuối và đá còn lại? Vì sao?",
+        "Chỉ thay cách khuấy, em dự đoán đường nhiệt độ–thời gian và trạng thái cuối sẽ thay đổi thế nào?"
+      ],
+      "variables": {
+        "independent": [
+          {
+            "id": "iceMassKg",
+            "label": "Khối lượng đá đưa vào",
+            "unit": "kg"
+          },
+          {
+            "id": "mixingIntensity",
+            "label": "Cường độ khuấy ở một so sánh riêng",
+            "unit": "1"
+          }
+        ],
+        "dependent": [
+          {
+            "id": "probeTempK",
+            "label": "Số chỉ nhiệt kế theo thời gian",
+            "unit": "K"
+          },
+          {
+            "id": "iceMassKg",
+            "label": "Khối lượng đá còn lại và trạng thái pha",
+            "unit": "kg"
+          }
+        ],
+        "controls": [
+          {
+            "id": "waterMassKg",
+            "label": "Lượng nước trước khi thêm đá",
+            "unit": "kg"
+          },
+          {
+            "id": "waterTempK",
+            "label": "Nhiệt độ nước trước khi thêm đá",
+            "unit": "K"
+          },
+          {
+            "id": "iceTempK",
+            "label": "Nhiệt độ đá ban đầu",
+            "unit": "K"
+          },
+          {
+            "id": "calorimeterHeatCapacityJPerK",
+            "label": "Nhiệt dung bình và điều kiện cách nhiệt",
+            "unit": "J/K"
+          }
+        ]
+      },
+      "causalActions": [
+        "place-vessel",
+        "pour",
+        "load-scale",
+        "tare",
+        "add-ice",
+        "place-probe",
+        "stir"
+      ],
+      "measurements": [
+        {
+          "instrument": "thermometer",
+          "unit": "K",
+          "displayUnit": "Celsius",
+          "resolutionK": 0.1,
+          "responseTimeS": 2,
+          "validity": "Actual tip contact with water/bath/solid; water-only series for equilibration evidence"
+        },
+        {
+          "instrument": "scale",
+          "unit": "kg",
+          "resolutionKg": 0.001,
+          "validity": "Explicit load and tare; 0.005 kg pan and 0.050 kg cup"
+        }
+      ],
+      "oracleTests": [
+        "checks/l3-thermal-physics-v84.mjs"
+      ],
+      "browserTests": [
+        "checks/browser-level3-v84.py"
+      ],
+      "mobileEvidence": {
+        "status": "PARTIAL",
+        "scope": "Chromium viewports/CDP only; no physical device"
+      },
+      "teacherReview": {
+        "status": "NOT TESTED"
+      },
+      "modelAssumptions": [
+        "Two lumped water nodes; finite conductance is illustrative, not calibrated calorimetry or CFD.",
+        "Ice starts at 0 C; no supercooling, evaporation, boiling or below-zero ice.",
+        "Calorimeter heat capacity is split between nodes; its initial temperature must be specified.",
+        "Probe has zero heat-capacity backreaction, first-order response and finite resolution; water placement measures the near node.",
+        "Insulated vessel; optional Newton cooling affects a solid in air only. Bath energy and spills are accounted.",
+        "Scale container masses: cup 0.050 kg and pan 0.005 kg. No random measurement noise."
+      ],
+      "knownLimitations": [
+        "Chế độ cơ sở dùng đá ở 0 °C, điều kiện nước/bình ban đầu xác định và hệ cách nhiệt.",
+        "Chuyển động nước và đá minh họa mô hình nhiệt tập trung, không phải CFD.",
+        "Dấu kiểm dữ liệu không chứng nhận chất lượng lập luận, nghiệm thu giáo viên hay hoàn thành cấp độ 3."
+      ]
+    },
+    {
+      "activity": "solid",
+      "route": "#lab/calorimetry?l3=solid",
+      "title": "Xác định nhiệt dung riêng của vật rắn",
+      "hypothesisPrompts": [
+        "Giữ cùng nước, vật liệu và nhiệt độ lúc chuyển, thay khối lượng vật rắn: số đo cân bằng sẽ thay đổi thế nào?",
+        "Nếu chuyển vật chậm hoặc đọc quá sớm, phép suy ra sẽ bị ảnh hưởng ra sao? Em sẽ kiểm tra bằng dữ liệu gì?"
+      ],
+      "variables": {
+        "independent": [
+          {
+            "id": "solidMassKg",
+            "label": "Khối lượng vật cùng vật liệu",
+            "unit": "kg"
+          },
+          {
+            "id": "solidTempK",
+            "label": "Nhiệt độ vật trước khi chuyển ở so sánh riêng",
+            "unit": "K"
+          }
+        ],
+        "dependent": [
+          {
+            "id": "probeTempK",
+            "label": "Số chỉ nhiệt kế và nhiệt độ cân bằng",
+            "unit": "K"
+          },
+          {
+            "id": "inferredSpecificHeat",
+            "label": "Nhiệt dung riêng suy ra từ số đo",
+            "unit": "J/(kg·K)"
+          }
+        ],
+        "controls": [
+          {
+            "id": "waterMassKg",
+            "label": "Khối lượng nước đầu",
+            "unit": "kg"
+          },
+          {
+            "id": "waterTempK",
+            "label": "Nhiệt độ nước đầu",
+            "unit": "K"
+          },
+          {
+            "id": "solidTempK",
+            "label": "Nhiệt độ vật lúc chuyển nếu chỉ đổi khối lượng",
+            "unit": "K"
+          },
+          {
+            "id": "calorimeterHeatCapacityJPerK",
+            "label": "Nhiệt dung bình, cách khuấy và chuyển vật",
+            "unit": "J/K"
+          }
+        ]
+      },
+      "causalActions": [
+        "place-vessel",
+        "pour",
+        "load-scale",
+        "tare",
+        "move-solid:tongs",
+        "move-solid:bath",
+        "move-solid:water",
+        "place-probe",
+        "stir"
+      ],
+      "measurements": [
+        {
+          "instrument": "thermometer",
+          "unit": "K",
+          "displayUnit": "Celsius",
+          "resolutionK": 0.1,
+          "responseTimeS": 2,
+          "validity": "Actual tip contact with water/bath/solid; water-only series for equilibration evidence"
+        },
+        {
+          "instrument": "scale",
+          "unit": "kg",
+          "resolutionKg": 0.001,
+          "validity": "Explicit load and tare; 0.005 kg pan and 0.050 kg cup"
+        }
+      ],
+      "oracleTests": [
+        "checks/l3-thermal-physics-v84.mjs"
+      ],
+      "browserTests": [
+        "checks/browser-level3-v84.py"
+      ],
+      "mobileEvidence": {
+        "status": "PARTIAL",
+        "scope": "Chromium viewports/CDP only; no physical device"
+      },
+      "teacherReview": {
+        "status": "NOT TESTED"
+      },
+      "modelAssumptions": [
+        "Two lumped water nodes; finite conductance is illustrative, not calibrated calorimetry or CFD.",
+        "Ice starts at 0 C; no supercooling, evaporation, boiling or below-zero ice.",
+        "Calorimeter heat capacity is split between nodes; its initial temperature must be specified.",
+        "Probe has zero heat-capacity backreaction, first-order response and finite resolution; water placement measures the near node.",
+        "Insulated vessel; optional Newton cooling affects a solid in air only. Bath energy and spills are accounted.",
+        "Scale container masses: cup 0.050 kg and pan 0.005 kg. No random measurement noise."
+      ],
+      "knownLimitations": [
+        "Phép suy ra cơ sở dùng nhiệt dung riêng không đổi, không có nguồn nhiệt trong bình và bỏ qua nhiệt thất thoát/nhiệt dung kẹp.",
+        "Nhiệt độ vật ngay trước khi chuyển cần có căn cứ đo; không mặc định bằng nhiệt độ bể.",
+        "Dấu kiểm dữ liệu không chứng nhận chất lượng lập luận, nghiệm thu giáo viên hay hoàn thành cấp độ 3."
+      ]
+    }
+  ],
+  "evidence": [
+    "docs/level3-v84/QA_REPORT.md",
+    "docs/level3-v84/evidence/verification-summary.json"
+  ]
+}
