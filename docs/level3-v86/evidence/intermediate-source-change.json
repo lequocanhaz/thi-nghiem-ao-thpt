@@ -1,0 +1,129 @@
+{
+  "scope": "Chromium actual WebGL; software renderer when reported, no hardware/teacher acceptance",
+  "gitHead": "71344a949233d22e998a9352336d8fb6fc7024ca",
+  "generatedAt": "2026-11-13T10:44:28.792286+00:00",
+  "browserVersion": "154.0.8037.57",
+  "flags": [
+    "--no-sandbox",
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader"
+  ],
+  "results": [
+    {
+      "case": "collision_browser",
+      "status": "PASS",
+      "cases": [
+        {
+          "activity": "ice",
+          "input": "native mouse1440",
+          "bodyOverlapRejected": true,
+          "floorRejected": true,
+          "sweepTunnelingRejected": true,
+          "safeFinitePourLedger": true,
+          "hollowPoseAccepted": true,
+          "cancelAndKeyboardReleased": true,
+          "canvas": {
+            "sha256": "f2f8e3b6b0b7545b8d4e9085212199f935760aec2663e9dceedc48f4043201ee",
+            "distinctColors": 7539,
+            "size": [
+              1050,
+              609
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "activity": "ice",
+          "input": "CDP touch390",
+          "bodyOverlapRejected": true,
+          "floorRejected": true,
+          "sweepTunnelingRejected": true,
+          "safeFinitePourLedger": true,
+          "hollowPoseAccepted": true,
+          "cancelAndKeyboardReleased": true,
+          "canvas": {
+            "sha256": "69d3ccefdf42840634f4d7645a41356d650dc509178f08becddf9cbf80579462",
+            "distinctColors": 3170,
+            "size": [
+              364,
+              361
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "activity": "solid",
+          "input": "native mouse1440",
+          "bodyOverlapRejected": true,
+          "floorRejected": true,
+          "sweepTunnelingRejected": true,
+          "safeFinitePourLedger": true,
+          "hollowPoseAccepted": true,
+          "cancelAndKeyboardReleased": true,
+          "canvas": {
+            "sha256": "58ef5a5b401e20a54fc511c699bb0dc8eaa554b336d2622ec2f56293793da1ab",
+            "distinctColors": 7921,
+            "size": [
+              1050,
+              609
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "activity": "solid",
+          "input": "CDP touch390",
+          "bodyOverlapRejected": true,
+          "floorRejected": true,
+          "sweepTunnelingRejected": true,
+          "safeFinitePourLedger": true,
+          "hollowPoseAccepted": true,
+          "cancelAndKeyboardReleased": true,
+          "canvas": {
+            "sha256": "f912149684d773355fbc50a9294c963adc973215aa03791ffad5c323693504f0",
+            "distinctColors": 3379,
+            "size": [
+              364,
+              361
+            ]
+          },
+          "pageErrors": []
+        }
+      ],
+      "scope": "Native Chromium pointer/keyboard and CDP touch emulation. No physical touch hardware.",
+      "sourceBefore": {
+        "dist/app.js": "fb42ec50c3c6f7189eb3ad9db39297e5cdcd20a77af422b3e126c31be3cc07c9",
+        "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+        "dist/l3/data-notebook.js": "d49e1ed601a2237c4bb87c3e85acbfaf32e173c540f2ebc59aa2a773930f8522",
+        "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+        "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+        "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+        "dist/l3/thermal-physics.js": "ebf7aca0dc6714cdeb4081974c01f85f3385f1a1d77f9afc21b4828c87297868",
+        "dist/l3/thermal-pilot.js": "0820cfdd1de0cae2bb120e62966f60ee9ad7d104e1f10d7991169a8d258a5b48",
+        "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+        "dist/l3/thermal-three.js": "b43a9eae69d0024267a72e5a3863a69b1da39ad0d793fea0fd0e19c215f400db",
+        "dist/l3/thermal-view.js": "a07a171fc9503c2811a28a7eafac9c5756c61180c7264d4279af302d33fecbbe",
+        "dist/l3/thermal-three.css": "3b79b35843926a851a3c6f953e090d740c0115781feb559d51ea2f6e059d0b92",
+        "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+      },
+      "sourceAfter": {
+        "dist/app.js": "fb42ec50c3c6f7189eb3ad9db39297e5cdcd20a77af422b3e126c31be3cc07c9",
+        "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+        "dist/l3/data-notebook.js": "d49e1ed601a2237c4bb87c3e85acbfaf32e173c540f2ebc59aa2a773930f8522",
+        "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+        "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+        "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+        "dist/l3/thermal-physics.js": "ebf7aca0dc6714cdeb4081974c01f85f3385f1a1d77f9afc21b4828c87297868",
+        "dist/l3/thermal-pilot.js": "39090b8289f2677d669c9792a1c815b184714ccf22a5244b8dda4a71938a05f5",
+        "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+        "dist/l3/thermal-three.js": "b43a9eae69d0024267a72e5a3863a69b1da39ad0d793fea0fd0e19c215f400db",
+        "dist/l3/thermal-view.js": "a07a171fc9503c2811a28a7eafac9c5756c61180c7264d4279af302d33fecbbe",
+        "dist/l3/thermal-three.css": "3b79b35843926a851a3c6f953e090d740c0115781feb559d51ea2f6e059d0b92",
+        "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+      },
+      "sourceChangedDuringCase": [
+        "dist/l3/thermal-pilot.js"
+      ]
+    }
+  ]
+}
