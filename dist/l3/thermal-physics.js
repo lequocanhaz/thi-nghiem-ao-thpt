@@ -31,6 +31,7 @@ export function validateState(s){
   if(!s||s.schemaVersion!=='thermal.physical.v1'||s.modelVersion!==MODEL_VERSION)throw new RangeError('version');validateConfig(s.activity,s.config);
   for(const k of ['timeS','nearWaterMassKg','farWaterMassKg','waterMassKg','cupWaterMassKg','iceMassKg','iceTrayMassKg','spillMassKg','energyInJ','energyOutJ','spillEnergyJ','initialMassKg'])finite(k,s[k],0,1e9);
   for(const k of ['nearWaterTempC','farWaterTempC','waterTempC','cupTempC'])finite(k,s[k],0,95.000001);
+  finite('waterVolumeM3',s.waterVolumeM3,0,1e6);for(const k of ['energyResidualJ','massResidualKg'])finite(k,s[k],-1e9,1e9);
   finite('initialEnergyJ',s.initialEnergyJ,-1e9,1e9);finite('mixingIntensity',s.mixingIntensity,0,1);if(typeof s.vesselPlaced!=='boolean')throw new RangeError('vesselPlaced');
   if(!['tray','bath','tongs','water','table'].includes(s.solid?.location))throw new RangeError('solid.location');finite('solid.massKg',s.solid.massKg,.001,1);finite('solid.c',s.solid.specificHeatJPerKgK,100,5000);finite('solid.tempC',s.solid.tempC,0,95.000001);if(s.solid.massKg!==s.config.solidMassKg||s.solid.specificHeatJPerKgK!==s.config.solidSpecificHeatJPerKgK)throw new RangeError('solid definition');
   if(!['air','water','wall','bath','solid'].includes(s.probe?.placement))throw new RangeError('probe.placement');finite('probe.tempC',s.probe.tempC,0,95.000001);finite('probe.tauS',s.probe.tauS,.1,30);finite('probe.resolutionK',s.probe.resolutionK,.01,1);finite('probe.offsetK',s.probe.offsetK,-5,5);
@@ -40,7 +41,10 @@ export function validateState(s){
   if(Math.abs(s.initialMassKg-expectedMass)>1e-8||Math.abs(s.initialEnergyJ-expectedEnergy)>1e-6)throw new RangeError('initial ledger');
   const mean=s.waterMassKg>0?(s.nearWaterMassKg*s.nearWaterTempC+s.farWaterMassKg*s.farWaterTempC)/s.waterMassKg:(s.nearWaterTempC+s.farWaterTempC)/2;
   if(Math.abs(s.waterTempC-mean)>1e-7||Math.abs(s.waterVolumeM3-s.waterMassKg/RW)>1e-10)throw new RangeError('derived water state');
-  if(Math.abs(s.waterMassKg-s.nearWaterMassKg-s.farWaterMassKg)>1e-8)throw new RangeError('water nodes');if(containedVolumeM3(s)>s.config.capacityM3+1e-10)throw new RangeError('capacity');if(Math.abs(totalMassKg(s)-s.initialMassKg)>1e-7)throw new RangeError('mass balance');if(Math.abs(totalEnergyJ(s)+s.energyOutJ-s.energyInJ-s.initialEnergyJ)>1e-4)throw new RangeError('energy balance');
+  const massResidual=totalMassKg(s)-s.initialMassKg,energyResidual=totalEnergyJ(s)+s.energyOutJ-s.energyInJ-s.initialEnergyJ;
+  // Validate reported diagnostics against the ledger; never repair imported data.
+  if(Math.abs(s.massResidualKg-massResidual)>1e-12||Math.abs(s.energyResidualJ-energyResidual)>1e-8)throw new RangeError('derived ledger state');
+  if(Math.abs(s.waterMassKg-s.nearWaterMassKg-s.farWaterMassKg)>1e-8)throw new RangeError('water nodes');if(containedVolumeM3(s)>s.config.capacityM3+1e-10)throw new RangeError('capacity');if(Math.abs(massResidual)>1e-7)throw new RangeError('mass balance');if(Math.abs(energyResidual)>1e-4)throw new RangeError('energy balance');
  }catch(e){errors.push(e.message);}return {ok:errors.length===0,valid:errors.length===0,errors};
 }
 function scaleRawKg(s){switch(s.scale.load){case'pan':return .005;case'cup':return .05+s.cupWaterMassKg;case'ice':return .005+s.scale.iceMassKg;case'solid':return s.solid.massKg;default:return 0;}}

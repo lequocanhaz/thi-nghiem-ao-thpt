@@ -1,0 +1,425 @@
+{
+  "scope": "Chromium actual WebGL; software renderer when reported, no hardware/teacher acceptance",
+  "gitHead": "71344a949233d22e998a9352336d8fb6fc7024ca",
+  "generatedAt": "2026-11-13T10:57:28.466541+00:00",
+  "browserVersion": "154.0.8037.57",
+  "flags": [
+    "--no-sandbox",
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader"
+  ],
+  "allSourcesIdenticalAcrossAllCases": true,
+  "sourceManifest": {
+    "checks/browser-thermal-v86.py": "d38f01e31412f29b4171dab899d8afbc59195ac395db5c85ad0baf24d45c42b1",
+    "dist/index.html": "398bb448350d215b0600631594236ef921c873b47fcf989187f41aae8342af1d",
+    "dist/boot.js": "387708c3e9d28b3dce0ad534fb436a7a538d781827619dd99bf321254d3ada04",
+    "dist/app.js": "fb42ec50c3c6f7189eb3ad9db39297e5cdcd20a77af422b3e126c31be3cc07c9",
+    "dist/app.css": "04181d4c1500d4591f106af26011a00f13e51a9e9bd5b4a29b210d4ec88e2986",
+    "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+    "dist/l3/data-notebook.js": "d49e1ed601a2237c4bb87c3e85acbfaf32e173c540f2ebc59aa2a773930f8522",
+    "dist/l3/interaction-core.js": "f4ac24a86fb9b110925814d5dca25bb4c02f2bd689e18aeb83038e62854423dd",
+    "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+    "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+    "dist/l3/thermal-physics.js": "ebf7aca0dc6714cdeb4081974c01f85f3385f1a1d77f9afc21b4828c87297868",
+    "dist/l3/thermal-pilot.js": "2b20d6a9495878e095ea3d53d6c13b8698655a2743e866e3bc962c28e927b6f1",
+    "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+    "dist/l3/thermal-three.js": "b43a9eae69d0024267a72e5a3863a69b1da39ad0d793fea0fd0e19c215f400db",
+    "dist/l3/thermal-view.js": "a07a171fc9503c2811a28a7eafac9c5756c61180c7264d4279af302d33fecbbe",
+    "dist/l3/thermal-three.css": "3b79b35843926a851a3c6f953e090d740c0115781feb559d51ea2f6e059d0b92",
+    "dist/l3/thermal.css": "e7a49cac56b6cf149841e8efb84e15a3d3ef186d8d0f10e7b72b68d5794da7e1"
+  },
+  "sourceFingerprintSha256": "73daf770217480e490c1105247de3c17c010f262c6d8f9cb0c984f44ada32daf",
+  "results": [
+    {
+      "case": "full_event_log_recovery",
+      "status": "PASS",
+      "eventCountRemains5000": true,
+      "rejectedPlacementAndRecoveryNoMutation": true,
+      "exportRemainsImportable": true,
+      "pageErrors": [],
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "collision_browser",
+      "status": "PASS",
+      "cases": [
+        {
+          "activity": "ice",
+          "input": "native mouse1440",
+          "bodyOverlapRejected": true,
+          "floorRejected": true,
+          "sweepTunnelingRejected": true,
+          "safeFinitePourLedger": true,
+          "hollowPoseAccepted": true,
+          "cancelAndKeyboardReleased": true,
+          "canvas": {
+            "sha256": "0289ff79d6213a40063087d61bdfa789d41f301c2348528a75f381e2ba581798",
+            "distinctColors": 7536,
+            "size": [
+              1050,
+              609
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "activity": "ice",
+          "input": "CDP touch390",
+          "bodyOverlapRejected": true,
+          "floorRejected": true,
+          "sweepTunnelingRejected": true,
+          "safeFinitePourLedger": true,
+          "hollowPoseAccepted": true,
+          "cancelAndKeyboardReleased": true,
+          "canvas": {
+            "sha256": "fa2906b9ec5d235817116276fecf6ab41b517287aed207101989405bf694aa28",
+            "distinctColors": 3163,
+            "size": [
+              364,
+              361
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "activity": "solid",
+          "input": "native mouse1440",
+          "bodyOverlapRejected": true,
+          "floorRejected": true,
+          "sweepTunnelingRejected": true,
+          "safeFinitePourLedger": true,
+          "hollowPoseAccepted": true,
+          "cancelAndKeyboardReleased": true,
+          "canvas": {
+            "sha256": "3b1d75d4abd33b6a2dcc9e4ffbcb2243e34ed7d95dfcffe06e669f6683063a0b",
+            "distinctColors": 7910,
+            "size": [
+              1050,
+              609
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "activity": "solid",
+          "input": "CDP touch390",
+          "bodyOverlapRejected": true,
+          "floorRejected": true,
+          "sweepTunnelingRejected": true,
+          "safeFinitePourLedger": true,
+          "hollowPoseAccepted": true,
+          "cancelAndKeyboardReleased": true,
+          "canvas": {
+            "sha256": "c770f54017c712db238186966dfd7dd825c4ce3be17d24a27240631cd7ea0a6d",
+            "distinctColors": 3381,
+            "size": [
+              364,
+              361
+            ]
+          },
+          "pageErrors": []
+        }
+      ],
+      "scope": "Native Chromium pointer/keyboard and CDP touch emulation. No physical touch hardware.",
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "import_and_legacy_recovery",
+      "status": "PASS",
+      "cases": [
+        {
+          "activity": "ice",
+          "malformedImportsRejectedBytePreserved": [
+            "string-energy",
+            "forged-mass",
+            "missing-volume"
+          ],
+          "legacyBadPoseNotAutoShifted": true,
+          "invalidPoseNoFakePour": true,
+          "explicitKeyboardRecoveryRetainsPhysicsReadings": true,
+          "beforePngSha256": "9352134c99365097116661f6be74cd3b3e195fcb19056774dfd50c43d5d70bd6",
+          "recoveredCanvas": {
+            "sha256": "0ef46565a50449408d1883a44b025d8543dc1dab360ec28794fc8f4988a0bdc9",
+            "distinctColors": 7034,
+            "size": [
+              1050,
+              609
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "activity": "solid",
+          "malformedImportsRejectedBytePreserved": [
+            "string-energy",
+            "forged-mass",
+            "missing-volume"
+          ],
+          "legacyBadPoseNotAutoShifted": true,
+          "invalidPoseNoFakePour": true,
+          "explicitKeyboardRecoveryRetainsPhysicsReadings": true,
+          "beforePngSha256": "4c8cea9f754dadf9a3a5c9db60c0b32c165342a512a05502a58653c48138847b",
+          "recoveredCanvas": {
+            "sha256": "786275495041e2cada82e1075323deaaa0e10b90802f581d2a7a15a7a9cae195",
+            "distinctColors": 7413,
+            "size": [
+              1050,
+              609
+            ]
+          },
+          "pageErrors": []
+        }
+      ],
+      "fixtureScope": "Valid existing serialized session preloaded in a new isolated browser context with only persisted apparatus pose deliberately invalid; live physical model never mutated.",
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "render_and_camera",
+      "status": "PASS",
+      "gl": {
+        "webgl": true,
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "contextLost": false
+      },
+      "sceneStats": {
+        "meshCount": 48,
+        "triangles": 9644,
+        "drawCalls": 97,
+        "contextLost": false,
+        "disposed": false
+      },
+      "pixelsBefore": {
+        "sha256": "496bff1f2ed5e93f5a064e5bd8da494a667da4b91796691be12594762fc7309c",
+        "distinctColors": 7762,
+        "size": [
+          1050,
+          609
+        ]
+      },
+      "pixelsAfterOrbit": {
+        "sha256": "98e01767b1d07548d8ae68927d2e9a996fae5289cf43c7636106e96d834b11fe",
+        "distinctColors": 7780,
+        "size": [
+          1050,
+          609
+        ]
+      },
+      "orbitAndWheel": true,
+      "physicsUnchanged": true,
+      "pageErrors": [],
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "ice_raycast_journey",
+      "status": "PASS",
+      "actualRaycastPlacementAndPour": true,
+      "outsideIceRejected": true,
+      "airProbeInvalid": true,
+      "waterProbeValid": true,
+      "manualValuesKept": true,
+      "pageErrors": [],
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "solid_raycast_journey",
+      "status": "PASS",
+      "bareHandRejected": true,
+      "tongsBathWater": true,
+      "finiteHeatingC": [
+        20,
+        49.83726054837972
+      ],
+      "waterWarmed": true,
+      "pageErrors": [],
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "lifecycle_locale_theme",
+      "status": "PASS",
+      "ice": {
+        "localeAndTheme": true,
+        "logoTeardown": {
+          "connected": false,
+          "stats": {
+            "disposed": true,
+            "contextLost": false
+          }
+        },
+        "routeAndReloadRetainReadings": true,
+        "pageErrors": []
+      },
+      "solid": {
+        "localeAndTheme": true,
+        "logoTeardown": {
+          "connected": false,
+          "stats": {
+            "disposed": true,
+            "contextLost": false
+          }
+        },
+        "routeAndReloadRetainReadings": true,
+        "pageErrors": []
+      },
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "fallback_2d_keyboard",
+      "status": "PASS",
+      "ice": {
+        "explicit2DKeyboard": true,
+        "threeThenTwoRetainsData": true,
+        "pageErrors": []
+      },
+      "solid": {
+        "explicit2DKeyboard": true,
+        "threeThenTwoRetainsData": true,
+        "pageErrors": []
+      },
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "cancel_pointer_lifecycle",
+      "status": "PASS",
+      "cancelRestoresPose": true,
+      "lostCaptureRestoresPose": true,
+      "pausedPhysicsHolds": true,
+      "scope": "Native Chromium mouse down/move; injected pointercancel and browser releasePointerCapture, not physical touch interruption",
+      "pageErrors": [],
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "mobile_touch_camera",
+      "status": "PASS",
+      "viewports": [
+        {
+          "viewport": [
+            320,
+            568
+          ],
+          "touchDragAndKeyboardPour": true,
+          "twoTouchCamera": true,
+          "physicsUnchangedByCamera": true,
+          "noBodyOverflow": true,
+          "minimumButtonHeight": 44,
+          "canvas": {
+            "sha256": "30f1809f2d8a4af827d4cbb4cbbe506ba3200c8fc00ce762a792e2a41de12973",
+            "distinctColors": 3081,
+            "size": [
+              294,
+              361
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "touchDragAndKeyboardPour": true,
+          "twoTouchCamera": true,
+          "physicsUnchangedByCamera": true,
+          "noBodyOverflow": true,
+          "minimumButtonHeight": 44,
+          "canvas": {
+            "sha256": "f9fbed008908c2b97913fadaea1de46df955687f6a8afced5be6497a6370a686",
+            "distinctColors": 3495,
+            "size": [
+              364,
+              361
+            ]
+          },
+          "pageErrors": []
+        },
+        {
+          "viewport": [
+            844,
+            390
+          ],
+          "touchDragAndKeyboardPour": true,
+          "twoTouchCamera": true,
+          "physicsUnchangedByCamera": true,
+          "noBodyOverflow": true,
+          "minimumButtonHeight": 44,
+          "canvas": {
+            "sha256": "e870b406688b29eaee5a379a2b20aeba2d05fcffe5f3228fe04ac46b39c66d6c",
+            "distinctColors": 4732,
+            "size": [
+              526,
+              361
+            ]
+          },
+          "pageErrors": []
+        }
+      ],
+      "scope": "Chromium CDP-emulated touchscreen and viewports; no physical phone, OSK or hardware GPU claim",
+      "sourceChangedDuringCase": []
+    },
+    {
+      "case": "no_webgl_and_context_loss",
+      "status": "PASS",
+      "contextLossFixture": {
+        "dataRetained": true,
+        "keyboardFallbackUsable": true,
+        "pageErrors": []
+      },
+      "webglDisabled": {
+        "nativeDisableWebGLFlag": true,
+        "keyboardFallbackUsable": true,
+        "expectedConsoleErrors": [
+          "THREE.WebGLRenderer: A WebGL context could not be created. Reason:  disabled by enterprise policy or commandline switch",
+          "THREE.WebGLRenderer: A WebGL context could not be created. Reason:  disabled by enterprise policy or commandline switch",
+          "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context."
+        ],
+        "pageErrors": []
+      },
+      "scope": "Browser context-loss injection/native --disable-webgl; not a physical unsupported device",
+      "sourceChangedDuringCase": []
+    }
+  ],
+  "selectedScreenshots": {
+    "water-probe-desktop.png": {
+      "source": "work/thermal-v86/final/ice-raycast-water-ice-probe.png",
+      "sha256": "f1b1ec5fd8ca264f8a160b1d0e72fe5b1e26a98c026762afbf67a4896d31628c"
+    },
+    "solid-desktop-dark.png": {
+      "source": "work/thermal-v86/final/solid-dark-english.png",
+      "sha256": "675f900194c615103d4dce43528fbd1e94eb5825202ae37f0fbb01ae08199d2c"
+    },
+    "collision-mobile.png": {
+      "source": "work/thermal-v86/final/collision-solid-touch390.png",
+      "sha256": "c770f54017c712db238186966dfd7dd825c4ce3be17d24a27240631cd7ea0a6d"
+    },
+    "legacy-recovery-needed.png": {
+      "source": "work/thermal-v86/final/legacy-invalid-solid-before.png",
+      "sha256": "4c8cea9f754dadf9a3a5c9db60c0b32c165342a512a05502a58653c48138847b"
+    }
+  },
+  "unhandledJavaScriptErrors": 0,
+  "scopeLimitations": [
+    "Chromium software WebGL and CDP touch emulation only; no physical iPhone/Safari/Android or OSK.",
+    "No teacher acceptance, hardware GPU or target P95/FPS certification.",
+    "Two activities share one catalog ID calorimetry; geometry is an XY slice, not general rigid-body collision or CFD.",
+    "First raw run changed runtime source during collision case; second was intentionally interrupted before final storage patch. Only final/report.json is aggregate frozen-source verification."
+  ],
+  "catalogStatusRecommendation": {
+    "PASS": 0,
+    "PARTIAL": 1,
+    "NOT TESTED": 299,
+    "BLOCKED": 0,
+    "total": 300
+  },
+  "crossActivityCompanion": {
+    "status": "PASS",
+    "switchIceSolidIceSolidAndReload": true,
+    "independentReadingsRetainedC": [
+      32.1,
+      23.4
+    ],
+    "legacyClassicBytesRetained": true,
+    "pageErrors": [],
+    "browserVersion": "154.0.8037.57",
+    "scope": "Native Chromium page navigation and HTML UI; software WebGL, no physical device."
+  }
+}
