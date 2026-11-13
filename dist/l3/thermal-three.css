@@ -1,0 +1,11 @@
+/* A bounded 3D bench; canvas gestures never capture scrolling outside the bench. */
+.l3-three-shell{position:relative;width:100%;min-width:0;height:420px;overflow:hidden;background:var(--l3-soft,#f2f5f8);isolation:isolate}
+.l3-three-canvas{display:block;width:100%;height:100%;touch-action:none;outline-offset:-4px!important}
+.l3-three-canvas:focus-visible{outline:3px solid var(--l3-accent,#245bd7)}
+.l3-three-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.l3-three-label{position:absolute;top:0;left:0;max-width:140px;padding:3px 7px;border:1px solid var(--l3-line,#c5d0da);border-radius:5px;background:var(--l3-paper,#fff);color:var(--l3-ink,#202936);font:500 11px/17px 'Manrope','Segoe UI',sans-serif;white-space:nowrap;box-shadow:0 1px 3px #00000014;pointer-events:none}
+.l3-three-label[data-selected=true]{border-color:var(--l3-accent,#245bd7);font-weight:650}
+.l3-three-shell[data-dragging] .l3-three-canvas{cursor:grabbing!important}
+.l3-three-label[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){.l3-three-shell *{transition:none!important}}
+@media(forced-colors:active){.l3-three-canvas:focus-visible{outline-color:Highlight}.l3-three-label{border-color:CanvasText;background:Canvas;color:CanvasText}}

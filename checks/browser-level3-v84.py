@@ -32,7 +32,7 @@ class Bench:
  def __init__(self,browser,activity='ice',width=1440,height=1100):
   self.activity=activity;self.storage_key='quanh-l3-calorimetry-'+activity+'-v1';self.errors=[]
   self.context=browser.new_context(viewport={'width':width,'height':height},has_touch=width<600,accept_downloads=True)
-  self.context.add_init_script('''if(!localStorage.getItem('qa-level3-seeded')){localStorage.setItem('thpt-lab-v1',%s);localStorage.setItem('thpt-ui-v3',JSON.stringify({renderer:'diagram',motion:false}));localStorage.setItem('qa-level3-seeded','1');}'''%json.dumps(LEGACY_RAW))
+  self.context.add_init_script('''if(!localStorage.getItem('qa-level3-seeded')){localStorage.setItem('thpt-lab-v1',%s);localStorage.setItem('thpt-ui-v3',JSON.stringify({renderer:'diagram',motion:false}));localStorage.setItem('qa-level3-seeded','1');localStorage.setItem('quanh-l3-view-v1','2d');}'''%json.dumps(LEGACY_RAW))
   self.page=self.context.new_page();self.page.on('pageerror',lambda e:self.errors.append(str(e)))
   self.page.on('dialog',lambda d:d.accept('Đọc sớm; giữ dữ liệu gốc.') if d.type=='prompt' else d.accept())
   self.page.goto(args.url.rstrip('/')+'/#lab/calorimetry?l3='+activity)

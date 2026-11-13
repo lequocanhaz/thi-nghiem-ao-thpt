@@ -12,7 +12,7 @@ export function contains(region,p){return !!region&&Number.isFinite(p?.x)&&Numbe
 export function targetAt(point){const p={x:point.x/1000,y:point.y/1000};for(const id of ['scale','bath','calorimeter'])if(contains(apparatusRegistry[id].regionM,p))return id;return 'table';}
 export const placementFor=point=>({calorimeter:'water',bath:'bath',scale:'wall',table:'air'})[targetAt(point)];
 // A downward stream may start ABOVE the opening; the spout need not be inside it.
-export function pourTargetAt(spout,state){return state.vesselPlaced&&spout.x>=334&&spout.x<=486&&spout.y>=0&&spout.y<=342?'vessel':'table';}
+export function pourTargetAt(spout,state){return state.vesselPlaced&&spout.x>=334&&spout.x<=486&&spout.y>=0&&spout.y<=156?'vessel':'table';}
 export function waterSurfaceY(state){const volume=(state.waterMassKg+state.iceMassKg)/1000+(state.solid.location==='water'?state.solid.massKg/state.config.solidDensityKgM3:0);return 348-176*Math.min(1,volume/state.config.capacityM3);}
 export function probePlacementAt(p,state,positions){
  if(state.activity==='solid'&&state.solid.location!=='water'&&Math.abs(p.x-positions.solid.x)<=22&&Math.abs(p.y-positions.solid.y)<=24)return 'solid';

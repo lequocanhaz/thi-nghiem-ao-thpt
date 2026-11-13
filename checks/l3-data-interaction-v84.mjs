@@ -12,6 +12,8 @@ assert.equal(pourTargetAt({x:480,y:116},receiving),'vessel','A falling stream ab
 assert.equal(pourTargetAt({x:200,y:100},receiving),'table');
 assert.equal(pourTargetAt({x:410,y:100},{vesselPlaced:false}),'table');
 assert.equal(pourTargetAt({x:410,y:400},receiving),'table');
+assert.equal(pourTargetAt({x:410,y:156},receiving),'vessel','Spout at the rim can feed the vessel');
+assert.equal(pourTargetAt({x:410,y:157},receiving),'table','A spout below the rim cannot pour through the vessel wall');
 const c={waterMassKg:0,waterTempK:313.15,iceMassKg:0,iceTempK:273.15,solidMassKg:.1,solidTempK:293.15,calorimeterHeatCapacityJPerK:0,mixingIntensity:0};
 const session=newSession('ice'),trial=newTrial(session,'ice',c);session.physicalState=createState('ice');
 trial.hypothesis='Dự đoán <script>alert(1)</script>';trial.analysis='Dữ liệu, có "trích dẫn"';trial.conclusion='Cần kiểm tra vị trí đầu dò.';
