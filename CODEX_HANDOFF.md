@@ -319,3 +319,14 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - `npm run check:thermal-v86`:7175ca geometry+16sweep và58valid/56invalid/62invalidimports. Browserharness mới kiểm sourcehash ổn định,4contexts collision A/B×mouse1440/CDPtouch390,5000event,malformedimport/recovery,3D journeys/lifecycle/fallback; companion storageharness4ca desktop/mobile. Xem kết quả cuối trong QA report và bằng chứng, không suy diễn từ mô tả harness.
 - Agent thực gọi: `thermal_collision86` (geometry), `thermal_review86` (independentphysics/data), `thermal_qa86` (UI/browserQA); root tích hợp và kiểm storage. Giữ0L3PASS/1PARTIAL/299NOTTESTED/0BLOCKED. Thiết bị thật/giáo viên/P95/FPS chưa nghiệm thu.
 - Cache index→boot→app→pilot/physics dùng86. Không đổi các renderer cũ hoặc preview300bài. Worktree lịch sử có circuit/deBroglie chưa commit phải được giữ riêng; không reset. Không commit vendorKaTeX,work,node_modules hoặc auditJSON sinh lại. Fetchmain trước xuất bản, chỉ xác nhận live sau CI/Pages và kiểm trực tiếp.
+
+
+## Hiệu chuẩn nhiệt lượng kế v87 (14/11/2026 UTC+7)
+
+- Đọc `docs/level3-v87/IMPLEMENTATION_REPORT.md`, `ARCHITECTURE.md`, `QA_REPORT.md` và evidence trước tiếp tục. Vẫn cùngIDcalorimetry,0PASS/1PARTIAL/299NOTTESTED/0BLOCKED; không nghiệm thu300 bài.
+- GeometrySI64gon theo capacity, cupgravityclipping, watermesh trừ samplevoid; dùng chung2D/3D/contact. Newpuremodule thermal-geometry.js; registrylegacy không sửa. TooldragXY/camera3D, spatialenvelopes códepth/sweptpath; không6DOF/CFD/fullrigidbody.
+- Newoptionalphysicalmarker thermal.geometry.v2 cho displacementcapacity và tràn theo Archimedes/grounding. Tràn xử lý cảaction và melting mỗi substep. Xả lấy tỉ lệ hai thermalnode vớienthalpy riêng, tránh emptynear gâyfreeze; đây xấp xỉ đại diện, không dòng tràn cục bộ phân tầng. Legacy marker vắng đọc theo semantics cũ, không tựsửa dữliệu.
+- Phiêngeometrycũ: backup byteexact trước autosave bằngkeysession+timestamp không trùng, reconcilecontact đầu dò theo geometrymới nhưng không đổi pastreadings/pose; quota chặn ghi primary, currentRAMJSON và originaldownload giữ dùngđược. Lỗi compartment/ledger bị reject, khôngrepair.
+- Sourceice cube theoρ917; phầntrongbình aggregate tươngđương. Input viên1–100g không épviênlớn cho vừa. Sample1g cókẹp đúnggeometry; emptytongs không cân/chuyển sampletừxa, heldsolid khôngrecoverriêng. Thảbàn cầnđường rơi trống; heatbutton khôngteleportvật vào bể.
+- Stage cóCậncảnh bình/cân/nhiệtkế; kiểmkhuấy theoacceptedpath, framedtbacklogkhôngrơithờigian; conditionsSI đánhdấu spill/meltingSpillMassKg/setupChangedDuringExchange, không tựđạt controlledrepeat.
+- QA cuối và linksCI/live ghi trong QA_REPORT/PR. Báo cáo cũ trong work/ có thể superseded do review phát hiện thêm bug; chỉ dùng manifest cuối đồng nhất. Không suy headless/CDPtouch ra iPhoneSafari thật/P95/FPS/giáoviên.

@@ -58,3 +58,10 @@ Các oracle độc lập kiểm tập trạng thái hữu hạn;20 mục vẫn P
 Các renderer tạo dữ liệu quan hệ lý thuyết kèm trạng thái hiện tại; `observation-view.js` đọc dữ liệu theo giao diện nhỏ, không nhập Three.js vào trang chủ. HTML/SVG đặt dưới khung mô hình thay cho billboard3D. Bảng lý thuyết tách khỏi các dòng đo của người học.
 
 `account-ui.js` dùng `auth-client.js`, SDK App/Auth bundle cục bộ và config công khai riêng. SDK chỉ khởi tạo khi người dùng mở tài khoản, không có database học sinh hoặc cloudsync. Firebase quản lý persistence; dữ liệu thí nghiệm tiếp tục thuộc các khóa hiện tại. Config mặc định tắt. Workflow tạo SDK, kiểm publicassets và áp CSP theo authdomain đã xác thực. Xem `AUTH_SETUP.md` để kích hoạt bằng Firebase project thật.
+
+
+## Hình học và thao tác nhiệt lượng kế v87
+
+Lớp mở rộng tại `dist/l3/thermal-geometry.js` cung cấp geometrySI, chất lỏng theo trọng lực và hydrostatics cho cả renderer2D/3D, contact và apparatuscapacity. `thermal-spatial.js` kiểm bao có chiều sâu và đường quét; không biến nó thành solver rigidbody hay drag6DOF. `thermal-apparatus.js` tách geometryđãhiệuchuẩn khỏi legacyregistry để import cũ vẫn được xác thực đúng phiên bản.
+
+Physicalstate marker tùychọn `thermal.geometry.v2` bật displacedvolume/overflow ở action và substepmelting; mass và enthalpy tràn đi vào ledger. Discharge lấy tỉ lệ hai node; không làm cạn một node khiến ngắt trao đổi nhiệt. Vắng marker giữ semantics cũ để đọc dữliệu. Backup byteexact trước geometrymigration, quota chặn ghiđè, readings cũ không bị relabel. Chi tiết hợp đồng/giới hạn: [level3-v87/ARCHITECTURE.md](level3-v87/ARCHITECTURE.md).

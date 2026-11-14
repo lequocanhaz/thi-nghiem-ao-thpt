@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-11-14T12:53:10.460236+00:00",
+  "browserVersion": "154.0.8037.57",
+  "scope": "Chromium browser UI in 2D for storage fault isolation; no device/teacher acceptance",
+  "sourceBefore": {
+    "/workspace/quanh-thermal/checks/browser-thermal-storage-v86.py": "ca851ec0045a5ce02b3767472b5a03a82fcdb91ee1e889a4e28075ee5d6db03b",
+    "dist/index.html": "0834f21e7bdbdf5ec9d403b11c4c8926596aa045b0f98f9c31f7b4ccab82d3bd",
+    "dist/boot.js": "01ec29e048d051a55f229f954560836028db88ffaaf955564f14d831d5428e49",
+    "dist/app.js": "0bed7113c4ed89d6454c1be35d28b41c3cb16e79339a1c826f3104be65f01619",
+    "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+    "dist/l3/data-notebook.js": "6aa437310106377cb3e596f50973ab801b9d763e294558e4e150c4c29e6431be",
+    "dist/l3/interaction-core.js": "baa22bbe4e904614b80b09d39284c98b3a4fccb1c789a152c0c5918aeaf03038",
+    "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+    "dist/l3/thermal-apparatus.js": "a08988f463af197a272221913824d42d86887495a7c0a1eb472b8ac4e483a09a",
+    "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+    "dist/l3/thermal-geometry.js": "7922363672f7e4b9d6697117194dd78c810ffa5604d8e7951e6fa51f24704f0a",
+    "dist/l3/thermal-physics.js": "182148e6922c2d3b0ec7962a3f7e82cdad7757c4455d234393279cea05cdf7aa",
+    "dist/l3/thermal-pilot.js": "9c7f39a06fe674b87510d9377dfed0194512adf084284fa9a3a622b728e96cef",
+    "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+    "dist/l3/thermal-spatial.js": "63a68d6813e569ce67797389cb6f167c1db2618d1abd442a2e390abfb433f6f0",
+    "dist/l3/thermal-three.js": "95c2f7914ceb923451c7c7a692af12f7d600f84e1fb9da8649d9a73f45c1b39b",
+    "dist/l3/thermal-view.js": "f9d7369eaddfac91f47dd2476f6529243421bcd8afd84d5e1505557bc8546f8b",
+    "dist/l3/thermal-three.css": "3b79b35843926a851a3c6f953e090d740c0115781feb559d51ea2f6e059d0b92",
+    "dist/l3/thermal.css": "444ee3f27f9e59d0c871149c9861fd41146889e5665bf100e9daaf79830b535d"
+  },
+  "sourceAfter": {
+    "/workspace/quanh-thermal/checks/browser-thermal-storage-v86.py": "ca851ec0045a5ce02b3767472b5a03a82fcdb91ee1e889a4e28075ee5d6db03b",
+    "dist/index.html": "0834f21e7bdbdf5ec9d403b11c4c8926596aa045b0f98f9c31f7b4ccab82d3bd",
+    "dist/boot.js": "01ec29e048d051a55f229f954560836028db88ffaaf955564f14d831d5428e49",
+    "dist/app.js": "0bed7113c4ed89d6454c1be35d28b41c3cb16e79339a1c826f3104be65f01619",
+    "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+    "dist/l3/data-notebook.js": "6aa437310106377cb3e596f50973ab801b9d763e294558e4e150c4c29e6431be",
+    "dist/l3/interaction-core.js": "baa22bbe4e904614b80b09d39284c98b3a4fccb1c789a152c0c5918aeaf03038",
+    "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+    "dist/l3/thermal-apparatus.js": "a08988f463af197a272221913824d42d86887495a7c0a1eb472b8ac4e483a09a",
+    "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+    "dist/l3/thermal-geometry.js": "7922363672f7e4b9d6697117194dd78c810ffa5604d8e7951e6fa51f24704f0a",
+    "dist/l3/thermal-physics.js": "182148e6922c2d3b0ec7962a3f7e82cdad7757c4455d234393279cea05cdf7aa",
+    "dist/l3/thermal-pilot.js": "9c7f39a06fe674b87510d9377dfed0194512adf084284fa9a3a622b728e96cef",
+    "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+    "dist/l3/thermal-spatial.js": "63a68d6813e569ce67797389cb6f167c1db2618d1abd442a2e390abfb433f6f0",
+    "dist/l3/thermal-three.js": "95c2f7914ceb923451c7c7a692af12f7d600f84e1fb9da8649d9a73f45c1b39b",
+    "dist/l3/thermal-view.js": "f9d7369eaddfac91f47dd2476f6529243421bcd8afd84d5e1505557bc8546f8b",
+    "dist/l3/thermal-three.css": "3b79b35843926a851a3c6f953e090d740c0115781feb559d51ea2f6e059d0b92",
+    "dist/l3/thermal.css": "444ee3f27f9e59d0c871149c9861fd41146889e5665bf100e9daaf79830b535d"
+  },
+  "sourceStable": true,
+  "results": [
+    {
+      "activity": "ice",
+      "case": "unread-original",
+      "status": "PASS",
+      "originalByteExact": true,
+      "newRamDraftExported": true,
+      "replacementBlockedUntilBackup": true,
+      "explicitBackupImportReloadRetainsDrafts": true,
+      "pageErrors": []
+    },
+    {
+      "activity": "ice",
+      "case": "quota",
+      "status": "PASS",
+      "storedCopyRetainedByteExact": true,
+      "unsavedRamWorkExported": true,
+      "pageErrors": []
+    },
+    {
+      "activity": "solid",
+      "case": "unread-original",
+      "status": "PASS",
+      "originalByteExact": true,
+      "newRamDraftExported": true,
+      "replacementBlockedUntilBackup": true,
+      "explicitBackupImportReloadRetainsDrafts": true,
+      "pageErrors": []
+    },
+    {
+      "activity": "solid",
+      "case": "quota",
+      "status": "PASS",
+      "storedCopyRetainedByteExact": true,
+      "unsavedRamWorkExported": true,
+      "pageErrors": []
+    }
+  ]
+}
