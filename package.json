@@ -30,7 +30,7 @@
     "check:thermal-v87": "node checks/thermal-geometry-v87.mjs && node checks/thermal-compartments-v87.mjs && node checks/thermal-spatial-v87.mjs && node checks/thermal-motion-v87.mjs && node checks/thermal-overflow-v87.mjs && node checks/calibrated-oracles-v87.mjs"
   },
   "devDependencies": {
-    "linkedom": "0.18.13",
+    "linkedom": "0.18.15",
     "cssom": "0.5.0",
     "css-what": "8.0.0",
     "firebase": "13.1.0",
