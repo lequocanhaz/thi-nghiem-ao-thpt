@@ -169,3 +169,5 @@ html[data-appearance=dark] .l3-pilot{--l3-paper:#24282e;--l3-soft:#2d333c;--l3-i
 #l3ProbeValue{font-size:14px}
 @media(max-width:1050px){.l3-quick-reading{grid-template-columns:repeat(2,minmax(0,1fr))}.l3-quick-reading>button{grid-column:2}}
 @media(max-width:620px){.l3-quick-reading{grid-template-columns:minmax(0,1fr);padding:12px;gap:12px}.l3-quick-reading>button{grid-column:auto}}
+
+.l3-camera-focus summary{min-height:44px;display:flex;align-items:center;cursor:pointer;padding:.5rem .75rem}.l3-camera-focus[open]{flex-basis:100%}.l3-camera-focus button{min-height:44px}.l3-context>label{display:grid;gap:.5rem;margin-top:1rem}
