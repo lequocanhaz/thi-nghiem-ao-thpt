@@ -330,3 +330,11 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - Sourceice cube theoρ917; phầntrongbình aggregate tươngđương. Input viên1–100g không épviênlớn cho vừa. Sample1g cókẹp đúnggeometry; emptytongs không cân/chuyển sampletừxa, heldsolid khôngrecoverriêng. Thảbàn cầnđường rơi trống; heatbutton khôngteleportvật vào bể.
 - Stage cóCậncảnh bình/cân/nhiệtkế; kiểmkhuấy theoacceptedpath, framedtbacklogkhôngrơithờigian; conditionsSI đánhdấu spill/meltingSpillMassKg/setupChangedDuringExchange, không tựđạt controlledrepeat.
 - QA cuối và linksCI/live ghi trong QA_REPORT/PR. Báo cáo cũ trong work/ có thể superseded do review phát hiện thêm bug; chỉ dùng manifest cuối đồng nhất. Không suy headless/CDPtouch ra iPhoneSafari thật/P95/FPS/giáoviên.
+
+## Cầm que trong bình và bài Nhiệt dung riêng v88 (15/11/2026 UTC+7)
+
+- Lỗi user là không GRIP/KHUẤY được, không chỉ che hình. `thermal-picking.js` tính khoảng cách CSS tới cả thân que/đầu dò;3D không ưu tiên bình/nước trong suốt;2D dùng pickTarget trước lựa chọn container. Chỉ lựa chọn palette tường minh phân biệt handheld chồngpixel, không xuyên vành/cân/mẫu đặc. Physics và schema/sessionkey không đổi.
+- Bỏ floatingname labels/SVGname/ring lớn; giữ accessiblepalette và số đo. WaterFrontSideopacity.27/depthWritefalse/depthTesttrue; que có grip/vật liệu rõ,2Dstrokeaccent. Không fakealwaysontop hay nắn geometrySI để né lỗi.
+- `#lab/specific-heat` alias→solid trong cùngIDcalorimetry. Bookgrade12lesson4pages22–25 cóCTA; sourcecatalog/scans/TOC khôngđổi. SearchaliasVIEN vàclassiclaunch dẫn đúngsolid. Cácoldroutes/data vẫnđọc nguyên, ice là mục tiêu riêng, không gắnnhầm csolid.
+- Cache index→boot→app/pilot/view/core/three/picking88; books directreader vàassistantimportreader cùngv88 đểdedup. ChỉimportURL củabooks-assistant đổi, không đổiAIlogic.
+- Xem docs/level3-v88/IMPLEMENTATION_REPORT.md vàevidence. Beforeprovenative khônggrip/khôngstir; after thựcchạmque trongnước khiđangchọnbình. Giữ0PASS/1PARTIAL/299NOTTESTED/0BLOCKED; chưahardware/teacher/P95/FPS/WCAG certification. Không dùng reporttrước sourcefixcuối đểgắnPASS toàn bộ.

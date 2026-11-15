@@ -73,6 +73,13 @@ function updateControls(){
  if(!locationLabel){locationLabel=document.createElement('p');locationLabel.id='bookCurrentLesson';locationLabel.className='book-current-lesson';$('.book-reading-meta').prepend(locationLabel);}
  const locationText=localizedBookString('Đang đọc: ','Reading: ')+readingLocation();
  if(locationLabel.textContent!==locationText)locationLabel.textContent=locationText;
+ // The practical measures a solid's specific heat; water–ice is a separate objective.
+ // Derive the lesson interval from the original catalog, without changing its pages.
+ const lesson=[...book.lessons].reverse().find(item=>item.page<=page);
+ let experimentLink=$('#bookLessonExperiment');
+ if(!experimentLink){experimentLink=document.createElement('a');experimentLink.id='bookLessonExperiment';experimentLink.className='button secondary book-lesson-experiment';experimentLink.href='index.html#lab/specific-heat';locationLabel.after(experimentLink);}
+ experimentLink.hidden=book.grade!==12||lesson?.number!==4;
+ experimentLink.textContent=localizedBookString('Thực hành: Nhiệt dung riêng','Experiment: Specific heat capacity');
  $('#bookChapter').title=readingLocation();
  $('#bookStage').setAttribute('aria-busy',String(busy));$('#bookLoading').hidden=!busy;
  const printed=visible.map(n=>n-book.printedOffset).filter(n=>n>0);

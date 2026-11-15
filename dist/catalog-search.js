@@ -13,6 +13,7 @@ const apparatus={
  pendulum:'con lắc đơn simple pendulum quả nặng bob',
  boyle:'xi lanh syringe piston pít tông khí gas áp kế pressure gauge',
  gas:'phân tử molecules piston pít tông nhiệt kế thermometer',
+ calorimetry:'nhiệt dung riêng specific heat capacity nhiệt lượng kế calorimeter que khuấy stirring rod nhiệt kế thermometer cân điện tử digital balance',
  wave:'dây rung vibrating string sóng ngang transverse wave',
  standing:'dây rung vibrating string sóng dừng standing wave',
  lens:'thấu kính lens màn screen quang học optics',

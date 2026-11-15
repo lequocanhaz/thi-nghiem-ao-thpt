@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+from pathlib import Path
+source=Path('checks/browser-thermal-v87.py').read_text();exec(compile(source[:source.index('\nCASES=')],'checks/browser-thermal-v87.py','exec'))
+results=[];before=source_hashes();books={str(f):hashlib.sha256(f.read_bytes()).hexdigest() for f in map(Path,['dist/book-reader.js','dist/books.html','dist/books-assistant-v79.js','dist/catalog-search.js'])}
+with sync_playwright() as pw:
+ browser=pw.chromium.launch(executable_path=args.chromium,headless=True,args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
+ ctx=browser.new_context(viewport={'width':390,'height':844},accept_downloads=True);p=ctx.new_page();errors=[];p.on('pageerror',lambda e:errors.append(str(e)));p.on('dialog',lambda d:d.accept())
+ p.goto(args.url.rstrip('/')+'/books.html?grade=12&page=22');link=p.locator('#bookLessonExperiment');link.wait_for(state='visible');assert 'Nhiệt dung riêng' in link.inner_text();link.click();p.wait_for_selector('.l3-pilot[data-l3-activity="solid"]');p.wait_for_selector('#l3ThreeCanvas');assert p.locator('h1').inner_text()=='Nhiệt dung riêng' and p.url.endswith('#lab/specific-heat')
+ p.locator('[data-l3-note="hypothesis"]').fill('Dự đoán riêng của bài nhiệt dung riêng.');p.locator('#l3StudentTemperature').fill('37.4');p.locator('[data-l3-action="record"]').click();key='quanh-l3-calorimetry-solid-v1';p.wait_for_function('(k)=>JSON.parse(localStorage.getItem(k)).trials[0].readings.length===1',arg=key)
+ saved=p.evaluate('(k)=>JSON.parse(localStorage.getItem(k))',key);p.goto(args.url.rstrip('/')+'/#lab/calorimetry?l3=solid');p.wait_for_selector('#l3ThreeCanvas');p.wait_for_timeout(700);current=p.evaluate('(k)=>JSON.parse(localStorage.getItem(k))',key);assert saved['trials']==current['trials']
+ p.goto(args.url.rstrip('/')+'/#lab/specific-heat');p.wait_for_selector('#l3ThreeCanvas');p.reload();p.wait_for_selector('#l3ThreeCanvas');p.wait_for_timeout(600);current=p.evaluate('(k)=>JSON.parse(localStorage.getItem(k))',key);assert current['trials']==saved['trials'];assert not errors
+ results.append({'bookLesson4NativeLink':True,'solidSpecificHeatRoute':True,'oldRouteAndNewAliasShareExistingSession':True,'reloadKeepsReadingAndHypothesis':True,'manualReadingC':37.4,'pageErrors':errors[:]});ctx.close();version=browser.version;browser.close()
+after=source_hashes();assert before==after;assert all(hashlib.sha256(Path(f).read_bytes()).hexdigest()==h for f,h in books.items());(out/'report.json').write_text(json.dumps({'status':'PASS','browserVersion':version,'results':results,'sourceBefore':before,'sourceAfter':after,'bookSource':books,'sourceStable':True},ensure_ascii=False,indent=2)+'\n');print(json.dumps(results,ensure_ascii=False))

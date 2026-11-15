@@ -1,6 +1,6 @@
 /* Level-three thermal bench. All selectors are local to the pilot. */
-.l3-pilot{--l3-paper:#fff;--l3-soft:#f5f7fa;--l3-ink:#202936;--l3-muted:#536276;--l3-line:#d0d9e5;--l3-accent:#245bd7;--l3-selected:#eaf0ff;--l3-water:#a8d6ef;--l3-water-line:#4e91bb;--l3-glass:#f8fbfe;--l3-metal:#dce3ea;--l3-shadow:#b7c3d0;--l3-screen:#eaf3e7;--l3-screen-ink:#203b2a;--l3-ice:#d9f3ff;--l3-ice-edge:#68a2c1;--l3-solid:#ad7750;--l3-warning:#714b16;--l3-warning-paper:#fff4dc;max-width:1600px;margin:0 auto;padding:28px 32px 48px;color:var(--l3-ink);line-height:1.6}
-html[data-appearance=dark] .l3-pilot{--l3-paper:#24282e;--l3-soft:#2d333c;--l3-ink:#edf1f7;--l3-muted:#c0cad7;--l3-line:#596574;--l3-accent:#a8c7fa;--l3-selected:#34435c;--l3-water:#335e7a;--l3-water-line:#9bd8ff;--l3-glass:#303944;--l3-metal:#545e6b;--l3-shadow:#8392a4;--l3-screen:#243d2e;--l3-screen-ink:#d9f0dd;--l3-ice:#75b0cc;--l3-ice-edge:#d0f1ff;--l3-solid:#c49065;--l3-warning:#f7dfad;--l3-warning-paper:#413521}
+.l3-pilot{--l3-paper:#fff;--l3-soft:#f4f6f5;--l3-ink:#202a27;--l3-muted:#56655f;--l3-line:#d9e0dc;--l3-accent:#2d675b;--l3-selected:#edf4f1;--l3-water:#a8d6ef;--l3-water-line:#4e91bb;--l3-glass:#f8fbfe;--l3-metal:#dce3ea;--l3-shadow:#b7c3d0;--l3-screen:#eaf3e7;--l3-screen-ink:#203b2a;--l3-ice:#d9f3ff;--l3-ice-edge:#68a2c1;--l3-solid:#ad7750;--l3-warning:#714b16;--l3-warning-paper:#fff4dc;max-width:1600px;margin:0 auto;padding:28px 32px 48px;color:var(--l3-ink);line-height:1.6}
+html[data-appearance=dark] .l3-pilot{--l3-paper:#252727;--l3-soft:#2e3230;--l3-ink:#f0f3f1;--l3-muted:#bec9c3;--l3-line:#535c57;--l3-accent:#a0cfbd;--l3-selected:#303f38;--l3-water:#335e7a;--l3-water-line:#9bd8ff;--l3-glass:#303944;--l3-metal:#545e6b;--l3-shadow:#8392a4;--l3-screen:#243d2e;--l3-screen-ink:#d9f0dd;--l3-ice:#75b0cc;--l3-ice-edge:#d0f1ff;--l3-solid:#c49065;--l3-warning:#f7dfad;--l3-warning-paper:#413521}
 .l3-pilot *{box-sizing:border-box}
 .l3-pilot [hidden]{display:none!important}
 .l3-pilot button,.l3-pilot input,.l3-pilot select,.l3-pilot textarea{font:inherit}
@@ -17,7 +17,7 @@ html[data-appearance=dark] .l3-pilot{--l3-paper:#24282e;--l3-soft:#2d333c;--l3-i
 .l3-activity-switch a{display:flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;padding:9px 13px;border:1px solid var(--l3-line);border-radius:8px;color:var(--l3-muted);font-size:14px;line-height:1.5;text-align:center;text-decoration:none}
 .l3-workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
 .l3-stage-column,.l3-tool-column,.l3-stage-wrap{min-width:0}
-.l3-stage-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px;border:1px solid var(--l3-line);border-bottom:0;border-radius:12px 12px 0 0;background:var(--l3-paper)}
+.l3-stage-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px;border:1px solid var(--l3-line);border-bottom:0;border-radius:14px 14px 0 0;background:var(--l3-paper)}
 .l3-stage-toolbar>div{display:flex;flex-wrap:wrap;gap:6px}
 .l3-stage-toolbar button{background:transparent}
 .l3-stage-toolbar button[data-l3-action=pause]{font-weight:650}
@@ -60,7 +60,7 @@ html[data-appearance=dark] .l3-pilot{--l3-paper:#24282e;--l3-soft:#2d333c;--l3-i
 .l3-rotate-disc{fill:var(--l3-paper);stroke:var(--l3-accent);stroke-width:2}
 .l3-rotate-arrow{fill:none;stroke:var(--l3-accent);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .l3-hint{margin:10px 0;color:var(--l3-muted);font-size:13px;line-height:1.65}
-.l3-status{margin:12px 0;padding:12px 14px;border-left:3px solid var(--l3-accent);background:var(--l3-selected);color:var(--l3-ink);font-size:14px;line-height:1.65;overflow-wrap:anywhere}
+.l3-status{margin:12px 0;padding:10px 0;border:0;background:transparent;color:var(--l3-ink);font-size:14px;line-height:1.65;overflow-wrap:anywhere}
 .l3-status[data-kind=error],.l3-status[data-kind=warning]{border-color:var(--l3-warning);background:var(--l3-warning-paper);color:var(--l3-warning)}
 .l3-readings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-block:1px solid var(--l3-line);margin-top:16px;padding:10px 0}
 .l3-readings>div{min-width:0;padding:8px 14px}
@@ -171,3 +171,25 @@ html[data-appearance=dark] .l3-pilot{--l3-paper:#24282e;--l3-soft:#2d333c;--l3-i
 @media(max-width:620px){.l3-quick-reading{grid-template-columns:minmax(0,1fr);padding:12px;gap:12px}.l3-quick-reading>button{grid-column:auto}}
 
 .l3-camera-focus summary{min-height:44px;display:flex;align-items:center;cursor:pointer;padding:.5rem .75rem}.l3-camera-focus[open]{flex-basis:100%}.l3-camera-focus button{min-height:44px}.l3-context>label{display:grid;gap:.5rem;margin-top:1rem}
+
+/* Quiet hierarchy: the experiment remains the primary surface. */
+.l3-stage-toolbar{gap:12px;padding:12px;background:var(--l3-paper)}
+.l3-stage-toolbar>div:first-child{margin-inline-end:auto}
+.l3-view-modes,.l3-camera-modes{padding:3px;background:var(--l3-soft);border-radius:10px}
+.l3-stage-toolbar :is([data-l3-view],[data-l3-camera-mode]){border-color:transparent;font-size:13px}
+.l3-stage-toolbar :is([data-l3-view],[data-l3-camera-mode])[aria-pressed=true]{background:var(--l3-paper);border-color:var(--l3-line);font-weight:650}
+.l3-camera-focus{margin-inline-start:auto}
+.l3-camera-focus summary{color:var(--l3-muted);font-size:13px}
+.l3-tool-list button{border-color:transparent;background:var(--l3-soft);text-align:center}
+.l3-tool-list button[aria-pressed=true]{border-color:var(--l3-accent);background:var(--l3-selected)}
+.l3-tools{border-radius:14px;padding:4px 14px 14px}
+.l3-context{margin-top:24px}
+.l3-quick-reading{border-radius:14px;padding:20px;gap:16px}
+.l3-quick-reading>.l3-setup{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,240px));margin:0;gap:16px}
+.l3-pilot :is([data-l3-action=record],[data-l3-action=place-vessel]){background:var(--l3-ink);color:var(--l3-paper);border-color:var(--l3-ink);font-weight:650}
+@media(hover:hover){.l3-pilot button:not(:disabled):hover{border-color:var(--l3-accent)}.l3-tool-list button:not(:disabled):hover{background:var(--l3-selected)}}
+@media(max-width:760px){.l3-stage-toolbar{padding:10px;gap:8px}.l3-camera-focus{margin-inline-start:0}.l3-quick-reading{padding:14px}.l3-quick-reading>.l3-setup{grid-template-columns:minmax(0,1fr)}}
+
+/* Keep the stirring rod distinct from the liquid in the 2D fallback. */
+#l3-stirrer .l3-rod{stroke:var(--l3-accent)}
+#l3-stirrer .l3-rod-tip{fill:var(--l3-accent)}
