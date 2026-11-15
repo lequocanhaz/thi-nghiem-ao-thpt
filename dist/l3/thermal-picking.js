@@ -1,0 +1,3 @@
+// Screen-space interaction only. These pixel distances never define measurements.
+export function segmentDistance(point,a,b){const dx=b.x-a.x,dy=b.y-a.y,length=dx*dx+dy*dy,t=length?Math.max(0,Math.min(1,((point.x-a.x)*dx+(point.y-a.y)*dy)/length)):0;return Math.hypot(point.x-a.x-t*dx,point.y-a.y-t*dy);}
+export function nearestInstrument(point,candidates,selected,radius=22.5){return candidates.map(c=>({...c,distance:segmentDistance(point,c.a,c.b)})).filter(c=>Number.isFinite(c.distance)&&c.distance<=radius).sort((a,b)=>Math.abs(a.distance-b.distance)<.5?Number(b.id===selected)-Number(a.id===selected):a.distance-b.distance)[0]||null;}

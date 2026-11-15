@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "browser": "154.0.8037.57",
+  "sourceBefore": {
+    "dist/book-reader.js": "0ea53899c985445b14032905f840ead6d5df293138ab14f0a7d4ff3e74419fec",
+    "dist/books-assistant-v79.js": "af6fb057dea11ca888ee11ff5974dbeab1f30464fb82288f9edd1c83298b41ef",
+    "dist/books.html": "e5a32f218185f45e5174472b42c6fce5546bb3a9e00c483b742287d8247e9169",
+    "dist/catalog-search.js": "87331c593195f11f7a869fabc84373b9d3927cea7e1ae5fb15488c3c3835bfe0"
+  },
+  "sourceAfter": {
+    "dist/book-reader.js": "0ea53899c985445b14032905f840ead6d5df293138ab14f0a7d4ff3e74419fec",
+    "dist/books-assistant-v79.js": "af6fb057dea11ca888ee11ff5974dbeab1f30464fb82288f9edd1c83298b41ef",
+    "dist/books.html": "e5a32f218185f45e5174472b42c6fce5546bb3a9e00c483b742287d8247e9169",
+    "dist/catalog-search.js": "87331c593195f11f7a869fabc84373b9d3927cea7e1ae5fb15488c3c3835bfe0"
+  },
+  "sourceStable": true,
+  "results": [
+    {
+      "width": 1440,
+      "nativePageNavigation": true,
+      "nativeLocaleChangeRetainsPageZoom": true,
+      "lessonOnlyCTA": true,
+      "target": {
+        "x": 97.59375,
+        "y": 906.28125,
+        "width": 223.984375,
+        "height": 46.1875
+      },
+      "oneReaderModule": [
+        "http://127.0.0.1:4176/book-reader.js?v=88"
+      ],
+      "pageErrors": []
+    },
+    {
+      "width": 320,
+      "nativePageNavigation": true,
+      "nativeLocaleChangeRetainsPageZoom": true,
+      "lessonOnlyCTA": true,
+      "target": {
+        "x": 16,
+        "y": 825.859375,
+        "width": 223.984375,
+        "height": 44
+      },
+      "oneReaderModule": [
+        "http://127.0.0.1:4176/book-reader.js?v=88"
+      ],
+      "pageErrors": []
+    }
+  ],
+  "scope": "Chromium on Linux, actual textbook images and native controls; no physical phone or Safari acceptance."
+}
