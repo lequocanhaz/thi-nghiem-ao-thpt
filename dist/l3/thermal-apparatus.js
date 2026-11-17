@@ -2,7 +2,7 @@
 import {apparatusRegistry,initialPositions as legacyPositions,safePositions,targetAt as legacyTarget} from './apparatus-registry.js?v=85';
 import {vesselGeometry,waterLevel,sampleDimensions,cupSpoutAt} from './thermal-geometry.js?v=87';
 export {apparatusRegistry,safePositions,cupSpoutAt};
-export function initialPositions(state,pieceMassKg=.02){const p=legacyPositions();if(state){const solid=sampleDimensions(state,'solid');p.solid.x=Math.max(540,525+solid.widthM*500);p.tongs.y=130;p.stirrer.x=780;p.solid.y=430-solid.heightM*500;p.bath.x=280;p.ice.y=318-Math.cbrt(Math.max(0,pieceMassKg)/917)*500;}return p;}
+export function initialPositions(state,pieceMassKg=.02){const p=legacyPositions();if(state){const solid=sampleDimensions(state,'solid');p.solid.x=Math.max(540,525+solid.widthM*500);p.tongs.y=130;p.stirrer.x=780;p.solid.y=430-solid.heightM*500;p.bath.x=280;p.ice.x=570;p.ice.y=318-Math.cbrt(Math.max(0,pieceMassKg)/917)*500;}return p;}
 export const GEOMETRY_VERSION='thermal.geometry.v2';
 export function targetAt(p,state){
  const legacy=legacyTarget(p);if(legacy==='scale')return legacy;if(state.activity==='solid'&&p.x>=205&&p.x<=355&&p.y>=263&&p.y<=332)return 'bath';
