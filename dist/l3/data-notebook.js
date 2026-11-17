@@ -3,12 +3,13 @@ import {initialPositions,probePlacementAt} from './apparatus-registry.js?v=84';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const en=locale=>/^en/i.test(locale||'');
 export const SESSION_SCHEMA='lab.session.v3';
+export const SESSION_MAX_CHARS=2000000,SESSION_WARNING_CHARS=1400000,SESSION_FILE_MAX_BYTES=6000000;
 export function newSession(activity){return {schemaVersion:SESSION_SCHEMA,modelVersion:'thermal.nodes.v1',catalogId:'calorimetry',activity,sessionId:globalThis.crypto?.randomUUID?.()||'session-'+Date.now().toString(36),createdAt:new Date().toISOString(),mode:'guided',trials:[],legacySessions:[],apparatusState:{positions:initialPositions(),cupAngleRad:0}};}
 export function newTrial(session,activity,conditionsSI){const trial={trialId:'trial-'+(session.trials.length+1),activity,hypothesis:'',conditionsSI:structuredClone(conditionsSI),events:[],readings:[],trace:[],analysis:'',conclusion:''};if(session.trials.length>=20)throw new RangeError('20 trials maximum; export this session first');session.trials.push(trial);return trial;}
 export const currentTrial=session=>session.trials.at(-1);
 function inspect(value,depth=0){if(depth>18)throw new RangeError('Session nesting too deep');if(typeof value==='number'&&!Number.isFinite(value))throw new TypeError('Nonfinite number');if(typeof value==='string'&&value.length>20000)throw new RangeError('Text too long');if(value&&typeof value==='object'){if(Array.isArray(value)&&value.length>10000)throw new RangeError('Collection too long');for(const [k,v]of Object.entries(value)){if(['__proto__','constructor','prototype'].includes(k))throw new TypeError('Unsafe object key');inspect(v,depth+1);}}}
 export function parseSession(text,{activity,validateState}={}){
- if(typeof text!=='string'||text.length>1500000)throw new RangeError('Session file exceeds 1.5 MB');const input=JSON.parse(text);inspect(input);
+ if(typeof text!=='string'||text.length>SESSION_MAX_CHARS)throw new RangeError('Session exceeds the2million-character limit');const input=JSON.parse(text);inspect(input);
  if(input?.schema==='thpt.session.v1'||input?.schemaVersion==='thpt.session.v1'){
   if((input.id||input.catalogId)!=='calorimetry'||!Array.isArray(input.rows)||input.rows.length>500)throw new TypeError('Unsupported classic session');
   const migrated=newSession(activity||'ice');migrated.legacySessions=[structuredClone(input)];return {session:migrated,legacy:true};
@@ -37,7 +38,7 @@ export function parseSession(text,{activity,validateState}={}){
  if(Object.keys(initialPositions()).some(id=>!plain(input.apparatusState.positions[id]))||(input.apparatusState.geometryVersion===GEOMETRY_VERSION?calibratedProbe:probePlacementAt)(input.apparatusState.positions.probe,input.physicalState,input.apparatusState.positions)!==input.physicalState.probe.placement)throw new TypeError('Probe placement contradicts apparatus geometry');
  return {session:structuredClone(input),legacy:false};
 }
-export function serializeSession(session){inspect(session);return JSON.stringify(session,null,2);}
+export function serializeSession(session){inspect(session);const text=JSON.stringify(session,null,2);if(text.length>SESSION_MAX_CHARS)throw new RangeError('Session exceeds the2million-character limit');return text;}
 export function exportCSV(session){
  const cell=v=>'"'+String(v??'').replace(/"/g,'""')+'"',rows=[['trial_id','activity','source','sim_time_s','instrument','student_temperature_K','display_temperature_C','instrument_temperature_K','valid','representative','method','water_mass_kg','ice_mass_kg','phase','energy_in_J','energy_out_J','energy_residual_J','mass_residual_kg','excluded_reason','conditions_SI','student_water_mass_kg','student_sample_mass_kg']];
  for(const trial of session.trials){for(const r of trial.readings)rows.push([trial.trialId,trial.activity,'student',r.simTimeS,r.instrumentId,r.studentValue,r.studentValueC,r.measuredValue,r.valid,r.representative,r.method,r.observation?.waterMassKg,r.observation?.iceMassKg,'','','',r.observation?.energyResidualJ,r.observation?.massResidualKg,r.excludedReason||'',JSON.stringify(r.conditionsSI),r.studentMassesKg?.water??'',r.studentMassesKg?.sample??'']);for(const r of trial.trace)rows.push([trial.trialId,trial.activity,'instrument-trace',r.simTimeS,'thermometer','',r.displayTemperatureC,Number.isFinite(r.displayTemperatureC)?r.displayTemperatureC+273.15:'',r.valid,r.representative,'automatic',r.waterMassKg,r.iceMassKg,r.phase,r.energyInJ,r.energyOutJ,r.energyResidualJ,r.massResidualKg,'',JSON.stringify(r.conditionsSI||{}),'','']);}

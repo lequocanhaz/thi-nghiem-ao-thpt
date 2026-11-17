@@ -1,0 +1,6 @@
+{"case": "reduced-motion", "renderedDistinctPoses": ["translate(308.396202937868 70) rotate(0)", "translate(318.9864929277353 70) rotate(0)", "translate(350.6939479872168 70) rotate(0)", "translate(361.2208230669637 70) rotate(0)", "translate(377.07455059481504 70) rotate(0)"], "mediaReduce": true}
+Traceback (most recent call last):
+  File "/workspace/quanh-thermal/checks/browser-thermal-recovery-v91.py", line 37, in <module>
+    assert len(poses)<=1,'Reduced-motion renders intermediate animated poses instead of the final state'
+           ^^^^^^^^^^^^^
+AssertionError: Reduced-motion renders intermediate animated poses instead of the final state

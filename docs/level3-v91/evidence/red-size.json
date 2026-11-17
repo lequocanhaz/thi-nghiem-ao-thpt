@@ -1,0 +1,9 @@
+{
+  "validInitialBytes": 1497021,
+  "primaryAfterEditBytes": 1503021,
+  "exportBytes": 1503021,
+  "statusAfterReload": "Phiên lưu chưa đọc được. Bản lưu cũ vẫn được giữ; hãy tải bản sao trước khi lưu phiên mới.",
+  "primaryRetainedAnalysisChars": 6000,
+  "pageErrors": [],
+  "finding": "Oversize savedownprimary passes serialize but failsparseSession onreload"
+}

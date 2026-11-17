@@ -1,0 +1,7 @@
+{
+  "beforeExport": "Chưa tạo được lượt mới: 20 trials maximum; export this session first",
+  "afterExportAndRetry": "Chưa tạo được lượt mới: 20 trials maximum; export this session first",
+  "trialsRemaining": 20,
+  "pageErrors": [],
+  "finding": "After20trials export doesnotunlocknewsession; user cannotcontinue via UI"
+}

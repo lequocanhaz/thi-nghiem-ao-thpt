@@ -1,3 +1,4 @@
+import {SESSION_MAX_CHARS} from '../dist/l3/data-notebook.js';
 // Data and input lifecycle regression. No scientific or device certification.
 import assert from 'node:assert/strict';
 import {parseHTML} from 'linkedom';
@@ -43,7 +44,7 @@ reject('camera malformed aspect',s=>s.apparatusState.camera={x:0,y:0,width:800,h
 reject('camera nonnumeric',s=>s.apparatusState.camera={x:'0',y:0,width:800,height:480});
 reject('nonnumeric mass entry',s=>s.trials[0].readings[0].studentMassesKg={water:'200'});
 assert.throws(()=>parseSession(text.replace('"mode": "guided"','"__proto__": {}, "mode": "guided"'),opts),/Unsafe object key/);
-assert.throws(()=>parseSession(' '.repeat(1500001),opts),/exceeds/);
+assert.throws(()=>parseSession(' '.repeat(SESSION_MAX_CHARS+1),opts),/exceeds/);
 assert.equal(serializeSession(session),text,'Rejected payloads must not alter original data');
 // Real DOM event dispatch over a minimal SVG fixture isolates cancel/capture lifecycle.
 const dom=parseHTML('<svg id="bench"><g data-l3-target="cup" tabindex="0"><rect id="hit"/></g></svg>'),stage=dom.document.querySelector('svg'),node=stage.querySelector('g'),hit=stage.querySelector('rect');

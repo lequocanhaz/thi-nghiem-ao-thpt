@@ -1,0 +1,8 @@
+{
+  "display": "∞ J/(kg·K)",
+  "pageErrors": [
+    "Nonfinite number"
+  ],
+  "status": "Chưa lưu được trên thiết bị; hãy xuất JSON để giữ phiên.",
+  "finding": "Calculator accepts finite inputs whose result overflows; nonfinite derived value poisons current session/export"
+}
