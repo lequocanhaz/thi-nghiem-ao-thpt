@@ -1,0 +1,97 @@
+{
+  "phase": "final",
+  "status": "PASS",
+  "browserVersion": "154.0.8037.57",
+  "sourceBefore": {
+    "dist/l3/thermal-three.js": "9fe2c0075c65de09fd6eacb495ac92afb4b15eee0adcb2f6dc87c0a9f4a9fd87",
+    "dist/l3/thermal-view.js": "2146cc66c45c0ad22cfba0cd3c4baf39924b0c0996175458cb22ba0be3c4ff6f"
+  },
+  "sourceAfter": {
+    "dist/l3/thermal-three.js": "9fe2c0075c65de09fd6eacb495ac92afb4b15eee0adcb2f6dc87c0a9f4a9fd87",
+    "dist/l3/thermal-view.js": "2146cc66c45c0ad22cfba0cd3c4baf39924b0c0996175458cb22ba0be3c4ff6f"
+  },
+  "sourceStable": true,
+  "cases": [
+    {
+      "width": 1050,
+      "state": "fresh",
+      "theme": "light",
+      "bluePixels": 4415,
+      "cupWaterVolumeM3": 0.00020000000900859,
+      "vesselWaterVolumeM3": 0,
+      "vesselWaterVisible": false,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "state": "fresh",
+      "theme": "dark",
+      "bluePixels": 14931,
+      "cupWaterVolumeM3": 0.00020000000900859,
+      "vesselWaterVolumeM3": 0,
+      "vesselWaterVisible": false,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "state": "filled",
+      "theme": "light",
+      "bluePixels": 5824,
+      "cupWaterVolumeM3": 0.0001000000091609079,
+      "vesselWaterVolumeM3": 9.999999792910422e-05,
+      "vesselWaterVisible": true,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "state": "filled",
+      "theme": "dark",
+      "bluePixels": 16122,
+      "cupWaterVolumeM3": 0.0001000000091609079,
+      "vesselWaterVolumeM3": 9.999999792910422e-05,
+      "vesselWaterVisible": true,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "state": "fresh",
+      "theme": "light",
+      "bluePixels": 1156,
+      "cupWaterVolumeM3": 0.00020000000900859,
+      "vesselWaterVolumeM3": 0,
+      "vesselWaterVisible": false,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "state": "fresh",
+      "theme": "dark",
+      "bluePixels": 2777,
+      "cupWaterVolumeM3": 0.00020000000900859,
+      "vesselWaterVolumeM3": 0,
+      "vesselWaterVisible": false,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "state": "filled",
+      "theme": "light",
+      "bluePixels": 1395,
+      "cupWaterVolumeM3": 0.0001000000091609079,
+      "vesselWaterVolumeM3": 9.999999792910422e-05,
+      "vesselWaterVisible": true,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "state": "filled",
+      "theme": "dark",
+      "bluePixels": 3020,
+      "cupWaterVolumeM3": 0.0001000000091609079,
+      "vesselWaterVolumeM3": 9.999999792910422e-05,
+      "vesselWaterVisible": true,
+      "pageErrors": []
+    }
+  ],
+  "scope": "Direct renderer with valid Nodephysicsfixtures; pixelcolor indicator only, not learner interactions/device acceptance."
+}
