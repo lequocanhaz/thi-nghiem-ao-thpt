@@ -19,6 +19,10 @@ export function constrainPosition(id,p){return{x:clamp(finite(p?.x,400),16,784),
 // boundary, so the net signed mesh volume is water mass / density, not the
 // larger displaced-water envelope. These meshes never determine a reading.
 function trianglesGeometry(vertices){const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));g.computeVertexNormals();return g;}
+// Material groups distinguish the actual horizontal free surface from the
+// liquid body. The same closed SI triangles remain authoritative for volume;
+// no extra disc, minimum fill or enlarged outline is placed over empty water.
+function waterSurfaceGroups(geometry){const normals=geometry.getAttribute('normal'),positions=geometry.getAttribute('position'),count=positions?.count||0;if(!normals||!count)return geometry;let top=-Infinity;for(let i=0;i<count;i++)top=Math.max(top,positions.getY(i));const surface=i=>normals.getY(i)>.999&&Math.abs(positions.getY(i)-top)<1e-8?1:0;let start=0,materialIndex=surface(0);for(let i=3;i<=count;i+=3){const next=i<count?surface(i):0;if(i===count||next!==materialIndex){geometry.addGroup(start,i-start,materialIndex);start=i;materialIndex=next;}}return geometry;}
 function addTriangle(vertices,a,b,c,normal){const ab=new THREE.Vector3().subVectors(b,a),ac=new THREE.Vector3().subVectors(c,a);if(ab.cross(ac).dot(normal)<0)[b,c]=[c,b];for(const p of [a,b,c])vertices.push(p.x,p.y,p.z);}
 const ringAt=(radius,y,count=GEOMETRY.segments)=>Array.from({length:count},(_,i)=>new THREE.Vector3(radius*Math.sin(2*Math.PI*i/count),y,radius*Math.cos(2*Math.PI*i/count)));
 function squareAt(w,d,y){return[[-w/2,-d/2],[w/2,-d/2],[w/2,d/2],[-w/2,d/2]].map(([x,z])=>new THREE.Vector3(x,y,z));}
@@ -31,9 +35,9 @@ export function createCalibratedWaterGeometry(state){
  const lowSquare=hasVoid?squareAt(body.widthM,body.depthM,lo):null,highSquare=hasVoid?squareAt(body.widthM,body.depthM,hi):null;
  sides(vertices,bottom,top);cap(vertices,bottom,hasVoid&&lo<=1e-12?lowSquare:null,false);cap(vertices,top,hasVoid&&hi>=height-1e-12?highSquare:null,true);
  if(hasVoid){sides(vertices,lowSquare,highSquare,true);if(lo>1e-12)cap(vertices,lowSquare,null,true);if(hi<height-1e-12)cap(vertices,highSquare,null,false);}
- return trianglesGeometry(vertices);
+ return waterSurfaceGroups(trianglesGeometry(vertices));
 }
-export function createCupWaterGeometry(state,angle){const shape=cupLiquidGeometry(state,angle),vertices=[];for(const face of shape.faces)for(let i=1;i<face.length-1;i++)for(const p of [face[0],face[i],face[i+1]])vertices.push(p.x,p.y,p.z);return trianglesGeometry(vertices);}
+export function createCupWaterGeometry(state,angle){const shape=cupLiquidGeometry(state,angle),vertices=[];for(const face of shape.faces)for(let i=1;i<face.length-1;i++)for(const p of [face[0],face[i],face[i+1]])vertices.push(p.x,p.y,p.z);return waterSurfaceGroups(trianglesGeometry(vertices));}
 function geometryVolume(g){const p=g.getAttribute('position'),index=g.getIndex();if(!p)return 0;let sum=0;const count=index?index.count:p.count,a=new THREE.Vector3(),b=new THREE.Vector3(),c=new THREE.Vector3();for(let i=0;i<count;i+=3){a.fromBufferAttribute(p,index?index.getX(i):i);b.fromBufferAttribute(p,index?index.getX(i+1):i+1);c.fromBufferAttribute(p,index?index.getX(i+2):i+2);sum+=a.dot(b.cross(c))/6;}return Math.abs(sum);}
 
 export function mountThermalThree(host,options={}){
@@ -53,6 +57,11 @@ export function mountThermalThree(host,options={}){
  const rim=new THREE.DirectionalLight(0xc2e3ff,1.8);rim.position.set(.6,.6,-.4);scene.add(rim);
  const material=(color,extra={})=>new THREE.MeshStandardMaterial({color,roughness:.54,metalness:.08,...extra});
  const mat={bench:material(0xe5e7e7),edge:material(0x8d9dad,{metalness:.55}),white:material(0xf5f7f9),metal:material(0x8b9dad,{roughness:.27,metalness:.7}),dark:material(0x344656),glass:material(0xc7dfe9,{transparent:true,opacity:.12,depthWrite:false,roughness:.12,metalness:.05,side:THREE.DoubleSide}),water:material(0x5b9eaf,{transparent:true,opacity:.27,depthWrite:false,roughness:.22,metalness:0,side:THREE.FrontSide}),ice:material(0xc5edff,{transparent:true,opacity:.88,roughness:.22,metalness:.04}),solid:material(0xb67b4f,{roughness:.39,metalness:.45}),accent:material(0x2868d8,{roughness:.35}),screen:material(0xe4f4df,{roughness:.8}),tip:material(0xdc824e),rubber:material(0x354858),stirrer:material(0x304f59,{roughness:.4,metalness:.16}),grip:material(0xdcd7c9,{roughness:.8,metalness:0})};
+ // Scientific water is tinted for legibility. Both materials stay transparent
+ // and depth-tested so a submerged rod remains visible and can be gripped.
+ mat.water.color.set(0x087fae);mat.water.opacity=.48;mat.water.roughness=.34;
+ mat.waterSurface=material(0x219fc9,{transparent:true,opacity:.64,depthWrite:false,roughness:.3,metalness:0,side:THREE.FrontSide});
+ const liquidMaterials=[mat.water,mat.waterSurface];
  const roots={},picks=[],screens=[],disposables=new Set();
  function mesh(geometry,matr,parent,position=[0,0,0]){const m=new THREE.Mesh(geometry,matr);m.position.set(...position);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
  function box(w,h,d,matr,parent,pos){return mesh(new THREE.BoxGeometry(w,h,d),matr,parent,pos);}
@@ -68,7 +77,7 @@ export function mountThermalThree(host,options={}){
  for(const x of [-.39,.39])for(const z of [-.16,.14])box(.025,.14,.025,mat.metal,bench,[x,FLOOR-.11,z]);
  const deck=box(.09,.078,.09,mat.white,scene,[.01,FLOOR+.039,0]);
  const cupStand=box(.12,.008,.12,mat.white,scene,[-.28,.16,0]);box(.06,.008,.08,mat.white,scene,[-.39,FLOOR+.004,-.04]);rod(new THREE.Vector3(-.39,FLOOR+.008,-.04),new THREE.Vector3(-.39,.156,-.04),.005,mat.metal,scene);rod(new THREE.Vector3(-.39,.156,-.04),new THREE.Vector3(-.28,.156,-.04),.004,mat.metal,scene);
- const vessel=target('calorimeter'),vesselDrawing=new THREE.Group();vessel.add(vesselDrawing);const vesselWater=mesh(new THREE.BufferGeometry(),mat.water,vessel,[0,-.088,0]);vesselWater.castShadow=false;
+ const vessel=target('calorimeter'),vesselDrawing=new THREE.Group();vessel.add(vesselDrawing);const vesselWater=mesh(new THREE.BufferGeometry(),liquidMaterials,vessel,[0,-.088,0]);vesselWater.castShadow=false;
  const floatingIce=box(1,1,1,mat.ice,vessel,[0,0,0]),immersedSolid=box(1,1,1,mat.solid,vessel,[0,0,0]);
  // These touching portions partition the unchanged equivalent ice volume.
  // They do not pretend to be free rigid bodies or a fluid simulation.
@@ -76,7 +85,7 @@ export function mountThermalThree(host,options={}){
  const edgeCoordinates=new Float32Array(1001*24*3),portionEdgesGeometry=new THREE.BufferGeometry();portionEdgesGeometry.setAttribute('position',new THREE.BufferAttribute(edgeCoordinates,3).setUsage(THREE.DynamicDrawUsage));portionEdgesGeometry.setDrawRange(0,0);
  const portionEdges=new THREE.LineSegments(portionEdgesGeometry,new THREE.LineBasicMaterial({color:0x6496ad,transparent:true,opacity:.8,depthWrite:false}));portionEdges.visible=false;portionEdges.frustumCulled=false;vessel.add(portionEdges);
  const instanceTransform=new THREE.Matrix4(),instancePosition=new THREE.Vector3(),instanceScale=new THREE.Vector3(),instanceRotation=new THREE.Quaternion(),instanceColor=new THREE.Color();let currentPortions=[],portionKey='',portionStateRef=null;
- const cup=target('cup'),cupDrawing=new THREE.Group();cup.add(cupDrawing);const cupWater=mesh(new THREE.BufferGeometry(),mat.water,scene);cupWater.castShadow=false;
+ const cup=target('cup'),cupDrawing=new THREE.Group();cup.add(cupDrawing);const cupWater=mesh(new THREE.BufferGeometry(),liquidMaterials,scene);cupWater.castShadow=false;
  let profileKey='',liquidKey='',vesselLiquidKey='',geometryMetadataKey='',vesselWall=null,cupWall=null,vesselCavity=null,cupCavity=null,profileV=null,profileC=null,shapeKey='',shapeCache=null,projectionKey='',canvasLocale='',screenKey='';
  function clearDrawing(group){group.traverse(o=>o.geometry?.dispose());group.clear();}
  function rebuildProfiles(state){const key=[state.config?.capacityM3,state.config?.waterMassKg].join('/');if(key===profileKey)return;const v=vesselGeometry(state),c=cupGeometry(state);profileKey=key;profileV=v;profileC=c;clearDrawing(vesselDrawing);clearDrawing(cupDrawing);
@@ -167,7 +176,7 @@ export function mountThermalThree(host,options={}){
  function setCameraMode(value){mode=value==='orbit'?'orbit':'apparatus';if(drag)cancel();shell.dataset.cameraMode=mode;canvas.style.cursor=mode==='orbit'?'grab':'default';}
  let initialFit=false,autoFit=true,lastSize='';
  function resize(){if(disposed)return;const r=host.getBoundingClientRect(),w=Math.max(1,r.width),h=w<600?360:Math.max(400,Math.min(620,w*.58));const signature=w.toFixed(2)+'/'+h.toFixed(2);if(signature===lastSize)return;lastSize=signature;shell.style.height=h+'px';renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();if(!initialFit){initialFit=true;if(validCamera(options.initialCamera)){autoFit=false;camera.position.fromArray(options.initialCamera.position);controls.target.fromArray(options.initialCamera.target);controls.update();}else fit();}else if(autoFit)fit();requestRender();}
- function theme(){const dark=document.documentElement.dataset.appearance==='dark';if(dark===isDark)return;isDark=dark;scene.background.set(dark?0x212121:0xf3f4f4);mat.bench.color.set(dark?0x454747:0xe5e7e7);mat.white.color.set(dark?0xb7bdbb:0xf5f7f9);mat.glass.color.set(dark?0x9bcee7:0xc7dfe9);mat.stirrer.color.set(dark?0xb8cbc5:0x304f59);mat.edge.color.set(dark?0x667c91:0x8d9dad);ambient.intensity=dark?1.7:2;key.intensity=dark?2.6:3.2;for(const s of screens){s.dark=null;setScreen(s,s.value);}requestRender();}
+ function theme(){const dark=document.documentElement.dataset.appearance==='dark';if(dark===isDark)return;isDark=dark;scene.background.set(dark?0x212121:0xf3f4f4);mat.bench.color.set(dark?0x454747:0xe5e7e7);mat.white.color.set(dark?0xb7bdbb:0xf5f7f9);mat.glass.color.set(dark?0x9bcee7:0xc7dfe9);mat.water.color.set(dark?0x168db4:0x087fae);mat.waterSurface.color.set(dark?0x38b8db:0x219fc9);mat.stirrer.color.set(dark?0xb8cbc5:0x304f59);mat.edge.color.set(dark?0x667c91:0x8d9dad);ambient.intensity=dark?1.7:2;key.intensity=dark?2.6:3.2;for(const s of screens){s.dark=null;setScreen(s,s.value);}requestRender();}
  function labelLayout(){const r=canvas.getBoundingClientRect(),e=english(locale);if(canvasLocale!==locale){canvasLocale=locale;canvas.setAttribute('aria-label',e?'3D thermal apparatus. Grip an instrument along its shaft and drag. Use the apparatus buttons for keyboard operation.':'Dụng cụ nhiệt 3D. Cầm dọc thân dụng cụ rồi kéo. Dùng bảng dụng cụ để thao tác bằng bàn phím.');}
   const vp=new THREE.Matrix4().multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse),key=[r.left,r.top,r.width,r.height,...vp.elements,...Object.values(roots).flatMap(obj=>[visible(obj)?1:0,...obj.position.toArray()]),...rotateGizmo.position.toArray()].join('/');if(key===projectionKey)return;projectionKey=key;
   const targets={};for(const[id,obj]of Object.entries(roots))if(visible(obj))targets[id]=projectTarget(id,undefined,r);targets['cup-rotate']=projectTarget('cup','rotate',r);canvas.dataset.projections=JSON.stringify({targets,matrix:vp.toArray(),viewport:{left:r.left,top:r.top,width:r.width,height:r.height},canonical:{xOrigin:400,yOrigin:348,scale:.001}});

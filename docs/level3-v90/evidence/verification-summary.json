@@ -1,0 +1,68 @@
+{
+  "generatedAtUTC": "2026-11-17T07:23:39.591480+00:00",
+  "baseCommit": "d70de0d8b807ad89c0cb22ca64794397d31f41e1",
+  "evidenceMatchesCurrentSource": {
+    "simple.json": true,
+    "safety.json": true,
+    "grip.json": true,
+    "viewports.json": true,
+    "regression.json": true,
+    "water-final.json": true,
+    "npm-check.json": true
+  },
+  "eightScientificDataModulesUnchanged": [
+    "thermal-physics.js",
+    "thermal-geometry.js",
+    "thermal-spatial.js",
+    "thermal-motion.js",
+    "thermal-ice-portions.js",
+    "measurement-engine.js",
+    "data-notebook.js",
+    "thermal-protocol.js"
+  ],
+  "testHashes": {
+    "checks/browser-thermal-simple-v90.py": "cbfa13b2c8e80142ab4f73a9879ac196cece0cea20fc95093ee1f58d0c20289a",
+    "checks/browser-thermal-regression-v90.py": "6e8b487a38cfe0dd6b76cb409e86c24a5290d592a2536a52809ed09f62aa566c",
+    "checks/thermal-water-v90.mjs": "b706162c616e17ebac40afeb7d80350d11be8d3377987df0476e8dee668bd8f0",
+    "checks/browser-thermal-safety-v90.py": "9196cbe419c685310977b5f25eeffd9589be6af96c5390bbcb493341341bde16",
+    "checks/thermal-assist-v90.mjs": "eee4de87289ea49e73e50c99afcec0b23ec837a55eabf679e69c0db415e5bfa6"
+  },
+  "nodeVersion": "v24.19.0",
+  "browserVersion": "154.0.8037.57",
+  "renderer": "ANGLE/SwiftShader",
+  "localTests": {
+    "simpleJourneys": 4,
+    "safety": 1,
+    "nativeGrip": 5,
+    "viewports": 18,
+    "regressionGroups": 7,
+    "waterFixtures": 8,
+    "waterMeshCases": 37,
+    "waterDiagramCases": 40,
+    "assistAssertions": 742
+  },
+  "security": {
+    "protectedHTML": 306,
+    "publicTextAssets": 504,
+    "status": "PASS"
+  },
+  "L3": {
+    "PASS": 0,
+    "PARTIAL": 1,
+    "NOT_TESTED": 299,
+    "BLOCKED": 0,
+    "total": 300
+  },
+  "notVerified": [
+    "Physical iPhoneSafari/Android",
+    "Teacher review",
+    "HardwareFPS/P95",
+    "FullWCAGcertification"
+  ],
+  "limits": [
+    "Named-target placement and circle are assistance, logged honestly, not pointergesture evidence",
+    "Equivalent icebody portions are not independent rigidbodies/CFD",
+    "Regression harness expands disclosures; default collapsed interface is tested separately"
+  ],
+  "deployment": "See subsequent PR/release evidence; localPASS alone is notdeployment"
+}

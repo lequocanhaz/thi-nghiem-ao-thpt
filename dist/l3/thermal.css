@@ -193,3 +193,21 @@ html[data-appearance=dark] .l3-pilot{--l3-paper:#252727;--l3-soft:#2e3230;--l3-i
 /* Keep the stirring rod distinct from the liquid in the 2D fallback. */
 #l3-stirrer .l3-rod{stroke:var(--l3-accent)}
 #l3-stirrer .l3-rod-tip{fill:var(--l3-accent)}
+/* V90: the bench is the main surface; secondary controls open on demand. */
+.l3-workspace{display:block}.l3-heading{margin-bottom:18px}.l3-heading p{max-width:70ch}
+.l3-simple-actions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 24px;align-items:center;padding:18px 0 22px}
+.l3-water-inventory strong{font-size:16px;font-weight:650;font-variant-numeric:tabular-nums}
+.l3-water-inventory p{margin:6px 0 0;font-size:14px;line-height:1.6;color:var(--l3-muted);max-width:72ch}
+.l3-main-operation button{min-width:190px;background:var(--l3-ink);color:var(--l3-paper);border-color:var(--l3-ink);font-weight:650}
+.l3-sample-operations{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.l3-piece-choice{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--l3-muted)}
+.l3-piece-choice select{min-height:44px}.l3-sample-operations button{background:var(--l3-soft);border-color:transparent}
+.l3-pilot .l3-stage-toolbar{justify-content:space-between;padding:8px 12px;gap:8px}.l3-stage-toolbar>div:first-child{margin-inline-end:0}
+.l3-display-options>summary,.l3-adjustments>summary{display:flex;align-items:center;min-height:44px;cursor:pointer;font-size:14px;font-weight:600;padding:8px 12px}
+.l3-display-options>summary::after,.l3-adjustments>summary::after{content:'+';margin-left:16px}.l3-display-options[open]>summary::after,.l3-adjustments[open]>summary::after{content:'−'}
+.l3-display-options[open]{flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px}.l3-display-options>div{display:inline-flex;flex-wrap:wrap;gap:6px;margin:4px}.l3-display-options .l3-camera-focus{display:inline-block}
+.l3-adjustments{margin-top:20px;border-block:1px solid var(--l3-line);padding-block:6px}.l3-adjustments[open]{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 28px}.l3-adjustments>summary{grid-column:1/-1;padding-left:0}
+.l3-adjustments .l3-tools{border:0;padding:0}.l3-adjustments .l3-context{margin:0}.l3-adjustments #l3Protocol{grid-column:1/-1;margin-top:0}
+.l3-simple-actions button:focus-visible{outline-offset:3px}.l3-pilot ::selection{background:var(--l3-selected);color:var(--l3-ink)}.l3-pilot input,.l3-pilot textarea{caret-color:var(--l3-accent)}
+@media(min-width:1100px){.l3-three-shell{height:clamp(400px,54vh,620px)}.l3-quick-reading{grid-template-columns:minmax(0,1fr) minmax(200px,.65fr) auto}}
+@media(max-width:760px){.l3-simple-actions{grid-template-columns:minmax(0,1fr);gap:12px;padding:10px 0 16px}.l3-main-operation button{width:100%}.l3-sample-operations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.l3-sample-operations button{font-size:13px;padding:8px;min-height:48px}.l3-piece-choice{justify-content:space-between;min-width:0;gap:4px}.l3-piece-choice select{min-width:64px;padding-inline:6px}.l3-water-inventory strong{font-size:14px}.l3-water-inventory p{font-size:13px}.l3-adjustments[open]{display:block}.l3-adjustments .l3-context{margin-top:18px}.l3-stage-toolbar{flex-wrap:wrap}}
