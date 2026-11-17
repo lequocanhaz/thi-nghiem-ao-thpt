@@ -1,0 +1,64 @@
+{
+  "generatedAtUTC": "2026-11-17T02:18:47.701155+00:00",
+  "baseCommit": "b02e3f68b252de665426da35f61196e217577240",
+  "runtimeEvidenceMatchesCurrentSource": {
+    "ice-final.json": true,
+    "regression-final.json": true,
+    "viewports-final.json": true,
+    "motion-final.json": true,
+    "storage-final.json": true,
+    "npm-check.json": true,
+    "grip-final.json": true,
+    "stock-final.json": true
+  },
+  "newTestHashes": {
+    "checks/browser-thermal-storage-v89.py": "335b83c9330c4dfd002b3e43a03a6d527e83b978eb4b1883566474780570a733",
+    "checks/thermal-ice-portions-v89.mjs": "d341b4738cace4d16948147269194ab194f867324aff7051b1926846867f0f28",
+    "checks/browser-thermal-stock-v89.py": "e01720b25200054801a4a987757eb84abec761132dd6f0b00e7dc74d8c6b8a62",
+    "checks/browser-thermal-ice-v89.py": "b8aedf077d757df9b41e28dadd79f63002b11316e1f80891788d8d74674e903f",
+    "checks/browser-thermal-motion-v89.py": "db523eb9666ea179809d99deecfb2232e4509e8f2be8d60bcfa5fb042f029029",
+    "checks/thermal-motion-v89.mjs": "ef05e308ad6e5d15490805f95ea19089e9bdc60e6eee8c095b1bb4ebe942cf30"
+  },
+  "nodeVersion": "v24.19.0",
+  "browserVersion": "154.0.8037.57",
+  "browserFlags": [
+    "--no-sandbox",
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader"
+  ],
+  "commands": [
+    "python work/thermal-v89/run-check.py (npm run check)",
+    "node checks/site-security-v63.mjs",
+    "python checks/browser-thermal-motion-v89.py --url http://127.0.0.1:4189 --out work/thermal-v89/motion/final",
+    "python checks/browser-thermal-ice-v89.py --url http://127.0.0.1:4189 --out work/thermal-v89/ice/final",
+    "python checks/browser-thermal-storage-v89.py --url http://127.0.0.1:4189 --out work/thermal-v89/storage-final",
+    "python checks/browser-thermal-stock-v89.py --url http://127.0.0.1:4189 --out work/thermal-v89/stock-final",
+    "python checks/browser-thermal-v88.py --url http://127.0.0.1:4189 --out work/thermal-v89/grip-final",
+    "python checks/browser-thermal-viewports-v87.py --url http://127.0.0.1:4189 --out work/thermal-v89/viewports-final",
+    "python checks/browser-thermal-locale-v88.py --url http://127.0.0.1:4189 --swiftshader --only render_and_camera,export_import,focus_and_data,lifecycle_locale_theme,fallback_2d_keyboard,cancel_pointer_lifecycle,no_webgl_and_context_loss --out work/thermal-v89/regression-final"
+  ],
+  "security": {
+    "protectedHTML": 306,
+    "publicTextAssets": 503,
+    "result": "PASS"
+  },
+  "L3": {
+    "PASS": 0,
+    "PARTIAL": 1,
+    "NOT_TESTED": 299,
+    "BLOCKED": 0,
+    "total": 300
+  },
+  "notTested": [
+    "Physical iPhone Safari/Android",
+    "Hardware P95 and FPS",
+    "Teacher acceptance",
+    "Full WCAG certification"
+  ],
+  "limits": [
+    "Equivalent touching ice portions, no independent rigid bodies/CFD",
+    "Pointer burst CPU metrics are not interactive latency/FPS; baseline and final machine load differ",
+    "Native mouse and emulated CDP touch only"
+  ],
+  "deployment": "Local verification only at artifact creation; see PR/release evidence for subsequent CI/Pages/live status"
+}

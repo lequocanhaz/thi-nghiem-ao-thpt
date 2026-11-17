@@ -47,6 +47,7 @@ expect(!validateToolPose('ice',homes.ice,s,NaN).valid,'Nonfinite piece cannot by
 const unplaced=createState('ice');
 expect(!sweepToolPose('calorimeter',homes.calorimeter,{x:410,y:464},unplaced).valid,'Unplaced full vessel body cannot cross pedestal/bench');
 expect(validateToolPose('calorimeter',{x:200,y:338},unplaced).valid,'Vessel resting on clear bench is allowed');
-expect(benchRestPose({x:550,y:100},s)?.y>400,'A clear release rests on the bench');expect(benchRestPose({x:410,y:100},s)===null,'Do not silently push a sample through the vessel to reach the bench');
+// v89 extended ice tray covers x495..750; x475 is the clear bench corridor.
+expect(benchRestPose({x:475,y:100},s)?.y>400,'A clear release rests on the bench');expect(benchRestPose({x:410,y:100},s)===null,'Do not silently push a sample through the vessel to reach the bench');
 const before=structuredClone(s);validateCupPose({x:374,y:130},a,s);sweepToolPose('ice',homes.ice,{x:410,y:300},s);assert.deepEqual(s,before,'Guards never change physical state');
 console.log(JSON.stringify({status:'PASS',checks,scope:'Literal calibrated paths, independent radial cylinder-surface witness, static supports, probe/drop domains and immutability. Conservative3D envelopes, not unconstrained rigid bodies or hardware acceptance.'}));
