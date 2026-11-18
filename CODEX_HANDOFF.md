@@ -371,3 +371,11 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - session-archive.js:archiveđầyđủ+verify+index trướcprimaryreplacement;onlyactivateRAMnewsessionaftersuccess. Rollover khi20trials hoặcnearfull, cóconfirmcancel;quota/silentwrite/primaryfailure giữolddata,khôngevictarchive. DanhsáchphiênđãlưutảiJSONvàimportlạibìnhthường. Indexmetadata namespacevalidated,khôngthựcthifile. Storagequotalimit làblockcóthôngbáo vàexport,sẽkhôngtựxóadữliệu đểtiếptục.
 -7corephysics/geometry/measurement/protocol byteunchanged; notebookchỉđổipolicy dunglượng+outputguard. Calcguardfinitepositive trướcassign,côngthứckhôngđổi. Agent acceptance91_science tìm4data/controlbugs+readonlyedge,viết6groupbrowser; acceptance91_ux sửacamera+unit. Rootintegration/sourcefreeze/tests/finaldeployment.
 - Run-before-review/120ms-flake chỉdiagnostic. ChỉacceptedreportSHAmatchmớitínhnghiệmthu;fullnpmcheckrequired. GiữKaTeX/node_modules/work/generatedlegacy auditJSON ngoài commit;fetchmain+CIgreen+Pages/live proof trước nóiđãcậpnhậtweb.
+
+## Quy trình nghiên cứu V92
+
+- Đọc `docs/level3-v92/IMPLEMENTATION_REPORT.md` để xem phạm vi và bằng chứng. Hai hoạt động trong ID `calorimetry` có rót theo gam, cân hỗ trợ, đo mẫu đang kẹp, lặp cấu hình và so sánh các lượt.
+- `pourDose` là trạng thái của thao tác hiện tại. Nó giới hạn lượng truyền ở từng bước theo khối lượng đã rời cốc và được xóa khi dừng, hủy hoặc chuyển phiên. Phần tràn vẫn do mô hình gốc hạch toán. Đường cân và đo mẫu đi qua bộ kiểm va chạm, sau đó mới gọi tác động vật lí.
+- `thermal-analysis.js` tính từ dữ liệu nhập của học sinh, giữ cấu trúc kết quả nhiệt dung riêng cũ. Nhiệt nóng chảy riêng cần xác nhận tan hết và miền nước lỏng. Giao diện chặn phép tính khi lượt hiện tại còn đá trong bình.
+- `thermal-comparison.js` đọc hai nguồn riêng từ sổ tay và chọn vị trí đầu dò. Mốc đưa mẫu chỉ lấy sự kiện được chấp nhận và chưa hoàn tác. Giới hạn điểm vẽ không ảnh hưởng CSV. Cập nhật chuỗi nhiệt kế theo lô khi bảng mở. Lựa chọn bảng được giữ trong cùng phiên khi đổi ngôn ngữ.
+- Kiểm thử và phát hành theo quy trình Pages. Trạng thái vẫn 0 PASS, 1 PARTIAL, 299 NOT TESTED và 0 BLOCKED trong 300 ID. Bằng chứng Chromium và cảm ứng mô phỏng cần được phân biệt với nghiệm thu thực địa.

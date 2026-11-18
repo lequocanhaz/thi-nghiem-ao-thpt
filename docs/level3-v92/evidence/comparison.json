@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "dark": false,
+      "integratedApp": true,
+      "colors": [
+        "#235986",
+        "#9b4c26",
+        "#fff"
+      ],
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "integratedApp": true,
+      "colors": [
+        "#9dd4fe",
+        "#ffc092",
+        "#252727"
+      ],
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "dark": false,
+      "integratedApp": true,
+      "colors": [
+        "#235986",
+        "#9b4c26",
+        "#fff"
+      ],
+      "pageErrors": []
+    }
+  ],
+  "comparisonSourcesBefore": {
+    "dist/l3/thermal-comparison.js": "54de97a657a304a701007b851606e59db085b6660d6fbbe505786fee08f25a16",
+    "dist/l3/thermal-comparison.css": "0b871d0658f118be6516453c49b3810832771963a0098c74d053aa50e8f9a2a8",
+    "checks/thermal-comparison-v92.mjs": "a22ecc9f05bed0df28ccd34db4d4d05b93636d9678b4761ce92200601207602f"
+  },
+  "comparisonSourcesAfter": {
+    "dist/l3/thermal-comparison.js": "54de97a657a304a701007b851606e59db085b6660d6fbbe505786fee08f25a16",
+    "dist/l3/thermal-comparison.css": "0b871d0658f118be6516453c49b3810832771963a0098c74d053aa50e8f9a2a8",
+    "checks/thermal-comparison-v92.mjs": "a22ecc9f05bed0df28ccd34db4d4d05b93636d9678b4761ce92200601207602f"
+  },
+  "browserVersion": "154.0.8037.57",
+  "scope": "Chromium controlled fixture, viewport emulation and native select interaction."
+}

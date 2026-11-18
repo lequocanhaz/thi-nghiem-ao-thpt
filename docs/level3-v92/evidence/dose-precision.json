@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "exactDoses": [
+    {
+      "grams": 0.001,
+      "sourceKg": 0.199999,
+      "waterKg": 1e-06
+    },
+    {
+      "grams": 0.123456,
+      "sourceKg": 0.19987554400000002,
+      "waterKg": 0.000124456
+    },
+    {
+      "grams": 0.875543,
+      "sourceKg": 0.199000001,
+      "waterKg": 0.0009999990000000001
+    }
+  ],
+  "escapeStopsSource": true,
+  "browser": "154.0.8037.57",
+  "pageErrors": [],
+  "sourceStable": true
+}

@@ -212,3 +212,13 @@ html[data-appearance=dark] .l3-pilot{--l3-paper:#252727;--l3-soft:#2e3230;--l3-i
 @media(min-width:1100px){.l3-three-shell{height:clamp(400px,54vh,620px)}.l3-quick-reading{grid-template-columns:minmax(0,1fr) minmax(200px,.65fr) auto}}
 @media(max-width:760px){.l3-simple-actions{grid-template-columns:minmax(0,1fr);gap:12px;padding:10px 0 16px}.l3-main-operation button{width:100%}.l3-sample-operations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.l3-sample-operations button{font-size:13px;padding:8px;min-height:48px}.l3-piece-choice{justify-content:space-between;min-width:0;gap:4px}.l3-piece-choice select{min-width:64px;padding-inline:6px}.l3-water-inventory strong{font-size:14px}.l3-water-inventory p{font-size:13px}.l3-adjustments[open]{display:block}.l3-adjustments .l3-context{margin-top:18px}.l3-stage-toolbar{flex-wrap:wrap}}
 .l3-session-archives label{display:grid;gap:8px;margin-block:12px;max-width:32rem;font-size:14px}.l3-session-archives select{width:100%}
+
+.l3-investigation-controls{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px 16px;border-top:1px solid var(--l3-line)}
+.l3-investigation-controls details{min-width:0}.l3-investigation-controls details[open]{flex-basis:100%}
+.l3-investigation-controls summary{display:flex;align-items:center;gap:12px;cursor:pointer;font-size:14px;font-weight:600;list-style:none}
+.l3-investigation-controls summary::after{content:'+'}.l3-investigation-controls details[open]>summary::after{content:'−'}
+.l3-inline-fields{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.l3-inline-fields label{font-size:14px}.l3-inline-fields input{width:8rem}
+.l3-calc-assumption{display:flex;align-items:center;gap:8px;min-height:44px;margin-bottom:8px;font-size:14px}.l3-calc-assumption input{width:20px;height:20px;accent-color:var(--l3-accent)}
+.l3-calc-formula{overflow-wrap:anywhere}#l3Calculated{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums}#l3CalculationStatus:empty{display:none}
+#l3CalculationStatus{color:var(--l3-warning);font-size:14px}.l3-calc-terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:8px 16px}
+.l3-calc-terms div{border-top:1px solid var(--l3-line);padding-top:8px}.l3-calc-terms dt{font-size:13px;color:var(--l3-muted)}.l3-calc-terms dd{margin:4px 0 0;font-variant-numeric:tabular-nums;font-weight:600}
