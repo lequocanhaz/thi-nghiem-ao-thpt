@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "cases": [
+    "fresh below-absolute-zero rejected",
+    "valid previous calculation preserved on bad edit",
+    "export/reload retains valid previous result"
+  ],
+  "browser": "154.0.8037.57",
+  "pageErrors": [],
+  "sourceStable": true
+}

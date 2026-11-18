@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "browserVersion": "154.0.8037.57",
+  "results": [
+    {
+      "case": "calculator-overflow",
+      "status": "PASS",
+      "validResultRetained": 4180,
+      "manualReadingPreserved": 33.4,
+      "overflowAndUnderflowRejectedBeforeSessionWrite": true,
+      "pageErrors": []
+    },
+    {
+      "case": "restored-tilted-cup",
+      "status": "PASS",
+      "actualPourHasStopLabel": true,
+      "EscapeAndMainStopPreserveTransferredWater": true,
+      "pageErrors": []
+    },
+    {
+      "case": "rollover-cancel-archive",
+      "status": "PASS",
+      "cancelKeepsPrimaryByteExact": true,
+      "oldTwentyTrialsPreserved": true,
+      "freshSessionAndDownloadArchiveAfterReload": true,
+      "pageErrors": []
+    },
+    {
+      "case": "rollover-quota",
+      "status": "PASS",
+      "cancelKeepsPrimaryByteExact": true,
+      "oldTwentyTrialsPreserved": true,
+      "quotaKeepsCurrentSession": true,
+      "pageErrors": []
+    },
+    {
+      "case": "large-session-budget",
+      "status": "PASS",
+      "results": [
+        {
+          "initialChars": 1503021,
+          "compactInput": false,
+          "readOnlyAndExportAndArchiveByteExact": true,
+          "newSessionWritableAfterReload": true,
+          "pageErrors": []
+        },
+        {
+          "initialChars": 1997000,
+          "compactInput": true,
+          "readOnlyAndExportAndArchiveByteExact": true,
+          "newSessionWritableAfterReload": true,
+          "pageErrors": []
+        }
+      ]
+    },
+    {
+      "case": "read-only-mutation-guards",
+      "status": "PASS",
+      "excludeAndTiltDisabled": true,
+      "forcedClickCannotChangeReadingOrPose": true,
+      "CSVAndPrimaryRetainOriginalData": true,
+      "pageErrors": []
+    }
+  ],
+  "sourceBefore": {
+    "checks/browser-thermal-v87.py": "d985a257b5443c01b7c05e1013097eb892464ebbe970e5369b047ea11a843521",
+    "dist/index.html": "d0e5684027a4fd9ec7d71a6c616ab7e02f8c4935ec3a2bf1f7a729b150b89021",
+    "dist/boot.js": "a83791f063e41da22b2edec2ddfd26ecfaa854b840c9e66f9160227c107108ce",
+    "dist/app.js": "6a59efec1201e47aaa8ab4e4e82187b76b11179d1b2c9f7595c2e406470c5a37",
+    "dist/app.css": "04181d4c1500d4591f106af26011a00f13e51a9e9bd5b4a29b210d4ec88e2986",
+    "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+    "dist/l3/data-notebook.js": "7913cff905467c9268cc08ea4960a3ea6553a2267401086572ebecfddc8f4401",
+    "dist/l3/interaction-core.js": "5c83929b3e4fcc25a636af695321b2c097595e3ed22ee7708d71207175780f63",
+    "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+    "dist/l3/session-archive.js": "1ca1d311da550f8cddfa1b8fddd16ba5fb27c389adef754dc5eb687feee14705",
+    "dist/l3/thermal-analysis.js": "19c2fb6106bb940e41ab7bec67c217506628689d12fe9716679042ae23d54caf",
+    "dist/l3/thermal-apparatus.js": "61c1ef060227ae373edc8efe9d160e9850ebbf384900302a3e3ab3331a484e0a",
+    "dist/l3/thermal-assist.js": "49878adaa01b4812005fa33f0e458421bc452763fa7fe8b7f471c28cb0d1ad02",
+    "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+    "dist/l3/thermal-comparison.js": "54de97a657a304a701007b851606e59db085b6660d6fbbe505786fee08f25a16",
+    "dist/l3/thermal-geometry.js": "7922363672f7e4b9d6697117194dd78c810ffa5604d8e7951e6fa51f24704f0a",
+    "dist/l3/thermal-ice-portions.js": "a19657acf38ddf936c2ef07f44eb5a58266bd25e8fbd8126c8e52be5ecce091d",
+    "dist/l3/thermal-motion.js": "45d20b7a6137cf74de3acafcf8d2612f9ba881b729100fedaa0d592f2a6bcda8",
+    "dist/l3/thermal-physics.js": "e7ac5afc9a7fbfeba38d04e49e604a4ea06170815e394cf5414c14a395c7d515",
+    "dist/l3/thermal-picking.js": "99bd26ab399b116a34073637316b42aba37c0fac96e906ac38943567e6e22b52",
+    "dist/l3/thermal-pilot.js": "4cf815d6e80804361d6e809891334c2e889f3def21cdce59de26de3591a81c16",
+    "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+    "dist/l3/thermal-spatial.js": "ee830adb21273f375edff197d30286f3ab6ba8c85e7a36e3bdec734a8f7ec289",
+    "dist/l3/thermal-three.js": "d3c28da0f658f542714b7849ba9cecb66fe9ffcd66142f738afcf158b68920d4",
+    "dist/l3/thermal-view.js": "2146cc66c45c0ad22cfba0cd3c4baf39924b0c0996175458cb22ba0be3c4ff6f",
+    "dist/l3/thermal-comparison.css": "0b871d0658f118be6516453c49b3810832771963a0098c74d053aa50e8f9a2a8",
+    "dist/l3/thermal-three.css": "d2a0249fe0f948a24c2c1ff36aadf9d849738ddab2de0905418a314b05c80a78",
+    "dist/l3/thermal.css": "56453b6a5b11204d85264a6c76b93c6dce56a485396364a9343cf3db93567f5e"
+  },
+  "sourceAfter": {
+    "checks/browser-thermal-v87.py": "d985a257b5443c01b7c05e1013097eb892464ebbe970e5369b047ea11a843521",
+    "dist/index.html": "d0e5684027a4fd9ec7d71a6c616ab7e02f8c4935ec3a2bf1f7a729b150b89021",
+    "dist/boot.js": "a83791f063e41da22b2edec2ddfd26ecfaa854b840c9e66f9160227c107108ce",
+    "dist/app.js": "6a59efec1201e47aaa8ab4e4e82187b76b11179d1b2c9f7595c2e406470c5a37",
+    "dist/app.css": "04181d4c1500d4591f106af26011a00f13e51a9e9bd5b4a29b210d4ec88e2986",
+    "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+    "dist/l3/data-notebook.js": "7913cff905467c9268cc08ea4960a3ea6553a2267401086572ebecfddc8f4401",
+    "dist/l3/interaction-core.js": "5c83929b3e4fcc25a636af695321b2c097595e3ed22ee7708d71207175780f63",
+    "dist/l3/measurement-engine.js": "1cbce4b3e80de594d78ee6c86e2cc76261bbabd6a11da928e576e823e7bebb6a",
+    "dist/l3/session-archive.js": "1ca1d311da550f8cddfa1b8fddd16ba5fb27c389adef754dc5eb687feee14705",
+    "dist/l3/thermal-analysis.js": "19c2fb6106bb940e41ab7bec67c217506628689d12fe9716679042ae23d54caf",
+    "dist/l3/thermal-apparatus.js": "61c1ef060227ae373edc8efe9d160e9850ebbf384900302a3e3ab3331a484e0a",
+    "dist/l3/thermal-assist.js": "49878adaa01b4812005fa33f0e458421bc452763fa7fe8b7f471c28cb0d1ad02",
+    "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+    "dist/l3/thermal-comparison.js": "54de97a657a304a701007b851606e59db085b6660d6fbbe505786fee08f25a16",
+    "dist/l3/thermal-geometry.js": "7922363672f7e4b9d6697117194dd78c810ffa5604d8e7951e6fa51f24704f0a",
+    "dist/l3/thermal-ice-portions.js": "a19657acf38ddf936c2ef07f44eb5a58266bd25e8fbd8126c8e52be5ecce091d",
+    "dist/l3/thermal-motion.js": "45d20b7a6137cf74de3acafcf8d2612f9ba881b729100fedaa0d592f2a6bcda8",
+    "dist/l3/thermal-physics.js": "e7ac5afc9a7fbfeba38d04e49e604a4ea06170815e394cf5414c14a395c7d515",
+    "dist/l3/thermal-picking.js": "99bd26ab399b116a34073637316b42aba37c0fac96e906ac38943567e6e22b52",
+    "dist/l3/thermal-pilot.js": "4cf815d6e80804361d6e809891334c2e889f3def21cdce59de26de3591a81c16",
+    "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+    "dist/l3/thermal-spatial.js": "ee830adb21273f375edff197d30286f3ab6ba8c85e7a36e3bdec734a8f7ec289",
+    "dist/l3/thermal-three.js": "d3c28da0f658f542714b7849ba9cecb66fe9ffcd66142f738afcf158b68920d4",
+    "dist/l3/thermal-view.js": "2146cc66c45c0ad22cfba0cd3c4baf39924b0c0996175458cb22ba0be3c4ff6f",
+    "dist/l3/thermal-comparison.css": "0b871d0658f118be6516453c49b3810832771963a0098c74d053aa50e8f9a2a8",
+    "dist/l3/thermal-three.css": "d2a0249fe0f948a24c2c1ff36aadf9d849738ddab2de0905418a314b05c80a78",
+    "dist/l3/thermal.css": "56453b6a5b11204d85264a6c76b93c6dce56a485396364a9343cf3db93567f5e"
+  },
+  "sourceStable": true,
+  "scope": "Actual Chromium HTML controls and local-storage fault injection; no physical device or teacher acceptance."
+}
