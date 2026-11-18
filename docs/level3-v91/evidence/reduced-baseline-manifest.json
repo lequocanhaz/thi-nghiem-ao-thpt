@@ -1,0 +1,6 @@
+{
+  "baseCommit": "acaf8b8843cfd9c2bcdc34697163da6afb7a12dc",
+  "controllerSha256": "aa4a808bed4ded1f160e9b067bbe7296329ed013701bcb4b1cdfca61a7094b32",
+  "controllerMatchesBase": true,
+  "scope": "Isolated V90 controller with current shared rendering dependencies, used solely to reproduce ignoredreducedmotion. Not a fullV90snapshot or finalruntimePASS."
+}

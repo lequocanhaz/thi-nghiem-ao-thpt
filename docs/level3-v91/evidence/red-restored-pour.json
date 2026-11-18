@@ -1,0 +1,8 @@
+{
+  "labelWhileActuallyPouring": "Rót nước",
+  "waterBeforeKg": 0.03733947835933436,
+  "waterAfterKg": 0.06548626874817627,
+  "waterAddedAfterEscapeKg": 0.028146790388841908,
+  "pageErrors": [],
+  "finding": "Reloaded tilted cup pours onResume whilemainbutton saysPour andEscape doesnotstop it"
+}

@@ -1,0 +1,6 @@
+{"case": "empty-source-and-vessel", "width": 1440, "primaryEnabled": false, "label": "C\u1ed1c \u0111\u00e3 h\u1ebft n\u01b0\u1edbc"}
+Traceback (most recent call last):
+  File "/workspace/quanh-thermal/checks/browser-thermal-recovery-v91.py", line 15, in <module>
+    assert enabled,'Both vessels are empty; the primary action offers no recovery'
+           ^^^^^^^
+AssertionError: Both vessels are empty; the primary action offers no recovery
