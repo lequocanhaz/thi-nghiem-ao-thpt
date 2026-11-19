@@ -1,0 +1,32 @@
+{
+  "browser": "154.0.8037.57",
+  "results": [
+    {
+      "width": 320,
+      "touchSimulation": true,
+      "committedPressure": "63,0",
+      "pointerCapture": true,
+      "cancelAndCommit": true,
+      "keyboardStops": true,
+      "jsErrors": []
+    },
+    {
+      "width": 390,
+      "touchSimulation": false,
+      "committedPressure": "63,0",
+      "pointerCapture": true,
+      "cancelAndCommit": true,
+      "keyboardStops": true,
+      "jsErrors": []
+    },
+    {
+      "width": 1440,
+      "touchSimulation": false,
+      "committedPressure": "63,0",
+      "pointerCapture": true,
+      "cancelAndCommit": true,
+      "keyboardStops": true,
+      "jsErrors": []
+    }
+  ]
+}

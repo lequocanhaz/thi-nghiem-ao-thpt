@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "browserVersion": "154.0.8037.57",
+  "results": [
+    {
+      "lab": "ohm",
+      "width": 390,
+      "retainedReading": true,
+      "pageErrors": [],
+      "shortBlocksRecord": true,
+      "currentsA": [
+        0.6,
+        0.9
+      ]
+    },
+    {
+      "lab": "lens",
+      "width": 1440,
+      "retainedReading": true,
+      "pageErrors": [],
+      "unfocusedBlocksRecord": true,
+      "focusDistancesM": [
+        [
+          0.24,
+          0.24
+        ],
+        [
+          0.3,
+          0.2
+        ]
+      ]
+    },
+    {
+      "lab": "oscillation",
+      "width": 768,
+      "retainedReading": true,
+      "pageErrors": [],
+      "elapsedS": 2.98,
+      "cycles": 2,
+      "measuredPeriodS": 1.49,
+      "referencePeriodS": 1.4049629462081452
+    },
+    {
+      "lab": "gas",
+      "width": 390,
+      "retainedReading": true,
+      "pageErrors": [],
+      "volumesL": [
+        6,
+        3.6
+      ],
+      "pressuresKPa": [
+        99.8,
+        166.3
+      ]
+    },
+    {
+      "lab": "lever",
+      "width": 320,
+      "retainedReading": true,
+      "pageErrors": [],
+      "netNm": [
+        0,
+        -23.029507111676722
+      ],
+      "occupiedHookRejected": true
+    }
+  ],
+  "sourceBefore": {
+    "dist/app.js": "481515cedb7339dcde026701fc332433f9d13aa6472f1afbb8c6ff4a34fb6df1",
+    "dist/index.html": "069adfba323fe99ac182a0412b750af3ea74ed02ba55b4e6810b722458c102c8",
+    "dist/boot.js": "8f8266fe5de7c42fd59072e06edbb1be50aa5a18df1a39f5df47d9aacbb4d964",
+    "dist/l3/practice.css": "75bb6952256d88523485ea7e02d74b450247dc8139f0790d6a089664847d54e4",
+    "dist/l3/gas-practice.js": "611832b6ae07b62634cf9a6a908629d09645a243ea716ba56f3642b1d0cb253a",
+    "dist/l3/practice-runner.js": "4d6d5e88ed34a76d7abb62028090e8e54259f97016c6d7b420df60735a929efa",
+    "dist/l3/gas-practice.css": "13591ad2957be181f91084d5adf9e4cd173346d72c83feb3f680f74c00d4f5ad",
+    "dist/l3/ohm-practice.js": "8b2d167ed83a657c49988940c80ccafd3b6c20eef82cda7e0808863c2f000beb",
+    "dist/l3/oscillation-practice.css": "e3b8cb312e5b7f2ca0caaf5ecd4abdfdc41ad121ea60322a384d3ef77d6b3712",
+    "dist/l3/lens-practice.css": "527fe5a72cd300a338b1136af0276defbbb54b7ce5d9e1f95c8726ef0b085e06",
+    "dist/l3/ohm-practice.css": "8140cb2ebb47cf5eb1fdf8d89421c2c73fd462c7956a41e346db518730e0c406",
+    "dist/l3/oscillation-practice.js": "e130290e4888881da667f3f0bbfd5dfa8f1c8db6f0b7e41013cfb3e9f606bd83",
+    "dist/l3/practice-session.js": "83903b97ad9bdec5930fa0fd9047249033757c8da56482abb3e7253ad3d5e286",
+    "dist/l3/lever-practice.js": "a361372e97aa0f00b7002f2c66503b1b9b8c1185fbfbdaf8c354840ac07118ac",
+    "dist/l3/lens-practice.js": "9a856c1c711686d08d204e19e3649146e64eddfc12dacc404b9d5ec473956c47",
+    "dist/l3/lever-practice.css": "6fd45581697522f9580774b3a20536470d114cab22e86bdcd2c5123b8db80678",
+    "/workspace/quanh-thermal/checks/browser-practice-v94.py": "b752cd2b9a32d2d5f3d255982eb19da2d7e74d1ecb2f8a1e93a56a167881a6e4"
+  },
+  "sourceAfter": {
+    "dist/app.js": "481515cedb7339dcde026701fc332433f9d13aa6472f1afbb8c6ff4a34fb6df1",
+    "dist/index.html": "069adfba323fe99ac182a0412b750af3ea74ed02ba55b4e6810b722458c102c8",
+    "dist/boot.js": "8f8266fe5de7c42fd59072e06edbb1be50aa5a18df1a39f5df47d9aacbb4d964",
+    "dist/l3/practice.css": "75bb6952256d88523485ea7e02d74b450247dc8139f0790d6a089664847d54e4",
+    "dist/l3/gas-practice.js": "611832b6ae07b62634cf9a6a908629d09645a243ea716ba56f3642b1d0cb253a",
+    "dist/l3/practice-runner.js": "4d6d5e88ed34a76d7abb62028090e8e54259f97016c6d7b420df60735a929efa",
+    "dist/l3/gas-practice.css": "13591ad2957be181f91084d5adf9e4cd173346d72c83feb3f680f74c00d4f5ad",
+    "dist/l3/ohm-practice.js": "8b2d167ed83a657c49988940c80ccafd3b6c20eef82cda7e0808863c2f000beb",
+    "dist/l3/oscillation-practice.css": "e3b8cb312e5b7f2ca0caaf5ecd4abdfdc41ad121ea60322a384d3ef77d6b3712",
+    "dist/l3/lens-practice.css": "527fe5a72cd300a338b1136af0276defbbb54b7ce5d9e1f95c8726ef0b085e06",
+    "dist/l3/ohm-practice.css": "8140cb2ebb47cf5eb1fdf8d89421c2c73fd462c7956a41e346db518730e0c406",
+    "dist/l3/oscillation-practice.js": "e130290e4888881da667f3f0bbfd5dfa8f1c8db6f0b7e41013cfb3e9f606bd83",
+    "dist/l3/practice-session.js": "83903b97ad9bdec5930fa0fd9047249033757c8da56482abb3e7253ad3d5e286",
+    "dist/l3/lever-practice.js": "a361372e97aa0f00b7002f2c66503b1b9b8c1185fbfbdaf8c354840ac07118ac",
+    "dist/l3/lens-practice.js": "9a856c1c711686d08d204e19e3649146e64eddfc12dacc404b9d5ec473956c47",
+    "dist/l3/lever-practice.css": "6fd45581697522f9580774b3a20536470d114cab22e86bdcd2c5123b8db80678",
+    "/workspace/quanh-thermal/checks/browser-practice-v94.py": "b752cd2b9a32d2d5f3d255982eb19da2d7e74d1ecb2f8a1e93a56a167881a6e4"
+  }
+}

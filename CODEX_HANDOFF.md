@@ -386,3 +386,9 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - `planAssistedStir` nối đường nhúng que hợp lệ với một vòng kín đã kiểm tra. Bộ điều khiển chỉ ghi hành động khuấy khi thực hiện hết đường đi. Escape dùng cơ chế hủy hiện hành.
 - `refill-cup` thêm đúng khối lượng còn nhận được theo lượng nguồn đã cấu hình, ở nhiệt độ nước cấp. `massInKg` là trường tùy chọn. Nhiệt độ phần nước còn lại được tính theo cân bằng enthalpy. Dữ liệu phiên và số đo cũ được giữ. CSV thêm `mass_in_kg`.
 - Màu và độ sáng mặt nước 2D/3D đọc trạng thái vật lí. Hiệu ứng khuấy là minh họa. Bump cache từ boot tới các module đã thay đổi.
+
+## Thực hành trực tiếp V94
+
+- `ohm`, `lens`, `oscillation`, `lever`, `gas` có bàn thực hành tải lười tại `#lab/<id>?practice=1`. Mở từ nút **Thực hành trực tiếp** trên bài gốc. Học liệu, mô hình gốc và hai hoạt động nhiệt lượng kế dùng đường dẫn hiện có.
+- Hợp đồng module `practice` cấp mô hình, phép đo và điều khiển VI/EN. `practice-runner.js` và `practice-session.js` lưu phiên `quanh-practice-<id>-v1`, ghi bảng, vẽ điểm và xuất/nhập. State và số đo của từng bài tách khỏi phiên mô hình cũ.
+- Đọc `docs/level3-v94/IMPLEMENTATION_REPORT.md` để xem giới hạn, ảnh, phép thử và danh sách file. Ma trận hiện 0 PASS, 6 PARTIAL, 294 NOT TESTED, 0 BLOCKED trên đúng 300 ID.

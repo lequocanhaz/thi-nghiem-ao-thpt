@@ -1,6 +1,6 @@
 {
   "schema": "quanh.level3.audit.v1",
-  "generatedAt": "2026-11-12T14:15:05.468Z",
+  "generatedAt": "2026-11-19T11:01:46.500Z",
   "scope": "P0 immutable source inventory/API observations; never Level 3 certification",
   "baseline": {
     "commit": "6aba10bd33f013d2f96d51513764022a65b65d86",
@@ -170,8 +170,8 @@
   },
   "summary": {
     "overall": {
-      "NOT TESTED": 299,
-      "PARTIAL": 1
+      "NOT TESTED": 294,
+      "PARTIAL": 6
     },
     "behaviour": {
       "TIME_DEPENDENT_OUTPUT_OBSERVED": 63,
@@ -1086,85 +1086,137 @@
       },
       "acceptance": {
         "overall": {
-          "status": "NOT TESTED",
-          "evidenceRefs": [],
-          "reviewer": null,
-          "reviewedAt": null
+          "status": "PARTIAL",
+          "evidenceRefs": [
+            "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+            "docs/level3-v94/evidence/browser.json",
+            "checks/oscillation-practice-v94.mjs"
+          ],
+          "reviewer": "Codex root and lab-specific software reviewer",
+          "reviewedAt": "2026-11-19"
         },
         "gates": {
           "L3-01": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-02": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-03": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-04": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-05": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-06": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-07": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-08": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           }
         },
         "evidenceLayers": {
           "F1": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F2": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F3": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F4": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/oscillation-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F5": {
             "status": "NOT TESTED",
@@ -1185,7 +1237,9 @@
           "reviewer": null,
           "reviewedAt": null
         },
-        "notes": []
+        "notes": [
+          "V94 direct operation, scientific stage, manual reading, graph and session export. Teacher review, assessment modes and real-device review are pending."
+        ]
       }
     },
     {
@@ -2891,85 +2945,137 @@
       },
       "acceptance": {
         "overall": {
-          "status": "NOT TESTED",
-          "evidenceRefs": [],
-          "reviewer": null,
-          "reviewedAt": null
+          "status": "PARTIAL",
+          "evidenceRefs": [
+            "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+            "docs/level3-v94/evidence/browser.json",
+            "checks/ohm-practice-v94.mjs"
+          ],
+          "reviewer": "Codex root and lab-specific software reviewer",
+          "reviewedAt": "2026-11-19"
         },
         "gates": {
           "L3-01": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-02": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-03": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-04": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-05": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-06": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-07": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-08": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           }
         },
         "evidenceLayers": {
           "F1": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F2": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F3": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F4": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/ohm-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F5": {
             "status": "NOT TESTED",
@@ -2990,7 +3096,9 @@
           "reviewer": null,
           "reviewedAt": null
         },
-        "notes": []
+        "notes": [
+          "V94 direct operation, scientific stage, manual reading, graph and session export. Teacher review, assessment modes and real-device review are pending."
+        ]
       }
     },
     {
@@ -4249,85 +4357,137 @@
       },
       "acceptance": {
         "overall": {
-          "status": "NOT TESTED",
-          "evidenceRefs": [],
-          "reviewer": null,
-          "reviewedAt": null
+          "status": "PARTIAL",
+          "evidenceRefs": [
+            "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+            "docs/level3-v94/evidence/browser.json",
+            "checks/gas-practice-v94.mjs"
+          ],
+          "reviewer": "Codex root and lab-specific software reviewer",
+          "reviewedAt": "2026-11-19"
         },
         "gates": {
           "L3-01": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-02": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-03": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-04": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-05": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-06": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-07": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-08": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           }
         },
         "evidenceLayers": {
           "F1": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F2": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F3": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F4": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/gas-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F5": {
             "status": "NOT TESTED",
@@ -4348,7 +4508,9 @@
           "reviewer": null,
           "reviewedAt": null
         },
-        "notes": []
+        "notes": [
+          "V94 direct operation, scientific stage, manual reading, graph and session export. Teacher review, assessment modes and real-device review are pending."
+        ]
       }
     },
     {
@@ -8618,85 +8780,137 @@
       },
       "acceptance": {
         "overall": {
-          "status": "NOT TESTED",
-          "evidenceRefs": [],
-          "reviewer": null,
-          "reviewedAt": null
+          "status": "PARTIAL",
+          "evidenceRefs": [
+            "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+            "docs/level3-v94/evidence/browser.json",
+            "checks/lever-practice-v94.mjs"
+          ],
+          "reviewer": "Codex root and lab-specific software reviewer",
+          "reviewedAt": "2026-11-19"
         },
         "gates": {
           "L3-01": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-02": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-03": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-04": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-05": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-06": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-07": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-08": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           }
         },
         "evidenceLayers": {
           "F1": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F2": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F3": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F4": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lever-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F5": {
             "status": "NOT TESTED",
@@ -8717,7 +8931,9 @@
           "reviewer": null,
           "reviewedAt": null
         },
-        "notes": []
+        "notes": [
+          "V94 direct operation, scientific stage, manual reading, graph and session export. Teacher review, assessment modes and real-device review are pending."
+        ]
       }
     },
     {
@@ -20278,85 +20494,137 @@
       },
       "acceptance": {
         "overall": {
-          "status": "NOT TESTED",
-          "evidenceRefs": [],
-          "reviewer": null,
-          "reviewedAt": null
+          "status": "PARTIAL",
+          "evidenceRefs": [
+            "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+            "docs/level3-v94/evidence/browser.json",
+            "checks/lens-practice-v94.mjs"
+          ],
+          "reviewer": "Codex root and lab-specific software reviewer",
+          "reviewedAt": "2026-11-19"
         },
         "gates": {
           "L3-01": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-02": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-03": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-04": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-05": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-06": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-07": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "L3-08": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           }
         },
         "evidenceLayers": {
           "F1": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F2": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F3": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F4": {
-            "status": "NOT TESTED",
-            "evidenceRefs": [],
-            "reviewer": null,
-            "reviewedAt": null
+            "status": "PARTIAL",
+            "evidenceRefs": [
+              "docs/level3-v94/IMPLEMENTATION_REPORT.md",
+              "docs/level3-v94/evidence/browser.json",
+              "checks/lens-practice-v94.mjs"
+            ],
+            "reviewer": "Codex root and lab-specific software reviewer",
+            "reviewedAt": "2026-11-19"
           },
           "F5": {
             "status": "NOT TESTED",
@@ -20377,7 +20645,9 @@
           "reviewer": null,
           "reviewedAt": null
         },
-        "notes": []
+        "notes": [
+          "V94 direct operation, scientific stage, manual reading, graph and session export. Teacher review, assessment modes and real-device review are pending."
+        ]
       }
     },
     {

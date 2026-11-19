@@ -1,0 +1,218 @@
+.practice-ohm{
+  --ohm-face:#fffdf7;
+  --ohm-board:#e4edeb;
+  --ohm-grid:#849c961f;
+  --ohm-line:#c0ceca;
+  --ohm-ink:#102d2a;
+  --ohm-muted:#425e5a;
+  --ohm-screen:#d5ece2;
+  --ohm-focus:#086c69;
+  --ohm-warn:#842123;
+  --ohm-warn-background:#fff1ef;
+  color:var(--ohm-ink);
+}
+html[data-appearance=dark] .practice-ohm{
+  --ohm-face:#27312f;
+  --ohm-board:#1b2524;
+  --ohm-grid:#abc8c020;
+  --ohm-line:#54665f;
+  --ohm-ink:#e9f3f0;
+  --ohm-muted:#b2c9c1;
+  --ohm-screen:#203d32;
+  --ohm-focus:#8cd9d0;
+  --ohm-warn:#ffc1b7;
+  --ohm-warn-background:#472e29;
+}
+.ohm-bench{
+  position:relative;
+  isolation:isolate;
+  height:332px;
+  overflow:hidden;
+  border:1px solid var(--ohm-line);
+  border-radius:16px;
+  background-color:var(--ohm-board);
+  background-image:radial-gradient(circle at 1px 1px,var(--ohm-grid) 1px,transparent 1.5px);
+  background-size:14px 14px;
+}
+.ohm-connections{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+.ohm-instrument{
+  position:absolute;
+  left:var(--device-x);
+  top:var(--device-y);
+  width:clamp(72px,27%,150px);
+  height:var(--device-height);
+  padding:7px 4px;
+  transform:translateX(-50%);
+  border:1px solid var(--ohm-line);
+  border-top:3px solid var(--device-tone);
+  border-radius:10px;
+  text-align:center;
+  background:var(--ohm-face);
+  box-shadow:0 3px 7px #0f282219;
+}
+.ohm-instrument-source{--device-x:16.7%;--device-y:4%;--device-height:51%;--device-tone:#cf564a}
+.ohm-instrument-ammeter{--device-x:50%;--device-y:1%;--device-height:48%;--device-tone:#238eb1}
+.ohm-instrument-resistor{--device-x:50%;--device-y:51%;--device-height:48%;--device-tone:#64785d}
+.ohm-instrument-voltmeter{--device-x:83.3%;--device-y:4%;--device-height:51%;--device-tone:#a06ac1}
+.ohm-instrument strong,.ohm-instrument output{
+  position:relative;
+  z-index:3;
+  width:max-content;
+  max-width:100%;
+  margin-inline:auto;
+}
+.ohm-instrument strong{display:block;font-size:clamp(10px,1.35vw,13px);line-height:1.2;overflow-wrap:anywhere}
+.ohm-instrument strong span{color:var(--ohm-muted);margin-inline-end:.15em}
+.ohm-instrument output{
+  display:block;
+  margin-block-start:4px;
+  padding:2px 6px;
+  border-radius:5px;
+  color:var(--ohm-ink);
+  background:var(--ohm-screen);
+  font-weight:700;
+  font-size:clamp(12px,1.75vw,17px);
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+.practice-ohm .ohm-socket{
+  position:absolute;
+  z-index:4;
+  left:var(--socket-x);
+  top:var(--socket-y);
+  display:grid;
+  place-items:center;
+  width:44px;
+  min-width:44px;
+  height:44px;
+  padding:0;
+  transform:translate(-50%,-50%);
+  border:0;
+  border-radius:50%;
+  color:var(--ohm-ink);
+  background:transparent;
+  cursor:pointer;
+}
+.ohm-socket span{
+  display:grid;
+  width:27px;
+  height:27px;
+  place-items:center;
+  border:2px solid var(--ohm-line);
+  border-radius:50%;
+  background:var(--ohm-face);
+  font-size:13px;
+  font-weight:800;
+}
+.ohm-socket[data-ohm-available] span,.ohm-socket:hover span{border-color:var(--ohm-focus)}
+.ohm-socket[data-ohm-connected] span{box-shadow:0 0 0 3px var(--ohm-screen)}
+.practice-ohm :is(button,input):focus-visible{outline:2px solid var(--ohm-focus);outline-offset:2px}
+
+.ohm-leads{
+  margin:14px 0;
+  min-width:0;
+  padding:10px 12px 12px;
+  border:1px solid var(--ohm-line);
+  border-radius:12px;
+}
+.ohm-leads legend{padding-inline:5px;font-size:14px;font-weight:700}
+.ohm-lead-list,.ohm-supply-controls{display:flex;align-items:end;flex-wrap:wrap;gap:8px}
+.ohm-lead-list button{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  min-height:44px;
+  padding-inline:9px;
+  color:var(--ohm-ink);
+  background:var(--ohm-face);
+  border:1px solid var(--ohm-line);
+  border-radius:9px;
+  font-size:13px;
+  touch-action:none;
+  user-select:none;
+  cursor:grab;
+}
+.ohm-lead-list button:active{cursor:grabbing}
+.ohm-lead-list button[aria-pressed=true]{
+  border-color:var(--ohm-focus);
+  background:var(--ohm-screen);
+}
+.ohm-lead-list i{
+  width:11px;
+  height:11px;
+  flex:0 0 11px;
+  border-radius:50%;
+  background:var(--lead-color);
+}
+.ohm-lead-status{
+  min-height:1.5em;
+  margin:9px 0 0;
+  color:var(--ohm-muted);
+  font-size:13px;
+}
+.practice-ohm [data-ohm-disconnect]{
+  margin-block-start:7px;
+  min-height:44px;
+  padding:6px 10px;
+  border:1px solid var(--ohm-line);
+  border-radius:8px;
+  color:var(--ohm-ink);
+  background:var(--ohm-face);
+}
+.practice-ohm [data-ohm-disconnect][hidden]{display:none}
+.ohm-supply-controls label{
+  display:grid;
+  gap:5px;
+  flex:1 1 100px;
+  min-width:0;
+  max-width:180px;
+  font-size:13px;
+  font-weight:650;
+}
+.ohm-supply-controls input{
+  width:100%;
+  min-height:44px;
+  padding-inline:8px;
+  border:1px solid var(--ohm-line);
+  border-radius:8px;
+  background:var(--ohm-face);
+  color:var(--ohm-ink);
+  font-size:16px;
+}
+.practice-ohm [data-ohm-switch]{
+  min-height:44px;
+  padding:8px 12px;
+  border:1px solid var(--ohm-focus);
+  border-radius:8px;
+  background:var(--ohm-screen);
+  color:var(--ohm-ink);
+  font-weight:700;
+}
+.practice-ohm [data-ohm-switch][data-closed=true]{
+  color:var(--ohm-ink);
+  background:var(--ohm-face);
+}
+.ohm-circuit-status{
+  margin:10px 0 0;
+  min-height:3em;
+  padding:8px 10px;
+  border-radius:7px;
+  color:var(--ohm-muted);
+  background:var(--ohm-board);
+  font-size:14px;
+  line-height:1.5;
+}
+.ohm-circuit-status[data-level=ready]{background:var(--ohm-screen);color:var(--ohm-ink)}
+.ohm-circuit-status[data-level=danger]{color:var(--ohm-warn);background:var(--ohm-warn-background)}
+@media(max-width:450px){
+  .ohm-instrument strong span{display:none}
+  .ohm-leads{padding-inline:9px}
+  .ohm-lead-list button{min-width:calc((100% - 16px)/3)}
+}

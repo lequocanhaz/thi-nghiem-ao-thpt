@@ -1,0 +1,32 @@
+{
+  "browser": "154.0.8037.57",
+  "cases": [
+    {
+      "width": 390,
+      "Dark": true,
+      "nativeTouchDrag": true,
+      "cancellation": true,
+      "equilibrium": true,
+      "recordRestore": true,
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "Dark": false,
+      "nativeTouchDrag": false,
+      "cancellation": false,
+      "equilibrium": true,
+      "recordRestore": true,
+      "pageErrors": []
+    },
+    {
+      "width": 320,
+      "Dark": false,
+      "nativeTouchDrag": true,
+      "cancellation": true,
+      "equilibrium": true,
+      "recordRestore": true,
+      "pageErrors": []
+    }
+  ]
+}
