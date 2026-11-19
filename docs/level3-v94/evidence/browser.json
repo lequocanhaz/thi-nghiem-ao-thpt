@@ -35,9 +35,9 @@
       "width": 768,
       "retainedReading": true,
       "pageErrors": [],
-      "elapsedS": 2.98,
+      "elapsedS": 3.13,
       "cycles": 2,
-      "measuredPeriodS": 1.49,
+      "measuredPeriodS": 1.565,
       "referencePeriodS": 1.4049629462081452
     },
     {
@@ -67,7 +67,7 @@
     }
   ],
   "sourceBefore": {
-    "dist/app.js": "481515cedb7339dcde026701fc332433f9d13aa6472f1afbb8c6ff4a34fb6df1",
+    "dist/app.js": "9a1b1e712a8d1487273638d776a3391e5f6cf23a5cb583ad477e162d8d67d726",
     "dist/index.html": "069adfba323fe99ac182a0412b750af3ea74ed02ba55b4e6810b722458c102c8",
     "dist/boot.js": "8f8266fe5de7c42fd59072e06edbb1be50aa5a18df1a39f5df47d9aacbb4d964",
     "dist/l3/practice.css": "75bb6952256d88523485ea7e02d74b450247dc8139f0790d6a089664847d54e4",
@@ -86,7 +86,7 @@
     "/workspace/quanh-thermal/checks/browser-practice-v94.py": "b752cd2b9a32d2d5f3d255982eb19da2d7e74d1ecb2f8a1e93a56a167881a6e4"
   },
   "sourceAfter": {
-    "dist/app.js": "481515cedb7339dcde026701fc332433f9d13aa6472f1afbb8c6ff4a34fb6df1",
+    "dist/app.js": "9a1b1e712a8d1487273638d776a3391e5f6cf23a5cb583ad477e162d8d67d726",
     "dist/index.html": "069adfba323fe99ac182a0412b750af3ea74ed02ba55b4e6810b722458c102c8",
     "dist/boot.js": "8f8266fe5de7c42fd59072e06edbb1be50aa5a18df1a39f5df47d9aacbb4d964",
     "dist/l3/practice.css": "75bb6952256d88523485ea7e02d74b450247dc8139f0790d6a089664847d54e4",

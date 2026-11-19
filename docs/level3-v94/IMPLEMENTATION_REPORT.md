@@ -41,7 +41,8 @@ Sáu ID PARTIAL gồm `calorimetry` và năm bài nêu trên. Còn chờ nghiệ
 | `node checks/lever-practice-v94.mjs` | 94 kiểm tra cho mômen có dấu, cánh tay đòn, móc đã có tải và bảo toàn trạng thái. |
 | `node checks/gas-practice-v94.mjs` | 801 trạng thái thể tích, áp suất và bảo toàn PV, cùng kiểm chặn và dữ liệu. |
 | `python checks/browser-practice-v94.py` | 5 luồng trên Chromium 154.0.8037.57 ở độ rộng 320, 390, 768, 1440 px. Giữ số đo khi tải lại. Ca khí kiểm CSV/JSON, dữ liệu nhập sai, nhập lại đúng và VI/EN. [Bản ghi và mã băm](evidence/browser.json) |
-| Kiểm độc lập đầu vào | [Mạch Ohm](evidence/ohm-circuit-input.json) · [Pít-tông](evidence/gas-piston-input.json) · [Cân đòn](evidence/lever-input.json) |
+| Bố cục trên 9 độ rộng và hai chế độ màu | 90 ca ở 320–1920 px, không tràn ngang và vùng chạm ghi số đo từ 44 px. [Bản ghi](evidence/viewports.json) |
+| Kiểm độc lập đầu vào | [Mạch Ohm](evidence/ohm-circuit-input.json) · [Pít-tông](evidence/gas-piston-input.json) · [Cân đòn](evidence/lever-input.json) · [Kéo màn quang học](evidence/lens-input.json) |
 | `node scripts/audit-level3-v84.mjs --check` | Ma trận và dashboard khớp 300 ID, 388 trang sách, 85 mục lục, 301 âm thanh. [Ma trận](../level3-v84/catalog-audit.json) |
 
 [Ohm trên mobile](evidence/ohm-390.png) · [Thấu kính trên desktop](evidence/lens-1440.png) · [Dao động lò xo](evidence/oscillation-768.png) · [Pít-tông](evidence/gas-390.png) · [Cân đòn ở 320 px](evidence/lever-320.png)

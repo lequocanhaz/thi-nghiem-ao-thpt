@@ -35,7 +35,6 @@ let LabScene,SoftwareScene,sceneLoading=false,sceneError='',sceneProgress=0;
 import {observeThumbnails,stopThumbnails} from './thumbnails.js?v=62';
 import {Narrator,Tone} from './media.js?v=55';
 import {getLocale,englishTitle,translateShort,installLanguageUI} from './language-ui.js?v=77';
-import {onLocaleChange} from './i18n.js?v=54';
 import {englishIntro,englishTopic,englishStudy} from './english-study.js?v=56';
 import {guideClips,readoutClips,previewClips} from './voice-recordings.js?v=17';
 import {sources,sourceChecked,internationalReferences,internationalChecked} from './sources.js?v=54';
@@ -446,7 +445,7 @@ const assistantContext=()=>level3Workspace?level3Workspace.getContext():level3Pe
 assistant=new LabAssistant({getContext:assistantContext});
 installConversationNavigation({assistant,document,window});
 installLanguageUI();
-onLocaleChange(({locale}) => {
+document.addEventListener('quanh-locale-change', ({detail: {locale}}) => {
   const entry = $('[data-practice-entry]');
   if (entry) entry.textContent = practiceEntryLabel(locale);
 });
