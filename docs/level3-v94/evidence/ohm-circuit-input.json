@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "browserVersion": "154.0.8037.57",
+  "cases": [
+    {
+      "width": 320,
+      "shortCorrected": true,
+      "currentLedByVoltage": true,
+      "touch": true,
+      "drag": false,
+      "touchCancel": false,
+      "keyboard": false,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "shortCorrected": true,
+      "currentLedByVoltage": true,
+      "touch": true,
+      "drag": true,
+      "touchCancel": true,
+      "keyboard": false,
+      "pageErrors": []
+    },
+    {
+      "width": 1440,
+      "shortCorrected": true,
+      "currentLedByVoltage": true,
+      "touch": false,
+      "drag": true,
+      "touchCancel": false,
+      "keyboard": true,
+      "pageErrors": []
+    }
+  ],
+  "sourceAfter": {
+    "dist/l3/ohm-practice.js": "8b2d167ed83a657c49988940c80ccafd3b6c20eef82cda7e0808863c2f000beb",
+    "dist/l3/ohm-practice.css": "8140cb2ebb47cf5eb1fdf8d89421c2c73fd462c7956a41e346db518730e0c406",
+    "checks/ohm-practice-v94.mjs": "3026a565dae980262b145c8a6b795a4471bb6185b31a4c916cd5964c85ff05f4"
+  }
+}

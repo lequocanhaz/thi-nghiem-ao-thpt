@@ -281,7 +281,24 @@ function prepareLesson(e){
   if(panel==='theory'||panel==='sources')renderPanel();
  }).catch(()=>{if(active!==e)return;for(const status of document.querySelectorAll('.lesson-status'))status.innerHTML='Chưa tải được bài học. Thông số và bảng đo vẫn được giữ. <button class="button secondary" data-action="retry-lesson">Thử lại</button>';});
 }
-function mountInvestigation(e){if(e.id==='calorimetry'){const launch=document.createElement('a');launch.className='button secondary l3-launch';launch.href='#lab/specific-heat';launch.textContent=getLocale()==='en-US'?'Experiment: Specific heat capacity':'Thực hành: Nhiệt dung riêng';$('.lab-heading')?.after(launch);}inquiry=mountInquiry($('#inquiryWorkbook'),e,{locale:getLocale(),storage:visualStorage(),getParameters:()=>({...state}),getRows:()=>structuredClone(rows),onRecord:()=>record(),onShowData:()=>{$('[data-panel="data"]')?.click();}});}
+const practiceLoaders = {
+  ohm: () => import('./l3/ohm-practice.js?v=94'),
+  lens: () => import('./l3/lens-practice.js?v=94'),
+  oscillation: () => import('./l3/oscillation-practice.js?v=94'),
+  gas: () => import('./l3/gas-practice.js?v=94'),
+  lever: () => import('./l3/lever-practice.js?v=94')
+};
+const practiceEntryLabel = locale => locale === 'en-US' ? 'Hands-on practice' : 'Thực hành trực tiếp';
+function addPracticeEntry(e) {
+  if (!Object.hasOwn(practiceLoaders, e.id)) return;
+  const link = document.createElement('a');
+  link.className = 'button primary practice-launch';
+  link.dataset.practiceEntry = e.id;
+  link.href = '#lab/' + e.id + '?practice=1';
+  link.textContent = practiceEntryLabel(getLocale());
+  $('.lab-header-actions')?.prepend(link);
+}
+function mountInvestigation(e){addPracticeEntry(e);if(e.id==='calorimetry'){const launch=document.createElement('a');launch.className='button secondary l3-launch';launch.href='#lab/specific-heat';launch.textContent=getLocale()==='en-US'?'Experiment: Specific heat capacity':'Thực hành: Nhiệt dung riêng';$('.lab-heading')?.after(launch);}inquiry=mountInquiry($('#inquiryWorkbook'),e,{locale:getLocale(),storage:visualStorage(),getParameters:()=>({...state}),getRows:()=>structuredClone(rows),onRecord:()=>record(),onShowData:()=>{$('[data-panel="data"]')?.click();}});}
 function renderLab(e){inquiry?.destroy();inquiry=null;stopBanner();if(viewFailed&&active?.id!==e.id){viewFailed=false;viewer?.dispose();viewer=null;}selectedRow=-1;hoverInfo=null;mobileControls=false;touchInteraction=false;active=e;running=false;panel=mode==='measure'?'data':'discover';const stored=saved[e.id]||{};state={...initialState(e),...stored.state,t:stored.state?.t||0};clampState(e,state);config={...structuredClone(defaults),capMode:stored.mode==='discharge'?'discharge':'charge',...stored.config,switches:{...defaults.switches,...stored.config?.switches}};config.viewMode=config.viewMode==='2d'?'2d':'3d';config.viewPlane=['front','top'].includes(stored.config?.viewPlane)?stored.config.viewPlane:coordinateProfile(e.id,state)?.plane||'front';config.paramWindows=revealParameterWindows(e,state,config.paramWindows);config.dragKey=config.dragKey||coreParams(e)[0]?.key;config.process=cleanProcess(e,state,config,config.process);pinned=null;rows=(Array.isArray(stored.rows)?stored.rows:[]).filter(r=>r&&Array.isArray(r.values)).map(r=>({...r,values:[...r.values,...Array(Math.max(0,e.headers.length-r.values.length)).fill(null)]}));prefs.recent=[e.id,...prefs.recent.filter(id=>id!==e.id)].slice(0,12);speed=1;document.title=e.shortTitle+' · Quanh Lab';$('#main').innerHTML=labMarkup(e,{prefs:{...prefs,visual:visualSettings},state,config,controls:renderControls(),panel,mode,experiments,staticMode:staticIds.has(e.id)},icon);if(e.id==='electric')$('#electricModeBar').innerHTML=electricModes.map((t,i)=>`<button data-electric-mode="${i}" class="${config.mode===i?'selected':''}" aria-pressed="${config.mode===i}">${t}</button>`).join('');mountInvestigation(e);renderPanel();refresh();applyLayout();if(visualSettings.mode==='classroom'&&mode!=='present')setLayout('present');updateSpeech(narrator.status());viewer?.view('iso');save();window.scrollTo(0,0);$('#lessonTitle')?.focus?.({preventScroll:true});enterSurface($('#main').firstElementChild);prepareLesson(e);}
 function syncControls(){
  config.paramWindows=revealParameterWindows(active,state,config.paramWindows);
@@ -331,13 +348,53 @@ function englishReadouts(d){return meters[active.id].map((m,i)=>{const value=met
 function openDialog(title,content){const dialog=$('#dialog');if(!dialog.open)dialogReturn=document.activeElement;$('#dialogTitle').textContent=title;$('#dialogBody').innerHTML=content;if(!dialog.open)dialog.showModal();}
 function restoreDialogFocus(){const target=dialogReturn?.isConnected?dialogReturn:$('#lessonTitle')||$('#search')||$('#main');target?.focus?.({preventScroll:true});dialogReturn=null;}
 function settings(voiceOnly=false){narrator.refresh();openDialog(voiceOnly?'Giọng đọc tiếng Việt':'Cài đặt',`${voiceOnly?'':`<label class="setting">Hiệu ứng giao diện<input type="checkbox" id="motion" ${prefs.motion?'checked':''}></label><label class="setting">Chất lượng 3D<select id="quality"><option value="high" ${prefs.quality==='high'?'selected':''}>Cao · bóng đổ mịn</option><option value="low" ${prefs.quality==='low'?'selected':''}>Nhẹ · tiết kiệm máy</option></select></label><label class="setting">Cỡ chữ<select id="textSize"><option value="1" ${+prefs.textSize===1?'selected':''}>Lớn</option><option value="1.15" ${+prefs.textSize===1.15?'selected':''}>Rất lớn</option></select></label>`}<label class="setting">Giọng tiếng Việt<select id="voiceName"></select></label><label class="setting">Tốc độ đọc<select id="voiceRate">${[.8,.9,.95,1,1.1,1.2].map(v=>`<option value="${v}" ${+prefs.rate===v?'selected':''}>${String(v).replace('.',',')}×</option>`).join('')}</select></label><p class="setting-note" id="voiceAvailability"></p><div class="voice-test"><button class="button secondary" data-action="voice-preview">▶ Nghe thử</button><button data-action="refresh-voices">↻ Làm mới giọng</button><button data-action="speech-stop">Dừng đọc</button></div><button class="button primary" data-action="close-dialog">Xong</button>`);updateVoiceChoices(narrator.status());}
-let level3Workspace=null,level3Generation=0,level3PendingActivity=null;
+let level3Workspace=null,level3Generation=0,level3PendingActivity=null,practicePendingId=null;
+function installPracticeStyle(name) {
+  const id = 'practice-style-' + name;
+  if (document.getElementById(id)) return;
+  const sheet = document.createElement('link');
+  sheet.id = id;
+  sheet.rel = 'stylesheet';
+  sheet.href = 'l3/' + name + '.css?v=94';
+  document.head.append(sheet);
+}
+function openPractice(id, generation) {
+  practicePendingId = id;
+  const main = $('#main'), en = getLocale() === 'en-US';
+  installPracticeStyle('practice');
+  installPracticeStyle(id + '-practice');
+  const loading = document.createElement('p');
+  loading.className = 'l3-loading';
+  loading.setAttribute('role', 'status');
+  loading.textContent = en ? 'Opening hands-on practice…' : 'Đang mở bàn thực hành…';
+  main.replaceChildren(loading);
+  Promise.all([import('./l3/practice-runner.js?v=94'), practiceLoaders[id]()]).then(([runner, module]) => {
+    if (generation !== level3Generation) return;
+    level3Workspace = runner.mountPractice(main, module.practice, {storage: visualStorage(), updateContext: () => assistant?.refreshContext?.()});
+    practicePendingId = null;
+    window.scrollTo(0, 0);
+    assistant?.refreshContext?.();
+  }).catch(error => {
+    if (generation !== level3Generation) return;
+    console.error('Practice bench load failed', error);
+    main.innerHTML = '<section class="l3-loading"><p role="alert">' +
+      (en ? 'Could not open the practice bench.' : 'Chưa mở được bàn thực hành.') +
+      '</p><button type="button">' + (en ? 'Try again' : 'Thử lại') + '</button> <a href="#lab/' + id + '">' +
+      (en ? 'Open model and lesson' : 'Mở mô hình và bài học') + '</a></section>';
+    main.querySelector('button').addEventListener('click', () => openPractice(id, generation));
+  });
+  assistant?.refreshContext?.();
+}
 function pendingLevel3Context(){const ice=level3PendingActivity==='ice',en=getLocale()==='en-US';return {id:'calorimetry-l3-'+level3PendingActivity,catalogId:'calorimetry',title:ice?(en?'Thermal balance: water and ice':'Cân bằng nhiệt: nước và đá'):(en?'Specific heat capacity of a solid':'Nhiệt dung riêng của vật rắn'),conditions:'The experiment bench is loading. No measurements are available yet.',parameters:[],columns:[],measurements:[]};}
 function routeLevel3(){
+ if(location.hash==='#main'&&(level3Workspace||practicePendingId||level3PendingActivity))return true;
  const match=location.hash.match(/^#lab\/(calorimetry|specific-heat)(?:\?([^#]*))?$/),activity=match&&(match[1]==='specific-heat'?'solid':new URLSearchParams(match[2]||'').get('l3'));
- const generation=++level3Generation;level3Workspace?.destroy();level3Workspace=null;level3PendingActivity=null;
- if(!['ice','solid'].includes(activity))return false;level3PendingActivity=activity;
+ const practiceMatch=location.hash.match(/^#lab\/([a-z][a-z0-9_-]*)\?([^#]+)$/);
+ const practiceId=practiceMatch&&Object.hasOwn(practiceLoaders,practiceMatch[1])&&new URLSearchParams(practiceMatch[2]).get('practice')==='1'?practiceMatch[1]:null;
+ const generation=++level3Generation;level3Workspace?.destroy();level3Workspace=null;level3PendingActivity=null;practicePendingId=null;
+ if(!practiceId&&!['ice','solid'].includes(activity))return false;level3PendingActivity=activity;
  save();running=false;stopTone();narrator.stop();stopThumbnails();stopBanner();viewer?.dispose();viewer=null;inquiry?.destroy();inquiry=null;heroState=null;setModelFullscreen(false);document.documentElement.classList.remove('teacher-mode');active=null;
+ if(practiceId){document.title=experiments.find(e=>e.id===practiceId).shortTitle+' · Quanh Lab';openPractice(practiceId,generation);return true;}
  document.title=(activity==='ice'?'Nước và đá':'Nhiệt dung riêng vật rắn')+' · Quanh Lab';
  $('#main').innerHTML='<section class="l3-loading" role="status">'+(getLocale()==='en-US'?'Opening the calorimetry bench…':'Đang mở bàn thực nghiệm nhiệt lượng kế…')+'</section>';assistant?.refreshContext?.();
  if(!document.querySelector('#level3ThermalStyle')){const style=document.createElement('link');style.id='level3ThermalStyle';style.rel='stylesheet';style.href='l3/thermal.css?v=93';document.head.append(style);}
@@ -384,10 +441,14 @@ $('#dialog').addEventListener('close',()=>{pendingClearId=null;pendingSession=nu
 if(!Array.isArray(prefs.favorites))prefs.favorites=[];if(!Array.isArray(prefs.recent))prefs.recent=[];prefs.progress=prefs.progress||{};document.documentElement.style.setProperty('--text-scale',prefs.textSize);installMathObserver(document);route();requestAnimationFrame(animate);
 
 const assistantLibrary={...libraryContext(experiments),mainExperimentIds,mainExperimentCount:mainExperimentIds.length,supplementaryCount:experiments.length-mainExperimentIds.length,selectionPolicy:'Prefer mainExperimentIds for introductory recommendations. Other entries are supplementary, not all visually complete; check the investigation limitations.'};
-const assistantContext=()=>level3Workspace?level3Workspace.getContext():level3PendingActivity?pendingLevel3Context():active?{id:active.id,title:active.title,selection:selectionInfo(active.id),catalog:assistantLibrary,formula:active.formula,conditions:active.limit,configuration:{electricMode:active.id==='electric'?electricModes[config.mode]:undefined,capacitorMode:active.id==='capacitor'?config.capMode:undefined},parameters:active.params.map(p=>({key:p.key,label:p.label,value:state[p.key],unit:p.unit})),columns:active.headers,measurements:rows.slice(-12).map(r=>r.values)}:assistantLibrary;
+const assistantContext=()=>level3Workspace?level3Workspace.getContext():level3PendingActivity?pendingLevel3Context():practicePendingId?{id:practicePendingId+'-practice',catalogId:practicePendingId,title:experiments.find(e=>e.id===practicePendingId).shortTitle,conditions:'Practice bench loading',columns:[],measurements:[]}:active?{id:active.id,title:active.title,selection:selectionInfo(active.id),catalog:assistantLibrary,formula:active.formula,conditions:active.limit,configuration:{electricMode:active.id==='electric'?electricModes[config.mode]:undefined,capacitorMode:active.id==='capacitor'?config.capMode:undefined},parameters:active.params.map(p=>({key:p.key,label:p.label,value:state[p.key],unit:p.unit})),columns:active.headers,measurements:rows.slice(-12).map(r=>r.values)}:assistantLibrary;
 assistant=new LabAssistant({getContext:assistantContext});
 installConversationNavigation({assistant,document,window});
 installLanguageUI();
+document.addEventListener('quanh-locale-change', ({detail: {locale}}) => {
+  const entry = $('[data-practice-entry]');
+  if (entry) entry.textContent = practiceEntryLabel(locale);
+});
 
 // Update presentation only: keep the scene, camera, clock, controls and measurements.
 document.addEventListener('change',event=>{
