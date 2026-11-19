@@ -1,0 +1,55 @@
+{
+  "frozenRuntime": false,
+  "layout": [
+    {
+      "width": 320,
+      "columns": "296px",
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "columns": "366px",
+      "overflow": 0
+    },
+    {
+      "width": 760,
+      "columns": "736px",
+      "overflow": 0
+    },
+    {
+      "width": 920,
+      "columns": "864.812px",
+      "overflow": 0
+    },
+    {
+      "width": 921,
+      "columns": "509.75px 340px",
+      "overflow": 0
+    },
+    {
+      "width": 1024,
+      "columns": "606.562px 340px",
+      "overflow": 0
+    }
+  ],
+  "cancel": {
+    "focusBeforeEscape": "<body><a class=\"skip\" href=\"#main\">Đến nội dung</a><header class=\"header shared-header-v80\" data-shared-header=\"ready\"><a class=\"brand\" href=\"#\" aria-label=\"Qua",
+    "noStirEvent": true,
+    "mixingIntensity": 0,
+    "status": "Đã dừng thao tác. Các thay đổi đã thực hiện được giữ lại."
+  },
+  "nativeTapStop": {
+    "noStirEvent": true,
+    "mixingIntensity": 0,
+    "status": "Đã dừng thao tác. Các thay đổi đã thực hiện được giữ lại."
+  },
+  "partialRefillG": 75,
+  "importedV92Fixture": "work/thermal-v92/simple-release/ice-390-True.json",
+  "readingsRetained": true,
+  "refillReopened": true,
+  "exportedLedger": true,
+  "browserVersion": "154.0.8037.57",
+  "pageErrors": [],
+  "runtimeStableDuringRun": true,
+  "changedDuringRun": []
+}
