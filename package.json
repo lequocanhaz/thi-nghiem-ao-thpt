@@ -35,7 +35,7 @@
     "check:thermal-v92": "node checks/thermal-analysis-v92.mjs && node checks/thermal-comparison-v92.mjs"
   },
   "devDependencies": {
-    "linkedom": "0.18.13",
+    "linkedom": "0.18.15",
     "cssom": "0.5.0",
     "css-what": "8.0.0",
     "firebase": "13.1.0",
