@@ -1,0 +1,163 @@
+{
+  "phase": "release",
+  "status": "PASS",
+  "browserVersion": "154.0.8037.57",
+  "sourceBefore": {
+    "dist/l3/thermal-three.js": "31442e2c436e6ec75e46a700d6adaf652b3129a5386052e5293dc75d1db769c7",
+    "dist/l3/thermal-view.js": "61cafe09a6e86acd1971efacb49ad762f7800dbb98d58721c49841fbd4b690b1",
+    "dist/l3/thermal-three.css": "285946d958aec12c257bf49cde7034224ed90d540e02d8670486c147bd6e1f75"
+  },
+  "sourceAfter": {
+    "dist/l3/thermal-three.js": "31442e2c436e6ec75e46a700d6adaf652b3129a5386052e5293dc75d1db769c7",
+    "dist/l3/thermal-view.js": "61cafe09a6e86acd1971efacb49ad762f7800dbb98d58721c49841fbd4b690b1",
+    "dist/l3/thermal-three.css": "285946d958aec12c257bf49cde7034224ed90d540e02d8670486c147bd6e1f75"
+  },
+  "sourceStable": true,
+  "cases": [
+    {
+      "width": 1050,
+      "activity": "ice",
+      "theme": "light",
+      "view": "3d",
+      "cyanPixels": 9817,
+      "amberPixels": 72,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "activity": "ice",
+      "theme": "light",
+      "view": "2d",
+      "cyanPixels": 4932,
+      "amberPixels": 0,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "activity": "ice",
+      "theme": "dark",
+      "view": "3d",
+      "cyanPixels": 9383,
+      "amberPixels": 72,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "activity": "ice",
+      "theme": "dark",
+      "view": "2d",
+      "cyanPixels": 5480,
+      "amberPixels": 0,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "activity": "solid",
+      "theme": "light",
+      "view": "3d",
+      "cyanPixels": 11176,
+      "amberPixels": 757,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "activity": "solid",
+      "theme": "light",
+      "view": "2d",
+      "cyanPixels": 5163,
+      "amberPixels": 9090,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "activity": "solid",
+      "theme": "dark",
+      "view": "3d",
+      "cyanPixels": 10280,
+      "amberPixels": 722,
+      "pageErrors": []
+    },
+    {
+      "width": 1050,
+      "activity": "solid",
+      "theme": "dark",
+      "view": "2d",
+      "cyanPixels": 5233,
+      "amberPixels": 9048,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "activity": "ice",
+      "theme": "light",
+      "view": "3d",
+      "cyanPixels": 3912,
+      "amberPixels": 28,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "activity": "ice",
+      "theme": "light",
+      "view": "2d",
+      "cyanPixels": 1043,
+      "amberPixels": 0,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "activity": "ice",
+      "theme": "dark",
+      "view": "3d",
+      "cyanPixels": 3486,
+      "amberPixels": 29,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "activity": "ice",
+      "theme": "dark",
+      "view": "2d",
+      "cyanPixels": 1200,
+      "amberPixels": 0,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "activity": "solid",
+      "theme": "light",
+      "view": "3d",
+      "cyanPixels": 4335,
+      "amberPixels": 285,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "activity": "solid",
+      "theme": "light",
+      "view": "2d",
+      "cyanPixels": 1122,
+      "amberPixels": 1870,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "activity": "solid",
+      "theme": "dark",
+      "view": "3d",
+      "cyanPixels": 3832,
+      "amberPixels": 264,
+      "pageErrors": []
+    },
+    {
+      "width": 390,
+      "activity": "solid",
+      "theme": "dark",
+      "view": "2d",
+      "cyanPixels": 1134,
+      "amberPixels": 1846,
+      "pageErrors": []
+    }
+  ],
+  "scope": "Directrenderervalidmodel fixture; quantitativeSIvolumecheck andpixel indicators, notlearnergesture/hardware/CFD acceptance"
+}

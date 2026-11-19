@@ -379,3 +379,10 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - `thermal-analysis.js` tính từ dữ liệu nhập của học sinh, giữ cấu trúc kết quả nhiệt dung riêng cũ. Nhiệt nóng chảy riêng cần xác nhận tan hết và miền nước lỏng. Giao diện chặn phép tính khi lượt hiện tại còn đá trong bình.
 - `thermal-comparison.js` đọc hai nguồn riêng từ sổ tay và chọn vị trí đầu dò. Mốc đưa mẫu chỉ lấy sự kiện được chấp nhận và chưa hoàn tác. Giới hạn điểm vẽ không ảnh hưởng CSV. Cập nhật chuỗi nhiệt kế theo lô khi bảng mở. Lựa chọn bảng được giữ trong cùng phiên khi đổi ngôn ngữ.
 - Kiểm thử và phát hành theo quy trình Pages. Trạng thái vẫn 0 PASS, 1 PARTIAL, 299 NOT TESTED và 0 BLOCKED trong 300 ID. Bằng chứng Chromium và cảm ứng mô phỏng cần được phân biệt với nghiệm thu thực địa.
+
+## Bàn nhiệt lượng kế V93
+
+- Đọc `docs/level3-v93/IMPLEMENTATION_REPORT.md`. Trên desktop, cột thao tác ở bên phải bàn. Trên mobile, nó nằm giữa bàn và khu vực đo.
+- `planAssistedStir` nối đường nhúng que hợp lệ với một vòng kín đã kiểm tra. Bộ điều khiển chỉ ghi hành động khuấy khi thực hiện hết đường đi. Escape dùng cơ chế hủy hiện hành.
+- `refill-cup` thêm đúng khối lượng còn nhận được theo lượng nguồn đã cấu hình, ở nhiệt độ nước cấp. `massInKg` là trường tùy chọn. Nhiệt độ phần nước còn lại được tính theo cân bằng enthalpy. Dữ liệu phiên và số đo cũ được giữ. CSV thêm `mass_in_kg`.
+- Màu và độ sáng mặt nước 2D/3D đọc trạng thái vật lí. Hiệu ứng khuấy là minh họa. Bump cache từ boot tới các module đã thay đổi.

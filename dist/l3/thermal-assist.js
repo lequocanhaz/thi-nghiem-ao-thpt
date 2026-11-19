@@ -57,3 +57,14 @@ export function planThermalStir({state,positions,pieceMassKg=.01}){
  for(const next of path){if(probePlacementAt({x:next.x,y:next.y+10},state,positions)!=='water'||!sweepToolPose('stirrer',previous,next,state,pieceMassKg).valid)return{valid:false,reason:'stirrer-not-immersed',path:[]};previous=next;}
  return{valid:true,id:'stirrer',target:'stir',path,reason:'ok'};
 }
+
+export function planAssistedStir(context){
+ const {state,positions}=context;
+ if(!state.vesselPlaced||state.waterMassKg<=0)return{valid:false,reason:'no-water',path:[]};
+ const rod=positions.stirrer;
+ if(probePlacementAt({x:rod.x,y:rod.y+10},state,positions)==='water')return planThermalStir(context);
+ const placement=planThermalPlacement('stirrer','vessel',context);
+ if(!placement.valid)return placement;
+ const turn=planThermalStir({...context,positions:{...positions,stirrer:placement.path.at(-1)}});
+ return turn.valid?{...turn,path:[...placement.path,...turn.path]}:turn;
+}

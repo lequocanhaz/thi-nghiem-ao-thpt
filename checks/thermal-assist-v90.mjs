@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {planThermalPlacement,planThermalStir} from '../dist/l3/thermal-assist.js';
+import {planThermalPlacement,planThermalStir,planAssistedStir} from '../dist/l3/thermal-assist.js';
 import {createState,applyAction,validateState,totalMassKg,totalEnergyJ} from '../dist/l3/thermal-physics.js';
 import {initialPositions,probePlacementAt,pourTargetAt,cupSpoutAt} from '../dist/l3/thermal-apparatus.js';
 import {sweepCupPose,sweepToolPose} from '../dist/l3/thermal-spatial.js';
@@ -39,4 +39,15 @@ for(const [config,sampleY]of [[{},319.3333333333333],[{solidMassKg:.2,solidDensi
  equal(probePlacementAt(p.path.at(-1),bathState,bathCtx.positions),'bath','Measure bath must sample the fluid, not the solid occupying that point');
 }
 plan('probe','bath',base,false);
+for(const ctx of [wet,narrow,solid,stirCtx]){
+ const original=structuredClone(ctx),singlePress=planAssistedStir(ctx);
+ equal(ctx,original,'one-press stirring plans without mutating the trial');
+ ok(singlePress.valid,'one-press stirring is available with usable water');
+ let previous=ctx.positions.stirrer;
+ for(const point of singlePress.path){ok(sweepToolPose('stirrer',previous,point,ctx.state,ctx.pieceMassKg).valid,'safe insertion or turn');previous=point;}
+ const turn=singlePress.path.slice(-33);
+ equal(turn[0].x,turn.at(-1).x,'the final part is a full turn');
+ for(const point of turn)equal(probePlacementAt({x:point.x,y:point.y+10},ctx.state,ctx.positions),'water');
+}
+for(const ctx of [base,unplaced,shallow])equal(planAssistedStir(ctx).path,[],'no partial move or turn when the vessel cannot be stirred');
 console.log(JSON.stringify({status:'PASS',assertions,scope:'Read-only assisted routing, complete sweeps/interpolation, real immersion, closed stir path, no-water/invalid pose/domain rejection, large-cup aiming and existing physical transfers. Not browser or device acceptance.'}));

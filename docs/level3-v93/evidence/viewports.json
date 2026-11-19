@@ -1,0 +1,212 @@
+{
+  "status": "PASS",
+  "browserVersion": "154.0.8037.57",
+  "cases": [
+    {
+      "activity": "ice",
+      "viewportWidth": 320,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "ice",
+      "viewportWidth": 375,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "ice",
+      "viewportWidth": 390,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "ice",
+      "viewportWidth": 414,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "ice",
+      "viewportWidth": 430,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "ice",
+      "viewportWidth": 768,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "ice",
+      "viewportWidth": 1024,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "ice",
+      "viewportWidth": 1440,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "ice",
+      "viewportWidth": 1920,
+      "visibleControls": 42,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 320,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 375,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 390,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 414,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 430,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 768,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 1024,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 1440,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    },
+    {
+      "activity": "solid",
+      "viewportWidth": 1920,
+      "visibleControls": 46,
+      "noHorizontalOverflow": true,
+      "touchTargetsAtLeast44px": true,
+      "physicalStateRetained": true
+    }
+  ],
+  "sourceBefore": {
+    "checks/browser-thermal-v87.py": "d985a257b5443c01b7c05e1013097eb892464ebbe970e5369b047ea11a843521",
+    "dist/index.html": "b5fc269630469e67d67a39921ae4f1e3a24b4a8f117464a522af2bbf742fd299",
+    "dist/boot.js": "2d3c9925fa86566a3fc997cefa51a12cc926d736444824c73c604efe21ac622c",
+    "dist/app.js": "1bad390b6dcd15b06369ff641a698cc6a25c198fd319624bc792132f6accdfaa",
+    "dist/app.css": "04181d4c1500d4591f106af26011a00f13e51a9e9bd5b4a29b210d4ec88e2986",
+    "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+    "dist/l3/data-notebook.js": "7208d5a301d15dafa2cdfeeca897cae94c5cc62c7187ed1994dfe85522efdb27",
+    "dist/l3/interaction-core.js": "5c83929b3e4fcc25a636af695321b2c097595e3ed22ee7708d71207175780f63",
+    "dist/l3/measurement-engine.js": "5bb91aa58f0e2cced8db1a79d8556654492383587b930a19507b622fb577f063",
+    "dist/l3/session-archive.js": "1ca1d311da550f8cddfa1b8fddd16ba5fb27c389adef754dc5eb687feee14705",
+    "dist/l3/thermal-analysis.js": "19c2fb6106bb940e41ab7bec67c217506628689d12fe9716679042ae23d54caf",
+    "dist/l3/thermal-apparatus.js": "61c1ef060227ae373edc8efe9d160e9850ebbf384900302a3e3ab3331a484e0a",
+    "dist/l3/thermal-assist.js": "8b5a09ce38aca5127bcef8404e5b215a14a983d3619310554f979382bea2cf47",
+    "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+    "dist/l3/thermal-comparison.js": "54de97a657a304a701007b851606e59db085b6660d6fbbe505786fee08f25a16",
+    "dist/l3/thermal-geometry.js": "7922363672f7e4b9d6697117194dd78c810ffa5604d8e7951e6fa51f24704f0a",
+    "dist/l3/thermal-ice-portions.js": "a19657acf38ddf936c2ef07f44eb5a58266bd25e8fbd8126c8e52be5ecce091d",
+    "dist/l3/thermal-motion.js": "45d20b7a6137cf74de3acafcf8d2612f9ba881b729100fedaa0d592f2a6bcda8",
+    "dist/l3/thermal-physics.js": "283ad8f9ed1158a118a5428cfb7dae9d04500d7ed8ef548c167abc7e9a6a2aae",
+    "dist/l3/thermal-picking.js": "99bd26ab399b116a34073637316b42aba37c0fac96e906ac38943567e6e22b52",
+    "dist/l3/thermal-pilot.js": "0e5c898a0a2b1a8cc3a3b6deb3704c2f19f7b048aebe0157878581b3c2df16b4",
+    "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+    "dist/l3/thermal-spatial.js": "ee830adb21273f375edff197d30286f3ab6ba8c85e7a36e3bdec734a8f7ec289",
+    "dist/l3/thermal-three.js": "31442e2c436e6ec75e46a700d6adaf652b3129a5386052e5293dc75d1db769c7",
+    "dist/l3/thermal-view.js": "61cafe09a6e86acd1971efacb49ad762f7800dbb98d58721c49841fbd4b690b1",
+    "dist/l3/thermal-comparison.css": "0b871d0658f118be6516453c49b3810832771963a0098c74d053aa50e8f9a2a8",
+    "dist/l3/thermal-three.css": "285946d958aec12c257bf49cde7034224ed90d540e02d8670486c147bd6e1f75",
+    "dist/l3/thermal.css": "053e0714b465b18530696909ff612c4473de42a8ee02de57024ce01c5355a8cb"
+  },
+  "sourceAfter": {
+    "checks/browser-thermal-v87.py": "d985a257b5443c01b7c05e1013097eb892464ebbe970e5369b047ea11a843521",
+    "dist/index.html": "b5fc269630469e67d67a39921ae4f1e3a24b4a8f117464a522af2bbf742fd299",
+    "dist/boot.js": "2d3c9925fa86566a3fc997cefa51a12cc926d736444824c73c604efe21ac622c",
+    "dist/app.js": "1bad390b6dcd15b06369ff641a698cc6a25c198fd319624bc792132f6accdfaa",
+    "dist/app.css": "04181d4c1500d4591f106af26011a00f13e51a9e9bd5b4a29b210d4ec88e2986",
+    "dist/l3/apparatus-registry.js": "cdbddcbb32d6155d49e3f9d2a15ddf221745cd69cce4b10f2be80917902d78e1",
+    "dist/l3/data-notebook.js": "7208d5a301d15dafa2cdfeeca897cae94c5cc62c7187ed1994dfe85522efdb27",
+    "dist/l3/interaction-core.js": "5c83929b3e4fcc25a636af695321b2c097595e3ed22ee7708d71207175780f63",
+    "dist/l3/measurement-engine.js": "5bb91aa58f0e2cced8db1a79d8556654492383587b930a19507b622fb577f063",
+    "dist/l3/session-archive.js": "1ca1d311da550f8cddfa1b8fddd16ba5fb27c389adef754dc5eb687feee14705",
+    "dist/l3/thermal-analysis.js": "19c2fb6106bb940e41ab7bec67c217506628689d12fe9716679042ae23d54caf",
+    "dist/l3/thermal-apparatus.js": "61c1ef060227ae373edc8efe9d160e9850ebbf384900302a3e3ab3331a484e0a",
+    "dist/l3/thermal-assist.js": "8b5a09ce38aca5127bcef8404e5b215a14a983d3619310554f979382bea2cf47",
+    "dist/l3/thermal-collision.js": "aca0efa1cba3700f94a905feff32bb8bce8f06e13410acdfc482354a5aa1670b",
+    "dist/l3/thermal-comparison.js": "54de97a657a304a701007b851606e59db085b6660d6fbbe505786fee08f25a16",
+    "dist/l3/thermal-geometry.js": "7922363672f7e4b9d6697117194dd78c810ffa5604d8e7951e6fa51f24704f0a",
+    "dist/l3/thermal-ice-portions.js": "a19657acf38ddf936c2ef07f44eb5a58266bd25e8fbd8126c8e52be5ecce091d",
+    "dist/l3/thermal-motion.js": "45d20b7a6137cf74de3acafcf8d2612f9ba881b729100fedaa0d592f2a6bcda8",
+    "dist/l3/thermal-physics.js": "283ad8f9ed1158a118a5428cfb7dae9d04500d7ed8ef548c167abc7e9a6a2aae",
+    "dist/l3/thermal-picking.js": "99bd26ab399b116a34073637316b42aba37c0fac96e906ac38943567e6e22b52",
+    "dist/l3/thermal-pilot.js": "0e5c898a0a2b1a8cc3a3b6deb3704c2f19f7b048aebe0157878581b3c2df16b4",
+    "dist/l3/thermal-protocol.js": "264a9d93df8d7b18b67007d714c6de6620ea6fb61d26fa35b9b4e7a7e36606f5",
+    "dist/l3/thermal-spatial.js": "ee830adb21273f375edff197d30286f3ab6ba8c85e7a36e3bdec734a8f7ec289",
+    "dist/l3/thermal-three.js": "31442e2c436e6ec75e46a700d6adaf652b3129a5386052e5293dc75d1db769c7",
+    "dist/l3/thermal-view.js": "61cafe09a6e86acd1971efacb49ad762f7800dbb98d58721c49841fbd4b690b1",
+    "dist/l3/thermal-comparison.css": "0b871d0658f118be6516453c49b3810832771963a0098c74d053aa50e8f9a2a8",
+    "dist/l3/thermal-three.css": "285946d958aec12c257bf49cde7034224ed90d540e02d8670486c147bd6e1f75",
+    "dist/l3/thermal.css": "053e0714b465b18530696909ff612c4473de42a8ee02de57024ce01c5355a8cb"
+  },
+  "sourceStable": true,
+  "scope": "Chromium headless with software WebGL; viewport emulation only, no physical mobile/OSK/Safari claim."
+}
