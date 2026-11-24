@@ -1,0 +1,1284 @@
+{
+  "status": "PASS",
+  "browserVersion": "154.0.8037.57",
+  "cases": [
+    {
+      "lab": "ohm",
+      "width": 320,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          56.127431673110294,
+          184.64683380518534
+        ],
+        [
+          130.7729206591386,
+          146.12420534409625
+        ],
+        [
+          66.6059926575483,
+          164.92119488150843
+        ]
+      ],
+      "stage": [
+        272,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 375,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          68.23900880586201,
+          188.1430423051172
+        ],
+        [
+          157.3632251092431,
+          142.57810081509774
+        ],
+        [
+          81.3865312732621,
+          164.6318103725713
+        ]
+      ],
+      "stage": [
+        327,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 390,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          71.58447756448871,
+          189.08694068668785
+        ],
+        [
+          164.62247844364705,
+          141.63964086406327
+        ],
+        [
+          85.48674546668127,
+          164.55446076503654
+        ]
+      ],
+      "stage": [
+        342,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 414,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          76.97443625984234,
+          190.58872438431388
+        ],
+        [
+          176.2435794867165,
+          140.16264638238374
+        ],
+        [
+          92.10709851720506,
+          164.43206670732502
+        ]
+      ],
+      "stage": [
+        366,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 430,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          80.59298351111742,
+          191.58417872517055
+        ],
+        [
+          183.9951863778937,
+          139.19437966032547
+        ],
+        [
+          96.56106442039706,
+          164.35138975845302
+        ]
+      ],
+      "stage": [
+        382,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 768,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          152.9040608276409,
+          254.62053078719168
+        ],
+        [
+          338.6534802154413,
+          162.96795584187248
+        ],
+        [
+          185.40287277729044,
+          205.9359358770323
+        ]
+      ],
+      "stage": [
+        701.28125,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 1024,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          124.82717552080402,
+          247.51323283289344
+        ],
+        [
+          280.9453103508595,
+          169.40455543795053
+        ],
+        [
+          150.45352801676663,
+          206.49129623393515
+        ]
+      ],
+      "stage": [
+        582.5625,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 1440,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          282.8212170126506,
+          256.0415861659203
+        ],
+        [
+          474.50456162668934,
+          161.71746319290037
+        ],
+        [
+          316.7659411650377,
+          205.82652918927909
+        ]
+      ],
+      "stage": [
+        973.625,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 1920,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          358.00871701265055,
+          256.0415861659203
+        ],
+        [
+          549.6920616266892,
+          161.71746319290037
+        ],
+        [
+          391.9534411650377,
+          205.82652918927909
+        ]
+      ],
+      "stage": [
+        1124,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 667,
+      "height": 375,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          147.49691537261893,
+          194.14173695647742
+        ],
+        [
+          292.83946705045935,
+          122.6211322566935
+        ],
+        [
+          173.235264389026,
+          156.0665221884508
+        ]
+      ],
+      "stage": [
+        604.34375,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "ohm",
+      "width": 844,
+      "height": 390,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          223.13754037261896,
+          194.14173695647742
+        ],
+        [
+          368.48009205045935,
+          122.6211322566935
+        ],
+        [
+          248.87588938902604,
+          156.0665221884508
+        ]
+      ],
+      "stage": [
+        755.625,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 320,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          64.65978854718898,
+          181.52303088819758
+        ],
+        [
+          113.68027978559334,
+          170.0977482822201
+        ],
+        [
+          175.35311275735558,
+          167.35503811514388
+        ]
+      ],
+      "stage": [
+        272,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 375,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          77.96379572698402,
+          184.5124646771294
+        ],
+        [
+          136.9721996692243,
+          170.77605485885624
+        ],
+        [
+          209.68408449467069,
+          167.5034569005876
+        ]
+      ],
+      "stage": [
+        327,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 390,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          81.6053325546192,
+          185.3249911644914
+        ],
+        [
+          143.34109823585433,
+          170.9583787500087
+        ],
+        [
+          218.99098582366437,
+          167.54271604423207
+        ]
+      ],
+      "stage": [
+        342,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 414,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          87.44347911658626,
+          186.6225723272462
+        ],
+        [
+          153.54581060942047,
+          171.2477637831563
+        ],
+        [
+          233.83402778876768,
+          167.6044877586603
+        ]
+      ],
+      "stage": [
+        366,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 430,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          91.34354705189314,
+          187.48594804191077
+        ],
+        [
+          160.35873813073303,
+          171.43910972880622
+        ],
+        [
+          243.69733175771108,
+          167.64497238114427
+        ]
+      ],
+      "stage": [
+        382,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 768,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          186.7713028309046,
+          244.20339480646658
+        ],
+        [
+          301.17327480202243,
+          217.66902688759694
+        ],
+        [
+          433.5991197711737,
+          211.4977791928302
+        ]
+      ],
+      "stage": [
+        701.28125,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 1024,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          139.8934608641377,
+          241.5749969860542
+        ],
+        [
+          245.309350128181,
+          217.10559014709486
+        ],
+        [
+          368.99903217175194,
+          211.38391249438996
+        ]
+      ],
+      "stage": [
+        582.5625,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 1440,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          322.9431778309045,
+          244.20339480646658
+        ],
+        [
+          437.34514980202243,
+          217.66902688759694
+        ],
+        [
+          569.7709947711737,
+          211.4977791928302
+        ]
+      ],
+      "stage": [
+        973.625,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 1920,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          398.13067783090446,
+          244.20339480646658
+        ],
+        [
+          512.5326498020224,
+          217.66902688759694
+        ],
+        [
+          644.9584947711738,
+          211.4977791928302
+        ]
+      ],
+      "stage": [
+        1124,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 667,
+      "height": 375,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          177.91911076672145,
+          185.1655113856118
+        ],
+        [
+          264.66360365283566,
+          165.04601301055743
+        ],
+        [
+          365.0745718288412,
+          160.3667077281949
+        ]
+      ],
+      "stage": [
+        604.34375,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lens",
+      "width": 844,
+      "height": 390,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          253.55973576672142,
+          185.1655113856118
+        ],
+        [
+          340.3042286528356,
+          165.04601301055743
+        ],
+        [
+          440.7151968288412,
+          160.3667077281949
+        ]
+      ],
+      "stage": [
+        755.625,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 320,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          116.94389588281976,
+          179.15306836296656
+        ]
+      ],
+      "stage": [
+        272,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 375,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          140.66855775034617,
+          181.65985627668476
+        ]
+      ],
+      "stage": [
+        327,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 390,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          147.14337297991707,
+          182.34056902390455
+        ]
+      ],
+      "stage": [
+        342,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 414,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          157.50702377297628,
+          183.42708903102618
+        ]
+      ],
+      "stage": [
+        366,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 430,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          164.41881356585287,
+          184.1496500571069
+        ]
+      ],
+      "stage": [
+        382,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 768,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          305.9927105087755,
+          239.34109480930374
+        ]
+      ],
+      "stage": [
+        701.28125,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 1024,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          250.944338464973,
+          236.47863064651926
+        ]
+      ],
+      "stage": [
+        582.5625,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 1440,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          442.1645855087754,
+          239.34109480930374
+        ]
+      ],
+      "stage": [
+        973.625,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 1920,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          517.3520855087754,
+          239.34109480930374
+        ]
+      ],
+      "stage": [
+        1124,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 667,
+      "height": 375,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          268.3179069762527,
+          181.4787065146213
+        ]
+      ],
+      "stage": [
+        604.34375,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "oscillation",
+      "width": 844,
+      "height": 390,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          343.9585319762527,
+          181.4787065146213
+        ]
+      ],
+      "stage": [
+        755.625,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 320,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          57.24459502020704,
+          133.98909683375325
+        ],
+        [
+          214.0800698917223,
+          141.44701807089882
+        ],
+        [
+          157.92134513014832,
+          194.42294360964956
+        ]
+      ],
+      "stage": [
+        270,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 375,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          70.08057645765945,
+          127.85781261448994
+        ],
+        [
+          257.3518553217156,
+          136.45043352174116
+        ],
+        [
+          189.9385870542002,
+          199.9258794452321
+        ]
+      ],
+      "stage": [
+        325,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 390,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          73.64498363186432,
+          126.21227199523071
+        ],
+        [
+          269.13388175866476,
+          135.0938650324656
+        ],
+        [
+          198.66194140300163,
+          201.41617830431915
+        ]
+      ],
+      "stage": [
+        340,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 414,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          79.40359832716757,
+          123.60263896307089
+        ],
+        [
+          287.9679617027724,
+          132.92879257392838
+        ],
+        [
+          212.6116956416157,
+          203.7913826105397
+        ]
+      ],
+      "stage": [
+        364,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 430,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          83.28019567227906,
+          121.87857174917917
+        ],
+        [
+          300.5123214686151,
+          131.48911550676246
+        ],
+        [
+          221.90635502717055,
+          205.3685457661611
+        ]
+      ],
+      "stage": [
+        380,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 768,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          163.93509527611977,
+          132.04856246559848
+        ],
+        [
+          546.9942125450925,
+          147.17265831949283
+        ],
+        [
+          406.2927107803272,
+          278.7092812540611
+        ]
+      ],
+      "stage": [
+        699.28125,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 1024,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          130.15804215346884,
+          142.74498144172503
+        ],
+        [
+          458.24885461319013,
+          156.48229221801932
+        ],
+        [
+          338.63780065024815,
+          268.60360210068575
+        ]
+      ],
+      "stage": [
+        580.5625,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 1440,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          126.2729322328276,
+          144.3478938235287
+        ],
+        [
+          446.1917761587549,
+          157.85669748245937
+        ],
+        [
+          329.69027757550964,
+          267.1067021116073
+        ]
+      ],
+      "stage": [
+        565.125,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 1920,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          150.6243494147102,
+          135.92668331506184
+        ],
+        [
+          513.6655242406722,
+          150.57601825759718
+        ],
+        [
+          380.67971641163456,
+          275.02169931819424
+        ]
+      ],
+      "stage": [
+        654.109375,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 667,
+      "height": 375,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          146.24068495986467,
+          94.22054295601413
+        ],
+        [
+          467.4052164480061,
+          106.33640340716312
+        ],
+        [
+          348.78799159386597,
+          217.00628763327802
+        ]
+      ],
+      "stage": [
+        602.34375,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "lever",
+      "width": 844,
+      "height": 390,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          97.65434173551742,
+          108.66176316723028
+        ],
+        [
+          344.25166781705656,
+          119.01765807565829
+        ],
+        [
+          254.3857113993514,
+          203.26822570219747
+        ]
+      ],
+      "stage": [
+        436.09375,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 320,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          118.49763609846116,
+          170.5435573967584
+        ]
+      ],
+      "stage": [
+        246,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 375,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          145.04364359110428,
+          171.4003347572592
+        ]
+      ],
+      "stage": [
+        301,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 390,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          152.28661932635367,
+          171.63116735755693
+        ]
+      ],
+      "stage": [
+        316,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 414,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          163.87814779193428,
+          171.99801422522182
+        ]
+      ],
+      "stage": [
+        340,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 430,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          171.6077076923188,
+          172.24089554025863
+        ]
+      ],
+      "stage": [
+        356,
+        333
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 768,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          317.32939983039796,
+          219.7696880251534
+        ]
+      ],
+      "stage": [
+        657.09375,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 1024,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          263.0833635887512,
+          218.3768851176908
+        ]
+      ],
+      "stage": [
+        545.5,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 1440,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          448.22497962072384,
+          220.10202434390396
+        ]
+      ],
+      "stage": [
+        919.625,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 1920,
+      "height": 860,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          523.4124796207238,
+          220.10202434390396
+        ]
+      ],
+      "stage": [
+        1070,
+        419.390625
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 667,
+      "height": 375,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          274.19821894176715,
+          166.89081626791597
+        ]
+      ],
+      "stage": [
+        565.96875,
+        318
+      ],
+      "contextLost": false
+    },
+    {
+      "lab": "gas",
+      "width": 844,
+      "height": 390,
+      "overflow": 0,
+      "match": true,
+      "projection": [
+        [
+          345.30759394176715,
+          166.89081626791597
+        ]
+      ],
+      "stage": [
+        708.1875,
+        318
+      ],
+      "contextLost": false
+    }
+  ],
+  "counts": 55,
+  "sourceAfter": {
+    "dist/app.js": "da0d6aa22e8ed2bca7ae7189c532bf4296815e22ae09f136f26197ff034f39a5",
+    "dist/l3/practice.css": "a9d1317693d424d81dac998e363e1388e63f04fb1ceb2c072c9f3a58a61226f8",
+    "dist/l3/practice-three.js": "f6aa846aae0b3e7737aa23ec24450f756daf4c8f8e99f6a5b9cdda99b71b182e",
+    "dist/l3/gas-practice.js": "611832b6ae07b62634cf9a6a908629d09645a243ea716ba56f3642b1d0cb253a",
+    "dist/l3/lens-practice-three.js": "6ed7d89e7041697c8a934e10dcb535f72973f1f8f8229459bb8f2c2916081bc9",
+    "dist/l3/practice-runner.js": "bd8187f348f48eb18a6aeb6a9b443da17d48cf5a0c78e93a803512178efbeb67",
+    "dist/l3/gas-practice.css": "13591ad2957be181f91084d5adf9e4cd173346d72c83feb3f680f74c00d4f5ad",
+    "dist/l3/ohm-practice.js": "8b2d167ed83a657c49988940c80ccafd3b6c20eef82cda7e0808863c2f000beb",
+    "dist/l3/gas-practice-three.js": "56834eb23dfc022758aa33e970f36de426843473fa64b5bc5ca1a5a299bb2044",
+    "dist/l3/oscillation-practice.css": "e3b8cb312e5b7f2ca0caaf5ecd4abdfdc41ad121ea60322a384d3ef77d6b3712",
+    "dist/l3/lens-practice.css": "527fe5a72cd300a338b1136af0276defbbb54b7ce5d9e1f95c8726ef0b085e06",
+    "dist/l3/ohm-practice.css": "8140cb2ebb47cf5eb1fdf8d89421c2c73fd462c7956a41e346db518730e0c406",
+    "dist/l3/oscillation-practice.js": "4b90928fce0ced0fdb61cd576b7d3198cf83f78d60160c98de1a6742df24739a",
+    "dist/l3/practice-session.js": "83903b97ad9bdec5930fa0fd9047249033757c8da56482abb3e7253ad3d5e286",
+    "dist/l3/lever-practice-three.js": "dae3020c543bde37c63200bc9d7d7c84a7aa33cadeb5c57b5e5d777abb0e6a52",
+    "dist/l3/lever-practice.js": "a361372e97aa0f00b7002f2c66503b1b9b8c1185fbfbdaf8c354840ac07118ac",
+    "dist/l3/lens-practice.js": "9a856c1c711686d08d204e19e3649146e64eddfc12dacc404b9d5ec473956c47",
+    "dist/l3/ohm-practice-three.js": "02491c828ab8a7948974eaac5582471357bc67c15b0de795c77a34a7f1600a70",
+    "dist/l3/oscillation-practice-three.js": "01de7ba797b7b5fabbb9e2f21be826f8fd19a6d9a09d380b934158d3b9cc102a",
+    "dist/l3/lever-practice.css": "6fd45581697522f9580774b3a20536470d114cab22e86bdcd2c5123b8db80678",
+    "dist/l3/practice-view.js": "2fb54e6a0b408dc3c23b7b39b338a44a5bc8bfbc21d6501d3000e2fe133eabc7"
+  }
+}

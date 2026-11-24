@@ -392,3 +392,9 @@ Hai ảnh gốc và các PDF tải lên không mặc định được chuyển s
 - `ohm`, `lens`, `oscillation`, `lever`, `gas` có bàn thực hành tải lười tại `#lab/<id>?practice=1`. Mở từ nút **Thực hành trực tiếp** trên bài gốc. Học liệu, mô hình gốc và hai hoạt động nhiệt lượng kế dùng đường dẫn hiện có.
 - Hợp đồng module `practice` cấp mô hình, phép đo và điều khiển VI/EN. `practice-runner.js` và `practice-session.js` lưu phiên `quanh-practice-<id>-v1`, ghi bảng, vẽ điểm và xuất/nhập. State và số đo của từng bài tách khỏi phiên mô hình cũ.
 - Đọc `docs/level3-v94/IMPLEMENTATION_REPORT.md` để xem giới hạn, ảnh, phép thử và danh sách file. Ma trận hiện 0 PASS, 6 PARTIAL, 294 NOT TESTED, 0 BLOCKED trên đúng 300 ID.
+
+## Bàn thực hành 3D V95
+
+- Đọc `docs/level3-v95/IMPLEMENTATION_REPORT.md`. Năm bàn V94 mở Three.js mặc định và có chế độ 2D, cũng là dự phòng khi mất WebGL.
+- `practice-view.js` nối giao diện và lựa chọn góc nhìn. `practice-three.js` quản lý camera, raycast, Pointer Events, hủy và thu hồi tài nguyên. Cảnh `*-practice-three.js` gọi hành động đã có; oscillator chia sẻ đồng hồ qua adapter của apparatus.
+- Phiên theo từng bài vẫn dùng `quanh-practice-<id>-v1`. Chọn 2D/3D lưu riêng. Chạy bộ kiểm trình duyệt V95 và V94. Các thiết bị thật và giáo viên vẫn ngoài phạm vi kiểm thử phần mềm của lô.

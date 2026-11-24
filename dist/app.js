@@ -284,7 +284,7 @@ function prepareLesson(e){
 const practiceLoaders = {
   ohm: () => import('./l3/ohm-practice.js?v=94'),
   lens: () => import('./l3/lens-practice.js?v=94'),
-  oscillation: () => import('./l3/oscillation-practice.js?v=94'),
+  oscillation: () => import('./l3/oscillation-practice.js?v=95'),
   gas: () => import('./l3/gas-practice.js?v=94'),
   lever: () => import('./l3/lever-practice.js?v=94')
 };
@@ -355,7 +355,7 @@ function installPracticeStyle(name) {
   const sheet = document.createElement('link');
   sheet.id = id;
   sheet.rel = 'stylesheet';
-  sheet.href = 'l3/' + name + '.css?v=94';
+  sheet.href = 'l3/' + name + '.css?v=95';
   document.head.append(sheet);
 }
 function openPractice(id, generation) {
@@ -368,7 +368,7 @@ function openPractice(id, generation) {
   loading.setAttribute('role', 'status');
   loading.textContent = en ? 'Opening hands-on practice…' : 'Đang mở bàn thực hành…';
   main.replaceChildren(loading);
-  Promise.all([import('./l3/practice-runner.js?v=94'), practiceLoaders[id]()]).then(([runner, module]) => {
+  Promise.all([import('./l3/practice-runner.js?v=95'), practiceLoaders[id]()]).then(([runner, module]) => {
     if (generation !== level3Generation) return;
     level3Workspace = runner.mountPractice(main, module.practice, {storage: visualStorage(), updateContext: () => assistant?.refreshContext?.()});
     practicePendingId = null;

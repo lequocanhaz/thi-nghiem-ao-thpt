@@ -33,6 +33,9 @@ class Bench:
         if entry:
             self.activate('[data-practice-entry='+lab+']')
         self.page.locator('[data-practice-id='+lab+']').wait_for()
+        if self.page.locator('[data-practice-view="2d"]').count():
+            self.activate('[data-practice-view="2d"]')
+
 
     def activate(self, selector):
         target = self.page.locator(selector)
@@ -116,7 +119,8 @@ def spring(bench):
     row = bench.record(1)
     assert row['cycles'] >= 2
     theoretical = 2*math.pi*math.sqrt(row['massKg']/row['stiffnessNPerM'])
-    assert abs(row['meanPeriodS']-theoretical)<.2
+    # The learner can stop after a whole cycle plus part of the next one.
+    assert theoretical-.015 <= row['meanPeriodS'] < theoretical*(1+1/row['cycles'])+.015
     assert row['amplitudeCm']>0
     return {'elapsedS':row['durationS'],'cycles':row['cycles'],'measuredPeriodS':row['meanPeriodS'],'referencePeriodS':theoretical}
 
