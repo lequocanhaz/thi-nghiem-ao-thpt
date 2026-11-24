@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checks": "3D registered geometry, exact physical contact at both stops, valid and occupied hook releases, cancellation with no dispatch, lever measurements and return",
+  "targets": 10,
+  "paintRequests": 19,
+  "actions": [
+    {
+      "action": {
+        "type": "attach",
+        "load": 0,
+        "hook": 0
+      },
+      "valid": true
+    },
+    {
+      "action": {
+        "type": "attach",
+        "load": 1,
+        "hook": 0
+      },
+      "valid": false
+    },
+    {
+      "action": {
+        "type": "attach",
+        "load": 1,
+        "hook": 4
+      },
+      "valid": true
+    },
+    {
+      "action": {
+        "type": "return",
+        "load": 0
+      },
+      "valid": true
+    }
+  ]
+}

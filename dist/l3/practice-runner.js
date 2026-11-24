@@ -1,4 +1,5 @@
 import {getLocale, onLocaleChange} from '../i18n.js?v=54';
+import {mountPracticeView} from './practice-view.js?v=95';
 import {
   createPracticeSession, createRun, dataSafe, exportPracticeCSV, maxBytes, maxEvents, maxReadings,
   maxRuns, parsePracticeSession, serializePracticeSession, validValues
@@ -34,7 +35,7 @@ export function mountPractice(host, practice, {storage, updateContext} = {}) {
   } catch { storageError = true; }
   const run = () => session.runs.at(-1);
   const q = selector => host.querySelector(selector);
-  let apparatus;
+  let apparatus, viewport;
   let draftTimer = 0;
   let alive = true;
   let message = null;
@@ -91,6 +92,7 @@ export function mountPractice(host, practice, {storage, updateContext} = {}) {
     if (accepted) {
       run().state = result.state;
       apparatus?.paint(run().state);
+      viewport?.paint(run().state);
       refreshState();
       setStatus(result.message || ['', '']);
     } else {
@@ -151,6 +153,8 @@ export function mountPractice(host, practice, {storage, updateContext} = {}) {
     plot();
   }
   function build() {
+    const cameraState = viewport?.snapshot();
+    viewport?.destroy();
     apparatus?.destroy?.();
     const stableFocus = document.activeElement?.id;
     const unitText = column => column.unit ? ' (' + escapeHtml(column.unit) + ')' : '';
@@ -218,6 +222,9 @@ export function mountPractice(host, practice, {storage, updateContext} = {}) {
     q('#practiceAxisY').value = axes[1];
     apparatus = practice.mount(q('#practiceApparatus'), {getState: () => run().state, dispatch, t});
     apparatus.paint(run().state);
+    viewport = mountPracticeView(q('#practiceApparatus'), practice.id, {
+      storage, getState: () => run().state, dispatch, t, apparatus, cameraState
+    });
     refreshState();
     refreshNotebook();
     showStorageStatus();
@@ -306,6 +313,7 @@ export function mountPractice(host, practice, {storage, updateContext} = {}) {
   return {
     destroy() {
       alive = false;
+      viewport?.destroy();
       apparatus?.destroy?.();
       if (draftTimer) saveDraft();
       unsubscribe();

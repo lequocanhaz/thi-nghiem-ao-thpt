@@ -1,4 +1,5 @@
 const reachM = .1;
+export const oscillatorTravelM = reachM;
 const minimumPullM = .001;
 const timeLimitS = 120;
 const runtimeByState = new WeakMap();
@@ -171,6 +172,7 @@ function mount(host, {getState, dispatch, t}) {
     </div>
   </div>`;
   const $ = selector => host.querySelector(selector);
+  const visual = $('.osc-visual');
   const rail = $('[data-osc-rail]');
   const mass = $('[data-osc-mass]');
   const releaseButton = $('[data-osc-release]');
@@ -192,6 +194,8 @@ function mount(host, {getState, dispatch, t}) {
   const cycles = $('[data-osc-cycles]');
   const held = $('[data-osc-held]');
   const controller = new AbortController();
+  const motionListeners = new Set();
+  const notifyMotion = () => motionListeners.forEach(listener => listener());
   const on = (node, event, listener) => node.addEventListener(event, listener, {signal:controller.signal});
   const format = new Intl.NumberFormat(t(['vi-VN','en-US']), {maximumFractionDigits:3});
   const watchFormat = new Intl.NumberFormat(t(['vi-VN','en-US']), {minimumFractionDigits:2,maximumFractionDigits:2});
@@ -216,21 +220,23 @@ function mount(host, {getState, dispatch, t}) {
   function draw(state, timeS) {
     const diagramState = drag ? {...state, heldM:drag.heldM} : state;
     const diagramTime = drag ? 0 : timeS;
-    const {positionM} = sampleOscillator(diagramState, diagramTime);
-    const x = pixelsAt(positionM);
-    spring.setAttribute('d', coilPath(x - springEndOffset));
-    mass.style.left = (x / 640 * 100) + '%';
-    const [phaseX,phaseY] = xy(diagramState, diagramTime);
-    vector.setAttribute('d', `M 84 66 L ${phaseX} ${phaseY}`);
-    projection.setAttribute('d', `M ${phaseX} ${phaseY} V 66`);
-    phasePoint.setAttribute('cx', phaseX);
-    phasePoint.setAttribute('cy', phaseY);
-    phaseShadow.setAttribute('cx', phaseX);
     const startS = hasRun ? state.startS : null;
-    reference.toggleAttribute('hidden', startS === null);
-    if (startS !== null) {
-      const [guideX,guideY] = xy(state,startS);
-      reference.setAttribute('d', `M 84 66 L ${guideX} ${guideY}`);
+    if (!visual.hidden) {
+      const {positionM} = sampleOscillator(diagramState, diagramTime);
+      const x = pixelsAt(positionM);
+      spring.setAttribute('d', coilPath(x - springEndOffset));
+      mass.style.left = (x / 640 * 100) + '%';
+      const [phaseX,phaseY] = xy(diagramState, diagramTime);
+      vector.setAttribute('d', `M 84 66 L ${phaseX} ${phaseY}`);
+      projection.setAttribute('d', `M ${phaseX} ${phaseY} V 66`);
+      phasePoint.setAttribute('cx', phaseX);
+      phasePoint.setAttribute('cy', phaseY);
+      phaseShadow.setAttribute('cx', phaseX);
+      reference.toggleAttribute('hidden', startS === null);
+      if (startS !== null) {
+        const [guideX,guideY] = xy(state,startS);
+        reference.setAttribute('d', `M 84 66 L ${guideX} ${guideY}`);
+      }
     }
     const interval = state.result ?? (startS === null ? null : {startS,endS:Math.max(startS,timeS)});
     text(elapsed, watchFormat.format(interval ? elapsedReading(interval.startS, interval.endS) : 0));
@@ -270,6 +276,7 @@ function mount(host, {getState, dispatch, t}) {
     cancelAnimationFrame(frame);
     frame = 0;
     paint(getState());
+    notifyMotion();
   }
 
   function animate(stamp) {
@@ -287,6 +294,7 @@ function mount(host, {getState, dispatch, t}) {
     running = true;
     frame = requestAnimationFrame(animate);
     paint(getState());
+    notifyMotion();
   }
 
   function resetPosition() {
@@ -302,15 +310,27 @@ function mount(host, {getState, dispatch, t}) {
     }
     return accepted;
   }
-  function release() {
-    if (running || !operate({type:'release'})) return;
+  function release(focusPause = true) {
+    if (running || !operate({type:'release'})) return false;
     hasRun = true;
     priorS = 0;
     resume();
-    pauseButton.focus({preventScroll:true});
+    if (focusPause) pauseButton.focus({preventScroll:true});
+    return true;
   }
 
-  on(releaseButton,'click',release);
+  function releaseFrom(value, focusPause = false) {
+    if (running || drag || !Number.isFinite(value)) return false;
+    const heldM = clampPull(value);
+    if (!dispatch({type:'pull',value:heldM})) return false;
+    resetPosition();
+    if (Math.abs(heldM) >= minimumPullM && release(focusPause)) return true;
+    paint(getState());
+    notifyMotion();
+    return true;
+  }
+
+  on(releaseButton,'click',() => release());
   on(pauseButton,'click',() => running ? pause() : resume());
   on(startButton,'click',() => {
     if (operate({type:'start-watch',timeS:time()})) stopButton.focus({preventScroll:true});
@@ -359,8 +379,7 @@ function mount(host, {getState, dispatch, t}) {
     const heldM = pointerPosition(event);
     cancelDrag();
     if (Math.abs(event.clientX - startX) < 3) return;
-    resetPosition();
-    if (dispatch({type:'pull',value:heldM}) && Math.abs(heldM) >= minimumPullM) release();
+    releaseFrom(heldM, true);
   });
   function pointerPosition(event) {
     const scale = rail.getBoundingClientRect().width || 1;
@@ -386,6 +405,10 @@ function mount(host, {getState, dispatch, t}) {
   }
   const resize = new ResizeObserver(resizeRail);
   resize.observe(rail);
+  const visibility = new MutationObserver(() => {
+    if (!visual.hidden) draw(getState(),time());
+  });
+  visibility.observe(visual,{attributes:true,attributeFilter:['hidden']});
 
   // A locale redraw remounts the view with the same logical state object.
   // A new trial or imported session gets its own clock.
@@ -398,11 +421,17 @@ function mount(host, {getState, dispatch, t}) {
   }
   if (previousClock?.running && priorS < timeLimitS) resume();
   else paint(current);
-  return {paint, destroy() {
+  return {paint, releaseFrom, getMotion: () => ({state:getState(),timeS:time(),running}),
+    onMotionChange(listener) {
+      motionListeners.add(listener);
+      return () => motionListeners.delete(listener);
+    }, destroy() {
     if (hasRun) runtimeByState.set(paintedState, {seconds:time(),running});
     controller.abort();
     resize.disconnect();
+    visibility.disconnect();
     cancelAnimationFrame(frame);
+    motionListeners.clear();
     drag = null;
   }};
 }
