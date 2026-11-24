@@ -41,9 +41,9 @@
         "massKg": 0.5,
         "stiffnessNPerM": 10,
         "amplitudeCm": 9.8,
-        "durationS": 3.09,
+        "durationS": 3.42,
         "cycles": 2,
-        "meanPeriodS": 1.545
+        "meanPeriodS": 1.71
       }
     },
     {
@@ -71,8 +71,8 @@
         "amountMol": 0.24
       },
       "to": {
-        "volumeL": 2.39,
-        "pressureKPa": 250.5,
+        "volumeL": 2.38,
+        "pressureKPa": 251.5,
         "temperatureK": 300,
         "amountMol": 0.24
       },
@@ -96,7 +96,7 @@
     "dist/boot.js": "096ee910eff388b121667aec66433db8a8f8f77b6cf16cc3faca024ba2ae74a2",
     "dist/index.html": "aba098c85165bc9b5e046b8d61494fbca4521ddf910a024bbdbd77832f5f5415",
     "dist/l3/practice.css": "a9d1317693d424d81dac998e363e1388e63f04fb1ceb2c072c9f3a58a61226f8",
-    "dist/l3/practice-three.js": "8c737641bd13e14842213ab62e3bca1a6fb16ba603789e69ef6cb70129ba9ddc",
+    "dist/l3/practice-three.js": "f6aa846aae0b3e7737aa23ec24450f756daf4c8f8e99f6a5b9cdda99b71b182e",
     "dist/l3/gas-practice.js": "611832b6ae07b62634cf9a6a908629d09645a243ea716ba56f3642b1d0cb253a",
     "dist/l3/lens-practice-three.js": "6ed7d89e7041697c8a934e10dcb535f72973f1f8f8229459bb8f2c2916081bc9",
     "dist/l3/practice-runner.js": "bd8187f348f48eb18a6aeb6a9b443da17d48cf5a0c78e93a803512178efbeb67",
@@ -122,7 +122,7 @@
     "dist/boot.js": "096ee910eff388b121667aec66433db8a8f8f77b6cf16cc3faca024ba2ae74a2",
     "dist/index.html": "aba098c85165bc9b5e046b8d61494fbca4521ddf910a024bbdbd77832f5f5415",
     "dist/l3/practice.css": "a9d1317693d424d81dac998e363e1388e63f04fb1ceb2c072c9f3a58a61226f8",
-    "dist/l3/practice-three.js": "8c737641bd13e14842213ab62e3bca1a6fb16ba603789e69ef6cb70129ba9ddc",
+    "dist/l3/practice-three.js": "f6aa846aae0b3e7737aa23ec24450f756daf4c8f8e99f6a5b9cdda99b71b182e",
     "dist/l3/gas-practice.js": "611832b6ae07b62634cf9a6a908629d09645a243ea716ba56f3642b1d0cb253a",
     "dist/l3/lens-practice-three.js": "6ed7d89e7041697c8a934e10dcb535f72973f1f8f8229459bb8f2c2916081bc9",
     "dist/l3/practice-runner.js": "bd8187f348f48eb18a6aeb6a9b443da17d48cf5a0c78e93a803512178efbeb67",

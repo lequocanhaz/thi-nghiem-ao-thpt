@@ -121,7 +121,7 @@ export function createPracticeThree(host, mountBench, options) {
     requestRender();
   }
   function resize() {
-    const {width, height} = host.getBoundingClientRect();
+    const {width, height} = canvas.getBoundingClientRect();
     if (width < 2 || height < 2 || disposed || lost) return;
     const size = Math.round(width) + '/' + Math.round(height);
     if (previousSize === size) return;

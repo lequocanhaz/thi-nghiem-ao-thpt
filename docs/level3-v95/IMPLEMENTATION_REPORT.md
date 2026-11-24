@@ -37,3 +37,5 @@ Danh mục vẫn có 300 ID. Trạng thái cấp 3 gồm 0 PASS, 6 PARTIAL, 294 
 | `node checks/banner-preservation-v51.mjs` và `node checks/site-security-v63.mjs` | Giữ 300 ID, tài liệu học và tài nguyên bảo vệ. Kiểm bảo mật tài nguyên tĩnh đạt. |
 
 [Ảnh mạch Ohm](evidence/ohm-390.png) · [Ảnh thấu kính](evidence/lens-1440.png) · [Ảnh lò xo](evidence/oscillation-1024.png) · [Ảnh cân đòn](evidence/lever-390.png) · [Ảnh xi lanh](evidence/gas-1440.png)
+
+Kiểm tra bổ sung trên 9 độ rộng và 2 khung ngang cho từng bài đã đạt 55 ca. Kích thước vùng dựng và camera dùng trực tiếp vùng canvas, khớp khi đổi khung. Các điểm chọn dụng cụ được kiểm nằm trong vùng quan sát mặc định. [Bản ghi khung hiển thị](evidence/viewport-matrix.json)

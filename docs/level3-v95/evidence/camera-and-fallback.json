@@ -1,24 +1,24 @@
 {
   "status": "PASS",
   "browserVersion": "154.0.8037.57",
-  "checkedAtUTC": "2026-11-24T05:36:37.513558+00:00",
+  "checkedAtUTC": "2026-11-24T05:41:06.263812+00:00",
   "results": {
     "gasCameraLifecycle": {
       "cancelPreservesState": true,
-      "zoomDeltaPx": 13.413008844569312,
+      "zoomDeltaPx": 13.38131608934603,
       "frameReturnErrorPx": 0.0,
-      "orbitDeltaPx": 22.015775636939935,
+      "orbitDeltaPx": 22.01508415053043,
       "cameraRestoreErrorPx": 0.0,
       "computedThemePixelMean": {
         "light": [
-          198.33138833992095,
-          211.2006324110672,
-          215.8895331027668
+          198.41124505928855,
+          211.26952816205534,
+          215.95188488142293
         ],
         "dark": [
-          41.57769021739131,
-          58.41638586956522,
-          70.52338191699604
+          41.53700592885375,
+          58.36792243083004,
+          70.47501729249012
         ]
       },
       "contextLossFallback": true,
@@ -31,8 +31,8 @@
       {
         "cw": 272,
         "ch": 333,
-        "w": 274,
-        "h": 335,
+        "w": 272,
+        "h": 333,
         "lost": false,
         "scroll": 320,
         "inner": 320
@@ -40,8 +40,8 @@
       {
         "cw": 342,
         "ch": 333,
-        "w": 344,
-        "h": 335,
+        "w": 342,
+        "h": 333,
         "lost": false,
         "scroll": 390,
         "inner": 390
@@ -49,8 +49,8 @@
       {
         "cw": 701.28125,
         "ch": 404.6875,
-        "w": 703,
-        "h": 406,
+        "w": 701,
+        "h": 404,
         "lost": false,
         "scroll": 768,
         "inner": 768
@@ -58,8 +58,8 @@
       {
         "cw": 973.625,
         "ch": 404.6875,
-        "w": 975,
-        "h": 406,
+        "w": 973,
+        "h": 404,
         "lost": false,
         "scroll": 1440,
         "inner": 1440
@@ -69,8 +69,8 @@
       {
         "cw": 272,
         "ch": 333,
-        "w": 274,
-        "h": 335,
+        "w": 272,
+        "h": 333,
         "lost": false,
         "scroll": 320,
         "inner": 320
@@ -78,8 +78,8 @@
       {
         "cw": 342,
         "ch": 333,
-        "w": 344,
-        "h": 335,
+        "w": 342,
+        "h": 333,
         "lost": false,
         "scroll": 390,
         "inner": 390
@@ -87,8 +87,8 @@
       {
         "cw": 701.28125,
         "ch": 404.6875,
-        "w": 703,
-        "h": 406,
+        "w": 701,
+        "h": 404,
         "lost": false,
         "scroll": 768,
         "inner": 768
@@ -96,8 +96,8 @@
       {
         "cw": 973.625,
         "ch": 404.6875,
-        "w": 975,
-        "h": 406,
+        "w": 973,
+        "h": 404,
         "lost": false,
         "scroll": 1440,
         "inner": 1440
@@ -107,8 +107,8 @@
       {
         "cw": 272,
         "ch": 333,
-        "w": 274,
-        "h": 335,
+        "w": 272,
+        "h": 333,
         "lost": false,
         "scroll": 320,
         "inner": 320
@@ -116,8 +116,8 @@
       {
         "cw": 342,
         "ch": 333,
-        "w": 344,
-        "h": 335,
+        "w": 342,
+        "h": 333,
         "lost": false,
         "scroll": 390,
         "inner": 390
@@ -125,8 +125,8 @@
       {
         "cw": 701.28125,
         "ch": 404.6875,
-        "w": 703,
-        "h": 406,
+        "w": 701,
+        "h": 404,
         "lost": false,
         "scroll": 768,
         "inner": 768
@@ -134,8 +134,8 @@
       {
         "cw": 973.625,
         "ch": 404.6875,
-        "w": 975,
-        "h": 406,
+        "w": 973,
+        "h": 404,
         "lost": false,
         "scroll": 1440,
         "inner": 1440
@@ -145,8 +145,8 @@
       {
         "cw": 270,
         "ch": 333,
-        "w": 272,
-        "h": 335,
+        "w": 270,
+        "h": 333,
         "lost": false,
         "scroll": 320,
         "inner": 320
@@ -154,8 +154,8 @@
       {
         "cw": 340,
         "ch": 333,
-        "w": 342,
-        "h": 335,
+        "w": 340,
+        "h": 333,
         "lost": false,
         "scroll": 390,
         "inner": 390
@@ -163,8 +163,8 @@
       {
         "cw": 699.28125,
         "ch": 404.6875,
-        "w": 701,
-        "h": 406,
+        "w": 699,
+        "h": 404,
         "lost": false,
         "scroll": 768,
         "inner": 768
@@ -172,8 +172,8 @@
       {
         "cw": 565.125,
         "ch": 404.6875,
-        "w": 567,
-        "h": 406,
+        "w": 565,
+        "h": 404,
         "lost": false,
         "scroll": 1440,
         "inner": 1440
@@ -183,8 +183,8 @@
       {
         "cw": 246,
         "ch": 333,
-        "w": 248,
-        "h": 335,
+        "w": 246,
+        "h": 333,
         "lost": false,
         "scroll": 320,
         "inner": 320
@@ -192,8 +192,8 @@
       {
         "cw": 316,
         "ch": 333,
-        "w": 318,
-        "h": 335,
+        "w": 316,
+        "h": 333,
         "lost": false,
         "scroll": 390,
         "inner": 390
@@ -201,8 +201,8 @@
       {
         "cw": 657.09375,
         "ch": 404.6875,
-        "w": 659,
-        "h": 406,
+        "w": 657,
+        "h": 404,
         "lost": false,
         "scroll": 768,
         "inner": 768
@@ -210,8 +210,8 @@
       {
         "cw": 919.625,
         "ch": 404.6875,
-        "w": 921,
-        "h": 406,
+        "w": 919,
+        "h": 404,
         "lost": false,
         "scroll": 1440,
         "inner": 1440
@@ -244,7 +244,7 @@
     "dist/l3/oscillation-practice.js": "4b90928fce0ced0fdb61cd576b7d3198cf83f78d60160c98de1a6742df24739a",
     "dist/l3/practice-runner.js": "bd8187f348f48eb18a6aeb6a9b443da17d48cf5a0c78e93a803512178efbeb67",
     "dist/l3/practice-session.js": "83903b97ad9bdec5930fa0fd9047249033757c8da56482abb3e7253ad3d5e286",
-    "dist/l3/practice-three.js": "8c737641bd13e14842213ab62e3bca1a6fb16ba603789e69ef6cb70129ba9ddc",
+    "dist/l3/practice-three.js": "f6aa846aae0b3e7737aa23ec24450f756daf4c8f8e99f6a5b9cdda99b71b182e",
     "dist/l3/practice-view.js": "2fb54e6a0b408dc3c23b7b39b338a44a5bc8bfbc21d6501d3000e2fe133eabc7",
     "dist/l3/practice.css": "a9d1317693d424d81dac998e363e1388e63f04fb1ceb2c072c9f3a58a61226f8"
   },
@@ -269,7 +269,7 @@
     "dist/l3/oscillation-practice.js": "4b90928fce0ced0fdb61cd576b7d3198cf83f78d60160c98de1a6742df24739a",
     "dist/l3/practice-runner.js": "bd8187f348f48eb18a6aeb6a9b443da17d48cf5a0c78e93a803512178efbeb67",
     "dist/l3/practice-session.js": "83903b97ad9bdec5930fa0fd9047249033757c8da56482abb3e7253ad3d5e286",
-    "dist/l3/practice-three.js": "8c737641bd13e14842213ab62e3bca1a6fb16ba603789e69ef6cb70129ba9ddc",
+    "dist/l3/practice-three.js": "f6aa846aae0b3e7737aa23ec24450f756daf4c8f8e99f6a5b9cdda99b71b182e",
     "dist/l3/practice-view.js": "2fb54e6a0b408dc3c23b7b39b338a44a5bc8bfbc21d6501d3000e2fe133eabc7",
     "dist/l3/practice.css": "a9d1317693d424d81dac998e363e1388e63f04fb1ceb2c072c9f3a58a61226f8"
   },
